@@ -1,11 +1,5 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/2022-06-05-creating-a-blog-with-quarto/index.html"
-    ]
-  },
-  {
     "listing": "/talks/index.html",
     "items": [
       "/talks/2021-learnr-latinr/index.html",
@@ -13,6 +7,12 @@
       "/talks/2020-RStudio-certification/index.html",
       "/talks/2019-user-rladies-sp/index.html",
       "/talks/2018-knitr-codata/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/2022-06-05-creating-a-blog-with-quarto/index.html"
     ]
   }
 ]

@@ -18,3 +18,9 @@ comments use [giscus](https://giscus.app/).
 
 As by June 05, 2022, this blog has **1 blog posts** and content from **5
 talks/presentations**.
+
+Blogpost ideas:
+
+-   [ ] Creating a blog - part 2: setting up google analytics, improving
+    tweet cards
+-   [ ] Using quarto in the command line

@@ -78,6 +78,20 @@ ul.task-list{list-style: none;}
     }
   });
   </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@beamilz">
+<meta property="og:title" content="Bea Milz - Talks">
+<meta property="og:description" content="My name is Beatriz, and I have been writing blog posts about R and Data Science since 2019, in my blog written in Portuguese (I am Brazilian!). You can read more about me in the about page, and check my presentations on the talks page.">
+<meta property="og:image" content="https://beamilz.com/social.png">
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
@@ -482,7 +496,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/*/);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

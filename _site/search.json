@@ -1,68 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Bea Milz",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nIn this post, I introduce you to my new blog and show how you can create a blog with Quarto.\n\n\n\n\nQuarto\n\n\nTutorial\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Beatriz Milz",
-    "section": "",
-    "text": "Hi! My name is Beatriz, and I am a R-Lady from Brazil 🇧🇷 💜.\nI’m a tidyverse instructor certified by RStudio, and I teach R at Curso-R.\nI have been writing about R in my blog in Portuguese since 2019. I’m mostly active in the Brazilian R community, co-organizing communities and events, such as: R-Ladies São Paulo, Latin-R, and satRday São Paulo.\nI’m a PhD Candidate at the University of São Paulo, in Environmental Sciences. My research is about transparency of information in the management of water resources that are used to supply the Macrometropolis of Sao Paulo."
-  },
-  {
-    "objectID": "talks/index.html",
-    "href": "talks/index.html",
-    "title": "Talks",
-    "section": "",
-    "text": "Next activities:\n\nJuly 25-26th , 2022 - rstudio::conf(2022) - Teaching Assistant (TA) in the workshop Building Tidy Tools, taught by Emma Rand and Ian Lyttle.\nJuly 25-28th, 2022 - rstudio::conf(2022) - Lightning Talk: “Making awesome automations with GitHub Actions”.\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n\nTalks\n\n\nlearnr\n\n\nTeaching\n\n\ngradethis\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2021\n\n\nBeatriz Milz, Fernando Correa\n\n\n\n\n\n\n  \n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n\nCommunities\n\n\nR-Ladies\n\n\n\n\n\n\n\n\n\n\n\nApr 28, 2021\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nSep 23, 2020\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n\nTalks\n\n\nR-Ladies\n\n\nCommunities\n\n\n\n\n\n\n\n\n\n\n\nJul 11, 2019\n\n\nBeatriz Milz, Bruna Wundervald\n\n\n\n\n\n\n  \n\n\n\n\nProducing Reports with knitr and R\n\n\nCODATA-RDA School of Research Data Science\n\n\n\n\nR Markdown\n\n\nknitr\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2018\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "talks/2021-learnr-latinr/index.html",
-    "href": "talks/2021-learnr-latinr/index.html",
-    "title": "Scaling feedback using learnr and gradethis in a introductory R course",
-    "section": "",
-    "text": "Event: LatinR 2021\nText submission\nTalk\nQ&A\nSlides:"
-  },
-  {
-    "objectID": "talks/2021-experience-useR/index.html",
-    "href": "talks/2021-experience-useR/index.html",
-    "title": "My experience at useR 2019",
-    "section": "",
-    "text": "Slides:"
-  },
-  {
-    "objectID": "talks/2020-RStudio-certification/index.html",
-    "href": "talks/2020-RStudio-certification/index.html",
-    "title": "Adding figures in R Markdown",
-    "section": "",
-    "text": "Complete material\nSlides:"
-  },
-  {
-    "objectID": "talks/2019-user-rladies-sp/index.html",
-    "href": "talks/2019-user-rladies-sp/index.html",
-    "title": "The evolution and importance of the R-Ladies São Paulo chapter in Brazil",
-    "section": "",
-    "text": "Event: useR! 2019\nTalk\nSlides:"
-  },
-  {
-    "objectID": "talks/2018-knitr-codata/index.html",
-    "href": "talks/2018-knitr-codata/index.html",
-    "title": "Producing Reports with knitr and R",
-    "section": "",
-    "text": "Event: CODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESP\nSlides:"
-  },
-  {
     "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/index.html",
     "href": "posts/2022-06-05-creating-a-blog-with-quarto/index.html",
     "title": "Creating a blog with Quarto in 10 steps",
@@ -145,5 +82,61 @@
     "title": "Creating a blog with Quarto in 10 steps",
     "section": "10 - Tweet about it!",
     "text": "10 - Tweet about it!\nCongratulations, you have created your blog with Quarto! ✨\nAfter writing your first blogpost, you can start sharing it to the world. 📢📢📢\nMy suggestion to you is: Write a tweet! You can use the #rstats hashtag if the content of your blog is about R and you can cite @quarto_pub.\nIf this post was relevant to you, you can also cite me with @BeaMilz, so I can retweet about your blog!"
+  },
+  {
+    "objectID": "talks/2021-learnr-latinr/index.html",
+    "href": "talks/2021-learnr-latinr/index.html",
+    "title": "Scaling feedback using learnr and gradethis in a introductory R course",
+    "section": "",
+    "text": "Event: LatinR 2021\nText submission\nTalk\nQ&A\nSlides:"
+  },
+  {
+    "objectID": "talks/2020-RStudio-certification/index.html",
+    "href": "talks/2020-RStudio-certification/index.html",
+    "title": "Adding figures in R Markdown",
+    "section": "",
+    "text": "Complete material\nSlides:"
+  },
+  {
+    "objectID": "talks/2021-experience-useR/index.html",
+    "href": "talks/2021-experience-useR/index.html",
+    "title": "My experience at useR 2019",
+    "section": "",
+    "text": "Slides:"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Next activities:\n\nJuly 25-26th , 2022 - rstudio::conf(2022) - Teaching Assistant (TA) in the workshop Building Tidy Tools, taught by Emma Rand and Ian Lyttle.\nJuly 25-28th, 2022 - rstudio::conf(2022) - Lightning Talk: “Making awesome automations with GitHub Actions”.\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n\nTalks\n\n\nlearnr\n\n\nTeaching\n\n\ngradethis\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2021\n\n\nBeatriz Milz, Fernando Correa\n\n\n\n\n\n\n  \n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n\nCommunities\n\n\nR-Ladies\n\n\n\n\n\n\n\n\n\n\n\nApr 28, 2021\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nSep 23, 2020\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n\nTalks\n\n\nR-Ladies\n\n\nCommunities\n\n\n\n\n\n\n\n\n\n\n\nJul 11, 2019\n\n\nBeatriz Milz, Bruna Wundervald\n\n\n\n\n\n\n  \n\n\n\n\nProducing Reports with knitr and R\n\n\nCODATA-RDA School of Research Data Science\n\n\n\n\nR Markdown\n\n\nknitr\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2018\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/2018-knitr-codata/index.html",
+    "href": "talks/2018-knitr-codata/index.html",
+    "title": "Producing Reports with knitr and R",
+    "section": "",
+    "text": "Event: CODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESP\nSlides:"
+  },
+  {
+    "objectID": "talks/2019-user-rladies-sp/index.html",
+    "href": "talks/2019-user-rladies-sp/index.html",
+    "title": "The evolution and importance of the R-Ladies São Paulo chapter in Brazil",
+    "section": "",
+    "text": "Event: useR! 2019\nTalk\nSlides:"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nIn this post, I introduce you to my new blog and show how you can create a blog with Quarto.\n\n\n\n\nQuarto\n\n\nTutorial\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Beatriz Milz",
+    "section": "",
+    "text": "Hi! My name is Beatriz, and I am a R-Lady from Brazil 🇧🇷 💜.\nI’m a tidyverse instructor certified by RStudio, and I teach R at Curso-R.\nI have been writing about R in my blog in Portuguese since 2019. I’m mostly active in the Brazilian R community, co-organizing communities and events, such as: R-Ladies São Paulo, Latin-R, and satRday São Paulo.\nI’m a PhD Candidate at the University of São Paulo, in Environmental Sciences. My research is about transparency of information in the management of water resources that are used to supply the Macrometropolis of Sao Paulo."
   }
 ]
