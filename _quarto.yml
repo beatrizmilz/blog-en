@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Bea Milz"
+  google-analytics: "G-2J79YYG9CZ"
   page-footer:
     left: "Blog made with 💜 and [Quarto](https://quarto.org/), by Beatriz Milz. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
     right:
