@@ -11,7 +11,7 @@
     "href": "posts/post-with-code/index.html",
     "title": "Come back soon",
     "section": "",
-    "text": "TODO:\n\n\ndeploy it on netlify\n\nset a custom domain\n\nset https\n\nadd a comment section\n\nwrite first introduction post\n\ncreate a section to add talks in english"
+    "text": "TODO:\n\n\ndeploy it on netlify\n\nset a custom domain\n\nset https\n\nadd a comment section\n\nwrite first introduction post\n\ncreate a section to add talks in english\n\nadd talks:\n\nuseR 2019\n\nLatinR 2021\n\nCODATA 2018\n\nRStudio certif. presentation\n\nuseR 2019 experience"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -26,5 +26,47 @@
     "title": "Beatriz Milz",
     "section": "",
     "text": "Hi! My name is Beatriz, and I am a R-Lady from Brazil 🇧🇷 💜.\nI’m a tidyverse instructor certified by RStudio, and I teach R at Curso-R.\nI have been writing about R in my blog in Portuguese since 2019. I’m mostly active in the Brazilian R community, co-organizing communities and events, such as: R-Ladies São Paulo, Latin-R, and satRday São Paulo.\nI’m a PhD Candidate at the University of São Paulo."
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Scaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n\ntalks\n\n\nlearnr\n\n\nteaching\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2021\n\n\nBeatriz Milz, Fernando Correa\n\n\n\n\n\n\n  \n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n\ncommunities\n\n\nr-ladies\n\n\n\n\n\n\n\n\n\n\n\nApr 28, 2021\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n\nteaching\n\n\n\n\n\n\n\n\n\n\n\nSep 23, 2020\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n\ntalks\n\n\nr-ladies\n\n\n\n\n\n\n\n\n\n\n\nJul 11, 2019\n\n\nBeatriz Milz, Bruna Wundervald\n\n\n\n\n\n\n  \n\n\n\n\nProducing Reports with knitr and R\n\n\nCODATA-RDA School of Research Data Science\n\n\n\n\nrmarkdown\n\n\nknitr\n\n\nteaching\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2018\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/2021-learnr-latinr/index.html",
+    "href": "talks/2021-learnr-latinr/index.html",
+    "title": "Scaling feedback using learnr and gradethis in a introductory R course",
+    "section": "",
+    "text": "Event: LatinR 2021\nText submission\nTalk\nQ&A\nSlides:"
+  },
+  {
+    "objectID": "talks/2021-experience-useR/index.html",
+    "href": "talks/2021-experience-useR/index.html",
+    "title": "My experience at useR 2019",
+    "section": "",
+    "text": "Slides:"
+  },
+  {
+    "objectID": "talks/2020-RStudio-certification/index.html",
+    "href": "talks/2020-RStudio-certification/index.html",
+    "title": "Adding figures in R Markdown",
+    "section": "",
+    "text": "Complete material\nSlides:"
+  },
+  {
+    "objectID": "talks/2019-user-rladies-sp/index.html",
+    "href": "talks/2019-user-rladies-sp/index.html",
+    "title": "The evolution and importance of the R-Ladies São Paulo chapter in Brazil",
+    "section": "",
+    "text": "Event: useR! 2019\nTalk\nSlides:"
+  },
+  {
+    "objectID": "talks/2018-knitr-codata/index.html",
+    "href": "talks/2018-knitr-codata/index.html",
+    "title": "Producing Reports with knitr and R",
+    "section": "",
+    "text": "Event: CODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESP\nSlides:"
   }
 ]

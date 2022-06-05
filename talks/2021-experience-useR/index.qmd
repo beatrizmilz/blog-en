@@ -1,0 +1,15 @@
+---
+title: "My experience at useR 2019"
+subtitle: "Meetup R-Ladies and useR 2021"
+author: 
+  - "Beatriz Milz"
+date: "2021-04-28"
+categories: [communities, r-ladies]
+image: "featured.png"
+---
+
+This presentation was not recorded.
+
+-   [Slides](https://beatrizmilz.github.io/slidesR/R-Ladies_and_useR_meetup/):
+
+[![](featured.png){fig-align="center"}](https://beatrizmilz.github.io/slidesR/R-Ladies_and_useR_meetup/)

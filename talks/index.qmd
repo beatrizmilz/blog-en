@@ -1,0 +1,19 @@
+---
+title: "Talks"
+listing:
+  contents: "*/*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+I have been giving talks since 2018, but mostly in Portuguese.
+Those presentations are available in my [blog in Portuguese](https://beatrizmilz.com/talk/).
+Here you can find my presentations that were in English.
+:) Enjoy!
+
+----

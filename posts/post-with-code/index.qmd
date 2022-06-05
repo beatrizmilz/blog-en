@@ -10,14 +10,27 @@ This blog is under construction.
 
 TODO:
 
--   [x]  deploy it on netlify
+-   [x] deploy it on netlify
 
 -   [x] set a custom domain
 
--   [ ] set https
+-   [x] set https
 
 -   [ ] add a comment section
 
 -   [ ] write first introduction post
 
--   [ ] create a section to add talks in english
+-   [x] create a section to add talks in english
+
+-   [x] add talks:
+
+    -   [x] useR 2019
+
+    -   [x] LatinR 2021
+
+    -   [x] CODATA 2018
+
+    -   [x] RStudio certif.
+        presentation
+
+    -   [x] useR 2019 experience

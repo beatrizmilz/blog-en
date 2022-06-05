@@ -8,6 +8,8 @@ website:
       - about.qmd
       - text: Posts
         href: /
+      - text: Talks
+        href: /talks/
       - text: Resume
         href: https://beatrizmilz.github.io/resume/index.pdf
       - text: My blog in Portuguese

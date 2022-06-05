@@ -1,0 +1,22 @@
+---
+title: "Scaling feedback using learnr and gradethis in a introductory R course"
+subtitle: "LatinR 2021"
+author: 
+  - "Beatriz Milz"
+  - "Fernando Correa"
+date: "2021-11-10"
+categories: [talks, learnr, teaching]
+image: "featured.png"
+---
+
+-   Event: [LatinR 2021](https://latin-r.com/)
+
+-   [Text submission](https://github.com/curso-r/LatinR2021/blob/main/submission/submission.pdf)
+
+-   [Talk](https://youtu.be/7v7XPtizdzU)
+
+-   [Q&A](https://youtu.be/4TCNocxRtwo?t=2708)
+
+-   [Slides](https://curso-r.github.io/LatinR2021/):
+
+[![](featured.png){fig-align="center"}](https://curso-r.github.io/LatinR2021/)

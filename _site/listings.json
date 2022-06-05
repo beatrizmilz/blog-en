@@ -4,5 +4,15 @@
     "items": [
       "/posts/post-with-code/index.html"
     ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/2021-learnr-latinr/index.html",
+      "/talks/2021-experience-useR/index.html",
+      "/talks/2020-RStudio-certification/index.html",
+      "/talks/2019-user-rladies-sp/index.html",
+      "/talks/2018-knitr-codata/index.html"
+    ]
   }
 ]
