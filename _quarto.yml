@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Bea Milz"
+  site-url: "https://beamilz.com/"
   google-analytics: "G-2J79YYG9CZ"
   page-footer:
     left: "Blog made with 💜 and [Quarto](https://quarto.org/), by Beatriz Milz. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
@@ -16,6 +17,7 @@ website:
   twitter-card:
     creator: "@beamilz"
     card-style: summary_large_image
+    image: social.png
   navbar:
     right:
       - about.qmd
@@ -34,6 +36,7 @@ website:
 
 format:
   html:
+    smooth-scroll: true
     theme: journal
     css: styles.css
     link-external-icon: false
@@ -41,7 +44,6 @@ format:
     link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/**'
     citations-hover: true
     footnotes-hover: true
-    include-in-header: metatags.html
 
 editor: visual
 
