@@ -1,0 +1,38 @@
+---
+output: github_document
+# rmarkdown::render("README.Rmd")
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Blog-en
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+In this repository you can find the code used to generate my blog (in English): https://beamilz.com/
+
+
+The blog was created using [Quarto](https://quarto.org/). You can find more info on how to create a blog with Quarto in the [documentation](https://quarto.org/docs/websites/website-blog.html).
+
+The deploy is made with [Netlify](https://www.netlify.com/), and the comments use [giscus](https://giscus.app/).
+
+
+```{r echo=FALSE}
+number_of_posts <- fs::dir_ls("posts/", type = "directory") |> length()
+
+number_of_talks <- fs::dir_ls("talks/", type = "directory") |> length()
+```
+
+
+As by `r format(Sys.Date(), "%B %d,  %Y")`, this blog has **`r number_of_posts` blog posts** and content from **`r number_of_talks` talks/presentations**.
+
+

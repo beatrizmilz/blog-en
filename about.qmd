@@ -28,5 +28,6 @@ I'm a [tidyverse instructor certified by RStudio](https://education.rstudio.com/
 I have been writing about R in my [blog in Portuguese](https://beatrizmilz.com/blog/) since 2019.
 I'm mostly active in the Brazilian R community, co-organizing communities and events, such as: [R-Ladies São Paulo](https://twitter.com/RLadiesSaoPaulo), [Latin-R](https://twitter.com/LatinR_Conf), and [satRday São Paulo](https://twitter.com/satRdaySP).
 
-I'm a PhD Candidate at the [University of São Paulo](http://www.iee.usp.br/).
+I'm a PhD Candidate at the [University of São Paulo](http://www.iee.usp.br/), in Environmental Sciences.
+My research is about **transparency of information** in the **management of water resources** that are used to supply the Macrometropolis of Sao Paulo.
 :::

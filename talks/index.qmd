@@ -6,8 +6,8 @@ listing:
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: false
-  filter-ui: false
+  sort-ui: true
+  filter-ui: true
 page-layout: full
 title-block-banner: true
 ---
@@ -18,4 +18,13 @@ Here you can find my presentations that were in English.
 :) Enjoy!
 
 ------------------------------------------------------------------------
+
+**Next activities**:
+
+- July 25-26th , 2022 - [rstudio::conf(2022)](https://www.rstudio.com/conference/) - Teaching Assistant (TA) in the [workshop **Building Tidy Tools**](https://www.rstudio.com/conference/2022/workshops/build-tidy-tools/), taught by Emma Rand and Ian Lyttle.
+
+-  July 25-28th, 2022 - [rstudio::conf(2022)](https://www.rstudio.com/conference/) - Lightning Talk: "Making awesome automations with GitHub Actions". 
+
+------------------------------------------------------------------------
+
 

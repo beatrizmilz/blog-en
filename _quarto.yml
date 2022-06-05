@@ -3,6 +3,15 @@ project:
 
 website:
   title: "Bea Milz"
+  page-footer:
+    left: "Blog made with 💜 and [Quarto](https://quarto.org/), by Beatriz Milz. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+    right:
+      - icon: github
+        href: https://github.com/beatrizmilz/blog-en
+      - icon: twitter
+        href: https://twitter.com/BeaMilz
+      - icon: envelope
+        href: mailto:milz.bea@gmail.com
   navbar:
     right:
       - about.qmd
@@ -16,7 +25,7 @@ website:
         href: https://beatrizmilz.com/blog/
 
       - icon: github
-        href: https://github.com/beatrizmilz
+        href: https://github.com/beatrizmilz/blog-en
       - icon: twitter
         href: https://twitter.com/BeaMilz
 
