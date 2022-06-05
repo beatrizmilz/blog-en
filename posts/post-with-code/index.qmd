@@ -28,6 +28,8 @@ TODO:
 
 -   [ ] improve repository: README, link to blog
 
+-   [ ] add next talks: RStudio Conf
+
 -   [x] add talks:
 
     -   [x] useR 2019
