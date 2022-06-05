@@ -1,6 +1,6 @@
 ---
 title: "Creating a blog with Quarto in 10 steps"
-subtitle: "In this post, I introduce you to my new blog and show how you can create a blog with Quarto"
+subtitle: "In this post, I introduce you to my new blog and show how you can create a blog with Quarto."
 author: "Beatriz Milz"
 date: "2022-06-05"
 categories: [Quarto, Tutorial, Blog]
@@ -27,11 +27,11 @@ I searched if it was possible to adapt the blog that I had to a multi-language b
 I started using quarto in October 2021, and so far I have created [websites](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html) and presentations with it (I even made a [presentation about quarto using quarto](https://beatrizmilz.github.io/2022-SER-quarto/)).
 I was excited to test Quarto to create a blog sometime ago, but I really liked my blog with blogdown/Apéro.
 
-So when recently I started thinking about writing blog posts in English, I tought that would be a good idea to create a separate, brand new blog to store content in English, using Quarto.
+So when I started thinking about writing blog posts in English, I thought that it would be a good idea to create a separate, brand new blog to store content in English, using Quarto.
 
-My [blog in Portuguese](https://beatrizmilz.com/blog/) will continue to exists, and I will continue to post there (by only content in Portuguese). In this blog, I'll add content in English.
+My [blog in Portuguese](https://beatrizmilz.com/blog/) will continue to exist, and I will continue to post there (in Portuguese). In this blog, I'll add content in English.
 
-Now that I explained why this blog was created, I'm going to talk about some of the steps that you need to take to create a blog with Quarto.
+Now that I explained why this blog was created, I'm going to write about some of the steps that you need to take to create a blog with Quarto.
 
 
 :::{.callout-tip}
@@ -44,23 +44,24 @@ A lot of the steps that I explain in this post can be used to create other outpu
 
 ## 1 - Open new tabs!
 
-First of all: the developers of Quarto made a huge effort writing [the documentation](https://quarto.org/docs/websites/website-blog.html).
-I suggest that you open it in another tab, and use the Search button in the top-right of the docs page (believe me, the search feature used in Quarto is awesome!).
+First of all: the Quarto team made a huge effort writing [the documentation](https://quarto.org/docs/websites/website-blog.html). I suggest that you open it in another tab, and use the Search button in the top-right of the docs page (believe me, the search feature used in Quarto is awesome!).
 
 [![Print screen of the Quarto Documentation about blogs.](img/search.png){fig-align="center"}](https://quarto.org/docs/websites/website-blog.html)
 
-
-
 Second: I think it is nice to look at other blogs made with Quarto to see what you can do.
 I have not found a lot of blogs made with Quarto, and I think because is a new software and all.
-So, take a look at this blog:
+So, take a look at these blogs:
 
 -   [Notes from a data witch: A data science blog by Danielle Navarro](https://blog.djnavarro.net/) - Danielle is a data scientist and she has an awesome blog made with Quarto. The code used to create the blog is [available on GitHub](https://github.com/djnavarro/quarto-blog). But also don't miss her [art gallery](https://art.djnavarro.net/)!
+
+- This blog! Check other pages and see what you would like to have in your personal page. The code used to create this blog is [available on GitHub](https://github.com/beatrizmilz/blog-en).
+
+
 
 ## 2 - Install or update Quarto
 
 I have been using Quarto for more than half a year now, and I had already installed Quarto.
-But one thing that I do frequently, and I did again just before starting creating this blog, was to [update quarto](https://quarto.org/docs/get-started/).
+But one thing that I do frequently is to [update quarto](https://quarto.org/docs/get-started/).
 I recommend you do the same because if you use an older version, you might get a bug that has already been fixed.
 
 [![Print screen of the Quarto 'Get Started' page.](img/install-quarto.png){fig-align="center"}](https://quarto.org/docs/get-started/)
@@ -69,7 +70,7 @@ I recommend you do the same because if you use an older version, you might get a
 
 I'm an [RStudio IDE](https://www.rstudio.com/products/rstudio/download/#download) user, so I created a new RStudio Project using the interface:
 
-1. Click on `Project:`, and then in `New Project...`:
+1. Click the `Project:` button, and then in `New Project...`:
 
 ![](img/new_project/01-new-project.png){fig-align="center" width="70%"}
 
@@ -85,7 +86,7 @@ I'm an [RStudio IDE](https://www.rstudio.com/products/rstudio/download/#download
 
 ![](img/new_project/04-name-and-path.png){fig-align="center" width="70%"}
 
-5. Voilá! The structure of your blog is ready :) Check the `Files` panel and explore the files stored there.
+5. Voilá! The structure of your blog is ready 🎉. Check the `Files` panel and explore the files stored there.
 
 ![](img/new_project/05-project-created.png){fig-align="center" width="70%"}
 
@@ -95,7 +96,7 @@ You can preview how your blog is going to look like if you open an `.qmd` file a
 
 ![](img/render.png){fig-align="center" width="100%"}
 
-But you can also  click in the **Show in new window** button (circled in red in the image above) to preview it in your browser:
+But you can also click the **Show in new window** button (circled in red in the image above) to preview it in your browser:
 
 ![](img/preview.png){fig-align="center" width="100%"}
 
@@ -139,7 +140,8 @@ usethis::use_git_config(
   # your name
   user.name = "Captain Marvel",
   # your email used in your GitHub account
-  user.email = "awesomecaptain@gmail.com")
+  user.email = "awesomecaptain@gmail.com"
+)
 ```
 
 - [ ] Create a GitHub PAT Token with `usethis::create_github_token()` (is like a password)
@@ -219,16 +221,16 @@ This is the repository used in this example: <https://github.com/beatrizmilz/nam
 
 ## 6 - Deploy with Netlify
 
-Next, we will create a URL so anyone can see the blog online. This is step is called **deploy**, and we will use a service called [Netlify](https://www.netlify.com/).
+Next, we will create a URL to put the blog online. This step is called **deploy**, and we will use a service called [Netlify](https://www.netlify.com/) for this purpose.
 
-1. First, Sign up or Log in on [Netlify](https://www.netlify.com/). I recommend you doing that with your GitHub account.
+1. First, Sign up or Log in on [Netlify](https://www.netlify.com/). I recommend to sign in using your GitHub account.
 
 
-2. Then, you can click in **Add new site** and **Import an existing project**:
+2. Then, you can click **Add new site** and **Import an existing project**:
 
 ![](img/netlify/add-new-site.png){fig-align="center" width="100%"}
 
-3. Next, you need to connect to a Git provider. In this case, click in the link to GitHub. It may ask you to authenticate with GitHub if you have not done this already.
+3. Next, you need to connect to a Git provider. In this case, click the link to GitHub. It may ask you to authenticate with GitHub if you have not done this already.
 
 ![](img/netlify/connect-to-git.png){fig-align="center" width="100%"}
 
@@ -242,17 +244,17 @@ This is because when you generate your blog, by default Quarto saves all the HTM
 
 ![](img/netlify/site-settings.png){fig-align="center" width="70%"}
 
-6. When you first deploy a website on Netlify, it will have a funny URL. In this case  was *peppy-cat-2e067c.netlify.app*. So we need to change it to a better URL, that is easier for people type and remember your blog's address. To change your site URL, click on **Site settings**:
+6. When you first deploy a website on Netlify, it will show an automatic URL. In this case it was *peppy-cat-2e067c.netlify.app*. You can change it to a more personal URL, which would be easier for other people to type and remember. To change your site URL, click **Site settings**:
 
 
 ![](img/netlify/first-deploy.png){fig-align="center" width="100%"}
 
-Then click on **Change site name**:
+Then click **Change site name**:
 
 
 ![](img/netlify/site-details.png){fig-align="center" width="100%"}
 
-And choose the name used for the URL of your blog, writing it on the field **Site name**. Below this field, you can see how the URL of your blog is going to look like! After choosing it, click on **Save**. If you need, you can change it after.
+And choose the name used for the URL of your blog, writing it on the field **Site name**. Below this field, you can see how the URL of your blog is going to look like! After choosing it, click **Save**. If you need, you can change it after.
 
 
 ![](img/netlify/change-site-name.png){fig-align="center" width="100%"}
@@ -261,9 +263,9 @@ Now the blog that I am creating as an example is available in this link: <https:
 
 ## 7 - Change the colors of your blog
 
-You can change the colors, fonts and more of the style of your blog by changing the **theme** in the file `_quarto.yml`. You can change to other themes available, and you can check what are the options on the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#overview). 
+You can change the colors, fonts and more of the style of your blog by changing the **theme** in the file `_quarto.yml`. You can create your own theme or choose between the options on the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#overview). 
 
-Open the `_quarto.yml` file and change the theme to another option that you liked from the documentation. In this example, let's change the theme to `minty`: 
+Open the `_quarto.yml` file and choose another theme that you liked from the documentation. In this example, I changed the theme to `minty`: 
 
 ```{yml}
 #| eval: false
@@ -278,27 +280,25 @@ format:
 
 If you know CSS and would like to change the theme yourself, you can edit the `styles.css` file.
 
-
-
 :::{.callout-warning  collapse="true"}
 ### How can I update my blog with the changes I made?  (Click to expand!)
 
 If this is your first time using Git and GitHub in RStudio IDE, I'll show you the steps to update your blog!
 
-First, you need to find the Git Pane in RStudio IDE. If it is not showing, I recommend you restarting RStudio and opening your project again.
+First, you need to find the Git Pane in RStudio IDE. If it is not there, I recommend restarting RStudio and opening your project again.
 
-Then, in your Git pane, the list of files changed will appear. Check the boxes of the files that you want to update, and click in **Commit**:
+Then, in your Git Pane, the list of files with changes will appear. Check the boxes of the files that you want to update, and click **Commit**:
 
 ![](img/git-pane/stage.png){fig-align="center" width="100%"}
-Next, you need to write a message that, in few words, explains what was changed. Write this message in the **Commit message** field, and the click on **Commit**:
+Next, you need to write a message that, in a few words, explains what was changed. Write this message in the **Commit message** field, and the click **Commit**:
 
 ![](img/git-pane/write-commit-message.png){fig-align="center" width="100%"}
 
-Finally, close the Git window, and then click on **Push** (it is the green up-arrow button, on the Git pane).
+Finally, close the Git window, then click **Push** (it is the green up-arrow button on the Git pane).
 
 ![](img/git-pane/status.png){fig-align="center" width="100%"}
 
-After all the changes are send to GitHub, the Git panel looks like it is empty (it means that there is no new changes):
+After all the changes are sent to GitHub, the Git Pane will be empty, meaning that there are no new changes:
 
 ![](img/git-pane/no-changes.png){fig-align="center" width="100%"}
 
@@ -310,9 +310,9 @@ Now, wait a minute and then check your blog online!
 
 ## 8 - Setting up Comments
 
-It is nice to add a comments section on our blog posts, so people can write messages for us.
+It is nice to add a comments section on our blog posts, so people can write their opinion about it.
 
-The [quarto documentation](https://quarto.org/docs/output-formats/html-basics.html#commenting) explains how can we add comments with three diferent options: [Hypothes.is](https://web.hypothes.is/), [Utterances](https://utteranc.es/) and [Giscus](https://giscus.app/). You can use whatever suits you best.
+The [quarto documentation](https://quarto.org/docs/output-formats/html-basics.html#commenting) explains how to add comments with three diferent options: [Hypothes.is](https://web.hypothes.is/), [Utterances](https://utteranc.es/) and [Giscus](https://giscus.app/). You can use whatever suits you best.
 
 I chose to use [Giscus](https://giscus.app/) and here I'll tell you how to set it up!
 
@@ -324,7 +324,7 @@ I chose to use [Giscus](https://giscus.app/) and here I'll tell you how to set i
 ![](img/giscus-install.png){fig-align="center" width="100%"}
 
 
-Then, Giscus will ask you in which repositories you would like to give permission to Giscus. You can choose what you prefer. I prefer to give access only to the repository that I'm going to need this service, so I choose **Only select repository** and pick the repository of the blog.
+Then, Giscus will ask you in which repositories you would like to give permission to Giscus. You can choose what you prefer. I chose to give access only to the repository that I'm going to need this service, so I chose **Only select repository** and pick the repository of the blog.
 
 
 ![](img/giscus-repo.png){fig-align="center" width="60%"}
@@ -366,36 +366,34 @@ When we activate the comments, as default they appear in almost everypage! You c
 
 ## 9 - Add content in your blog
 
-So, your blog is live! Now you can make some changes and add your content in it. Here is a list of things that you might like to do!
+Your blog is live! Now you can make some changes and add your content in it. Here is a list of things that you might like to do!
 
 - `_quarto.yml`: In this file, you can do a lot of things, such as: changing the name that will appear in the blog, add links to your twitter and GitHub account, change the navigation bar options, and so on. You can check how I configured this in [this file](https://github.com/beatrizmilz/blog-en/blob/main/_quarto.yml).
 
 - Write about yourself, so people can get to know you. You can do that in the `about.qmd` file. There, you can add links to your social media, a photo, and other information about you that you think might be relevant. You can change the template of this page, in the `template` option. You can check all the templates [in the Quarto documentation](https://quarto.org/docs/websites/website-about.html). In this [personal blog](about.qmd), I chose to use `trestles`. 
 
-- Write blog posts! Your blogposts are stored in the `posts/` directory. Each post has to have a folder, and inside this folder you need a `index.qmd` file. But follow along the template that is already there and you will be good to go. Also, I recommend you checking the awesome options described on the [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html).
+- Write blog posts! Your blogposts are stored in the `posts/` directory. Each post has to have a folder, and inside this folder you need a `index.qmd` file. But follow along the template that is already there and you will be good to go. Also, I recommend to check the awesome options described on the [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html).
 
-- If you are out of ideas about what to write, my tip to you is to write something that you know (or are learning). and you like. I enjoy reading blog posts that people write about topics they are interested in!
+- If you are out of ideas about what to write, my advice is to write something that you already know, want to learn, or something that you like a lot. I enjoy reading blog posts that people write about topics they are interested in!
 
 
 
 
 ## 10 -  Tweet about it!
 
-Congratulations, you created your blog with Quarto!
+Congratulations, you have created your blog with Quarto! ✨
 
-After writing your first blogpost, you can start sharing with the world.
+After writing your first blogpost, you can start sharing it to the world. 📢📢📢
 
-My tip to you is: Write a tweet! You can use the [`#rstats` hashtag](https://twitter.com/search?q=%23RStats&src=typeahead_click) if the content of your blog is about R and you can cite [@quarto_pub](https://twitter.com/quarto_pub).
+My suggestion to you is: Write a tweet! You can use the [`#rstats` hashtag](https://twitter.com/search?q=%23RStats&src=typeahead_click) if the content of your blog is about R and you can cite [@quarto_pub](https://twitter.com/quarto_pub).
 
 If this post was relevant to you, you can also cite me with [@BeaMilz](https://twitter.com/BeaMilz), so I can retweet about your blog!
 
 # Conclusion
 
-For me, someone that is used to use blogdown, Quarto is an awesome tool with simples code.
+To me, a person who is used to use blogdown, Quarto is an awesome tool, has simple code and is full of great documentation.
 
-I hope this content was usefull and you enjoy the reading. Please let me know in the comments if there is anything that is not clear! 
-
-Also, English is my second language, so I probably made some writing mistakes. I would enjoy if you let me know if you find any mistakes, so I can correct it.
+I hope this content was useful and that you enjoy the reading. Please let me know in the comments if there is anything that is not clear! 
 
 # Thanks!
 
@@ -407,4 +405,4 @@ Thanks for reading this post, and now I would like to thank awesome people that,
 
 
 - [Julio Trecenti](https://twitter.com/jtrecenti) is my partner.
-We talk about quarto a lot, and I learn so much from him. Apart from that, I would like to thank him for reviewing my content and always supporting me ❤️.
+We talk about Quarto a lot, and I learn so much from him. Apart from that, I would like to thank him for reviewing my content and always supporting me ❤️.
