@@ -7,11 +7,14 @@ website:
     left: "Blog made with 💜 and [Quarto](https://quarto.org/), by Beatriz Milz. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
     right:
       - icon: github
-        href: https://github.com/beatrizmilz/blog-en
+        href: https://github.com/beatrizmilz/
       - icon: twitter
         href: https://twitter.com/BeaMilz
       - icon: envelope
         href: mailto:milz.bea@gmail.com
+  twitter-card:
+    creator: "@beamilz"
+    card-style: summary_large_image
   navbar:
     right:
       - about.qmd
@@ -23,7 +26,6 @@ website:
         href: https://beatrizmilz.github.io/resume/index.pdf
       - text: My blog in Portuguese
         href: https://beatrizmilz.com/blog/
-
       - icon: github
         href: https://github.com/beatrizmilz/blog-en
       - icon: twitter
@@ -33,6 +35,9 @@ format:
   html:
     theme: journal
     css: styles.css
+    link-external-icon: true
+    link-external-newwindow: true
+    link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/'
 
 editor: visual
 
