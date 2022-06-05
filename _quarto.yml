@@ -1,0 +1,27 @@
+project:
+  type: website
+
+website:
+  title: "Bea Milz (in English)"
+  navbar:
+    right:
+      - about.qmd
+      - text: Posts
+        href: /
+      - text: Resume
+        href: https://beatrizmilz.github.io/resume/index.pdf
+      - text: My blog in Portuguese
+        href: https://beatrizmilz.com/blog/
+
+      - icon: github
+        href: https://github.com/beatrizmilz
+      - icon: twitter
+        href: https://twitter.com/BeaMilz
+
+format:
+  html:
+    theme: journal
+    css: styles.css
+
+editor: visual
+

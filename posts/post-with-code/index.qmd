@@ -1,0 +1,9 @@
+---
+title: "Come back soon"
+author: "Beatriz Milz"
+date: "2022-06-04"
+categories: [news]
+image: "image.jpg"
+---
+
+This blog is under construction.
