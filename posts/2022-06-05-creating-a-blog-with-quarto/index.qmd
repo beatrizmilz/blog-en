@@ -15,19 +15,21 @@ draft: false
 Hi!
 Welcome to my new blog.
 
-My name is Beatriz, and I have been writing blog posts about R and Data Science since 2019, in [blog written in Portuguese](https://beatrizmilz.com/blog/) (yes, I am Brazilian 🇧🇷). You can read more about me in the [about page](/about.qmd), and check my presentations on the [talks](/talks/index.qmd) page.
+My name is Beatriz, and I have been writing blog posts about R and Data Science since 2019, in my  [blog written in Portuguese](https://beatrizmilz.com/blog/) (I am Brazilian 🇧🇷). You can read more about me in the [about page](/about.qmd), and check my presentations on the [talks](/talks/index.qmd) page.
 
 I think that some of the blogposts I write would be usefull to a broader audience, so I wanted to start blogging in English (or translating blogposts that I wrote).
 
 My [blog in Portuguese](https://beatrizmilz.com/blog/) was build using [blogdown](https://pkgs.rstudio.com/blogdown/) and [Hugo Apéro](https://github.com/hugo-apero/), and I really like it.
-I searched if it was possible to adapt the blog that I had to a multi-language blog (so I could have posts in Portuguese, English and Spanish), but I had no success on my quest :(
+I searched if it was possible to adapt the blog that I had to a multi-language blog (so I could have posts in Portuguese, English and Spanish), but I had no success on my quest.
 
 ## So, here comes [Quarto](https://quarto.org/)...
 
 I started using quarto in October 2021, and so far I have created [websites](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html) and presentations with it (I even made a [presentation about quarto using quarto](https://beatrizmilz.github.io/2022-SER-quarto/)).
-I was excited to test Quarto to write a blog sometime ago, but I really liked my blog with blogdown/Apéro.
+I was excited to test Quarto to create a blog sometime ago, but I really liked my blog with blogdown/Apéro.
 
 So when recently I started thinking about writing blog posts in English, I tought that would be a good idea to create a separate, brand new blog to store content in English, using Quarto.
+
+My [blog in Portuguese](https://beatrizmilz.com/blog/) will continue to exists, and I will continue to post there (by only content in Portuguese). In this blog, I'll add content in English.
 
 Now that I explained why this blog was created, I'm going to talk about some of the steps that you need to take to create a blog with Quarto.
 
