@@ -35,9 +35,11 @@ format:
   html:
     theme: journal
     css: styles.css
-    link-external-icon: true
+    link-external-icon: false
     link-external-newwindow: true
     link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/'
+    citations-hover: true
+    footnotes-hover: true
 
 editor: visual
 
