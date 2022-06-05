@@ -27,3 +27,6 @@ format:
 
 editor: visual
 
+comments:
+  giscus:
+    repo: beatrizmilz/blog-en

@@ -1,5 +1,6 @@
 ---
 title: "Talks"
+comments: false
 listing:
   contents: "*/*.qmd"
   sort: "date desc"
@@ -16,4 +17,5 @@ Those presentations are available in my [blog in Portuguese](https://beatrizmilz
 Here you can find my presentations that were in English.
 :) Enjoy!
 
-----
+------------------------------------------------------------------------
+

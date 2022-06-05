@@ -16,7 +16,7 @@ TODO:
 
 -   [x] set https
 
--   [ ] add a comment section
+-   [x] add a comment section
 
 -   [ ] write first introduction post
 
