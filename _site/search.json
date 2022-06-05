@@ -11,7 +11,7 @@
     "href": "posts/post-with-code/index.html",
     "title": "Come back soon",
     "section": "",
-    "text": "This blog is under construction."
+    "text": "TODO:\n\n\ndeploy it on netlify\n\nset a custom domain\n\nset https\n\nadd a comment section\n\nwrite first introduction post\n\ncreate a section to add talks in english"
   },
   {
     "objectID": "posts/welcome/index.html",

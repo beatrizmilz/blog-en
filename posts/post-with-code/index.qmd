@@ -7,3 +7,17 @@ image: "image.jpg"
 ---
 
 This blog is under construction.
+
+TODO:
+
+-   [x]  deploy it on netlify
+
+-   [x] set a custom domain
+
+-   [ ] set https
+
+-   [ ] add a comment section
+
+-   [ ] write first introduction post
+
+-   [ ] create a section to add talks in english
