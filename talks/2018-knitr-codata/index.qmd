@@ -4,7 +4,7 @@ subtitle: "CODATA-RDA School of Research Data Science"
 author: 
   - "Beatriz Milz"
 date: "2018-12-05"
-categories: [rmarkdown, knitr, teaching]
+categories: [R Markdown, knitr, Teaching]
 image: "featured.png"
 ---
 

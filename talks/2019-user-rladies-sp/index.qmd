@@ -5,7 +5,7 @@ author:
   - "Beatriz Milz"
   - "Bruna Wundervald"
 date: "2019-07-11"
-categories: [talks, r-ladies]
+categories: [Talks, R-Ladies, Communities]
 image: "featured.png"
 ---
 

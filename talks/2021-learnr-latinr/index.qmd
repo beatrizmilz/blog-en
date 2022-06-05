@@ -5,7 +5,7 @@ author:
   - "Beatriz Milz"
   - "Fernando Correa"
 date: "2021-11-10"
-categories: [talks, learnr, teaching]
+categories: [Talks, learnr, Teaching, gradethis]
 image: "featured.png"
 ---
 

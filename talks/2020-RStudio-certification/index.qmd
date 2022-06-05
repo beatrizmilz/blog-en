@@ -4,19 +4,14 @@ subtitle: "Teaching exam - RStudio"
 author: 
   - "Beatriz Milz"
 date: "2020-09-23"
-categories: [teaching]
+categories: [Teaching]
 image: "featured.png"
 ---
 
 This presentation was not recorded.
 
-
 -   [Complete material](https://beatrizmilz.github.io/RStudio_Certification/)
 
-
--   [Slides](https://beatrizmilz.github.io/RStudio_Certification/slides.html): 
+-   [Slides](https://beatrizmilz.github.io/RStudio_Certification/slides.html):
 
 [![](featured.png){fig-align="center"}](https://beatrizmilz.github.io/RStudio_Certification/slides.html)
-
-
-
