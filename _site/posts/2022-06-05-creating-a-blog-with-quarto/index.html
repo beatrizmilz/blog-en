@@ -244,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="welcome">Welcome!</h2>
 <p>Hi! Welcome to my new blog.</p>
 <p>My name is Beatriz, and I have been writing blog posts about R and Data Science since 2019, in my <a href="https://beatrizmilz.com/blog/">blog written in Portuguese</a> (I am Brazilian 🇧🇷). You can read more about me in the <a href="../../about.html">about page</a>, and check my presentations on the <a href="../../talks/index.html">talks</a> page.</p>
-<p>I think that some of the blogposts I write would be usefull to a broader audience, so I wanted to start blogging in English (or translating blogposts that I wrote).</p>
+<p>I think that some of the blog posts I write would be useful to a broader audience, so I wanted to start blogging in English (or translating blog posts that I wrote).</p>
 <p>My <a href="https://beatrizmilz.com/blog/">blog in Portuguese</a> was build using <a href="https://pkgs.rstudio.com/blogdown/">blogdown</a> and <a href="https://github.com/hugo-apero/">Hugo Apéro</a>, and I really like it. I searched if it was possible to adapt the blog that I had to a multi-language blog (so I could have posts in Portuguese, English and Spanish), but I had no success on my quest.</p>
 </section>
 <section id="so-here-comes-quarto" class="level2">
@@ -263,7 +263,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A lot of the steps that I explain in this post can be used to create other outputs with Quarto, such as websites, presentations, books.</p>
+<p>A lot of the steps that I explain in this post can be used to create other outputs with Quarto, such as websites, presentations, and books.</p>
 </div>
 </div>
 </section>
@@ -278,7 +278,7 @@ Tip
 <p></p><figcaption aria-hidden="true" class="figure-caption">Print screen of the Quarto Documentation about blogs.</figcaption><p></p>
 </figure>
 </div>
-<p>Second: I think it is nice to look at other blogs made with Quarto to see what you can do. I have not found a lot of blogs made with Quarto, and I think because is a new software and all. So, take a look at these blogs:</p>
+<p>Second: I think it is nice to look at other blogs made with Quarto to see what you can do. I have not found a lot of blogs made with Quarto, and I think because it is a new software. So, take a look at these blogs:</p>
 <ul>
 <li><p><a href="https://blog.djnavarro.net/">Notes from a data witch: A data science blog by Danielle Navarro</a> - Danielle is a data scientist and she has an awesome blog made with Quarto. The code used to create the blog is <a href="https://github.com/djnavarro/quarto-blog">available on GitHub</a>. But also don’t miss her <a href="https://art.djnavarro.net/">art gallery</a>!</p></li>
 <li><p>This blog! Check other pages and see what you would like to have in your personal page. The code used to create this blog is <a href="https://github.com/beatrizmilz/blog-en">available on GitHub</a>.</p></li>
@@ -286,7 +286,8 @@ Tip
 </section>
 <section id="install-or-update-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="install-or-update-quarto">2 - Install or update Quarto</h2>
-<p>I have been using Quarto for more than half a year now, and I had already installed Quarto. But one thing that I do frequently is to <a href="https://quarto.org/docs/get-started/">update quarto</a>. I recommend you do the same because if you use an older version, you might get a bug that has already been fixed.</p>
+<p>I have been using Quarto for more than half a year now, so I had already installed Quarto.</p>
+<p>But one thing that I do frequently is to <a href="https://quarto.org/docs/get-started/">update quarto</a>. I recommend you do the same because if you use an older version, you might get a bug that has already been fixed.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://quarto.org/docs/get-started/"><img src="img/install-quarto.png" class="img-fluid figure-img"></a></p>
@@ -322,7 +323,7 @@ Tip
 </figure>
 </div>
 <ol start="4" type="1">
-<li>Choose the directory name (the name of the folder where your blog will be stored) and where in your computed you want to save it. Then click <code>Create Project</code>:</li>
+<li>Choose the directory name (the name of the folder where your blog will be stored) and where in your computer you want to save it. Then click <code>Create Project</code>:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -352,11 +353,11 @@ Tip
 <p><img src="img/preview.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<p>Nice! Your blog exists in your computer now. But we still need to put it online, so other people can read your posts. In the next two sections I’ll show you how to do that!</p>
+<p>Nice! Your blog exists on your computer now. But we still need to put it online, so other people can read your posts. In the next two sections I’ll show you how to do that!</p>
 </section>
 <section id="create-a-github-repository" class="level2">
 <h2 class="anchored" data-anchor-id="create-a-github-repository">5 - Create a GitHub repository</h2>
-<p>Using Git and GitHub will help you to put your blog online (and also have a online copy of the code in case anything happens with the version in your computer).</p>
+<p>Using Git and GitHub will help you to put your blog online (and also have an online copy of the code in case anything happens with the version in your computer).</p>
 <p>You need the package <a href="https://usethis.r-lib.org/">usethis</a> for this part:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -373,9 +374,9 @@ What is Git? GitHub? (Click to expand!)
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>If you have not used Git and GitHub with RStudio IDE before, I recommend you to take some time to prepare your environment and configuring everything before contine reading this post.</p>
+<p>If you have not used Git and GitHub with RStudio IDE before, I recommend you to take some time to prepare your environment and configure everything before continuing reading this post.</p>
 <p><strong>You can read detailed information about how to do this in the book <a href="https://happygitwithr.com/">Happy Git with R</a>.</strong></p>
-<p>Here is a usefull check-list you can use:</p>
+<p>Here is a useful check-list you can use:</p>
 <ul class="task-list">
 <li><p><input type="checkbox" disabled="">
 <a href="https://git-scm.com/downloads">Install Git on your computer</a></p></li>
@@ -410,7 +411,7 @@ Use <code>usethis::git_sitrep()</code> to check if your name, email and PAT are 
 </div>
 <p>If you already configure Git and GitHub with RStudio IDE, you can use these two functions from the <a href="https://usethis.r-lib.org/">usethis</a> package, in the project that you created:</p>
 <ol type="1">
-<li><code>use_git()</code> to start the version contron of your project (the function will ask you if you want to commit your changes and restart RStudio, you can accept it):</li>
+<li><code>use_git()</code> to start the version control of your project (the function will ask you if you want to commit your changes and restart RStudio, you can accept it):</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span>
@@ -471,7 +472,7 @@ Use <code>usethis::git_sitrep()</code> to check if your name, email and PAT are 
 <h2 class="anchored" data-anchor-id="deploy-with-netlify">6 - Deploy with Netlify</h2>
 <p>Next, we will create a URL to put the blog online. This step is called <strong>deploy</strong>, and we will use a service called <a href="https://www.netlify.com/">Netlify</a> for this purpose.</p>
 <ol type="1">
-<li><p>First, Sign up or Log in on <a href="https://www.netlify.com/">Netlify</a>. I recommend to sign in using your GitHub account.</p></li>
+<li><p>First, Sign up or Log in on <a href="https://www.netlify.com/">Netlify</a>. I recommend signing in using your GitHub account.</p></li>
 <li><p>Then, you can click <strong>Add new site</strong> and <strong>Import an existing project</strong>:</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
@@ -582,10 +583,10 @@ How can I update my blog with the changes I made? (Click to expand!)
 <section id="setting-up-comments" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-comments">8 - Setting up Comments</h2>
 <p>It is nice to add a comments section on our blog posts, so people can write their opinion about it.</p>
-<p>The <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting">quarto documentation</a> explains how to add comments with three diferent options: <a href="https://web.hypothes.is/">Hypothes.is</a>, <a href="https://utteranc.es/">Utterances</a> and <a href="https://giscus.app/">Giscus</a>. You can use whatever suits you best.</p>
+<p>The <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting">quarto documentation</a> explains how to add comments with three different options: <a href="https://web.hypothes.is/">Hypothes.is</a>, <a href="https://utteranc.es/">Utterances</a> and <a href="https://giscus.app/">Giscus</a>. You can use whatever suits you best.</p>
 <p>I chose to use <a href="https://giscus.app/">Giscus</a> and here I’ll tell you how to set it up!</p>
 <ol type="1">
-<li><p>Your repository needs to be public on GitHub. The default it is to be public, it will only be private if you changed it (you can change it back on your repository settings on GitHub).</p></li>
+<li><p>Your repository needs to be public on GitHub. The default is to be public, it will only be private if you changed it (you can change it back on your repository settings on GitHub).</p></li>
 <li><p>Install the <a href="https://github.com/apps/giscus">Giscus App</a>. Go to <a href="https://github.com/apps/giscus">this website</a> and click the <strong>Install button</strong>:</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
@@ -638,7 +639,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When we activate the comments, as default they appear in almost everypage! You can hide the comments in specific pages by adding <code>comments: false</code> in the YAML headers of <code>*.qmd</code> files that you want to hide them.</p>
+<p>When we activate the comments, as default they appear in almost every page! You can hide the comments in specific pages by adding <code>comments: false</code> in the YAML headers of <code>*.qmd</code> files that you want to hide.</p>
 </div>
 </div>
 </section>
@@ -648,7 +649,7 @@ Tip
 <ul>
 <li><p><code>_quarto.yml</code>: In this file, you can do a lot of things, such as: changing the name that will appear in the blog, add links to your twitter and GitHub account, change the navigation bar options, and so on. You can check how I configured this in <a href="https://github.com/beatrizmilz/blog-en/blob/main/_quarto.yml">this file</a>.</p></li>
 <li><p>Write about yourself, so people can get to know you. You can do that in the <code>about.qmd</code> file. There, you can add links to your social media, a photo, and other information about you that you think might be relevant. You can change the template of this page, in the <code>template</code> option. You can check all the templates <a href="https://quarto.org/docs/websites/website-about.html">in the Quarto documentation</a>. In this <a href="about.qmd">personal blog</a>, I chose to use <code>trestles</code>.</p></li>
-<li><p>Write blog posts! Your blogposts are stored in the <code>posts/</code> directory. Each post has to have a folder, and inside this folder you need a <code>index.qmd</code> file. But follow along the template that is already there and you will be good to go. Also, I recommend to check the awesome options described on the <a href="https://quarto.org/docs/output-formats/html-basics.html">Quarto documentation</a>.</p></li>
+<li><p>Write blog posts! Your blog posts are stored in the <code>posts/</code> directory. Each post has to have a folder, and inside this folder you need a <code>index.qmd</code> file. But follow along the template that is already there and you will be good to go. Also, I recommend checking the awesome options described on the <a href="https://quarto.org/docs/output-formats/html-basics.html">Quarto documentation</a>.</p></li>
 <li><p>If you are out of ideas about what to write, my advice is to write something that you already know, want to learn, or something that you like a lot. I enjoy reading blog posts that people write about topics they are interested in!</p></li>
 </ul>
 </section>
@@ -662,14 +663,14 @@ Tip
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
-<p>To me, a person who is used to use blogdown, Quarto is an awesome tool, has simple code and is full of great documentation.</p>
+<p>To me, a person who is used to using blogdown, Quarto is an awesome tool, has simple code and is full of great documentation. I also think that the experience is similar to using <a href="https://rstudio.github.io/distill/">Distill</a>.</p>
 <p>I hope this content was useful and that you enjoy the reading. Please let me know in the comments if there is anything that is not clear!</p>
 </section>
 <section id="thanks" class="level1">
 <h1>Thanks!</h1>
 <p>Thanks for reading this post, and now I would like to thank awesome people that, without their work, this post would not exist:</p>
 <ul>
-<li><p>The team that developed Quarto (<a href="https://github.com/quarto-dev/quarto-cli/graphs/contributors">here</a> and <a href="https://github.com/quarto-dev/quarto-web/graphs/contributors">here</a>). They continue to improve it, they answer questions on the <a href="https://github.com/quarto-dev/quarto-web/discussions">Discussions</a>, and they wrote that <a href="https://quarto.org/docs/guide/">AWESOME DOCUMENTATION</a>!</p></li>
+<li><p>The team that developed Quarto (<a href="https://github.com/quarto-dev/quarto-cli/graphs/contributors">here</a> and <a href="https://github.com/quarto-dev/quarto-web/graphs/contributors">here</a>). They continue to improve it, they answer questions on the <a href="https://github.com/quarto-dev/quarto-web/discussions">Discussions</a>, and they wrote that <a href="https://quarto.org/docs/guide/">AWESOME DOCUMENTATION</a>! 🏆</p></li>
 <li><p><a href="https://www.apreshill.com/">Alison Hill</a> - she is an important part of the R and R-Ladies community, and she wrote tons of content about writing blogs with R. I have been learning from her material since 2018 (when I started to create my <a href="https://beatrizmilz.com/talk/">blog in Portuguese</a>). A lot of what I know about creating blogs with R, I learned from her materials and talks. Thanks Alison 💜.</p></li>
 <li><p><a href="https://twitter.com/jtrecenti">Julio Trecenti</a> is my partner. We talk about Quarto a lot, and I learn so much from him. Apart from that, I would like to thank him for reviewing my content and always supporting me ❤️.</p></li>
 </ul>

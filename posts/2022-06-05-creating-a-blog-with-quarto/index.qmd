@@ -17,7 +17,7 @@ Welcome to my new blog.
 
 My name is Beatriz, and I have been writing blog posts about R and Data Science since 2019, in my  [blog written in Portuguese](https://beatrizmilz.com/blog/) (I am Brazilian 🇧🇷). You can read more about me in the [about page](/about.qmd), and check my presentations on the [talks](/talks/index.qmd) page.
 
-I think that some of the blogposts I write would be usefull to a broader audience, so I wanted to start blogging in English (or translating blogposts that I wrote).
+I think that some of the blog posts I write would be useful to a broader audience, so I wanted to start blogging in English (or translating blog posts that I wrote).
 
 My [blog in Portuguese](https://beatrizmilz.com/blog/) was build using [blogdown](https://pkgs.rstudio.com/blogdown/) and [Hugo Apéro](https://github.com/hugo-apero/), and I really like it.
 I searched if it was possible to adapt the blog that I had to a multi-language blog (so I could have posts in Portuguese, English and Spanish), but I had no success on my quest.
@@ -37,7 +37,7 @@ Now that I explained why this blog was created, I'm going to write about some of
 :::{.callout-tip}
 ## Tip
 
-A lot of the steps that I explain in this post can be used to create other outputs with Quarto, such as websites, presentations, books. 
+A lot of the steps that I explain in this post can be used to create other outputs with Quarto, such as websites, presentations, and books. 
 :::
 
 # How to create a blog with Quarto?
@@ -49,7 +49,7 @@ First of all: the Quarto team made a huge effort writing [the documentation](htt
 [![Print screen of the Quarto Documentation about blogs.](img/search.png){fig-align="center"}](https://quarto.org/docs/websites/website-blog.html)
 
 Second: I think it is nice to look at other blogs made with Quarto to see what you can do.
-I have not found a lot of blogs made with Quarto, and I think because is a new software and all.
+I have not found a lot of blogs made with Quarto, and I think because it is a new software.
 So, take a look at these blogs:
 
 -   [Notes from a data witch: A data science blog by Danielle Navarro](https://blog.djnavarro.net/) - Danielle is a data scientist and she has an awesome blog made with Quarto. The code used to create the blog is [available on GitHub](https://github.com/djnavarro/quarto-blog). But also don't miss her [art gallery](https://art.djnavarro.net/)!
@@ -60,7 +60,8 @@ So, take a look at these blogs:
 
 ## 2 - Install or update Quarto
 
-I have been using Quarto for more than half a year now, and I had already installed Quarto.
+I have been using Quarto for more than half a year now, so I had already installed Quarto.
+
 But one thing that I do frequently is to [update quarto](https://quarto.org/docs/get-started/).
 I recommend you do the same because if you use an older version, you might get a bug that has already been fixed.
 
@@ -82,7 +83,7 @@ I'm an [RStudio IDE](https://www.rstudio.com/products/rstudio/download/#download
 
 ![](img/new_project/03-new-quarto-blog.png){fig-align="center" width="70%"}
 
-4. Choose  the directory name (the name of the folder where your blog will be stored) and where in your computed you want to save it. Then click `Create Project`:
+4. Choose  the directory name (the name of the folder where your blog will be stored) and where in your computer you want to save it. Then click `Create Project`:
 
 ![](img/new_project/04-name-and-path.png){fig-align="center" width="70%"}
 
@@ -100,12 +101,12 @@ But you can also click the **Show in new window** button (circled in red in the 
 
 ![](img/preview.png){fig-align="center" width="100%"}
 
-Nice! Your blog exists in your computer now. But we still need to put it online, so other people can read your posts. In the next two sections I'll show you how to do that!
+Nice! Your blog exists on your computer now. But we still need to put it online, so other people can read your posts. In the next two sections I'll show you how to do that!
 
 
 ## 5 - Create a GitHub repository
 
-Using Git and GitHub will help you to put your blog online (and also have a online copy of the code in case anything happens with the version in your computer). 
+Using Git and GitHub will help you to put your blog online (and also have an online copy of the code in case anything happens with the version in your computer). 
 
 You need the package [usethis](https://usethis.r-lib.org/) for this part:
 
@@ -119,11 +120,11 @@ install.packages("usethis")
 :::{.callout-warning collapse="true"}
 ### What is Git? GitHub? (Click to expand!)
 
-If you have not used Git and GitHub with RStudio IDE before, I recommend you to take some time to prepare your environment and configuring everything before contine reading this post.
+If you have not used Git and GitHub with RStudio IDE before, I recommend you to take some time to prepare your environment and configure everything before continuing reading this post.
 
 **You can read detailed information about how to do this in the book [Happy Git with R](https://happygitwithr.com/).**
 
-Here is a usefull check-list you can use:
+Here is a useful check-list you can use:
 
 - [ ] [Install Git on your computer](https://git-scm.com/downloads)
 
@@ -160,7 +161,7 @@ If it is all configured, you are ready to continue reading this post. 🚀
 
 If you already configure Git and GitHub with RStudio IDE, you can use these two functions from the [usethis](https://usethis.r-lib.org/) package, in the project that you created:
 
-1. `use_git()` to start the version contron of your project (the function will ask you if you want to commit your changes and restart RStudio, you can accept it): 
+1. `use_git()` to start the version control of your project (the function will ask you if you want to commit your changes and restart RStudio, you can accept it): 
 
 ```{r}
 #| eval: false
@@ -223,7 +224,7 @@ This is the repository used in this example: <https://github.com/beatrizmilz/nam
 
 Next, we will create a URL to put the blog online. This step is called **deploy**, and we will use a service called [Netlify](https://www.netlify.com/) for this purpose.
 
-1. First, Sign up or Log in on [Netlify](https://www.netlify.com/). I recommend to sign in using your GitHub account.
+1. First, Sign up or Log in on [Netlify](https://www.netlify.com/). I recommend signing in using your GitHub account.
 
 
 2. Then, you can click **Add new site** and **Import an existing project**:
@@ -312,11 +313,11 @@ Now, wait a minute and then check your blog online!
 
 It is nice to add a comments section on our blog posts, so people can write their opinion about it.
 
-The [quarto documentation](https://quarto.org/docs/output-formats/html-basics.html#commenting) explains how to add comments with three diferent options: [Hypothes.is](https://web.hypothes.is/), [Utterances](https://utteranc.es/) and [Giscus](https://giscus.app/). You can use whatever suits you best.
+The [quarto documentation](https://quarto.org/docs/output-formats/html-basics.html#commenting) explains how to add comments with three different options: [Hypothes.is](https://web.hypothes.is/), [Utterances](https://utteranc.es/) and [Giscus](https://giscus.app/). You can use whatever suits you best.
 
 I chose to use [Giscus](https://giscus.app/) and here I'll tell you how to set it up!
 
-1. Your repository needs to be public on GitHub. The default it is to be public, it will only be private if you changed it (you can change it back on your repository settings on GitHub).
+1. Your repository needs to be public on GitHub. The default is to be public, it will only be private if you changed it (you can change it back on your repository settings on GitHub).
 
 2. Install the [Giscus App](https://github.com/apps/giscus). Go to [this website](https://github.com/apps/giscus) and click the **Install button**:
 
@@ -357,7 +358,7 @@ Now we have a comments section on the blog! People need to log in with GitHub in
 :::{.callout-tip}
 ## Tip
 
-When we activate the comments, as default they appear in almost everypage! You can hide the comments in specific pages by adding `comments: false` in the YAML headers of `*.qmd` files that you want to hide them. 
+When we activate the comments, as default they appear in almost every page! You can hide the comments in specific pages by adding `comments: false` in the YAML headers of `*.qmd` files that you want to hide. 
 :::
 
 
@@ -372,7 +373,7 @@ Your blog is live! Now you can make some changes and add your content in it. Her
 
 - Write about yourself, so people can get to know you. You can do that in the `about.qmd` file. There, you can add links to your social media, a photo, and other information about you that you think might be relevant. You can change the template of this page, in the `template` option. You can check all the templates [in the Quarto documentation](https://quarto.org/docs/websites/website-about.html). In this [personal blog](about.qmd), I chose to use `trestles`. 
 
-- Write blog posts! Your blogposts are stored in the `posts/` directory. Each post has to have a folder, and inside this folder you need a `index.qmd` file. But follow along the template that is already there and you will be good to go. Also, I recommend to check the awesome options described on the [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html).
+- Write blog posts! Your blog posts are stored in the `posts/` directory. Each post has to have a folder, and inside this folder you need a `index.qmd` file. But follow along the template that is already there and you will be good to go. Also, I recommend checking the awesome options described on the [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html).
 
 - If you are out of ideas about what to write, my advice is to write something that you already know, want to learn, or something that you like a lot. I enjoy reading blog posts that people write about topics they are interested in!
 
@@ -391,7 +392,7 @@ If this post was relevant to you, you can also cite me with [@BeaMilz](https://t
 
 # Conclusion
 
-To me, a person who is used to use blogdown, Quarto is an awesome tool, has simple code and is full of great documentation.
+To me, a person who is used to using blogdown, Quarto is an awesome tool, has simple code and is full of great documentation. I also think that the experience is similar to using [Distill](https://rstudio.github.io/distill/).
 
 I hope this content was useful and that you enjoy the reading. Please let me know in the comments if there is anything that is not clear! 
 
@@ -399,7 +400,7 @@ I hope this content was useful and that you enjoy the reading. Please let me kno
 
 Thanks for reading this post, and now I would like to thank awesome people that, without their work, this post would not exist:
 
-- The team that developed Quarto ([here](https://github.com/quarto-dev/quarto-cli/graphs/contributors) and [here](https://github.com/quarto-dev/quarto-web/graphs/contributors)). They continue to improve it,  they answer questions on the [Discussions](https://github.com/quarto-dev/quarto-web/discussions), and they wrote that [AWESOME DOCUMENTATION](https://quarto.org/docs/guide/)! 
+- The team that developed Quarto ([here](https://github.com/quarto-dev/quarto-cli/graphs/contributors) and [here](https://github.com/quarto-dev/quarto-web/graphs/contributors)). They continue to improve it,  they answer questions on the [Discussions](https://github.com/quarto-dev/quarto-web/discussions), and they wrote that [AWESOME DOCUMENTATION](https://quarto.org/docs/guide/)!  🏆
 
 - [Alison Hill](https://www.apreshill.com/) - she is an important part of the R and R-Ladies community, and she wrote tons of content about writing blogs with R. I have been learning from her material since 2018 (when I started to create my [blog in Portuguese](https://beatrizmilz.com/talk/)). A lot of what I know about creating blogs with R, I learned from her materials and talks. Thanks Alison 💜. 
 
