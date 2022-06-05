@@ -17,7 +17,6 @@ website:
   twitter-card:
     creator: "@beamilz"
     card-style: summary_large_image
-    image: social.png
   navbar:
     right:
       - about.qmd
@@ -44,6 +43,7 @@ format:
     link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/**'
     citations-hover: true
     footnotes-hover: true
+    include-in-header: meta.html
 
 editor: visual
 
