@@ -1,0 +1,384 @@
+---
+title: "Creating a blog with Quarto in 10 steps"
+subtitle: "In this post, I introduce you to my new blog and show how you can create a blog with Quarto"
+author: "Beatriz Milz"
+date: "2022-06-05"
+categories: [Quarto, Tutorial, Blog]
+image: "search.png"
+toc: true
+draft: true
+---
+
+
+## Welcome!
+
+Hi!
+Welcome to my new blog.
+
+My name is Beatriz, and I have been writing blog posts about R and Data Science since 2019, in [blog written in Portuguese](https://beatrizmilz.com/blog/) (yes, I am Brazilian 🇧🇷).
+
+I think that some of the blogposts I write would be usefull to a broader audience, so I wanted to start blogging in English (or translating blogposts that I wrote).
+
+My [blog in Portuguese](https://beatrizmilz.com/blog/) was build using [blogdown](https://pkgs.rstudio.com/blogdown/) and [Hugo Apéro](https://github.com/hugo-apero/), and I really like it.
+I searched if it was possible to adapt the blog that I had to a multi-language blog (so I could have posts in Portuguese, English and Spanish), but I had no success on my quest :(
+
+## So, here comes [Quarto](https://quarto.org/)...
+
+I started using quarto in October 2021, and so far I have created [websites](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html) and presentations with it (I even made a [presentation about quarto using quarto](https://beatrizmilz.github.io/2022-SER-quarto/)).
+I was excited to test Quarto to write a blog sometime ago, but I really liked my blog with blogdown/Apéro.
+
+So when recently I started thinking about writing blog posts in English, I tought that would be a good idea to create a separate, brand new blog to store content in English, using Quarto.
+
+Now that I explained why this blog was created, I'm going to talk about some of the steps that you need to take to create a blog with Quarto.
+
+
+:::{.callout-tip}
+## Tip
+
+A lot of the steps that I explain in this post can be used to create other outputs with Quarto, such as websites, presentations, books. 
+:::
+
+# How to create a blog with Quarto?
+
+## 1 - Open new tabs!
+
+First of all: the developers of Quarto made a huge effort writing [the documentation](https://quarto.org/docs/websites/website-blog.html).
+I suggest that you open it in another tab, and use the Search button in the top-right of the docs page (believe me, the search feature used in Quarto is awesome!).
+
+[![Print screen of the Quarto Documentation about blogs.](img/search.png){fig-align="center"}](https://quarto.org/docs/websites/website-blog.html)
+
+
+
+Second: I think it is nice to look at other blogs made with Quarto to see what you can do.
+I have not found a lot of blogs made with Quarto, and I think because is a new software and all.
+So, take a look at this blog:
+
+-   [Notes from a data witch: A data science blog by Danielle Navarro](https://blog.djnavarro.net/) - Danielle is a data scientist and she has an awesome blog made with Quarto. The code used to create the blog is [available on GitHub](https://github.com/djnavarro/quarto-blog). But also don't miss her [art gallery](https://art.djnavarro.net/)!
+
+## 2 - Install or update Quarto
+
+I have been using Quarto for more than half a year now, and I had already installed Quarto.
+But one thing that I do frequently, and I did again just before starting creating this blog, was to [update quarto](https://quarto.org/docs/get-started/).
+I recommend you do the same because if you use an older version, you might get a bug that has already been fixed.
+
+[![Print screen of the Quarto 'Get Started' page.](img/install-quarto.png){fig-align="center"}](https://quarto.org/docs/get-started/)
+
+## 3 - Create a project for the blog
+
+I'm an [RStudio IDE](https://www.rstudio.com/products/rstudio/download/#download) user, so I created a new RStudio Project using the interface:
+
+1. Click on `Project:`, and then in `New Project...`:
+
+![](img/new_project/01-new-project.png){fig-align="center" width="70%"}
+
+2. Choose  `New Directory`:
+
+![](img/new_project/02-new-directory.png){fig-align="center" width="70%"}
+
+3. Choose  `Quarto blog`:
+
+![](img/new_project/03-new-quarto-blog.png){fig-align="center" width="70%"}
+
+4. Choose  the directory name (the name of the folder where your blog will be stored) and where in your computed you want to save it. Then click `Create Project`:
+
+![](img/new_project/04-name-and-path.png){fig-align="center" width="70%"}
+
+5. Voilá! The structure of your blog is ready :) Check the `Files` panel and explore the files stored there.
+
+![](img/new_project/05-project-created.png){fig-align="center" width="70%"}
+
+## 4 - Preview your blog
+
+You can preview how your blog is going to look like if you open an `.qmd` file and click the **Render** button. The preview of your blog will show on the Viewer Pane in the RStudio IDE. 
+
+![](img/render.png){fig-align="center" width="100%"}
+
+But you can also  click in the **Show in new window** button (circled in red in the image above) to preview it in your browser:
+
+![](img/preview.png){fig-align="center" width="100%"}
+
+Nice! Your blog exists in your computer now. But we still need to put it online, so other people can read your posts. In the next two sections I'll show you how to do that!
+
+
+## 5 - Create a GitHub repository
+
+Using Git and GitHub will help you to put your blog online (and also have a online copy of the code in case anything happens with the version in your computer). 
+
+You need the package [usethis](https://usethis.r-lib.org/) for this part:
+
+```{r}
+#| eval: false
+#| include: true
+install.packages("usethis")
+```
+
+
+:::{.callout-warning collapse="true"}
+### What is Git? GitHub? (Click to expand!)
+
+If you have not used Git and GitHub with RStudio IDE before, I recommend you to take some time to prepare your environment and configuring everything before contine reading this post.
+
+**You can read detailed information about how to do this in the book [Happy Git with R](https://happygitwithr.com/).**
+
+Here is a usefull check-list you can use:
+
+- [ ] [Install Git on your computer](https://git-scm.com/downloads)
+
+- [ ] [Create a free account on GitHub](https://github.com/)
+
+- [ ] Install package [usethis](https://usethis.r-lib.org/): `install.packages("usethis")`
+
+- [ ] Introduce yourself to Git:
+
+```{r}
+#| eval: false
+#| include: true
+usethis::use_git_config(
+  # your name
+  user.name = "Captain Marvel",
+  # your email used in your GitHub account
+  user.email = "awesomecaptain@gmail.com")
+```
+
+- [ ] Create a GitHub PAT Token with `usethis::create_github_token()` (is like a password)
+
+- [ ] Store your token with `gitcreds::gitcreds_set()`
+
+- [ ] Restart your R Session (usually `CTRL + SHIFT + F10` will do the work)
+
+- [ ] Use `usethis::git_sitrep()` to check if your name, email and PAT are configured. The most important thing to look for is: `Personal access token for 'https://github.com': '<discovered>'`. 
+
+If it is all configured, you are ready to continue reading this post. 🚀
+
+:::
+
+
+
+If you already configure Git and GitHub with RStudio IDE, you can use these two functions from the [usethis](https://usethis.r-lib.org/) package, in the project that you created:
+
+1. `use_git()` to start the version contron of your project (the function will ask you if you want to commit your changes and restart RStudio, you can accept it): 
+
+```{r}
+#| eval: false
+#| include: true
+usethis::use_git()
+# ✔ Setting active project to '/Users/Desktop/name-of-your-blog/'
+# ✔ Initialising Git repo
+# ✔ Adding '.Rproj.user', '.Rhistory', '.Rdata', '.httr-oauth', '.DS_Store' to '.gitignore'
+# There are 8 uncommitted files:
+# * '_quarto.yml'
+# * '.gitignore'
+# * 'about.qmd'
+# * 'example-quarto-blog.Rproj'
+# * 'index.qmd'
+# * 'posts/'
+# * 'profile.jpg'
+# * 'styles.css'
+
+
+# Is it ok to commit them?
+# 
+# 1: Not now
+# 2: Yup
+# 3: Negative
+# 
+# Selection: 2
+
+
+# ✔ Adding files
+# ✔ Making a commit with message 'Initial commit'
+# • A restart of RStudio is required to activate the Git pane
+# Restart now?
+# 
+# 1: No way
+# 2: Definitely
+# 3: No
+# 
+# Selection: 2
+```
+
+2. `use_github()` to create a GitHub repository to store your code, and a new window will open with your repository:
+
+```{r}
+#| eval: false
+#| include: true
+usethis::use_github()
+# ℹ Defaulting to 'https' Git protocol
+# ✔ Setting active project to '/Users/beatrizmilz/Desktop/name-of-your-blog'
+# ✔ Creating GitHub repository 'beatrizmilz/name-of-your-blog'
+# ✔ Setting remote 'origin' to 'https://github.com/beatrizmilz/name-of-your-blog.git'
+# ✔ Pushing 'main' branch to GitHub and setting 'origin/main' as upstream branch
+# ✔ Opening URL 'https://github.com/beatrizmilz/name-of-your-blog'
+```
+
+![](img/new-repo.png){fig-align="center" width="100%"}
+
+This is the repository used in this example: <https://github.com/beatrizmilz/name-of-your-blog>
+
+## 6 - Deploy with Netlify
+
+Next, we will create a URL so anyone can see the blog online. This is step is called **deploy**, and we will use a service called [Netlify](https://www.netlify.com/).
+
+1. First, Sign up or Log in on [Netlify](https://www.netlify.com/). I recommend you doing that with your GitHub account.
+
+
+2. Then, you can click in **Add new site** and **Import an existing project**:
+
+![](img/netlify/add-new-site.png){fig-align="center" width="100%"}
+
+3. Next, you need to connect to a Git provider. In this case, click in the link to GitHub. It may ask you to authenticate with GitHub if you have not done this already.
+
+![](img/netlify/connect-to-git.png){fig-align="center" width="100%"}
+
+4. Then, in **Pick a repository from GitHub**, choose the repository that you created for your blog:
+
+![](img/netlify/pick-repo.png){fig-align="center" width="100%"}
+
+5. This step is really important, so don't hurry up and take your time to do it with care!
+In **Import an existing project from a Git repository**, you **only** have to change one thing: the **Base directory** field. You need to write the name of the directory used to store the HTML files of your blog. By default, it is `_site`. 
+This is because when you generate your blog, by default Quarto saves all the HTML files generated for your site in the directory called `_site`. Everything else will be filled out by Netlify, so don't change anything else. Check if everything looks like the image below and then click **Deploy site**:
+
+![](img/netlify/site-settings.png){fig-align="center" width="70%"}
+
+6. When you first deploy a website on Netlify, it will have a funny URL. In this case  was *peppy-cat-2e067c.netlify.app*. So we need to change it to a better URL, that is easier for people type and remember your blog's address. To change your site URL, click on **Site settings**:
+
+
+![](img/netlify/first-deploy.png){fig-align="center" width="100%"}
+
+Then click on **Change site name**:
+
+
+![](img/netlify/site-details.png){fig-align="center" width="100%"}
+
+And choose the name used for the URL of your blog, writing it on the field **Site name**. Below this field, you can see how the URL of your blog is going to look like! After choosing it, click on **Save**. If you need, you can change it after.
+
+
+![](img/netlify/change-site-name.png){fig-align="center" width="100%"}
+
+Now the blog that I am creating as an example is available in this link: <https://your-awesome-blog-with-quarto.netlify.app/>
+
+## 7 - Change the colors of your blog
+
+You can change the colors, fonts and more of the style of your blog by changing the **theme** in the file `_quarto.yml`. You can change to other themes available, and you can check what are the options on the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#overview). 
+
+Open the `_quarto.yml` file and change the theme to another option that you liked from the documentation. In this example, let's change the theme to `minty`: 
+
+```{yml}
+#| eval: false
+#| include: true
+format:
+  html:
+    theme: minty
+    css: styles.css
+```
+
+![](img/theme.png){fig-align="center" width="100%"}
+
+If you know CSS and would like to change the theme yourself, you can edit the `styles.css` file.
+
+
+
+:::{.callout-warning  collapse="true"}
+### How can I update my blog with the changes I made?  (Click to expand!)
+
+If this is your first time using Git and GitHub in RStudio IDE, I'll show you the steps to update your blog!
+
+First, you need to find the Git Pane in RStudio IDE. If it is not showing, I recommend you restarting RStudio and opening your project again.
+
+Then, in your Git pane, the list of files changed will appear. Check the boxes of the files that you want to update, and click in **Commit**:
+
+![](img/git-pane/stage.png){fig-align="center" width="100%"}
+Next, you need to write a message that, in few words, explains what was changed. Write this message in the **Commit message** field, and the click on **Commit**:
+
+![](img/git-pane/write-commit-message.png){fig-align="center" width="100%"}
+
+Finally, close the Git window, and then click on **Push** (it is the green up-arrow button, on the Git pane).
+
+![](img/git-pane/status.png){fig-align="center" width="100%"}
+
+After all the changes are send to GitHub, the Git panel looks like it is empty (it means that there is no new changes):
+
+![](img/git-pane/no-changes.png){fig-align="center" width="100%"}
+
+Now, wait a minute and then check your blog online!
+
+:::
+
+
+
+## 8 - Setting up Comments
+
+It is nice to add a comments section on our blog posts, so people can write messages for us.
+
+The [quarto documentation](https://quarto.org/docs/output-formats/html-basics.html#commenting) explains how can we add comments with three diferent options: [Hypothes.is](https://web.hypothes.is/), [Utterances](https://utteranc.es/) and [Giscus](https://giscus.app/). You can use whatever suits you best.
+
+I chose to use [Giscus](https://giscus.app/) and here I'll tell you how to set it up!
+
+1. Your repository needs to be public on GitHub. The default it is to be public, it will only be private if you changed it (you can change it back on your repository settings on GitHub).
+
+2. Install the [Giscus App](https://github.com/apps/giscus). Go to [this website](https://github.com/apps/giscus) and click the **Install button**:
+
+
+![](img/giscus-install.png){fig-align="center" width="100%"}
+
+
+Then, Giscus will ask you in which repositories you would like to give permission to Giscus. You can choose what you prefer. I prefer to give access only to the repository that I'm going to need this service, so I choose **Only select repository** and pick the repository of the blog.
+
+
+![](img/giscus-repo.png){fig-align="center" width="60%"}
+
+3. You have to enable the **Discussions** in your repository. First, go to your repository, and click **Settings**:
+
+![](img/github-repo.png){fig-align="center" width="100%"}
+
+Then, scroll down to the **Features** sections, and check the box of the **Discussions**.
+
+![](img/enable-discussions.png){fig-align="center" width="60%"}
+
+4. Open the `_quarto.yml` file and add this code. Remember to update the information of your repo: in this example is `beatrizmilz/name-of-your-blog` because `beatrizmilz` is my GitHub account, and `name-of-your-blog` is the repository of this example blog.
+
+```{yml}
+#| eval: false
+#| include: true
+comments:
+  giscus:
+    repo: YOURGITHUBACCOUNT/YOURREPO
+```
+
+Remember to commit all the changes before checking the online version! If you missed that, go back to  the end of [section 7](#change-the-colors-of-your-blog) and read the collapsed tip.
+
+Now we have a comments section on the blog! People need to log in with GitHub in order to write a comment or give a reaction:
+
+
+![](img/giscus-deployed.png){fig-align="center" width="50%"}
+
+:::{.callout-tip}
+## Tip
+
+When we activate the comments, as default they appear in almost everypage! You can hide the comments in specific pages by adding `comments: false` in the YAML headers of `*.qmd` files that you want to hide them. 
+:::
+
+
+
+
+
+## 9 - Add content in your blog
+
+So, your blog is live! Now you can make some changes and add your content in it. Here is a list of things that you might like to do!
+
+- `_quarto.yml`: In this file, you can do a lot of things, such as: changing the name that will appear in the blog, add links to your twitter and GitHub account, change the navigation bar options, and so on. You can check how I configured this in [this file](https://github.com/beatrizmilz/blog-en/blob/main/_quarto.yml).
+
+- Write blog posts! Your blogposts are stored in the `posts` directory. Each post has to have a folder, and inside this folder you need a `index.qmd` file. But follow along the template that is already there and you will be good to go. Also, I recommend you checking the awesome options described on the [Quarto documentation](https://quarto.org/docs/output-formats/html-basics.html), such as Tabsets, 
+
+
+
+
+## 10 -  Tweet about it!
+
+...
+
+# Thanks!
+
+- Alisson Hill
+
+- Quarto devteam and documentation
