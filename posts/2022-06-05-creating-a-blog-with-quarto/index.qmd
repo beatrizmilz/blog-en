@@ -1,5 +1,5 @@
 ---
-title: "Creating a blog with Quarto in 10 steps"
+title: "Creating a blog with Quarto in 10 steps (for R users)"
 subtitle: "In this post, I introduce you to my new blog and show how you can create a blog with Quarto."
 author: "Beatriz Milz"
 date: "2022-06-05"
