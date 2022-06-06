@@ -433,3 +433,10 @@ Thanks for reading this post, and now I would like to thank awesome people that,
 -   [Julio Trecenti](https://twitter.com/jtrecenti) is my partner.
     We talk about Quarto a lot, and I learn so much from him.
     Apart from that, I would like to thank him for reviewing my content and always supporting me ❤️.
+
+## Edit: Tweet
+
+Here is my tweet about this blog post:
+<center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I started a new blog to write content in English.<br>The first post is &#39;Creating a blog with Quarto in 10 steps&#39;<a href="https://twitter.com/quarto_pub?ref_src=twsrc%5Etfw">@quarto_pub</a> <br><br>In this post, I introduce you to my new blog and show how you can create a blog with Quarto:<a href="https://t.co/u9Umh3X5eu">https://t.co/u9Umh3X5eu</a><a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/rladies?src=hash&amp;ref_src=twsrc%5Etfw">#rladies</a> feedback is welcome!</p>&mdash; Beatriz Milz (@BeaMilz) <a href="https://twitter.com/BeaMilz/status/1533534492702408704?ref_src=twsrc%5Etfw">June 5, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
