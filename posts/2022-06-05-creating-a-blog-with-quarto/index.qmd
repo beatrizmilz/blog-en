@@ -1,6 +1,6 @@
 ---
-title: "Creating a blog with Quarto in 10 steps (for R users)"
-subtitle: "In this post, I introduce you to my new blog and show how you can create a blog with Quarto."
+title: "Creating a blog with Quarto in 10 steps"
+subtitle: "In this post, I introduce you to my new blog and show how you can create a blog with Quarto for R users."
 author: "Beatriz Milz"
 date: "2022-06-05"
 categories: [Quarto, Tutorial, Blog]
