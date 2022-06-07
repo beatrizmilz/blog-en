@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.515">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Beatriz Milz">
+<meta name="dcterms.date" content="2022-06-10">
+
+<title>Bea Milz - RStudio Instructor Training and Certification</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags -->
+<title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - RStudio Instructor Training and Certification">
+<meta property="og:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="og:image" content="https://beamilz.com/social.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - RStudio Instructor Training and Certification">
+<meta name="twitter:image" content="https://beamilz.com/posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/featured-photo.jpeg">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../">Posts</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../talks/">Talks</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.com/blog/">My blog in Portuguese</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">RStudio Instructor Training and Certification</h1>
+            <p class="subtitle lead">This post describes how was for me to do the RStudio Instructor Training and Certification.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Teaching</div>
+                <div class="quarto-category">RStudio</div>
+                <div class="quarto-category">Communities</div>
+                <div class="quarto-category">Translation</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 10, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-importance-of-the-r-community" id="toc-the-importance-of-the-r-community" class="nav-link" data-scroll-target="#the-importance-of-the-r-community">The importance of the R community</a></li>
+  <li><a href="#como-iniciar-o-processo-de-treinamento" id="toc-como-iniciar-o-processo-de-treinamento" class="nav-link" data-scroll-target="#como-iniciar-o-processo-de-treinamento">Como iniciar o processo de treinamento?</a></li>
+  <li><a href="#treinamento" id="toc-treinamento" class="nav-link" data-scroll-target="#treinamento">Treinamento</a></li>
+  <li><a href="#provas-de-certificação" id="toc-provas-de-certificação" class="nav-link" data-scroll-target="#provas-de-certificação">Provas de certificação</a>
+  <ul class="collapse">
+  <li><a href="#prova-de-ensino" id="toc-prova-de-ensino" class="nav-link" data-scroll-target="#prova-de-ensino">Prova de Ensino</a></li>
+  <li><a href="#prova-sobre-tidyverse" id="toc-prova-sobre-tidyverse" class="nav-link" data-scroll-target="#prova-sobre-tidyverse">Prova sobre tidyverse</a></li>
+  </ul></li>
+  <li><a href="#aprovação" id="toc-aprovação" class="nav-link" data-scroll-target="#aprovação">Aprovação!</a></li>
+  <li><a href="#e-o-inglês" id="toc-e-o-inglês" class="nav-link" data-scroll-target="#e-o-inglês">E o Inglês?</a></li>
+  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">Conclusão</a></li>
+  <li><a href="#agradecimentos" id="toc-agradecimentos" class="nav-link" data-scroll-target="#agradecimentos">Agradecimentos 💜</a></li>
+  <li><a href="#mais-materiais-úteis" id="toc-mais-materiais-úteis" class="nav-link" data-scroll-target="#mais-materiais-úteis">Mais materiais úteis</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="cell" data-layout-align="center">
+<p><a href="../../../posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html"> <button type="button" class="btn btn-primary">English</button></a> <a href="../../../posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
+</div>
+<p>[TO DO: WRITE AN INTRODUCTION]</p>
+<hr>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In 2020, I did the <a href="https://rstudio.com/">RStudio</a> Instructor Training and Certification. This post aims to describe how as it, in order to possibly offer information and help other people interested to undertake this training.</p>
+<p><a href="https://rstudio.com/">RStudio</a> offers the possibility to do the instructor certification on the packages <a href="https://www.tidyverse.org/">tidyverse</a> and <a href="https://%20shiny.rstudio.com/">shiny</a>. All the necessary information is available <a href="https://education.rstudio.com/trainers/">on this site</a>, but I will add some extra links here as well!</p>
+<blockquote class="blockquote">
+<p>Important: I did the entire training process with <a href="https://twitter.com/gvwilson">Greg Wilson</a>, however he is no longer involved with it. So I don’t know if any of the steps have changed. Here I will describe what the process was when I did the training.</p>
+</blockquote>
+</section>
+<section id="the-importance-of-the-r-community" class="level2">
+<h2 class="anchored" data-anchor-id="the-importance-of-the-r-community">The importance of the R community</h2>
+<p>First of all: I would like to point out that the R community was essential for me to be able to take this training.</p>
+<p>When I found out about the existence of this certification, I soon came across a difficulty to participate: on the website it said that it was necessary to pay (in dollars) to do the training.</p>
+<p>For those who are Brazilians, we know how the local currency is very devalued, and this ends up making it difficult for many Brazilian people to participate. So I let it go, until I saw a <a href="https://yabellini.netlify.app/post/rstudiocertification/">post</a> on <a href="https://twitter.com/yabellini">Yanina Saibene</a>’s blog talking about the training and certification that she took.</p>
+<p>I got in touch with her (who I had met in person at <a href="https://latin-r.com/">LatinR 2019</a>) to find out more about what the training was like for her. She put me in touch with a group of people who are part of <a href="https://rladies.org/">several chapters of R-Ladies</a> in Latin America, who were starting to organize a study group (and support!) to do the training. In addition, she also gave me more information on how to make this financially possible.</p>
+<p>For this study group, we created a Slack channel, where we shared tips, exercise resolutions and questions. In addition, we had weekly Zoom meetings to discuss chapters from the book <a href="https://r4ds.had.co.nz/">R for Data Science</a> (also available in Spanish <a href="https://es.r4ds.hadley.nz/">this link</a>).</p>
+<p>The guidance from <a href="https://twitter.com/yabellini">Yanina Saibene</a> and the support from the study group were essential for me to prepare for the exams, and to feel confident in taking them.</p>
+</section>
+<section id="como-iniciar-o-processo-de-treinamento" class="level2">
+<h2 class="anchored" data-anchor-id="como-iniciar-o-processo-de-treinamento">Como iniciar o processo de treinamento?</h2>
+<p>Se você se interessou em realizar o processo de treinamento, o primeiro passo para começar é ler as instruções que estão disponíveis <a href="https://education.rstudio.com/trainers/">nesta página</a>, e preencher <a href="https://forms.gle/kRucY2joTiPYWmPr8">este formulário</a>.</p>
+<blockquote class="blockquote">
+<p>Ao preencher o formulário, responda com atenção as duas perguntas opcionais a final do mesmo:</p>
+<ul>
+<li><p>A primeira é sobre o pertencimento a grupos sub-representados em ciência de dados; neste caso, descreva bem quais são os grupos que você faz parte, e aponte as suas contribuições para a comunidade de R.</p></li>
+<li><p>A segunda é sobre a possibilidade de redução da taxa de aplicação das provas e treinamento (<em>fee waiver</em>) para pessoas de países em desenvolvimento (<em>lower-income countries</em>).</p></li>
+</ul>
+</blockquote>
+</section>
+<section id="treinamento" class="level2">
+<h2 class="anchored" data-anchor-id="treinamento">Treinamento</h2>
+<p>Após receber uma mensagem de aceite, é necessário indicar uma dentre as datas possíveis para realizar o treinamento. O treinamento que eu fiz foi realizado no período de duas manhãs, online (através da ferramenta Zoom), e foi em Inglês. O foco do treinamento não foi sobre programação em R, e sim sobre ensino e didática! Todo o conteúdo dos slides utilizados estão disponíveis <a href="https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY">neste link</a>.</p>
+<p>Muito do conteúdo apresentado foi parecido com o treinamento oferecido pela <a href="https://carpentries.org/">The Carpentries</a> (que eu descrevi <a href="https://beatrizmilz.com/posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/">neste post</a>), e também com o conteúdo do livro escrito por <a href="https://twitter.com/gvwilson">Greg Wilson</a>, entitulado <a href="https://teachtogether.tech/">Teach Tech Together</a>:</p>
+</section>
+<section id="provas-de-certificação" class="level2">
+<h2 class="anchored" data-anchor-id="provas-de-certificação">Provas de certificação</h2>
+<p>Após realizar o treinamento, a próxima etapa foi realizar a prova de ensino, e a prova da certificação desejada (que, no meu caso, foi sobre tidyverse). <a href="https://education.rstudio.com/blog/2020/02/instructor-certification-exams/">Neste link</a> é possível acessar um exemplo de provas, disponiblizado pela <a href="https://rstudio.com/">RStudio</a> para estudo.</p>
+<p>Não existe ordem correta para realizar as provas! Outro ponto importante é que as provas foram feitas com a tela compartilhada, e foi permitido fazer qualquer tipo de pesquisa na internet. Porém a prova tem um limite de tempo, então é importante ficar atenta(o) ao tempo que usa pesquisando!</p>
+<section id="prova-de-ensino" class="level3">
+<h3 class="anchored" data-anchor-id="prova-de-ensino">Prova de Ensino</h3>
+<p>A prova de ensino foi composta por uma aula demonstrativa de 15 minutos, e algumas questões a serem respondidas (relacionadas à ensino).</p>
+<p>Antes da prova em si, foi necessário enviar alguns materiais solicitados para serem utilizados em uma aula demonstrativa. Os materiais que eu preparei estão disponibilizados nesta página: <a href="https://beatrizmilz.github.io/RStudio_Certification/" class="uri">https://beatrizmilz.github.io/RStudio_Certification/</a> (e o código também está disponível neste <a href="https://github.com/beatrizmilz/RStudio_Certification">repositório no GitHub</a>.</p>
+<p>Eu utilizei ferramentas como uma página onde o material é disponibilizado feita com o pacote <a href="https://rstudio.github.io/distill/">distill</a> <span class="citation" data-cites="R-distill">(<a href="#ref-R-distill" role="doc-biblioref">Allaire et al. 2021</a>)</span>, a apresentação feita com o pacote <a href="https://slides.yihui.org/xaringan/">xaringan</a> <span class="citation" data-cites="R-xaringan">(<a href="#ref-R-xaringan" role="doc-biblioref">Xie 2022</a>)</span>, dois exercícios para serem feitos ao final da aula utilizando o pacote <a href="https://rstudio.github.io/learnr/">learnr</a> <span class="citation" data-cites="R-learnr">(<a href="#ref-R-learnr" role="doc-biblioref">Schloerke et al. 2021</a>)</span>, a demonstração com código ao vivo foi realizada usando a IDE <a href="https://rstudio.com/">RStudio</a>, e um mapa conceitual elaborado com a ferramenta <a href="https://cmap.ihmc.us/">CMap Tools</a>. Porém essas são as ferramentas que <em>eu</em> escolhi utilizar, e eu recomendo que você utilize o que estiver mais confortável para você! A única ferramenta que é obrigatória a ser utilizada nessa etapa é a IDE <a href="https://rstudio.com/">RStudio</a> (o que é fácil de entender o motivo…).</p>
+</section>
+<section id="prova-sobre-tidyverse" class="level3">
+<h3 class="anchored" data-anchor-id="prova-sobre-tidyverse">Prova sobre tidyverse</h3>
+<p>A prova de tidyverse consistiu em resolver diversos exercícios usando R e tidyverse. A recomendação da <a href="https://rstudio.com/">RStudio</a> para estudar para essa prova é a leitura do livro <a href="https://r4ds.had.co.nz/">R for Data Science</a>.</p>
+<p>Não tenho muito a falar desta etapa, apenas que pratique e use o quanto possível no seu dia-a-dia, assim você terá mais experiência e conseguirá resolver os problemas mais rapidamente durante a prova.</p>
+<blockquote class="blockquote">
+<p>Quero ainda escrever um post sobre algumas funções que não são tão comuns, mas que foram úteis para a prova! Assim que o post estiver disponível, editarei e adicionarei o link aqui.</p>
+</blockquote>
+</section>
+</section>
+<section id="aprovação" class="level2">
+<h2 class="anchored" data-anchor-id="aprovação">Aprovação!</h2>
+<p>Após a aprovação nas provas, recebi um email com um certificado, e também solicitaram o envio de algumas informações para que a página com minhas informações fosse adicionada na lista de pessoas treinadoras certificadas. A página contendo minhas informações pode ser acessada através <a href="https://education.rstudio.com/trainers/people/milz+beatriz/">deste link</a>, e o certificado recebido foi esse:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://beatrizmilz.com/img/certificado-rstudio.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Certificado recebido após completar o ‘Tidyverse Instructor Certification’.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Além disso, também fui convidada para participar de um canal do Slack da RStudio, onde outras pessoas certificadas conversam sobre temas relacionados à certificação, como ensino, didática, R, tidyverse, shiny, entre outros.</p>
+<p>E também não poderia faltar a comemoração, né? Devido à pandemia, o encontro com as pessoas amigas foi online. Também teve um tweet de agradecimento:</p>
+<p><a href="https://twitter.com/BeaMilz/status/1312129792771125255"></a></p><a href="https://twitter.com/BeaMilz/status/1312129792771125255">
+<div class="cell" data-layout-align="center">
+
+</div>
+</a><p><a href="https://twitter.com/BeaMilz/status/1312129792771125255"></a></p>
+<ul>
+<li><a href="https://twitter.com/BeaMilz/status/1312129792771125255">Veja a thread completa neste link!</a></li>
+</ul>
+</section>
+<section id="e-o-inglês" class="level2">
+<h2 class="anchored" data-anchor-id="e-o-inglês">E o Inglês?</h2>
+<p>Na minha percepção, é importante ter alguma experiência com Inglês, pois o treinamento de 2 manhãs é realizado ao vivo, totalmente no idioma. Não sei se a RStudio tem planos de aplicar o treinamento em outros idiomas (como a <a href="https://carpentries.org/">The Carpentries</a>, onde já existe alguns oferecimentos de treinamentos em Espanhol).</p>
+<p>As provas que eu realizei foram aplicadas pelo <a href="https://twitter.com/gvwilson">Greg Wilson</a> e acompanhadas pelo brasileiro <a href="https://twitter.com/dfalbel">Daniel Falbel</a> (que trabalha na RStudio no desenvolvimento do <a href="https://torch.mlverse.org/">Torch for R</a>, e também é um dos sócios fundadores da <a href="https://curso-r.com/">Curso-R</a>). A participação do Daniel possibilitou que eu realizasse a apresentação da prova didática totalmente em Português, além de poder responder as perguntas da prova em Português também. Quero deixar registrado aqui o meu agradecimento para o Greg Wilson por apresentar essa possibilidade, e também ao Daniel Falbel por aceitar acompanhar esse processo! Foi muito importante para me sentir mais tranquila na prova, já que teria que me preocupar menos com o idioma e mais com o conteúdo das provas em si.</p>
+</section>
+<section id="conclusão" class="level2">
+<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>Para mim, realizar este processo foi uma experiência rica onde aprendi e refleti sobre conteúdos importantes para que eu possa compartilhar cada vez mais conteúdo sobre R com qualidade. Dito isso, eu desejo fortemente que mais pessoas da comunidade Latino Americana façam o processo de treinamento.</p>
+<p>Caso eu não tenha abordado algum tema, ou você tenha dúvidas ao ler o post, peço que entre em contato comigo! Pode ser comentando neste post, ou enviando uma mensagem <a href="https://twitter.com/BeaMilz">no twitter</a>.</p>
+</section>
+<section id="agradecimentos" class="level2">
+<h2 class="anchored" data-anchor-id="agradecimentos">Agradecimentos 💜</h2>
+<p>Eu já deixei diversos agradecimentos ao longo do texto, porém quero deixar em destaque a minha gratidão para pessoas que foram fundamentais para este processo:</p>
+<ul>
+<li><p>Equipe da <a href="https://rstudio.com/">RStudio</a>, <a href="https://twitter.com/gvwilson">Greg Wilson</a> e <a href="https://twitter.com/dfalbel">Daniel Falbel</a>: obrigada por possibilitar a realização deste treinamento!</p></li>
+<li><p><a href="https://twitter.com/yabellini">Yanina Saibene</a>, por toda a disposição de me mostrar os caminhos a seguir!</p></li>
+<li><p>Não foi fácil manter a motivação de estudos durante a pandemia, porém estudar em grupo ajudou muito a continuar. Então, para as pessoas que estudaram comigo, agradeço muito os momentos de estudo, troca, apoio, e ajuda com o Espanhol também.</p>
+<ul>
+<li><a href="https://twitter.com/rivaquiroga">Riva Quiroga</a></li>
+<li><a href="https://twitter.com/GabySandovalM">Gabriela Sandoval</a></li>
+<li><a href="https://twitter.com/sporella">Steph Orellana Bello</a></li>
+<li><a href="https://twitter.com/SalinasSilvy">Silvy Salinas</a></li>
+<li><a href="https://twitter.com/_luciarp_">Lucia Rodriguez-Planes</a></li>
+<li><a href="https://twitter.com/data_datum">Roxana Noelia</a></li>
+<li><a href="https://twitter.com/patriloto">Patricia Loto</a></li>
+<li><a href="https://twitter.com/anadiedrichs">Ana Laura Diedrichs</a></li>
+<li><a href="https://twitter.com/July_Benitezs">Juliana Benitez</a></li>
+<li><a href="https://twitter.com/JavieraRiffoTo1">Javiera Riffo Torres</a></li>
+</ul></li>
+<li><p>Minha amiga querida <a href="https://twitter.com/angcustodio">Angélica Custódio</a>, por todo o apoio e por acreditar em mim (mesmo quando eu estava com medo de não conseguir você estava lá pra me animar a continuar a estudar 💜).</p></li>
+<li><p>As pessoas das comunidades que eu participo e aprendi tanto até aqui: <a href="https://twitter.com/RLadiesSaoPaulo">R-Ladies São Paulo</a>, <a href="https://twitter.com/curso_r">Curso-R</a>, <a href="https://twitter.com/LatinR_Conf">Latin-R</a>.</p></li>
+</ul>
+</section>
+<section id="mais-materiais-úteis" class="level2">
+<h2 class="anchored" data-anchor-id="mais-materiais-úteis">Mais materiais úteis</h2>
+<ul>
+<li><p>Posts em blogs de pessoas que fizeram a certificação:</p>
+<ul>
+<li><p><a href="https://yabellini.netlify.app/post/rstudiocertification/">Yanina Bellini Saibene</a></p></li>
+<li><p><a href="https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/">Silvia Canelón</a> - Recomendo <strong>muito</strong> a leitura, apresenta uma grande lista de links úteis também!</p></li>
+<li><p><a href="https://shelkariuki.netlify.app/blog/certification/">Shel Kariuki</a></p></li>
+<li><p><a href="https://education.rstudio.com/blog/2019/11/my-experience-with-rstudio-instructor-training/">Ted Laderas</a></p></li>
+</ul></li>
+<li><p><a href="https://carpentries.github.io/instructor-training/demos_rubric/">The Carpentries Instructor Training: Suggested Rubric for Teaching Demonstrations</a> - Essa página da The Carpentries apresenta alguns exemplos de pontos a serem observados para o feedback em aulas, com exemplos positivos e negativos sobre conteúdo e apresentação. É muito legal treinar o oferecimento da aula teste e tentar fazer uma reflexão e auto-feedback, utilizando esses pontos como partida!</p></li>
+<li><p>Artigos sugeridos pelo <a href="https://twitter.com/gvwilson">Greg Wilson</a>:</p>
+<ul>
+<li><p><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006915">Ten quick tips for creating an effective lesson</a></p></li>
+<li><p><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007433">Ten quick tips for delivering programming lessons</a></p></li>
+</ul></li>
+</ul>
+<div class="cell" data-layout-align="center">
+
+</div>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-R-distill" class="csl-entry" role="doc-biblioentry">
+Allaire, JJ, Rich Iannone, Alison Presmanes Hill, and Yihui Xie. 2021. <em>Distill: R Markdown Format for Scientific and Technical Writing</em>. <a href="https://CRAN.R-project.org/package=distill">https://CRAN.R-project.org/package=distill</a>.
+</div>
+<div id="ref-R-learnr" class="csl-entry" role="doc-biblioentry">
+Schloerke, Barret, JJ Allaire, Barbara Borges, and Garrick Aden-Buie. 2021. <em>Learnr: Interactive Tutorials for r</em>.
+</div>
+<div id="ref-R-xaringan" class="csl-entry" role="doc-biblioentry">
+Xie, Yihui. 2022. <em>Xaringan: Presentation Ninja</em>. <a href="https://github.com/yihui/xaringan">https://github.com/yihui/xaringan</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -4,7 +4,19 @@
       "*/*.qmd"
     ],
     "index.qmd": [
-      "posts"
+      "posts",
+      "posts/*.qmd",
+      "posts/**.qmd",
+      "posts-ptbr",
+      "posts/**/pt",
+      "posts/*/pt/",
+      "posts/*/en/",
+      "posts/**/en/",
+      "posts/**/pt/",
+      "posts/*/en/**",
+      "posts/*/pt/**",
+      "posts/*/pt/*.qmd",
+      "posts/*/en/*.qmd"
     ]
   }
 }
