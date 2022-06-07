@@ -586,5 +586,26 @@
     "title": "Creating a blog with Quarto in 10 steps",
     "section": "Welcome!",
     "text": "Welcome!\nHi! Welcome to my new blog.\nMy name is Beatriz, and I have been writing blog posts about R and Data Science since 2019, in my blog written in Portuguese (I am Brazilian 🇧🇷). You can read more about me in the about page, and check my presentations on the talks page.\nI think that some of the blog posts I write would be useful to a broader audience, so I wanted to start blogging in English (or translating blog posts that I wrote).\nMy blog in Portuguese was build using blogdown and Hugo Apéro, and I really like it. I searched if it was possible to adapt the blog that I had to a multi-language blog (so I could have posts in Portuguese, English and Spanish), but I had no success on my quest."
+  },
+  {
+    "objectID": "posts/pt.html",
+    "href": "posts/pt.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nQuer saber como acessar várias bases de dados com R? Imagem: por Allison Horst.\n\n\n\n\nPortuguês\n\n\ntutoriais\n\n\nensino\n\n\nbases de dados\n\n\nimportação\n\n\n \n\n\n\n\nJun 9, 2022\n\n\nBeatriz Milz, Tereza Lacerda\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nEste post relata como foi o processo pra mim de realizar a certificação da RStudio: RStudio Instructor Training and Certification.\n\n\n\n\nEnsino\n\n\nRStudio\n\n\nComunidades\n\n\nPortuguês\n\n\n \n\n\n\n\nMar 2, 2021\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/en.html",
+    "href": "posts/en.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nThis post describes how was for me to do the RStudio Instructor Training and Certification.\n\n\n\n\nTeaching\n\n\nRStudio\n\n\nCommunities\n\n\nTranslation\n\n\n \n\n\n\n\nJun 10, 2022\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nIn this post, I introduce you to my new blog and show how you can create a blog with Quarto for R users.\n\n\n\n\nQuarto\n\n\nTutorial\n\n\nBlog\n\n\n \n\n\n\n\nJun 5, 2022\n\n\nBeatriz Milz\n\n\n14 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/en.html#posts-in-portuguese",
+    "href": "posts/en.html#posts-in-portuguese",
+    "title": "Bea Milz",
+    "section": "Posts in Portuguese",
+    "text": "Posts in Portuguese\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
   }
 ]

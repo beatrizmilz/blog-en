@@ -21,7 +21,13 @@ website:
     right:
       - about.qmd
       - text: Posts
-        href: /
+        menu:
+          - text: All posts
+            href: /
+          - text: English
+            href: posts/en.qmd
+          - text: Português
+            href: posts/pt.qmd
       - text: Talks
         href: /talks/
       - text: Resume

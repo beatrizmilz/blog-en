@@ -17,6 +17,15 @@
       "posts/*/pt/**",
       "posts/*/pt/*.qmd",
       "posts/*/en/*.qmd"
+    ],
+    "posts/pt.qmd": [
+      "posts/*/pt/*.qmd",
+      "*/pt/*.qmd"
+    ],
+    "posts/en.qmd": [
+      "posts/*/en/*.qmd",
+      "posts/*/pt/*.qmd",
+      "*/en/*.qmd"
     ]
   }
 }
