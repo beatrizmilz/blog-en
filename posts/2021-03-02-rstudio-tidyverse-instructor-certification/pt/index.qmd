@@ -4,7 +4,7 @@ subtitle: "Este post relata como foi o processo pra mim de realizar a certifica�
 author: "Beatriz Milz"
 date: "2021-03-02"
 bibliography: packages.bib
-categories: [Ensino, RStudio, Comunidades, "Português"]
+categories: [Teaching, RStudio, Communities]
 image: "featured-photo.jpeg"
 toc: true
 draft: false
@@ -21,14 +21,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 ```{r multilang-buttons}
 #| results: asis
 #| echo: false
 source(here::here("R/multilang.R"))
 multilang()
 ```
-
 
 Ano passado, eu realizei o processo de treinamento e certificação da [RStudio](https://rstudio.com/), e este post tem com objetivo relatar como foi este processo para mim, afim de possivelmente oferecer informações e ajudar outras pessoas interessadas em realizar essa certificação.
 

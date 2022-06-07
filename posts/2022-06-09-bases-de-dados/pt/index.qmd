@@ -1,7 +1,7 @@
 ---
 title: "Bases de dados: para praticar e ensinar"
 date: "2022-06-09"
-categories: ["Português", "tutoriais", "ensino", "bases de dados", "importação"]
+categories: ["Tutorial", "Teaching", "Datasets", "Data import"]
 image: "welcome_to_rstats.jpeg"
 author: ["Beatriz Milz", "Tereza Lacerda"]
 subtitle: "Quer saber como acessar várias bases de dados com R? Imagem: por Allison Horst."
