@@ -14,14 +14,12 @@
     "items": [
       "/posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html",
       "/posts/2022-06-05-creating-a-blog-with-quarto/en/index.html",
-      "/posts/2022-06-09-bases-de-dados/pt/index.html",
       "/posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html"
     ]
   },
   {
     "listing": "/posts/pt.html",
     "items": [
-      "/posts/2022-06-09-bases-de-dados/pt/index.html",
       "/posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html"
     ]
   },

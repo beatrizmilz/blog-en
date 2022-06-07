@@ -5,7 +5,7 @@ categories: ["Português", "tutoriais", "ensino", "bases de dados", "importaçã
 image: "welcome_to_rstats.jpeg"
 author: ["Beatriz Milz", "Tereza Lacerda"]
 subtitle: "Quer saber como acessar várias bases de dados com R? Imagem: por Allison Horst."
-draft: false
+draft: true
 ---
 
 ```{r, include = FALSE}
