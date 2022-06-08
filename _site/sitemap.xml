@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/index.html</loc>
-    <lastmod>2022-06-07T11:26:36.328Z</lastmod>
+    <lastmod>2022-06-07T11:42:19.759Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/2021-learnr-latinr/index.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/talks/index.html</loc>
-    <lastmod>2022-06-05T19:33:16.763Z</lastmod>
+    <lastmod>2022-06-07T19:23:58.417Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/2018-knitr-codata/index.html</loc>
@@ -30,10 +30,38 @@
   </url>
   <url>
     <loc>https://beamilz.com/index.html</loc>
-    <lastmod>2022-06-07T11:26:36.768Z</lastmod>
+    <lastmod>2022-06-08T23:00:16.210Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/about.html</loc>
-    <lastmod>2022-06-06T20:50:07.516Z</lastmod>
+    <lastmod>2022-06-07T19:09:20.822Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/index.html</loc>
+    <lastmod>2022-06-07T19:08:11.354Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html</loc>
+    <lastmod>2022-06-07T17:24:19.324Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html</loc>
+    <lastmod>2022-06-07T17:24:39.963Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html</loc>
+    <lastmod>2022-06-08T17:56:03.065Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html</loc>
+    <lastmod>2022-06-08T23:00:15.777Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/pt.html</loc>
+    <lastmod>2022-06-08T17:56:03.965Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/en.html</loc>
+    <lastmod>2022-06-08T23:00:16.675Z</lastmod>
   </url>
 </urlset>

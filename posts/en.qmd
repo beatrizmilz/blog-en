@@ -1,0 +1,21 @@
+---
+title: "Bea Milz"
+listing:
+  - id: posts-en
+    contents: "*/en/*.qmd"
+    type: default
+    fields: [image, date, title, subtitle, categories, author, reading-time]  
+    sort: "date desc"
+    categories: true
+    sort-ui: true
+    filter-ui: true
+    page-size: 6
+page-layout: full
+title-block-banner: false
+comments: false
+---
+
+## Posts in English
+
+::: {#posts-en}
+:::

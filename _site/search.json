@@ -130,7 +130,7 @@
     "href": "index.html",
     "title": "Bea Milz",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nIn this post, I introduce you to my new blog and show how you can create a blog with Quarto for R users.\n\n\n\n\nQuarto\n\n\nTutorial\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nThis post describes how I studied and did the RStudio Instructor Training and Certification.\n\n\n\n\nTeaching\n\n\nRStudio\n\n\nCommunities\n\n\nTranslation\n\n\n \n\n\n\n\nJun 8, 2022\n\n\nBeatriz Milz\n\n\n7 min\n\n\n\n\n\n\n  \n\n\n\n\n\nIn this post, I introduce you to my new blog and show how you can create a blog with Quarto for R users.\n\n\n\n\nQuarto\n\n\nTutorial\n\n\nBlog\n\n\n \n\n\n\n\nJun 5, 2022\n\n\nBeatriz Milz\n\n\n14 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -159,5 +159,495 @@
     "title": "Creating a blog with Quarto in 10 steps",
     "section": "Edit: More content",
     "text": "Edit: More content\n\nAlbert Rapp wrote a “tweetutorial”: a twitter thread with a lot of tips to customize blogs made with Quarto."
+  },
+  {
+    "objectID": "index.html#posts-in-portuguese",
+    "href": "index.html#posts-in-portuguese",
+    "title": "Bea Milz",
+    "section": "Posts in Portuguese",
+    "text": "Posts in Portuguese\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nTreinamento de instrutora e certificação da RStudio\n\n\nEste post relata como foi o processo pra mim de realizar a certificação da RStudio: RStudio Instructor Training and Certification.\n\n\n\n\nTeaching\n\n\nRStudio\n\n\nCommunities\n\n\n \n\n\n\n\nMar 2, 2021\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "",
+    "text": "English"
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#so-here-comes-quarto",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#so-here-comes-quarto",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "So, here comes Quarto…",
+    "text": "So, here comes Quarto…\nI started using quarto in October 2021, and so far I have created websites and presentations with it (I even made a presentation about quarto using quarto). I was excited to test Quarto to create a blog sometime ago, but I really liked my blog with blogdown/Apéro.\nSo when I started thinking about writing blog posts in English, I thought that it would be a good idea to create a separate, brand new blog to store content in English, using Quarto.\nMy blog in Portuguese will continue to exist, and I will continue to post there (in Portuguese). In this blog, I’ll add content in English.\nNow that I explained why this blog was created, I’m going to write about some of the steps that you need to take to create a blog with Quarto.\n\n\n\n\n\n\nTip\n\n\n\nA lot of the steps that I explain in this post can be used to create other outputs with Quarto, such as websites, presentations, and books."
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#open-new-tabs",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#open-new-tabs",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "1 - Open new tabs!",
+    "text": "1 - Open new tabs!\nFirst of all: the Quarto team made a huge effort writing the documentation. I suggest that you open it in another tab, and use the Search button in the top-right of the docs page (believe me, the search feature used in Quarto is awesome!).\n\n\n\nPrint screen of the Quarto Documentation about blogs.\n\n\nSecond: I think it is nice to look at other blogs made with Quarto to see what you can do. I have not found a lot of blogs made with Quarto, and I think because it is a new software. So, take a look at these blogs:\n\nNotes from a data witch: A data science blog by Danielle Navarro - Danielle is a data scientist and she has an awesome blog made with Quarto. The code used to create the blog is available on GitHub. But also don’t miss her art gallery!\nThis blog! Check other pages and see what you would like to have in your personal page. The code used to create this blog is available on GitHub."
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#install-or-update-quarto",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#install-or-update-quarto",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "2 - Install or update Quarto",
+    "text": "2 - Install or update Quarto\nI have been using Quarto for more than half a year now, so I had already installed Quarto.\nBut one thing that I do frequently is to update quarto. I recommend you do the same because if you use an older version, you might get a bug that has already been fixed.\n\n\n\nPrint screen of the Quarto ‘Get Started’ page."
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#create-a-project-for-the-blog",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#create-a-project-for-the-blog",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "3 - Create a project for the blog",
+    "text": "3 - Create a project for the blog\nI’m an RStudio IDE user, so I created a new RStudio Project using the interface:\n\nClick the Project: button, and then in New Project...:\n\n\n\n\n\n\n\nChoose New Directory:\n\n\n\n\n\n\n\nChoose Quarto blog:\n\n\n\n\n\n\n\nChoose the directory name (the name of the folder where your blog will be stored) and where in your computer you want to save it. Then click Create Project:\n\n\n\n\n\n\n\nVoilá! The structure of your blog is ready 🎉. Check the Files panel and explore the files stored there."
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#preview-your-blog",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#preview-your-blog",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "4 - Preview your blog",
+    "text": "4 - Preview your blog\nYou can preview how your blog is going to look like if you open an .qmd file and click the Render button. The preview of your blog will show on the Viewer Pane in the RStudio IDE.\n\n\n\n\n\nBut you can also click the Show in new window button (circled in red in the image above) to preview it in your browser:\n\n\n\n\n\nNice! Your blog exists on your computer now. But we still need to put it online, so other people can read your posts. In the next two sections I’ll show you how to do that!"
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#create-a-github-repository",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#create-a-github-repository",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "5 - Create a GitHub repository",
+    "text": "5 - Create a GitHub repository\nUsing Git and GitHub will help you to put your blog online (and also have an online copy of the code in case anything happens with the version in your computer).\nYou need the package usethis for this part:\n\ninstall.packages(\"usethis\")\n\n\n\n\n\n\n\nWhat is Git? GitHub? (Click to expand!)\n\n\n\n\n\nIf you have not used Git and GitHub with RStudio IDE before, I recommend you to take some time to prepare your environment and configure everything before continuing reading this post.\nYou can read detailed information about how to do this in the book Happy Git with R.\nHere is a useful check-list you can use:\n\n\nInstall Git on your computer\n\nCreate a free account on GitHub\n\nInstall package usethis: install.packages(\"usethis\")\n\nIntroduce yourself to Git:\n\n\nusethis::use_git_config(\n  # your name\n  user.name = \"Captain Marvel\",\n  # your email used in your GitHub account\n  user.email = \"awesomecaptain@gmail.com\"\n)\n\n\n\nCreate a GitHub PAT Token with usethis::create_github_token() (is like a password)\n\nStore your token with gitcreds::gitcreds_set()\n\nRestart your R Session (usually CTRL + SHIFT + F10 will do the work)\n\nUse usethis::git_sitrep() to check if your name, email and PAT are configured. The most important thing to look for is: Personal access token for 'https://github.com': '<discovered>'.\n\nIf it is all configured, you are ready to continue reading this post. 🚀\n\n\n\nIf you already configure Git and GitHub with RStudio IDE, you can use these two functions from the usethis package, in the project that you created:\n\nuse_git() to start the version control of your project (the function will ask you if you want to commit your changes and restart RStudio, you can accept it):\n\n\nusethis::use_git()\n# ✔ Setting active project to '/Users/Desktop/name-of-your-blog/'\n# ✔ Initialising Git repo\n# ✔ Adding '.Rproj.user', '.Rhistory', '.Rdata', '.httr-oauth', '.DS_Store' to '.gitignore'\n# There are 8 uncommitted files:\n# * '_quarto.yml'\n# * '.gitignore'\n# * 'about.qmd'\n# * 'example-quarto-blog.Rproj'\n# * 'index.qmd'\n# * 'posts/'\n# * 'profile.jpg'\n# * 'styles.css'\n\n\n# Is it ok to commit them?\n# \n# 1: Not now\n# 2: Yup\n# 3: Negative\n# \n# Selection: 2\n\n\n# ✔ Adding files\n# ✔ Making a commit with message 'Initial commit'\n# • A restart of RStudio is required to activate the Git pane\n# Restart now?\n# \n# 1: No way\n# 2: Definitely\n# 3: No\n# \n# Selection: 2\n\n\nuse_github() to create a GitHub repository to store your code, and a new window will open with your repository:\n\n\nusethis::use_github()\n# ℹ Defaulting to 'https' Git protocol\n# ✔ Setting active project to '/Users/beatrizmilz/Desktop/name-of-your-blog'\n# ✔ Creating GitHub repository 'beatrizmilz/name-of-your-blog'\n# ✔ Setting remote 'origin' to 'https://github.com/beatrizmilz/name-of-your-blog.git'\n# ✔ Pushing 'main' branch to GitHub and setting 'origin/main' as upstream branch\n# ✔ Opening URL 'https://github.com/beatrizmilz/name-of-your-blog'\n\n\n\n\n\n\nThis is the repository used in this example: https://github.com/beatrizmilz/name-of-your-blog"
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#deploy-with-netlify",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#deploy-with-netlify",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "6 - Deploy with Netlify",
+    "text": "6 - Deploy with Netlify\nNext, we will create a URL to put the blog online. This step is called deploy, and we will use a service called Netlify for this purpose.\n\nFirst, Sign up or Log in on Netlify. I recommend signing in using your GitHub account.\nThen, you can click Add new site and Import an existing project:\n\n\n\n\n\n\n\nNext, you need to connect to a Git provider. In this case, click the link to GitHub. It may ask you to authenticate with GitHub if you have not done this already.\n\n\n\n\n\n\n\nThen, in Pick a repository from GitHub, choose the repository that you created for your blog:\n\n\n\n\n\n\n\nThis step is really important, so don’t hurry up and take your time to do it with care! In Import an existing project from a Git repository, you only have to change one thing: the Base directory field. You need to write the name of the directory used to store the HTML files of your blog. By default, it is _site. This is because when you generate your blog, by default Quarto saves all the HTML files generated for your site in the directory called _site. Everything else will be filled out by Netlify, so don’t change anything else. Check if everything looks like the image below and then click Deploy site:\n\n\n\n\n\n\n\nWhen you first deploy a website on Netlify, it will show an automatic URL. In this case it was peppy-cat-2e067c.netlify.app. You can change it to a more personal URL, which would be easier for other people to type and remember. To change your site URL, click Site settings:\n\n\n\n\n\n\nThen click Change site name:\n\n\n\n\n\nAnd choose the name used for the URL of your blog, writing it on the field Site name. Below this field, you can see how the URL of your blog is going to look like! After choosing it, click Save. If you need, you can change it after.\n\n\n\n\n\nNow the blog that I am creating as an example is available in this link: https://your-awesome-blog-with-quarto.netlify.app/"
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#change-the-colors-of-your-blog",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#change-the-colors-of-your-blog",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "7 - Change the colors of your blog",
+    "text": "7 - Change the colors of your blog\nYou can change the colors, fonts and more of the style of your blog by changing the theme in the file _quarto.yml. You can create your own theme or choose between the options on the Quarto documentation.\nOpen the _quarto.yml file and choose another theme that you liked from the documentation. In this example, I changed the theme to minty:\n\nformat:\n  html:\n    theme: minty\n    css: styles.css\n\n\n\n\n\n\nIf you know CSS and would like to change the theme yourself, you can edit the styles.css file.\n\n\n\n\n\n\nHow can I update my blog with the changes I made? (Click to expand!)\n\n\n\n\n\nIf this is your first time using Git and GitHub in RStudio IDE, I’ll show you the steps to update your blog!\nFirst, you need to find the Git Pane in RStudio IDE. If it is not there, I recommend restarting RStudio and opening your project again.\nThen, in your Git Pane, the list of files with changes will appear. Check the boxes of the files that you want to update, and click Commit:\n Next, you need to write a message that, in a few words, explains what was changed. Write this message in the Commit message field, and the click Commit:\n\n\n\n\n\nFinally, close the Git window, then click Push (it is the green up-arrow button on the Git pane).\n\n\n\n\n\nAfter all the changes are sent to GitHub, the Git Pane will be empty, meaning that there are no new changes:\n\n\n\n\n\nNow, wait a minute and then check your blog online!"
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#setting-up-comments",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#setting-up-comments",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "8 - Setting up Comments",
+    "text": "8 - Setting up Comments\nIt is nice to add a comments section on our blog posts, so people can write their opinion about it.\nThe quarto documentation explains how to add comments with three different options: Hypothes.is, Utterances and Giscus. You can use whatever suits you best.\nI chose to use Giscus and here I’ll tell you how to set it up!\n\nYour repository needs to be public on GitHub. The default is to be public, it will only be private if you changed it (you can change it back on your repository settings on GitHub).\nInstall the Giscus App. Go to this website and click the Install button:\n\n\n\n\n\n\nThen, Giscus will ask you in which repositories you would like to give permission to Giscus. You can choose what you prefer. I chose to give access only to the repository that I’m going to need this service, so I chose Only select repository and pick the repository of the blog.\n\n\n\n\n\n\nYou have to enable the Discussions in your repository. First, go to your repository, and click Settings:\n\n\n\n\n\n\nThen, scroll down to the Features sections, and check the box of the Discussions.\n\n\n\n\n\n\nOpen the _quarto.yml file and add this code. Remember to update the information of your repo: in this example is beatrizmilz/name-of-your-blog because beatrizmilz is my GitHub account, and name-of-your-blog is the repository of this example blog.\n\n\ncomments:\n  giscus:\n    repo: YOURGITHUBACCOUNT/YOURREPO\n\nRemember to commit all the changes before checking the online version! If you missed that, go back to the end of section 7 and read the collapsed tip.\nNow we have a comments section on the blog! People need to log in with GitHub in order to write a comment or give a reaction:\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nWhen we activate the comments, as default they appear in almost every page! You can hide the comments in specific pages by adding comments: false in the YAML headers of *.qmd files that you want to hide."
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#add-content-in-your-blog",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#add-content-in-your-blog",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "9 - Add content in your blog",
+    "text": "9 - Add content in your blog\nYour blog is live! Now you can make some changes and add your content in it. Here is a list of things that you might like to do!\n\n_quarto.yml: In this file, you can do a lot of things, such as: changing the name that will appear in the blog, add links to your twitter and GitHub account, change the navigation bar options, and so on. You can check how I configured this in this file.\nWrite about yourself, so people can get to know you. You can do that in the about.qmd file. There, you can add links to your social media, a photo, and other information about you that you think might be relevant. You can change the template of this page, in the template option. You can check all the templates in the Quarto documentation. In this personal blog, I chose to use trestles.\nWrite blog posts! Your blog posts are stored in the posts/ directory. Each post has to have a folder, and inside this folder you need a index.qmd file. But follow along the template that is already there and you will be good to go. Also, I recommend checking the awesome options described on the Quarto documentation.\nIf you are out of ideas about what to write, my advice is to write something that you already know, want to learn, or something that you like a lot. I enjoy reading blog posts that people write about topics they are interested in!"
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#tweet-about-it",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#tweet-about-it",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "10 - Tweet about it!",
+    "text": "10 - Tweet about it!\nCongratulations, you have created your blog with Quarto! ✨\nAfter writing your first blogpost, you can start sharing it to the world. 📢📢📢\nMy suggestion to you is: Write a tweet! You can use the #rstats hashtag if the content of your blog is about R and you can cite @quarto_pub.\nIf this post was relevant to you, you can also cite me with @BeaMilz, so I can retweet about your blog!"
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "",
+    "text": "[TO DO: WRITE AN INTRODUCTION]"
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#introduction",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#introduction",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Introduction",
+    "text": "Introduction\nIn 2020, I did the RStudio Instructor Training and Certification. This post aims to describe how as it, in order to possibly offer information and help other people interested to undertake this training.\nRStudio offers the possibility to do the instructor certification on the packages tidyverse and shiny. All the necessary information is available on this site, but I will add some extra links here as well!\n\nImportant: I did the entire training process with Greg Wilson, however he is no longer involved with it. So I don’t know if any of the steps have changed. Here I will describe what the process was when I did the training."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#the-importance-of-the-r-community",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#the-importance-of-the-r-community",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "The importance of the R community",
+    "text": "The importance of the R community\nFirst of all: I would like to point out that the R community was essential for me to be able to take this training.\nWhen I found out about the existence of this certification, I soon came across a difficulty to participate: on the website it said that it was necessary to pay (in dollars) to do the training.\nFor those who are Brazilians, we know how the local currency is very devalued, and this ends up making it difficult for many Brazilian people to participate. So I let it go, until I saw a post on Yanina Saibene’s blog talking about the training and certification that she took.\nI got in touch with her (who I had met in person at LatinR 2019) to find out more about what the training was like for her. She put me in touch with a group of people who are part of several chapters of R-Ladies in Latin America, who were starting to organize a study group (and support!) to do the training. In addition, she also gave me more information on how to make this financially possible.\nFor this study group, we created a Slack channel, where we shared tips, exercise resolutions and questions. In addition, we had weekly Zoom meetings to discuss chapters from the book R for Data Science (also available in Spanish this link).\nThe guidance from Yanina Saibene and the support from the study group were essential for me to prepare for the exams, and to feel confident in taking them."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#como-iniciar-o-processo-de-treinamento",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#como-iniciar-o-processo-de-treinamento",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Como iniciar o processo de treinamento?",
+    "text": "Como iniciar o processo de treinamento?\nSe você se interessou em realizar o processo de treinamento, o primeiro passo para começar é ler as instruções que estão disponíveis nesta página, e preencher este formulário.\n\nAo preencher o formulário, responda com atenção as duas perguntas opcionais a final do mesmo:\n\nA primeira é sobre o pertencimento a grupos sub-representados em ciência de dados; neste caso, descreva bem quais são os grupos que você faz parte, e aponte as suas contribuições para a comunidade de R.\nA segunda é sobre a possibilidade de redução da taxa de aplicação das provas e treinamento (fee waiver) para pessoas de países em desenvolvimento (lower-income countries)."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#treinamento",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#treinamento",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Treinamento",
+    "text": "Treinamento\nApós receber uma mensagem de aceite, é necessário indicar uma dentre as datas possíveis para realizar o treinamento. O treinamento que eu fiz foi realizado no período de duas manhãs, online (através da ferramenta Zoom), e foi em Inglês. O foco do treinamento não foi sobre programação em R, e sim sobre ensino e didática! Todo o conteúdo dos slides utilizados estão disponíveis neste link.\nMuito do conteúdo apresentado foi parecido com o treinamento oferecido pela The Carpentries (que eu descrevi neste post), e também com o conteúdo do livro escrito por Greg Wilson, entitulado Teach Tech Together:"
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#provas-de-certificação",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#provas-de-certificação",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Provas de certificação",
+    "text": "Provas de certificação\nApós realizar o treinamento, a próxima etapa foi realizar a prova de ensino, e a prova da certificação desejada (que, no meu caso, foi sobre tidyverse). Neste link é possível acessar um exemplo de provas, disponiblizado pela RStudio para estudo.\nNão existe ordem correta para realizar as provas! Outro ponto importante é que as provas foram feitas com a tela compartilhada, e foi permitido fazer qualquer tipo de pesquisa na internet. Porém a prova tem um limite de tempo, então é importante ficar atenta(o) ao tempo que usa pesquisando!\n\nProva de Ensino\nA prova de ensino foi composta por uma aula demonstrativa de 15 minutos, e algumas questões a serem respondidas (relacionadas à ensino).\nAntes da prova em si, foi necessário enviar alguns materiais solicitados para serem utilizados em uma aula demonstrativa. Os materiais que eu preparei estão disponibilizados nesta página: https://beatrizmilz.github.io/RStudio_Certification/ (e o código também está disponível neste repositório no GitHub.\nEu utilizei ferramentas como uma página onde o material é disponibilizado feita com o pacote distill (Allaire et al. 2021), a apresentação feita com o pacote xaringan (Xie 2022), dois exercícios para serem feitos ao final da aula utilizando o pacote learnr (Schloerke et al. 2021), a demonstração com código ao vivo foi realizada usando a IDE RStudio, e um mapa conceitual elaborado com a ferramenta CMap Tools. Porém essas são as ferramentas que eu escolhi utilizar, e eu recomendo que você utilize o que estiver mais confortável para você! A única ferramenta que é obrigatória a ser utilizada nessa etapa é a IDE RStudio (o que é fácil de entender o motivo…).\n\n\nProva sobre tidyverse\nA prova de tidyverse consistiu em resolver diversos exercícios usando R e tidyverse. A recomendação da RStudio para estudar para essa prova é a leitura do livro R for Data Science.\nNão tenho muito a falar desta etapa, apenas que pratique e use o quanto possível no seu dia-a-dia, assim você terá mais experiência e conseguirá resolver os problemas mais rapidamente durante a prova.\n\nQuero ainda escrever um post sobre algumas funções que não são tão comuns, mas que foram úteis para a prova! Assim que o post estiver disponível, editarei e adicionarei o link aqui."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#aprovação",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#aprovação",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Aprovação!",
+    "text": "Aprovação!\nApós a aprovação nas provas, recebi um email com um certificado, e também solicitaram o envio de algumas informações para que a página com minhas informações fosse adicionada na lista de pessoas treinadoras certificadas. A página contendo minhas informações pode ser acessada através deste link, e o certificado recebido foi esse:\n\n\n\n\n\nCertificado recebido após completar o ‘Tidyverse Instructor Certification’.\n\n\n\n\nAlém disso, também fui convidada para participar de um canal do Slack da RStudio, onde outras pessoas certificadas conversam sobre temas relacionados à certificação, como ensino, didática, R, tidyverse, shiny, entre outros.\nE também não poderia faltar a comemoração, né? Devido à pandemia, o encontro com as pessoas amigas foi online. Também teve um tweet de agradecimento:\n\n\n\n\n\n\nVeja a thread completa neste link!"
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#e-o-inglês",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#e-o-inglês",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "E o Inglês?",
+    "text": "E o Inglês?\nNa minha percepção, é importante ter alguma experiência com Inglês, pois o treinamento de 2 manhãs é realizado ao vivo, totalmente no idioma. Não sei se a RStudio tem planos de aplicar o treinamento em outros idiomas (como a The Carpentries, onde já existe alguns oferecimentos de treinamentos em Espanhol).\nAs provas que eu realizei foram aplicadas pelo Greg Wilson e acompanhadas pelo brasileiro Daniel Falbel (que trabalha na RStudio no desenvolvimento do Torch for R, e também é um dos sócios fundadores da Curso-R). A participação do Daniel possibilitou que eu realizasse a apresentação da prova didática totalmente em Português, além de poder responder as perguntas da prova em Português também. Quero deixar registrado aqui o meu agradecimento para o Greg Wilson por apresentar essa possibilidade, e também ao Daniel Falbel por aceitar acompanhar esse processo! Foi muito importante para me sentir mais tranquila na prova, já que teria que me preocupar menos com o idioma e mais com o conteúdo das provas em si."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#conclusão",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#conclusão",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Conclusão",
+    "text": "Conclusão\nPara mim, realizar este processo foi uma experiência rica onde aprendi e refleti sobre conteúdos importantes para que eu possa compartilhar cada vez mais conteúdo sobre R com qualidade. Dito isso, eu desejo fortemente que mais pessoas da comunidade Latino Americana façam o processo de treinamento.\nCaso eu não tenha abordado algum tema, ou você tenha dúvidas ao ler o post, peço que entre em contato comigo! Pode ser comentando neste post, ou enviando uma mensagem no twitter."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#agradecimentos",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#agradecimentos",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Agradecimentos 💜",
+    "text": "Agradecimentos 💜\nEu já deixei diversos agradecimentos ao longo do texto, porém quero deixar em destaque a minha gratidão para pessoas que foram fundamentais para este processo:\n\nEquipe da RStudio, Greg Wilson e Daniel Falbel: obrigada por possibilitar a realização deste treinamento!\nYanina Saibene, por toda a disposição de me mostrar os caminhos a seguir!\nNão foi fácil manter a motivação de estudos durante a pandemia, porém estudar em grupo ajudou muito a continuar. Então, para as pessoas que estudaram comigo, agradeço muito os momentos de estudo, troca, apoio, e ajuda com o Espanhol também.\n\nRiva Quiroga\nGabriela Sandoval\nSteph Orellana Bello\nSilvy Salinas\nLucia Rodriguez-Planes\nRoxana Noelia\nPatricia Loto\nAna Laura Diedrichs\nJuliana Benitez\nJaviera Riffo Torres\n\nMinha amiga querida Angélica Custódio, por todo o apoio e por acreditar em mim (mesmo quando eu estava com medo de não conseguir você estava lá pra me animar a continuar a estudar 💜).\nAs pessoas das comunidades que eu participo e aprendi tanto até aqui: R-Ladies São Paulo, Curso-R, Latin-R."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#mais-materiais-úteis",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/en/index.html#mais-materiais-úteis",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Mais materiais úteis",
+    "text": "Mais materiais úteis\n\nPosts em blogs de pessoas que fizeram a certificação:\n\nYanina Bellini Saibene\nSilvia Canelón - Recomendo muito a leitura, apresenta uma grande lista de links úteis também!\nShel Kariuki\nTed Laderas\n\nThe Carpentries Instructor Training: Suggested Rubric for Teaching Demonstrations - Essa página da The Carpentries apresenta alguns exemplos de pontos a serem observados para o feedback em aulas, com exemplos positivos e negativos sobre conteúdo e apresentação. É muito legal treinar o oferecimento da aula teste e tentar fazer uma reflexão e auto-feedback, utilizando esses pontos como partida!\nArtigos sugeridos pelo Greg Wilson:\n\nTen quick tips for creating an effective lesson\nTen quick tips for delivering programming lessons"
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "",
+    "text": "Ano passado, eu realizei o processo de treinamento e certificação da RStudio, e este post tem com objetivo relatar como foi este processo para mim, afim de possivelmente oferecer informações e ajudar outras pessoas interessadas em realizar essa certificação.\nA RStudio oferece a possibilidade de realizar a certificação de treinamento sobre os pacotes tidyverse e shiny. Todas as informações necessárias sobre a certificação estão disponíveis neste site, porém também adicionarei alguns links extras aqui!"
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#importância-da-comunidade",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#importância-da-comunidade",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Importância da comunidade",
+    "text": "Importância da comunidade\nPrimeiro de tudo: eu gostaria de destacar que a comunidade de R foi essencial para que eu pudesse realizar o treinamento e receber a certificação.\nQuando eu fiquei sabendo da existência dessa certificação, eu logo me deparei com uma dificuldade para participar: no site dizia que era necessário pagar (em dólares) para realizar o processo. Para quem é Brasileiro, sabemos como a moeda local é muito desvalorizada, e isso acaba dificultando a participação de muitas pessoas.Então eu deixei pra lá, até que vi um post no blog da Yanina Saibene falando como foi o processo de certificação para ela. Então entrei em contato com ela (que havia conhecido pessoalmente na LatinR 2019) para saber mais sobre como foi o processo para ela.\nEla me colocou em contato com um grupo de pessoas que fazem parte de diversos capítulos da R-Ladies na América Latina, que estavam se organizando para começar um grupo de estudos (e apoio!) para realizar o processo. Além disso, também me deu mais informações sobre como fazer o processo de forma mais acessível financeiramente.\nPara esse grupo de estudos, foi criado um canal no Slack, onde eram compartilhadas dicas, resoluções de exercícios e dúvidas, entre outros. Além disso, nos encontravamos semanalmente via zoom para discutir os capítulos do livro R for Data Science (também disponível em Espanhol neste link).\nA orientação da Yanina Saibene e os estudos em grupo foram essenciais para que eu me preparasse para as provas, e me sentisse confiante em realizá-las."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#como-iniciar-o-processo-de-treinamento",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#como-iniciar-o-processo-de-treinamento",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Como iniciar o processo de treinamento?",
+    "text": "Como iniciar o processo de treinamento?\nSe você se interessou em realizar o processo de treinamento, o primeiro passo para começar é ler as instruções que estão disponíveis nesta página, e preencher este formulário.\n\nAo preencher o formulário, responda com atenção as duas perguntas opcionais a final do mesmo:\n\nA primeira é sobre o pertencimento a grupos sub-representados em ciência de dados; neste caso, descreva bem quais são os grupos que você faz parte, e aponte as suas contribuições para a comunidade de R.\nA segunda é sobre a possibilidade de redução da taxa de aplicação das provas e treinamento (fee waiver) para pessoas de países em desenvolvimento (lower-income countries)."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#treinamento",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#treinamento",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Treinamento",
+    "text": "Treinamento\nApós receber uma mensagem de aceite, é necessário indicar uma dentre as datas possíveis para realizar o treinamento. O treinamento que eu fiz foi realizado no período de duas manhãs, online (através da ferramenta Zoom), e foi em Inglês. O foco do treinamento não foi sobre programação em R, e sim sobre ensino e didática! Todo o conteúdo dos slides utilizados estão disponíveis neste link.\nMuito do conteúdo apresentado foi parecido com o treinamento oferecido pela The Carpentries (que eu descrevi neste post), e também com o conteúdo do livro escrito por Greg Wilson, entitulado Teach Tech Together:"
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#provas-de-certificação",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#provas-de-certificação",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Provas de certificação",
+    "text": "Provas de certificação\nApós realizar o treinamento, a próxima etapa foi realizar a prova de ensino, e a prova da certificação desejada (que, no meu caso, foi sobre tidyverse). Neste link é possível acessar um exemplo de provas, disponiblizado pela RStudio para estudo.\nNão existe ordem correta para realizar as provas! Outro ponto importante é que as provas foram feitas com a tela compartilhada, e foi permitido fazer qualquer tipo de pesquisa na internet. Porém a prova tem um limite de tempo, então é importante ficar atenta(o) ao tempo que usa pesquisando!\n\nProva de Ensino\nA prova de ensino foi composta por uma aula demonstrativa de 15 minutos, e algumas questões a serem respondidas (relacionadas à ensino).\nAntes da prova em si, foi necessário enviar alguns materiais solicitados para serem utilizados em uma aula demonstrativa. Os materiais que eu preparei estão disponibilizados nesta página: https://beatrizmilz.github.io/RStudio_Certification/ (e o código também está disponível neste repositório no GitHub.\nEu utilizei ferramentas como uma página onde o material é disponibilizado feita com o pacote distill (Allaire et al. 2021), a apresentação feita com o pacote xaringan (Xie 2022), dois exercícios para serem feitos ao final da aula utilizando o pacote learnr (Schloerke et al. 2021), a demonstração com código ao vivo foi realizada usando a IDE RStudio, e um mapa conceitual elaborado com a ferramenta CMap Tools. Porém essas são as ferramentas que eu escolhi utilizar, e eu recomendo que você utilize o que estiver mais confortável para você! A única ferramenta que é obrigatória a ser utilizada nessa etapa é a IDE RStudio (o que é fácil de entender o motivo…).\n\n\nProva sobre tidyverse\nA prova de tidyverse consistiu em resolver diversos exercícios usando R e tidyverse. A recomendação da RStudio para estudar para essa prova é a leitura do livro R for Data Science.\nNão tenho muito a falar desta etapa, apenas que pratique e use o quanto possível no seu dia-a-dia, assim você terá mais experiência e conseguirá resolver os problemas mais rapidamente durante a prova.\n\nQuero ainda escrever um post sobre algumas funções que não são tão comuns, mas que foram úteis para a prova! Assim que o post estiver disponível, editarei e adicionarei o link aqui."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#aprovação",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#aprovação",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Aprovação!",
+    "text": "Aprovação!\nApós a aprovação nas provas, recebi um email com um certificado, e também solicitaram o envio de algumas informações para que a página com minhas informações fosse adicionada na lista de pessoas treinadoras certificadas. A página contendo minhas informações pode ser acessada através deste link, e o certificado recebido foi esse:\n\n\n\n\n\nCertificado recebido após completar o ‘Tidyverse Instructor Certification’.\n\n\n\n\nAlém disso, também fui convidada para participar de um canal do Slack da RStudio, onde outras pessoas certificadas conversam sobre temas relacionados à certificação, como ensino, didática, R, tidyverse, shiny, entre outros.\nE também não poderia faltar a comemoração, né? Devido à pandemia, o encontro com as pessoas amigas foi online. Também teve um tweet de agradecimento:\n\n\n\n\n\n\nVeja a thread completa neste link!"
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#e-o-inglês",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#e-o-inglês",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "E o Inglês?",
+    "text": "E o Inglês?\nNa minha percepção, é importante ter alguma experiência com Inglês, pois o treinamento de 2 manhãs é realizado ao vivo, totalmente no idioma. Não sei se a RStudio tem planos de aplicar o treinamento em outros idiomas (como a The Carpentries, onde já existe alguns oferecimentos de treinamentos em Espanhol).\nAs provas que eu realizei foram aplicadas pelo Greg Wilson e acompanhadas pelo brasileiro Daniel Falbel (que trabalha na RStudio no desenvolvimento do Torch for R, e também é um dos sócios fundadores da Curso-R). A participação do Daniel possibilitou que eu realizasse a apresentação da prova didática totalmente em Português, além de poder responder as perguntas da prova em Português também. Quero deixar registrado aqui o meu agradecimento para o Greg Wilson por apresentar essa possibilidade, e também ao Daniel Falbel por aceitar acompanhar esse processo! Foi muito importante para me sentir mais tranquila na prova, já que teria que me preocupar menos com o idioma e mais com o conteúdo das provas em si."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#conclusão",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#conclusão",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Conclusão",
+    "text": "Conclusão\nPara mim, realizar este processo foi uma experiência rica onde aprendi e refleti sobre conteúdos importantes para que eu possa compartilhar cada vez mais conteúdo sobre R com qualidade. Dito isso, eu desejo fortemente que mais pessoas da comunidade Latino Americana façam o processo de treinamento.\nCaso eu não tenha abordado algum tema, ou você tenha dúvidas ao ler o post, peço que entre em contato comigo! Pode ser comentando neste post, ou enviando uma mensagem no twitter."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#agradecimentos",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#agradecimentos",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Agradecimentos 💜",
+    "text": "Agradecimentos 💜\nEu já deixei diversos agradecimentos ao longo do texto, porém quero deixar em destaque a minha gratidão para pessoas que foram fundamentais para este processo:\n\nEquipe da RStudio, Greg Wilson e Daniel Falbel: obrigada por possibilitar a realização deste treinamento!\nYanina Saibene, por toda a disposição de me mostrar os caminhos a seguir!\nNão foi fácil manter a motivação de estudos durante a pandemia, porém estudar em grupo ajudou muito a continuar. Então, para as pessoas que estudaram comigo, agradeço muito os momentos de estudo, troca, apoio, e ajuda com o Espanhol também.\n\nRiva Quiroga\nGabriela Sandoval\nSteph Orellana Bello\nSilvy Salinas\nLucia Rodriguez-Planes\nRoxana Noelia\nPatricia Loto\nAna Laura Diedrichs\nJuliana Benitez\nJaviera Riffo Torres\n\nMinha amiga querida Angélica Custódio, por todo o apoio e por acreditar em mim (mesmo quando eu estava com medo de não conseguir você estava lá pra me animar a continuar a estudar 💜).\nAs pessoas das comunidades que eu participo e aprendi tanto até aqui: R-Ladies São Paulo, Curso-R, Latin-R."
+  },
+  {
+    "objectID": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#mais-materiais-úteis",
+    "href": "posts/2022-06-10-rstudio-tidyverse-instructor-certification/pt/index.html#mais-materiais-úteis",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Mais materiais úteis",
+    "text": "Mais materiais úteis\n\nPosts em blogs de pessoas que fizeram a certificação:\n\nYanina Bellini Saibene\nSilvia Canelón - Recomendo muito a leitura, apresenta uma grande lista de links úteis também!\nShel Kariuki\nTed Laderas\n\nThe Carpentries Instructor Training: Suggested Rubric for Teaching Demonstrations - Essa página da The Carpentries apresenta alguns exemplos de pontos a serem observados para o feedback em aulas, com exemplos positivos e negativos sobre conteúdo e apresentação. É muito legal treinar o oferecimento da aula teste e tentar fazer uma reflexão e auto-feedback, utilizando esses pontos como partida!\nArtigos sugeridos pelo Greg Wilson:\n\nTen quick tips for creating an effective lesson\nTen quick tips for delivering programming lessons"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "",
+    "text": "English  Português\nAno passado, eu realizei o processo de treinamento e certificação da RStudio, e este post tem com objetivo relatar como foi este processo para mim, afim de possivelmente oferecer informações e ajudar outras pessoas interessadas em realizar essa certificação.\nA RStudio oferece a possibilidade de realizar a certificação de treinamento sobre os pacotes tidyverse e shiny. Todas as informações necessárias sobre a certificação estão disponíveis neste site, porém também adicionarei alguns links extras aqui!"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#importância-da-comunidade",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#importância-da-comunidade",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Importância da comunidade",
+    "text": "Importância da comunidade\nPrimeiro de tudo: eu gostaria de destacar que a comunidade de R foi essencial para que eu pudesse realizar o treinamento e receber a certificação.\nQuando eu fiquei sabendo da existência dessa certificação, eu logo me deparei com uma dificuldade para participar: no site dizia que era necessário pagar (em dólares) para realizar o processo. Para quem é Brasileiro, sabemos como a moeda local é muito desvalorizada, e isso acaba dificultando a participação de muitas pessoas.Então eu deixei pra lá, até que vi um post no blog da Yanina Saibene falando como foi o processo de certificação para ela. Então entrei em contato com ela (que havia conhecido pessoalmente na LatinR 2019) para saber mais sobre como foi o processo para ela.\nEla me colocou em contato com um grupo de pessoas que fazem parte de diversos capítulos da R-Ladies na América Latina, que estavam se organizando para começar um grupo de estudos (e apoio!) para realizar o processo. Além disso, também me deu mais informações sobre como fazer o processo de forma mais acessível financeiramente.\nPara esse grupo de estudos, foi criado um canal no Slack, onde eram compartilhadas dicas, resoluções de exercícios e dúvidas, entre outros. Além disso, nos encontravamos semanalmente via zoom para discutir os capítulos do livro R for Data Science (também disponível em Espanhol neste link).\nA orientação da Yanina Saibene e os estudos em grupo foram essenciais para que eu me preparasse para as provas, e me sentisse confiante em realizá-las."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#como-iniciar-o-processo-de-treinamento",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#como-iniciar-o-processo-de-treinamento",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Como iniciar o processo de treinamento?",
+    "text": "Como iniciar o processo de treinamento?\nSe você se interessou em realizar o processo de treinamento, o primeiro passo para começar é ler as instruções que estão disponíveis nesta página, e preencher este formulário.\n\nAo preencher o formulário, responda com atenção as duas perguntas opcionais a final do mesmo:\n\nA primeira é sobre o pertencimento a grupos sub-representados em ciência de dados; neste caso, descreva bem quais são os grupos que você faz parte, e aponte as suas contribuições para a comunidade de R.\nA segunda é sobre a possibilidade de redução da taxa de aplicação das provas e treinamento (fee waiver) para pessoas de países em desenvolvimento (lower-income countries)."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#treinamento",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#treinamento",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Treinamento",
+    "text": "Treinamento\nApós receber uma mensagem de aceite, é necessário indicar uma dentre as datas possíveis para realizar o treinamento. O treinamento que eu fiz foi realizado no período de duas manhãs, online (através da ferramenta Zoom), e foi em Inglês. O foco do treinamento não foi sobre programação em R, e sim sobre ensino e didática! Todo o conteúdo dos slides utilizados estão disponíveis neste link.\nMuito do conteúdo apresentado foi parecido com o treinamento oferecido pela The Carpentries (que eu descrevi neste post), e também com o conteúdo do livro escrito por Greg Wilson, entitulado Teach Tech Together:"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#provas-de-certificação",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#provas-de-certificação",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Provas de certificação",
+    "text": "Provas de certificação\nApós realizar o treinamento, a próxima etapa foi realizar a prova de ensino, e a prova da certificação desejada (que, no meu caso, foi sobre tidyverse). Neste link é possível acessar um exemplo de provas, disponiblizado pela RStudio para estudo.\nNão existe ordem correta para realizar as provas! Outro ponto importante é que as provas foram feitas com a tela compartilhada, e foi permitido fazer qualquer tipo de pesquisa na internet. Porém a prova tem um limite de tempo, então é importante ficar atenta(o) ao tempo que usa pesquisando!\n\nProva de Ensino\nA prova de ensino foi composta por uma aula demonstrativa de 15 minutos, e algumas questões a serem respondidas (relacionadas à ensino).\nAntes da prova em si, foi necessário enviar alguns materiais solicitados para serem utilizados em uma aula demonstrativa. Os materiais que eu preparei estão disponibilizados nesta página: https://beatrizmilz.github.io/RStudio_Certification/ (e o código também está disponível neste repositório no GitHub.\nEu utilizei ferramentas como uma página onde o material é disponibilizado feita com o pacote distill (Allaire et al. 2021), a apresentação feita com o pacote xaringan (Xie 2022), dois exercícios para serem feitos ao final da aula utilizando o pacote learnr (Schloerke et al. 2021), a demonstração com código ao vivo foi realizada usando a IDE RStudio, e um mapa conceitual elaborado com a ferramenta CMap Tools. Porém essas são as ferramentas que eu escolhi utilizar, e eu recomendo que você utilize o que estiver mais confortável para você! A única ferramenta que é obrigatória a ser utilizada nessa etapa é a IDE RStudio (o que é fácil de entender o motivo…).\n\n\nProva sobre tidyverse\nA prova de tidyverse consistiu em resolver diversos exercícios usando R e tidyverse. A recomendação da RStudio para estudar para essa prova é a leitura do livro R for Data Science.\nNão tenho muito a falar desta etapa, apenas que pratique e use o quanto possível no seu dia-a-dia, assim você terá mais experiência e conseguirá resolver os problemas mais rapidamente durante a prova.\n\nQuero ainda escrever um post sobre algumas funções que não são tão comuns, mas que foram úteis para a prova! Assim que o post estiver disponível, editarei e adicionarei o link aqui."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#aprovação",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#aprovação",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Aprovação!",
+    "text": "Aprovação!\nApós a aprovação nas provas, recebi um email com um certificado, e também solicitaram o envio de algumas informações para que a página com minhas informações fosse adicionada na lista de pessoas treinadoras certificadas. A página contendo minhas informações pode ser acessada através deste link, e o certificado recebido foi esse:\n\n\n\n\n\nCertificado recebido após completar o ‘Tidyverse Instructor Certification’.\n\n\n\n\nAlém disso, também fui convidada para participar de um canal do Slack da RStudio, onde outras pessoas certificadas conversam sobre temas relacionados à certificação, como ensino, didática, R, tidyverse, shiny, entre outros.\nE também não poderia faltar a comemoração, né? Devido à pandemia, o encontro com as pessoas amigas foi online. Também teve um tweet de agradecimento:\n\n\n\nMuito feliz em dizer que sou uma instrutora de #tidyverse certificada pela RStudio! 🎉I'm so happy to tell that I'm a certified tidyverse Instructor!Thanks (gvwilson?) and (RStudioEDU?) for this great oportunity. https://t.co/NL4SeT4mxN\n\n— Beatriz Milz ((BeaMilz?)) October 2, 2020\n\n\n\n\nVeja a thread completa neste link!"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#e-o-inglês",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#e-o-inglês",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "E o Inglês?",
+    "text": "E o Inglês?\nNa minha percepção, é importante ter alguma experiência com Inglês, pois o treinamento de 2 manhãs é realizado ao vivo, totalmente no idioma. Não sei se a RStudio tem planos de aplicar o treinamento em outros idiomas (como a The Carpentries, onde já existe alguns oferecimentos de treinamentos em Espanhol).\nAs provas que eu realizei foram aplicadas pelo Greg Wilson e acompanhadas pelo brasileiro Daniel Falbel (que trabalha na RStudio no desenvolvimento do Torch for R, e também é um dos sócios fundadores da Curso-R). A participação do Daniel possibilitou que eu realizasse a apresentação da prova didática totalmente em Português, além de poder responder as perguntas da prova em Português também. Quero deixar registrado aqui o meu agradecimento para o Greg Wilson por apresentar essa possibilidade, e também ao Daniel Falbel por aceitar acompanhar esse processo! Foi muito importante para me sentir mais tranquila na prova, já que teria que me preocupar menos com o idioma e mais com o conteúdo das provas em si."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#conclusão",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#conclusão",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Conclusão",
+    "text": "Conclusão\nPara mim, realizar este processo foi uma experiência rica onde aprendi e refleti sobre conteúdos importantes para que eu possa compartilhar cada vez mais conteúdo sobre R com qualidade. Dito isso, eu desejo fortemente que mais pessoas da comunidade Latino Americana façam o processo de treinamento.\nCaso eu não tenha abordado algum tema, ou você tenha dúvidas ao ler o post, peço que entre em contato comigo! Pode ser comentando neste post, ou enviando uma mensagem no twitter."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#agradecimentos",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#agradecimentos",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Agradecimentos 💜",
+    "text": "Agradecimentos 💜\nEu já deixei diversos agradecimentos ao longo do texto, porém quero deixar em destaque a minha gratidão para pessoas que foram fundamentais para este processo:\n\nEquipe da RStudio, Greg Wilson e Daniel Falbel: obrigada por possibilitar a realização deste treinamento!\nYanina Saibene, por toda a disposição de me mostrar os caminhos a seguir!\nNão foi fácil manter a motivação de estudos durante a pandemia, porém estudar em grupo ajudou muito a continuar. Então, para as pessoas que estudaram comigo, agradeço muito os momentos de estudo, troca, apoio, e ajuda com o Espanhol também.\n\nRiva Quiroga\nGabriela Sandoval\nSteph Orellana Bello\nSilvy Salinas\nLucia Rodriguez-Planes\nRoxana Noelia\nPatricia Loto\nAna Laura Diedrichs\nJuliana Benitez\nJaviera Riffo Torres\n\nMinha amiga querida Angélica Custódio, por todo o apoio e por acreditar em mim (mesmo quando eu estava com medo de não conseguir você estava lá pra me animar a continuar a estudar 💜).\nAs pessoas das comunidades que eu participo e aprendi tanto até aqui: R-Ladies São Paulo, Curso-R, Latin-R."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#mais-materiais-úteis",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html#mais-materiais-úteis",
+    "title": "Treinamento de instrutora e certificação da RStudio",
+    "section": "Mais materiais úteis",
+    "text": "Mais materiais úteis\n\nPosts em blogs de pessoas que fizeram a certificação:\n\nYanina Bellini Saibene\nSilvia Canelón - Recomendo muito a leitura, apresenta uma grande lista de links úteis também!\nShel Kariuki\nTed Laderas\n\nThe Carpentries Instructor Training: Suggested Rubric for Teaching Demonstrations - Essa página da The Carpentries apresenta alguns exemplos de pontos a serem observados para o feedback em aulas, com exemplos positivos e negativos sobre conteúdo e apresentação. É muito legal treinar o oferecimento da aula teste e tentar fazer uma reflexão e auto-feedback, utilizando esses pontos como partida!\nArtigos sugeridos pelo Greg Wilson:\n\nTen quick tips for creating an effective lesson\nTen quick tips for delivering programming lessons"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "",
+    "text": "English  Português"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#introduction",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#introduction",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Introduction",
+    "text": "Introduction\nIn 2020, I did the RStudio Instructor Training and Certification. This post aims to describe how I did the training, possibly offer information, and help other people interested in undertaking this training.\nRStudio offers the possibility to do the instructor certification on the packages tidyverse and shiny. All the necessary information is available on this site, but I will add some additional links here!\n\nImportant: I did the entire training process with Greg Wilson. However, he is no longer involved with it. I don’t know if any of the steps have changed. Here, I will describe the process when I did the training."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#the-importance-of-the-r-community",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#the-importance-of-the-r-community",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "The importance of the R community",
+    "text": "The importance of the R community\nFirst of all: I would like to point out that the R community was essential for me to be able to take this training.\nWhen I found out about the existence of this certification, I soon came across a difficulty in participating: on the website it said that it was necessary to pay (in dollars) to do the training.\nFor Brazilians, we know how the local currency is significantly devalued, making it difficult for many Brazilian people to participate. So I let it go until I saw a post by Yanina Saibene’s blog talking about her experience in the training and certification.\nI talked to Yani (I met her in person at LatinR 2019) to find out more about what the training was like for her. She put me in touch with a group of people who are part of several chapters of R-Ladies in Latin America, who were starting to organize a study group (and support!) to do the training. In addition, she also gave me more information on how to make this financially possible.\nWe created a Slack channel for this study group, where we shared tips, exercise resolutions, and questions. In addition, we had weekly Zoom meetings to discuss chapters from the book R for Data Science (also available in Spanish this link).\nThe guidance from Yanina Saibene and the support from the study group were essential for me to prepare for the exams and to feel confident in taking them."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#como-iniciar-o-processo-de-treinamento",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#como-iniciar-o-processo-de-treinamento",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Como iniciar o processo de treinamento?",
+    "text": "Como iniciar o processo de treinamento?\nSe você se interessou em realizar o processo de treinamento, o primeiro passo para começar é ler as instruções que estão disponíveis nesta página, e preencher este formulário.\n\nAo preencher o formulário, responda com atenção as duas perguntas opcionais a final do mesmo:\n\nA primeira é sobre o pertencimento a grupos sub-representados em ciência de dados; neste caso, descreva bem quais são os grupos que você faz parte, e aponte as suas contribuições para a comunidade de R.\nA segunda é sobre a possibilidade de redução da taxa de aplicação das provas e treinamento (fee waiver) para pessoas de países em desenvolvimento (lower-income countries)."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#treinamento",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#treinamento",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Treinamento",
+    "text": "Treinamento\nApós receber uma mensagem de aceite, é necessário indicar uma dentre as datas possíveis para realizar o treinamento. O treinamento que eu fiz foi realizado no período de duas manhãs, online (através da ferramenta Zoom), e foi em Inglês. O foco do treinamento não foi sobre programação em R, e sim sobre ensino e didática! Todo o conteúdo dos slides utilizados estão disponíveis neste link.\nMuito do conteúdo apresentado foi parecido com o treinamento oferecido pela The Carpentries (que eu descrevi neste post), e também com o conteúdo do livro escrito por Greg Wilson, entitulado Teach Tech Together:"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#provas-de-certificação",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#provas-de-certificação",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Provas de certificação",
+    "text": "Provas de certificação\nApós realizar o treinamento, a próxima etapa foi realizar a prova de ensino, e a prova da certificação desejada (que, no meu caso, foi sobre tidyverse). Neste link é possível acessar um exemplo de provas, disponiblizado pela RStudio para estudo.\nNão existe ordem correta para realizar as provas! Outro ponto importante é que as provas foram feitas com a tela compartilhada, e foi permitido fazer qualquer tipo de pesquisa na internet. Porém a prova tem um limite de tempo, então é importante ficar atenta(o) ao tempo que usa pesquisando!\n\nProva de Ensino\nA prova de ensino foi composta por uma aula demonstrativa de 15 minutos, e algumas questões a serem respondidas (relacionadas à ensino).\nAntes da prova em si, foi necessário enviar alguns materiais solicitados para serem utilizados em uma aula demonstrativa. Os materiais que eu preparei estão disponibilizados nesta página: https://beatrizmilz.github.io/RStudio_Certification/ (e o código também está disponível neste repositório no GitHub.\nEu utilizei ferramentas como uma página onde o material é disponibilizado feita com o pacote distill (Allaire et al. 2021), a apresentação feita com o pacote xaringan (Xie 2022), dois exercícios para serem feitos ao final da aula utilizando o pacote learnr (Schloerke et al. 2021), a demonstração com código ao vivo foi realizada usando a IDE RStudio, e um mapa conceitual elaborado com a ferramenta CMap Tools. Porém essas são as ferramentas que eu escolhi utilizar, e eu recomendo que você utilize o que estiver mais confortável para você! A única ferramenta que é obrigatória a ser utilizada nessa etapa é a IDE RStudio (o que é fácil de entender o motivo…).\n\n\nProva sobre tidyverse\nA prova de tidyverse consistiu em resolver diversos exercícios usando R e tidyverse. A recomendação da RStudio para estudar para essa prova é a leitura do livro R for Data Science.\nNão tenho muito a falar desta etapa, apenas que pratique e use o quanto possível no seu dia-a-dia, assim você terá mais experiência e conseguirá resolver os problemas mais rapidamente durante a prova.\n\nQuero ainda escrever um post sobre algumas funções que não são tão comuns, mas que foram úteis para a prova! Assim que o post estiver disponível, editarei e adicionarei o link aqui."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#aprovação",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#aprovação",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Aprovação!",
+    "text": "Aprovação!\nApós a aprovação nas provas, recebi um email com um certificado, e também solicitaram o envio de algumas informações para que a página com minhas informações fosse adicionada na lista de pessoas treinadoras certificadas. A página contendo minhas informações pode ser acessada através deste link, e o certificado recebido foi esse:\n\n\n\n\n\nCertificado recebido após completar o ‘Tidyverse Instructor Certification’.\n\n\n\n\nAlém disso, também fui convidada para participar de um canal do Slack da RStudio, onde outras pessoas certificadas conversam sobre temas relacionados à certificação, como ensino, didática, R, tidyverse, shiny, entre outros.\nE também não poderia faltar a comemoração, né? Devido à pandemia, o encontro com as pessoas amigas foi online. Também teve um tweet de agradecimento:\n\n\n\nMuito feliz em dizer que sou uma instrutora de #tidyverse certificada pela RStudio! 🎉I'm so happy to tell that I'm a certified tidyverse Instructor!Thanks (gvwilson?) and (RStudioEDU?) for this great oportunity. https://t.co/NL4SeT4mxN\n\n— Beatriz Milz ((BeaMilz?)) October 2, 2020\n\n\n\n\nVeja a thread completa neste link!"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#e-o-inglês",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#e-o-inglês",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "E o Inglês?",
+    "text": "E o Inglês?\nNa minha percepção, é importante ter alguma experiência com Inglês, pois o treinamento de 2 manhãs é realizado ao vivo, totalmente no idioma. Não sei se a RStudio tem planos de aplicar o treinamento em outros idiomas (como a The Carpentries, onde já existe alguns oferecimentos de treinamentos em Espanhol).\nAs provas que eu realizei foram aplicadas pelo Greg Wilson e acompanhadas pelo brasileiro Daniel Falbel (que trabalha na RStudio no desenvolvimento do Torch for R, e também é um dos sócios fundadores da Curso-R). A participação do Daniel possibilitou que eu realizasse a apresentação da prova didática totalmente em Português, além de poder responder as perguntas da prova em Português também. Quero deixar registrado aqui o meu agradecimento para o Greg Wilson por apresentar essa possibilidade, e também ao Daniel Falbel por aceitar acompanhar esse processo! Foi muito importante para me sentir mais tranquila na prova, já que teria que me preocupar menos com o idioma e mais com o conteúdo das provas em si."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#conclusão",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#conclusão",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Conclusão",
+    "text": "Conclusão\nPara mim, realizar este processo foi uma experiência rica onde aprendi e refleti sobre conteúdos importantes para que eu possa compartilhar cada vez mais conteúdo sobre R com qualidade. Dito isso, eu desejo fortemente que mais pessoas da comunidade Latino Americana façam o processo de treinamento.\nCaso eu não tenha abordado algum tema, ou você tenha dúvidas ao ler o post, peço que entre em contato comigo! Pode ser comentando neste post, ou enviando uma mensagem no twitter."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#agradecimentos",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#agradecimentos",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Agradecimentos 💜",
+    "text": "Agradecimentos 💜\nEu já deixei diversos agradecimentos ao longo do texto, porém quero deixar em destaque a minha gratidão para pessoas que foram fundamentais para este processo:\n\nEquipe da RStudio, Greg Wilson e Daniel Falbel: obrigada por possibilitar a realização deste treinamento!\nYanina Saibene, por toda a disposição de me mostrar os caminhos a seguir!\nNão foi fácil manter a motivação de estudos durante a pandemia, porém estudar em grupo ajudou muito a continuar. Então, para as pessoas que estudaram comigo, agradeço muito os momentos de estudo, troca, apoio, e ajuda com o Espanhol também.\n\nRiva Quiroga\nGabriela Sandoval\nSteph Orellana Bello\nSilvy Salinas\nLucia Rodriguez-Planes\nRoxana Noelia\nPatricia Loto\nAna Laura Diedrichs\nJuliana Benitez\nJaviera Riffo Torres\n\nMinha amiga querida Angélica Custódio, por todo o apoio e por acreditar em mim (mesmo quando eu estava com medo de não conseguir você estava lá pra me animar a continuar a estudar 💜).\nAs pessoas das comunidades que eu participo e aprendi tanto até aqui: R-Ladies São Paulo, Curso-R, Latin-R."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#mais-materiais-úteis",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#mais-materiais-úteis",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Mais materiais úteis",
+    "text": "Mais materiais úteis\n\nPosts em blogs de pessoas que fizeram a certificação:\n\nYanina Bellini Saibene\nSilvia Canelón - Recomendo muito a leitura, apresenta uma grande lista de links úteis também!\nShel Kariuki\nTed Laderas\n\nThe Carpentries Instructor Training: Suggested Rubric for Teaching Demonstrations - Essa página da The Carpentries apresenta alguns exemplos de pontos a serem observados para o feedback em aulas, com exemplos positivos e negativos sobre conteúdo e apresentação. É muito legal treinar o oferecimento da aula teste e tentar fazer uma reflexão e auto-feedback, utilizando esses pontos como partida!\nArtigos sugeridos pelo Greg Wilson:\n\nTen quick tips for creating an effective lesson\nTen quick tips for delivering programming lessons"
+  },
+  {
+    "objectID": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#welcome",
+    "href": "posts/2022-06-05-creating-a-blog-with-quarto/en/index.html#welcome",
+    "title": "Creating a blog with Quarto in 10 steps",
+    "section": "Welcome!",
+    "text": "Welcome!\nHi! Welcome to my new blog.\nMy name is Beatriz, and I have been writing blog posts about R and Data Science since 2019, in my blog written in Portuguese (I am Brazilian 🇧🇷). You can read more about me in the about page, and check my presentations on the talks page.\nI think that some of the blog posts I write would be useful to a broader audience, so I wanted to start blogging in English (or translating blog posts that I wrote).\nMy blog in Portuguese was build using blogdown and Hugo Apéro, and I really like it. I searched if it was possible to adapt the blog that I had to a multi-language blog (so I could have posts in Portuguese, English and Spanish), but I had no success on my quest."
+  },
+  {
+    "objectID": "posts/pt.html",
+    "href": "posts/pt.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nEste post relata como foi o processo pra mim de realizar a certificação da RStudio: RStudio Instructor Training and Certification.\n\n\n\n\nTeaching\n\n\nRStudio\n\n\nCommunities\n\n\n \n\n\n\n\nMar 2, 2021\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/en.html",
+    "href": "posts/en.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nThis post describes how I studied and did the RStudio Instructor Training and Certification.\n\n\n\n\nTeaching\n\n\nRStudio\n\n\nCommunities\n\n\nTranslation\n\n\n \n\n\n\n\nJun 8, 2022\n\n\nBeatriz Milz\n\n\n7 min\n\n\n\n\n\n\n  \n\n\n\n\n\nIn this post, I introduce you to my new blog and show how you can create a blog with Quarto for R users.\n\n\n\n\nQuarto\n\n\nTutorial\n\n\nBlog\n\n\n \n\n\n\n\nJun 5, 2022\n\n\nBeatriz Milz\n\n\n14 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/en.html#posts-in-portuguese",
+    "href": "posts/en.html#posts-in-portuguese",
+    "title": "Bea Milz",
+    "section": "Posts in Portuguese",
+    "text": "Posts in Portuguese\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#how-to-start-the-training-process",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#how-to-start-the-training-process",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "How to start the training process?",
+    "text": "How to start the training process?\nIf you are interested in carrying out the training process, the first step to getting started is to read the available instructions on this page.\n\nWhen filling out the form, carefully answer the two optional questions at the end of the form:\n\nThe first is about being part of underrepresented groups in data science; in this case, describe well which groups you are a part of and point out your contributions to the R community.\nThe second is about the reduction of the application fee (fee waiver) for people from developing countries (lower-income countries)."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#training",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#training",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Training",
+    "text": "Training\nThe training I did was carried out online in two mornings, using Zoom. The focus of the training was not on programming in R, but on teaching! All the contents of the slides used are available here.\nA lot of the content presented was similar to the training offered by The Carpentries and also the book Teach Tech Together (written by Greg Wilson)."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#certification-exam",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#certification-exam",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Certification exam",
+    "text": "Certification exam\nAfter completing the training, the next step was to take the teaching and certification exam (in my case, it was about tidyverse). In this link it is possible to access an example of exams made available by RStudio for study.\nThere was no correct order to take the exams! Another critical point is that the exams happened with the shared screen, and I could use Google search. But the exam had a time limit, so it was essential to pay attention to the time spent searching!\n\nTeaching exam\nThe teaching exam consisted of a 15-minute demonstration class and answering some questions about teaching.\nI had to send the materials used in the demonstration class beforehand. The materials I prepared are available on this page: https://beatrizmilz.github.io/RStudio_Certification/ (and the code is also available in this GitHub repository.\nI created a page for the material using the package distill (Allaire et al. 2021), the presentation with the package xaringan (Xie 2022), two exercises using the package learnr (Schloerke et al. 2021), the live code demo was using the RStudio IDE, and a concept map created with the tool CMap Tools. But these are the tools that I choose to use, and I recommend that you use whichever is most comfortable for you! The only mandatory tool to be used in this step is the RStudio IDE (which is easy to understand why…).\n\n\ntidyverse exam\nThe tidyverse exam consisted of solving several exercises using R and tidyverse. The recommendation from RStudio is to read the book R for Data Science.\nI don’t have much to say about this step; practice and use it as much as possible in your daily life and work, so you’ll have more experience and solve problems faster during the exam."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#approval",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#approval",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Approval!",
+    "text": "Approval!\nAfter passing the exams, I received an email with a certificate, and they asked me for some information to add me to the list of certified trainers. The page containing my information can be accessed here, and the certificate received was this:\n\n\n\n\n\nCertificate received after completing the Tidyverse Instructor Certification’.\n\n\n\n\nIn addition, I got an invitation to participate in an RStudio Slack channel, where other people that did the training talk about topics related to the training, such as teaching, didactics, R, tidyverse, shiny, among others.\nAnd I couldn’t miss the celebration either. Due to the pandemic, the meeting with friends was online. There was also a thank you tweet:\n\n\n\nMuito feliz em dizer que sou uma instrutora de #tidyverse certificada pela RStudio! 🎉I'm so happy to tell that I'm a certified tidyverse Instructor!Thanks (gvwilson?) and (RStudioEDU?) for this great opportunity. https://t.co/NL4SeT4mxN\n\n— Beatriz Milz ((BeaMilz?)) October 2, 2020"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#its-the-english",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#its-the-english",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "It’s the English?",
+    "text": "It’s the English?\nIn my opinion, it is valuable to have some experience with English, because the training is live and in English. I don’t know if RStudio has plans to provide training in other languages (like The Carpentries, where there are already some training offerings in Spanish).\nThe exams that I did were applied by Greg Wilson and accompanied by Daniel Falbel (who is Brazilian and works at RStudio in the development of the Torch for R and is also one of the founding partners of Curso-R). Daniel’s participation made it possible for me to present the teaching demo entirely in Portuguese and be able to answer the test questions in Portuguese. I want to record my thanks to Greg Wilson for presenting this possibility and Daniel Falbel for agreeing to be part of this process! It was essential for me to feel more relaxed during the test, as I would have to worry less about the language and more about the content of the tests itself."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#conclusion",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#conclusion",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Conclusion",
+    "text": "Conclusion\nFor me, doing this process was a rich experience where I learned and reflected on important content so that I could share more and more quality content about R. I wish that more people from the Latin American community could go through the training process."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#acknowledgements",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#acknowledgements",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Acknowledgements 💜",
+    "text": "Acknowledgements 💜\nI’ve already made several acknowledgments throughout the text, but I want to highlight my gratitude to people who were fundamental to this process:\n\nTeam at RStudio, Greg Wilson, and Daniel Falbel: thank you for making this training possible!\nYanina Saibene, for helping me with the following steps!\nIt wasn’t easy to keep the motivation of studies during the pandemic, but studying in a group helped a lot to continue. So, for the people who studied with me, I appreciate the moments of study, exchange, support, and help with Spanish.\n\nRiva Quiroga\nGabriela Sandoval\nSteph Orellana Bello\nSilvy Salinas\nLucia Rodriguez-Planes\nRoxana Noelia\nPatricia Loto\nAna Laura Diedrichs\nJuliana Benitez\nJaviera Riffo Torres\n\nMy dear friend Angelica Custódio, for all the support and for believing in me (even when I was afraid of not making it you were there to encourage me to continue studying 💜).\nPeople from the communities I participate in and I’ve learned so much so far: R-Ladies São Paulo, Curso-R, Latin-R."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#more-useful-materials",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#more-useful-materials",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "More useful materials",
+    "text": "More useful materials\n\nPosts on blogs by people who have done the training:\n\nYanina Bellini Saibene\nSilvia Canelón - I very recommend reading it. It features an extensive list of useful links too!\nShel Kariuki\nTed Laderas\n\nThe Carpentries Instructor Training: Suggested Rubric for Teaching Demonstrations - This page from The Carpentries presents some examples of points to note for in-class feedback, with positive and negative examples about content and presentation. It’s cool to practice offering the demo class and try to do some reflection and self-feedback, using these points as a starting point!\nArticles suggested by Greg Wilson:\n\nTen quick tips for creating an effective lesson\nTen quick tips for delivering programming lessons"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#aproval",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#aproval",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "Aproval!",
+    "text": "Aproval!\nAfter passing the exams, I received an email with a certificate, and they asked me for some information to be added to the list of certified trainers. The page containing my information can be accessed through this link, and the certificate received was this:\n\n\n\n\n\nCertificate received after completing the Tidyverse Instructor Certification’.\n\n\n\n\nIn addition, I was also invited to participate in an RStudio Slack channel, where other people that did the training talk about topics related to the training, such as teaching, didactics, R, tidyverse, shiny, among others.\nAnd I couldn’t miss the celebration either, right? Due to the pandemic, the meeting with friends was online. There was also a thank you tweet:\n\n\n\nMuito feliz em dizer que sou uma instrutora de #tidyverse certificada pela RStudio! 🎉I'm so happy to tell that I'm a certified tidyverse Instructor!Thanks (gvwilson?) and (RStudioEDU?) for this great opportunity. https://t.co/NL4SeT4mxN\n\n— Beatriz Milz ((BeaMilz?)) October 2, 2020"
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#it-s-the-english",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#it-s-the-english",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "It ’s the English?",
+    "text": "It ’s the English?\nIn my opinion, it is important to have some experience with English, because the training is live and in English. I don’t know if RStudio has plans to provide training in other languages (like The Carpentries, where there are already some training offerings in Spanish).\nThe exams that I did were applied by Greg Wilson and accompanied by Daniel Falbel (who is Brazilian, works at RStudio in the development of the Torch for R, and is also one of the founding partners of Curso-R). Daniel’s participation made it possible for me to present the teaching demo entirely in Portuguese, in addition to being able to answer the test questions in Portuguese as well. I want to record here my thanks to Greg Wilson for presenting this possibility, and also to Daniel Falbel for agreeing to be part of this process! It was very important for me to feel more relaxed during the test, as I would have to worry less about the language and more about the content of the tests itself."
+  },
+  {
+    "objectID": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#what-about-the-language",
+    "href": "posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html#what-about-the-language",
+    "title": "RStudio Instructor Training and Certification",
+    "section": "What about the language?",
+    "text": "What about the language?\nIn my opinion, it is important to have some experience with English, because the training is live and in English. I don’t know if RStudio has plans to provide training in other languages (like The Carpentries, where there are already some training offerings in Spanish).\nThe exams that I did were applied by Greg Wilson and accompanied by Daniel Falbel (who is Brazilian and works at RStudio in the development of the Torch for R and is also one of the founding partners of Curso-R). Daniel’s participation made it possible for me to present the teaching demo entirely in Portuguese and be able to answer the exam questions in Portuguese. I want to record my thanks to Greg Wilson for presenting this possibility and Daniel Falbel for agreeing to be part of this process! It was essential for me to feel more relaxed during the exam, as I would have to worry less about the language and more about the content of the exams itself."
   }
 ]

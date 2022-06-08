@@ -1,0 +1,151 @@
+---
+title: "Bases de dados: para praticar e ensinar"
+date: "2022-06-09"
+categories: ["Tutorial", "Teaching", "Datasets", "Data import"]
+image: "welcome_to_rstats.jpeg"
+author: ["Beatriz Milz", "Tereza Lacerda"]
+subtitle: "Quer saber como acessar várias bases de dados com R? Imagem: por Allison Horst."
+draft: true
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  message = FALSE, 
+  warning = FALSE, 
+  collapse = TRUE
+)
+```
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+::: callout-tip
+![](welcome_to_rstats.jpeg){fig-align="center" width="30%"}
+
+Esse post foi origalmente publicado no [blog da Curso-R](https://blog.curso-r.com/).
+[Ilustração usada na imagem por Allison Horst](https://twitter.com/allison_horst).
+:::
+
+## Introdução
+
+Neste post, listamos alguns lugares onde encontrar bases de dados interessantes para quem está aprendendo e quer praticar com novas bases, e também para quem quer ensinar R e procura bases de dados para criar exemplos!
+
+O post será separado em: bases em português (sejam elas traduzidas ou originais), e em inglês.
+
+## Bases de dados em Português
+
+### Pacote dados
+
+O pacote está **disponível no CRAN** e pode ser instalado utilizando o seguinte código:
+
+``` r
+install.packages("dados")
+```
+
+[Escrevemos um post recentemente focado neste pacote, então recomendamos checar lá](https://blog.curso-r.com/posts/2022-04-06-pacote-dados/)!
+Para acessar as bases de dados, utilize a função `library(dados)` ou use com `dados::nome_da_base`.
+Por exemplo:
+
+```{r}
+library(dados)
+dplyr::glimpse(dados::pixar_filmes)
+```
+
+### Base dos dados
+
+A [Base dos Dados](https://staging.basedosdados.org/) é um projeto super interessante.
+Lá, são disponibilizadas diversas bases públicas, e várias delas já estão tratadas, como: Relação Anual de Informações Sociais (RAIS), Índice de Desenvolvimento da Educação Básica (Ideb), Censo Demográfico, entre outros!
+
+Consulte as bases tratadas [neste link](https://staging.basedosdados.org/dataset?resource_type=bdm_table&order_by=score).
+
+Os dados são disponibilizados em um BigQuery, portanto o acesso tem algumas etapas a mais.
+Recomendamos olhar os seguintes links:
+
+-   [Acessando bases públicas em R: o pacote basedosdados](https://blog.curso-r.com/posts/2021-05-28-basedosdados/)
+-   [Live da Curso-R - Unboxing do pacote basedosdados](https://www.youtube.com/watch?v=8D4jK-YCxLU&t=2688s)
+-   [Documentação do BD+](https://basedosdados.github.io/mais/)
+
+### Pacote de bases usadas em cursos da Curso-R
+
+Algumas bases de dados foram traduzidas por pessoas da Curso-R, e disponibilizadas nesse pacote para serem usadas nos cursos.
+Esse pacote não está disponível no CRAN, então caso queira instalar, utilize os seguintes comandos:
+
+``` r
+install.packages("devtools")
+devtools::install_github("curso-r/basesCursoR")
+```
+
+Para verificar quais são as bases disponíveis no pacote, utilize a seguinte função: `basesCursoR::bases_disponiveis()`.
+
+```{r}
+basesCursoR::bases_disponiveis()
+```
+
+Para carregar alguma base do pacote, utilize a função `basesCursoR::pegar_base("nome_da_base")`, por exemplo:
+
+```{r}
+pokemon <- basesCursoR::pegar_base("pokemon")
+dplyr::glimpse(pokemon)
+```
+
+## Bases de dados em Inglês
+
+### Bases do tidytuesday
+
+O [tidytuesday](https://github.com/rfordatascience/tidytuesday) é um projeto bem legal da comunidade de R!
+Toda semana é disponibilizada uma base de dados.
+QUALQUER pessoa que queira participar pode participar, fazendo uma visualização com a base disponibilizada!
+
+Um lugar legal para ver as visualizações criadas pelas pessoas é no twitter, pesquisando a hashtag [`#tidytuesday`](https://twitter.com/search?q=tidytuesday&src=typed_query).
+
+É possível consultar a lista de bases de dados neste link: [tidytuesday datasets](https://github.com/rfordatascience/tidytuesday#datasets).
+Ao entrar na página de uma base de dados, o código para carregar a mesma é mostrado.
+Por exemplo: para usar os dados de [Jogos de tabuleiro](https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-01-25/readme.md), podemos usar o seguinte código:
+
+```{r}
+jogos_ratings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-25/ratings.csv')
+
+dplyr::glimpse(jogos_ratings)
+```
+
+### Pacote ISLR
+
+O pacote ISLR acompanha o livro [Introduction to Statistical Learning](https://www.statlearning.com/) (disponível [gratuitamente aqui](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf)).
+Apresenta bases de dados interessantes para treinar modelagem, acompanhando os exemplos do livro.
+
+Você pode instalar o pacote através do CRAN, usando a função `install.packages()`:
+
+``` r
+install.packages("ISLR")
+```
+
+Essas são as bases de dados disponíveis no pacote, que podem ser acessadas utilizando a função `library(ISLR)` ou use com `ISLR::nome_da_base`.
+:
+
+```{r echo=FALSE}
+bases <- data(package = 'ISLR')
+
+tibble::as_tibble(bases$results) |>
+  
+  dplyr::mutate(Nome = stringr::str_remove(Item, " \\(data\\)")) |>
+  dplyr::select(Nome, `Descrição` = Title) |>
+  knitr::kable() |>
+  kableExtra::kable_material(c("striped", "hover"))
+```
+
+### Kaggle
+
+O [Kaggle](https://www.kaggle.com/) é uma plataforma onde é possível participar de competições de Machine Learning!
+
+Por lá, também estão disponíveis diversas bases de dados, na [página de datasets](https://www.kaggle.com/datasets).
+Um ponto importante para citar é que qualquer pessoa consegue fazer upload de uma base lá no Kaggle, então pesquise com calma e veja as bases mais bem avaliadas no tema que você quer explorar!
+Depois que escolher, é possível baixar a base de dados e importar para o R.
+
+## Conclusão
+
+Esperamos que este post seja interessante para quem está aprendendo e quer praticar com novas bases, e também para quem quer ensinar R e procura bases de dados para criar exemplos!
+Bons estudos e até a próxima!
