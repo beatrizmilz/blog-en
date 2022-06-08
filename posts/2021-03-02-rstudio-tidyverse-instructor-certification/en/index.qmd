@@ -27,8 +27,17 @@ source(here::here("R/multilang.R"))
 multilang()
 ```
 
-<div class="alert alert-primary" role="alert">
-Hi! Here is the first translated post on my blog: I wrote this text in Portuguese in 2021.</div>
+<div class="alert alert-info" role="alert">
+Welcome! I wrote this text in Portuguese in 2021, and this is the first translation post in this blog.</div>
+
+:::{.callout-important}
+## Important
+
+The RStudio Instructor Training and Certification program is currently [on hold.](https://education.rstudio.com/trainers/)
+:::
+
+
+
 
 
 ## Introduction
