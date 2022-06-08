@@ -117,16 +117,11 @@ E também não poderia faltar a comemoração, né?
 Devido à pandemia, o encontro com as pessoas amigas foi online.
 Também teve um tweet de agradecimento:
 
-<a href="https://twitter.com/BeaMilz/status/1312129792771125255">
+<center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Muito feliz em dizer que sou uma instrutora de <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> certificada pela RStudio! 🎉<br><br>I&#39;m so happy to tell that I&#39;m a certified tidyverse Instructor!<br><br>Thanks <a href="https://twitter.com/gvwilson?ref_src=twsrc%5Etfw">@gvwilson</a> and @RStudioEDU for this great oportunity. <a href="https://t.co/NL4SeT4mxN">https://t.co/NL4SeT4mxN</a></p>&mdash; Beatriz Milz (@BeaMilz) <a href="https://twitter.com/BeaMilz/status/1312129792771125255?ref_src=twsrc%5Etfw">October 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-```{r tweet, echo=FALSE}
-# tweetrmd::tweet_screenshot("https://twitter.com/BeaMilz/status/1312129792771125255")
-# 
-# tweetrmd::tweet_screenshot("https://twitter.com/BeaMilz/status/1312129795887558658")
+</center>
 
-```
-
-</a>
 
 -   [Veja a thread completa neste link!](https://twitter.com/BeaMilz/status/1312129792771125255)
 

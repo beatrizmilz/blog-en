@@ -2,7 +2,7 @@
 title: "RStudio Instructor Training and Certification"
 subtitle: "This post describes how was for me to do the RStudio Instructor Training and Certification."
 author: "Beatriz Milz"
-date: "2022-06-10"
+date: "2022-06-08"
 bibliography: packages.bib
 categories: [Teaching, RStudio, Communities, Translation]
 image: "featured-photo.jpeg"
@@ -36,7 +36,7 @@ multilang()
 In 2020, I did the [RStudio](https://rstudio.com/) Instructor Training and Certification.
 This post aims to describe how as it, in order to possibly offer information and help other people interested to undertake this training.
 
-[RStudio](https://rstudio.com/) offers the possibility to do the instructor certification on the packages [tidyverse](https://www.tidyverse.org/) and [shiny](https://%20shiny.rstudio.com/).
+[RStudio](https://rstudio.com/) offers the possibility to do the instructor certification on the packages [tidyverse](https://www.tidyverse.org/) and [shiny](https://shiny.rstudio.com/).
 All the necessary information is available [on this site](https://education.rstudio.com/trainers/), but I will add some extra links here as well!
 
 > Important: I did the entire training process with [Greg Wilson](https://twitter.com/gvwilson), however he is no longer involved with it.
@@ -50,7 +50,7 @@ First of all: I would like to point out that the R community was essential for m
 When I found out about the existence of this certification, I soon came across a difficulty to participate: on the website it said that it was necessary to pay (in dollars) to do the training.
 
 For those who are Brazilians, we know how the local currency is very devalued, and this ends up making it difficult for many Brazilian people to participate.
-So I let it go, until I saw a [post](https://yabellini.netlify.app/post/rstudiocertification/) on [Yanina Saibene](https://twitter.com/yabellini)'s blog talking about the training and certification that she took.
+So I let it go, until I saw a [post](https://yabellini.netlify.app/blog/2020_rstudiocertification_es/) on [Yanina Saibene](https://twitter.com/yabellini)'s blog talking about the training and certification that she took.
 
 I got in touch with her (who I had met in person at [LatinR 2019](https://latin-r.com/)) to find out more about what the training was like for her.
 She put me in touch with a group of people who are part of [several chapters of R-Ladies](https://rladies.org/) in Latin America, who were starting to organize a study group (and support!) to do the training.
@@ -61,111 +61,107 @@ In addition, we had weekly Zoom meetings to discuss chapters from the book [R fo
 
 The guidance from [Yanina Saibene](https://twitter.com/yabellini) and the support from the study group were essential for me to prepare for the exams, and to feel confident in taking them.
 
-## Como iniciar o processo de treinamento?
+## How to start the training process?
 
-Se você se interessou em realizar o processo de treinamento, o primeiro passo para começar é ler as instruções que estão disponíveis [nesta página](https://education.rstudio.com/trainers/), e preencher [este formulário](https://forms.gle/kRucY2joTiPYWmPr8).
+If you are interested in carrying out the training process, the first step to get started is to read the instructions that are available [on this page](https://education.rstudio.com/trainers/).
 
-> Ao preencher o formulário, responda com atenção as duas perguntas opcionais a final do mesmo:
+> When filling out the form, carefully answer the two optional questions at the end of the form:
 >
-> -   A primeira é sobre o pertencimento a grupos sub-representados em ciência de dados; neste caso, descreva bem quais são os grupos que você faz parte, e aponte as suas contribuições para a comunidade de R.
+> - The first is about being part of underrepresented groups in data science; in this case, describe well which groups you are a part of, and point out your contributions to the R community.
 >
-> -   A segunda é sobre a possibilidade de redução da taxa de aplicação das provas e treinamento (*fee waiver*) para pessoas de países em desenvolvimento (*lower-income countries*).
+> - The second is about the reduction of the application fee (*fee waiver*) for people from developing countries (*lower-income countries*).
 
-## Treinamento
 
-Após receber uma mensagem de aceite, é necessário indicar uma dentre as datas possíveis para realizar o treinamento.
-O treinamento que eu fiz foi realizado no período de duas manhãs, online (através da ferramenta Zoom), e foi em Inglês.
-O foco do treinamento não foi sobre programação em R, e sim sobre ensino e didática!
-Todo o conteúdo dos slides utilizados estão disponíveis [neste link](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY).
+## Training
 
-Muito do conteúdo apresentado foi parecido com o treinamento oferecido pela [The Carpentries](https://carpentries.org/) (que eu descrevi [neste post](https://beatrizmilz.com/posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/)), e também com o conteúdo do livro escrito por [Greg Wilson](https://twitter.com/gvwilson), entitulado [Teach Tech Together](https://teachtogether.tech/):
+After receiving a message of acceptance, it was necessary to indicate one of the possible dates to carry out the training.
+The training I did was carried out online in two mornings, using Zoom tool.
+The focus of the training was not about programming in R, but on teaching!
+All the contents of the slides used are available [at this link](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY).
 
-## Provas de certificação
+Much of the content presented was similar to the training offered by [The Carpentries](https://carpentries.org/) (which I described [in this post](https://beatrizmilz.com/posts/2020-02-22- the-carpentries-how-to-do-instructor-training/)), and also with the content of the book written by [Greg Wilson](https://twitter.com/gvwilson), entitled [Teach Tech Together](https://teachtogether.tech/).
 
-Após realizar o treinamento, a próxima etapa foi realizar a prova de ensino, e a prova da certificação desejada (que, no meu caso, foi sobre tidyverse).
-[Neste link](https://education.rstudio.com/blog/2020/02/instructor-certification-exams/) é possível acessar um exemplo de provas, disponiblizado pela [RStudio](https://rstudio.com/) para estudo.
 
-Não existe ordem correta para realizar as provas!
-Outro ponto importante é que as provas foram feitas com a tela compartilhada, e foi permitido fazer qualquer tipo de pesquisa na internet.
-Porém a prova tem um limite de tempo, então é importante ficar atenta(o) ao tempo que usa pesquisando!
+## Certification exam
 
-### Prova de Ensino
+After completing the training, the next step was to take the teaching  and certification exam (in my case, was about tidyverse).
+[In this link](https://education.rstudio.com/blog/2020/02/instructor-certification-exams/) it is possible to access an example of exams, made available by [RStudio](https://rstudio.com/) for study.
 
-A prova de ensino foi composta por uma aula demonstrativa de 15 minutos, e algumas questões a serem respondidas (relacionadas à ensino).
+There was no correct order to take the tests!
+Another important point is that the tests were done with the screen shared, and we could do a Google search about the topics. But the exam had a time limit, so it's important to pay attention to the time you spend searching!
 
-Antes da prova em si, foi necessário enviar alguns materiais solicitados para serem utilizados em uma aula demonstrativa.
-Os materiais que eu preparei estão disponibilizados nesta página: <https://beatrizmilz.github.io/RStudio_Certification/> (e o código também está disponível neste [repositório no GitHub](https://github.com/beatrizmilz/RStudio_Certification).
+### Teaching exam
 
-Eu utilizei ferramentas como uma página onde o material é disponibilizado feita com o pacote [distill](https://rstudio.github.io/distill/) [@R-distill], a apresentação feita com o pacote [xaringan](https://slides.yihui.org/xaringan/) [@R-xaringan], dois exercícios para serem feitos ao final da aula utilizando o pacote [learnr](https://rstudio.github.io/learnr/) [@R-learnr], a demonstração com código ao vivo foi realizada usando a IDE [RStudio](https://rstudio.com/), e um mapa conceitual elaborado com a ferramenta [CMap Tools](https://cmap.ihmc.us/).
-Porém essas são as ferramentas que *eu* escolhi utilizar, e eu recomendo que você utilize o que estiver mais confortável para você!
-A única ferramenta que é obrigatória a ser utilizada nessa etapa é a IDE [RStudio](https://rstudio.com/) (o que é fácil de entender o motivo...).
+The teaching exam consisted of a 15-minute demonstration class, and aswering some questions about teaching.
 
-### Prova sobre tidyverse
+Before the test itself, it was necessary to send the materials to be used in a demonstration class.
+The materials I prepared are available on this page: <https://beatrizmilz.github.io/RStudio_Certification/> (and the code is also available in this [GitHub repository](https://github.com/beatrizmilz/RStudio_Certification) .
 
-A prova de tidyverse consistiu em resolver diversos exercícios usando R e tidyverse.
-A recomendação da [RStudio](https://rstudio.com/) para estudar para essa prova é a leitura do livro [R for Data Science](https://r4ds.had.co.nz/).
+I created a page for the material using the package [distill](https://rstudio.github.io/distill/) [@R-distill], the presentation made with the package [xaringan](https ://slides.yihui.org/xaringan/) [@R-xaringan], two exercises to do at the end of the class using the package [learnr](https://rstudio.github.io/learnr/) [@ R-learnr], the live code demo was performed using the IDE [RStudio](https://rstudio.com/), and a concept map created with the tool [CMap Tools](https://cmap.ihmc .us/).
+But these are the tools that *I* chose to use, and I recommend that you use whichever is most comfortable for you!
+The only mandatory tool to be used in this step is the IDE [RStudio](https://rstudio.com/) (which is easy to understand why...).
 
-Não tenho muito a falar desta etapa, apenas que pratique e use o quanto possível no seu dia-a-dia, assim você terá mais experiência e conseguirá resolver os problemas mais rapidamente durante a prova.
 
-> Quero ainda escrever um post sobre algumas funções que não são tão comuns, mas que foram úteis para a prova!
-> Assim que o post estiver disponível, editarei e adicionarei o link aqui.
 
-## Aprovação!
 
-Após a aprovação nas provas, recebi um email com um certificado, e também solicitaram o envio de algumas informações para que a página com minhas informações fosse adicionada na lista de pessoas treinadoras certificadas.
-A página contendo minhas informações pode ser acessada através [deste link](https://education.rstudio.com/trainers/people/milz+beatriz/), e o certificado recebido foi esse:
+###  tidyverse exam
 
-```{r echo=FALSE, fig.cap="Certificado recebido após completar o 'Tidyverse Instructor Certification'."}
+The tidyverse exam consisted of solving several exercises using R and tidyverse.
+The recommendation of [RStudio](https://rstudio.com/) to study for this test is to read the book [R for Data Science](https://r4ds.had.co.nz/).
+
+I don't have much to say about this step, just practice and use it as much as possible in your daily life and work, so you'll have more experience and be able to solve problems faster during the test.
+
+## Approval!
+
+After passing the exams, I received an email with a certificate, and they asked me some information to be added to the list of certified trainers.
+The page containing my information can be accessed through [this link](https://education.rstudio.com/trainers/people/milz+beatriz/), and the certificate received was this:
+
+```{r echo=FALSE, fig.cap="Certificate received after completing the'Tidyverse Instructor Certification'."}
 knitr::include_graphics("https://beatrizmilz.com/img/certificado-rstudio.jpg")
 ```
 
-Além disso, também fui convidada para participar de um canal do Slack da RStudio, onde outras pessoas certificadas conversam sobre temas relacionados à certificação, como ensino, didática, R, tidyverse, shiny, entre outros.
 
-E também não poderia faltar a comemoração, né?
-Devido à pandemia, o encontro com as pessoas amigas foi online.
-Também teve um tweet de agradecimento:
+In addition, I was also invited to participate in an RStudio Slack channel, where other people that did the training talk about topics related to the training, such as teaching, didactics, R, tidyverse, shiny, among others.
 
-<a href="https://twitter.com/BeaMilz/status/1312129792771125255">
+And I couldn't miss the celebration either, right?
+Due to the pandemic, the meeting with friends was online.
+There was also a thank you tweet:
 
-```{r tweet, echo=FALSE}
-# tweetrmd::tweet_screenshot("https://twitter.com/BeaMilz/status/1312129792771125255")
-# 
-# tweetrmd::tweet_screenshot("https://twitter.com/BeaMilz/status/1312129795887558658")
 
-```
+<center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Muito feliz em dizer que sou uma instrutora de <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> certificada pela RStudio! 🎉<br><br>I&#39;m so happy to tell that I&#39;m a certified tidyverse Instructor!<br><br>Thanks <a href="https://twitter.com/gvwilson?ref_src=twsrc%5Etfw">@gvwilson</a> and @RStudioEDU for this great oportunity. <a href="https://t.co/NL4SeT4mxN">https://t.co/NL4SeT4mxN</a></p>&mdash; Beatriz Milz (@BeaMilz) <a href="https://twitter.com/BeaMilz/status/1312129792771125255?ref_src=twsrc%5Etfw">October 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-</a>
+</center>
 
--   [Veja a thread completa neste link!](https://twitter.com/BeaMilz/status/1312129792771125255)
+## It's the English?
 
-## E o Inglês?
+In my opinion, it is important to have some experience with English, because the training is live and in English.
+I don't know if RStudio has plans to provide training in other languages (like [The Carpentries](https://carpentries.org/), where there are already some training offerings in Spanish).
 
-Na minha percepção, é importante ter alguma experiência com Inglês, pois o treinamento de 2 manhãs é realizado ao vivo, totalmente no idioma.
-Não sei se a RStudio tem planos de aplicar o treinamento em outros idiomas (como a [The Carpentries](https://carpentries.org/), onde já existe alguns oferecimentos de treinamentos em Espanhol).
+The exams that I did were applied by [Greg Wilson](https://twitter.com/gvwilson) and accompanied by [Daniel Falbel](https://twitter.com/dfalbel) (who is Brazilian, works at RStudio in the development of the [Torch for R](https://torch.mlverse.org/), and is also one of the founding partners of [Curso-R](https://curso-r.com/)).
+Daniel's participation made it possible for me to present the teaching demo entirely in Portuguese, in addition to being able to answer the test questions in Portuguese as well.
+I want to record here my thanks to Greg Wilson for presenting this possibility, and also to Daniel Falbel for agreeing to being part of this process!
+It was very important for me to feel more relaxed during the test, as I would have to worry less about the language and more about the content of the tests itself.
 
-As provas que eu realizei foram aplicadas pelo [Greg Wilson](https://twitter.com/gvwilson) e acompanhadas pelo brasileiro [Daniel Falbel](https://twitter.com/dfalbel) (que trabalha na RStudio no desenvolvimento do [Torch for R](https://torch.mlverse.org/), e também é um dos sócios fundadores da [Curso-R](https://curso-r.com/)).
-A participação do Daniel possibilitou que eu realizasse a apresentação da prova didática totalmente em Português, além de poder responder as perguntas da prova em Português também.
-Quero deixar registrado aqui o meu agradecimento para o Greg Wilson por apresentar essa possibilidade, e também ao Daniel Falbel por aceitar acompanhar esse processo!
-Foi muito importante para me sentir mais tranquila na prova, já que teria que me preocupar menos com o idioma e mais com o conteúdo das provas em si.
 
-## Conclusão
+## Conclusion
 
-Para mim, realizar este processo foi uma experiência rica onde aprendi e refleti sobre conteúdos importantes para que eu possa compartilhar cada vez mais conteúdo sobre R com qualidade.
-Dito isso, eu desejo fortemente que mais pessoas da comunidade Latino Americana façam o processo de treinamento.
+For me, doing this process was a rich experience where I learned and reflected on important content so that I can share more and more quality content about R.
+That said, I strongly wish that more people from the Latin American community can go through the training process.
 
-Caso eu não tenha abordado algum tema, ou você tenha dúvidas ao ler o post, peço que entre em contato comigo!
-Pode ser comentando neste post, ou enviando uma mensagem [no twitter](https://twitter.com/BeaMilz).
 
-## Agradecimentos `r emo::ji("purple_heart")`
 
-Eu já deixei diversos agradecimentos ao longo do texto, porém quero deixar em destaque a minha gratidão para pessoas que foram fundamentais para este processo:
+## Acknowledgements `r emo::ji("purple_heart")`
 
--   Equipe da [RStudio](https://rstudio.com/), [Greg Wilson](https://twitter.com/gvwilson) e [Daniel Falbel](https://twitter.com/dfalbel): obrigada por possibilitar a realização deste treinamento!
 
--   [Yanina Saibene](https://twitter.com/yabellini), por toda a disposição de me mostrar os caminhos a seguir!
+I already made several acknowledgments throughout the text, but I want to highlight my gratitude to people who were fundamental to this process:
 
--   Não foi fácil manter a motivação de estudos durante a pandemia, porém estudar em grupo ajudou muito a continuar.
-    Então, para as pessoas que estudaram comigo, agradeço muito os momentos de estudo, troca, apoio, e ajuda com o Espanhol também.
+- Team at [RStudio](https://rstudio.com/), [Greg Wilson](https://twitter.com/gvwilson) and [Daniel Falbel](https://twitter.com/dfalbel): thank you for making this training possible!
+
+- [Yanina Saibene](https://twitter.com/yabellini), for showing me the paths to follow!
+
+- It wasn't easy to keep the motivation of studies during the pandemic, but studying in a group helped a lot to continue.
+     So, for the people who studied with me, I really appreciate the moments of study, exchange, support, and help with Spanish as well.
 
     -   [Riva Quiroga](https://twitter.com/rivaquiroga)
     -   [Gabriela Sandoval](https://twitter.com/GabySandovalM)
@@ -178,26 +174,26 @@ Eu já deixei diversos agradecimentos ao longo do texto, porém quero deixar em 
     -   [Juliana Benitez](https://twitter.com/July_Benitezs)
     -   [Javiera Riffo Torres](https://twitter.com/JavieraRiffoTo1)
 
--   Minha amiga querida [Angélica Custódio](https://twitter.com/angcustodio), por todo o apoio e por acreditar em mim (mesmo quando eu estava com medo de não conseguir você estava lá pra me animar a continuar a estudar `r emo::ji("purple_heart")`).
+- My dear friend [Angelica Custódio](https://twitter.com/angcustodio), for all the support and for believing in me (even when I was afraid of not making it you were there to encourage me to continue studying ` r emo::ji("purple_heart")`).
 
--   As pessoas das comunidades que eu participo e aprendi tanto até aqui: [R-Ladies São Paulo](https://twitter.com/RLadiesSaoPaulo), [Curso-R](https://twitter.com/curso_r), [Latin-R](https://twitter.com/LatinR_Conf).
+- People from the communities I participate in and I've learned so much so far: [R-Ladies São Paulo](https://twitter.com/RLadiesSaoPaulo), [Curso-R](https://twitter.com/curso_r), [Latin-R](https://twitter.com/LatinR_Conf).
 
-## Mais materiais úteis
+## More useful materials
 
--   Posts em blogs de pessoas que fizeram a certificação:
+- Posts on blogs by people who have done the training:
 
     -   [Yanina Bellini Saibene](https://yabellini.netlify.app/post/rstudiocertification/)
 
-    -   [Silvia Canelón](https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/) - Recomendo **muito** a leitura, apresenta uma grande lista de links úteis também!
+    -   [Silvia Canelón](https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/) - I **very** recommend reading it, it features a large list of useful links too!
 
     -   [Shel Kariuki](https://shelkariuki.netlify.app/blog/certification/)
 
     -   [Ted Laderas](https://education.rstudio.com/blog/2019/11/my-experience-with-rstudio-instructor-training/)
 
--   [The Carpentries Instructor Training: Suggested Rubric for Teaching Demonstrations](https://carpentries.github.io/instructor-training/demos_rubric/) - Essa página da The Carpentries apresenta alguns exemplos de pontos a serem observados para o feedback em aulas, com exemplos positivos e negativos sobre conteúdo e apresentação.
-    É muito legal treinar o oferecimento da aula teste e tentar fazer uma reflexão e auto-feedback, utilizando esses pontos como partida!
+- [The Carpentries Instructor Training: Suggested Rubric for Teaching Demonstrations](https://carpentries.github.io/instructor-training/demos_rubric/) - This page from The Carpentries presents some examples of points to note for in-class feedback, with positive and negative examples about content and presentation.
+     It's really cool to practice offering the test class and try to do some reflection and self-feedback, using these points as a starting point!
 
--   Artigos sugeridos pelo [Greg Wilson](https://twitter.com/gvwilson):
+- Articles suggested by [Greg Wilson](https://twitter.com/gvwilson):
 
     -   [Ten quick tips for creating an effective lesson](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006915)
 
