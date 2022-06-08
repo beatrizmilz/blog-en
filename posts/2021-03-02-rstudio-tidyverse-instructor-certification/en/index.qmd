@@ -76,7 +76,7 @@ If you are interested in carrying out the training process, the first step to ge
 
 The training I did was carried out online in two mornings, using Zoom.
 The focus of the training was not on programming in R, but on teaching!
-All the contents of the slides used are available [at this link](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY).
+All the contents of the slides used are available [here](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY).
 
 A lot of the content presented was similar to the training offered by [The Carpentries](https://carpentries.org/) and also the book [Teach Tech Together](https://teachtogether.tech/) (written by [Greg Wilson](https://twitter.com/gvwilson)).
 
@@ -86,7 +86,7 @@ A lot of the content presented was similar to the training offered by [The Carpe
 After completing the training, the next step was to take the teaching and certification exam (in my case, it was about tidyverse).
 [In this link](https://education.rstudio.com/blog/2020/02/instructor-certification-exams/) it is possible to access an example of exams made available by [RStudio](https://rstudio.com/) for study.
 
-There was no correct order to take the tests!
+There was no correct order to take the exams!
 Another critical point is that the exams happened with the shared screen, and I could use Google search. But the exam had a time limit, so it was essential to pay attention to the time spent searching!
 
 ### Teaching exam
@@ -98,7 +98,7 @@ The materials I prepared are available on this page: <https://beatrizmilz.github
 
 I created a page for the material using the package [distill](https://rstudio.github.io/distill/) [@R-distill], the presentation with the package [xaringan](https://slides.yihui.org/xaringan/) [@R-xaringan], two exercises using the package [learnr](https://rstudio.github.io/learnr/) [@R-learnr], the live code demo was using the [RStudio IDE](https://rstudio.com/), and a concept map created with the tool [CMap Tools](https://cmap.ihmc.us/).
 But these are the tools that *I* choose to use, and I recommend that you use whichever is most comfortable for you!
-The only mandatory tool to be used in this step is the IDE [RStudio](https://rstudio.com/) (which is easy to understand why...).
+The only mandatory tool to be used in this step is the [RStudio IDE](https://rstudio.com/) (which is easy to understand why...).
 
 
 
@@ -106,14 +106,14 @@ The only mandatory tool to be used in this step is the IDE [RStudio](https://rst
 ###  tidyverse exam
 
 The tidyverse exam consisted of solving several exercises using R and tidyverse.
-The recommendation of [RStudio](https://rstudio.com/) to study for this test is to read the book [R for Data Science](https://r4ds.had.co.nz/).
+The recommendation from [RStudio](https://rstudio.com/) is to read the book [R for Data Science](https://r4ds.had.co.nz/).
 
-I don't have much to say about this step; practice and use it as much as possible in your daily life and work, so you'll have more experience and solve problems faster during the test.
+I don't have much to say about this step; practice and use it as much as possible in your daily life and work, so you'll have more experience and solve problems faster during the exam.
 
 ## Approval!
 
-After passing the exams, I received an email with a certificate, and they asked me for some information to add to the list of certified trainers.
-The page containing my information can be accessed through [this link](https://education.rstudio.com/trainers/people/milz+beatriz/), and the certificate received was this:
+After passing the exams, I received an email with a certificate, and they asked me for some information to add me to the list of certified trainers.
+The page containing my information can be accessed [here](https://education.rstudio.com/trainers/people/milz+beatriz/), and the certificate received was this:
 
 ```{r echo=FALSE, fig.cap="Certificate received after completing the Tidyverse Instructor Certification'."}
 knitr::include_graphics("https://beatrizmilz.com/img/certificado-rstudio.jpg")
@@ -134,13 +134,13 @@ There was also a thank you tweet:
 
 ## What about the language?
 
-In my opinion, it is valuable to have some experience with English, because the training is live and in English.
+In my opinion, it is important to have some experience with English, because the training is live and in English.
 I don't know if RStudio has plans to provide training in other languages (like [The Carpentries](https://carpentries.org/), where there are already some training offerings in Spanish).
 
 The exams that I did were applied by [Greg Wilson](https://twitter.com/gvwilson) and accompanied by [Daniel Falbel](https://twitter.com/dfalbel) (who is Brazilian and works at RStudio in the development of the [Torch for R](https://torch.mlverse.org/) and is also one of the founding partners of [Curso-R](https://curso-r.com/)).
-Daniel's participation made it possible for me to present the teaching demo entirely in Portuguese and be able to answer the test questions in Portuguese.
+Daniel's participation made it possible for me to present the teaching demo entirely in Portuguese and be able to answer the exam questions in Portuguese.
 I want to record my thanks to Greg Wilson for presenting this possibility and Daniel Falbel for agreeing to be part of this process!
-It was essential for me to feel more relaxed during the test, as I would have to worry less about the language and more about the content of the tests itself.
+It was essential for me to feel more relaxed during the exam, as I would have to worry less about the language and more about the content of the exams itself.
 
 
 ## Conclusion
@@ -153,7 +153,7 @@ I wish that more people from the Latin American community could go through the t
 ## Acknowledgements `r emo::ji("purple_heart")`
 
 
-I already made several acknowledgments throughout the text, but I want to highlight my gratitude to people who were fundamental to this process:
+I've already made several acknowledgments throughout the text, but I want to highlight my gratitude to people who were fundamental to this process:
 
 - Team at [RStudio](https://rstudio.com/), [Greg Wilson](https://twitter.com/gvwilson), and [Daniel Falbel](https://twitter.com/dfalbel): thank you for making this training possible!
 
@@ -190,7 +190,7 @@ I already made several acknowledgments throughout the text, but I want to highli
     -   [Ted Laderas](https://education.rstudio.com/blog/2019/11/my-experience-with-rstudio-instructor-training/)
 
 - [The Carpentries Instructor Training: Suggested Rubric for Teaching Demonstrations](https://carpentries.github.io/instructor-training/demos_rubric/) - This page from The Carpentries presents some examples of points to note for in-class feedback, with positive and negative examples about content and presentation.
-     It's cool to practice offering the test class and try to do some reflection and self-feedback, using these points as a starting point!
+     It's cool to practice offering the demo class and try to do some reflection and self-feedback, using these points as a starting point!
 
 - Articles suggested by [Greg Wilson](https://twitter.com/gvwilson):
 
