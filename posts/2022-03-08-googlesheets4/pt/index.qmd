@@ -5,6 +5,7 @@ author: "Beatriz Milz"
 date: "2022-03-08"
 image: "featured-hex.png"
 categories: ["API", "Google", "Data import", "Google Sheets"]
+toc: true
 ---
 
 ```{r setup, include=FALSE}

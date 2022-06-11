@@ -6,7 +6,7 @@ listing:
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
-    categories: true
+    # categories: cloud
     sort-ui: true
     filter-ui: true
     page-size: 6

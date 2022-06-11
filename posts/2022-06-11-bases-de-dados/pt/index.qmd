@@ -6,6 +6,7 @@ image: "welcome_to_rstats.jpeg"
 author: ["Beatriz Milz", "Tereza Lacerda"]
 subtitle: "Quer saber como acessar várias bases de dados com R? Imagem: por Allison Horst."
 draft: false
+toc: true
 ---
 
 ```{r, include = FALSE}
@@ -149,3 +150,4 @@ Depois que escolher, é possível baixar a base de dados e importar para o R.
 
 Esperamos que este post seja interessante para quem está aprendendo e quer praticar com novas bases, e também para quem quer ensinar R e procura bases de dados para criar exemplos!
 Bons estudos e até a próxima!
+

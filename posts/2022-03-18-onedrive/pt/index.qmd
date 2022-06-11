@@ -5,17 +5,16 @@ author: "Beatriz Milz"
 date: "2022-03-18"
 categories: ["API", "One Drive", "Data import", "Excel", "Microsoft", "Azure", "Microsoft365R"]
 image: "featured-hex.png"
+toc: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, cache = TRUE, message = FALSE, warning = FALSE,  collapse = TRUE)
 ```
 
-
 ::: callout-tip
 Esse post foi origalmente publicado no [blog da Curso-R](https://blog.curso-r.com/posts/2022-03-18-onedrive/).
 :::
-
 
 ## Introdução
 
@@ -217,3 +216,4 @@ Até a próxima!
 
     -   [Documentação do pacote R6](https://r6.r-lib.org/articles/Introduction.html)
     -   [Livro Advanced R](https://adv-r.hadley.nz/r6.html)
+

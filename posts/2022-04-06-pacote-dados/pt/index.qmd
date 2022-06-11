@@ -5,6 +5,7 @@ author: "Beatriz Milz"
 date: "2022-04-06"
 categories: ["Tutorial", "Teaching", "Datasets", "Data import", "R Packages"]
 image: "dados-hex-featured.png"
+toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -61,7 +62,9 @@ Você pode conferir na aba Help, usando `?dados::nome_da_base` ou conferindo [na
 
 Existem bases bem legais disponíveis, como:
 
-### Star Wars <img src="https://dplyr.tidyverse.org/logo.png" align="right" width="100px"/>
+### Star Wars 
+
+<img src="https://dplyr.tidyverse.org/logo.png" align="right" width="100px"/>
 
 -   A base de dados de personagens da franquia Star Wars, disponibilizada originalmente no pacote [dplyr](https://dplyr.tidyverse.org/reference/starwars.html). Por isso, é esperado que seja bastante útil em exemplos de manipulação de dados. Porém podemos criar visualizações bem legais também usando esses dados! Aliás, essa é a base utilizada no [desafio 3](https://blog.curso-r.com/posts/2022-04-05-desafio-3/), focado em visualização de dados, com o objetivo de replicar esse gráfico:
 
@@ -75,7 +78,9 @@ Espie a base por aqui:
 dplyr::glimpse(dados::dados_starwars)
 ```
 
-### Pinguins <img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/logo.png" align="right" width="100px"/>
+### Pinguins 
+
+<img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/logo.png" align="right" width="100px"/>
 
 A [base dos pinguins](https://allisonhorst.github.io/palmerpenguins/) foi disponibilizada com o objetivo de ser uma alternativa à base de dados `iris`.
 Podemos utilizar essa base para ensinar e praticar principalmente temas de visualização e manipulação de dados.
@@ -89,7 +94,9 @@ Espie a base por aqui:
 dplyr::glimpse(dados::pinguins)
 ```
 
-### Filmes da Pixar <img src="https://erictleung.com/pixarfilms/reference/figures/logo.png" align="right" width="100px"/>
+### Filmes da Pixar
+
+<img src="https://erictleung.com/pixarfilms/reference/figures/logo.png" align="right" width="100px"/>
 
 O pacote [pixarfilms](https://erictleung.com/pixarfilms/) apresenta algumas bases de dados com informações sobre filmes da Pixar.
 Todas as bases foram traduzidas e disponibilizadas no pacote dados!

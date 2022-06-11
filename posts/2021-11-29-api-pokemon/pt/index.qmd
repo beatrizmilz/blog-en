@@ -1,0 +1,174 @@
+---
+subtitle: "Primeiro post sobre acesso à APIs usando R."
+draft: FALSE
+author: "Beatriz Milz e Julio Trecenti"
+categories: ["API", "purrr", "httr", "Web Scraping"]
+title: "Acessando APIs com R: Exemplos com a PokéAPI!"
+date: "2021-11-29"
+image: "API-drake-featured.jpeg"
+toc: true
+---
+
+::: callout-tip
+Esse post foi origalmente publicado no [blog da Curso-R](https://blog.curso-r.com/posts/2021-11-29-api-pokemon/).
+:::
+
+
+## Introdução
+
+Olá!
+
+Recentemente eu (Bea) andei explorando algumas APIs, com ajuda do Julio, que ficou respondendo as dúvidas!
+No processo aprendemos muitas coisas legais e resolvemos compartilhar com vocês através de alguns posts.
+
+O tema dá muito pano pra manga, pois **usamos código em R** para automatizar quase tudo!
+Nas últimas semanas, aprendemos a trabalhar com o GitHub (Ex: criar e configurar repositórios), Zoom (criar chamadas), Google Drive e Sheets (estruturar e editar arquivos), e Google Classroom (criar e configurar salas de aula).
+
+Tudo isso usando muito `tidyverse`!
+
+<img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy-downsized-large.gif" width="50%" style="display: block; margin: auto;"/>
+
+Mas calma!!
+Vamos começar do começo.
+Neste primeiro post, vamos falar sobre o que é uma API e mostrar um exemplo básico.
+
+## O que é uma API?
+
+API é uma sigla para *Application Programming Interface*, ou seja, uma interface de computação.
+Sem usar palavras complicadas, uma explicação que está nos [slides do curso de Deploy!](https://curso-r.github.io/main-deploy/docs/index.html#12)
+é:
+
+> Uma API não deixa de ser um "link" que aceita parâmetros e retorna dados.
+> As APIs também são abordadas no [curso de Web Scraping](https://curso-r.github.io/main-web-scraping/slides/02-introducao-ao-ws.html#8)!
+
+## PokéAPI
+
+Um exemplo de acesso à API é buscando na [PokéAPI](https://pokeapi.co/), uma API para buscar Pokémons!
+E com tantas possibilidades interessantes, porque buscar justamente Pokémons?
+Essa API tem fins educacionais, portanto é um ótimo lugar para começar a praticar o tema.
+
+<img src="https://media.giphy.com/media/giEBaPNKEtjZtK43oX/giphy.gif" width="30%" style="display: block; margin: auto;"/>
+
+O primeiro passo para acessar qualquer API é procurar uma documentação.
+
+[Na documentação do PokéAPI](https://pokeapi.co/docs/v2), é mostrado que devemos usar o seguinte padrão:
+
+    GET https://pokeapi.co/api/v2/{endpoint}/
+
+Isso significa que devemos fazer uma requisição `GET` (apenas para consultar dados), começar com a *url base* (é a parte que não muda: `https://pokeapi.co/api/v2/`) e complementar com os parâmetros da busca (que chamamos de *endpoint*).
+
+O pacote [`httr`](https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html) é muito usado para acessar APIs através do R, e disponibiliza uma função chamada `httr::GET()` para fazer esse tipo de acesso!
+
+Por exemplo:
+
+``` r
+# url_base - nunca muda na mesma API
+url_base <- "https://pokeapi.co/api/v2"      
+# endpoint - é o que muda o resultado
+endpoint <- "/pokemon/ditto"                 
+# precisamos colar os textos para criar o link
+u_pokemon <- paste0(url_base, endpoint) 
+# ver como o texto ficou colado
+# u_pokemon 
+# > "https://pokeapi.co/api/v2/pokemon/ditto"
+# fazer a requisição do tipo GET
+r_pokemon <- httr::GET(u_pokemon) 
+r_pokemon
+```
+
+    Response [https://pokeapi.co/api/v2/pokemon/ditto]
+      Date: 2021-12-06 13:16
+      Status: 200
+      Content-Type: application/json; charset=utf-8
+      Size: 22.3 kB
+
+Esse resultado é um pouco diferente do que estamos acostumados!
+O que é mais importante de reparar é o status, pois indica se a requisição foi bem sucedida.
+`Status: 200` significa que deu certo!
+:)
+
+As APIs costumam retornar arquivos `JSON`, e para acessar o conteúdo que foi obtido podemos usar a função `httr::content()`:
+
+``` r
+c_pokemon <- httr::content(r_pokemon)
+```
+
+Ao salvar o resultado da função em um objeto, podemos ver que agora a classe dele é uma lista:
+
+``` r
+class(c_pokemon)
+```
+
+    [1] "list"
+
+Podemos manipular essa lista com funções do `tidyverse` para obter uma tabela, assim fica mais fácil de trabalhar.
+Mas atenção, da seguinte forma ela ainda não está no formato `tidy`!
+[Saiba mais o que são dados tidy no material do curso de Faxina de Dados](https://curso-r.github.io/main-faxina/slides/02-introducao-faxina.html#1).
+
+``` r
+library(magrittr)
+dados_ditto <- c_pokemon %>%
+  purrr::map(unlist, recursive = TRUE) %>%
+  purrr::map(tibble::enframe) %>%
+  purrr::map_dfr(
+    ~dplyr::mutate(.x, dplyr::across(.fns = as.character)), 
+    .id = "id"
+  )
+dplyr::glimpse(dados_ditto)
+```
+
+    Rows: 396
+    Columns: 3
+    $ id    <chr> "abilities", "abilities", "abilities", "abilities", "abilities",…
+    $ name  <chr> "ability.name", "ability.url", "is_hidden", "slot", "ability.nam…
+    $ value <chr> "limber", "https://pokeapi.co/api/v2/ability/7/", "FALSE", "1", …
+
+<img src="https://media.giphy.com/media/pbGSpeX860JxK/giphy.gif" width="50%" style="display: block; margin: auto;"/>
+
+Agora você pode usar o que aprendemos para pesquisar outros Pokémons!
+Quem sabe explorar a teoria de que o Ditto é um clone falho do Mew?
+
+``` r
+dados_mew <- "https://pokeapi.co/api/v2/pokemon/mew" %>% 
+  httr::GET() %>% 
+  httr::content() %>%
+  purrr::map(unlist, recursive = TRUE) %>%
+  purrr::map(tibble::enframe) %>%
+  purrr::map_dfr(
+    ~dplyr::mutate(.x, dplyr::across(.fns = as.character)), 
+    .id = "id"
+  )
+dplyr::glimpse(dados_mew)
+```
+
+    Rows: 10,083
+    Columns: 3
+    $ id    <chr> "abilities", "abilities", "abilities", "abilities", "base_experi…
+    $ name  <chr> "ability.name", "ability.url", "is_hidden", "slot", "1", "name",…
+    $ value <chr> "synchronize", "https://pokeapi.co/api/v2/ability/28/", "FALSE",…
+
+Saiba mais sobre a teoria aqui:
+
+<center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UQbCZ2cGj4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+</center>
+
+É isso!
+Dúvidas, sugestões e críticas, mande aqui nos comentários.
+**Comentem também quais exemplos, dentre os que foram listados, vocês gostariam de saber mais!!**
+
+Até a próxima!
+
+## Você pode se interessar também por...
+
+-   [Slides do curso de Deploy](https://curso-r.github.io/main-deploy/docs/index.html#12)
+
+-   [Slides do curso de Web Scraping sobre APIs](https://curso-r.github.io/main-web-scraping/slides/02-introducao-ao-ws.html#8)
+
+-   [Slides do curso de Faxina sobre tidy data](https://curso-r.github.io/main-faxina/slides/02-introducao-faxina.html#1)
+
+-   Pacote [`httr`](https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html)
