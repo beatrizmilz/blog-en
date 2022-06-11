@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/index.html</loc>
-    <lastmod>2022-06-11T22:13:02.024Z</lastmod>
+    <lastmod>2022-06-11T22:16:30.705Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/about.html</loc>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/posts/pt.html</loc>
-    <lastmod>2022-06-11T22:11:18.385Z</lastmod>
+    <lastmod>2022-06-11T22:15:56.579Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/en.html</loc>
@@ -75,5 +75,9 @@
   <url>
     <loc>https://beamilz.com/posts/2022-03-18-onedrive/pt/index.html</loc>
     <lastmod>2022-06-11T22:13:01.125Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2022-03-08-googlesheets4/pt/index.html</loc>
+    <lastmod>2022-06-11T22:15:59.932Z</lastmod>
   </url>
 </urlset>
