@@ -1,0 +1,138 @@
+---
+title: "Pacote dados: bases em português para praticar e ensinar"
+subtitle: "Quer saber como acessar várias bases de dados em Português com R? Post publicado no blog da Curso-R."
+author: "Beatriz Milz"
+date: "2022-04-06"
+categories: ["Tutorial", "Teaching", "Datasets", "Data import", "R Packages"]
+image: "dados-hex-featured.png"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  collapse = TRUE
+)
+```
+
+
+
+::: callout-tip
+Esse post foi origalmente publicado no [blog da Curso-R](https://blog.curso-r.com/posts/2022-04-06-pacote-dados/).
+:::
+
+
+
+## Introdução
+
+O [pacote dados](https://cienciadedatos.github.io/dados/) disponibiliza a tradução de várias bases de dados que são originalmente disponíveis em outros pacotes de R.
+Recentemente o [pacote](https://cienciadedatos.github.io/dados/) foi disponibilizado no CRAN!
+Esse post foi escrito para que as pessoas conheçam mais sobre ele!
+
+## Pacote dados
+
+```{r echo=FALSE, fig.align="center", out.width="30%"}
+knitr::include_graphics("https://cienciadedatos.github.io/dados/reference/figures/dados-hex.png")
+```
+
+O [pacote dados](https://cienciadedatos.github.io/dados/) disponibiliza a tradução de várias bases de dados que são originalmente disponíveis em outros pacotes de R.
+
+O pacote começou a ser desenvolvido em Junho de 2020, e é um irmão do pacote [datos](https://cienciadedatos.github.io/datos/).
+O datos foi desenvolvido para ser usado na tradução do livro [R para Ciência de Dados](https://es.r4ds.hadley.nz/) em espanhol, feita volutariamente pela comunidade Latino-Americana de R.
+
+Um destaque importantíssimo é que as traduções do pacote dados foram feitas voluntariamente por pessoas da comunidade Latino-Americana de R, contando com a colaboração de pessoas que fazem parte da [Latin-R](https://latin-r.com/), [R-Ladies](https://rladies.org/) e [Curso-R](https://curso-r.com/material/), sendo elas: [Riva Quiroga](https://twitter.com/rivaquiroga), [Sara Mortara](https://twitter.com/MortaraSara), [Beatriz Milz](https://twitter.com/BeaMilz) (professora na Curso-R), [Andrea Sánchez-Tapia](https://twitter.com/SanchezTapiaA), [Alejandra Andrea Tapia Silva](https://twitter.com/aleants), Beatriz Maurer Costa, [Jean Prado](https://twitter.com/jeangprado), [Renata Hirota](https://twitter.com/renata_mh), [William Amorim](https://twitter.com/wamorim_) (professor na Curso-R), e [Emmanuelle Rodrigues Nunes](https://www.linkedin.com/in/emmanuellernunes/).
+
+Alguns dos objetivos do pacote dados são:
+
+-   Disponibilizar bases de dados em português utilizadas para praticar e ensinar R (como em tutoriais, cursos, textos em blogs, livros).
+    Por exemplo, estão disponíveis lá todas as bases usadas no livro [R for Data Science](https://r4ds.had.co.nz/), entre outras;
+
+-   Incentivar pessoas a ser tornarem desenvolvedoras em R (várias pessoas que participaram do desenvolvimento do pacote e realizaram traduções não tinham experiência anterior com colaboração via GitHub e desenvolvimento de pacotes em R, por exemplo);
+
+-   Colaborar com a diminuição da lacuna linguística em materiais usados no ensino e prática de R.
+
+O pacote está **disponível no CRAN** e pode ser instalado utilizando o seguinte código:
+
+``` r
+install.packages("dados")
+```
+
+Para que as bases fiquem disponíveis, utilize a função `library(dados)` ou use com `dados::nome_da_base`.
+
+Todas as bases possuem a documentação traduzida também.
+Você pode conferir na aba Help, usando `?dados::nome_da_base` ou conferindo [na documentação online do pacote](https://cienciadedatos.github.io/dados/reference/index.html).
+
+Existem bases bem legais disponíveis, como:
+
+### Star Wars <img src="https://dplyr.tidyverse.org/logo.png" align="right" width="100px"/>
+
+-   A base de dados de personagens da franquia Star Wars, disponibilizada originalmente no pacote [dplyr](https://dplyr.tidyverse.org/reference/starwars.html). Por isso, é esperado que seja bastante útil em exemplos de manipulação de dados. Porém podemos criar visualizações bem legais também usando esses dados! Aliás, essa é a base utilizada no [desafio 3](https://blog.curso-r.com/posts/2022-04-05-desafio-3/), focado em visualização de dados, com o objetivo de replicar esse gráfico:
+
+```{r echo=FALSE, fig.align='center', out.width="95%"}
+knitr::include_graphics("https://blog.curso-r.com/images/posts/conteudo/desafio-3/grafico.png")
+```
+
+Espie a base por aqui:
+
+```{r}
+dplyr::glimpse(dados::dados_starwars)
+```
+
+### Pinguins <img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/logo.png" align="right" width="100px"/>
+
+A [base dos pinguins](https://allisonhorst.github.io/palmerpenguins/) foi disponibilizada com o objetivo de ser uma alternativa à base de dados `iris`.
+Podemos utilizar essa base para ensinar e praticar principalmente temas de visualização e manipulação de dados.
+
+Algo muito legal são as [vignettes do pacote original](https://allisonhorst.github.io/palmerpenguins/articles/examples.html), que apresentam tutoriais sobre como fazer visualizações interessantes com os dados.
+Que tal experimentar recriá-las utilizando os dados em português?
+
+Espie a base por aqui:
+
+```{r}
+dplyr::glimpse(dados::pinguins)
+```
+
+### Filmes da Pixar <img src="https://erictleung.com/pixarfilms/reference/figures/logo.png" align="right" width="100px"/>
+
+O pacote [pixarfilms](https://erictleung.com/pixarfilms/) apresenta algumas bases de dados com informações sobre filmes da Pixar.
+Todas as bases foram traduzidas e disponibilizadas no pacote dados!
+Essas bases podem ser utilizadas para treinar manipulação e visualização de dados.
+Na minha opinião, essas bases são super interessantes para ensinar os concentos dos [joins do dplyr](https://dplyr.tidyverse.org/reference/mutate-joins.html)!
+
+O post 'Pixar: Uma História de dados', foi escrito por Fernando Barbalho, e publicado no Blog da Escola de Dados, utilizando os dados deste pacote.
+[No meu blog há uma versão do post com os códigos para gerar todas as visualizações](https://beatrizmilz.com/blog/2021-07-01-pixar-uma-historia-de-dados/).
+
+Espie as bases por aqui:
+
+```{r}
+dplyr::glimpse(dados::pixar_filmes)
+dplyr::glimpse(dados::pixar_avalicao_publico)
+dplyr::glimpse(dados::pixar_bilheteria)
+dplyr::glimpse(dados::pixar_equipe)
+dplyr::glimpse(dados::pixar_generos)
+dplyr::glimpse(dados::pixar_oscars)
+```
+
+## Todas as bases disponíveis
+
+Veja o nome e a descrição de todas as bases disponíveis:
+
+```{r echo=FALSE}
+bases <- data(package='dados')
+
+tibble::as_tibble(bases$results) |> 
+
+  dplyr::mutate(Nome = stringr::str_remove(Item, " \\(data\\)")) |> 
+ dplyr::select(Nome, `Descrição` = Title) |> 
+  knitr::kable() 
+  
+```
+
+## Conclusão
+
+Espero que o post tenha sido uma boa introdução ao [pacote dados](https://cienciadedatos.github.io/dados/), seja você uma pessoa que deseja ensinar ou praticar R.
+
+Caso tenha sugestões de melhoria nas traduções, [escreva uma issue](https://github.com/cienciadedatos/dados/issues) no repositório do pacote!
+
+Até a próxima!
