@@ -16,13 +16,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-
-
 ::: callout-tip
 Esse post foi origalmente publicado no [blog da Curso-R](https://blog.curso-r.com/posts/2022-04-06-pacote-dados/).
 :::
-
-
 
 ## Introdução
 
