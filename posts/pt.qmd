@@ -9,7 +9,7 @@ listing:
     categories: cloud
     sort-ui: true
     filter-ui: true
-    page-size: 6
+    page-size: 10
 page-layout: full
 title-block-banner: false
 comments: false
