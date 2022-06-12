@@ -2,7 +2,7 @@
 subtitle: "Segundo post sobre acesso à APIs."
 draft: FALSE
 author: "Beatriz Milz"
-# categories: ["API", "purrr", "httr", "Web Scraping", "Git", "GitHub"]
+categories: ["API", "purrr", "httr", "Web Scraping", "Git", "GitHub"]
 title: "Acessando APIs com R: GitHub - Parte 1"
 date: "2022-02-19"
 image: "octocat-featured.png"
@@ -24,7 +24,6 @@ knitr::opts_chunk$set(
 ::: callout-tip
 Esse post foi origalmente publicado no [blog da Curso-R](https://blog.curso-r.com/posts/2022-02-19-api-github-1/).
 :::
-
 
 ## Introdução
 

@@ -1,0 +1,496 @@
+---
+title: "Criando mapas com os pacotes tidyverse e geobr"
+subtitle: "Utilizando dados sobre coleta e tratamento de esgoto no Estado De São Paulo"
+author: "Beatriz Milz"
+date: '2020-07-27'
+categories: ["Reproducibility", "Maps"]
+bibliography: packages.bib
+image: "featured.png"
+toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	fig.align = "center",
+	message = FALSE,
+	warning = FALSE,
+	out.width = "100%"
+)
+```
+
+Como eu estou meses sem postar nada no blog, resolvi postar um código adaptado, referente a um projeto final que realizei para a disciplina ["FLS6397 - Introdução à Análise de Dados, Programação e Visualização para as Ciências Sociais"](https://jonnyphillips.github.io/Ciencia_de_Dados/).
+A disciplina ocorreu no primeiro semestre de 2020, na FFLCH/USP (porém devido à pandemia, a maior parte das aulas foi online).
+Na [página da disciplina](https://jonnyphillips.github.io/Ciencia_de_Dados/), está disponível tutoriais com todo o conteúdo da disciplina, de graça e aberto para todes!
+
+As instruções para a realização do projeto estão disponíveis na [página da disciplina](https://jonnyphillips.github.io/Ciencia_de_Dados/projeto.html).
+
+## Dados utilizados
+
+-   **Dados de Saneamento:** A Companhia Ambiental do Estado de São Paulo (CETESB)[^1] publica todos os anos o "[Relatório de Qualidade das Águas Interiores do Estado de São Paulo](https://cetesb.sp.gov.br/aguas-interiores/publicacoes-e-relatorios/)".
+    Desde o relatório referente ao ano de 2016, é publicado o **Apêndice C**, que contém **dados de saneamento por município** do Estado de São Paulo.
+    Os arquivos são disponibilizados em arquivo PDF, [e especificamente para o ano de 2016 é um arquivo PDF que não possibilita copiar as informações](https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2018/03/Ap%C3%AAndice-C-Dados-do-saneamento-b%C3%A1sico...-munic%C3%ADpios-paulistas-2016_17-04.pdf) (como uma imagem, por exemplo).
+    O relatório mais recente é referente ao ano de [2018](https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2019/10/Ap%C3%AAndice-C_Dados-de-Saneamento-por-Munic%C3%ADpio.pdf).
+
+-   **Dados shapefile dos municípios:** Foi utilizado o pacote `{geobr}` [@R-geobr], que possibilita acessar dados espaciais oficiais do Brasil.
+
+[^1]: https://cetesb.sp.gov.br/
+
+Neste post, irei focar em mostrar como abri os dados, e utilizando principalmente o `tidyverse` [@tidyverse2019] e o pacote `geobr` [@R-geobr], criei mapas com esses dados.
+
+## Pacotes necessários
+
+```{r message=FALSE, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+library(magrittr)
+library(geobr)
+# install.packages("pdftables")
+library(pdftables)
+library(readr)
+library(stringr)
+library(abjutils)
+library(ggspatial)
+library(tibble)
+library(knitr)
+library(sf)
+```
+
+::: {.alert .alert-primary role="alert"}
+**O que é `::` ?**
+
+Nos códigos abaixo, muitas vezes me refiro à uma função utilizando o formato `pacote::funcao()`, sendo que o que vem antes dos `::` é o nome do pacote em qual à função pertence, e depois dos `::` é o nome da função que quero usar.
+
+Isso é útil pois:
+
+1.  Caso o pacote não esteja carregado com a função `library(pacote)`, ainda sim o R entenderá qual função você está se referindo, e executará o código.
+
+2.  Caso você se refira à uma função apenas pelo nome (sem considerar o `::`), em uma situação onde você carregou pacotes diferentes que possuem funções com nome igual, a função do pacote carregado por último será utilizada.
+    Isso pode causar a execução de uma função indesejada.
+    Portanto, utilizar o `::` ajuda a garantir a utilização da função desejada.
+:::
+
+## Abrir e arrumar as bases brutas
+
+### Dados de Saneamento
+
+O primeiro passo é fazer o download do arquivo PDF referente ao Apêndice C e converter em CSV.
+A função `download.file()` possibilita fazer download de arquivos diretamente do R.
+
+```{r eval=FALSE, include=TRUE}
+# Link do relatório
+url <-
+  "https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2019/10/Ap%C3%AAndice-C_Dados-de-Saneamento-por-Munic%C3%ADpio.pdf" 
+
+
+#Fazer o download do arquivo PDF
+
+download.file(url, # URL do arquivo a ser baixado
+              destfile = "dados/apendice_c_2018.pdf", # Informar onde quer que seja salvo, e com qual nome e extensão 
+              method = "curl" # Método utilizado para o download
+              )
+```
+
+Para fazer a conversão, utilizei o pacote `{pdftables}` [@R-pdftables], que possibilita converter o arquivo PDF para CSV diretamente do R, através da API (e omiti a minha chave da API no código):
+
+::: {.alert .alert-primary role="alert"}
+**O que é API?**
+
+É a sigla para "Application Programming Interfaces", ou em português, "Interface de programação de aplicações".
+
+Neste exemplo, caso não fosse utilizar a API, seria necessário realizar o upload do arquivo PDF no site [PDFTables](https://pdftables.com/), e depois baixar o arquivo convertido.
+
+Para utilizar a API, é necessário fazer um cadastro no site, e na aba [API](https://pdftables.com/pdf-to-excel-api) é disponibilizado a chave da API para utilizá-la.
+Posteriormente, pode-se utilizar a função `pdftables::convert_pdf()` para fazer a conversão diretamente do R.
+Isso é muito útil quando temos uma grande quantidade de arquivos, e também para deixar registrado a etapa realizada.
+
+Caso queira saber mais sobre APIs, leia essa [página do material](http://material.curso-r.com/api/) da [Curso-R](http://curso-r.com/).
+:::
+
+```{r eval=FALSE, include=TRUE}
+# Converter o arquivo PDF em CSV. Utilizei a API que obtive no site, mas para compilar, omiti a API key.
+
+pdftables::convert_pdf("dados/apendice_c_2018.pdf",
+                       # Arquivo para converter
+                       output_file = "dados/apendice_c_2018.csv",
+                       #  Informar onde quer o arquivo gerado
+                       # seja salvo, e com qual nome e extensão
+                       api_key = "..." # Chave da API, gerada através do site.
+                       )
+```
+
+A tabela convertida em `.csv` pode ser acessada [neste link](https://beatrizmilz.github.io/2020-FLS6397/projeto_final/dados/apendice_c_2018.csv).
+O próximo passo é carregar a base, usando a função `readr::read_csv()`:
+
+```{r}
+
+apendice_c_2018 <-
+  readr::read_csv(
+    "dados/apendice_c_2018.csv", # Qual arquivo CSV quero carregar
+    col_names = c(
+      # define o nome das colunas
+      "ugrhi",
+      "municipio",
+      "consessao",
+      "pop_urbana",
+      "atendimento_coleta_porc",
+      "atendimento_tratamento_porc",
+      "eficiencia",
+      "carga_poluidora_potencial",
+      "carga_poluidora_remancescente",
+      "ictem",
+      "corpo_receptor"
+    ),
+    locale = readr::locale(encoding = "ISO-8859-1"),
+    # encoding dos dados
+    skip = 5 # Quantas linhas para pular no CSV antes de começar a ler os dados.
+  )
+
+```
+
+::: {.alert .alert-primary role="alert"}
+**Encoding?**
+
+Uma das informações importantes que utilizei na função para ler os dados no R, no código acima, é o **Encoding**.
+O Encoding está relacionado à codificação dos caracteres.
+Você já carregou uma base de dados onde os caracteres apareceram desconfigurados, como na imagem abaixo?
+Provavelmente era um erro de Encoding!
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://beatrizmilz.com/img/encoding-error.JPG")
+```
+
+Ao carregar um arquivo, é util saber em qual encoding ele foi salvo.
+
+O recomendado ao salvar um arquivo é utilizar o encoding **UTF-8**.[^2]
+:::
+
+[^2]: https://support.rstudio.com/hc/en-us/articles/200532197-Character-Encoding
+
+-   A base deve conter 645 linhas, referente ao número de municípios no estado de São Paulo[^3]:
+
+[^3]: https://www.al.sp.gov.br/documentacao/municipios-paulistas/
+
+```{r}
+nrow(apendice_c_2018) # consulta quantas linhas tem na base
+```
+
+A base contém mais linhas do que municípios.
+O código abaixo retira linhas que apenas contém NA, e linhas que não apresentam dados dos municípios:
+
+```{r}
+apendice_c_filtrado <- apendice_c_2018 %>%
+  # Filtrar linhas que não contém nome de municípios
+  dplyr::filter(!municipio %in% c("Estado de São Paulo", "Município", NA, "MUNICÍPIO")) 
+```
+
+Agora a base tem `r nrow(apendice_c_filtrado)` linhas, o que corresponde aos 645 municípios do estado de SP.
+É importante também verificar o tipo de dados nas colunas:
+
+```{r}
+tibble::glimpse(apendice_c_filtrado)
+```
+
+Algumas colunas são de dados numéricos mas que foram carregadas como texto (`<chr>`), portanto devem ser convertidas para o tipo correto (possível com a função `dplyr::mutate()`:
+
+```{r}
+apendice_c <- apendice_c_filtrado %>%
+  dplyr::mutate(
+    pop_urbana = as.double(pop_urbana) , 
+    atendimento_coleta_porc = as.double(atendimento_coleta_porc),
+    atendimento_tratamento_porc = as.double(atendimento_tratamento_porc),
+    eficiencia = as.double(eficiencia),
+    
+    # As conversões abaixo tem uma etapa a mais, devido à padronização diferente utilizada na base, 
+    #com o ponto e a vírgula para representar as casas decimais:
+    carga_poluidora_potencial =  stringr::str_replace_all(carga_poluidora_potencial, "\\.", "") %>%
+      as.double(),
+    
+    carga_poluidora_remancescente =  stringr::str_replace_all(carga_poluidora_remancescente, "\\.", "") %>%
+      as.double(),
+    ictem =  stringr::str_replace_all(ictem, ",", "\\.") %>% as.double()
+    
+  )
+```
+
+Agora podemos observar novamente o tipo de dados nas colunas, e verificar se todos os dados estão no formato ideal para a análise:
+
+```{r}
+tibble::glimpse(apendice_c)
+```
+
+Agora a base está pronta para uso!
+
+### Dados shapefile dos município
+
+Os dados foram obtidos com o pacote `geobr`:
+
+```{r message=FALSE, warning=FALSE, results='hide', error=FALSE}
+# Lê a base de dados espaciais (do tipo Shapefile) dos municípios do Estado de São Paulo,
+# no ano de 2018, segundo o IBGE.
+# Os dados salvos são da classe Simple Feature
+
+municipios_sp <- geobr::read_municipality("SP", 2018)
+```
+
+::: {.alert .alert-primary role="alert"}
+O pacote `geobr` [@R-geobr] é um pacote que disponibiliza funções para realizar o download de diversas bases de dados espaciais oficiais do Brasil.
+Você pode saber mais no [repositório do pacote no GitHub](https://github.com/ipeaGIT/geobr).
+
+O pacote `sf` (Simple Features for R) [@R-sf; @sf2018] possibilita trabalhar com essas bases de dados espaciais.
+Gosto muito da seguinte ilustação da [Allison Horst](https://github.com/allisonhorst/stats-illustrations) sobre esse pacote:
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork-PT/sf_pt.png")
+```
+:::
+
+### Lista de UGRHIS
+
+No projeto, defini como área de estudo os municípios das seguintes Unidades de Gerenciamento de Recursos Hídricos (**UGRHI**): Paraíba do Sul, Litoral Norte, Piracicaba/Capivari/Jundiaí, Alto Tietê, Baixada Santista e Tietê/Sorocaba.
+Essas UGRHIs foram escolhidas por estarem totalmente ou marjoritariamente no território da Macrometrópole Paulista (**MMP**) (considerando a delimitação do DAEE[^4]).
+
+[^4]: Plano Diretor de Aproveitamento dos Recursos Hídricos para a Macrometrópole Paulista - http://www.daee.sp.gov.br/
+
+Criei manualmente uma tibble com o número e nome das UGRHIs que farão parte da análise:
+
+```{r}
+ugrhis <- tibble::tibble(
+  ugrhi = c("2",
+            "3",
+            "5",
+            "6",
+            "7",
+            "10"),
+  nome_ugrhi = c(
+    " Paraíba do Sul",
+    " Litoral Norte",
+    " Piracicaba/Capivari/Jundiaí",
+    " Alto Tietê",
+    " Baixada Santista",
+    " Tietê/Sorocaba"
+  )
+)
+
+```
+
+## Unir as bases !
+
+A base da CETESB não possui o código de município do IBGE (o ideal para fazer o Join).
+Neste caso, podemos usar o nome do município, porém é preciso padronizar os nomes em relação à maiúsculas/minúsculas, acentos, presença de traços, entre outros.
+A maior diferença encontrada foi na grafia do nome do município "São Luiz do Paraitinga": segundo o site da Assembléia Legislativa do Estado de São Paulo, e o site do município, Luiz é escrito com Z, porém a base da CETESB utiliza a forma incorreta: "São Luís do Paraitinga".
+Essas inconsistências foram corrigidas com código abaixo, usando principalmente funções dos pacotes `stringr`, `dplyr` e `abjutils`:
+
+```{r}
+municipios_sp_limpo <-
+  municipios_sp %>% dplyr::mutate(
+    nome_muni = stringr::str_to_lower(name_muni),
+    nome_muni = stringr::str_replace_all(nome_muni, "-", " "),
+    nome_muni = abjutils::rm_accent(nome_muni)
+  )
+
+apendice_c_limpo <- apendice_c %>% dplyr::mutate(
+  nome_muni =  dplyr::case_when(
+    municipio == "São Luís do Paraitinga" ~
+      "São Luiz do Paraitinga",
+    TRUE ~ municipio
+  ),
+  nome_muni = stringr::str_to_lower(nome_muni),
+  nome_muni = stringr::str_replace_all(nome_muni, "-", " "),
+  nome_muni = abjutils::rm_accent(nome_muni))
+```
+
+-   Após arrumar a base, podemos unir com as funções do tipo `join_*`, do pacote `dplyr` (Sim, é possível usar as funções do tipo `join_*` com objetos de classe Simple Feature, porém use-os como o primeiro argumento ao usar a função):
+
+```{r}
+apendice_c_geo <-
+  dplyr::full_join(municipios_sp_limpo, apendice_c_limpo) %>%
+  dplyr::left_join(ugrhis)
+
+apendice_c_geo %>% nrow() # Confirmando se a nova base tem o número de municípios do estado.
+```
+
+Ao unir as bases, temos colunas duplicadas ou desnecessárias, então é interessante removê-las.
+Após este procedimento, a base será filtrada para que apenas municípios que fazem parte das UGRHIs analisadas estejam na tibble gerada.
+
+Além disso, o valor de porcentagem de atendimento de tratamento de esgoto é um valor de porcentagem em relação ao volume de esgoto **coletado**.
+Por exemplo, o município de Bertioga, segundo os dados da CETESB para 2018, apresenta uma porcentagem de coleta de apenas `r dplyr::pull(apendice_c_limpo[apendice_c_limpo$municipio == "Bertioga", 5])` % do esgoto gerado, e uma porcentagem de `r dplyr::pull(apendice_c_limpo[apendice_c_limpo$municipio == "Bertioga", 6])` % do esgoto tratado.
+Isso significa que `r dplyr::pull(apendice_c_limpo[apendice_c_limpo$municipio == "Bertioga", 6])` % do esgoto coletado é tratado, e não mostra a porcentagem de todo esgoto gerado que foi tratado.
+Para isso, criei também uma coluna (chamada `porc_real_trat`) onde é feito esse cálculo (utilizando a função mutate).
+
+```{r}
+saneamento <- apendice_c_geo %>%
+  dplyr::select(-nome_muni,-municipio,-code_state) %>% # Remove colunas duplicadas
+  dplyr::filter(ugrhi %in% ugrhis$ugrhi) %>% # Filtra a coluna UGRHI. Apenas as UGRHIS que estão na tibble
+                                            # criada, permanecerão.
+  dplyr::mutate(porc_real_trat = atendimento_tratamento_porc * atendimento_coleta_porc / 100) # Cria uma nova
+# coluna, com o cálculo do número real de porcentagem de tratamento de esgoto.
+```
+
+A base final que usaremos na análise contém dados de `r nrow(saneamento)` municípios, que fazem parte de `r nrow(ugrhis)` UGRHIs diferentes.
+A soma da população urbana destes municípios é de `r round(sum(saneamento$pop_urbana) / 1000000, 2)` milhões de habitantes, o que corresponde à `r round(sum(saneamento$pop_urbana) * 100 / sum(apendice_c_geo$pop_urbana), 1)` % da população urbana do Estado de São Paulo (segundo os dados da base completa utilizada nessa análise).
+
+## Visualizando os dados
+
+Para evitar duplicação de código, o código abaixo é referente ao estilo do mapa, que aplicarei em todos os mapas seguintes.
+
+```{r}
+tema_mapa <-
+  theme_bw() + # Escolhe o tema. Eu gosto do theme_bw() por ser bem simples/limpo
+  
+  # Os códigos abaixo são referentes à estética do tema,
+  # como o tamanho da fonte, direção do texto,
+  # linhas ao fundo, etc.
+  
+  theme(
+    axis.text.y = element_text(
+      angle = 90,
+      hjust = 0.5,
+      size = 8
+    ),
+    axis.text.x = element_text(size = 8),
+    axis.title.y = element_text(size = rel(0.8)),
+    axis.title.x = element_text(size = rel(0.8)),
+    panel.grid.major = element_line(
+      color = gray(0.9),
+      linetype = "dashed",
+      size = 0.1
+    ),
+    panel.background = element_rect(fill = "white") +
+      annotation_scale(location = "br", width_hint = 0.30)
+  )
+```
+
+Com a função `geom_sf()`, é possível criar mapas utilizando o pacote `ggplot2` e objetos de classe Simple Feature (sf).
+Assim podemos usar as nossas habilidades de criar gráficos lindos no `ggplot2`, e criar mapas também usando as funções que já conhecemos.
+
+```{r}
+class(saneamento) # Função class() apresenta a classe do objeto. 
+```
+
+O mapa abaixo apresenta os municípios que fazem parte da análise, segundo a UGRHI, e a localização destes municípios no Estado de São Paulo.
+Podemos usar mais de uma camada `geom_sf()` no mesmo mapa, da mesma forma que fazemos com o `ggplot2`:
+
+```{r mapa-area-estudo}
+saneamento %>% # Base de dados usada
+  ggplot() + # Inicia o gráfico ggplot
+  geom_sf(data = apendice_c_geo,
+          # Camada do mapa da base completa (Estado SP)
+          alpha = .9,
+          color = NA) +
+  geom_sf(aes(fill = nome_ugrhi)) + # Camada do mapa da base saneamento
+  # Adiciona Título e Legendas
+  labs(fill = "UGRHI",
+       title = "Municípios que fazem parte da análise, segundo a UGRHI") +
+  # Adiciona o Norte Geográfico
+  annotation_north_arrow(
+    location = "br",
+    which_north = "true",
+    height = unit(1, "cm"),
+    width = unit(1, "cm"),
+    pad_x = unit(0.1, "in"),
+    pad_y = unit(0.1, "in"),
+    style = north_arrow_fancy_orienteering
+  ) +
+  ggspatial::annotation_scale() +
+  # Adiciona o tema criado anteriormente
+  tema_mapa 
+
+```
+
+O mapa abaixo apresenta a porcentagem de atendimento de coleta de esgoto, por município:
+
+```{r mapa-coleta}
+saneamento %>%
+  ggplot() +
+  geom_sf(aes(fill = atendimento_coleta_porc)) +
+  scale_fill_viridis_c(direction = -1, limits = c(0, 100)) + # Escala de cores
+  labs(fill = "Porcentagem de \natendimento de \ncoleta de esgoto",
+       title = "Porcentagem de atendimento de coleta de esgoto, por município",
+       subtitle = "Dados da CETESB, para o ano de 2018.") +
+  annotation_north_arrow(
+    location = "br",
+    which_north = "true",
+    height = unit(1, "cm"),
+    width = unit(1, "cm"),
+    pad_x = unit(0.1, "in"),
+    pad_y = unit(0.1, "in"),
+    style = north_arrow_fancy_orienteering
+  ) +
+  ggspatial::annotation_scale() +
+  tema_mapa 
+
+```
+
+O mapa abaixo apresenta a porcentagem de atendimento de tratamento de esgoto, considerando o total de esgoto coletado, por município:
+
+```{r mapa-tratamento, preview=TRUE }
+saneamento %>%
+  ggplot() +
+  geom_sf(aes(fill = porc_real_trat)) +
+  scale_fill_viridis_c(direction = -1, limits = c(0, 100)) +
+  labs(fill = "% de \natendimento de \ntratamento de esgoto ",
+       title = "Porcentagem de atendimento de tratamento de esgoto, por município",
+       subtitle = "Calculado a partir de dados da CETESB, para o ano de 2018.") +
+  annotation_north_arrow(
+    location = "br",
+    which_north = "true",
+    height = unit(1, "cm"),
+    width = unit(1, "cm"),
+    pad_x = unit(0.1, "in"),
+    pad_y = unit(0.1, "in"),
+    style = north_arrow_fancy_orienteering
+  ) +
+  ggspatial::annotation_scale() +
+  tema_mapa 
+```
+
+## Conclusão do post
+
+Neste post, mostrei um caminho reprodutível e realizado utilizando o R:
+
+-   Com o pacote `pdftables`, é possível converter tabelas que estão em arquivos PDF para arquivos CSV.
+
+-   Com o pacote `geobr`, é possível obter os arquivos shapefile para os mapas.
+
+-   Com as funções dos pacotes que fazem parte do `tidyverse`, diversas etapas da análise de dados são possíveis: ler os dados no R, limpeza de dados, manipulação dos dados, cruzamento de bases de dados, visualização, e outros.
+
+## Recomendações para a base da CETESB
+
+-   Adicionar uma explicação sobre cada coluna da base disponibilizada.
+
+-   Seria melhor disponibilizar também o arquivo `.CSV`.
+    Não disponibilizar PDFs digitalizados (Ex: relatório do ano de 2016).
+
+-   Seria útil adicionar, para os próximos relatórios, a coluna de código IBGE do município.
+    Isso facilitaria o cruzamento com outras bases de dados.
+
+-   Verificar a grafia do nome dos municípios (está inconsistente com a lista de municípios da Assembléia Legislativa do Estado de São Paulo[^5]): São Luiz do Paraitinga, Biritiba Mirim, Itaoca.
+
+[^5]: https://www.al.sp.gov.br/documentacao/municipios-paulistas/
+
+## Informações sobre a sessão do R e RStudio
+
+-   As informações abaixo são interessantes para registrar a versão do R utilizada, versões de pacotes, entre outros.
+
+```{r}
+sessioninfo::session_info()
+```
+
+O projeto foi realizado com R [@R-base], e os pacotes: `{abjutils}` [@R-abjutils], `{dplyr}` [@R-dplyr], `{geobr}` [@R-geobr], `{ggplot2}` [@R-ggplot2; @ggplot22016], `{ggspatial}` [@R-ggspatial], `{knitr}` [@R-knitr; @knitr2015], `{magrittr}` [@R-magrittr], `{pdftables}` [@R-pdftables], `{readr}` [@R-readr], `{rmarkdown}` [@R-rmarkdown; @rmarkdown2018], `{sf}` [@R-sf; @sf2018], `{stringr}` [@R-stringr], `{tibble}` [@R-tibble].
+
+## Muito obrigada!
+
+-   Ao Professor [Jonathan Phillips](https://jonnyphillips.github.io/Website/), pelo oferecimento da disciplina ["FLS6397 - Introdução à Análise de Dados, Programação e Visualização para as Ciências Sociais"](https://jonnyphillips.github.io/Ciencia_de_Dados/), por sua disponibilidade para tirar as dúvidas de todes, disponibilização de todo material da aula na internet de forma aberta e gratuita, e pelo esforço para que a disciplina fosse proveitosa mesmo considerando o contexto de pandemia.
+
+-   A [Vanessa Escolano Maso](https://bv.fapesp.br/pt/pesquisador/705683/vanessa-escolano-maso/), amiga, parceira na R-Ladies São Paulo e também na disciplina, pela companhia durante a disciplina e também por revisar e sugerir melhoras neste post.
+
+-   Ao [Maurício Vancine](https://twitter.com/mauriciovancine) pela sua sugestão via [twitter](https://twitter.com/mauriciovancine/status/1287852208449638402?s=20) de utilizar a função `ggspatial::annotation_scale()` para adicionar uma barra de escala nos gráficos.
+
+```{r echo=FALSE}
+knitr::write_bib(
+  c(.packages(),  "tidyverse", "rmarkdown"),
+  'packages.bib'
+)
+```
+

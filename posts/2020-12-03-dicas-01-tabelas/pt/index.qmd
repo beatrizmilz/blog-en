@@ -1,0 +1,156 @@
+---
+date: "2020-12-03"
+draft: false
+subtitle: "No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R.  Neste post, comentamos algumas dicas sobre elaboração de tabelas em relatórios."
+title: "Dicas para elaborar tabelas em R"
+image: "featured-photo.gif"
+toc: true
+categories: 
+  - "Tips"
+  - "Tables"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R.
+Leia os posts completos através dos links a seguir:
+
+-   [Dicas para criar **tabelas**](https://blog.curso-r.com/posts/2020-12-03-dicas-relatorios-r4ds1_tabelas/)
+
+-   [Dicas para **gráficos**](https://blog.curso-r.com/posts/2020-17-02-dicas-relatorios-r4ds1_graficos/)
+
+-   [Dicas para **relatórios**](https://blog.curso-r.com/posts/2021-03-15-dicas-relatorios-r4ds1_relatorios/)
+
+## 5 Dicas para formatar melhor suas tabelas
+
+Agora seguimos para as dicas!
+
+Primeiro vamos carregar o pacote `tidyverse`:
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+O próximo passo é carregar a base que utilizaremos como exemplo: a base de filmes do IMDB.
+
+```{r echo=TRUE,  message=FALSE, warning=FALSE}
+
+imdb <-
+  read_delim(
+    "https://raw.githubusercontent.com/curso-r/202010-r4ds-1/master/dados/imdb2.csv",
+    ";",
+    escape_double = FALSE,
+    trim_ws = TRUE
+  )
+
+```
+
+### Exemplo 1: Ordenar, formatar dinheiro e nomear as colunas
+
+No exemplo a seguir, primeiramente vamos selecionar as variáveis que representam o nome e o orçamento dos filmes (com a função `select()`).
+É interessante ordenar a tabela segundo alguma variável, para facilitar a leitura.
+No exemplo a seguir, vamos ordenar pelo orçamento de forma decrescente utilizando a função `arrange(desc(variavel))`.
+
+Vamos selecionar apenas as primeiras linhas da base, para facilitar a apresentação neste post (utilizando a função `head()`), e salvar em um objeto chamado `filmes_orcamento` (que usaremos nos códigos a seguir).
+
+```{r}
+filmes_orcamento <- imdb %>%
+  select(titulo, orcamento) %>%
+  arrange(desc(orcamento)) %>% 
+  head()
+
+filmes_orcamento
+```
+
+Para variáveis que representam dinheiro, é possível usar a função `scales::dollar()` para que os valores fiquem formatados como dinheiro (e fiquem mais legíveis!).
+
+```{r}
+filmes_orcamento %>% 
+  mutate(orcamento = scales::dollar(orcamento)) 
+```
+
+A tabela anteiror foi apresentada igual a um código que aparece como retorno no console do R, e isso não fica legal em um relatório.
+Existem diversas formas de apresentar tabelas, mas neste exemplo utilizaremos a função `knitr::kable()` [^1].
+Além disso, é comum que o nome das variáveis estejam escritas com letras minúsculas, sem acentuação, etc (por exemplo: `orcamento`).
+Para que a tabela fique melhor formatada, podemos renomear o nome das colunas usando o argumento `col.names` da função `knitr::kable()`, informando um vetor com os novos nomes para as colunas da tabela.
+
+[^1]: Outros pacotes que permitem criar tabelas são: [DT](https://rstudio.github.io/DT/), [reactable](https://glin.github.io/reactable/index.html), [flextable](https://davidgohel.github.io/flextable/articles/overview.html) e [kableExtra](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html).
+    [Essa página](https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/) também apresenta materiais muito ricos sobre elaboração de tabelas!
+
+```{r}
+imdb %>%
+  select(titulo, orcamento) %>%
+  arrange(desc(orcamento)) %>% 
+  mutate(orcamento = scales::dollar(orcamento)) %>%
+  head() %>%
+  knitr::kable(col.names = c("Título do filme", "Orçamento"))
+```
+
+A tabela ficou mais fácil de ser lida.
+O que achou do resultado?
+
+### Exemplo 2: Arredondar valores e ordenar categorias
+
+No exemplo a seguir, vamos calcular a nota média dos filmes na base do IMDB para cada classificação etária.
+Fazemos isso utilizando as funções `group_by()` e `summarise()`.
+
+Salvaremos o resultado em um objeto chamado `nota_classificacao` (que usaremos nos códigos a seguir).
+
+```{r message=FALSE, warning=FALSE}
+nota_classificacao <- imdb %>%
+  group_by(classificacao) %>%
+  summarise(nota_media_imdb = mean(nota_imdb, na.rm = TRUE)) 
+
+nota_classificacao
+```
+
+O primeiro ponto interessante para arrumar são os valores da variável `nota_media_imdb`, arredondando os valores para que não apareça as casas decimais.
+Para melhorar a apresentação, podemos usar a função `round()` (utilizada para arredondar números) junto com a função `mutate()` (que altera ou cria novas variáveis).
+Com o argumento `digits` da função `round()`, é possível definir quantas casas decimais você quer que o número tenha.
+
+```{r}
+nota_classificacao %>%
+  mutate(nota_media_imdb = round(nota_media_imdb, digits = 0))
+```
+
+Na base que estamos usando de exemplo, a variável `classificacao` é uma variável categórica do tipo `chr` (character), ou seja, um texto.
+Por padrão, a ordem utilizada é a alfabética (repare no resultado anterior, primeiro aparecem as classificações que começam com A, depois com L e por último a que começa com O).
+
+Para ordenar essa variável, precisamos transformar ela em um fator.
+Portanto, usaremos o pacote `forcats`, que faz parte do `tidyverse` e possui funções para trabalhar com fatores [^2].
+
+[^2]: Caso queira saber mais sobre fatores e o pacote `forcats`, recomendo consutar [este material da Curso-R](https://www.curso-r.com/material/forcats/).
+
+Usando a função `mutate()` com `fct_relevel()` (do pacote `forcats`), podemos alterar a ordem dos níveis desta variável, passando como argumento:
+
+-   a variável que queremos transformar em fator e alterar os seus níveis (os `levels`),
+
+-   um vetor com os níveis (`levels`), na ordem que desejamos.
+
+Posteriormente podemos ordenar a variável utilizando a função `arrange()`, e teremos como resultado a tabela ordenada de uma forma que faz mais sentido:
+
+```{r}
+nota_classificacao %>%
+  mutate(nota_media_imdb = round(nota_media_imdb, digits = 0)) %>%
+  mutate(classificacao = forcats::fct_relevel(
+    classificacao,
+    c("Livre",
+      "A partir de 13 anos",
+      "A partir de 18 anos",
+      "Outros")
+  )) %>%
+  arrange(classificacao) %>%
+  knitr::kable(col.names = c("Classificação etária",
+                             "Nota média no IMDB"))
+```
+
+## Conclusão
+
+Neste post conhecemos os trabalhos premiados no curso de [R para Ciência de dados I](https://www.curso-r.com/cursos/r4ds-1/) oferecido em outubro/2020, assim como algumas dicas que surgiram a partir do feedback dos trabalhos.
+
+Nos próximos posts apresentaremos mais algumas dicas sobre gráficos com o pacote `ggplot2` e relatórios com o pacote `R Markdown`.
+
+E caso você tenha interesse em saber mais sobre os cursos, a [página de cursos](https://www.curso-r.com/cursos/) foi atualizada, e as incrições para os cursos de 2021 já estão abertas!
+

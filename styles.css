@@ -120,4 +120,9 @@ div.quarto-about-trestles .about-entity .about-link:hover {
     color: var(--bs-blue);
 }
 
-
+.alert-primary {
+    color: var(--bs-gray-dark);
+    background-color: var(--bs-body-bg);
+    border-color: var(--bs-blue);
+    border-style: dashed;
+}

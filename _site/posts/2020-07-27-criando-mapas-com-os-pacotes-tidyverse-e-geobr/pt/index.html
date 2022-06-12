@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.515">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Beatriz Milz">
+<meta name="dcterms.date" content="2020-07-27">
+
+<title>Bea Milz - Criando mapas com os pacotes tidyverse e geobr</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags -->
+<title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - Criando mapas com os pacotes tidyverse e geobr">
+<meta property="og:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="og:image" content="https://beamilz.com/social.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - Criando mapas com os pacotes tidyverse e geobr">
+<meta name="twitter:image" content="https://beamilz.com/posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/featured.png">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="960">
+<meta name="twitter:image-width" content="1344">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
+        <li>
+    <a class="dropdown-item" href="../../../">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../talks/">Talks</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.com/blog/">My blog in Portuguese</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Criando mapas com os pacotes tidyverse e geobr</h1>
+            <p class="subtitle lead">Utilizando dados sobre coleta e tratamento de esgoto no Estado De São Paulo</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Reproducibility</div>
+                <div class="quarto-category">Maps</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 27, 2020</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#dados-utilizados" id="toc-dados-utilizados" class="nav-link active" data-scroll-target="#dados-utilizados">Dados utilizados</a></li>
+  <li><a href="#pacotes-necessários" id="toc-pacotes-necessários" class="nav-link" data-scroll-target="#pacotes-necessários">Pacotes necessários</a></li>
+  <li><a href="#abrir-e-arrumar-as-bases-brutas" id="toc-abrir-e-arrumar-as-bases-brutas" class="nav-link" data-scroll-target="#abrir-e-arrumar-as-bases-brutas">Abrir e arrumar as bases brutas</a>
+  <ul class="collapse">
+  <li><a href="#dados-de-saneamento" id="toc-dados-de-saneamento" class="nav-link" data-scroll-target="#dados-de-saneamento">Dados de Saneamento</a></li>
+  <li><a href="#dados-shapefile-dos-município" id="toc-dados-shapefile-dos-município" class="nav-link" data-scroll-target="#dados-shapefile-dos-município">Dados shapefile dos município</a></li>
+  <li><a href="#lista-de-ugrhis" id="toc-lista-de-ugrhis" class="nav-link" data-scroll-target="#lista-de-ugrhis">Lista de UGRHIS</a></li>
+  </ul></li>
+  <li><a href="#unir-as-bases" id="toc-unir-as-bases" class="nav-link" data-scroll-target="#unir-as-bases">Unir as bases !</a></li>
+  <li><a href="#visualizando-os-dados" id="toc-visualizando-os-dados" class="nav-link" data-scroll-target="#visualizando-os-dados">Visualizando os dados</a></li>
+  <li><a href="#conclusão-do-post" id="toc-conclusão-do-post" class="nav-link" data-scroll-target="#conclusão-do-post">Conclusão do post</a></li>
+  <li><a href="#recomendações-para-a-base-da-cetesb" id="toc-recomendações-para-a-base-da-cetesb" class="nav-link" data-scroll-target="#recomendações-para-a-base-da-cetesb">Recomendações para a base da CETESB</a></li>
+  <li><a href="#informações-sobre-a-sessão-do-r-e-rstudio" id="toc-informações-sobre-a-sessão-do-r-e-rstudio" class="nav-link" data-scroll-target="#informações-sobre-a-sessão-do-r-e-rstudio">Informações sobre a sessão do R e RStudio</a></li>
+  <li><a href="#muito-obrigada" id="toc-muito-obrigada" class="nav-link" data-scroll-target="#muito-obrigada">Muito obrigada!</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Como eu estou meses sem postar nada no blog, resolvi postar um código adaptado, referente a um projeto final que realizei para a disciplina <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/">“FLS6397 - Introdução à Análise de Dados, Programação e Visualização para as Ciências Sociais”</a>. A disciplina ocorreu no primeiro semestre de 2020, na FFLCH/USP (porém devido à pandemia, a maior parte das aulas foi online). Na <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/">página da disciplina</a>, está disponível tutoriais com todo o conteúdo da disciplina, de graça e aberto para todes!</p>
+<p>As instruções para a realização do projeto estão disponíveis na <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/projeto.html">página da disciplina</a>.</p>
+<section id="dados-utilizados" class="level2">
+<h2 class="anchored" data-anchor-id="dados-utilizados">Dados utilizados</h2>
+<ul>
+<li><p><strong>Dados de Saneamento:</strong> A Companhia Ambiental do Estado de São Paulo (CETESB)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> publica todos os anos o “<a href="https://cetesb.sp.gov.br/aguas-interiores/publicacoes-e-relatorios/">Relatório de Qualidade das Águas Interiores do Estado de São Paulo</a>”. Desde o relatório referente ao ano de 2016, é publicado o <strong>Apêndice C</strong>, que contém <strong>dados de saneamento por município</strong> do Estado de São Paulo. Os arquivos são disponibilizados em arquivo PDF, <a href="https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2018/03/Ap%C3%AAndice-C-Dados-do-saneamento-b%C3%A1sico...-munic%C3%ADpios-paulistas-2016_17-04.pdf">e especificamente para o ano de 2016 é um arquivo PDF que não possibilita copiar as informações</a> (como uma imagem, por exemplo). O relatório mais recente é referente ao ano de <a href="https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2019/10/Ap%C3%AAndice-C_Dados-de-Saneamento-por-Munic%C3%ADpio.pdf">2018</a>.</p></li>
+<li><p><strong>Dados shapefile dos municípios:</strong> Foi utilizado o pacote <code>{geobr}</code> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira and Goncalves 2021</a>)</span>, que possibilita acessar dados espaciais oficiais do Brasil.</p></li>
+</ul>
+<p>Neste post, irei focar em mostrar como abri os dados, e utilizando principalmente o <code>tidyverse</code> <span class="citation" data-cites="tidyverse2019">(<a href="#ref-tidyverse2019" role="doc-biblioref">Wickham et al. 2019</a>)</span> e o pacote <code>geobr</code> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira and Goncalves 2021</a>)</span>, criei mapas com esses dados.</p>
+</section>
+<section id="pacotes-necessários" class="level2">
+<h2 class="anchored" data-anchor-id="pacotes-necessários">Pacotes necessários</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(geobr)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("pdftables")</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pdftables)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(abjutils)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggspatial)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="alert alert-primary" role="alert">
+<p><strong>O que é <code>::</code> ?</strong></p>
+<p>Nos códigos abaixo, muitas vezes me refiro à uma função utilizando o formato <code>pacote::funcao()</code>, sendo que o que vem antes dos <code>::</code> é o nome do pacote em qual à função pertence, e depois dos <code>::</code> é o nome da função que quero usar.</p>
+<p>Isso é útil pois:</p>
+<ol type="1">
+<li><p>Caso o pacote não esteja carregado com a função <code>library(pacote)</code>, ainda sim o R entenderá qual função você está se referindo, e executará o código.</p></li>
+<li><p>Caso você se refira à uma função apenas pelo nome (sem considerar o <code>::</code>), em uma situação onde você carregou pacotes diferentes que possuem funções com nome igual, a função do pacote carregado por último será utilizada. Isso pode causar a execução de uma função indesejada. Portanto, utilizar o <code>::</code> ajuda a garantir a utilização da função desejada.</p></li>
+</ol>
+</div>
+</section>
+<section id="abrir-e-arrumar-as-bases-brutas" class="level2">
+<h2 class="anchored" data-anchor-id="abrir-e-arrumar-as-bases-brutas">Abrir e arrumar as bases brutas</h2>
+<section id="dados-de-saneamento" class="level3">
+<h3 class="anchored" data-anchor-id="dados-de-saneamento">Dados de Saneamento</h3>
+<p>O primeiro passo é fazer o download do arquivo PDF referente ao Apêndice C e converter em CSV. A função <code>download.file()</code> possibilita fazer download de arquivos diretamente do R.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Link do relatório</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2019/10/Ap%C3%AAndice-C_Dados-de-Saneamento-por-Munic%C3%ADpio.pdf"</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Fazer o download do arquivo PDF</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(url, <span class="co"># URL do arquivo a ser baixado</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">destfile =</span> <span class="st">"dados/apendice_c_2018.pdf"</span>, <span class="co"># Informar onde quer que seja salvo, e com qual nome e extensão </span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">method =</span> <span class="st">"curl"</span> <span class="co"># Método utilizado para o download</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>              )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Para fazer a conversão, utilizei o pacote <code>{pdftables}</code> <span class="citation" data-cites="R-pdftables">(<a href="#ref-R-pdftables" role="doc-biblioref">Persson 2016</a>)</span>, que possibilita converter o arquivo PDF para CSV diretamente do R, através da API (e omiti a minha chave da API no código):</p>
+<div class="alert alert-primary" role="alert">
+<p><strong>O que é API?</strong></p>
+<p>É a sigla para “Application Programming Interfaces”, ou em português, “Interface de programação de aplicações”.</p>
+<p>Neste exemplo, caso não fosse utilizar a API, seria necessário realizar o upload do arquivo PDF no site <a href="https://pdftables.com/">PDFTables</a>, e depois baixar o arquivo convertido.</p>
+<p>Para utilizar a API, é necessário fazer um cadastro no site, e na aba <a href="https://pdftables.com/pdf-to-excel-api">API</a> é disponibilizado a chave da API para utilizá-la. Posteriormente, pode-se utilizar a função <code>pdftables::convert_pdf()</code> para fazer a conversão diretamente do R. Isso é muito útil quando temos uma grande quantidade de arquivos, e também para deixar registrado a etapa realizada.</p>
+<p>Caso queira saber mais sobre APIs, leia essa <a href="http://material.curso-r.com/api/">página do material</a> da <a href="http://curso-r.com/">Curso-R</a>.</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Converter o arquivo PDF em CSV. Utilizei a API que obtive no site, mas para compilar, omiti a API key.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>pdftables<span class="sc">::</span><span class="fu">convert_pdf</span>(<span class="st">"dados/apendice_c_2018.pdf"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                       <span class="co"># Arquivo para converter</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">output_file =</span> <span class="st">"dados/apendice_c_2018.csv"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                       <span class="co">#  Informar onde quer o arquivo gerado</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                       <span class="co"># seja salvo, e com qual nome e extensão</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">api_key =</span> <span class="st">"..."</span> <span class="co"># Chave da API, gerada através do site.</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                       )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A tabela convertida em <code>.csv</code> pode ser acessada <a href="https://beatrizmilz.github.io/2020-FLS6397/projeto_final/dados/apendice_c_2018.csv">neste link</a>. O próximo passo é carregar a base, usando a função <code>readr::read_csv()</code>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>apendice_c_2018 <span class="ot">&lt;-</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dados/apendice_c_2018.csv"</span>, <span class="co"># Qual arquivo CSV quero carregar</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_names =</span> <span class="fu">c</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="co"># define o nome das colunas</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ugrhi"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"municipio"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">"consessao"</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pop_urbana"</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atendimento_coleta_porc"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atendimento_tratamento_porc"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eficiencia"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"carga_poluidora_potencial"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"carga_poluidora_remancescente"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ictem"</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">"corpo_receptor"</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">locale =</span> readr<span class="sc">::</span><span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"ISO-8859-1"</span>),</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># encoding dos dados</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">skip =</span> <span class="dv">5</span> <span class="co"># Quantas linhas para pular no CSV antes de começar a ler os dados.</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="alert alert-primary" role="alert">
+<p><strong>Encoding?</strong></p>
+<p>Uma das informações importantes que utilizei na função para ler os dados no R, no código acima, é o <strong>Encoding</strong>. O Encoding está relacionado à codificação dos caracteres. Você já carregou uma base de dados onde os caracteres apareceram desconfigurados, como na imagem abaixo? Provavelmente era um erro de Encoding!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://beatrizmilz.com/img/encoding-error.JPG" class="img-fluid figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ao carregar um arquivo, é util saber em qual encoding ele foi salvo.</p>
+<p>O recomendado ao salvar um arquivo é utilizar o encoding <strong>UTF-8</strong>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</div>
+<ul>
+<li>A base deve conter 645 linhas, referente ao número de municípios no estado de São Paulo<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(apendice_c_2018) <span class="co"># consulta quantas linhas tem na base</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 701</code></pre>
+</div>
+</div>
+<p>A base contém mais linhas do que municípios. O código abaixo retira linhas que apenas contém NA, e linhas que não apresentam dados dos municípios:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>apendice_c_filtrado <span class="ot">&lt;-</span> apendice_c_2018 <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filtrar linhas que não contém nome de municípios</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span>municipio <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Estado de São Paulo"</span>, <span class="st">"Município"</span>, <span class="cn">NA</span>, <span class="st">"MUNICÍPIO"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Agora a base tem 645 linhas, o que corresponde aos 645 municípios do estado de SP. É importante também verificar o tipo de dados nas colunas:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">glimpse</span>(apendice_c_filtrado)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 645
+Columns: 11
+$ ugrhi                         &lt;chr&gt; "1", "1", "1", "2", "2", "2", "2", "2", …
+$ municipio                     &lt;chr&gt; "Campos do Jordão", "Santo Antônio do Pi…
+$ consessao                     &lt;chr&gt; "SABESP", "SABESP", "SABESP", "SAAE", "S…
+$ pop_urbana                    &lt;chr&gt; "51440", "4033", "5224", "35604", "1863"…
+$ atendimento_coleta_porc       &lt;chr&gt; "52", "47", "92", "70", "91", "100", "89…
+$ atendimento_tratamento_porc   &lt;chr&gt; "100", "100", "75", "28", "100", "0", "1…
+$ eficiencia                    &lt;chr&gt; "97", "80", "76", "70", "82", NA, "62", …
+$ carga_poluidora_potencial     &lt;chr&gt; "2.778", "218", "282", "1.923", "101", "…
+$ carga_poluidora_remancescente &lt;chr&gt; "1.377", "136", "133", "1.659", "26", "1…
+$ ictem                         &lt;chr&gt; "6,06", "4,65", "6,14", "2,56", "8,22", …
+$ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e aflue…</code></pre>
+</div>
+</div>
+<p>Algumas colunas são de dados numéricos mas que foram carregadas como texto (<code>&lt;chr&gt;</code>), portanto devem ser convertidas para o tipo correto (possível com a função <code>dplyr::mutate()</code>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>apendice_c <span class="ot">&lt;-</span> apendice_c_filtrado <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">pop_urbana =</span> <span class="fu">as.double</span>(pop_urbana) , </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">atendimento_coleta_porc =</span> <span class="fu">as.double</span>(atendimento_coleta_porc),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">atendimento_tratamento_porc =</span> <span class="fu">as.double</span>(atendimento_tratamento_porc),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">eficiencia =</span> <span class="fu">as.double</span>(eficiencia),</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># As conversões abaixo tem uma etapa a mais, devido à padronização diferente utilizada na base, </span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">#com o ponto e a vírgula para representar as casas decimais:</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">carga_poluidora_potencial =</span>  stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(carga_poluidora_potencial, <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>, <span class="st">""</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">as.double</span>(),</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">carga_poluidora_remancescente =</span>  stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(carga_poluidora_remancescente, <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>, <span class="st">""</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">as.double</span>(),</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">ictem =</span>  stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(ictem, <span class="st">","</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>) <span class="sc">%&gt;%</span> <span class="fu">as.double</span>()</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Agora podemos observar novamente o tipo de dados nas colunas, e verificar se todos os dados estão no formato ideal para a análise:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tibble<span class="sc">::</span><span class="fu">glimpse</span>(apendice_c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 645
+Columns: 11
+$ ugrhi                         &lt;chr&gt; "1", "1", "1", "2", "2", "2", "2", "2", …
+$ municipio                     &lt;chr&gt; "Campos do Jordão", "Santo Antônio do Pi…
+$ consessao                     &lt;chr&gt; "SABESP", "SABESP", "SABESP", "SAAE", "S…
+$ pop_urbana                    &lt;dbl&gt; 51440, 4033, 5224, 35604, 1863, 2598, 86…
+$ atendimento_coleta_porc       &lt;dbl&gt; 52, 47, 92, 70, 91, 100, 89, 100, 100, 8…
+$ atendimento_tratamento_porc   &lt;dbl&gt; 100, 100, 75, 28, 100, 0, 100, 99, 100, …
+$ eficiencia                    &lt;dbl&gt; 97, 80, 76, 70, 82, NA, 62, 75, 86, 89, …
+$ carga_poluidora_potencial     &lt;dbl&gt; 2778, 218, 282, 1923, 101, 140, 470, 432…
+$ carga_poluidora_remancescente &lt;dbl&gt; 1377, 136, 133, 1659, 26, 140, 210, 1125…
+$ ictem                         &lt;dbl&gt; 6.06, 4.65, 6.14, 2.56, 8.22, 1.50, 6.92…
+$ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e aflue…</code></pre>
+</div>
+</div>
+<p>Agora a base está pronta para uso!</p>
+</section>
+<section id="dados-shapefile-dos-município" class="level3">
+<h3 class="anchored" data-anchor-id="dados-shapefile-dos-município">Dados shapefile dos município</h3>
+<p>Os dados foram obtidos com o pacote <code>geobr</code>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lê a base de dados espaciais (do tipo Shapefile) dos municípios do Estado de São Paulo,</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># no ano de 2018, segundo o IBGE.</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Os dados salvos são da classe Simple Feature</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>municipios_sp <span class="ot">&lt;-</span> geobr<span class="sc">::</span><span class="fu">read_municipality</span>(<span class="st">"SP"</span>, <span class="dv">2018</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="alert alert-primary" role="alert">
+<p>O pacote <code>geobr</code> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira and Goncalves 2021</a>)</span> é um pacote que disponibiliza funções para realizar o download de diversas bases de dados espaciais oficiais do Brasil. Você pode saber mais no <a href="https://github.com/ipeaGIT/geobr">repositório do pacote no GitHub</a>.</p>
+<p>O pacote <code>sf</code> (Simple Features for R) <span class="citation" data-cites="R-sf sf2018">(<a href="#ref-R-sf" role="doc-biblioref">Pebesma 2022</a>, <a href="#ref-sf2018" role="doc-biblioref">2018</a>)</span> possibilita trabalhar com essas bases de dados espaciais. Gosto muito da seguinte ilustação da <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a> sobre esse pacote:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork-PT/sf_pt.png" class="img-fluid figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lista-de-ugrhis" class="level3">
+<h3 class="anchored" data-anchor-id="lista-de-ugrhis">Lista de UGRHIS</h3>
+<p>No projeto, defini como área de estudo os municípios das seguintes Unidades de Gerenciamento de Recursos Hídricos (<strong>UGRHI</strong>): Paraíba do Sul, Litoral Norte, Piracicaba/Capivari/Jundiaí, Alto Tietê, Baixada Santista e Tietê/Sorocaba. Essas UGRHIs foram escolhidas por estarem totalmente ou marjoritariamente no território da Macrometrópole Paulista (<strong>MMP</strong>) (considerando a delimitação do DAEE<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>).</p>
+<p>Criei manualmente uma tibble com o número e nome das UGRHIs que farão parte da análise:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ugrhis <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ugrhi =</span> <span class="fu">c</span>(<span class="st">"2"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>            <span class="st">"3"</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">"5"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">"6"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">"7"</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">"10"</span>),</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome_ugrhi =</span> <span class="fu">c</span>(</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">" Paraíba do Sul"</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">" Litoral Norte"</span>,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">" Piracicaba/Capivari/Jundiaí"</span>,</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">" Alto Tietê"</span>,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">" Baixada Santista"</span>,</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">" Tietê/Sorocaba"</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="unir-as-bases" class="level2">
+<h2 class="anchored" data-anchor-id="unir-as-bases">Unir as bases !</h2>
+<p>A base da CETESB não possui o código de município do IBGE (o ideal para fazer o Join). Neste caso, podemos usar o nome do município, porém é preciso padronizar os nomes em relação à maiúsculas/minúsculas, acentos, presença de traços, entre outros. A maior diferença encontrada foi na grafia do nome do município “São Luiz do Paraitinga”: segundo o site da Assembléia Legislativa do Estado de São Paulo, e o site do município, Luiz é escrito com Z, porém a base da CETESB utiliza a forma incorreta: “São Luís do Paraitinga”. Essas inconsistências foram corrigidas com código abaixo, usando principalmente funções dos pacotes <code>stringr</code>, <code>dplyr</code> e <code>abjutils</code>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>municipios_sp_limpo <span class="ot">&lt;-</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  municipios_sp <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">nome_muni =</span> stringr<span class="sc">::</span><span class="fu">str_to_lower</span>(name_muni),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">nome_muni =</span> stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(nome_muni, <span class="st">"-"</span>, <span class="st">" "</span>),</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">nome_muni =</span> abjutils<span class="sc">::</span><span class="fu">rm_accent</span>(nome_muni)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>apendice_c_limpo <span class="ot">&lt;-</span> apendice_c <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome_muni =</span>  dplyr<span class="sc">::</span><span class="fu">case_when</span>(</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    municipio <span class="sc">==</span> <span class="st">"São Luís do Paraitinga"</span> <span class="sc">~</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"São Luiz do Paraitinga"</span>,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> municipio</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome_muni =</span> stringr<span class="sc">::</span><span class="fu">str_to_lower</span>(nome_muni),</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome_muni =</span> stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(nome_muni, <span class="st">"-"</span>, <span class="st">" "</span>),</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">nome_muni =</span> abjutils<span class="sc">::</span><span class="fu">rm_accent</span>(nome_muni))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Após arrumar a base, podemos unir com as funções do tipo <code>join_*</code>, do pacote <code>dplyr</code> (Sim, é possível usar as funções do tipo <code>join_*</code> com objetos de classe Simple Feature, porém use-os como o primeiro argumento ao usar a função):</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>apendice_c_geo <span class="ot">&lt;-</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">full_join</span>(municipios_sp_limpo, apendice_c_limpo) <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(ugrhis)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>apendice_c_geo <span class="sc">%&gt;%</span> <span class="fu">nrow</span>() <span class="co"># Confirmando se a nova base tem o número de municípios do estado.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 645</code></pre>
+</div>
+</div>
+<p>Ao unir as bases, temos colunas duplicadas ou desnecessárias, então é interessante removê-las. Após este procedimento, a base será filtrada para que apenas municípios que fazem parte das UGRHIs analisadas estejam na tibble gerada.</p>
+<p>Além disso, o valor de porcentagem de atendimento de tratamento de esgoto é um valor de porcentagem em relação ao volume de esgoto <strong>coletado</strong>. Por exemplo, o município de Bertioga, segundo os dados da CETESB para 2018, apresenta uma porcentagem de coleta de apenas 34 % do esgoto gerado, e uma porcentagem de 100 % do esgoto tratado. Isso significa que 100 % do esgoto coletado é tratado, e não mostra a porcentagem de todo esgoto gerado que foi tratado. Para isso, criei também uma coluna (chamada <code>porc_real_trat</code>) onde é feito esse cálculo (utilizando a função mutate).</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>saneamento <span class="ot">&lt;-</span> apendice_c_geo <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>nome_muni,<span class="sc">-</span>municipio,<span class="sc">-</span>code_state) <span class="sc">%&gt;%</span> <span class="co"># Remove colunas duplicadas</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(ugrhi <span class="sc">%in%</span> ugrhis<span class="sc">$</span>ugrhi) <span class="sc">%&gt;%</span> <span class="co"># Filtra a coluna UGRHI. Apenas as UGRHIS que estão na tibble</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>                                            <span class="co"># criada, permanecerão.</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">porc_real_trat =</span> atendimento_tratamento_porc <span class="sc">*</span> atendimento_coleta_porc <span class="sc">/</span> <span class="dv">100</span>) <span class="co"># Cria uma nova</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># coluna, com o cálculo do número real de porcentagem de tratamento de esgoto.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A base final que usaremos na análise contém dados de 171 municípios, que fazem parte de 6 UGRHIs diferentes. A soma da população urbana destes municípios é de 32.79 milhões de habitantes, o que corresponde à 75.1 % da população urbana do Estado de São Paulo (segundo os dados da base completa utilizada nessa análise).</p>
+</section>
+<section id="visualizando-os-dados" class="level2">
+<h2 class="anchored" data-anchor-id="visualizando-os-dados">Visualizando os dados</h2>
+<p>Para evitar duplicação de código, o código abaixo é referente ao estilo do mapa, que aplicarei em todos os mapas seguintes.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>tema_mapa <span class="ot">&lt;-</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span> <span class="co"># Escolhe o tema. Eu gosto do theme_bw() por ser bem simples/limpo</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Os códigos abaixo são referentes à estética do tema,</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># como o tamanho da fonte, direção do texto,</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># linhas ao fundo, etc.</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">angle =</span> <span class="dv">90</span>,</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">hjust =</span> <span class="fl">0.5</span>,</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">8</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">0.8</span>)),</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">0.8</span>)),</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="fu">gray</span>(<span class="fl">0.9</span>),</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="fl">0.1</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">"br"</span>, <span class="at">width_hint =</span> <span class="fl">0.30</span>)</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Com a função <code>geom_sf()</code>, é possível criar mapas utilizando o pacote <code>ggplot2</code> e objetos de classe Simple Feature (sf). Assim podemos usar as nossas habilidades de criar gráficos lindos no <code>ggplot2</code>, e criar mapas também usando as funções que já conhecemos.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(saneamento) <span class="co"># Função class() apresenta a classe do objeto. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "sf"         "data.frame"</code></pre>
+</div>
+</div>
+<p>O mapa abaixo apresenta os municípios que fazem parte da análise, segundo a UGRHI, e a localização destes municípios no Estado de São Paulo. Podemos usar mais de uma camada <code>geom_sf()</code> no mesmo mapa, da mesma forma que fazemos com o <code>ggplot2</code>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>saneamento <span class="sc">%&gt;%</span> <span class="co"># Base de dados usada</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co"># Inicia o gráfico ggplot</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> apendice_c_geo,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Camada do mapa da base completa (Estado SP)</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">alpha =</span> .<span class="dv">9</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> nome_ugrhi)) <span class="sc">+</span> <span class="co"># Camada do mapa da base saneamento</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Adiciona Título e Legendas</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"UGRHI"</span>,</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Municípios que fazem parte da análise, segundo a UGRHI"</span>) <span class="sc">+</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Adiciona o Norte Geográfico</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">location =</span> <span class="st">"br"</span>,</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">which_north =</span> <span class="st">"true"</span>,</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">height =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"cm"</span>),</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"cm"</span>),</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">pad_x =</span> <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"in"</span>),</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">pad_y =</span> <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"in"</span>),</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> north_arrow_fancy_orienteering</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>  ggspatial<span class="sc">::</span><span class="fu">annotation_scale</span>() <span class="sc">+</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Adiciona o tema criado anteriormente</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>  tema_mapa </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/mapa-area-estudo-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>O mapa abaixo apresenta a porcentagem de atendimento de coleta de esgoto, por município:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>saneamento <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> atendimento_coleta_porc)) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">100</span>)) <span class="sc">+</span> <span class="co"># Escala de cores</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"Porcentagem de </span><span class="sc">\n</span><span class="st">atendimento de </span><span class="sc">\n</span><span class="st">coleta de esgoto"</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Porcentagem de atendimento de coleta de esgoto, por município"</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Dados da CETESB, para o ano de 2018."</span>) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">location =</span> <span class="st">"br"</span>,</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">which_north =</span> <span class="st">"true"</span>,</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">height =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"cm"</span>),</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"cm"</span>),</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">pad_x =</span> <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"in"</span>),</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">pad_y =</span> <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"in"</span>),</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> north_arrow_fancy_orienteering</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  ggspatial<span class="sc">::</span><span class="fu">annotation_scale</span>() <span class="sc">+</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  tema_mapa </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/mapa-coleta-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>O mapa abaixo apresenta a porcentagem de atendimento de tratamento de esgoto, considerando o total de esgoto coletado, por município:</p>
+<div class="cell" data-layout-align="center" data-preview="true">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>saneamento <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> porc_real_trat)) <span class="sc">+</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">100</span>)) <span class="sc">+</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"% de </span><span class="sc">\n</span><span class="st">atendimento de </span><span class="sc">\n</span><span class="st">tratamento de esgoto "</span>,</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Porcentagem de atendimento de tratamento de esgoto, por município"</span>,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Calculado a partir de dados da CETESB, para o ano de 2018."</span>) <span class="sc">+</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">location =</span> <span class="st">"br"</span>,</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">which_north =</span> <span class="st">"true"</span>,</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">height =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"cm"</span>),</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"cm"</span>),</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">pad_x =</span> <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"in"</span>),</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">pad_y =</span> <span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">"in"</span>),</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> north_arrow_fancy_orienteering</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>  ggspatial<span class="sc">::</span><span class="fu">annotation_scale</span>() <span class="sc">+</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  tema_mapa </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/mapa-tratamento-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusão-do-post" class="level2">
+<h2 class="anchored" data-anchor-id="conclusão-do-post">Conclusão do post</h2>
+<p>Neste post, mostrei um caminho reprodutível e realizado utilizando o R:</p>
+<ul>
+<li><p>Com o pacote <code>pdftables</code>, é possível converter tabelas que estão em arquivos PDF para arquivos CSV.</p></li>
+<li><p>Com o pacote <code>geobr</code>, é possível obter os arquivos shapefile para os mapas.</p></li>
+<li><p>Com as funções dos pacotes que fazem parte do <code>tidyverse</code>, diversas etapas da análise de dados são possíveis: ler os dados no R, limpeza de dados, manipulação dos dados, cruzamento de bases de dados, visualização, e outros.</p></li>
+</ul>
+</section>
+<section id="recomendações-para-a-base-da-cetesb" class="level2">
+<h2 class="anchored" data-anchor-id="recomendações-para-a-base-da-cetesb">Recomendações para a base da CETESB</h2>
+<ul>
+<li><p>Adicionar uma explicação sobre cada coluna da base disponibilizada.</p></li>
+<li><p>Seria melhor disponibilizar também o arquivo <code>.CSV</code>. Não disponibilizar PDFs digitalizados (Ex: relatório do ano de 2016).</p></li>
+<li><p>Seria útil adicionar, para os próximos relatórios, a coluna de código IBGE do município. Isso facilitaria o cruzamento com outras bases de dados.</p></li>
+<li><p>Verificar a grafia do nome dos municípios (está inconsistente com a lista de municípios da Assembléia Legislativa do Estado de São Paulo<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>): São Luiz do Paraitinga, Biritiba Mirim, Itaoca.</p></li>
+</ul>
+</section>
+<section id="informações-sobre-a-sessão-do-r-e-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="informações-sobre-a-sessão-do-r-e-rstudio">Informações sobre a sessão do R e RStudio</h2>
+<ul>
+<li>As informações abaixo são interessantes para registrar a versão do R utilizada, versões de pacotes, entre outros.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.1.2 (2021-11-01)
+ os       macOS Big Sur 11.6.6
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       America/Sao_Paulo
+ date     2022-06-12
+ pandoc   2.17.1.1 @ /Applications/RStudio.app/Contents/MacOS/quarto/bin/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package     * version    date (UTC) lib source
+ abjutils    * 0.3.2      2022-02-01 [1] CRAN (R 4.1.1)
+ assertthat    0.2.1      2019-03-21 [1] CRAN (R 4.1.0)
+ bit           4.0.4      2020-08-04 [1] CRAN (R 4.1.0)
+ bit64         4.0.5      2020-08-30 [1] CRAN (R 4.1.0)
+ class         7.3-20     2022-01-13 [1] CRAN (R 4.1.1)
+ classInt      0.4-3      2020-04-07 [1] CRAN (R 4.1.0)
+ cli           3.3.0      2022-04-25 [1] CRAN (R 4.1.2)
+ colorspace    2.0-3      2022-02-21 [1] CRAN (R 4.1.1)
+ crayon        1.5.1      2022-03-26 [1] CRAN (R 4.1.1)
+ crul          1.2.0      2021-11-22 [1] CRAN (R 4.1.1)
+ curl          4.3.2      2021-06-23 [1] CRAN (R 4.1.0)
+ data.table    1.14.2     2021-09-27 [1] CRAN (R 4.1.1)
+ DBI           1.1.2      2021-12-20 [1] CRAN (R 4.1.1)
+ digest        0.6.29     2021-12-01 [1] CRAN (R 4.1.1)
+ dplyr       * 1.0.9      2022-04-28 [1] CRAN (R 4.1.1)
+ e1071         1.7-9      2021-09-16 [1] CRAN (R 4.1.1)
+ ellipsis      0.3.2      2021-04-29 [1] CRAN (R 4.1.0)
+ evaluate      0.15       2022-02-18 [1] CRAN (R 4.1.1)
+ fansi         1.0.3      2022-03-24 [1] CRAN (R 4.1.1)
+ farver        2.1.0      2021-02-28 [1] CRAN (R 4.1.0)
+ fastmap       1.1.0      2021-01-25 [1] CRAN (R 4.1.0)
+ generics      0.1.2      2022-01-31 [1] CRAN (R 4.1.1)
+ geobr       * 1.6.1      2021-04-16 [1] CRAN (R 4.1.0)
+ ggplot2     * 3.3.6      2022-05-03 [1] CRAN (R 4.1.1)
+ ggspatial   * 1.1.5      2021-01-04 [1] CRAN (R 4.1.0)
+ glue          1.6.2      2022-02-24 [1] CRAN (R 4.1.1)
+ gtable        0.3.0      2019-03-25 [1] CRAN (R 4.1.0)
+ hms           1.1.1      2021-09-26 [1] CRAN (R 4.1.1)
+ htmltools     0.5.2.9000 2022-03-14 [1] Github (rstudio/htmltools@9490b62)
+ htmlwidgets   1.5.4      2021-09-08 [1] CRAN (R 4.1.1)
+ httpcode      0.3.0      2020-04-10 [1] CRAN (R 4.1.0)
+ httr          1.4.3      2022-05-04 [1] CRAN (R 4.1.1)
+ jsonlite      1.8.0      2022-02-22 [1] CRAN (R 4.1.1)
+ KernSmooth    2.23-20    2021-05-03 [1] CRAN (R 4.1.2)
+ knitr       * 1.39       2022-04-26 [1] CRAN (R 4.1.1)
+ labeling      0.4.2      2020-10-20 [1] CRAN (R 4.1.0)
+ lifecycle     1.0.1      2021-09-24 [1] CRAN (R 4.1.1)
+ magrittr    * 2.0.3      2022-03-30 [1] CRAN (R 4.1.1)
+ munsell       0.5.0      2018-06-12 [1] CRAN (R 4.1.0)
+ pdftables   * 0.1        2016-02-15 [1] CRAN (R 4.1.0)
+ pillar        1.7.0      2022-02-01 [1] CRAN (R 4.1.1)
+ pkgconfig     2.0.3      2019-09-22 [1] CRAN (R 4.1.0)
+ proxy         0.4-26     2021-06-07 [1] CRAN (R 4.1.0)
+ purrr         0.3.4      2020-04-17 [1] CRAN (R 4.1.0)
+ R6            2.5.1      2021-08-19 [1] CRAN (R 4.1.1)
+ Rcpp          1.0.8.3    2022-03-17 [1] CRAN (R 4.1.1)
+ readr       * 2.1.2      2022-01-30 [1] CRAN (R 4.1.1)
+ rlang         1.0.2      2022-03-04 [1] CRAN (R 4.1.1)
+ rmarkdown     2.14.2     2022-05-28 [1] Github (rstudio/rmarkdown@f2bfeec)
+ rstudioapi    0.13       2020-11-12 [1] CRAN (R 4.1.0)
+ s2            1.0.7      2021-09-28 [1] CRAN (R 4.1.1)
+ scales        1.2.0      2022-04-13 [1] CRAN (R 4.1.1)
+ sessioninfo   1.2.2      2021-12-06 [1] CRAN (R 4.1.1)
+ sf          * 1.0-7      2022-03-07 [1] CRAN (R 4.1.1)
+ stringi       1.7.6      2021-11-29 [1] CRAN (R 4.1.1)
+ stringr     * 1.4.0      2019-02-10 [1] CRAN (R 4.1.1)
+ tibble      * 3.1.7      2022-05-03 [1] CRAN (R 4.1.1)
+ tidyselect    1.1.2      2022-02-21 [1] CRAN (R 4.1.1)
+ triebeard     0.3.0      2016-08-04 [1] CRAN (R 4.1.0)
+ tzdb          0.3.0      2022-03-28 [1] CRAN (R 4.1.1)
+ units         0.8-0      2022-02-05 [1] CRAN (R 4.1.1)
+ urltools      1.7.3      2019-04-14 [1] CRAN (R 4.1.0)
+ utf8          1.2.2      2021-07-24 [1] CRAN (R 4.1.0)
+ vctrs         0.4.1      2022-04-13 [1] CRAN (R 4.1.1)
+ viridisLite   0.4.0      2021-04-13 [1] CRAN (R 4.1.0)
+ vroom         1.5.7      2021-11-30 [1] CRAN (R 4.1.1)
+ withr         2.5.0      2022-03-03 [1] CRAN (R 4.1.1)
+ wk            0.6.0      2022-01-03 [1] CRAN (R 4.1.1)
+ xfun          0.31       2022-05-10 [1] CRAN (R 4.1.2)
+ yaml          2.3.5      2022-02-21 [1] CRAN (R 4.1.1)
+
+ [1] /Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/library
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+<p>O projeto foi realizado com R <span class="citation" data-cites="R-base">(<a href="#ref-R-base" role="doc-biblioref">R Core Team 2021</a>)</span>, e os pacotes: <code>{abjutils}</code> <span class="citation" data-cites="R-abjutils">(<a href="#ref-R-abjutils" role="doc-biblioref">Lente and Trecenti 2022</a>)</span>, <code>{dplyr}</code> <span class="citation" data-cites="R-dplyr">(<a href="#ref-R-dplyr" role="doc-biblioref">Wickham, François, et al. 2022</a>)</span>, <code>{geobr}</code> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira and Goncalves 2021</a>)</span>, <code>{ggplot2}</code> <span class="citation" data-cites="R-ggplot2 ggplot22016">(<a href="#ref-R-ggplot2" role="doc-biblioref">Wickham, Chang, et al. 2022</a>; <a href="#ref-ggplot22016" role="doc-biblioref">Wickham 2016</a>)</span>, <code>{ggspatial}</code> <span class="citation" data-cites="R-ggspatial">(<a href="#ref-R-ggspatial" role="doc-biblioref">Dunnington 2021</a>)</span>, <code>{knitr}</code> <span class="citation" data-cites="R-knitr knitr2015">(<a href="#ref-R-knitr" role="doc-biblioref">Xie 2022</a>, <a href="#ref-knitr2015" role="doc-biblioref">2015</a>)</span>, <code>{magrittr}</code> <span class="citation" data-cites="R-magrittr">(<a href="#ref-R-magrittr" role="doc-biblioref">Bache and Wickham 2022</a>)</span>, <code>{pdftables}</code> <span class="citation" data-cites="R-pdftables">(<a href="#ref-R-pdftables" role="doc-biblioref">Persson 2016</a>)</span>, <code>{readr}</code> <span class="citation" data-cites="R-readr">(<a href="#ref-R-readr" role="doc-biblioref">Wickham, Hester, and Bryan 2022</a>)</span>, <code>{rmarkdown}</code> <span class="citation" data-cites="R-rmarkdown rmarkdown2018">(<a href="#ref-R-rmarkdown" role="doc-biblioref">Allaire et al. 2022</a>; <a href="#ref-rmarkdown2018" role="doc-biblioref">Xie, Allaire, and Grolemund 2018</a>)</span>, <code>{sf}</code> <span class="citation" data-cites="R-sf sf2018">(<a href="#ref-R-sf" role="doc-biblioref">Pebesma 2022</a>, <a href="#ref-sf2018" role="doc-biblioref">2018</a>)</span>, <code>{stringr}</code> <span class="citation" data-cites="R-stringr">(<a href="#ref-R-stringr" role="doc-biblioref">Wickham 2019</a>)</span>, <code>{tibble}</code> <span class="citation" data-cites="R-tibble">(<a href="#ref-R-tibble" role="doc-biblioref">Müller and Wickham 2022</a>)</span>.</p>
+</section>
+<section id="muito-obrigada" class="level2">
+<h2 class="anchored" data-anchor-id="muito-obrigada">Muito obrigada!</h2>
+<ul>
+<li><p>Ao Professor <a href="https://jonnyphillips.github.io/Website/">Jonathan Phillips</a>, pelo oferecimento da disciplina <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/">“FLS6397 - Introdução à Análise de Dados, Programação e Visualização para as Ciências Sociais”</a>, por sua disponibilidade para tirar as dúvidas de todes, disponibilização de todo material da aula na internet de forma aberta e gratuita, e pelo esforço para que a disciplina fosse proveitosa mesmo considerando o contexto de pandemia.</p></li>
+<li><p>A <a href="https://bv.fapesp.br/pt/pesquisador/705683/vanessa-escolano-maso/">Vanessa Escolano Maso</a>, amiga, parceira na R-Ladies São Paulo e também na disciplina, pela companhia durante a disciplina e também por revisar e sugerir melhoras neste post.</p></li>
+<li><p>Ao <a href="https://twitter.com/mauriciovancine">Maurício Vancine</a> pela sua sugestão via <a href="https://twitter.com/mauriciovancine/status/1287852208449638402?s=20">twitter</a> de utilizar a função <code>ggspatial::annotation_scale()</code> para adicionar uma barra de escala nos gráficos.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+
+</div>
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-R-rmarkdown" class="csl-entry" role="doc-biblioentry">
+Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2022. <em>Rmarkdown: Dynamic Documents for r</em>.
+</div>
+<div id="ref-R-magrittr" class="csl-entry" role="doc-biblioentry">
+Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
+</div>
+<div id="ref-R-ggspatial" class="csl-entry" role="doc-biblioentry">
+Dunnington, Dewey. 2021. <em>Ggspatial: Spatial Data Framework for Ggplot2</em>. <a href="https://CRAN.R-project.org/package=ggspatial">https://CRAN.R-project.org/package=ggspatial</a>.
+</div>
+<div id="ref-R-abjutils" class="csl-entry" role="doc-biblioentry">
+Lente, Caio, and Julio Trecenti. 2022. <em>Abjutils: Useful Tools for Jurimetrical Analysis Used by the Brazilian Jurimetrics Association</em>. <a href="https://github.com/abjur/abjutils">https://github.com/abjur/abjutils</a>.
+</div>
+<div id="ref-R-tibble" class="csl-entry" role="doc-biblioentry">
+Müller, Kirill, and Hadley Wickham. 2022. <em>Tibble: Simple Data Frames</em>. <a href="https://CRAN.R-project.org/package=tibble">https://CRAN.R-project.org/package=tibble</a>.
+</div>
+<div id="ref-sf2018" class="csl-entry" role="doc-biblioentry">
+Pebesma, Edzer. 2018. <span>“<span class="nocase">Simple Features for R: Standardized Support for Spatial Vector Data</span>.”</span> <em><span>The R Journal</span></em> 10 (1): 439–46. <a href="https://doi.org/10.32614/RJ-2018-009">https://doi.org/10.32614/RJ-2018-009</a>.
+</div>
+<div id="ref-R-sf" class="csl-entry" role="doc-biblioentry">
+———. 2022. <em>Sf: Simple Features for r</em>. <a href="https://CRAN.R-project.org/package=sf">https://CRAN.R-project.org/package=sf</a>.
+</div>
+<div id="ref-R-geobr" class="csl-entry" role="doc-biblioentry">
+Pereira, Rafael H. M., and Caio Nogueira Goncalves. 2021. <em>Geobr: Download Official Spatial Data Sets of Brazil</em>. <a href="https://github.com/ipeaGIT/geobr">https://github.com/ipeaGIT/geobr</a>.
+</div>
+<div id="ref-R-pdftables" class="csl-entry" role="doc-biblioentry">
+Persson, Eric. 2016. <em>Pdftables: Programmatic Conversion of PDF Tables</em>. <a href="https://CRAN.R-project.org/package=pdftables">https://CRAN.R-project.org/package=pdftables</a>.
+</div>
+<div id="ref-R-base" class="csl-entry" role="doc-biblioentry">
+R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-ggplot22016" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+</div>
+<div id="ref-R-stringr" class="csl-entry" role="doc-biblioentry">
+———. 2019. <em>Stringr: Simple, Consistent Wrappers for Common String Operations</em>. <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>.
+</div>
+<div id="ref-tidyverse2019" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome to the <span class="nocase">tidyverse</span>.”</span> <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
+</div>
+<div id="ref-R-ggplot2" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2022. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
+</div>
+<div id="ref-R-dplyr" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2022. <em>Dplyr: A Grammar of Data Manipulation</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
+</div>
+<div id="ref-R-readr" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2022. <em>Readr: Read Rectangular Text Data</em>. <a href="https://CRAN.R-project.org/package=readr">https://CRAN.R-project.org/package=readr</a>.
+</div>
+<div id="ref-knitr2015" class="csl-entry" role="doc-biblioentry">
+Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+</div>
+<div id="ref-R-knitr" class="csl-entry" role="doc-biblioentry">
+———. 2022. <em>Knitr: A General-Purpose Package for Dynamic Report Generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+</div>
+<div id="ref-rmarkdown2018" class="csl-entry" role="doc-biblioentry">
+Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a>.
+</div>
+</div></section><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1" role="doc-endnote"><p>https://cetesb.sp.gov.br/<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>https://support.rstudio.com/hc/en-us/articles/200532197-Character-Encoding<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>https://www.al.sp.gov.br/documentacao/municipios-paulistas/<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>Plano Diretor de Aproveitamento dos Recursos Hídricos para a Macrometrópole Paulista - http://www.daee.sp.gov.br/<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>https://www.al.sp.gov.br/documentacao/municipios-paulistas/<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
