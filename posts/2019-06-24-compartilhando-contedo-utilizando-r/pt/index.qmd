@@ -1,0 +1,87 @@
+---
+title: "Compartilhando conteúdo"
+subtitle: "Como compartilhar conteúdo sobre R, utilizando R?"
+author: "Beatriz Milz"
+categories:
+  - R-Ladies
+  - RMarkdown
+date: 2019-06-24
+toc: true
+image: "featured-photo.gif"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Atualização da página
+
+No último final de semana, utilizei algumas horas para reformular essa página.
+Eu utilizava o tema [Academic](https://themes.gohugo.io/academic/), porém queria algo mais simples, então mudei para o [Lithium](https://themes.gohugo.io/hugo-lithium-theme/).
+Além disso, também habilitei os comentários com o [Disqus](https://disqus.com/), habilitei o [Google Analytics](https://analytics.google.com/analytics/web/) e também resolvi testar o [Netlify](https://netlify.com/) (que aliás achei incrível).
+
+Durante esse processo, algumas dificuldades apareceram... Também lembrei da primeira vez que criei uma página com o [`blogdown`](https://github.com/rstudio/blogdown), onde graças à muitos conteúdos online eu consegui colocar no ar depois de várias mensagens de erro.
+
+```{r echo=FALSE, fig.align='center', out.width="30%"}
+knitr::include_graphics("https://media.giphy.com/media/ktvFa67wmjDEI/giphy.gif")
+```
+
+## Conteúdos online
+
+Os conteúdos online, que muitas pessoas disponibilizaram através de posts em blog, livros, documentação, dúvidas no [Stackoverflow](https://pt.stackoverflow.com/), me ajudaram muito a conseguir entender como funcionava o processo de criar uma página com o [`blogdown`](https://github.com/rstudio/blogdown).
+Esses conteúdos foram essenciais também para entender como deixar esse site disponível online utilizando o [Github](https://github.com) (lembrando que a minha formação é em Gestão Ambiental).
+Porém a maior parte desse conteúdo estava **disponibilizado em inglês**: foram poucos os materiais que encontrei em português.
+
+```{r echo=FALSE, fig.align='center', out.width="30%"}
+knitr::include_graphics("https://media.giphy.com/media/1iu8uG2cjYFZS6wTxv/giphy.gif")
+```
+
+Lembrei também da conversa que tive rapidamente no mês passado com a [Julia](https://github.com/JuliaHellenFerreira), co-organizadora do [R-Ladies Niterói](https://www.meetup.com/pt-BR/rladies-niteroi/), onde disse que seria interessante que ela disponibilizasse online as palestras que ela já fez, para que outras pessoas consigam consultar e aprender com o conteúdo.
+
+Se você está em dúvida se deve compartilhar conteúdo na internet, eu indico a palestra (em inglês) do [David Robinson](http://varianceexplained.org/about/) na `rstudio::conf 2019`, chamada ["The unreasonable effectiveness of public work"](https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work).
+
+As formas de compartilhar conteúdo apontadas por David são: escrever um post em um blog, escrever um tweet, contribuir com projetos open source, dar palestras, gravar a tela enquanto faz alguma análise de dados e disponibilizar o vídeo, e escrever um livro sobre o assunto.
+
+Nessa palestra, David diz que se você der a mesma dica/conselho três vezes, escreva um post em um blog, assim muitas pessoas conseguem acessar esse conteúdo.
+
+<!-- # ```{r echo=FALSE, fig.align='center', out.width="100%"} -->
+
+<!-- # blogdown::shortcode('tweet', '928447584712253440') -->
+
+<!-- # ``` -->
+
+## Compartilhando conteúdo sobre R e utilizando R
+
+Por isso, pretendo fazer alguns posts **em português** com algumas **dicas sobre como compartilhar conteúdo na internet**, utilizando `R`.
+Não é segredo que eu sou fã dos pacotes criados pelo [Yihui Xie](https://yihui.name), então os temas que pretendo abordar são:
+
+-   Criar seu currículo com `R`, usando o pacote [`pagedown`](https://github.com/rstudio/pagedown);
+
+-   Criar uma página/blog com `R`, usando o pacote [`blogdown`](https://github.com/rstudio/blogdown).
+
+-   Criar apresentações com `R`, usando o pacote [`xaringan`](https://github.com/yihui/xaringan) - lembrando que existe uma apresentação sobre esse assunto disponível [aqui](http://beatrizmilz.com/slides/).
+    O [Bruno Lucian](https://github.com/brunolucian) se interessou em compartilhar esse conteúdo no blog [Dados Aleatórios](https://www.dadosaleatorios.com.br/), então quando estiver disponível eu colocarei o link para o post aqui também.
+
+## Git e Github
+
+Para o compartilhar conteúdo, é interessante também utilizar `git` e Github.
+Mas considerando que nesse tema já existe bastante conteúdo em português, por enquanto vou focar nas ferramentas com `R`, que tem menos conteúdo disponível nessa língua.
+
+O post do [William Oliveira](https://woliveiras.com.br/), chamado [Plano para estudar Git e GitHub enquanto aprende programação](https://medium.com/trainingcenter/plano-para-estudar-git-e-github-enquanto-aprende-programa%C3%A7%C3%A3o-f5d5f986f459), me ajudou bastante a entender como começar a usar o `git`.
+Nesse post ele utiliza o terminal, e para algumas pessoas que estão iniciando essa abordagem pode ser um pouco intimidadora.
+
+Outra opção para quem está iniciando é utilizar o [Github Desktop](https://desktop.github.com/).
+Acredito que é uma interface amigável para quem está aprendendo como funciona o `git`.
+
+## Até logo!
+
+Pretendo postar sobre esses conteúdos logo logo.
+Enquanto isso, estou aberta à sugestões.
+Existem outras formas que vocês usam para divulgar conteúdo utilizando `R`?
+Existe alguma que você conheça e gostaria de aprender mais?
+Existem dificuldades?
+Se sim, quais?
+
+```{r echo=FALSE, fig.align='center', out.width="30%", preview=TRUE}
+knitr::include_graphics("https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif")
+```

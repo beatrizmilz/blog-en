@@ -1,0 +1,169 @@
+---
+title: "Um ano aprendendo R!"
+subtitle: "Um relato deste um ano aprendendo R!"
+author: "Beatriz Milz"
+date: 2019-08-31
+categories:
+  - R-Ladies
+  - Communities
+toc: true  
+image: "featured-photo.jpeg"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center", out.width = "100%")
+```
+
+Esse post é uma continuação deste outro: [Meio ano de aprendizagem de R!](https://beatrizmilz.com/2019/01/29/6-meses-de-r/),
+onde relatei um pouco sobre os primeiros seis meses de aprendizagem em programação, principalmente na linguagem R.
+
+Como dito no post citado, eu começei a aprender `R` e programação em agosto de 2018.
+Ou seja, neste mês completo um ano de aprendizagem!
+`r emo::ji("birthday")` `r emo::ji("balloon")` Foi um ano muito rico de experiências, onde conheci muitas pessoas queridas e aprendi muito também!
+
+# R-Ladies São Paulo `r emo::ji("purple_heart")`
+
+Conhecer a organização [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo/) foi uma das melhores coisas que já me aconteceu, e ter a oportunidade de contribuir com a organização dos eventos é algo que faço com muita alegria.
+Na [R-Ladies](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo/), sinto que é um espaço muito acolhedor e seguro para aprender sobre R, compartilhar conhecimento, tirar dúvidas, fazer amizades, e muito mais.
+
+Neste mês de agosto, também foi o aniversário de 1 ano da R-Ladies São Paulo, e a apresentação feita no evento está disponível [neste link](https://beatrizmilz.github.io/R-Ladies_1ano/).
+Foi um evento muito querido!
+E abaixo segue uma foto de como foi:
+
+```{r, out.width="90%"}
+knitr::include_graphics("https://beatrizmilz.com/img/1anorladies.jpg")
+```
+
+E uma thread no twitter contando mais detalhes sobre como foi o evento:
+
+<CENTER>
+
+<blockquote class="twitter-tweet">
+
+<p lang="pt" dir="ltr">
+
+Sábado passado aconteceu o <a href="https://twitter.com/hashtag/meetup?src=hash&amp;ref_src=twsrc%5Etfw">#meetup</a> de aniversário de 1 ano da <a href="https://twitter.com/hashtag/RLadies?src=hash&amp;ref_src=twsrc%5Etfw">#RLadies</a> São Paulo!
+O evento aconteceu lá na <a href="https://twitter.com/thoughtworksbr?ref_src=twsrc%5Etfw">@thoughtworksbr</a> , fomos super bem recebidas pela Chris, agradecemos muito pelo espaço e coffe break!
+Segue algumas fotos: <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/rstatsbr?src=hash&amp;ref_src=twsrc%5Etfw">#rstatsbr</a> <a href="https://t.co/FfW8Et1FVx">pic.twitter.com/FfW8Et1FVx</a>
+
+</p>
+
+--- R-Ladies São Paulo (@RLadiesSaoPaulo) <a href="https://twitter.com/RLadiesSaoPaulo/status/1165359598376771585?ref_src=twsrc%5Etfw">August 24, 2019</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+</CENTER>
+
+# Aprendizado
+
+Neste primeiro ano, fiz diversos cursos sobre R, sendo alguns online e outros presenciais, destacando os seguintes:
+
+-   Presencial, Setembro/2018 - [Introdução à Programação em R](https://www.curso-r.com/cursos/intro-r/), da [Curso-R](https://www.curso-r.com/) - Neste curso, tive um contato maior com o pacote [`tidyverse`](https://www.tidyverse.org/).
+    Foi um divisor de águas para mim, e saí muito empolgada para aprender mais!
+    Agradeço a [Curso-R](https://www.curso-r.com/) pela bolsa recebida!
+
+-   Presencial, Maio/2019 - [Building web applications in R using Shiny](https://github.com/daattali/shiny-mini-workshop), do [Dean Atalli](https://deanattali.com/shiny/) - Foi um workshop sobre como criar aplicações Web utilizando o pacote Shiny.
+    Teve muitas atividades práticas, e aprendi bastante!
+    Fiquei muito animada para aprender mais...
+
+-   Presencial, Junho/2019 - [Dashboards com R](https://www.curso-r.com/cursos/dashboards/), da [Curso-R](https://www.curso-r.com/) - Foi um curso bem prático, focado em criar dashboards usando RMarkdown e também Shiny.
+    Na última aula, os professores também citaram os pacotes mais recentes relacionados ao desenvolvimento de Shiny Apps!
+
+-   Online, 2019 - [Coursera - Programa de cursos integrados Ciência de Dados (02/10)](https://www.coursera.org/specializations/jhu-data-science) - Atualmente estou fazendo esse programa de cursos oferecidos pela [Johns Hopkins University](https://www.jhu.edu/).
+    Já completei dois cursos: **As Ferramentas do Cientista de Dados** e **Linguagem R**. Atualmente estou finalizando o curso de **Obtenção e Limpeza de Dados**, e sinceramente já deveria ter completado, porém sinto que meu ritmo é mais devagar mesmo em aulas online.
+    Aulas presenciais me deixam mais empolgada!
+    `r emo::ji("smiley")`
+
+Para os próximos meses espero conseguir evoluir no [programa de Ciência de dados do Coursera](https://www.coursera.org/specializations/jhu-data-science)!
+
+# Eventos
+
+## IV SER UFF
+
+O [SER - International Seminar on Statistics with R](http://ser.uff.br/), é um evento realizado na Universidade Federal Fluminense, em Niterói - RJ.
+Essa foi a primeira conferência que participo sobre R, e aconteceu em maio de 2019.
+
+Conheci muitas pessoas legais nesse evento: R-Ladies de outros capítulos do Brasil, os organizadores do evento, algumas pessoas do grupo do telegram R Brasil e muito mais.
+
+Eu e a [Haydee Svab](https://br.linkedin.com/in/hsvab) (co-organizadora do R-Ladies São Paulo) submetemos um mini-curso no evento, e ele foi aceito e oferecido junto ao evento do R-Ladies Niterói.
+O tema do mini-curso foi: [Comunicando seus resultados: Criando apresentações com R](https://beatrizmilz.github.io/IV-SER-RLadies/).
+Segue abaixo uma foto que tiramos com R-Ladies de outros capítulos, que participaram do mini-curso:
+
+```{r, out.width="90%"}
+knitr::include_graphics("https://beatrizmilz.com/img/rladiesniteroi.jpeg")
+```
+
+Outra participação no evento foi na apresentação de um pôster, que foi escrito por quatro co-organizadoras do R-Ladies São Paulo: eu, [Bruna Garbes](https://br.linkedin.com/in/brunagarbes), [Bruna Wundervald](http://brunaw.com/) e [Haydee Svab](https://br.linkedin.com/in/hsvab).
+O texto do pôster está disponível online, e tem o seguinte título: [Ensino de R através da Comunidade R-Ladies - Capítulo São Paulo](http://periodicos.uff.br/anaisdoser/article/view/29327).
+O pôster em formato PDF está disponível neste [link](https://github.com/brunaw/poster_rladies_SER/blob/master/poster_SER_2019.pdf).
+
+## useR!2019
+
+A [useR!2019](https://user2019.r-project.org/) foi a segunda conferência que participei de R, e aconteceu em julho de 2019, em Toulouse, na França.
+Não vou me prolongar pois pretendo fazer um post só sobre o evento (sim, estou atrasada `r emo::ji("disappointed")`).
+Eu e a [Angélica Custódio](https://twitter.com/angcustodio) recebemos bolsas de diversidade para participar do evento.
+Nós escrevemos um post juntas, relatando a experiência de participar do [tidyverse developer day](https://www.curso-r.com/blog/2019-08-12-tidydevday/).
+
+Na foto a seguir, está o grupo de brasileiros que participaram do evento: [Laurie Baker](https://www.researchgate.net/profile/Laurie_Baker2) (que não é Brasileira, mas andou conosco no evento), [Angélica Custódio](https://twitter.com/angcustodio), [Julio Trecenti](https://br.linkedin.com/in/jtrecenti), eu, [Daniel Falbel](https://github.com/dfalbel) e o [William Amorim](https://twitter.com/Williamorim89).
+O Prof. [Elias Krainski](http://www.leg.ufpr.br/~elias/) também participou, porém não está na foto.
+
+```{r, out.width="90%", preview = TRUE}
+knitr::include_graphics("https://beatrizmilz.com/img/user2019-brasileiros.jpg")
+```
+
+Aliás, o [Julio Trecenti](https://br.linkedin.com/in/jtrecenti) escreveu um post relatando a experiência dele de participar deste evento: [Minha experiência na useR!2019](https://www.curso-r.com/blog/2019-07-14-user2019/).
+
+Eu e a [Bruna Wundervald](http://brunaw.com/) escrevemos um resumo para Lightning Talk (uma palestra de 5 minutos), que foi aceito.
+Fiquei nervosa para apresentar, já que era a primeira vez apresentando em inglês, fora do Brasil, e para um público tão legal!
+A apresentação está disponível [neste link](https://beatrizmilz.github.io/useR2019/), e também está disponível no youtube:
+
+<center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2HK6hjwhdRk?start=880" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+</center>
+
+E eu ainda fiz amizade com uma pessoa muito querida e maravilhosa: A [Angélica Custódio](https://twitter.com/angcustodio)!
+`r emo::ji("purple_heart")` Uma foto nossa turistando em Toulouse:
+
+```{r, out.width="90%"}
+knitr::include_graphics("https://beatrizmilz.com/img/bia-e-angelica.jpg")
+```
+
+# Compartilhando conhecimento
+
+Apresentações me deixam nervosa, e isso não é segredo para ninguém..
+Acabo falando super rápido, e depois fico me sentindo mal por isso.
+
+```{r out.width="100%"}
+knitr::include_graphics("https://media1.giphy.com/media/qvWavuCEwjEPu/giphy.gif")
+```
+
+Quero melhorar nessa questão (e se alguém tiver dicas, me enviem por favor), mas tento não deixar o receio de falar muito rápido me impedir de tentar compartilhar o que já aprendi.
+
+O que aprendi nesse 1 ano de R é devido à comunidade.
+Eu ainda preciso e quero aprendender muitas coisas ainda, mas acho válido compartilhar o que eu aprendi até então, e acredito que é uma forma de retribuir para a comunidade um pouco do que tanto que recebi até agora.
+
+As apresentações que fiz geralmente deixo disponível [nessa página](https://beatrizmilz.com/slides/), para que todos consigam consultar.
+
+# Próximos passos
+
+Em setembro, participarei da [Latin-R](https://latin-r.com/) - Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo, pois fui selecionada para receber um bolsa de diversidade.
+Estou muito animada para conhecer mais pessoas da comunidade de R Latinoamericana.
+
+No projeto temático de pesquisa que faço parte ([Governança ambiental da Macrometrópole Paulista face à variabilidade climática](https://bv.fapesp.br/pt/auxilios/97000/governanca-ambiental-da-macrometropole-paulista-face-a-variabilidade-climatica/)), existem pessoas que já programam em R, e também pessoas que tem interesse em aprender.
+
+Recentemente, eu e mais duas pessoas que já programam em R (a [Rosana Laura](https://bv.fapesp.br/pt/pesquisador/698446/rosana-laura-da-silva/) e o [Diego Braga](http://lattes.cnpq.br/7678202356014883), ambos pós-graduandos em [Planejamento e Gestão do Território](https://sites.google.com/site/pospgt/) na UFABC) começamos a organizar um grupo de estudos para que a equipe do projeto possa compartilhar conhecimentos sobre R, considerando que os temas de pesquisa são bem diversos e utilizam metodologias diferentes também.
+O primeiro encontro do grupo de estudos está programado para setembro de 2019!
+
+E é isso, espero continuar aprendendo muito sobre R, e compartilhando também.
+`r emo::ji("purple_heart")`
+
+```{r out.width="50%"}
+knitr::include_graphics("https://media0.giphy.com/media/1iu8uG2cjYFZS6wTxv/giphy-downsized.gif")
+```

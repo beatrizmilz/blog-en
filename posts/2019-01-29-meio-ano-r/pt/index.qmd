@@ -1,0 +1,92 @@
+---
+title: "Meio ano de aprendizagem de R!"
+subtitle: "Neste texto, gostaria de compartilhar um pouco sobre os primeiros seis meses de aprendizagem em programação, principalmente na linguagem R."
+author: "Beatriz Milz"
+categories:
+  - Communities
+  - R-Ladies
+date: 2019-01-29
+toc: true
+image: "featured-photo.jpeg"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center", out.width = "100%")
+```
+
+Neste texto, gostaria de compartilhar um pouco sobre os primeiros seis meses de aprendizagem em programação, principalmente na linguagem R, e também agradecer a todas que participaram deste aprendizado.
+
+## Como surgiu o interesse em aprender R?
+
+Meu nome é Beatriz, e a minha graduação foi em Gestão Ambiental.
+Porém, quando estava no mestrado, precisava utilizar a linguagem R para realizar análises estatísticas com os dados que coletei.
+Nunca me imaginei aprendendo a programar, e até tentei utilizar sozinha o R em 2017 (sem o RStudio), mas tive muita dificuldade.
+Então outra pessoa me ajudou com essas análises.
+
+Depois que conclui o mestrado, no segundo semestre de 2018, passei alguns meses me preparando e participando do processo seletivo do doutorado, e pensei que seria uma boa época para tentar aprender a "mexer com o R".
+Eu queria conseguir fazer minhas próprias análises estatísticas sozinha!
+Perguntei para uma amiga, a [Ana Lu](https://github.com/analuspi), e ela me deu algumas dicas.
+
+## R-Ladies
+
+Eu e a Ana ficamos sabendo que iria acontecer o primeiro encontro do [R-Ladies de São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo), que é uma organização que promove a diversidade de gênero na comunidade da linguagem R.
+Fiquei super animada, porém como não sabia naaaada ainda, eu corri e fiz o curso introdutório de R, a tempo de participar do meetup.
+Eu e a Ana Lu participamos deste encontro e conhecemos outras mulheres que programam ou estavam interessadas em aprender a programar em R.
+
+**Primeiro Meetup do R-Ladies em São Paulo:**
+
+```{r }
+knitr::include_graphics("https://beatrizmilz.com/img/rladies-1-meetup.jpeg")
+```
+
+O primeiro meetup do R-Ladies foi muito especial para mim.
+Eu sabia tão pouco, e me senti em um ambiente super seguro e confortável para fazer as perguntas que tinha.O R-Ladies desde o começo foi um grupo onde me sentia confortável, segura, e havia uma troca muito grande de conhecimento.
+Considero que muito do que já aprendi sobre R eu quero agradecer à comunidade R-Ladies e todas as participantes do grupo de São Paulo.
+Então desde outubro de 2018 venho auxiliado na organização dos encontros, o que tem sido uma experiência super interessante, além de ser uma forma de retribuir o que eu tenho recebido!
+
+## Cursos
+
+De agosto para cá tive a oportunidade de fazer outros cursos, porém o que considero um "divisor de águas" na minha aprendizagem sobre R foi o de [Introdução à Programação em R](https://www.curso-r.com/cursos/intro-r/), da [Curso-R](https://www.curso-r.com/), devido a uma bolsa de diversidade de gênero que recebi e agradeço MUITO por essa oportunidade.
+Agradeço também a [Maria](https://github.com/MaryMS/) pela companhia!
+Neste curso, além de aprender bastante e fazer miillllll perguntass (e agradeço os professores por também oferecerem um ambiente onde me sentisse confortável de perguntar tudo tudo tudo que tinha dúvida ou curiosidade), eu também saí de lá super empolgada em aprender mais sobre R.
+
+Atualmente estou me dedicando em realizar cursos online, pois em novembro fui contemplada com 3 meses de acesso através de uma bolsa de estudos para mulheres e minorias de gênero.
+
+## Eventos
+
+Além dos cursos, alguns eventos também foram uma ótima oportunidade para aprender mais sobre o R e programação.
+A [13a aMostra Estatística](https://www.ime.usp.br/~amostra/) que aconteceu no IME/USP foi um evento muito interessante onde tive a oportunidade de participar de 3 mini-cursos oferecidos pela [Curso-R](https://www.curso-r.com/): Exploratory Data Analisys, Shiny e Rmarkdown.
+Agradeço a organização deste evento por oferecer um conteúdo tão legal e gratuito!
+
+Em novembro também fui contemplada com uma [bolsa para jovens comunicadores](https://escoladedados.org/2018/10/confira-a-lista-dos-selecionados-para-as-bolsas-de-jovens-comunicadores-do-coda-br/) e tive a oportunidade de participar do evento Coda BR. Eu fiquei tão feliz de poder participar deste evento, que mal tenho palavras para explicar como foi especial.
+Apesar de ter assistido conteúdo sobre R, o CODA BR foi muito além de programação: conheci mais sobre jornalismo de dados, tive a oportunidade de assistir palestras de especialistas nacionais e internacionais, conhecer pessoas que já admirava (a emoção de conhecer o Turicas, que eu admirava e conhecia através de podcasts e do trabalho no [Brasil.IO](https://brasil.io/home)), e principalmente conhecer muitas pessoas interessantes que depois se tornaram muito queridas para mim e que também fazem parte desta jornada.
+
+## Ensinando R?
+
+Também tive a oportunidade de ensinar outras pessoas sobre R.
+Acredito que, mesmo que ainda não sejamos experts, podemos compartilhar o que aprendemos com outras pessoas que também estão nessa caminhada.
+Além disso, descobri que ensinar outras pessoas é uma ótima forma de aprender mais também, principalmente pois quando preparo uma apresentação, eu pesquiso bastante e acabo aprendendo coisas novas (e tento sempre colocar as apresentações neste site para facilitar que outras pessoas tenham acesso).
+
+R-Ladies no [CODATA](http://www.ictp-saifr.org/2018-codata-rda-school-of-research-data-science/), em São Paulo:
+
+```{r}
+knitr::include_graphics("https://beatrizmilz.com/img/rladies_codata.jpg") 
+```
+
+## Conclusão
+
+Ainda tenho muito para aprender sobre R.
+Ainda tenho muita dificuldade em estatística (mas descobri que tenho mais facilidade em outras tarefas que fazemos com R!).
+Espero aprender muito ainda, e compartilhar muito conhecimento também.
+Desejo contribuir para que a comunidade R-Ladies cresça, e retribuir, mesmo que apenas parcialmente, tudo o que recebi neste tempo e de alguma forma me ajudou nesta trajetória.
+
+Gratidão à todos que contribuíram de alguma forma nessa caminhada em programação!
+
+E para fechar o post, coloco uma foto de recordação que significa muito para mim e simboliza a minha evolução neste meio ano.
+
+Eu e a camiseta que recebi por ter participado da Hacktoberfest de 2018:
+
+```{r out.width="30%"}
+knitr::include_graphics("https://beatrizmilz.com/img/hacktoberfest.jpg")
+```
+
