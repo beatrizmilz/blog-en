@@ -19,13 +19,20 @@ about:
       href: https://twitter.com/BeaMilz      
 ---
 
+<center>
+<div class="btn-group" role="group" aria-label="About">
+  <a href="about.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> 
+    <a href="about-pt.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">Português</button></a> 
+</div>
+</center>
+
 ::: {#hero-heading}
 Hi!
 My name is Beatriz, and I am a R-Lady from Brazil 🇧🇷 💜.
 
 I'm a [tidyverse instructor certified by RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/), and I teach R at [Curso-R](https://curso-r.com/).
 
-I have been writing about R in my [blog in Portuguese](https://beatrizmilz.com/blog/) since 2019.
+I have been writing about R in my blog since 2019.
 I'm mostly active in the Brazilian R community, co-organizing communities and events, such as: [R-Ladies São Paulo](https://twitter.com/RLadiesSaoPaulo), [Latin-R](https://twitter.com/LatinR_Conf), and [satRday São Paulo](https://twitter.com/satRdaySP).
 
 I'm a PhD Candidate at the [University of São Paulo](http://www.iee.usp.br/), in Environmental Sciences.

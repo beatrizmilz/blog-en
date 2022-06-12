@@ -1,0 +1,42 @@
+---
+title: "Beatriz Milz"
+comments: false
+image: bea.jpg
+about:
+  template: trestles
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:milz.bea@gmail.com
+    - icon: file-pdf
+      text: Resume
+      href: https://beatrizmilz.github.io/resume/index.pdf  
+    - icon: github
+      text: Github
+      href: https://github.com/beatrizmilz
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/BeaMilz      
+---
+
+
+<center>
+<div class="btn-group" role="group" aria-label="About">
+  <a href="about.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> 
+    <a href="about-pt.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">Português</button></a> 
+</div>
+</center>
+
+::: {#hero-heading}
+Olá!
+Meu nome é Beatriz, e eu sou uma R-Lady do Brazil 🇧🇷 💜.
+
+Eu sou uma [instrutora de tidyverse certificada pelA RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/), e eu ensino R na [Curso-R](https://curso-r.com/).
+
+Eu comecei a escrever textos sobre R em 2019.
+
+Eu sou ativa na comunidade de R no Brasil, participando da co-organização de comunidades e eventos, como: [R-Ladies São Paulo](https://twitter.com/RLadiesSaoPaulo), [Latin-R](https://twitter.com/LatinR_Conf), e [satRday São Paulo](https://twitter.com/satRdaySP).
+
+Eu faço doutorado na [Universidade de São Paulo](http://www.iee.usp.br/), em Ciências Ambientais.
+Minha pesquisa é sobre **transparência de informações** na **gestão de recursos hídricos** usados para abastecimento público na Macrometrópole Paulista.
+:::
