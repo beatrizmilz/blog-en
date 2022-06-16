@@ -28,7 +28,13 @@ The deploy is made with [Netlify](https://www.netlify.com/), and the comments us
 ```{r echo=FALSE}
 number_of_posts <- fs::dir_ls("posts/", type = "directory") |> length()
 
-number_of_talks <- fs::dir_ls("talks/", type = "directory") |> length()
+number_of_talks_pt <- fs::dir_ls("talks/pt/", type = "directory") |> length()
+
+number_of_talks_en <- fs::dir_ls("talks/en/", type = "directory") |> length()
+
+number_of_talks_es <- fs::dir_ls("talks/es/", type = "directory") |> length()
+
+number_of_talks <- number_of_talks_es + number_of_talks_en + number_of_talks_pt
 ```
 
 As by `r format(Sys.Date(), "%B %d,  %Y")`, this blog has **`r number_of_posts` blog posts** and content from **`r number_of_talks` talks/presentations**.
