@@ -1,7 +1,7 @@
 ---
 subtitle: "Primeiro post sobre acesso à APIs usando R."
 draft: FALSE
-author: "Beatriz Milz e Julio Trecenti"
+author: ["Beatriz Milz", "Julio Trecenti"]
 categories: ["API", "purrr", "httr", "Web Scraping"]
 title: "Acessando APIs com R: Exemplos com a PokéAPI!"
 date: "2021-11-29"

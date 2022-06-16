@@ -29,11 +29,17 @@ website:
           - text: Português
             href: posts/pt.qmd
       - text: Talks
-        href: /talks/
+        menu:
+          - text: English
+            href: talks/en/index.qmd
+          - text: Português
+            href: talks/pt/index.qmd
       - text: Resume
         href: https://beatrizmilz.github.io/resume/index.pdf
-      - text: My blog in Portuguese
-        href: https://beatrizmilz.com/blog/
+      # - text: My blog in Portuguese
+      #   href: https://beatrizmilz.com/blog/
+      - text: GitHub Sponsors
+        href: https://github.com/sponsors/beatrizmilz/
       - icon: github
         href: https://github.com/beatrizmilz/blog-en
       - icon: twitter
@@ -50,6 +56,7 @@ format:
     citations-hover: true
     footnotes-hover: true
     include-in-header: meta.html
+    toc: true
 
 editor: visual
 

@@ -26,6 +26,12 @@
       "posts/*/en/*.qmd",
       "posts/*/pt/*.qmd",
       "*/en/*.qmd"
+    ],
+    "talks/pt/index.qmd": [
+      "*/*.qmd"
+    ],
+    "talks/en/index.qmd": [
+      "*/*.qmd"
     ]
   }
 }

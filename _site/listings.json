@@ -71,5 +71,19 @@
       "/posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html",
       "/posts/2022-06-05-creating-a-blog-with-quarto/en/index.html"
     ]
+  },
+  {
+    "listing": "/talks/pt/index.html",
+    "items": []
+  },
+  {
+    "listing": "/talks/en/index.html",
+    "items": [
+      "/talks/en/2021-learnr-latinr/index.html",
+      "/talks/en/2021-experience-useR/index.html",
+      "/talks/en/2020-RStudio-certification/index.html",
+      "/talks/en/2019-user-rladies-sp/index.html",
+      "/talks/en/2018-knitr-codata/index.html"
+    ]
   }
 ]

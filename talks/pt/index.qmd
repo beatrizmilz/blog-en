@@ -1,0 +1,23 @@
+---
+title: "Apresentações em português"
+comments: false
+listing:
+  contents: "*/*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+page-layout: full
+title-block-banner: true
+---
+
+------------------------------------------------------------------------
+
+Minhas apresentações anteriores estão [neste link](https://beatrizmilz.com/talk/). Aos poucos irei migrar o conteúdo para essa página :)
+
+**Próximas atividades**:
+
+-   2022 - Cursos na [Curso-R](https://curso-r.com/): Dashboards I (julho), Relatórios e apresentações (agosto), Web scraping (setembro), Visualização de dados (outubro), Relatórios e apresentações (novembro), Deploy (dezembro). [Formulário de bolsas](https://forms.gle/9t1JGHLH3TBdzUFLA).
+
+------------------------------------------------------------------------

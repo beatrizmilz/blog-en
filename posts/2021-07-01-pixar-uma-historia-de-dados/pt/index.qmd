@@ -1,10 +1,13 @@
 ---
 title: "Pixar: Uma História de dados"
 subtitle: "Post publicado no blog da [Escola de Dados](https://escoladedados.org/2021/07/pixar-uma-historia-de-dados/)"
-author: "Fernando Barbalho, Emmanuelle Nunes e  Beatriz Milz"
+author: 
+  - "Fernando Barbalho"
+  - "Emmanuelle Nunes"
+  - "Beatriz Milz"
 date: '2021-07-03'
 categories: ["R"]
-toc: true
+#toc: true
 image: hex-featured.png
 ---
 
@@ -23,7 +26,7 @@ O material também está disponível como um notebook nesse [repositório do Git
 knitr::include_graphics("https://escoladedados.org/wp-content/uploads/2021/06/27710009132_c62048fd70_c.jpeg")
 ```
 
-## INTRODUÇÃO
+## Introdução
 
 A ideia de traduzir o texto ['Pixar: a data story'](https://towardsdatascience.com/pixar-a-data-story-a3a2cad95081) para português foi impulsionada pela disponibilização da base de dados sobre filmes da Pixar em nossa língua no pacote [Dados](https://cienciadedatos.github.io/dados/).
 Esse pacote foi criado pela comunidade de R na América Latina, contando com a colaboração de pessoas que fazem parte da [Latin-R](https://latin-r.com/), [R-Ladies](https://rladies.org/) e [Curso-R](https://curso-r.com/material/).
@@ -69,7 +72,7 @@ pixar_completo_nome_curto <- pixar_completo %>%
   )
 ```
 
-## PIXAR E AS LEMBRANÇAS AFETIVAS
+## Pixar e as lembranças afetivas
 
 Então, você finalmente completou 18 anos.
 Está se preparando para ir para a faculdade.
@@ -97,7 +100,7 @@ paleta_de_cores <-
 paleta_de_cores_2 <- c("#FFB400", "#FFC740", "#C20008", "#FF020D", "#13AFEF")
 ```
 
-## ORÇAMENTO, BILHETERIA... E CRÍTICA
+## Orçamento, bilheteria e crítica
 
 Eu não sou o Andy nesta história.
 Eu sou o pai dele.
@@ -431,7 +434,7 @@ Toy Story está neste quadrante, mas como indicamos anteriormente, é difícil a
 Por outro lado, há coincidência na maioria dos outros filmes, especialmente no quadrante dos filmes com melhor classificação da crítica e desempenho de bilheteria.
 Para estes casos, Toy Story 3, Toy Story 4 e Procurando Nemo parecem ser os melhores exemplos.
 
-## APENAS CONTINUE A NADAR
+## Apenas continue a nadar
 
 Chegamos agora ao final do texto.
 Vimos que as histórias contadas pela Pixar são parte de um conjunto de memórias compartilhadas por crianças, adolescentes, jovens e seus pais em várias partes do planeta.
@@ -445,7 +448,7 @@ knitr::include_graphics("https://escoladedados.org/wp-content/uploads/2021/06/20
 O mundo estará cheio de tubarões, medusas, e também Nemos, Dorys, baleias e tartarugas.
 No fim do dia, o que parece ser mais importante é a famosa frase: continue a nadar.
 
-## CRÉDITOS
+## Créditos
 
 Como não poderia ser de outra forma, devemos deixar os créditos dos filmes.
 Aqui a opção é utilizar os recursos de visualização de dados.

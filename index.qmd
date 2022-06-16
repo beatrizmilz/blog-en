@@ -23,6 +23,7 @@ page-layout: full
 title-block-banner: false
 comments: false
 include-in-header: meta.html  
+toc: false
 ---
 
 ## Posts in English <a href="../posts/en.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a>
@@ -34,3 +35,4 @@ include-in-header: meta.html
 
 ::: {#posts-ptbr}
 :::
+
