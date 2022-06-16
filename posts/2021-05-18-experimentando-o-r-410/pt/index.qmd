@@ -1,0 +1,186 @@
+---
+title: "Experimentando o R 4.1.0"
+subtitle: "Primeiras impressões ao usar o nova versão do R"
+author: "Beatriz Milz"
+categories:
+  - RStudio
+  - R
+  - Pipe
+date: 2021-05-18
+toc: true
+image: featured-photo.svg
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introdução
+
+A versão do 4.1.0 do R foi lançada **hoje** (dia 18 de maio de 2021), e a comunidade está bem animada com a chegada do pipe `|>` no R base!
+
+Esse post **não** tem como objetivo explicar quais foram as mudanças, e sim para apenas mostrar as primeiras impressões ao usar **a versão 4.1.0**!
+Caso você queira saber mais sobre as mudanças, recomendo esses textos:
+
+-   [Post "R 4.1: o novo pipe está chegando!", por Caio Lente, da Curso-R](https://blog.curso-r.com/posts/2021-05-06-o-novo-pipe-esta-chegando/)
+
+-   [Post "New features in R 4.1.0", blog da jumping rivers](https://www.jumpingrivers.com/blog/new-features-r410-pipe-anonymous-functions/)
+
+-   *edit*: [Video por Samuel Macêdo: Qual a diferença entre o pipe do magrittr e o do R base?](https://www.youtube.com/watch?v=6SZc4v0FDTw)
+
+Além disso, amanhã acontecerá uma live no canal do Youtube da Curso-R (e eu pretendo participar):
+
+<center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RPSLFU_5OGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+</center>
+
+## Atalho do pipe no RStudio
+
+Além de atualizar a versão do R para 4.1.0 ([veja mais aqui](https://www.r-project.org/)), eu também atualizei a versão do RStudio para a preview ([veja mais aqui](https://www.rstudio.com/products/rstudio/download/preview/)).
+
+A versão preview apresenta a opção de atalho para o novo pipe, seguindo os passos: Tools \> Global Options \> Code \> Use native pipe operator.
+
+```{r echo=FALSE}
+knitr::include_graphics("https://beatrizmilz.com/img/atalho_rstudio_novo_pipe.png")
+```
+
+Ativando essa opção, é possível usar o mesmo atalho de costume para escrever o pipe do R base: `Ctrl` + `Shift` + `M`!
+
+## Exemplos!
+
+Para experimentar, resolvi tentar adaptar os exemplos apresentados no [capítulo sobre o operador pipe](https://livro.curso-r.com/6-1-o-operador-pipe.html), do livro [Ciência de Dados em R](https://livro.curso-r.com/index.html), da qual sou contribuidora!
+
+<a href='https://livro.curso-r.com/index.html'>
+
+```{r echo=FALSE, fig.align='center', out.width="30%"}
+knitr::include_graphics("https://curso-r.com/images/produtos/hex-livro.png")
+```
+
+</a>
+
+Como vou apresentar o código original mostrado no livro (usando o pipe do `{magrittr}`) e a adaptação com pipe do R base, é necessário carregar o pipe do pacote `{magrittr}` para que os exemplos a seguir funcionem:
+
+```{r}
+# Esse argumento include.only é útil nesse caso,
+# pois apenas a função %>% é carregada
+library(magrittr, include.only = "%>%")
+```
+
+O primeiro exemplo do livro mostra algumas equivalências, e adiciono então uma terceira linha, mostrando a equivalência com o pipe do R base: substituimos o `%>%` do `{magrittr}`, pelo `|>` do R base!
+
+```{r eval=FALSE, include=TRUE}
+f(x, y) # sem o pipe
+x %>% f(y) # com o pipe do magrittr
+x |> f(y) # com o pipe do R base
+```
+
+## Exemplo 1
+
+No primeiro exemplo, apenas foi necessário substituir o pipe do magrittr `%>%` pelo pipe do R base `|>`:
+
+Exemplo do livro:
+
+> Vamos calcular a raiz quadrada da soma dos valores de 1 a 4.
+> Primeiro, sem o pipe.
+
+```{r}
+x <- c(1, 2, 3, 4)
+```
+
+Clique abaixo nos diferentes "Panels" para verificar a diferença no código!
+
+::: panel-tabset
+## Sem pipe
+
+```{r}
+# Versão original do livro, sem usar o pipe
+sqrt(sum(x))
+```
+
+## Pipe magrittr
+
+```{r}
+# Versão original do livro, com o pipe do magrittr
+x %>% sum() %>% sqrt()
+```
+
+## Versão adaptada com pipe do R base
+
+```{r}
+# Versão usando o pipe do R base
+x |> sum() |> sqrt()
+```
+:::
+
+Foi tranquilo!
+
+## Exemplo 2
+
+Neste próximo exemplo, não basta fazer a substituição feita no exemplo anterior.
+Isso acontece porque o pipe do magrittr aceita utilizar o ponto `.` (chamado de *dot placeholder* em inglês) para indicar onde o resultado recebido pelo pipe será substituído na próxima operação.
+Por outro lado, o pipe do R base não aceita essa forma.
+
+Como o exemplo do livro utiliza o ponto `.`, isso teve que ser adaptado para que o código funcionasse!
+Essa adaptação ocorreu utilizando outra grande novidade do R 4.1.0: **as funções anônimas**: `\(x)`.
+Meu objetivo não é explicar aqui, mas recomendo fortemente que leia [texto do Caio Lente](https://blog.curso-r.com/posts/2021-05-06-o-novo-pipe-esta-chegando/), pois lá tem uma seção inteira sobre esse tema.
+Sinceramente não foi de primeira que eu acertei o uso da função anônima no exemplo abaixo, mas depois de olhar alguns outros exemplos, deu certo!
+
+Exemplo do livro:
+
+> Queremos que o dataset seja recebido pelo segundo argumento (data=) da função "lm".
+
+Clique abaixo nos diferentes "Panels" para verificar a diferença no código!
+
+::: panel-tabset
+## Pipe magrittr
+
+```{r}
+# Versão original do livro usando o pipe do magrittr
+airquality %>%
+  na.omit() %>%
+  lm(Ozone ~ Wind + Temp + Solar.R, data = .) %>%
+  summary()
+```
+
+## R base 4.1
+
+Versão adaptada com pipe do R base 4.1.
+
+```{r}
+# Versão usando o pipe do R base + funções anônimas
+airquality |>
+  na.omit()  |>
+  {\(x) lm(formula = Ozone ~ Wind + Temp + Solar.R, data = x)}() |>
+  summary()
+```
+
+## EDIT: R base 4.2
+
+Versão adaptada com pipe do R base 4.2: 
+
+```{r}
+# Versão usando o pipe do R base + funções anônimas
+airquality |>
+  na.omit() |>
+  lm(Ozone ~ Wind + Temp + Solar.R, data = _) |>
+  summary()
+```
+:::
+
+## Conclusão
+
+É muito legal ver que a linguagem está desenvolvendo e incorporando contribuições que surgiram das demandas da comunidade!
+Muito empolgante testar coisas novas.
+Caso você também esteja animada(o), [assista a live da Curso-R sobre o tema](https://www.youtube.com/embed/RPSLFU_5OGk)!
+
+Lembrando que os códigos acima utilizando o pipe do R base e as notações das funções anônimas apenas funcionarão se você instalou a nova versão do R: 4.1.0!
+
+Essas são as informações relacionadas à plataforma que estou usando, e a versão do R:
+
+```{r}
+sessioninfo::session_info()$platform
+```

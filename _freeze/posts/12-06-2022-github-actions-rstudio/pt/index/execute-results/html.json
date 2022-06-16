@@ -1,0 +1,14 @@
+{
+  "hash": "f9104f189dda8bba5462669ac8de7b1f",
+  "result": {
+    "markdown": "---\ntitle: \"lero lero\"\nsubtitle: \"lero lero\"\nauthor: \"Beatriz Milz\"\ndate: \"2022-06-12\"\ncategories: [\"Git\", \"GitHub\", \"GitHub Actions\", \"Automations\", \"RStudio\"]\n# image: \"img/search.png\"\ntoc: true\ndraft: true\n---\n\n<a href=\"../pt/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">Português</button></a>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "hash": "3e7a0cef417c26724da311dea6c798b2",
+  "result": {
+    "markdown": "---\ntitle: \"lero lero\"\nsubtitle: \"lero lero\"\nauthor: \"Beatriz Milz\"\ndate: \"2022-06-12\"\ncategories: [\"Git\", \"GitHub\", \"GitHub Actions\", \"Automations\", \"RStudio\"]\n# image: \"img/search.png\"\ntoc: true\ndraft: true\n---\n\n<a href=\"../12-06-2022-github-actions-rstudio/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2019-01-29-meio-ano-r/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2019-06-24-compartilhando-contedo-utilizando-r/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2019-08-12-tidydevday/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2019-08-21-desenvolvendo-meu-primeiro-shiny-app/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2019-08-31-um-ano-aprendendo-r/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2020-12-03-dicas-01-tabelas/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2020-12-17-dicas-02-graficos/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2021-03-02-rstudio-tidyverse-instructor-certification/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2021-03-15-dicas-03-relatorio/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2021-11-29-api-pokemon/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2022-02-19-api-github-1/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2022-03-08-googlesheets4/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2022-03-18-onedrive/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2022-04-06-pacote-dados/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2022-06-05-creating-a-blog-with-quarto/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n<a href=\"../2022-06-11-bases-de-dados/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">NA</button></a>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

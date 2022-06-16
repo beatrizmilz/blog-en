@@ -126,3 +126,7 @@ div.quarto-about-trestles .about-entity .about-link:hover {
     border-color: var(--bs-blue);
     border-style: dashed;
 }
+
+.nav-link {
+    color: var(--bs-purple);
+}
