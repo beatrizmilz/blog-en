@@ -240,13 +240,12 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Introduction to GitHub Actions</h1>
-            <p class="subtitle lead">GitHub Actions Series - 1</p>
+            <p class="subtitle lead">GitHub Actions Series 1 - In this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R.</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Git</div>
                 <div class="quarto-category">GitHub</div>
                 <div class="quarto-category">GitHub Actions</div>
                 <div class="quarto-category">Automations</div>
-                <div class="quarto-category">RStudio</div>
               </div>
                   </div>
   </div>
@@ -301,7 +300,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p><a href="https://rstudioconf2022.sched.com/event/11ia9?iframe=no"><img src="images/talk.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
-<p>In this post, <strong>I will briefly introduce GitHub Actions and show how you can start using your R scripts</strong>.</p>
+<p>In this post, <strong>I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R</strong>.</p>
 <section id="what-is-github-actions" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-github-actions">What is GitHub Actions?</h2>
 <p><a href="https://github.com/features/actions">GitHub Actions</a> is a feature by <a href="https://github.com/">GitHub</a> that enables us to automate tasks with code. For example, we can specify a series of commands to run when activated!</p>
@@ -373,7 +372,7 @@ What is CI/CD in the context of R packages?
 <p>First, the automated process made with GHA is called <strong>Workflow</strong>. The workflow has two main parts: <strong>Events</strong> and <strong>Jobs</strong>.</p>
 <ul>
 <li><p><strong>Events</strong> describe what can start a workflow. For example, an event can be “start this workflow every day at 9am”, or “every time someone makes a push into the repository” (in other words, there is some change in the code).</p></li>
-<li><p><strong>Jobs</strong> describes what the computer should do. Imagine that it starts with no software installed at all! So we need to write which Operational System (OS) we want our code to run (for example, Ubuntu / Windows/ Mac OS). Also, we need to install R and any packages we need to have to run the code. After that, we can add the script we want to run in R and then save any generated results.</p></li>
+<li><p><strong>Jobs</strong> describes what the computer should do. Imagine that it starts with no software installed at all! So we need to tell which Operational System (OS) we want our code to run (for example, Ubuntu / Windows/ Mac OS). Also, we need to install R and any packages we need to have to run the code. After that, we can add the script we want to run in R and then save any generated results.</p></li>
 </ul>
 <p>Here is an example of a simple Workflow file. The workflow starts when pressing a button on GitHub (the event), and it installs R and then prints the message “Hello R World!” on the console.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Event - What starts this workflow?</span></span>
@@ -402,7 +401,7 @@ What is CI/CD in the context of R packages?
 <section id="acknowledgments" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
 <ul>
-<li><p><a href="https://github.com/dfalbel">Daniel Falbel</a>, <a href="https://github.com/Athospd">Athos Damiani</a>, and <a href="https://github.com/jtrecenti">Julio Trecenti</a>: the people that first introduced me to GitHub Actions and send a bunch of awesome links. Thanks!</p></li>
+<li><p><a href="https://github.com/dfalbel">Daniel Falbel</a>, <a href="https://github.com/Athospd">Athos Damiani</a>, and <a href="https://github.com/jtrecenti">Julio Trecenti</a>: the people that first introduced me to GitHub Actions, aswered questions, and send a bunch of awesome links. Thanks!</p></li>
 <li><p>The <a href="https://github.com/r-lib/actions/graphs/contributors">contributors of the r-lib/actions repository</a>:🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.</p></li>
 <li><p><a href="https://github.com/jtrecenti">Julio Trecenti</a>: thanks for reviewing the post!</p></li>
 </ul>

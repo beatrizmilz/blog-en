@@ -1,9 +1,9 @@
 ---
 title: "Introduction to GitHub Actions"
-subtitle: "GitHub Actions Series - 1"
+subtitle: "GitHub Actions Series 1 - In this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R."
 author: "Beatriz Milz"
 date: "2022-06-30"
-categories: ["Git", "GitHub", "GitHub Actions", "Automations", "RStudio"]
+categories: ["Git", "GitHub", "GitHub Actions", "Automations"]
 image: "featured.png"
 toc: true
 draft: false
@@ -22,7 +22,7 @@ This series of posts are complementary material for my [RStudio Conference - rst
 
 [![](images/talk.png){fig-align="center" width="70%"}](https://rstudioconf2022.sched.com/event/11ia9?iframe=no)
 
-In this post, **I will briefly introduce GitHub Actions and show how you can start using your R scripts**.
+In this post, **I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R**.
 
 ## What is GitHub Actions?
 
@@ -105,7 +105,7 @@ The workflow has two main parts: **Events** and **Jobs**.
 
 -   **Jobs** describes what the computer should do.
     Imagine that it starts with no software installed at all!
-    So we need to write which Operational System (OS) we want our code to run (for example, Ubuntu / Windows/ Mac OS).
+    So we need to tell which Operational System (OS) we want our code to run (for example, Ubuntu / Windows/ Mac OS).
     Also, we need to install R and any packages we need to have to run the code.
     After that, we can add the script we want to run in R and then save any generated results.
 
@@ -140,7 +140,7 @@ In the next post, I'll write how you can create a GHA that runs an R script and 
 
 ## Acknowledgments
 
-- [Daniel Falbel](https://github.com/dfalbel), [Athos Damiani](https://github.com/Athospd), and [Julio Trecenti](https://github.com/jtrecenti):  the people that first introduced me to GitHub Actions and send a bunch of awesome links. Thanks!
+- [Daniel Falbel](https://github.com/dfalbel), [Athos Damiani](https://github.com/Athospd), and [Julio Trecenti](https://github.com/jtrecenti):  the people that first introduced me to GitHub Actions, aswered questions, and send a bunch of awesome links. Thanks!
 
 - The [contributors of the r-lib/actions repository](https://github.com/r-lib/actions/graphs/contributors):🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.
 
