@@ -13,15 +13,15 @@ listing:
     sort-ui: true
     filter-ui: true
     page-size: 3
-  # - id: posts-ptbr
-  #   contents: posts/series-gha/*/pt/*.qmd
-  #   type: default
-  #   fields: [image, date, title, subtitle, categories, author, reading-time]  
-  #   sort: "date desc"
-  #   categories: unnumbered
-  #   sort-ui: true
-  #   filter-ui: true
-  #   page-size: 3    
+  - id: posts-ptbr
+    contents: posts/series-gha/*/pt/*.qmd
+    type: default
+    fields: [image, date, title, subtitle, categories, author, reading-time]
+    sort: "date desc"
+    categories: unnumbered
+    sort-ui: true
+    filter-ui: true
+    page-size: 3
 page-layout: full
 title-block-banner: false
 toc: false
@@ -29,14 +29,13 @@ toc: false
 
 Here you can find a series of posts about GitHub Actions, which are complementary material for my [lightning talk](https://rstudioconf2022.sched.com/event/11ia9?iframe=no)) at the [RStudio Conference - rstudio::conf 2022](https://www.rstudio.com/conference/).
 
-
-
 ## Posts in English
 
 ::: {#posts-en}
 :::
 
-<!-- ## Posts em Português -->
+## Posts em Português
 
-<!-- ::: {#posts-ptbr} -->
-<!-- ::: -->
+::: {#posts-ptbr}
+
+:::

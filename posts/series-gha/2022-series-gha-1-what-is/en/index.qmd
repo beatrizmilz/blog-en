@@ -112,6 +112,9 @@ The workflow has two main parts: **Events** and **Jobs**.
     Also, we need to install R and any packages we need to have to run the code.
     After that, we can add the script we want to run in R and then save any generated results.
 
+
+## Example 
+
 Here is an example of a simple Workflow file.
 The workflow starts when pressing a button on GitHub (the event), and it installs R and then prints the message "Hello R World!" on the console.
 
