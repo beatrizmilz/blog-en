@@ -1,5 +1,5 @@
 ---
-title: "Introduction to GitHub Actions"
+title: "Introduction to GitHub Actions to R users"
 subtitle: "GitHub Actions Series 1 - In this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R."
 author: "Beatriz Milz"
 date: "2022-06-30"
@@ -39,7 +39,8 @@ We can do a lot of different automations with GitHub Actions, such as:
 
 -   Rendering an RMarkdown or Quarto document;
 
--   And so on! 🚀
+-   And so on!
+    🚀
 
 ## How to use GHA in an R package?
 
@@ -93,7 +94,9 @@ This allows the package website and documentation to be always up to date.
 ## How to use GHA in an R script?
 
 We already know that we can make awesome automation with R packages using GitHub Actions.
-But most R users that I know use R Scripts and RMarkdown files in their daily use. I did not find examples of using GHA with simple scripts (without the package structure) in the [r-lib/actions repository](https://github.com/r-lib/actions/blob/v2-branch/examples/README.md). So, to do that, we need to get used to how GHA works!
+But most R users that I know use R Scripts and RMarkdown files in their daily use.
+I did not find examples of using GHA with simple scripts (without the package structure) in the [r-lib/actions repository](https://github.com/r-lib/actions/blob/v2-branch/examples/README.md).
+So, to do that, we need to get used to how GHA works!
 
 The [GitHub documentation about workflows](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) is an excellent source to learn more about this topic.
 
@@ -136,17 +139,17 @@ jobs:
 ## See you in the next post!
 
 This is the general idea of GitHub Actions.
-In the next post, I'll write how you can create a GHA that runs an R script and saves the result into the GitHub repository. Stay tuned!
+In the next post, I'll write how you can create a GHA that runs an R script and saves the result into the GitHub repository.
+Stay tuned!
 
 ## Acknowledgments
 
-- [Daniel Falbel](https://github.com/dfalbel), [Athos Damiani](https://github.com/Athospd), and [Julio Trecenti](https://github.com/jtrecenti):  the people that first introduced me to GitHub Actions, aswered questions, and send a bunch of awesome links. Thanks!
+-   [Daniel Falbel](https://github.com/dfalbel), [Athos Damiani](https://github.com/Athospd), and [Julio Trecenti](https://github.com/jtrecenti): the people that first introduced me to GitHub Actions, aswered questions, and send a bunch of awesome links.
+    Thanks!
 
-- The [contributors of the r-lib/actions repository](https://github.com/r-lib/actions/graphs/contributors):🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.
+-   The [contributors of the r-lib/actions repository](https://github.com/r-lib/actions/graphs/contributors):🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.
 
-- [Julio Trecenti](https://github.com/jtrecenti): thanks for reviewing the post!
-
-
+-   [Julio Trecenti](https://github.com/jtrecenti): thanks for reviewing the post!
 
 ## References
 
