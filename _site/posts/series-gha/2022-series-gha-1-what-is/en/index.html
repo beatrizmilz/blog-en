@@ -192,6 +192,15 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
+        <li>
+    <a class="dropdown-item" href="../../../../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
         <li>
@@ -274,6 +283,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <li><a href="#how-to-use-gha-in-an-r-package" id="toc-how-to-use-gha-in-an-r-package" class="nav-link" data-scroll-target="#how-to-use-gha-in-an-r-package">How to use GHA in an R package?</a></li>
   <li><a href="#how-to-use-gha-in-an-r-script" id="toc-how-to-use-gha-in-an-r-script" class="nav-link" data-scroll-target="#how-to-use-gha-in-an-r-script">How to use GHA in an R script?</a></li>
   <li><a href="#see-you-in-the-next-post" id="toc-see-you-in-the-next-post" class="nav-link" data-scroll-target="#see-you-in-the-next-post">See you in the next post!</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -298,10 +308,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>We can do a lot of different automations with GitHub Actions, such as:</p>
 <ul>
 <li><p>Downloading and saving a file everyday (such as <code>.csv</code> / <code>.xlsx</code> / <code>.json</code> ..);</p></li>
-<li><p>Running an R script and saving the results into a database, or a Google Sheets, for example;</p></li>
+<li><p>Running an R script and saving the results into a database, or a Google Sheet, for example;</p></li>
 <li><p>Running web scraping routines;</p></li>
 <li><p>Rendering an RMarkdown or Quarto document;</p></li>
-<li><p>And so on! 🚀</p></li>
+<li><p>Among other things! 🚀</p></li>
 </ul>
 </section>
 <section id="how-to-use-gha-in-an-r-package" class="level2">
@@ -333,6 +343,11 @@ What is CI/CD in the context of R packages?
 </div>
 <div class="callout-body-container callout-body">
 <p>I would like to thank all the work made by the <a href="https://github.com/r-lib/actions/graphs/contributors">contributors of the r-lib/actions repository</a>. 🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/r-lib/actions/blob/v2-branch/examples/README.md"><img src="images/actions-repo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Here are some examples of how to set up GH Actions in packages:</p>
@@ -353,7 +368,7 @@ What is CI/CD in the context of R packages?
 </section>
 <section id="how-to-use-gha-in-an-r-script" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-use-gha-in-an-r-script">How to use GHA in an R script?</h2>
-<p>We already know that we can make awesome automation with R packages using GitHub Actions. But most R users that I know use R Scripts and RMarkdown files in their daily use. To do that, we need to get used to how GHA works!</p>
+<p>We already know that we can make awesome automation with R packages using GitHub Actions. But most R users that I know use R Scripts and RMarkdown files in their daily use. I did not find examples of using GHA with simple scripts (without the package structure) in the <a href="https://github.com/r-lib/actions/blob/v2-branch/examples/README.md">r-lib/actions repository</a>. So, to do that, we need to get used to how GHA works!</p>
 <p>The <a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions">GitHub documentation about workflows</a> is an excellent source to learn more about this topic.</p>
 <p>First, the automated process made with GHA is called <strong>Workflow</strong>. The workflow has two main parts: <strong>Events</strong> and <strong>Jobs</strong>.</p>
 <ul>
@@ -375,14 +390,22 @@ What is CI/CD in the context of R packages?
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest </span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">       # Install R</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> r-lib/actions/setup-r@v2    </span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> r-lib/actions/setup-r@v3    </span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> print-message   </span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">        # Code to execute R script</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> Rscript -e 'print("Hello R World!")' </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="see-you-in-the-next-post" class="level2">
 <h2 class="anchored" data-anchor-id="see-you-in-the-next-post">See you in the next post!</h2>
-<p>This is the general idea of GitHub Actions. In the next post, I’ll write how you can create a GHA that runs an R script and saves the result into the GitHub repository.</p>
+<p>This is the general idea of GitHub Actions. In the next post, I’ll write how you can create a GHA that runs an R script and saves the result into the GitHub repository. Stay tuned!</p>
+</section>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<ul>
+<li><p><a href="https://github.com/dfalbel">Daniel Falbel</a>, <a href="https://github.com/Athospd">Athos Damiani</a>, and <a href="https://github.com/jtrecenti">Julio Trecenti</a>: the people that first introduced me to GitHub Actions and send a bunch of awesome links. Thanks!</p></li>
+<li><p>The <a href="https://github.com/r-lib/actions/graphs/contributors">contributors of the r-lib/actions repository</a>:🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.</p></li>
+<li><p><a href="https://github.com/jtrecenti">Julio Trecenti</a>: thanks for reviewing the post!</p></li>
+</ul>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
