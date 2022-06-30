@@ -2,7 +2,7 @@
 title: "Bea Milz"
 listing:
   - id: posts-en
-    contents: posts/*/en/*.qmd
+    contents: posts/**/en/*.qmd
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
@@ -11,7 +11,7 @@ listing:
     filter-ui: true
     page-size: 3
   - id: posts-ptbr
-    contents: posts/*/pt/*.qmd
+    contents: posts/**/pt/*.qmd
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
@@ -35,4 +35,3 @@ toc: false
 
 ::: {#posts-ptbr}
 :::
-
