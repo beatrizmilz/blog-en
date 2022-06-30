@@ -1,0 +1,14 @@
+{
+  "hash": "a69710e9f398ee723bfa37f203097b7d",
+  "result": {
+    "markdown": "---\ntitle: \"GitHub Actions Series: Making awesome automations\"\nsubtitle: \"Here is a list of posts about GitHub Actions\"\nauthor: \"Beatriz Milz\"\ndate: \"2022-06-29 \"\ncategories: [\"Git\", \"GitHub\", \"GitHub Actions\", \"Automations\", \"RStudio\"]\nimage: \"featured.png\"\ntoc: true\ndraft: false\n---\n\n<a href=\"../en/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">English</button></a>\n<a href=\"../pt/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">Português</button></a>\n\n\nHere you can find a series of posts about GitHub Actions, which are complementary material for my talk at the RStudio Conference. \n\n- Comming soon!\n\n> Post updated in 2022-06-29.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,23 @@
+---
+title: "Série GitHub Actions: Criando automações fantásticas!"
+subtitle: "Lista de posts sobre GitHub Actions"
+author: "Beatriz Milz"
+date: "2022-06-29 "
+categories: ["Git", "GitHub", "GitHub Actions", "Automations", "RStudio"]
+image: "featured.png"
+toc: true
+draft: false
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+Aqui você encontrará uma série de posts sobre GitHub Actions, que são materiais suplementares para a minha palestra na RStudio Conference.
+
+- Em breve!
+
+> Post atualizado em `r format(Sys.Date(), "%d/%m/%Y")`.
