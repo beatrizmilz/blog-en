@@ -77,28 +77,6 @@ ul.task-list{list-style: none;}
       window['quarto-listing-loaded']();
     }
   });
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts-ptbr .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts-ptbr'] = new List('listing-posts-ptbr', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
 
@@ -173,6 +151,15 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
+        <li>
+    <a class="dropdown-item" href="./series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
         <li>
@@ -233,10 +220,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 
 </header>
 
-<p>Here you can find a series of posts about GitHub Actions, which are complementary material for my talk at the RStudio Conference.</p>
-<ul>
-<li>Comming soon!</li>
-</ul>
+<p>Here you can find a series of posts about GitHub Actions, which are complementary material for my <a href="https://rstudioconf2022.sched.com/event/11ia9?iframe=no">lightning talk</a>) at the <a href="https://www.rstudio.com/conference/">RStudio Conference - rstudio::conf 2022</a>.</p>
 <section id="posts-in-english" class="level2">
 <h2 class="anchored" data-anchor-id="posts-in-english">Posts in English</h2>
 <div id="listing-posts-en" class="quarto-listing quarto-listing-container-default">
@@ -317,42 +301,9 @@ Beatriz Milz
 No matching items
 </div>
 </div>
-</section>
-<section id="posts-em-português" class="level2">
-<h2 class="anchored" data-anchor-id="posts-em-português">Posts em Português</h2>
-<div id="listing-posts-ptbr" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-posts-ptbr-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts-ptbr'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<!-- ## Posts em Português -->
+<!-- ::: {#posts-ptbr} -->
+<!-- ::: -->
 
 
 

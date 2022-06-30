@@ -28,6 +28,10 @@ website:
             href: posts/en.qmd
           - text: Português
             href: posts/pt.qmd
+      - text: Series
+        menu:
+          - text: GitHub Actions
+            href: series-gha.qmd
       - text: Talks
         menu:
           - text: English
