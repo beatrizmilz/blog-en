@@ -39,12 +39,12 @@ We can do a lot of different automations with GitHub Actions, such as:
 
 -   Rendering an RMarkdown or Quarto document;
 
--   Among other things! 🚀
+-   And so on! 🚀
 
 ## How to use GHA in an R package?
 
 GitHub Actions is heavily used in package development for CI/CD.
-For example, package developers use GitHub Actions to perform tests in their code, run checking routines, update the documentation and the package's website, and so on.
+For example, package developers use GitHub Actions to perform tests in their code, run checking routines, update the documentation and the package's website, among other things.
 
 ::: callout-tip
 ## What is CI/CD in the context of R packages?
