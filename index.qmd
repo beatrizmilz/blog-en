@@ -18,7 +18,16 @@ listing:
     categories: cloud
     sort-ui: true
     filter-ui: true
-    page-size: 3    
+    page-size: 3   
+  - id: posts-es
+    contents: posts/**/es/*.qmd
+    type: default
+    fields: [image, date, title, subtitle, categories, author, reading-time]  
+    sort: "date desc"
+    categories: cloud
+    sort-ui: true
+    filter-ui: true
+    page-size: 3        
 page-layout: full
 title-block-banner: false
 comments: false
@@ -34,4 +43,9 @@ toc: false
 ## Posts em Português <a href="../posts/pt.html"> <button type="button" class="btn btn-primary float-end btn-sm">Ver posts em Português</button></a>
 
 ::: {#posts-ptbr}
+:::
+
+## Posts en Español
+
+::: {#posts-es}
 :::

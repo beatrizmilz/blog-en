@@ -99,6 +99,28 @@ ul.task-list{list-style: none;}
       window['quarto-listing-loaded']();
     }
   });
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts-es .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posts-es'] = new List('listing-posts-es', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
 
@@ -272,7 +294,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1656619077010" data-listing-reading-time-sort="4.635">
+<div class="quarto-post image-right" data-index="0" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1656622186792" data-listing-reading-time-sort="4.63">
 <div class="thumbnail">
 <p><a href="./posts/series-gha/2022-series-gha-1-what-is/en/index.html"> <img src="./posts/series-gha/2022-series-gha-1-what-is/en/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -350,7 +372,7 @@ No matching items
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1656619107343" data-listing-reading-time-sort="4.66">
+<div class="quarto-post image-right" data-index="0" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1656622188667" data-listing-reading-time-sort="4.775">
 <div class="thumbnail">
 <p><a href="./posts/series-gha/2022-series-gha-1-what-is/pt/index.html"> <img src="./posts/series-gha/2022-series-gha-1-what-is/pt/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -381,6 +403,84 @@ Automations
 </div>
 <div class="metadata">
 <a href="./posts/series-gha/2022-series-gha-1-what-is/pt/index.html">
+<div class="listing-date">
+Jun 30, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+4 min
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="posts-en-español" class="level2">
+<h2 class="anchored" data-anchor-id="posts-en-español">Posts en Español</h2>
+<div id="listing-posts-es" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-posts-es-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts-es'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1656622149943" data-listing-reading-time-sort="4.87">
+<div class="thumbnail">
+<p><a href="./posts/series-gha/2022-series-gha-1-what-is/es/index.html"> <img src="./posts/series-gha/2022-series-gha-1-what-is/es/featured.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/series-gha/2022-series-gha-1-what-is/es/index.html">
+<h3 class="no-anchor listing-title">
+Introducción a GitHub Actions para usuarias de R
+</h3>
+<div class="listing-subtitle">
+Serie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Git'); return false;">
+Git
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
+GitHub
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
+GitHub Actions
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Automations'); return false;">
+Automations
+</div>
+</div>
+<a href="./posts/series-gha/2022-series-gha-1-what-is/es/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="./posts/series-gha/2022-series-gha-1-what-is/es/index.html">
 <div class="listing-date">
 Jun 30, 2022
 </div>

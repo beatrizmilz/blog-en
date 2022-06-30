@@ -16,12 +16,14 @@
       "posts/*/en/*.qmd",
       "posts/*/pt/*.qmd",
       "posts/**/en/*.qmd",
-      "posts/**/pt/*.qmd"
+      "posts/**/pt/*.qmd",
+      "posts/**/es/*.qmd"
     ],
     "series-gha.qmd": [
       "posts/series-gha",
       "posts/series-gha/*/en/*.qmd",
-      "posts/series-gha/*/pt/*.qmd"
+      "posts/series-gha/*/pt/*.qmd",
+      "posts/series-gha/*/es/*.qmd"
     ]
   }
 }

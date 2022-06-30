@@ -22,6 +22,16 @@ listing:
     sort-ui: true
     filter-ui: true
     page-size: 3
+  - id: posts-es
+    contents: posts/series-gha/*/es/*.qmd
+    type: default
+    fields: [image, date, title, subtitle, categories, author, reading-time]
+    sort: "date desc"
+    categories: unnumbered
+    sort-ui: true
+    filter-ui: true
+    page-size: 3    
+    
 page-layout: full
 title-block-banner: false
 toc: false
@@ -37,5 +47,9 @@ Here you can find a series of posts about GitHub Actions, which are complementar
 ## Posts em Português
 
 ::: {#posts-ptbr}
+:::
 
+## Posts en Español
+
+::: {#posts-es}
 :::

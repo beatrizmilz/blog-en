@@ -1201,7 +1201,7 @@
     "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html",
     "title": "Introduction to GitHub Actions to R users",
     "section": "",
-    "text": "English  Português\nHi! This is the first blog post in the “GitHub Action” Series. This series of posts are complementary material for my RStudio Conference - rstudio::conf 2022 lightning talk.\nIn this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R."
+    "text": "English  Español  Português\nHi! This is the first blog post in the “GitHub Action” Series. This series of posts are complementary material for my RStudio Conference - rstudio::conf 2022 lightning talk.\nIn this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R."
   },
   {
     "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#create-a-github-account",
@@ -1306,7 +1306,7 @@
     "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html",
     "title": "Introdução ao GitHub Actions para quem programa em R",
     "section": "",
-    "text": "English  Português\nOi! Este é o primeiro post da série “GitHub Actions”. Esta série de posts é um material complementar para minha palestra relâmpago na RStudio Conference - rstudio::conf 2022.\nNeste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R."
+    "text": "English  Español  Português\nOi! Este é o primeiro post da série “GitHub Actions”. Esta série de posts é um material complementar para minha palestra relâmpago na RStudio Conference - rstudio::conf 2022.\nNeste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R."
   },
   {
     "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#o-que-é-github-actions",
@@ -1391,5 +1391,89 @@
     "title": "Introduction to GitHub Actions to R users",
     "section": "Example",
     "text": "Example\nHere is an example of a simple Workflow file. The workflow starts when pressing a button on GitHub (the event), and it installs R and then prints the message “Hello R World!” on the console.\n# Event - What starts this workflow?\non:\n  workflow_dispatch:\n\n# Name of the workflow\nname: hello-r-world\n\n# Jobs - What the computer should do? \njobs:\n  write-message:\n    # Use Ubuntu   \n    runs-on: ubuntu-latest \n    steps:\n       # Install R\n      - uses: r-lib/actions/setup-r@v3    \n      - name: print-message   \n        # Code to execute R script\n        run: Rscript -e 'print(\"Hello R World!\")'"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "",
+    "text": "English  Español  Português\n¡Oye! Este es el primer post de la serie “GitHub Actions”. Esta serie de post es un material complementario para mi charla relámpago en la Conferencia RStudio - rstudio::conf 2022.\nEn esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R."
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#qué-es-github-actions",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#qué-es-github-actions",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "¿Qué es GitHub Actions?",
+    "text": "¿Qué es GitHub Actions?\nGitHub Actions es una herramienta de GitHub que nos permite automatizar tareas con código. Por ejemplo, podemos especificar una serie de comandos para que se ejecuten cuando se active.\nPodemos hacer muchas automatizaciones diferentes con GitHub Actions, como:\n\nDescargar y guardar un archivo todos los días (como .csv/ .xlsx/ .json…);\nEjecutar un script en R y guardar los resultados en una base de datos o una hoja de cálculo de Google, por ejemplo;\nEjecución de rutinas de web scraping;\nActualizar documentos RMarkdown o Quarto;\n¡Etcétera! 🚀"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-usar-gha-en-un-paquete-en-r",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-usar-gha-en-un-paquete-en-r",
+    "title": "Introducción a GitHub Actions para usuáries de R",
+    "section": "¿Cómo usar GHA en un paquete en R?",
+    "text": "¿Cómo usar GHA en un paquete en R?\nGitHub Actions se usa ampliamente en el desarrollo de paquetes para CI/CD. Por ejemplo, las personas que desarrollan paquetes usan GitHub Actions para probar su código, ejecutar rutinas de chequeo, actualizar la documentación y el sitio web del paquete, y más.\n\n\n\n\n\n\n¿Qué es CI/CD en el contexto de paquetes en R?\n\n\n\nLa integración continua (CI) es una práctica de desarrollo que requiere que las personas que desarrollan el paquete integren regularmente el código en el repositorio, después de lo cual se realizan chequeos y pruebas automatizadas para verificar la integridad del nuevo código.\nLa entrega continua (CD) es una metodología de desarrollo de software en la que los cambios de código se verifican, prueban y lanzan automáticamente a producción. Esto permite que se lancen con frecuencia nuevas versiones de los paquetes.\n\n\nEl paquete usethis nos ayuda a configurar GitHub Actions en paquetes R. Es fundamental saber que, por defecto, las Actions creadas usando usethis provienen del repositorio r-lib/actions. Guarde este enlace; el contenido es muy relevante!\n\n\n\n\n\n\n🏆\n\n\n\nMe gustaría agradecer todo el trabajo realizado por quienes contribuyen al repositorio r-lib/actions . 🏆 Para mí, este repositorio fue la fuente de contenido y código más importante sobre GitHub Actions en R.\n\n\n\n\n\n\n\nAquí hay algunos ejemplos de cómo configurar GH Actions en paquetes:\n\nPara realizar chequeos (como devtools::check()) en un paquete siempre que haya un cambio de código, utilice:\n\n\nusethis::use_github_action(\"check-release\")\n\nEsto es útil porque cada vez que ocurre un error en el cheque, recibimos un correo electrónico de GitHub ⚠️. De esa manera, sabemos que algo está malo en el código y podemos solucionarlo lo antes posible.\nPara actualizar el sitio web del paquete (como pkgdown::build_site()) cada vez que haya un cambio en el código, utilice:\n\nusethis::use_github_action(\"pkgdown\")\n\nEsto permite que el sitio web y la documentación del paquete estén siempre actualizados. 📌"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-usar-gha-en-un-script-en-r",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-usar-gha-en-un-script-en-r",
+    "title": "Introducción a GitHub Actions para usuáries de R",
+    "section": "¿Cómo usar GHA en un script en R?",
+    "text": "¿Cómo usar GHA en un script en R?\nYa sabemos que podemos hacer automatizaciones realmente geniales en paquetes en R usando GitHub Actions. Pero la mayoría de las personas que programan en R que conozco usan scripts R y archivos RMarkdown en el día a día. No encontré ejemplos del uso de GHA con scripts simples (sin la estructura del paquete) en el repositorio r-lib/actions. Entonces, para eso, ¡necesitamos saber cómo funciona GHA!\nLa documentación de GitHub sobre flujos de trabajo es una fuente excelente para obtener más información sobre este tema.\nEn primer lugar, la automatización realizada con GHA se llama Workflow (o flujo de trabajo). El flujo de trabajo tiene dos partes principales: Events (Eventos) y Jobs (Trabajos).\n\nEvents/Eventos describen lo que puede iniciar un flujo de trabajo. Por ejemplo, un evento podría ser “iniciar este flujo de trabajo todos los días a las 9 am” o “cada vez que alguien hace un push al repositorio” (en otras palabras, cuando hay un cambio en el código).\nJobs/Trabajos describe lo que se supone que debe hacer la computadora. ¡Imagínese que comienza sin ningún software instalado! Por lo tanto, debemos decir qué sistema operativo (SO) queremos que ejecute nuestro código (por ejemplo, Ubuntu/Windows/Mac OS). Además, necesitamos instalar R y cualquier paquete necesario para ejecutar nuestro código. Después de eso, podemos agregar el script que queremos ejecutar en R y guardar los resultados generados."
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#ejemplo",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#ejemplo",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "Ejemplo",
+    "text": "Ejemplo\nEste es un ejemplo de un archivo de workflow/flujo de trabajo simple. El flujo de trabajo comienza cuando presiona un botón en GitHub (el evento). Entonces, instala R e imprime el mensaje “Hello R World!” en la consola (el trabajo).\n# Evento/Event - ¿Qué inicia el flujo de trabajo/workflow?\non:\n  workflow_dispatch:\n\n# Nombre del workflow\nname: hello-r-world\n\n# Jobs/Trabajos - ¿Qué debe hacer la computadora?\njobs:\n  write-message:\n    # Usar Ubuntu   \n    runs-on: ubuntu-latest \n    steps:\n       # Instalar R\n      - uses: r-lib/actions/setup-r@v3    \n      - name: print-message   \n        # Código para ejecutar el script R\n        run: Rscript -e 'print(\"Hello R World!\")'"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#nos-vemos-en-el-siguiente-post",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#nos-vemos-en-el-siguiente-post",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "¡Nos vemos en el siguiente post!",
+    "text": "¡Nos vemos en el siguiente post!\nEsa es la idea general de GitHub Actions. En la próxima publicación, escribiré cómo puede crear un GHA que ejecute un script R y guarde el resultado en el repositorio de GitHub. ¡Nos vemos pronto!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#agradecimientos",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#agradecimientos",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "Agradecimientos",
+    "text": "Agradecimientos\nDaniel Falbel, Athos Damiani, y Julio Trecenti: las personas que me presentaron GitHub Actions, respondieron preguntas y enviaron muchos enlaces increíbles. ¡Gracias!\nPersonas que contribuyen al repositorio r-lib/actions: 🏆 Para mí, este repositorio fue la fuente de contenido más importante en GitHub Actions para R.\nJulio Trecenti: gracias por revisar la versión en Inglés del post!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#referencias",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#referencias",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "Referencias",
+    "text": "Referencias\n\nGitHub Actions\nPaquete usethis\nRepositorio r-lib/actions\nDocumentación de GitHub sobre flujos de trabajo"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-paquete-en-r",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-paquete-en-r",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "¿Cómo utilizar GHA en un paquete en R?",
+    "text": "¿Cómo utilizar GHA en un paquete en R?\nGitHub Actions se utiliza ampliamente en el desarrollo de paquetes para CI/CD. Por ejemplo, las personas que desarrollan paquetes usan GitHub Actions para probar su código, ejecutar rutinas de chequeo, actualizar la documentación y el sitio web del paquete, y más.\n\n\n\n\n\n\n¿Qué es CI/CD en el contexto de paquetes en R?\n\n\n\nLa integración continua (CI) es una práctica de desarrollo que requiere que las personas que desarrollan el paquete integren regularmente el código en el repositorio, después de lo cual se realizan chequeos y pruebas automatizadas para verificar la integridad del nuevo código.\nLa entrega continua (CD) es una metodología de desarrollo de software en la que los cambios de código se verifican, prueban y lanzan automáticamente a producción. Esto permite que se lancen con frecuencia nuevas versiones de los paquetes.\n\n\nEl paquete usethis nos ayuda a configurar GitHub Actions en paquetes R. Es fundamental saber que, por defecto, las Actions creadas usando usethis provienen del repositorio r-lib/actions. ¡Guarde este enlace; el contenido es muy relevante!\n\n\n\n\n\n\n🏆\n\n\n\nMe gustaría agradecer todo el trabajo realizado por quienes contribuyen al repositorio r-lib/actions. 🏆 Para mí, este repositorio fue la fuente de contenido y código más importante sobre GitHub Actions en R.\n\n\n\n\n\n\n\nAquí hay algunos ejemplos de cómo configurar GH Actions en paquetes:\n\nPara realizar chequeos (como devtools::check()) en un paquete siempre que haya un cambio de código, utilice:\n\n\nusethis::use_github_action(\"check-release\")\n\nEsto es útil porque cada vez que ocurre un error en el cheque, recibimos un correo electrónico de GitHub ⚠️. De esa manera, sabemos que algo está malo en el código y podemos solucionarlo lo antes posible.\nPara actualizar el sitio web del paquete (como pkgdown::build_site()) cada vez que haya un cambio en el código, utilice:\n\nusethis::use_github_action(\"pkgdown\")\n\nEsto permite que el sitio web y la documentación del paquete estén siempre actualizados. 📌"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-script-en-r",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-script-en-r",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "¿Cómo utilizar GHA en un script en R?",
+    "text": "¿Cómo utilizar GHA en un script en R?\nYa sabemos que podemos hacer automatizaciones realmente geniales en paquetes en R utilizando GitHub Actions. Pero la mayoría de las personas que programan en R que conozco utilizan scripts R y archivos RMarkdown en el día a día. No encontré ejemplos del uso de GHA con scripts simples (sin la estructura del paquete) en el repositorio r-lib/actions. Entonces, para eso, ¡necesitamos saber cómo funciona GHA!\nLa documentación de GitHub sobre flujos de trabajo es una fuente excelente para obtener más información sobre este tema.\nEn primer lugar, la automatización realizada con GHA se llama Workflow (o flujo de trabajo). El flujo de trabajo tiene dos partes principales: Events (Eventos) y Jobs (Trabajos).\n\nEvents/Eventos describen lo que puede iniciar un flujo de trabajo. Por ejemplo, un evento podría ser “comenzar este flujo de trabajo todos los días a las 9 am” o “cada vez que alguien hace un push al repositorio” (en otras palabras, cuando hay un cambio en el código).\nJobs/Trabajos describe lo que se supone que debe hacer la computadora. ¡Imagínese que comienza sin ningún software instalado! Por lo tanto, debemos decir qué sistema operativo (SO) queremos que ejecute nuestro código (por ejemplo, Ubuntu/Windows/Mac OS). Además, necesitamos instalar R y cualquier paquete necesario para ejecutar nuestro código. Después de eso, podemos agregar el script que queremos ejecutar en R y guardar los resultados generados."
+  },
+  {
+    "objectID": "series-gha.html#posts-en-español",
+    "href": "series-gha.html#posts-en-español",
+    "title": "GitHub Actions Series: Making awesome automations",
+    "section": "Posts en Español",
+    "text": "Posts en Español\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nIntroducción a GitHub Actions para usuarias de R\n\n\nSerie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\n \n\n\n\n\nJun 30, 2022\n\n\nBeatriz Milz\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#posts-en-español",
+    "href": "index.html#posts-en-español",
+    "title": "Bea Milz",
+    "section": "Posts en Español",
+    "text": "Posts en Español\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nIntroducción a GitHub Actions para usuarias de R\n\n\nSerie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\n \n\n\n\n\nJun 30, 2022\n\n\nBeatriz Milz\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
   }
 ]

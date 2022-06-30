@@ -1,0 +1,163 @@
+---
+title: "Introducción a GitHub Actions para usuarias de R"
+subtitle: "Serie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R."
+author: "Beatriz Milz"
+date: "2022-06-30"
+categories: ["Git", "GitHub", "GitHub Actions", "Automations"]
+image: "featured.png"
+toc: true
+draft: false
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+
+::: callout-note
+##  ¡Bienvenides!
+Esta publicación fue escrita originalmente en inglés y fue traducida con la ayuda del traductor de Google y revisada por mí. Mis habilidades en Español son intermedias, así que si encuentras algún error de ortografía, ¡avísame!
+Buena lectura :)
+:::
+
+
+¡Oye! Este es el primer post de la serie "GitHub Actions". Esta serie de post es un material complementario para mi charla relámpago en la [Conferencia RStudio - rstudio::conf 2022](https://www.rstudio.com/conference/).
+
+
+
+[![](images/talk.png){fig-align="center" width="70%"}](https://rstudioconf2022.sched.com/event/11ia9?iframe=no)
+
+En esta publicación, **presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R**.
+
+## ¿Qué es GitHub Actions?
+
+[GitHub Actions](https://github.com/features/actions) es una herramienta de [GitHub](https://github.com/) que nos permite automatizar tareas con código. Por ejemplo, podemos especificar una serie de comandos para que se ejecuten cuando se active.
+
+Podemos hacer muchas automatizaciones diferentes con GitHub Actions, como:
+
+- Descargar y guardar un archivo todos los días (como `.csv`/ `.xlsx`/ `.json`…);
+
+- Ejecutar un script en R y guardar los resultados en una base de datos o una hoja de cálculo de Google, por ejemplo;
+
+- Ejecución de rutinas de web scraping;
+
+- Actualizar documentos RMarkdown o Quarto;
+
+- ¡Etcétera! 🚀
+
+
+## ¿Cómo utilizar GHA en un paquete en R?
+
+GitHub Actions se utiliza ampliamente en el desarrollo de paquetes para CI/CD. Por ejemplo, las personas que desarrollan paquetes usan GitHub Actions para probar su código, ejecutar rutinas de chequeo, actualizar la documentación y el sitio web del paquete, y más.
+
+::: callout-tip
+## ¿Qué es CI/CD en el contexto de paquetes en R?
+
+La integración continua (CI) es una práctica de desarrollo que requiere que las personas que desarrollan el paquete integren regularmente el código en el repositorio, después de lo cual se realizan chequeos y pruebas automatizadas para verificar la integridad del nuevo código.
+
+La entrega continua (CD) es una metodología de desarrollo de software en la que los cambios de código se verifican, prueban y lanzan automáticamente a producción. **Esto permite que se lancen con frecuencia nuevas versiones de los paquetes.**
+:::
+
+El paquete [usethis](https://usethis.r-lib.org/reference/github_actions.html) nos ayuda a configurar GitHub Actions en paquetes R. Es fundamental saber que, por defecto, las Actions creadas usando usethis provienen del repositorio  [r-lib/actions](https://github.com/r-lib/actions/tree/v2-branch/examples#readme). ¡Guarde este enlace; el contenido es muy relevante!
+
+::: callout-note
+## 🏆
+
+Me gustaría agradecer todo el trabajo realizado por quienes contribuyen al [repositorio r-lib/actions](https://github.com/r-lib/actions/graphs/contributors). 🏆 Para mí, este repositorio fue la fuente de contenido y código más importante sobre GitHub Actions en R.
+
+[![](images/actions-repo.png){fig-align="center" width="100%"}](https://github.com/r-lib/actions/blob/v2-branch/examples/README.md)
+:::
+
+
+Aquí hay algunos ejemplos de cómo configurar GH Actions en paquetes:
+
+- Para realizar chequeos (como `devtools::check()`) en un paquete siempre que haya un cambio de código, utilice:
+
+
+```{r}
+#| eval: false
+usethis::use_github_action("check-release")
+```
+
+
+Esto es útil porque cada vez que ocurre un error en el cheque, recibimos un correo electrónico de GitHub ⚠️. De esa manera, sabemos que algo está malo en el código y podemos solucionarlo lo antes posible.
+
+Para actualizar el sitio web del paquete (como `pkgdown::build_site()`) cada vez que haya un cambio en el código, utilice:
+
+
+```{r}
+#| eval: false
+usethis::use_github_action("pkgdown")
+```
+
+Esto permite que el sitio web y la documentación del paquete estén siempre actualizados. 
+📌
+
+## ¿Cómo utilizar GHA en un script en R?
+
+Ya sabemos que podemos hacer automatizaciones realmente geniales en paquetes en R utilizando GitHub Actions. Pero la mayoría de las personas que programan en R que conozco utilizan scripts R y archivos RMarkdown en el día a día. No encontré ejemplos del uso de GHA con scripts simples (sin la estructura del paquete) en el repositorio [r-lib/actions](https://github.com/r-lib/actions/blob/v2-branch/examples/README.md). Entonces, para eso, ¡necesitamos saber cómo funciona GHA!
+
+La [documentación de GitHub sobre flujos de trabajo](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) es una fuente excelente para obtener más información sobre este tema.
+
+
+En primer lugar, la automatización realizada con GHA se llama **Workflow** (o flujo de trabajo). El flujo de trabajo tiene dos partes principales: **Events** (Eventos) y **Jobs** (Trabajos).
+
+
+- **Events/Eventos** describen lo que puede iniciar un flujo de trabajo. Por ejemplo, un evento podría ser "comenzar este flujo de trabajo todos los días a las 9 am" o "cada vez que alguien hace un push al repositorio" (en otras palabras, cuando hay un cambio en el código).
+
+- **Jobs/Trabajos** describe lo que se supone que debe hacer la computadora. ¡Imagínese que comienza sin ningún software instalado! Por lo tanto, debemos decir qué sistema operativo (SO) queremos que ejecute nuestro código (por ejemplo, Ubuntu/Windows/Mac OS). Además, necesitamos instalar R y cualquier paquete necesario para ejecutar nuestro código. Después de eso, podemos agregar el script que queremos ejecutar en R y guardar los resultados generados.
+
+
+## Ejemplo
+
+Este es un ejemplo de un archivo de workflow/flujo de trabajo simple. El flujo de trabajo comienza cuando presiona un botón en GitHub (el evento). Entonces, instala R e imprime el mensaje “Hello R World!” en la consola (el trabajo).
+
+
+``` yml
+# Evento/Event - ¿Qué inicia el flujo de trabajo/workflow?
+on:
+  workflow_dispatch:
+
+# Nombre del workflow
+name: hello-r-world
+
+# Jobs/Trabajos - ¿Qué debe hacer la computadora?
+jobs:
+  write-message:
+    # Usar Ubuntu   
+    runs-on: ubuntu-latest 
+    steps:
+       # Instalar R
+      - uses: r-lib/actions/setup-r@v3    
+      - name: print-message   
+        # Código para ejecutar el script R
+        run: Rscript -e 'print("Hello R World!")' 
+```
+
+## ¡Nos vemos en el siguiente post!
+
+Esa es la idea general de GitHub Actions. En la próxima publicación, escribiré cómo puede crear un GHA que ejecute un script R y guarde el resultado en el repositorio de GitHub. ¡Nos vemos pronto!
+
+## Agradecimientos
+
+[Daniel Falbel](https://github.com/dfalbel), [Athos Damiani](https://github.com/Athospd), y [Julio Trecenti](https://github.com/jtrecenti): las personas que me presentaron GitHub Actions, respondieron preguntas y enviaron muchos enlaces increíbles. ¡Gracias!
+
+Personas que contribuyen al [repositorio r-lib/actions](https://github.com/r-lib/actions/graphs/contributors): 🏆 Para mí, este repositorio fue la fuente de contenido más importante en GitHub Actions para R.
+
+
+[Julio Trecenti](https://github.com/jtrecenti): gracias por revisar la versión en Inglés del post! 
+
+## Referencias
+
+-   [GitHub Actions](https://github.com/features/actions)
+
+-   [Paquete usethis](https://usethis.r-lib.org/reference/github_actions.html)
+
+-   [Repositorio r-lib/actions](https://github.com/r-lib/actions/tree/v2-branch/examples#readme)
+
+-   [Documentación de GitHub sobre flujos de trabajo](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
+
+
