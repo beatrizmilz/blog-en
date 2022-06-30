@@ -6,7 +6,7 @@ date: "2022-06-29 "
 categories: ["Git", "GitHub", "GitHub Actions", "Automations", "RStudio"]
 image: "featured.png"
 toc: true
-draft: false
+draft: true 
 ---
 
 ```{r multilang-buttons}
@@ -18,7 +18,7 @@ multilang()
 
 Hi!
 This is the first blog post in the "GitHub Action" Series.
-In this post, I will write a brief introduction to GitHub Actions.
+In this post, I will briefly introduce GitHub Actions and show how you can start using your R scripts.
 
 [GitHub Actions](https://github.com/features/actions) is a feature by GitHub that enables us to automate software development workflows.
 For example, with GitHub Actions, we can specify a series of commands to run when certain events occur in the repository, such as pushing code to a branch, creating a new pull request, pushing a button, etc.
@@ -31,35 +31,36 @@ You also can sign in to your existing account if you already have one.
 
 ## Create a repository
 
-
 The next step is to create a Repository.
 If you don't know what a repository is, imagine having a directory on your computer, and you store files from a project in that directory.
 A repository is like that but in the cloud!
 
-
 To create a repository, on the homepage of GitHub, click on the "+" icon in the top right corner and select [New repository](https://github.com/new).
 Give your repository a name, then choose whether you want it to be public or private.
-Then click "Create repository". 
+Then click "Create repository".
 
 ![](images/create-repo.png){fig-align="center"}
 
 For this example, I created a repository called [awesome-gha](https://github.com/beatrizmilz/awesome-gha).
 
-## Create a README file
+## Create a README.md file
 
-Now that we have a repository, we can start creating and adding files to it. There are different ways you can interact with GitHub: you can clone the repository to your machine and use RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along. 
+Now that we have a repository, we can start creating and adding files to it.
+There are different ways you can interact with GitHub: you can clone the repository to your machine and use RStudio Git Pane, for example.
+For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.
 
-First, click on "Creating a new file": 
+First, click on "Creating a new file":
 
 ![](images/repo.png){fig-align="center"}
 
-
-Then, add a name for the file: let's create a file called README.md. This file is the first thing people see when accessing your repository, so it is nice to add some information about your project. Then, you can add text and Markdown code in the "Edit new file" section, and finally, click on "Commit new file" to save your changes.
-
+Then, add a name for the file: let's create a file called README.md.
+This file is the first thing people see when accessing your repository, so adding some information about your project is nice.
+Then, you can add text and Markdown code in the "Edit new file" section, and finally, click on "Commit new file" to save your changes.
 
 ![](images/commit.png){fig-align="center"}
 
-Awesome! We have a repository and now we can start working on our GitHub Actions.
+Awesome!
+We have a repository and now we can start working on our GitHub Actions.
 
 ![](images/readme.png){fig-align="center"}
 
@@ -67,5 +68,3 @@ Awesome! We have a repository and now we can start working on our GitHub Actions
 
 The workflow file is a YAML file that defines when and how the action should run.
 This file must be stored in the .github/workflows directory.
-
-

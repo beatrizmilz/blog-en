@@ -1,37 +1,45 @@
 ---
-title: "Bea Milz"
+title: "GitHub Actions Series: Making awesome automations"
+subtitle: "Here is a list of posts about GitHub Actions"
+image: "featured.png"
+draft: false
 listing:
   - id: posts-en
-    contents: posts/**/en/*.qmd
+    contents: posts/series-gha/*/en/*.qmd
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
-    categories: cloud
+    categories: unnumbered
     sort-ui: true
     filter-ui: true
     page-size: 3
   - id: posts-ptbr
-    contents: posts/**/pt/*.qmd
+    contents: posts/series-gha/*/pt/*.qmd
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
-    categories: cloud
+    categories: unnumbered
     sort-ui: true
     filter-ui: true
     page-size: 3    
 page-layout: full
 title-block-banner: false
-comments: false
-include-in-header: meta.html  
 toc: false
 ---
 
-## Posts in English <a href="../posts/en.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a>
+Here you can find a series of posts about GitHub Actions, which are complementary material for my talk at the RStudio Conference.
+
+-   Comming soon!
+
+
+## Posts in English
 
 ::: {#posts-en}
 :::
 
-## Posts em Português <a href="../posts/pt.html"> <button type="button" class="btn btn-primary float-end btn-sm">Ver posts em Português</button></a>
+## Posts em Português
 
 ::: {#posts-ptbr}
 :::
+
+
