@@ -1,37 +1,20 @@
 {
   "listingMap": {
-    "talks/index.qmd": [
-      "*/*.qmd"
-    ],
-    "index.qmd": [
-      "posts",
-      "posts/*.qmd",
-      "posts/**.qmd",
-      "posts-ptbr",
-      "posts/**/pt",
-      "posts/*/pt/",
-      "posts/*/en/",
-      "posts/**/en/",
-      "posts/**/pt/",
-      "posts/*/en/**",
-      "posts/*/pt/**",
-      "posts/*/pt/*.qmd",
-      "posts/*/en/*.qmd"
+    "posts/en.qmd": [
+      "*/en/*.qmd"
     ],
     "posts/pt.qmd": [
-      "posts/*/pt/*.qmd",
       "*/pt/*.qmd"
-    ],
-    "posts/en.qmd": [
-      "posts/*/en/*.qmd",
-      "posts/*/pt/*.qmd",
-      "*/en/*.qmd"
     ],
     "talks/pt/index.qmd": [
       "*/*.qmd"
     ],
     "talks/en/index.qmd": [
       "*/*.qmd"
+    ],
+    "index.qmd": [
+      "posts/*/en/*.qmd",
+      "posts/*/pt/*.qmd"
     ]
   }
 }
