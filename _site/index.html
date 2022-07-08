@@ -66,7 +66,8 @@ ul.task-list{list-style: none;}
 
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 3,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
@@ -246,7 +247,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="API"><span class="quarto-category-count category-cloud-2">API</span></div><div class="category" data-category="Automations"><span class="quarto-category-count category-cloud-2">Automations</span></div><div class="category" data-category="Azure"><span class="quarto-category-count category-cloud-1">Azure</span></div><div class="category" data-category="Blog"><span class="quarto-category-count category-cloud-1">Blog</span></div><div class="category" data-category="Communities"><span class="quarto-category-count category-cloud-3">Communities</span></div><div class="category" data-category="Data cleaning"><span class="quarto-category-count category-cloud-1">Data cleaning</span></div><div class="category" data-category="Data import"><span class="quarto-category-count category-cloud-2">Data import</span></div><div class="category" data-category="Datasets"><span class="quarto-category-count category-cloud-1">Datasets</span></div><div class="category" data-category="Debug"><span class="quarto-category-count category-cloud-1">Debug</span></div><div class="category" data-category="Events"><span class="quarto-category-count category-cloud-1">Events</span></div><div class="category" data-category="Excel"><span class="quarto-category-count category-cloud-1">Excel</span></div><div class="category" data-category="Git"><span class="quarto-category-count category-cloud-2">Git</span></div><div class="category" data-category="GitHub"><span class="quarto-category-count category-cloud-2">GitHub</span></div><div class="category" data-category="GitHub Actions"><span class="quarto-category-count category-cloud-2">GitHub Actions</span></div><div class="category" data-category="Google"><span class="quarto-category-count category-cloud-1">Google</span></div><div class="category" data-category="Google Sheets"><span class="quarto-category-count category-cloud-1">Google Sheets</span></div><div class="category" data-category="Maps"><span class="quarto-category-count category-cloud-1">Maps</span></div><div class="category" data-category="Microsoft"><span class="quarto-category-count category-cloud-1">Microsoft</span></div><div class="category" data-category="Microsoft365R"><span class="quarto-category-count category-cloud-1">Microsoft365R</span></div><div class="category" data-category="One Drive"><span class="quarto-category-count category-cloud-1">One Drive</span></div><div class="category" data-category="Pipe"><span class="quarto-category-count category-cloud-1">Pipe</span></div><div class="category" data-category="Quarto"><span class="quarto-category-count category-cloud-1">Quarto</span></div><div class="category" data-category="R"><span class="quarto-category-count category-cloud-2">R</span></div><div class="category" data-category="R Packages"><span class="quarto-category-count category-cloud-1">R Packages</span></div><div class="category" data-category="R-Ladies"><span class="quarto-category-count category-cloud-2">R-Ladies</span></div><div class="category" data-category="RMarkdown"><span class="quarto-category-count category-cloud-1">RMarkdown</span></div><div class="category" data-category="RStudio"><span class="quarto-category-count category-cloud-2">RStudio</span></div><div class="category" data-category="Reproducibility"><span class="quarto-category-count category-cloud-1">Reproducibility</span></div><div class="category" data-category="Research"><span class="quarto-category-count category-cloud-1">Research</span></div><div class="category" data-category="Shiny"><span class="quarto-category-count category-cloud-1">Shiny</span></div><div class="category" data-category="Studying"><span class="quarto-category-count category-cloud-1">Studying</span></div><div class="category" data-category="Tables"><span class="quarto-category-count category-cloud-1">Tables</span></div><div class="category" data-category="Teaching"><span class="quarto-category-count category-cloud-2">Teaching</span></div><div class="category" data-category="The Carpentries"><span class="quarto-category-count category-cloud-1">The Carpentries</span></div><div class="category" data-category="Tips"><span class="quarto-category-count category-cloud-1">Tips</span></div><div class="category" data-category="Translation"><span class="quarto-category-count category-cloud-1">Translation</span></div><div class="category" data-category="Tutorial"><span class="quarto-category-count category-cloud-2">Tutorial</span></div><div class="category" data-category="Web Scraping"><span class="quarto-category-count category-cloud-2">Web Scraping</span></div><div class="category" data-category="ggplot2"><span class="quarto-category-count category-cloud-1">ggplot2</span></div><div class="category" data-category="httr"><span class="quarto-category-count category-cloud-1">httr</span></div><div class="category" data-category="purrr"><span class="quarto-category-count category-cloud-2">purrr</span></div><div class="category" data-category="rvest"><span class="quarto-category-count category-cloud-1">rvest</span></div><div class="category" data-category="tidyverse"><span class="quarto-category-count category-cloud-1">tidyverse</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="API"><span class="quarto-category-count category-cloud-2">API</span></div><div class="category" data-category="Automations"><span class="quarto-category-count category-cloud-2">Automations</span></div><div class="category" data-category="Azure"><span class="quarto-category-count category-cloud-1">Azure</span></div><div class="category" data-category="Blog"><span class="quarto-category-count category-cloud-1">Blog</span></div><div class="category" data-category="Communities"><span class="quarto-category-count category-cloud-3">Communities</span></div><div class="category" data-category="Data cleaning"><span class="quarto-category-count category-cloud-1">Data cleaning</span></div><div class="category" data-category="Data import"><span class="quarto-category-count category-cloud-2">Data import</span></div><div class="category" data-category="Datasets"><span class="quarto-category-count category-cloud-1">Datasets</span></div><div class="category" data-category="Debug"><span class="quarto-category-count category-cloud-1">Debug</span></div><div class="category" data-category="Events"><span class="quarto-category-count category-cloud-1">Events</span></div><div class="category" data-category="Excel"><span class="quarto-category-count category-cloud-1">Excel</span></div><div class="category" data-category="Git"><span class="quarto-category-count category-cloud-2">Git</span></div><div class="category" data-category="GitHub"><span class="quarto-category-count category-cloud-2">GitHub</span></div><div class="category" data-category="GitHub Actions"><span class="quarto-category-count category-cloud-2">GitHub Actions</span></div><div class="category" data-category="Google"><span class="quarto-category-count category-cloud-1">Google</span></div><div class="category" data-category="Google Sheets"><span class="quarto-category-count category-cloud-1">Google Sheets</span></div><div class="category" data-category="Maps"><span class="quarto-category-count category-cloud-1">Maps</span></div><div class="category" data-category="Microsoft"><span class="quarto-category-count category-cloud-1">Microsoft</span></div><div class="category" data-category="Microsoft365R"><span class="quarto-category-count category-cloud-1">Microsoft365R</span></div><div class="category" data-category="One Drive"><span class="quarto-category-count category-cloud-1">One Drive</span></div><div class="category" data-category="Pipe"><span class="quarto-category-count category-cloud-1">Pipe</span></div><div class="category" data-category="Quarto"><span class="quarto-category-count category-cloud-1">Quarto</span></div><div class="category" data-category="R"><span class="quarto-category-count category-cloud-2">R</span></div><div class="category" data-category="R Packages"><span class="quarto-category-count category-cloud-2">R Packages</span></div><div class="category" data-category="R-Ladies"><span class="quarto-category-count category-cloud-2">R-Ladies</span></div><div class="category" data-category="RMarkdown"><span class="quarto-category-count category-cloud-1">RMarkdown</span></div><div class="category" data-category="RStudio"><span class="quarto-category-count category-cloud-2">RStudio</span></div><div class="category" data-category="Reproducibility"><span class="quarto-category-count category-cloud-1">Reproducibility</span></div><div class="category" data-category="Research"><span class="quarto-category-count category-cloud-1">Research</span></div><div class="category" data-category="Shiny"><span class="quarto-category-count category-cloud-1">Shiny</span></div><div class="category" data-category="Studying"><span class="quarto-category-count category-cloud-1">Studying</span></div><div class="category" data-category="Tables"><span class="quarto-category-count category-cloud-1">Tables</span></div><div class="category" data-category="Teaching"><span class="quarto-category-count category-cloud-2">Teaching</span></div><div class="category" data-category="The Carpentries"><span class="quarto-category-count category-cloud-1">The Carpentries</span></div><div class="category" data-category="Tips"><span class="quarto-category-count category-cloud-1">Tips</span></div><div class="category" data-category="Translation"><span class="quarto-category-count category-cloud-1">Translation</span></div><div class="category" data-category="Tutorial"><span class="quarto-category-count category-cloud-2">Tutorial</span></div><div class="category" data-category="Web Scraping"><span class="quarto-category-count category-cloud-2">Web Scraping</span></div><div class="category" data-category="ggplot2"><span class="quarto-category-count category-cloud-1">ggplot2</span></div><div class="category" data-category="httr"><span class="quarto-category-count category-cloud-1">httr</span></div><div class="category" data-category="purrr"><span class="quarto-category-count category-cloud-2">purrr</span></div><div class="category" data-category="rvest"><span class="quarto-category-count category-cloud-1">rvest</span></div><div class="category" data-category="tidyverse"><span class="quarto-category-count category-cloud-2">tidyverse</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -295,7 +296,53 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1656622186792" data-listing-reading-time-sort="4.63">
+<div class="quarto-post image-right" data-index="0" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1657249200000" data-listing-file-modified-sort="1657285737248" data-listing-reading-time-sort="5.445">
+<div class="thumbnail">
+<p><a href="./posts/2019-08-12-tidydevday/en/index.html"> <img src="https://i.imgur.com/Oz6x6GY.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/2019-08-12-tidydevday/en/index.html">
+<h3 class="no-anchor listing-title">
+Tidyverse developer day 2019 (tidy-dev-day)
+</h3>
+<div class="listing-subtitle">
+The experience of participating in the Tidyverse Developer Day 2019.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
+Events
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
+Communities
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('tidyverse'); return false;">
+tidyverse
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
+RStudio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R Packages'); return false;">
+R Packages
+</div>
+</div>
+<a href="./posts/2019-08-12-tidydevday/en/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="./posts/2019-08-12-tidydevday/en/index.html">
+<div class="listing-date">
+Jul 8, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz, Angélica Custódio
+</div>
+<div class="listing-reading-time">
+5 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1656622186792" data-listing-reading-time-sort="4.63">
 <div class="thumbnail">
 <p><a href="./posts/series-gha/2022-series-gha-1-what-is/en/index.html"> <img src="./posts/series-gha/2022-series-gha-1-what-is/en/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -338,7 +385,7 @@ Beatriz Milz
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Teaching,RStudio,Communities,Translation" data-listing-date-sort="1654657200000" data-listing-file-modified-sort="1654731616705" data-listing-reading-time-sort="8.005">
+<div class="quarto-post image-right" data-index="2" data-categories="Teaching,RStudio,Communities,Translation" data-listing-date-sort="1654657200000" data-listing-file-modified-sort="1654731616705" data-listing-reading-time-sort="8.005">
 <div class="thumbnail">
 <p><a href="./posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html"> <img src="./posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/featured-photo.jpeg" class="thumnail-image"> </a></p>
 </div>
@@ -381,9 +428,9 @@ Beatriz Milz
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Quarto,Tutorial,Blog" data-listing-date-sort="1654398000000" data-listing-file-modified-sort="1654731459808" data-listing-reading-time-sort="14.275">
+<div class="quarto-post image-right" data-index="3" data-categories="Quarto,Tutorial,Blog" data-listing-date-sort="1654398000000" data-listing-file-modified-sort="1654731459808" data-listing-reading-time-sort="14.275">
 <div class="thumbnail">
-<p><a href="./posts/2022-06-05-creating-a-blog-with-quarto/en/index.html"> <img src="./posts/2022-06-05-creating-a-blog-with-quarto/en/img/search.png" class="thumnail-image"> </a></p>
+<p><a href="./posts/2022-06-05-creating-a-blog-with-quarto/en/index.html"> <img data-src="./posts/2022-06-05-creating-a-blog-with-quarto/en/img/search.png" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./posts/2022-06-05-creating-a-blog-with-quarto/en/index.html">
@@ -425,6 +472,9 @@ Beatriz Milz
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="posts-en-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 </section>
 <section id="posts-em-português-ver-posts-em-português" class="level2">
@@ -1253,7 +1303,7 @@ Beatriz Milz
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1565578800000" data-listing-file-modified-sort="1655074736985" data-listing-reading-time-sort="5.35">
+<div class="quarto-post image-right" data-index="20" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1565578800000" data-listing-file-modified-sort="1657284791136" data-listing-reading-time-sort="5.375">
 <div class="thumbnail">
 <p><a href="./posts/2019-08-12-tidydevday/pt/index.html"> <img data-src="https://i.imgur.com/Oz6x6GY.jpg" class="thumnail-image"> </a></p>
 </div>

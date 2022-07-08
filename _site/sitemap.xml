@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://beamilz.com/about-pt.html</loc>
-    <lastmod>2022-06-30T01:49:05.446Z</lastmod>
+    <lastmod>2022-06-30T20:59:17.180Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2021-11-29-api-pokemon/pt/index.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/posts/en.html</loc>
-    <lastmod>2022-06-30T20:49:31.268Z</lastmod>
+    <lastmod>2022-07-08T13:09:00.334Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2021-03-29-desvendando-erros/pt/index.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/posts/2019-08-12-tidydevday/pt/index.html</loc>
-    <lastmod>2022-06-30T01:47:16.154Z</lastmod>
+    <lastmod>2022-07-08T12:36:46.622Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/series-gha-1-what-is/en/index.html</loc>
@@ -150,19 +150,19 @@
   </url>
   <url>
     <loc>https://beamilz.com/index.html</loc>
-    <lastmod>2022-06-30T20:52:21.508Z</lastmod>
+    <lastmod>2022-07-08T13:09:01.434Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/about.html</loc>
-    <lastmod>2022-06-30T01:49:02.809Z</lastmod>
+    <lastmod>2022-06-30T20:59:08.794Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/series-gha.html</loc>
-    <lastmod>2022-06-30T20:50:47.392Z</lastmod>
+    <lastmod>2022-07-08T11:11:50.728Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/en/index.html</loc>
-    <lastmod>2022-06-30T20:49:30.734Z</lastmod>
+    <lastmod>2022-07-08T11:11:48.453Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/pt/index.html</loc>
@@ -171,5 +171,9 @@
   <url>
     <loc>https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/es/index.html</loc>
     <lastmod>2022-06-30T20:49:12.651Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2019-08-12-tidydevday/en/index.html</loc>
+    <lastmod>2022-07-08T13:08:59.744Z</lastmod>
   </url>
 </urlset>

@@ -1,4 +1,14 @@
 /* css styles */
+
+main, p{
+  font-size: 1.1rem !important;
+}
+
+.callout.callout-style-default .callout-body {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
 :root {
     --bs-blue: #9172be;
 }

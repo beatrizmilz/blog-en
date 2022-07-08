@@ -19,6 +19,12 @@ img: "featured-photo.jpeg"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+source(here::here("R/multilang.R"))
+multilang()
+```
 
 ::: callout-tip
 Esse post foi origalmente publicado no [blog da Curso-R](https://blog.curso-r.com/posts/2019-08-12-tidydevday/).
