@@ -37,7 +37,7 @@ title-block-banner: false
 toc: false
 ---
 
-Here you can find a series of posts about GitHub Actions, which are complementary material for my [lightning talk](https://rstudioconf2022.sched.com/event/11ia9?iframe=no)) at the [RStudio Conference - rstudio::conf 2022](https://www.rstudio.com/conference/).
+Here you can find a series of posts about GitHub Actions, which are complementary material for my [lightning talk](https://rstudioconf2022.sched.com/event/11ia9?iframe=no) at the [RStudio Conference - rstudio::conf 2022](https://www.rstudio.com/conference/).
 
 ## Posts in English
 

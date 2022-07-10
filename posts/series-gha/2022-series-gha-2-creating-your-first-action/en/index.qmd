@@ -6,7 +6,7 @@ date: "2022-07-10"
 categories: ["Git", "GitHub", "GitHub Actions", "Automations", "RStudio"]
 image: "featured.png"
 toc: true
-draft: true 
+draft: false
 ---
 
 ```{r multilang-buttons}
@@ -112,7 +112,7 @@ install.packages("knitr")
 
 # main script ------------------------------
 
-# get information about the repositories on the Quarto-dev organization.
+# get information about the repositories of the Quarto-dev organization.
 quarto_repos_raw <- gh::gh(
   "GET /orgs/{org}/repos",
   org = "quarto-dev",
@@ -171,7 +171,7 @@ Copy and paste the code above and click on the green button that says "Commit ne
 
 ![](images/create-new-file2.png){fig-align="center"}
 
-But what this code does?
+But what does this code do?
 First, we need to install all the packages required by the code to run.
 Then, it accesses the GitHub API and gets information about the public repositories in the [quarto-dev](https://github.com/quarto-dev/) organization.
 Then, it transforms the collected data and creates a nice table.
@@ -208,7 +208,7 @@ In this example, we will use two events:
 ...
 ...this workflow will be activated every day at 9 am UTC.
 
--   [Workflow dispatch](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch): this event allow us to activate the workflow any time that we want. We need to **press a button** on the GitHub website (I will show a print screen soon), or request the activation using the GitHub API (this example I'll leave for future posts!).
+-   [Workflow dispatch](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch): this event allows us to activate the workflow any time that we want. We need to **press a button** on the GitHub website (I will show a print screen soon), or request the activation using the GitHub API (this example I'll leave for future posts!).
 
 ### Name
 
@@ -235,7 +235,7 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }} 
     steps:
       # uses another code for action, that allows us 
-      # to acess the code inside the repository
+      # to access the code inside the repository
       - uses: actions/checkout@v3 
        # uses another code for action, 
         # that installs R on the machine
@@ -325,7 +325,7 @@ YEY! Now that we created the files needed, we can first experiment with the `wor
 ![](images/gif.gif){fig-align="center"}
 You can see this page at this link: <https://github.com/beatrizmilz/r-actions-example/runs/7273362628?check_suite_focus=true>
 
-After a couple of minutes, we can see that the action succeded:
+After a couple of minutes, we can see that the action succeeded:
 
 ![](images/logs.png){fig-align="center"}
 
@@ -334,6 +334,8 @@ And we can check the directory `01-rscript`, and there are two new files with th
 
 
 ![](images/after-workflow.png){fig-align="center"}
+
+See the complete list in: 
 <https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md>
 
 
@@ -354,3 +356,5 @@ Stay tuned!
 -   [GitHub documentation about workflows](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 
 - [Understanding the workflow file](https://docs.github.com/en/actions/using-workflows/about-workflows#understanding-the-workflow-file)
+
+
