@@ -279,12 +279,12 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-we-will-talk-about-today" id="toc-what-we-will-talk-about-today" class="nav-link active" data-scroll-target="#what-we-will-talk-about-today">What we will talk about today</a></li>
+  <li><a href="#what-we-will-talk-about-in-this-post" id="toc-what-we-will-talk-about-in-this-post" class="nav-link active" data-scroll-target="#what-we-will-talk-about-in-this-post">What we will talk about in this post</a></li>
   <li><a href="#creating-your-first-workflow" id="toc-creating-your-first-workflow" class="nav-link" data-scroll-target="#creating-your-first-workflow">Creating your first workflow</a>
   <ul class="collapse">
   <li><a href="#create-a-github-account" id="toc-create-a-github-account" class="nav-link" data-scroll-target="#create-a-github-account">Create a GitHub account</a></li>
   <li><a href="#create-a-repository" id="toc-create-a-repository" class="nav-link" data-scroll-target="#create-a-repository">Create a repository</a></li>
-  <li><a href="#create-a-readme.md-file" id="toc-create-a-readme.md-file" class="nav-link" data-scroll-target="#create-a-readme.md-file">Create a README.md file</a></li>
+  <li><a href="#create-a-readme.md-file" id="toc-create-a-readme.md-file" class="nav-link" data-scroll-target="#create-a-readme.md-file">Create a <code>README.md</code> file</a></li>
   <li><a href="#create-an-r-script" id="toc-create-an-r-script" class="nav-link" data-scroll-target="#create-an-r-script">Create an R Script</a></li>
   <li><a href="#create-the-workflow" id="toc-create-the-workflow" class="nav-link" data-scroll-target="#create-the-workflow">Create the workflow</a></li>
   <li><a href="#events" id="toc-events" class="nav-link" data-scroll-target="#events">Events</a></li>
@@ -295,6 +295,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <li><a href="#watch-your-awesome-automation-run" id="toc-watch-your-awesome-automation-run" class="nav-link" data-scroll-target="#watch-your-awesome-automation-run">Watch your awesome automation run</a></li>
   <li><a href="#see-you-in-the-next-post" id="toc-see-you-in-the-next-post" class="nav-link" data-scroll-target="#see-you-in-the-next-post">See you in the next post!</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#share-and-support" id="toc-share-and-support" class="nav-link" data-scroll-target="#share-and-support">Share and support!</a></li>
   </ul>
 </nav>
     </div>
@@ -312,12 +313,12 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p><a href="https://rstudioconf2022.sched.com/event/11ia9?iframe=no"><img src="featured.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
-<p>If you have not read the earlier post in this series, I recommend reading it before continuing on this post:</p>
+<p>If you have not read the earlier post in this series yet, I recommend reading it before continuing on this post:</p>
 <ul>
 <li><a href="../../../../posts/series-gha/2022-series-gha-1-what-is/en/">Introduction to GitHub Actions to R users</a> - this post is a good introduction on how GitHub Actions works!</li>
 </ul>
-<section id="what-we-will-talk-about-today" class="level2">
-<h2 class="anchored" data-anchor-id="what-we-will-talk-about-today">What we will talk about today</h2>
+<section id="what-we-will-talk-about-in-this-post" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-will-talk-about-in-this-post">What we will talk about in this post</h2>
 <p>This post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the <a href="https://github.com/quarto-dev/">quarto-dev</a> organization and save the result into the GitHub repository.</p>
 <ul class="task-list">
 <li><p><input type="checkbox" disabled="">
@@ -325,9 +326,9 @@ Create a GitHub Account</p></li>
 <li><p><input type="checkbox" disabled="">
 Create a repository</p></li>
 <li><p><input type="checkbox" disabled="">
-Create a README.md file (this is optional)</p></li>
+Create a <code>README.md</code> file (this is optional)</p></li>
 <li><p><input type="checkbox" disabled="">
-Create a R Script</p></li>
+Create an R Script</p></li>
 <li><p><input type="checkbox" disabled="">
 Create the workflow</p></li>
 <li><p><input type="checkbox" disabled="">
@@ -353,14 +354,15 @@ Watch your awesome automation run</p></li>
 <p>For this example, I created a repository called <a href="https://github.com/beatrizmilz/awesome-gha">awesome-gha</a>.</p>
 </section>
 <section id="create-a-readme.md-file" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-readme.md-file">Create a README.md file</h3>
-<p>Now that we have a repository, we can start creating and adding files to it. There are different ways you can interact with GitHub: you can clone the repository to your machine and use RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.</p>
+<h3 class="anchored" data-anchor-id="create-a-readme.md-file">Create a <code>README.md</code> file</h3>
+<p>Now that we have a repository, we can start creating and adding files to it. There are multiple ways you can interact with GitHub: you can use Git on command line, or clone the repository to your machine and use the RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.</p>
 <p>First, click on “Creating a new file”:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/repo.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
+<p>TODO: UPDATE THIS IMAGE TO HAVE README.MD</p>
 <p>Then, add a name for the file: let’s create a file called <code>README.md</code>. This file is the first thing people see when accessing your repository, so adding some information about your project is nice. Then, you can add text and Markdown code in the “Edit new file” section, and finally, click on “Commit new file” to save your changes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -405,7 +407,7 @@ Watch your awesome automation run</p></li>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">per_page =</span> <span class="dv">100</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># transform into a tibble with few cols</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># transform into a tibble with fewer columns</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>quarto_repos <span class="ot">&lt;-</span> quarto_repos_raw <span class="sc">|&gt;</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map</span>(unlist, <span class="at">recursive =</span> <span class="cn">TRUE</span>)  <span class="sc">|&gt;</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map_dfr</span>(tibble<span class="sc">::</span>enframe, <span class="at">.id =</span> <span class="st">"id_repo"</span>) <span class="sc">|&gt;</span></span>
@@ -471,14 +473,13 @@ Watch your awesome automation run</p></li>
 </div>
 <p>In this example, we will use two events:</p>
 <ul>
-<li><a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule">Schedule</a>: We can set a workflow to start at a scheduled time. I always use a website called <a href="https://crontab.guru/">crontab guru</a> and its <a href="https://crontab.guru/examples.html">examples</a> to find out how to write schedule that I want in CRON syntax! In this example, I wrote <code>"0 9 * * *"</code>, and according to <a href="https://crontab.guru/">crontab guru</a>…</li>
+<li><a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule">Schedule</a>: We can set a workflow to start at a scheduled time. I always use a website called <a href="https://crontab.guru/">crontab guru</a> and its <a href="https://crontab.guru/examples.html">examples</a> to find out how to write schedule that I want in <em>cron</em> syntax! In this example, I wrote <code>"0 9 * * *"</code>, and according to <a href="https://crontab.guru/">crontab guru</a> this workflow will be activated every day at 9 am UTC:</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/crontab-guru.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>… …this workflow will be activated every day at 9 am UTC.</p>
 <ul>
 <li><a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch">Workflow dispatch</a>: this event allows us to activate the workflow any time that we want. We need to <strong>press a button</strong> on the GitHub website (I will show a print screen soon), or request the activation using the GitHub API (this example I’ll leave for future posts!).</li>
 </ul>
@@ -492,7 +493,7 @@ Watch your awesome automation run</p></li>
 </section>
 <section id="jobs" class="level3">
 <h3 class="anchored" data-anchor-id="jobs">Jobs</h3>
-<p>The job describes what the computer should do! In this example, we will install R on a Ubuntu machine, run our script and then save the results in the repository.</p>
+<p>The jobs describe what the computer should do! In this example, we will install R on an Ubuntu machine, run the script and then save the results in the repository.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">run-r-script</span><span class="kw">:</span></span>
@@ -501,31 +502,34 @@ Watch your awesome automation run</p></li>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">      # The GitHub token will be available </span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">GITHUB_PAT</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }} </span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">      # uses another code for action, that allows us </span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">      # to access the code inside the repository</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v3 </span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">       # uses another code for action, </span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">        # that installs R on the machine</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> r-lib/actions/setup-r@v2</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">          # use the RStudio Package Manager</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">use-public-rspm</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Execute Script</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">        # executes the RScript stored in the file</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">        # 01-rscript/script.R</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>          Rscript "01-rscript/script.R"</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co">        # save the results in the repository</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Commit results</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>          git config --local user.email "actions@github.com"</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>          git config --local user.name "GitHub Actions"</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>          git add .</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>          git commit -m "Results from R script" || echo "No changes to commit"</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>          git push origin || echo "No changes to commit"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">      # imports an action from another repository, </span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">      # that enables the machine</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">      # to access the code inside our repository</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v3 </span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">      # imports an action from another repository, </span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">      # that installs R on the machine</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> r-lib/actions/setup-r@v2</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">          # uses the RStudio Package Manager</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">use-public-rspm</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Execute Script</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">        # executes the RScript stored in the file</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co">        # 01-rscript/script.R</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>          Rscript "01-rscript/script.R"</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co">        # save the results in the repository</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co">        # using git in the command line</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Commit results</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>          git config --local user.email "actions@github.com"</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>          git config --local user.name "GitHub Actions"</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>          git add .</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>          git commit -m "Results from R script" || echo "No changes to commit"</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>          git push origin || echo "No changes to commit"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>The complete workflow has these three parts: <code>on:</code> (the events that start the workflow), <code>name:</code> (the name of the repository), and <code>jobs:</code> (the instructions for the machine to run).</p>
 </section>
 <section id="we-have-a-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="we-have-a-workflow">We have a workflow!</h3>
@@ -576,7 +580,7 @@ Watch your awesome automation run</p></li>
 </figure>
 </div>
 <p>Code available here: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-rscript.yaml" class="uri">https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-rscript.yaml</a></p>
-<p>Now we have a repository with a README file, a R script inside the <code>01-rscript/</code> directory, and a GitHub workflow inside the <code>.github/workflows/</code> directory:</p>
+<p>Now we have a repository with a <code>README.md</code> file, an R script inside the <code>01-rscript/</code> directory, and a GitHub workflow inside the <code>.github/workflows/</code> directory:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/repo-2.png" class="img-fluid figure-img"></p>
@@ -586,7 +590,7 @@ Watch your awesome automation run</p></li>
 </section>
 <section id="watch-your-awesome-automation-run" class="level2">
 <h2 class="anchored" data-anchor-id="watch-your-awesome-automation-run">Watch your awesome automation run</h2>
-<p>YEY! Now that we created the files needed, we can first experiment with the <code>workflow_dispatch</code> button. I made a quick GIF on how to trigger a GHA with the button:</p>
+<p>YAY! Now that we created the files needed, we can first experiment with the <code>workflow_dispatch</code> button. I made a quick GIF on how to trigger a GHA with the button:</p>
 <p><img src="images/gif.gif" class="img-fluid" data-fig-align="center"> You can see this page at this link: <a href="https://github.com/beatrizmilz/r-actions-example/runs/7273362628?check_suite_focus=true" class="uri">https://github.com/beatrizmilz/r-actions-example/runs/7273362628?check_suite_focus=true</a></p>
 <p>After a couple of minutes, we can see that the action succeeded:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -594,13 +598,27 @@ Watch your awesome automation run</p></li>
 <p><img src="images/logs.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>And we can check the directory <code>01-rscript</code>, and there are two new files with the results from the script: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/quarto_repos.csv"><code>quarto_repos.csv</code></a> and <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md"><code>README.md</code></a>. In this README, we can monitor the repositories in the <a href="https://github.com/quarto-dev/">quarto-dev</a> organization and see which are the most popular repositories!</p>
+<p>We can check the directory <code>01-rscript</code>, and there are two new files with the results from the script: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/quarto_repos.csv"><code>quarto_repos.csv</code></a> and <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md"><code>README.md</code></a>. In this <code>README.md</code>, we can monitor the repositories in the <a href="https://github.com/quarto-dev/">quarto-dev</a> organization and see which are the most popular repositories!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/after-workflow.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>See the complete list in: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md" class="uri">https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md</a></p>
+<p>See the complete list here: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md" class="uri">https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md</a></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+What if it does not work!?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The workflow can fail if everything is not correct. For example, the workflow will fail if we forget to install a package used in the script. If this happens, you will probably receive an email from GitHub with an alert.</p>
+<p>But don’t be scared! This is pretty common. When I started using GHA in 2020, I got several failures before success. My tip in these cases is: to breathe, be calm, read the logs (the text on the black page I showed in the GIF above) and start debugging.</p>
+</div>
+</div>
 </section>
 <section id="see-you-in-the-next-post" class="level2">
 <h2 class="anchored" data-anchor-id="see-you-in-the-next-post">See you in the next post!</h2>
@@ -610,12 +628,18 @@ Watch your awesome automation run</p></li>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
+<li><p><a href="https://github.com/beatrizmilz/awesome-gha">All the files created in this repository are available here</a></p></li>
 <li><p><a href="https://github.com/features/actions">GitHub Actions</a></p></li>
 <li><p><a href="https://usethis.r-lib.org/reference/github_actions.html">Package usethis</a></p></li>
 <li><p><a href="https://github.com/r-lib/actions/tree/v2-branch/examples#readme">r-lib/actions Repository</a></p></li>
 <li><p><a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions">GitHub documentation about workflows</a></p></li>
 <li><p><a href="https://docs.github.com/en/actions/using-workflows/about-workflows#understanding-the-workflow-file">Understanding the workflow file</a></p></li>
 </ul>
+<p>Thanks for reviewing the post, <a href="https://github.com/jtrecenti">Julio Trecenti</a>!</p>
+</section>
+<section id="share-and-support" class="level2">
+<h2 class="anchored" data-anchor-id="share-and-support">Share and support!</h2>
+<p>If you like these kind of content, consider supporting me at <a href="https://github.com/sponsors/beatrizmilz/">GitHub Sponsors</a>, or sharing it on Twitter.</p>
 
 
 </section>

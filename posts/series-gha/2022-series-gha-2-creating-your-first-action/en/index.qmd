@@ -23,11 +23,11 @@ We are two weeks from the start of [RStudio Conference - rstudio::conf 2022](htt
 
 [![](featured.png){fig-align="center" width="70%"}](https://rstudioconf2022.sched.com/event/11ia9?iframe=no)
 
-If you have not read the earlier post in this series, I recommend reading it before continuing on this post:
+If you have not read the earlier post in this series yet, I recommend reading it before continuing on this post:
 
 -   [Introduction to GitHub Actions to R users](/posts/series-gha/2022-series-gha-1-what-is/en/) - this post is a good introduction on how GitHub Actions works!
 
-## What we will talk about today
+## What we will talk about in this post
 
 This post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the  [quarto-dev](https://github.com/quarto-dev/) organization and save the result into the GitHub repository.
 
@@ -35,9 +35,9 @@ This post is a tutorial on how to use GitHub Actions with an R script, using Git
 
 -   [ ] Create a repository
 
--   [ ] Create a README.md file (this is optional)
+-   [ ] Create a `README.md` file (this is optional)
 
--   [ ] Create a R Script
+-   [ ] Create an R Script
 
 -   [ ] Create the workflow
 
@@ -67,15 +67,17 @@ Then click "Create repository".
 
 For this example, I created a repository called [awesome-gha](https://github.com/beatrizmilz/awesome-gha).
 
-### Create a README.md file
+### Create a `README.md` file
 
 Now that we have a repository, we can start creating and adding files to it.
-There are different ways you can interact with GitHub: you can clone the repository to your machine and use RStudio Git Pane, for example.
+There are multiple ways you can interact with GitHub: you can use Git on command line, or clone the repository to your machine and use the RStudio Git Pane, for example.
 For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.
 
 First, click on "Creating a new file":
 
 ![](images/repo.png){fig-align="center"}
+
+TODO: UPDATE THIS IMAGE TO HAVE README.MD
 
 Then, add a name for the file: let's create a file called `README.md`.
 This file is the first thing people see when accessing your repository, so adding some information about your project is nice.
@@ -121,7 +123,7 @@ quarto_repos_raw <- gh::gh(
   per_page = 100
 )
 
-# transform into a tibble with few cols
+# transform into a tibble with fewer columns
 quarto_repos <- quarto_repos_raw |>
   purrr::map(unlist, recursive = TRUE)  |>
   purrr::map_dfr(tibble::enframe, .id = "id_repo") |>
@@ -201,12 +203,11 @@ on:
 
 In this example, we will use two events:
 
--   [Schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule): We can set a workflow to start at a scheduled time. I always use a website called [crontab guru](https://crontab.guru/) and its [examples](https://crontab.guru/examples.html) to find out how to write schedule that I want in CRON syntax! In this example, I wrote `"0 9 * * *"`, and according to [crontab guru](https://crontab.guru/)...
+-   [Schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule): We can set a workflow to start at a scheduled time. I always use a website called [crontab guru](https://crontab.guru/) and its [examples](https://crontab.guru/examples.html) to find out how to write schedule that I want in *cron* syntax! In this example, I wrote `"0 9 * * *"`, and according to [crontab guru](https://crontab.guru/) this workflow will be activated every day at 9 am UTC:
 
 ![](images/crontab-guru.png){fig-align="center"}
 
-...
-...this workflow will be activated every day at 9 am UTC.
+
 
 -   [Workflow dispatch](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch): this event allows us to activate the workflow any time that we want. We need to **press a button** on the GitHub website (I will show a print screen soon), or request the activation using the GitHub API (this example I'll leave for future posts!).
 
@@ -222,7 +223,7 @@ name: 01-rscript
 
 ### Jobs
 
-The job describes what the computer should do! In this example, we will install R on a Ubuntu machine, run our script and then save the results in the repository.
+The jobs describe what the computer should do! In this example, we will install R on an Ubuntu machine, run the script and then save the results in the repository.
 
 ```{yaml}
 #| eval: false
@@ -234,14 +235,15 @@ jobs:
       # The GitHub token will be available 
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }} 
     steps:
-      # uses another code for action, that allows us 
-      # to access the code inside the repository
+      # imports an action from another repository, 
+      # that enables the machine
+      # to access the code inside our repository
       - uses: actions/checkout@v3 
-       # uses another code for action, 
-        # that installs R on the machine
+      # imports an action from another repository, 
+      # that installs R on the machine
       - uses: r-lib/actions/setup-r@v2
         with:
-          # use the RStudio Package Manager
+          # uses the RStudio Package Manager
           use-public-rspm: true
 
       - name: Execute Script
@@ -251,6 +253,7 @@ jobs:
           Rscript "01-rscript/script.R"
 
         # save the results in the repository
+        # using git in the command line
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
@@ -259,6 +262,8 @@ jobs:
           git commit -m "Results from R script" || echo "No changes to commit"
           git push origin || echo "No changes to commit"
 ```
+
+The complete workflow has these three parts: `on: ` (the events that start the workflow), `name:` (the name of the repository), and `jobs:` (the instructions for the machine to run).
 
 ### We have a workflow!
 
@@ -314,13 +319,13 @@ Copy and paste the code above and click on the green button that says "Commit ne
 
 Code available here: <https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-rscript.yaml>
 
-Now we have a repository with a README file, a R script inside the `01-rscript/` directory, and a GitHub workflow inside the  `.github/workflows/` directory:
+Now we have a repository with a `README.md` file, an R script inside the `01-rscript/` directory, and a GitHub workflow inside the  `.github/workflows/` directory:
 
 ![](images/repo-2.png){fig-align="center"}
 
 ## Watch your awesome automation run
 
-YEY! Now that we created the files needed, we can first experiment with the `workflow_dispatch` button. I made a quick GIF on how to trigger a GHA with the button:
+YAY! Now that we created the files needed, we can first experiment with the `workflow_dispatch` button. I made a quick GIF on how to trigger a GHA with the button:
 
 ![](images/gif.gif){fig-align="center"}
 You can see this page at this link: <https://github.com/beatrizmilz/r-actions-example/runs/7273362628?check_suite_focus=true>
@@ -329,14 +334,22 @@ After a couple of minutes, we can see that the action succeeded:
 
 ![](images/logs.png){fig-align="center"}
 
-And we can check the directory `01-rscript`, and there are two new files with the results from the script: [`quarto_repos.csv`](https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/quarto_repos.csv) and [`README.md`](https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md). In this README, we can monitor the repositories in the [quarto-dev](https://github.com/quarto-dev/) organization and see which are the most popular repositories!
+We can check the directory `01-rscript`, and there are two new files with the results from the script: [`quarto_repos.csv`](https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/quarto_repos.csv) and [`README.md`](https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md). In this `README.md`, we can monitor the repositories in the [quarto-dev](https://github.com/quarto-dev/) organization and see which are the most popular repositories!
 
 
 
 ![](images/after-workflow.png){fig-align="center"}
 
-See the complete list in: 
+See the complete list here: 
 <https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md>
+
+::: callout-tip
+## What if it does not work!?
+
+The workflow can fail if everything is not correct. For example, the workflow will fail if we forget to install a package used in the script. If this happens, you will probably receive an email from GitHub with an alert.
+
+But don't be scared! This is pretty common. When I started using GHA in 2020, I got several failures before success. My tip in these cases is: to breathe, be calm, read the logs (the text on the black page I showed in the GIF above) and start debugging.
+:::
 
 
 ## See you in the next post!
@@ -346,6 +359,8 @@ I hope this post was useful to you! In the next post, I plan to show how we can 
 Stay tuned!
 
 ## References
+
+- [All the files created in this repository are available here](https://github.com/beatrizmilz/awesome-gha)
 
 -   [GitHub Actions](https://github.com/features/actions)
 
@@ -358,3 +373,9 @@ Stay tuned!
 - [Understanding the workflow file](https://docs.github.com/en/actions/using-workflows/about-workflows#understanding-the-workflow-file)
 
 
+Thanks for reviewing the post, [Julio Trecenti](https://github.com/jtrecenti)!
+
+
+## Share and support!
+
+If you like these kind of content, consider supporting me at [GitHub Sponsors](https://github.com/sponsors/beatrizmilz/), or sharing it on Twitter.
