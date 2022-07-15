@@ -224,39 +224,46 @@
     "text": "Conclusão\nSegundo o Hadley, mais de 40 pull requests foram aceitos, e quase 30 precisavam ser revisados, o que mostra como o evento :\n\n\nHuge thanks to everyone who contributed to tidyverse developer day! We merged over 40 PRs and have almost 30 more to review over the next few days pic.twitter.com/uM9Tg1dMeX\n\n— Hadley Wickham (@hadleywickham) July 8, 2019\n\n\nFoi uma ótima oportunidade para conhecer pessoas novas também! E para conhecer pessoalmente muitas referências que temos na comunidade.\n\nLegenda: Angélica e Bea mostrando as issues que estavam trabalhando no tidy-dev-day, por AngCustodio."
   },
   {
-    "objectID": "posts/series-gha-1-what-is/en/index.html",
-    "href": "posts/series-gha-1-what-is/en/index.html",
-    "title": "Introduction to GitHub Actions",
+    "objectID": "posts/2019-08-12-tidydevday/en/index.html",
+    "href": "posts/2019-08-12-tidydevday/en/index.html",
+    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
     "section": "",
-    "text": "English  Português\nHi! This is the first blog post in the “GitHub Action” Series. In this post, I will briefly introduce GitHub Actions and show how you can start using your R scripts.\nGitHub Actions is a feature by GitHub that enables us to automate software development workflows. For example, with GitHub Actions, we can specify a series of commands to run when certain events occur in the repository, such as pushing code to a branch, creating a new pull request, pushing a button, etc."
+    "text": "English  Português\nIn this post, Beatriz Milz and Angélica Custódio talk about the experience of participating in the Tidyverse Developer Day 2019."
   },
   {
-    "objectID": "posts/series-gha-1-what-is/en/index.html#create-a-github-account",
-    "href": "posts/series-gha-1-what-is/en/index.html#create-a-github-account",
-    "title": "Introduction to GitHub Actions",
-    "section": "Create a GitHub account",
-    "text": "Create a GitHub account\nTo start using GitHub Actions, first, you need to have an account on GitHub. You can create a new account for free! You also can sign in to your existing account if you already have one."
+    "objectID": "posts/2019-08-12-tidydevday/en/index.html#what-is-tidy-dev-day",
+    "href": "posts/2019-08-12-tidydevday/en/index.html#what-is-tidy-dev-day",
+    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
+    "section": "What is tidy-dev-day?",
+    "text": "What is tidy-dev-day?\nTidyverse Developer Day (tidy-dev-day) is a day-long event where attendees learn more about how to contribute to tidyverse. The first edition was at rstudio::conf2019.\nThis was the second edition of tidy-dev-day and was a part of the useR!2019 conference, which took place in Toulouse, France. The event happened the day before the start of the conference, bringing together several people who participated in it.\nSomething to note is that the useR!2019 organization offered diversity scholarships, providing financial assistance to members of underrepresented groups in the R to participate in the conference. The diversity scholarships were fundamental for the participation of several people from different parts of the world, including the authors of this post (Bea and Angelica)."
   },
   {
-    "objectID": "posts/series-gha-1-what-is/en/index.html#create-a-repository",
-    "href": "posts/series-gha-1-what-is/en/index.html#create-a-repository",
-    "title": "Introduction to GitHub Actions",
-    "section": "Create a repository",
-    "text": "Create a repository\nThe next step is to create a Repository. If you don’t know what a repository is, imagine having a directory on your computer, and you store files from a project in that directory. A repository is like that but in the cloud!\nTo create a repository, on the homepage of GitHub, click on the “+” icon in the top right corner and select New repository. Give your repository a name, then choose whether you want it to be public or private. Then click “Create repository”.\n\n\n\n\n\nFor this example, I created a repository called awesome-gha."
+    "objectID": "posts/2019-08-12-tidydevday/en/index.html#how-was-tidy-dev-day",
+    "href": "posts/2019-08-12-tidydevday/en/index.html#how-was-tidy-dev-day",
+    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
+    "section": "How was tidy-dev-day?",
+    "text": "How was tidy-dev-day?\nThe event had a code of conduct to provide a safe and friendly space for all participants.\nIn the event, participants had the opportunity to learn how to contribute to the tidyverse. Several developers and maintainers of the tidyverse were present and with a team of helpers. They helped participants, answered questions, reviewed the contributions, and so on.\nThe material used (instructions, presentations, suggested materials, etc.) is available in this Github repository.\nOn a wall of the room, several post-its indicated issues to be worked on, separated by packages and color. The color stated the type of issue (documentation, bug, feature).\nParticipants could choose an issue to work on during the event.\nOn another wall, post-its were separated into pull request post-its to be reviewed by Hadley Wickham and other maintainers, and post-its that had already been reviewed and accepted!\nAnother cool thing is that the space had several tables grouped, which helped to work with other people.\n\nCaption: Photo of the Tidy-Dev-Day, by @Dale_Masch.\nFor those participating for the first time, they recommended issues related to documentation improvements, as they are more natural for those who have never made a package contribution before.\nFor those who were already more familiar with package development, they recommended bug or feature issues, as they require a greater knowledge of package development."
   },
   {
-    "objectID": "posts/series-gha-1-what-is/en/index.html#create-a-readme-file",
-    "href": "posts/series-gha-1-what-is/en/index.html#create-a-readme-file",
-    "title": "Introduction to GitHub Actions",
-    "section": "Create a README file",
-    "text": "Create a README file\nNow that we have a repository, we can start creating and adding files to it. There are different ways you can interact with GitHub: you can clone the repository to your machine and use RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.\nFirst, click on “Creating a new file”:\n\n\n\n\n\nThen, add a name for the file: let’s create a file called README.md. This file is the first thing people see when accessing your repository, so it is nice to add some information about your project. Then, you can add text and Markdown code in the “Edit new file” section, and finally, click on “Commit new file” to save your changes.\n\n\n\n\n\nAwesome! We have a repository and now we can start working on our GitHub Actions."
+    "objectID": "posts/2019-08-12-tidydevday/en/index.html#beas-experience",
+    "href": "posts/2019-08-12-tidydevday/en/index.html#beas-experience",
+    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
+    "section": "Bea’s experience",
+    "text": "Bea’s experience\nBy the time of the event, I have not developed a package yet. So when I arrived at the event, I didn’t knew how packages were structured. In the issue I choseto work on, the goal was to improve an error message from the function dplyr::filter(), so that the message would conform to the tidyverse style guide. \nCaption: Photo of the issue I was working on and the unique coin we received that day. Photo by @Bea_Milz.\nInitially, I forked the dplyr repository, cloned it to my computer, and did not know what to do next.\nI didn’t knew which directory the functions were in, and I was afraid of changing something and causing an error in other functions of the package… But I’m glad I had help!\nIldi Czeller showed me what directory the functions were in (by the way, it’s in /R), and then I was able to find the file I needed to change and what part of the code was corresponding to the filter() function. That was the first time I heard about tests, and I had to change the test referring to the error message I was working on.\nAfter making the changes I felt were necessary, I made a pull request. Hadley replied that someone else was also working on this issue and indicated where the person was sitting. So I went there and asked Colin (who was working on this same issue) if we could work together.\nHe was super welcoming! He explained how he was developing the improvement, and I also showed him what I had done. Hadley asked to change some tests, and we worked on it together (in this case, I was mostly learning and asking Colin, because tests were new to me).\n\nLegenda: The pull request was accepted!\nIt was a unique experience, and I learned a lot that day!"
   },
   {
-    "objectID": "posts/series-gha-1-what-is/en/index.html#todo",
-    "href": "posts/series-gha-1-what-is/en/index.html#todo",
-    "title": "Introduction to GitHub Actions",
-    "section": "TODO",
-    "text": "TODO\nThe workflow file is a YAML file that defines when and how the action should run. This file must be stored in the .github/workflows directory."
+    "objectID": "posts/2019-08-12-tidydevday/en/index.html#angélicas-experience",
+    "href": "posts/2019-08-12-tidydevday/en/index.html#angélicas-experience",
+    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
+    "section": "Angélica’s experience",
+    "text": "Angélica’s experience\nDuring tidy-dev-day, I worked on issues from ggplot2. It was a new experience, and it was gratifying to feel that I learned and contributed to the package.\nAt the event, several people facilitated the activity. They helped the participants with activities like how to do a fork on GitHub, work on the issue in R, make a pull request, and so on. I had the help of Ildi Czeller, who was one of the helpers and helped me at every step, giving tips from git settings to teaching shortcuts in Rstudio that made life easier (they are documented here).\n\n\n\n\n\nCaption: Creating a pull request in the ggplot2 package.\nThe activity promoted the engagement and contribution of everyone, from those who were new to package development, to those who already had a lot of experience.\nIt was a welcoming space to ask questions and ask for help.\nAt one point, I was able to talk to Hadley and ask questions about an issue I was working on. Understanding better ggplot2 with one of the authors of the package was an incredible learning experience."
+  },
+  {
+    "objectID": "posts/2019-08-12-tidydevday/en/index.html#final-remarks",
+    "href": "posts/2019-08-12-tidydevday/en/index.html#final-remarks",
+    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
+    "section": "Final remarks",
+    "text": "Final remarks\nAccording to Hadley, more than 40 pull requests were accepted, and almost 30 needed to be reviewed:\n\n\n\nHuge thanks to everyone who contributed to tidyverse developer day! We merged over 40 PRs and have almost 30 more to review over the next few days pic.twitter.com/uM9Tg1dMeX\n\n— Hadley Wickham (@hadleywickham) July 8, 2019\n\n\n\nIt was an excellent opportunity to meet new people too! And to meet many people from the community that we admire.\n\nCaption: Angelica and Bea showing the issues that they were working on tidy-dev-day. Photo by AngCustodio."
   },
   {
     "objectID": "posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/index.html",
@@ -721,18 +728,242 @@
     "text": "10 - Tweet about it!\nCongratulations, you have created your blog with Quarto! ✨\nAfter writing your first blogpost, you can start sharing it to the world. 📢📢📢\nMy suggestion to you is: Write a tweet! You can use the #rstats hashtag if the content of your blog is about R and you can cite @quarto_pub.\nIf this post was relevant to you, you can also cite me with @BeaMilz, so I can retweet about your blog!"
   },
   {
-    "objectID": "posts/series-gha/pt/index.html",
-    "href": "posts/series-gha/pt/index.html",
-    "title": "Série GitHub Actions: Criando automações fantásticas!",
+    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
+    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
+    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
     "section": "",
-    "text": "Aqui você encontrará uma série de posts sobre GitHub Actions, que são materiais suplementares para a minha palestra na RStudio Conference.\n\nEm breve!\n\n\nPost atualizado em 29/06/2022."
+    "text": "English\nHi!\nThis is the second blog post in the “GitHub Action” Series. We are two weeks from the start of RStudio Conference - rstudio::conf 2022, and this post series is complementary material for the lightning talk that I will present!\nIf you have not read the earlier post in this series yet, I recommend reading it before continuing on this post:"
   },
   {
-    "objectID": "posts/series-gha/en/index.html",
-    "href": "posts/series-gha/en/index.html",
-    "title": "GitHub Actions Series: Making awesome automations",
+    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#what-we-will-talk-about-in-this-post",
+    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#what-we-will-talk-about-in-this-post",
+    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
+    "section": "What we will talk about in this post",
+    "text": "What we will talk about in this post\nThis post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the quarto-dev organization and save the result into the GitHub repository.\n\n\nCreate a GitHub Account\n\nCreate a repository\n\nCreate a README.md file (this is optional)\n\nCreate an R Script\n\nCreate the workflow\n\nWatch your awesome automation run"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#creating-your-first-workflow",
+    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#creating-your-first-workflow",
+    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
+    "section": "Creating your first workflow",
+    "text": "Creating your first workflow\n\nCreate a GitHub account\nTo start using GitHub Actions, first, you need to have an account on GitHub. You can create a new account for free! You also can sign in to your existing account if you already have one.\n\n\nCreate a repository\nGitHub Actions workflows work within a repository. So, the next step is to create one!\nIf you don’t know what a repository is, imagine having a directory on your computer, and you store files from a project in that directory. A repository is like that but in the cloud!\nTo create a repository, on the homepage of GitHub, click on the “+” icon in the top right corner and select New repository. Give your repository a name, then choose whether you want it to be public or private. Then click “Create repository”.\n\n\n\n\n\nFor this example, I created a repository called awesome-gha.\n\n\nCreate a README.md file\nNow that we have a repository, we can start creating and adding files to it. There are multiple ways you can interact with GitHub: you can use Git on command line, or clone the repository to your machine and use the RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.\nFirst, click on “Creating a new file”:\n\n\n\n\n\nTODO: UPDATE THIS IMAGE TO HAVE README.MD\nThen, add a name for the file: let’s create a file called README.md. This file is the first thing people see when accessing your repository, so adding some information about your project is nice. Then, you can add text and Markdown code in the “Edit new file” section, and finally, click on “Commit new file” to save your changes.\n\n\n\n\n\nAwesome! We have a repository, and now we can start working on our GitHub Actions.\n\n\n\n\n\n\n\nCreate an R Script\nNow we can start creating an R script. For a first GitHub Action, it is nice to start with something simple so we understand what is going on. To create a new file, click on “Add file” and then choose “Create new file”:\n\n\n\n\n\nIn this example, I created an R script in the path 01-rscript/script.R and added this code:\n\nprint(\"Hi! Welcome to a GH Actions with an R example :)\")\n\n# Install the packages  needed in the script -------\n\ninstall.packages(\"gh\")\ninstall.packages(\"dplyr\")\ninstall.packages(\"tidyr\")\ninstall.packages(\"readr\")\ninstall.packages(\"knitr\")\n\n# main script ------------------------------\n\n# get information about the repositories of the Quarto-dev organization.\nquarto_repos_raw <- gh::gh(\n  \"GET /orgs/{org}/repos\",\n  org = \"quarto-dev\",\n  type = \"public\",\n  sort = \"updated\",\n  per_page = 100\n)\n\n# transform into a tibble with fewer columns\nquarto_repos <- quarto_repos_raw |>\n  purrr::map(unlist, recursive = TRUE)  |>\n  purrr::map_dfr(tibble::enframe, .id = \"id_repo\") |>\n  tidyr::pivot_wider() |>\n  dplyr::transmute(\n    name,\n    url = html_url,\n    description,\n    stars = as.numeric(stargazers_count),\n    forks = as.numeric(forks_count),\n    open_issues = as.numeric(open_issues_count)\n  ) |>\n  dplyr::arrange(dplyr::desc(stars))\n\n\n# write CSV file with the result\nquarto_repos |>\n  readr::write_csv(\"01-rscript/quarto_repos.csv\")\n\n# write the README.md file\n\n# create table to add on README\ntable <- quarto_repos |>\n  dplyr::mutate(description = tidyr::replace_na(description, \"\")) |>\n  knitr::kable()\n\n# Write the content on README\npaste0(\n  \"# Repositories from quarto-dev\nMade by [Bea Milz](https://twitter.com/beamilz).\nUpdated with GitHub Actions in \",\nformat(Sys.Date(), '%b %d %Y'),\n\".\n<hr> \\n\n\",\npaste(table, collapse = \"\\n\")\n) |> writeLines(\"01-rscript/README.md\")\n\nprint(\"The end! Congrats!\")\n\nCode available here: https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/script.R\nTo save the file in this path, type 01-rscript/script.R in the blank space for the file’s name. GitHub will understand that we want to create a directory called 01-rscript and then write a file called script.R inside this directory. Copy and paste the code above and click on the green button that says “Commit new file”.\n\n\n\n\n\nBut what does this code do? First, we need to install all the packages required by the code to run. Then, it accesses the GitHub API and gets information about the public repositories in the quarto-dev organization. Then, it transforms the collected data and creates a nice table. It writes a CSV with the table and also writes in a README.md file! But for now, we only created this file, and to run with GHA, we need to create a file to store the workflow.\n\n\nCreate the workflow\nWe store the workflow in a YAML file that defines when and how the action should run.\nBut before we create this file, let’s understand what the code does!\n\n\nEvents\nFirst, we need to write the events. The events store information about what can start this workflow!\n\non:\n  schedule: \n    - cron:  \"0 9 * * *\" \n  workflow_dispatch:\n\nIn this example, we will use two events:\n\nSchedule: We can set a workflow to start at a scheduled time. I always use a website called crontab guru and its examples to find out how to write schedule that I want in cron syntax! In this example, I wrote \"0 9 * * *\", and according to crontab guru this workflow will be activated every day at 9 am UTC:\n\n\n\n\n\n\n\nWorkflow dispatch: this event allows us to activate the workflow any time that we want. We need to press a button on the GitHub website (I will show a print screen soon), or request the activation using the GitHub API (this example I’ll leave for future posts!).\n\n\n\nName\nWe need to give the workflow a name (don’t use special characters, let’s keep it simple!).\n\nname: 01-rscript\n\n\n\nJobs\nThe jobs describe what the computer should do! In this example, we will install R on an Ubuntu machine, run the script and then save the results in the repository.\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest # use Ubuntu\n    env:\n      # The GitHub token will be available \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }} \n    steps:\n      # imports an action from another repository, \n      # that enables the machine\n      # to access the code inside our repository\n      - uses: actions/checkout@v3 \n      # imports an action from another repository, \n      # that installs R on the machine\n      - uses: r-lib/actions/setup-r@v2\n        with:\n          # uses the RStudio Package Manager\n          use-public-rspm: true\n\n      - name: Execute Script\n        # executes the RScript stored in the file\n        # 01-rscript/script.R\n        run: |\n          Rscript \"01-rscript/script.R\"\n\n        # save the results in the repository\n        # using git in the command line\n      - name: Commit results\n        run: |\n          git config --local user.email \"actions@github.com\"\n          git config --local user.name \"GitHub Actions\"\n          git add .\n          git commit -m \"Results from R script\" || echo \"No changes to commit\"\n          git push origin || echo \"No changes to commit\"\n\nThe complete workflow has these three parts: on: (the events that start the workflow), name: (the name of the repository), and jobs: (the instructions for the machine to run).\n\n\nWe have a workflow!\nThis is the complete code for the workflow:\n\non:\n  schedule:\n    - cron:  \"0 9 * * *\"\n  workflow_dispatch:\n\nname: 01-rscript\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env:\n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}\n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with:\n          use-public-rspm: true\n\n      - name: Execute Script\n        run: |\n          Rscript \"01-rscript/script.R\"\n\n      - name: Commit results\n        run: |\n          git config --local user.email \"actions@github.com\"\n          git config --local user.name \"GitHub Actions\"\n          git add .\n          git commit -m \"Results from R script\" || echo \"No changes to commit\"\n          git push origin || echo \"No changes to commit\"\n\nNow we need to save this into a yaml file. This file must be stored in the .github/workflows directory.\nTo create a new file, click on “Add file” and then choose “Create new file”:\n\n\n\n\n\nTo save the file in the right path, type .github/workflows/01-rscript.yaml in the blank space for the file’s name. GitHub will understand that we want to create a directory called .github/, and then another called workflows/ inside, and then write a file called 01-rscript.yaml inside this directory.\nCopy and paste the code above and click on the green button that says “Commit new file”.\n\n\n\n\n\nCode available here: https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-rscript.yaml\nNow we have a repository with a README.md file, an R script inside the 01-rscript/ directory, and a GitHub workflow inside the .github/workflows/ directory:"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#watch-your-awesome-automation-run",
+    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#watch-your-awesome-automation-run",
+    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
+    "section": "Watch your awesome automation run",
+    "text": "Watch your awesome automation run\nYAY! Now that we created the files needed, we can first experiment with the workflow_dispatch button. I made a quick GIF on how to trigger a GHA with the button:\n You can see this page at this link: https://github.com/beatrizmilz/r-actions-example/runs/7273362628?check_suite_focus=true\nAfter a couple of minutes, we can see that the action succeeded:\n\n\n\n\n\nWe can check the directory 01-rscript, and there are two new files with the results from the script: quarto_repos.csv and README.md. In this README.md, we can monitor the repositories in the quarto-dev organization and see which are the most popular repositories!\n\n\n\n\n\nSee the complete list here: https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md\n\n\n\n\n\n\nWhat if it does not work!?\n\n\n\nThe workflow can fail if everything is not correct. For example, the workflow will fail if we forget to install a package used in the script. If this happens, you will probably receive an email from GitHub with an alert.\nBut don’t be scared! This is pretty common. When I started using GHA in 2020, I got several failures before success. My tip in these cases is: to breathe, be calm, read the logs (the text on the black page I showed in the GIF above) and start debugging."
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#see-you-in-the-next-post",
+    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#see-you-in-the-next-post",
+    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
+    "section": "See you in the next post!",
+    "text": "See you in the next post!\nI hope this post was useful to you! In the next post, I plan to show how we can use the structure of an R package in GHA and cache our dependencies to make the workflows run faster.\nStay tuned!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#references",
+    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#references",
+    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
+    "section": "References",
+    "text": "References\n\nAll the files created in this repository are available here\nGitHub Actions\nPackage usethis\nr-lib/actions Repository\nGitHub documentation about workflows\nUnderstanding the workflow file\n\nThanks for reviewing the post, Julio Trecenti!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#share-and-support",
+    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#share-and-support",
+    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
+    "section": "Share and support!",
+    "text": "Share and support!\nIf you like these kind of content, consider supporting me at GitHub Sponsors, or sharing it on Twitter.\n\n\n\n2 WEEKS UNTIL #rstudioconf2022!🎉The 2nd post about using GitHub Actions for R users is out!I show how to write a workflow that uses R to collect data about the repos by @quarto_pub on GitHub and save the results!https://t.co/4Y6HkyZwgx#rstats #github #rstudioconf @rstudio\n\n— Beatriz Milz (@BeaMilz) July 11, 2022"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html",
+    "title": "Introdução ao GitHub Actions para quem programa em R",
     "section": "",
-    "text": "Here you can find a series of posts about GitHub Actions, which are complementary material for my talk at the RStudio Conference.\n\nComming soon!\n\n\nPost updated in 2022-06-29."
+    "text": "English  Español  Português\nOi! Este é o primeiro post da série “GitHub Actions”. Esta série de posts é um material complementar para minha palestra relâmpago na RStudio Conference - rstudio::conf 2022.\nNeste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R."
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#o-que-é-github-actions",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#o-que-é-github-actions",
+    "title": "Introdução ao GitHub Actions para quem programa em R",
+    "section": "O que é GitHub Actions?",
+    "text": "O que é GitHub Actions?\nGitHub Actions é um recurso do GitHub que nos permite automatizar tarefas com código. Por exemplo, podemos especificar uma série de comandos a serem executados quando é ativado!\nPodemos fazer muitas automações diferentes com o GitHub Actions, como:\n\nBaixar e salvar um arquivo todos os dias (como .csv/.xlsx/.json ..);\nExecutar um script em R e salvar os resultados em um banco de dados, ou uma Planilha do Google, por exemplo;\nExecução de rotinas de web scraping;\nRenderização de um documento RMarkdown ou Quarto;\nE assim por diante! 🚀"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#como-usar-o-gha-em-um-pacote-em-r",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#como-usar-o-gha-em-um-pacote-em-r",
+    "title": "Introdução ao GitHub Actions para quem programa em R",
+    "section": "Como usar o GHA em um pacote em R?",
+    "text": "Como usar o GHA em um pacote em R?\nO GitHub Actions é muito usado no desenvolvimento de pacotes para CI/CD. Por exemplo, pessoas que desenvolvem pacotes usam GitHub Actions para realizar testes em seu código, executar rotinas de checagem, atualizar a documentação e o site do pacote, entre outras coisas.\n\n\n\n\n\n\nO que é CI/CD no contexto de pacotes em R?\n\n\n\nA integração contínua (Continuous integration - CI) é uma prática de desenvolvimento que exige que as pessoas que desenvolvem o pacote integrem regularmente o código no repositório, após o qual verificações e testes automatizados são executados para verificar a integridade do novo código.\nA entrega contínua (Continuous delivery - CD) é uma metodologia de desenvolvimento de software na qual as alterações de código são verificadas, testadas e liberadas para produção automaticamente. Isso permite que novas versões de pacotes sejam lançadas com frequência.\n\n\nO pacote usethis nos ajuda a configurar GitHub Actions em pacotes R. É essencial saber que, por padrão, as Actions criadas usando usethis vêm do repositório r-lib/actions. Salve este link; o conteúdo é muito relevante!\n\n\n\n\n\n\n🏆\n\n\n\nGostaria de agradecer todo o trabalho feito por quem contribui com o repositório r-lib/actions. 🏆 Este repositório foi a fonte mais importante de conteúdo e código sobre GitHub Actions para R para mim.\n\n\n\n\n\n\n\nAqui estão alguns exemplos de como configurar GH Actions em pacotes:\n\nPara realizar checagens (como devtools::check() ) em um pacote sempre que houver uma alteração no código, use:\n\n\nusethis::use_github_action(\"check-release\")\n\nIsso é útil porque toda vez que ocorre um erro no check, recebemos um e-mail do GitHub ⚠️. Assim, sabemos que algo está quebrando o código e podemos corrigi-lo o mais rápido possível.\n\nPara atualizar o site do pacote (como pkgdown::build_site()) toda vez que houver uma mudança no código, use:\n\n\nusethis::use_github_action(\"pkgdown\")\n\nIsso permite que o site e a documentação do pacote estejam sempre atualizados. 📌"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#como-usar-o-gha-em-um-script-em-r",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#como-usar-o-gha-em-um-script-em-r",
+    "title": "Introdução ao GitHub Actions para quem programa em R",
+    "section": "Como usar o GHA em um script em R?",
+    "text": "Como usar o GHA em um script em R?\nJá sabemos que podemos fazer automações muito legals em pacotes em R usando GitHub Actions. Mas a maioria das pessoas que programam em R que conheço usam scripts R e arquivos RMarkdown no dia-a-dia. Não encontrei exemplos de uso do GHA com scripts simples (sem a estrutura do pacote) no repositório r-lib/actions. Então, para isso, precisamos conhecer como funciona o GHA!\nA documentação do GitHub sobre fluxos de trabalho (workflows) é uma excelente fonte para saber mais sobre esse tópico.\nPrimeiro, a automatização feita com GHA é chamada de Workflow (ou fluxo de trabalho em português). O fluxo de trabalho tem duas partes principais: Events (eventos) e Jobs (trabalhos).\n\nEvents/Eventos descrevem o que pode iniciar um fluxo de trabalho. Por exemplo, um evento pode ser “iniciar este fluxo de trabalho todos os dias às 9h” ou “toda vez que alguém fizer um push no repositório” (em outras palavras, quando há alguma alteração no código).\nJobs/Trabalhos descreve o que o computador deve fazer. Imagine que ele começa sem nenhum software instalado! Portanto, precisamos dizer qual Sistema Operacional (SO) queremos que nosso código execute (por exemplo, Ubuntu / Windows / Mac OS). Além disso, precisamos instalar o R e quaisquer pacotes necessários para executar o nosso código. Depois disso, podemos adicionar o script que queremos executar em R e salvar os resultados gerados."
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#exemplo",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#exemplo",
+    "title": "Introdução ao GitHub Actions para quem programa em R",
+    "section": "Exemplo",
+    "text": "Exemplo\nAqui está um exemplo de um arquivo de fluxo de trabalho simples. O fluxo de trabalho inicia ao pressionar um botão no GitHub (o evento). Ele instala o R e imprime a mensagem “Hello R World!” no console (o trabalho).\n# Evento/Event - O que inicia o fluxo de trabalho/workflow?\non:\n  workflow_dispatch:\n\n# Nome do workflow\nname: hello-r-world\n\n# Trabalho/Jobs - O que o computador deve fazer?\njobs:\n  write-message:\n    # Vamos usar o Ubuntu  \n    runs-on: ubuntu-latest \n    steps:\n       # Instalar o R\n      - uses: r-lib/actions/setup-r@v3    \n      - name: print-message   \n        # Código para executar um comando em R\n        run: Rscript -e 'print(\"Hello R World!\")'"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#vejo-você-no-próximo-post",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#vejo-você-no-próximo-post",
+    "title": "Introdução ao GitHub Actions para quem programa em R",
+    "section": "Vejo você no próximo post!",
+    "text": "Vejo você no próximo post!\nEssa é a ideia geral do GitHub Actions. No próximo post, escreverei como você pode criar um GHA que execute um script R e salve o resultado no repositório do GitHub. Acompanhe!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#agradecimentos",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#agradecimentos",
+    "title": "Introdução ao GitHub Actions para quem programa em R",
+    "section": "Agradecimentos",
+    "text": "Agradecimentos\n\nDaniel Falbel, Athos Damiani e Julio Trecenti: as pessoas que me apresentaram ao GitHub Actions, responderam perguntas e enviaram vários links incríveis.Obrigada!\nAs pessoas que contribuem com o repositório r-lib/actions: 🏆 Este repositório foi a fonte mais significativa de conteúdo sobre GitHub Actions for R para mim.\nJulio Trecenti: obrigada por revisar o post!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#referências",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#referências",
+    "title": "Introdução ao GitHub Actions para quem programa em R",
+    "section": "Referências",
+    "text": "Referências\n\nGitHub Actions\nPacote usethis\nRepositório r-lib/actions\nDocumentação do GitHub sobre workflows"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#compartilhe-e-apoie",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#compartilhe-e-apoie",
+    "title": "Introdução ao GitHub Actions para quem programa em R",
+    "section": "Compartilhe e apoie!",
+    "text": "Compartilhe e apoie!\nSe você gosta desse tipo de conteúdo, considere me apoiar no GitHub Sponsors ou compartilhar o conteúdo no Twitter:\n\n\n\nI wrote a new blog post about \"Introduction to GitHub Actions to R users\"!https://t.co/lCBH4vIGa2This post is complementary material for my lightning talk at the @rstudio conference!Feedback is always welcome :)#rstats #github #githubactions #rstudioconf #rstudioconf2022\n\n— Beatriz Milz (@BeaMilz) June 30, 2022"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "",
+    "text": "English  Español  Português\n¡Oye! Este es el primer post de la serie “GitHub Actions”. Esta serie de post es un material complementario para mi charla relámpago en la Conferencia RStudio - rstudio::conf 2022.\nEn esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R."
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#qué-es-github-actions",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#qué-es-github-actions",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "¿Qué es GitHub Actions?",
+    "text": "¿Qué es GitHub Actions?\nGitHub Actions es una herramienta de GitHub que nos permite automatizar tareas con código. Por ejemplo, podemos especificar una serie de comandos para que se ejecuten cuando se active.\nPodemos hacer muchas automatizaciones diferentes con GitHub Actions, como:\n\nDescargar y guardar un archivo todos los días (como .csv/ .xlsx/ .json…);\nEjecutar un script en R y guardar los resultados en una base de datos o una hoja de cálculo de Google, por ejemplo;\nEjecución de rutinas de web scraping;\nActualizar documentos RMarkdown o Quarto;\n¡Etcétera! 🚀"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-paquete-en-r",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-paquete-en-r",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "¿Cómo utilizar GHA en un paquete en R?",
+    "text": "¿Cómo utilizar GHA en un paquete en R?\nGitHub Actions se utiliza ampliamente en el desarrollo de paquetes para CI/CD. Por ejemplo, las personas que desarrollan paquetes usan GitHub Actions para probar su código, ejecutar rutinas de chequeo, actualizar la documentación y el sitio web del paquete, y más.\n\n\n\n\n\n\n¿Qué es CI/CD en el contexto de paquetes en R?\n\n\n\nLa integración continua (CI) es una práctica de desarrollo que requiere que las personas que desarrollan el paquete integren regularmente el código en el repositorio, después de lo cual se realizan chequeos y pruebas automatizadas para verificar la integridad del nuevo código.\nLa entrega continua (CD) es una metodología de desarrollo de software en la que los cambios de código se verifican, prueban y lanzan automáticamente a producción. Esto permite que se lancen con frecuencia nuevas versiones de los paquetes.\n\n\nEl paquete usethis nos ayuda a configurar GitHub Actions en paquetes R. Es fundamental saber que, por defecto, las Actions creadas usando usethis provienen del repositorio r-lib/actions. ¡Guarde este enlace; el contenido es muy relevante!\n\n\n\n\n\n\n🏆\n\n\n\nMe gustaría agradecer todo el trabajo realizado por quienes contribuyen al repositorio r-lib/actions. 🏆 Para mí, este repositorio fue la fuente de contenido y código más importante sobre GitHub Actions en R.\n\n\n\n\n\n\n\nAquí hay algunos ejemplos de cómo configurar GH Actions en paquetes:\n\nPara realizar chequeos (como devtools::check()) en un paquete siempre que haya un cambio de código, utilice:\n\n\nusethis::use_github_action(\"check-release\")\n\nEsto es útil porque cada vez que ocurre un error en el cheque, recibimos un correo electrónico de GitHub ⚠️. De esa manera, sabemos que algo está malo en el código y podemos solucionarlo lo antes posible.\nPara actualizar el sitio web del paquete (como pkgdown::build_site()) cada vez que haya un cambio en el código, utilice:\n\nusethis::use_github_action(\"pkgdown\")\n\nEsto permite que el sitio web y la documentación del paquete estén siempre actualizados. 📌"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-script-en-r",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-script-en-r",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "¿Cómo utilizar GHA en un script en R?",
+    "text": "¿Cómo utilizar GHA en un script en R?\nYa sabemos que podemos hacer automatizaciones realmente geniales en paquetes en R utilizando GitHub Actions. Pero la mayoría de las personas que programan en R que conozco utilizan scripts R y archivos RMarkdown en el día a día. No encontré ejemplos del uso de GHA con scripts simples (sin la estructura del paquete) en el repositorio r-lib/actions. Entonces, para eso, ¡necesitamos saber cómo funciona GHA!\nLa documentación de GitHub sobre flujos de trabajo es una fuente excelente para obtener más información sobre este tema.\nEn primer lugar, la automatización realizada con GHA se llama Workflow (o flujo de trabajo). El flujo de trabajo tiene dos partes principales: Events (Eventos) y Jobs (Trabajos).\n\nEvents/Eventos describen lo que puede iniciar un flujo de trabajo. Por ejemplo, un evento podría ser “comenzar este flujo de trabajo todos los días a las 9 am” o “cada vez que alguien hace un push al repositorio” (en otras palabras, cuando hay un cambio en el código).\nJobs/Trabajos describe lo que se supone que debe hacer la computadora. ¡Imagínese que comienza sin ningún software instalado! Por lo tanto, debemos decir qué sistema operativo (SO) queremos que ejecute nuestro código (por ejemplo, Ubuntu/Windows/Mac OS). Además, necesitamos instalar R y cualquier paquete necesario para ejecutar nuestro código. Después de eso, podemos agregar el script que queremos ejecutar en R y guardar los resultados generados."
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#ejemplo",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#ejemplo",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "Ejemplo",
+    "text": "Ejemplo\nEste es un ejemplo de un archivo de workflow/flujo de trabajo simple. El flujo de trabajo comienza cuando presiona un botón en GitHub (el evento). Entonces, instala R e imprime el mensaje “Hello R World!” en la consola (el trabajo).\n# Evento/Event - ¿Qué inicia el flujo de trabajo/workflow?\non:\n  workflow_dispatch:\n\n# Nombre del workflow\nname: hello-r-world\n\n# Jobs/Trabajos - ¿Qué debe hacer la computadora?\njobs:\n  write-message:\n    # Usar Ubuntu   \n    runs-on: ubuntu-latest \n    steps:\n       # Instalar R\n      - uses: r-lib/actions/setup-r@v3    \n      - name: print-message   \n        # Código para ejecutar el script R\n        run: Rscript -e 'print(\"Hello R World!\")'"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#nos-vemos-en-el-siguiente-post",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#nos-vemos-en-el-siguiente-post",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "¡Nos vemos en el siguiente post!",
+    "text": "¡Nos vemos en el siguiente post!\nEsa es la idea general de GitHub Actions. En la próxima publicación, escribiré cómo puede crear un GHA que ejecute un script R y guarde el resultado en el repositorio de GitHub. ¡Nos vemos pronto!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#agradecimientos",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#agradecimientos",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "Agradecimientos",
+    "text": "Agradecimientos\nDaniel Falbel, Athos Damiani, y Julio Trecenti: las personas que me presentaron GitHub Actions, respondieron preguntas y enviaron muchos enlaces increíbles. ¡Gracias!\nPersonas que contribuyen al repositorio r-lib/actions: 🏆 Para mí, este repositorio fue la fuente de contenido más importante en GitHub Actions para R.\nJulio Trecenti: gracias por revisar la versión en Inglés del post!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#referencias",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#referencias",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "Referencias",
+    "text": "Referencias\n\nGitHub Actions\nPaquete usethis\nRepositorio r-lib/actions\nDocumentación de GitHub sobre flujos de trabajo"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#comparte-y-apoya",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#comparte-y-apoya",
+    "title": "Introducción a GitHub Actions para usuarias de R",
+    "section": "Comparte y apoya!",
+    "text": "Comparte y apoya!\nSi te gusta este tipo de contenido, considera apoyarme en GitHub Sponsors, o compártelo en Twitter: ):\n\n\n\nI wrote a new blog post about \"Introduction to GitHub Actions to R users\"!https://t.co/lCBH4vIGa2This post is complementary material for my lightning talk at the @rstudio conference!Feedback is always welcome :)#rstats #github #githubactions #rstudioconf #rstudioconf2022\n\n— Beatriz Milz (@BeaMilz) June 30, 2022"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html",
+    "title": "Introduction to GitHub Actions to R users",
+    "section": "",
+    "text": "English  Español  Português\nHi! This is the first blog post in the “GitHub Action” Series. This series of posts are complementary material for my RStudio Conference - rstudio::conf 2022 lightning talk.\nIn this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R."
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#what-is-github-actions",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#what-is-github-actions",
+    "title": "Introduction to GitHub Actions to R users",
+    "section": "What is GitHub Actions?",
+    "text": "What is GitHub Actions?\nGitHub Actions is a feature by GitHub that enables us to automate tasks with code. For example, we can specify a series of commands to run when activated!\nWe can do a lot of different automations with GitHub Actions, such as:\n\nDownloading and saving a file everyday (such as .csv / .xlsx / .json ..);\nRunning an R script and saving the results into a database, or a Google Sheet, for example;\nRunning web scraping routines;\nRendering an RMarkdown or Quarto document;\nAnd so on! 🚀"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#how-to-use-gha-in-an-r-package",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#how-to-use-gha-in-an-r-package",
+    "title": "Introduction to GitHub Actions to R users",
+    "section": "How to use GHA in an R package?",
+    "text": "How to use GHA in an R package?\nGitHub Actions is heavily used in package development for CI/CD. For example, package developers use GitHub Actions to perform tests in their code, run checking routines, update the documentation and the package’s website, among other things.\n\n\n\n\n\n\nWhat is CI/CD in the context of R packages?\n\n\n\nContinuous integration (CI) is a development practice requiring developers to regularly integrate code into a shared repository, after which automated checks and tests are run to verify the integrity of the new code.\nContinuous delivery (CD) is a software development methodology in which code changes are automatically checked, tested, and released to production. This allows for new package versions to be released frequently.\n\n\nThe package usethis helps us set up GitHub Actions in R packages. It is essential to know that, by default, the Actions created using usethis come from the r-lib/actions repository. Save this link; it is pure gold.\n\n\n\n\n\n\n🏆\n\n\n\nI would like to thank all the work made by the contributors of the r-lib/actions repository. 🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.\n\n\n\n\n\n\n\nHere are some examples of how to set up GH Actions in packages:\n\nTo perform checks (like devtools::check() ) in a package every time there is a change in the code, use:\n\n\nusethis::use_github_action(\"check-release\")\n\nThis is useful because every time there is a check error, we get an email from GitHub ⚠️. So we know that something is breaking the code and can fix it as soon as possible.\n\nTo build the package page (like pkgdown::build_site() ) every time there is a change in the code, use:\n\n\nusethis::use_github_action(\"pkgdown\")\n\nThis allows the package website and documentation to be always up to date. 📌"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#how-to-use-gha-in-an-r-script",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#how-to-use-gha-in-an-r-script",
+    "title": "Introduction to GitHub Actions to R users",
+    "section": "How to use GHA in an R script?",
+    "text": "How to use GHA in an R script?\nWe already know that we can make awesome automation with R packages using GitHub Actions. But most R users that I know use R Scripts and RMarkdown files in their daily use. I did not find examples of using GHA with simple scripts (without the package structure) in the r-lib/actions repository. So, to do that, we need to get used to how GHA works!\nThe GitHub documentation about workflows is an excellent source to learn more about this topic.\nFirst, the automated process made with GHA is called Workflow. The workflow has two main parts: Events and Jobs.\n\nEvents describe what can start a workflow. For example, an event can be “start this workflow every day at 9am”, or “every time someone makes a push into the repository” (in other words, there is some change in the code).\nJobs describes what the computer should do. Imagine that it starts with no software installed at all! So we need to tell which Operational System (OS) we want our code to run (for example, Ubuntu / Windows/ Mac OS). Also, we need to install R and any packages we need to have to run the code. After that, we can add the script we want to run in R and then save any generated results."
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#example",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#example",
+    "title": "Introduction to GitHub Actions to R users",
+    "section": "Example",
+    "text": "Example\nHere is an example of a simple Workflow file. The workflow starts when pressing a button on GitHub (the event), and it installs R and then prints the message “Hello R World!” on the console.\n# Event - What starts this workflow?\non:\n  workflow_dispatch:\n\n# Name of the workflow\nname: hello-r-world\n\n# Jobs - What the computer should do? \njobs:\n  write-message:\n    # Use Ubuntu   \n    runs-on: ubuntu-latest \n    steps:\n       # Install R\n      - uses: r-lib/actions/setup-r@v3    \n      - name: print-message   \n        # Code to execute R script\n        run: Rscript -e 'print(\"Hello R World!\")'"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#see-you-in-the-next-post",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#see-you-in-the-next-post",
+    "title": "Introduction to GitHub Actions to R users",
+    "section": "See you in the next post!",
+    "text": "See you in the next post!\nThis is the general idea of GitHub Actions. In the next post, I’ll write how you can create a GHA that runs an R script and saves the result into the GitHub repository. Stay tuned!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#acknowledgments",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#acknowledgments",
+    "title": "Introduction to GitHub Actions to R users",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\nDaniel Falbel, Athos Damiani, and Julio Trecenti: the people that first introduced me to GitHub Actions, aswered questions, and send a bunch of awesome links. Thanks!\nThe contributors of the r-lib/actions repository:🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.\nJulio Trecenti: thanks for reviewing the post!"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#references",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#references",
+    "title": "Introduction to GitHub Actions to R users",
+    "section": "References",
+    "text": "References\n\nGitHub Actions\nPackage usethis\nr-lib/actions Repository\nGitHub documentation about workflows"
+  },
+  {
+    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#share-and-support",
+    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#share-and-support",
+    "title": "Introduction to GitHub Actions to R users",
+    "section": "Share and support!",
+    "text": "Share and support!\nIf you like these kind of content, consider supporting me at GitHub Sponsors, or sharing it on Twitter:\n\n\n\nI wrote a new blog post about \"Introduction to GitHub Actions to R users\"!https://t.co/lCBH4vIGa2This post is complementary material for my lightning talk at the @rstudio conference!Feedback is always welcome :)#rstats #github #githubactions #rstudioconf #rstudioconf2022\n\n— Beatriz Milz (@BeaMilz) June 30, 2022"
   },
   {
     "objectID": "posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html",
@@ -1029,6 +1260,13 @@
     "text": "Agradecimentos:\nGostaria de agradecer algumas pessoas que fizeram parte do treinamento e avaliação, ou de alguma forma contribuíram com este processo: Marcela Alfaro, Sarah Stevens, Maneesha Sane, François Michonneau e Raniere Silva."
   },
   {
+    "objectID": "posts/es.html",
+    "href": "posts/es.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nSerie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\n \n\n\n\n\nJun 30, 2022\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/2021-05-24-naruto/pt/index.html",
     "href": "posts/2021-05-24-naruto/pt/index.html",
     "title": "Buscando informações na Wikipédia: Lista de episódios de Naruto Shippuden",
@@ -1099,6 +1337,13 @@
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nSérie GitHub Actions - 1 - Neste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R.\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\n \n\n\n\n\nJun 30, 2022\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\n\nQuer saber como acessar várias bases de dados com R? Imagem: por Allison Horst.\n\n\n\n\nTutorial\n\n\nTeaching\n\n\nDatasets\n\n\nData import\n\n\n \n\n\n\n\nJun 11, 2022\n\n\nBeatriz Milz, Tereza Lacerda\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nQuer saber como acessar várias bases de dados em Português com R? Post publicado no blog da Curso-R.\n\n\n\n\nTutorial\n\n\nTeaching\n\n\nDatasets\n\n\nData import\n\n\nR Packages\n\n\n \n\n\n\n\nApr 6, 2022\n\n\nBeatriz Milz\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\n\nPost publicado no blog da Curso-R.\n\n\n\n\nAPI\n\n\nOne Drive\n\n\nData import\n\n\nExcel\n\n\nMicrosoft\n\n\nAzure\n\n\nMicrosoft365R\n\n\n \n\n\n\n\nMar 18, 2022\n\n\nBeatriz Milz\n\n\n6 min\n\n\n\n\n\n\n  \n\n\n\n\n\nPost publicado no blog da Curso-R.\n\n\n\n\nAPI\n\n\nGoogle\n\n\nData import\n\n\nGoogle Sheets\n\n\n \n\n\n\n\nMar 8, 2022\n\n\nBeatriz Milz\n\n\n7 min\n\n\n\n\n\n\n  \n\n\n\n\n\nSegundo post sobre acesso à APIs.\n\n\n\n\nAPI\n\n\npurrr\n\n\nhttr\n\n\nWeb Scraping\n\n\nGit\n\n\nGitHub\n\n\n \n\n\n\n\nFeb 19, 2022\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\n\nPrimeiro post sobre acesso à APIs usando R.\n\n\n\n\nAPI\n\n\npurrr\n\n\nhttr\n\n\nWeb Scraping\n\n\n \n\n\n\n\nNov 29, 2021\n\n\nBeatriz Milz, Julio Trecenti\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\n\nPost publicado no blog da Escola de Dados\n\n\n\n\nR\n\n\n \n\n\n\n\nJul 3, 2021\n\n\nFernando Barbalho, Emmanuelle Nunes, Beatriz Milz\n\n\n15 min\n\n\n\n\n\n\n  \n\n\n\n\n\nPost publicado no blog da Curso-R.\n\n\n\n\nTutorial\n\n\nWeb Scraping\n\n\nData cleaning\n\n\npurrr\n\n\nrvest\n\n\n \n\n\n\n\nMay 24, 2021\n\n\nBeatriz Milz\n\n\n10 min\n\n\n\n\n\n\n  \n\n\n\n\n\nPrimeiras impressões ao usar o nova versão do R\n\n\n\n\nRStudio\n\n\nR\n\n\nPipe\n\n\n \n\n\n\n\nMay 18, 2021\n\n\nBeatriz Milz\n\n\n4 min\n\n\n\n\n\n\n  \n\n\n\n\n\nPost publicado no blog da Curso-R. Esse post tem como objetivo listar alguns erros comuns quando programamos em R, e dicas de como resolvê-los!\n\n\n\n\nR\n\n\nDebug\n\n\n \n\n\n\n\nMar 29, 2021\n\n\nBeatriz Milz e Fernando Corrêa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nNo blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de relatórios em R.\n\n\n\n\n\n\nMar 15, 2021\n\n\n4 min\n\n\n\n\n\n\n  \n\n\n\n\n\nPrimeiras impressões utilizando o pacote {bibliometrix}\n\n\n\n\nStudying\n\n\nResearch\n\n\n \n\n\n\n\nMar 7, 2021\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nEste post relata como foi o processo pra mim de realizar a certificação da RStudio: RStudio Instructor Training and Certification.\n\n\n\n\nTeaching\n\n\nRStudio\n\n\nCommunities\n\n\n \n\n\n\n\nMar 2, 2021\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nNo blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de gráficos em relatórios.\n\n\n\n\nTips\n\n\nggplot2\n\n\ntidyverse\n\n\n \n\n\n\n\nDec 17, 2020\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\n\nNo blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de tabelas em relatórios.\n\n\n\n\nTips\n\n\nTables\n\n\n \n\n\n\n\nDec 3, 2020\n\n\n4 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUtilizando dados sobre coleta e tratamento de esgoto no Estado De São Paulo\n\n\n\n\nReproducibility\n\n\nMaps\n\n\n \n\n\n\n\nJul 27, 2020\n\n\nBeatriz Milz\n\n\n16 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nTeaching\n\n\nCommunities\n\n\nThe Carpentries\n\n\n \n\n\n\n\nFeb 22, 2020\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUm relato deste um ano aprendendo R!\n\n\n\n\nR-Ladies\n\n\nCommunities\n\n\n \n\n\n\n\nAug 31, 2019\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\n\nO objetivo deste post é compartilhar um pouco sobre a minha experiência no desenvolvimento do meu primeiro Shiny App.\n\n\n\n\nShiny\n\n\n \n\n\n\n\nAug 21, 2019\n\n\nBeatriz Milz\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\n\nEste post tem como objetivo relatar a experiência de participar do Tidyverse Developer Day 2019.\n\n\n\n\nEvents\n\n\nCommunities\n\n\ntidyverse\n\n\nRStudio\n\n\nR Packages\n\n\n \n\n\n\n\nAug 12, 2019\n\n\nBeatriz Milz, Angélica Custódio\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\n\nComo compartilhar conteúdo sobre R, utilizando R?\n\n\n\n\nR-Ladies\n\n\nRMarkdown\n\n\n \n\n\n\n\nJun 24, 2019\n\n\nBeatriz Milz\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nNeste texto, gostaria de compartilhar um pouco sobre os primeiros seis meses de aprendizagem em programação, principalmente na linguagem R.\n\n\n\n\nCommunities\n\n\nR-Ladies\n\n\n \n\n\n\n\nJan 29, 2019\n\n\nBeatriz Milz\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "about-es.html",
+    "href": "about-es.html",
+    "title": "Beatriz Milz",
+    "section": "",
+    "text": "¡Hola! Mi nombre es Beatriz y soy una R-Lady de Brasil 🇧🇷 💜.\nSoy instructora de tidyverse certificada por RStudio y enseño R en Curso-R.\nEmpecé a escribir textos sobre R en 2019.\nSoy activa en la comunidad R en Brasil, participando en la coorganización de comunidades y eventos, como: R-Ladies São Paulo, Latin-R, y satRday São Paulo.\nEstoy haciendo un doctorado en la Universidad de São Paulo, en Ciencias Ambientales. Mi investigación trata sobre la transparencia de la información en la gestión de los recursos hídricos utilizados para el abastecimiento público en la Macrometrópolis de São Paulo."
+  },
+  {
     "objectID": "talks/pt/index.html",
     "href": "talks/pt/index.html",
     "title": "Apresentações em português",
@@ -1162,6 +1407,13 @@
     "text": "Posts em Português  Ver posts em Português\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nIntrodução ao GitHub Actions para quem programa em R\n\n\nSérie GitHub Actions - 1 - Neste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R.\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\n \n\n\n\n\nJun 30, 2022\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\nBases de dados: para praticar e ensinar\n\n\nQuer saber como acessar várias bases de dados com R? Imagem: por Allison Horst.\n\n\n\n\nTutorial\n\n\nTeaching\n\n\nDatasets\n\n\nData import\n\n\n \n\n\n\n\nJun 11, 2022\n\n\nBeatriz Milz, Tereza Lacerda\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nPacote dados: bases em português para praticar e ensinar\n\n\nQuer saber como acessar várias bases de dados em Português com R? Post publicado no blog da Curso-R.\n\n\n\n\nTutorial\n\n\nTeaching\n\n\nDatasets\n\n\nData import\n\n\nR Packages\n\n\n \n\n\n\n\nApr 6, 2022\n\n\nBeatriz Milz\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\nAcessando dados do seu One Drive com R\n\n\nPost publicado no blog da Curso-R.\n\n\n\n\nAPI\n\n\nOne Drive\n\n\nData import\n\n\nExcel\n\n\nMicrosoft\n\n\nAzure\n\n\nMicrosoft365R\n\n\n \n\n\n\n\nMar 18, 2022\n\n\nBeatriz Milz\n\n\n6 min\n\n\n\n\n\n\n  \n\n\n\n\nAcessando dados do Google Sheets com R\n\n\nPost publicado no blog da Curso-R.\n\n\n\n\nAPI\n\n\nGoogle\n\n\nData import\n\n\nGoogle Sheets\n\n\n \n\n\n\n\nMar 8, 2022\n\n\nBeatriz Milz\n\n\n7 min\n\n\n\n\n\n\n  \n\n\n\n\nAcessando APIs com R: GitHub - Parte 1\n\n\nSegundo post sobre acesso à APIs.\n\n\n\n\nAPI\n\n\npurrr\n\n\nhttr\n\n\nWeb Scraping\n\n\nGit\n\n\nGitHub\n\n\n \n\n\n\n\nFeb 19, 2022\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\nAcessando APIs com R: Exemplos com a PokéAPI!\n\n\nPrimeiro post sobre acesso à APIs usando R.\n\n\n\n\nAPI\n\n\npurrr\n\n\nhttr\n\n\nWeb Scraping\n\n\n \n\n\n\n\nNov 29, 2021\n\n\nBeatriz Milz, Julio Trecenti\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\nPixar: Uma História de dados\n\n\nPost publicado no blog da Escola de Dados\n\n\n\n\nR\n\n\n \n\n\n\n\nJul 3, 2021\n\n\nFernando Barbalho, Emmanuelle Nunes, Beatriz Milz\n\n\n15 min\n\n\n\n\n\n\n  \n\n\n\n\nBuscando informações na Wikipédia: Lista de episódios de Naruto Shippuden\n\n\nPost publicado no blog da Curso-R.\n\n\n\n\nTutorial\n\n\nWeb Scraping\n\n\nData cleaning\n\n\npurrr\n\n\nrvest\n\n\n \n\n\n\n\nMay 24, 2021\n\n\nBeatriz Milz\n\n\n10 min\n\n\n\n\n\n\n  \n\n\n\n\nExperimentando o R 4.1.0\n\n\nPrimeiras impressões ao usar o nova versão do R\n\n\n\n\nRStudio\n\n\nR\n\n\nPipe\n\n\n \n\n\n\n\nMay 18, 2021\n\n\nBeatriz Milz\n\n\n4 min\n\n\n\n\n\n\n  \n\n\n\n\nDesvendando erros: Entendendo mensagens de erro comuns em R\n\n\nPost publicado no blog da Curso-R. Esse post tem como objetivo listar alguns erros comuns quando programamos em R, e dicas de como resolvê-los!\n\n\n\n\nR\n\n\nDebug\n\n\n \n\n\n\n\nMar 29, 2021\n\n\nBeatriz Milz e Fernando Corrêa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\nDicas para elaborar relatórios em R\n\n\nNo blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de relatórios em R.\n\n\n\n\n\n\nMar 15, 2021\n\n\n4 min\n\n\n\n\n\n\n  \n\n\n\n\nConhecendo o pacote bibliometrix\n\n\nPrimeiras impressões utilizando o pacote {bibliometrix}\n\n\n\n\nStudying\n\n\nResearch\n\n\n \n\n\n\n\nMar 7, 2021\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\nTreinamento de instrutora e certificação da RStudio\n\n\nEste post relata como foi o processo pra mim de realizar a certificação da RStudio: RStudio Instructor Training and Certification.\n\n\n\n\nTeaching\n\n\nRStudio\n\n\nCommunities\n\n\n \n\n\n\n\nMar 2, 2021\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\nDicas para elaborar gráficos em R\n\n\nNo blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de gráficos em relatórios.\n\n\n\n\nTips\n\n\nggplot2\n\n\ntidyverse\n\n\n \n\n\n\n\nDec 17, 2020\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\nDicas para elaborar tabelas em R\n\n\nNo blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de tabelas em relatórios.\n\n\n\n\nTips\n\n\nTables\n\n\n \n\n\n\n\nDec 3, 2020\n\n\n4 min\n\n\n\n\n\n\n  \n\n\n\n\nCriando mapas com os pacotes tidyverse e geobr\n\n\nUtilizando dados sobre coleta e tratamento de esgoto no Estado De São Paulo\n\n\n\n\nReproducibility\n\n\nMaps\n\n\n \n\n\n\n\nJul 27, 2020\n\n\nBeatriz Milz\n\n\n16 min\n\n\n\n\n\n\n  \n\n\n\n\nThe Carpentries: Como fazer o treinamento de instrutora?\n\n\n\n\n\n\n\nTeaching\n\n\nCommunities\n\n\nThe Carpentries\n\n\n \n\n\n\n\nFeb 22, 2020\n\n\nBeatriz Milz\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\nUm ano aprendendo R!\n\n\nUm relato deste um ano aprendendo R!\n\n\n\n\nR-Ladies\n\n\nCommunities\n\n\n \n\n\n\n\nAug 31, 2019\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\nDesenvolvendo meu primeiro Shiny App\n\n\nO objetivo deste post é compartilhar um pouco sobre a minha experiência no desenvolvimento do meu primeiro Shiny App.\n\n\n\n\nShiny\n\n\n \n\n\n\n\nAug 21, 2019\n\n\nBeatriz Milz\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\nTidyverse developer day 2019 (tidy-dev-day)\n\n\nEste post tem como objetivo relatar a experiência de participar do Tidyverse Developer Day 2019.\n\n\n\n\nEvents\n\n\nCommunities\n\n\ntidyverse\n\n\nRStudio\n\n\nR Packages\n\n\n \n\n\n\n\nAug 12, 2019\n\n\nBeatriz Milz, Angélica Custódio\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\nCompartilhando conteúdo\n\n\nComo compartilhar conteúdo sobre R, utilizando R?\n\n\n\n\nR-Ladies\n\n\nRMarkdown\n\n\n \n\n\n\n\nJun 24, 2019\n\n\nBeatriz Milz\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nMeio ano de aprendizagem de R!\n\n\nNeste texto, gostaria de compartilhar um pouco sobre os primeiros seis meses de aprendizagem em programação, principalmente na linguagem R.\n\n\n\n\nCommunities\n\n\nR-Ladies\n\n\n \n\n\n\n\nJan 29, 2019\n\n\nBeatriz Milz\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "index.html#posts-en-español",
+    "href": "index.html#posts-en-español",
+    "title": "Bea Milz",
+    "section": "Posts en Español",
+    "text": "Posts en Español\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nIntroducción a GitHub Actions para usuarias de R\n\n\nSerie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\n \n\n\n\n\nJun 30, 2022\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Beatriz Milz",
@@ -1169,67 +1421,11 @@
     "text": "Hi! My name is Beatriz, and I am a R-Lady from Brazil 🇧🇷 💜.\nI’m a tidyverse instructor certified by RStudio, and I teach R at Curso-R.\nI have been writing about R in my blog since 2019. I’m mostly active in the Brazilian R community, co-organizing communities and events, such as: R-Ladies São Paulo, Latin-R, and satRday São Paulo.\nI’m a PhD Candidate at the University of São Paulo, in Environmental Sciences. My research is about transparency of information in the management of water resources that are used to supply the Macrometropolis of Sao Paulo."
   },
   {
-    "objectID": "posts/series-gha-1-what-is/en/index.html#create-a-readme.md-file",
-    "href": "posts/series-gha-1-what-is/en/index.html#create-a-readme.md-file",
-    "title": "Introduction to GitHub Actions",
-    "section": "Create a README.md file",
-    "text": "Create a README.md file\nNow that we have a repository, we can start creating and adding files to it. There are different ways you can interact with GitHub: you can clone the repository to your machine and use RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.\nFirst, click on “Creating a new file”:\n\n\n\n\n\nThen, add a name for the file: let’s create a file called README.md. This file is the first thing people see when accessing your repository, so it is nice to add some information about your project. Then, you can add text and Markdown code in the “Edit new file” section, and finally, click on “Commit new file” to save your changes.\n\n\n\n\n\nAwesome! We have a repository and now we can start working on our GitHub Actions."
-  },
-  {
     "objectID": "series-gha.html",
     "href": "series-gha.html",
     "title": "GitHub Actions Series: Making awesome automations",
     "section": "",
     "text": "Here you can find a series of posts about GitHub Actions, which are complementary material for my lightning talk at the RStudio Conference - rstudio::conf 2022."
-  },
-  {
-    "objectID": "series-gha.html#posts-in-english-see-all-posts-in-english",
-    "href": "series-gha.html#posts-in-english-see-all-posts-in-english",
-    "title": "GitHub Actions Series: Making awesome automations",
-    "section": "Posts in English  See all posts in English",
-    "text": "Posts in English  See all posts in English\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nIntroduction to GitHub Actions\n\n\nGitHub Actions Series - 1\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\n \n\n\n\n\nJun 29, 2022\n\n\nBeatriz Milz\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "series-gha.html#posts-em-português-ver-posts-em-português",
-    "href": "series-gha.html#posts-em-português-ver-posts-em-português",
-    "title": "GitHub Actions Series: Making awesome automations",
-    "section": "Posts em Português  Ver posts em Português",
-    "text": "Posts em Português  Ver posts em Português\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "",
-    "text": "English  Español  Português\nHi! This is the first blog post in the “GitHub Action” Series. This series of posts are complementary material for my RStudio Conference - rstudio::conf 2022 lightning talk.\nIn this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#create-a-github-account",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#create-a-github-account",
-    "title": "Introduction to GitHub Actions",
-    "section": "Create a GitHub account",
-    "text": "Create a GitHub account\nTo start using GitHub Actions, first, you need to have an account on GitHub. You can create a new account for free! You also can sign in to your existing account if you already have one."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#create-a-repository",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#create-a-repository",
-    "title": "Introduction to GitHub Actions",
-    "section": "Create a repository",
-    "text": "Create a repository\nThe next step is to create a Repository. If you don’t know what a repository is, imagine having a directory on your computer, and you store files from a project in that directory. A repository is like that but in the cloud!\nTo create a repository, on the homepage of GitHub, click on the “+” icon in the top right corner and select New repository. Give your repository a name, then choose whether you want it to be public or private. Then click “Create repository”.\n\n\n\n\n\nFor this example, I created a repository called awesome-gha."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#create-a-readme.md-file",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#create-a-readme.md-file",
-    "title": "Introduction to GitHub Actions",
-    "section": "Create a README.md file",
-    "text": "Create a README.md file\nNow that we have a repository, we can start creating and adding files to it. There are different ways you can interact with GitHub: you can clone the repository to your machine and use RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.\nFirst, click on “Creating a new file”:\n\n\n\n\n\nThen, add a name for the file: let’s create a file called README.md. This file is the first thing people see when accessing your repository, so adding some information about your project is nice. Then, you can add text and Markdown code in the “Edit new file” section, and finally, click on “Commit new file” to save your changes.\n\n\n\n\n\nAwesome! We have a repository and now we can start working on our GitHub Actions."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#todo",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#todo",
-    "title": "Introduction to GitHub Actions",
-    "section": "TODO",
-    "text": "TODO\nThe workflow file is a YAML file that defines when and how the action should run. This file must be stored in the .github/workflows directory."
   },
   {
     "objectID": "series-gha.html#posts-in-english",
@@ -1246,430 +1442,10 @@
     "text": "Posts em Português\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nIntrodução ao GitHub Actions para quem programa em R\n\n\nSérie GitHub Actions - 1 - Neste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R.\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\n \n\n\n\n\nJun 30, 2022\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#section",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#section",
-    "title": "Introduction to GitHub Actions",
-    "section": "🏆",
-    "text": "🏆\nI would like to thank all the work made by the contributors of the r-lib/actions repository. 🏆 This repository was the most significant source of code and content about GitHub Actions for R to me. :::\nHere are some examples of how to set up GH Actions in packages:\n\nTo perform checks (like devtools::check() ) in a package every time there is a change in the code, use:\n\n\nusethis::use_github_action(\"check-release\")\n\n\nTo build the package page (like pkgdown::build_site() ) everytime there is a change in the code, use:\n\n\nusethis::use_github_action(\"pkgdown\")"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#what-is-github-actions",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#what-is-github-actions",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "What is GitHub Actions?",
-    "text": "What is GitHub Actions?\nGitHub Actions is a feature by GitHub that enables us to automate tasks with code. For example, we can specify a series of commands to run when activated!\nWe can do a lot of different automations with GitHub Actions, such as:\n\nDownloading and saving a file everyday (such as .csv / .xlsx / .json ..);\nRunning an R script and saving the results into a database, or a Google Sheet, for example;\nRunning web scraping routines;\nRendering an RMarkdown or Quarto document;\nAnd so on! 🚀"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#how-to-use-gha-in-an-r-package",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#how-to-use-gha-in-an-r-package",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "How to use GHA in an R package?",
-    "text": "How to use GHA in an R package?\nGitHub Actions is heavily used in package development for CI/CD. For example, package developers use GitHub Actions to perform tests in their code, run checking routines, update the documentation and the package’s website, among other things.\n\n\n\n\n\n\nWhat is CI/CD in the context of R packages?\n\n\n\nContinuous integration (CI) is a development practice requiring developers to regularly integrate code into a shared repository, after which automated checks and tests are run to verify the integrity of the new code.\nContinuous delivery (CD) is a software development methodology in which code changes are automatically checked, tested, and released to production. This allows for new package versions to be released frequently.\n\n\nThe package usethis helps us set up GitHub Actions in R packages. It is essential to know that, by default, the Actions created using usethis come from the r-lib/actions repository. Save this link; it is pure gold.\n\n\n\n\n\n\n🏆\n\n\n\nI would like to thank all the work made by the contributors of the r-lib/actions repository. 🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.\n\n\n\n\n\n\n\nHere are some examples of how to set up GH Actions in packages:\n\nTo perform checks (like devtools::check() ) in a package every time there is a change in the code, use:\n\n\nusethis::use_github_action(\"check-release\")\n\nThis is useful because every time there is a check error, we get an email from GitHub ⚠️. So we know that something is breaking the code and can fix it as soon as possible.\n\nTo build the package page (like pkgdown::build_site() ) every time there is a change in the code, use:\n\n\nusethis::use_github_action(\"pkgdown\")\n\nThis allows the package website and documentation to be always up to date. 📌"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#how-to-use-gha-in-an-r-script",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#how-to-use-gha-in-an-r-script",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "How to use GHA in an R script?",
-    "text": "How to use GHA in an R script?\nWe already know that we can make awesome automation with R packages using GitHub Actions. But most R users that I know use R Scripts and RMarkdown files in their daily use. I did not find examples of using GHA with simple scripts (without the package structure) in the r-lib/actions repository. So, to do that, we need to get used to how GHA works!\nThe GitHub documentation about workflows is an excellent source to learn more about this topic.\nFirst, the automated process made with GHA is called Workflow. The workflow has two main parts: Events and Jobs.\n\nEvents describe what can start a workflow. For example, an event can be “start this workflow every day at 9am”, or “every time someone makes a push into the repository” (in other words, there is some change in the code).\nJobs describes what the computer should do. Imagine that it starts with no software installed at all! So we need to tell which Operational System (OS) we want our code to run (for example, Ubuntu / Windows/ Mac OS). Also, we need to install R and any packages we need to have to run the code. After that, we can add the script we want to run in R and then save any generated results."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#see-you-in-the-next-post",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#see-you-in-the-next-post",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "See you in the next post!",
-    "text": "See you in the next post!\nThis is the general idea of GitHub Actions. In the next post, I’ll write how you can create a GHA that runs an R script and saves the result into the GitHub repository. Stay tuned!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#links-in-this-post",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#links-in-this-post",
-    "title": "Introduction to GitHub Actions",
-    "section": "Links in this post",
-    "text": "Links in this post\n\nGitHub Actions\nPackage usethis\nr-lib/actions Repository\nGitHub documentation about workflows"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#references",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#references",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "References",
-    "text": "References\n\nGitHub Actions\nPackage usethis\nr-lib/actions Repository\nGitHub documentation about workflows"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#acknowledgments",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#acknowledgments",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\n\nDaniel Falbel, Athos Damiani, and Julio Trecenti: the people that first introduced me to GitHub Actions, aswered questions, and send a bunch of awesome links. Thanks!\nThe contributors of the r-lib/actions repository:🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.\nJulio Trecenti: thanks for reviewing the post!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html",
-    "title": "Introdução ao GitHub Actions para quem programa em R",
-    "section": "",
-    "text": "English  Español  Português\nOi! Este é o primeiro post da série “GitHub Actions”. Esta série de posts é um material complementar para minha palestra relâmpago na RStudio Conference - rstudio::conf 2022.\nNeste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#o-que-é-github-actions",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#o-que-é-github-actions",
-    "title": "Introdução ao GitHub Actions para quem programa em R",
-    "section": "O que é GitHub Actions?",
-    "text": "O que é GitHub Actions?\nGitHub Actions é um recurso do GitHub que nos permite automatizar tarefas com código. Por exemplo, podemos especificar uma série de comandos a serem executados quando é ativado!\nPodemos fazer muitas automações diferentes com o GitHub Actions, como:\n\nBaixar e salvar um arquivo todos os dias (como .csv/.xlsx/.json ..);\nExecutar um script em R e salvar os resultados em um banco de dados, ou uma Planilha do Google, por exemplo;\nExecução de rotinas de web scraping;\nRenderização de um documento RMarkdown ou Quarto;\nE assim por diante! 🚀"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#como-usar-o-gha-em-um-pacote-em-r",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#como-usar-o-gha-em-um-pacote-em-r",
-    "title": "Introdução ao GitHub Actions para quem programa em R",
-    "section": "Como usar o GHA em um pacote em R?",
-    "text": "Como usar o GHA em um pacote em R?\nO GitHub Actions é muito usado no desenvolvimento de pacotes para CI/CD. Por exemplo, pessoas que desenvolvem pacotes usam GitHub Actions para realizar testes em seu código, executar rotinas de checagem, atualizar a documentação e o site do pacote, entre outras coisas.\n\n\n\n\n\n\nO que é CI/CD no contexto de pacotes em R?\n\n\n\nA integração contínua (Continuous integration - CI) é uma prática de desenvolvimento que exige que as pessoas que desenvolvem o pacote integrem regularmente o código no repositório, após o qual verificações e testes automatizados são executados para verificar a integridade do novo código.\nA entrega contínua (Continuous delivery - CD) é uma metodologia de desenvolvimento de software na qual as alterações de código são verificadas, testadas e liberadas para produção automaticamente. Isso permite que novas versões de pacotes sejam lançadas com frequência.\n\n\nO pacote usethis nos ajuda a configurar GitHub Actions em pacotes R. É essencial saber que, por padrão, as Actions criadas usando usethis vêm do repositório r-lib/actions. Salve este link; o conteúdo é muito relevante!\n\n\n\n\n\n\n🏆\n\n\n\nGostaria de agradecer todo o trabalho feito por quem contribui com o repositório r-lib/actions. 🏆 Este repositório foi a fonte mais importante de conteúdo e código sobre GitHub Actions para R para mim.\n\n\n\n\n\n\n\nAqui estão alguns exemplos de como configurar GH Actions em pacotes:\n\nPara realizar checagens (como devtools::check() ) em um pacote sempre que houver uma alteração no código, use:\n\n\nusethis::use_github_action(\"check-release\")\n\nIsso é útil porque toda vez que ocorre um erro no check, recebemos um e-mail do GitHub ⚠️. Assim, sabemos que algo está quebrando o código e podemos corrigi-lo o mais rápido possível.\n\nPara atualizar o site do pacote (como pkgdown::build_site()) toda vez que houver uma mudança no código, use:\n\n\nusethis::use_github_action(\"pkgdown\")\n\nIsso permite que o site e a documentação do pacote estejam sempre atualizados. 📌"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#how-to-use-gha-in-an-r-script",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#how-to-use-gha-in-an-r-script",
-    "title": "Introdução à GitHub Actions para quem programa em R",
-    "section": "How to use GHA in an R script?",
-    "text": "How to use GHA in an R script?\nWe already know that we can make awesome automation with R packages using GitHub Actions. But most R users that I know use R Scripts and RMarkdown files in their daily use. I did not find examples of using GHA with simple scripts (without the package structure) in the r-lib/actions repository. So, to do that, we need to get used to how GHA works!\nThe GitHub documentation about workflows is an excellent source to learn more about this topic.\nFirst, the automated process made with GHA is called Workflow. The workflow has two main parts: Events and Jobs.\n\nEvents describe what can start a workflow. For example, an event can be “start this workflow every day at 9am”, or “every time someone makes a push into the repository” (in other words, there is some change in the code).\nJobs describes what the computer should do. Imagine that it starts with no software installed at all! So we need to tell which Operational System (OS) we want our code to run (for example, Ubuntu / Windows/ Mac OS). Also, we need to install R and any packages we need to have to run the code. After that, we can add the script we want to run in R and then save any generated results.\n\nHere is an example of a simple Workflow file. The workflow starts when pressing a button on GitHub (the event), and it installs R and then prints the message “Hello R World!” on the console.\n# Event - What starts this workflow?\non:\n  workflow_dispatch:\n\n# Name of the workflow\nname: hello-r-world\n\n# Jobs - What the computer should do? \njobs:\n  write-message:\n    # Use Ubuntu   \n    runs-on: ubuntu-latest \n    steps:\n       # Install R\n      - uses: r-lib/actions/setup-r@v3    \n      - name: print-message   \n        # Code to execute R script\n        run: Rscript -e 'print(\"Hello R World!\")'"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#see-you-in-the-next-post",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#see-you-in-the-next-post",
-    "title": "Introdução à GitHub Actions para quem programa em R",
-    "section": "See you in the next post!",
-    "text": "See you in the next post!\nThis is the general idea of GitHub Actions. In the next post, I’ll write how you can create a GHA that runs an R script and saves the result into the GitHub repository. Stay tuned!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#acknowledgments",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#acknowledgments",
-    "title": "Introdução à GitHub Actions para quem programa em R",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\n\nDaniel Falbel, Athos Damiani, and Julio Trecenti: the people that first introduced me to GitHub Actions, aswered questions, and send a bunch of awesome links. Thanks!\nThe contributors of the r-lib/actions repository:🏆 This repository was the most significant source of code and content about GitHub Actions for R to me.\nJulio Trecenti: thanks for reviewing the post!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#references",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#references",
-    "title": "Introdução à GitHub Actions para quem programa em R",
-    "section": "References",
-    "text": "References\n\nGitHub Actions\nPackage usethis\nr-lib/actions Repository\nGitHub documentation about workflows"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#como-usar-o-gha-em-um-script-em-r",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#como-usar-o-gha-em-um-script-em-r",
-    "title": "Introdução ao GitHub Actions para quem programa em R",
-    "section": "Como usar o GHA em um script em R?",
-    "text": "Como usar o GHA em um script em R?\nJá sabemos que podemos fazer automações muito legals em pacotes em R usando GitHub Actions. Mas a maioria das pessoas que programam em R que conheço usam scripts R e arquivos RMarkdown no dia-a-dia. Não encontrei exemplos de uso do GHA com scripts simples (sem a estrutura do pacote) no repositório r-lib/actions. Então, para isso, precisamos conhecer como funciona o GHA!\nA documentação do GitHub sobre fluxos de trabalho (workflows) é uma excelente fonte para saber mais sobre esse tópico.\nPrimeiro, a automatização feita com GHA é chamada de Workflow (ou fluxo de trabalho em português). O fluxo de trabalho tem duas partes principais: Events (eventos) e Jobs (trabalhos).\n\nEvents/Eventos descrevem o que pode iniciar um fluxo de trabalho. Por exemplo, um evento pode ser “iniciar este fluxo de trabalho todos os dias às 9h” ou “toda vez que alguém fizer um push no repositório” (em outras palavras, quando há alguma alteração no código).\nJobs/Trabalhos descreve o que o computador deve fazer. Imagine que ele começa sem nenhum software instalado! Portanto, precisamos dizer qual Sistema Operacional (SO) queremos que nosso código execute (por exemplo, Ubuntu / Windows / Mac OS). Além disso, precisamos instalar o R e quaisquer pacotes necessários para executar o nosso código. Depois disso, podemos adicionar o script que queremos executar em R e salvar os resultados gerados."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#exemplo",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#exemplo",
-    "title": "Introdução ao GitHub Actions para quem programa em R",
-    "section": "Exemplo",
-    "text": "Exemplo\nAqui está um exemplo de um arquivo de fluxo de trabalho simples. O fluxo de trabalho inicia ao pressionar um botão no GitHub (o evento). Ele instala o R e imprime a mensagem “Hello R World!” no console (o trabalho).\n# Evento/Event - O que inicia o fluxo de trabalho/workflow?\non:\n  workflow_dispatch:\n\n# Nome do workflow\nname: hello-r-world\n\n# Trabalho/Jobs - O que o computador deve fazer?\njobs:\n  write-message:\n    # Vamos usar o Ubuntu  \n    runs-on: ubuntu-latest \n    steps:\n       # Instalar o R\n      - uses: r-lib/actions/setup-r@v3    \n      - name: print-message   \n        # Código para executar um comando em R\n        run: Rscript -e 'print(\"Hello R World!\")'"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#vejo-você-no-próximo-post",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#vejo-você-no-próximo-post",
-    "title": "Introdução ao GitHub Actions para quem programa em R",
-    "section": "Vejo você no próximo post!",
-    "text": "Vejo você no próximo post!\nEssa é a ideia geral do GitHub Actions. No próximo post, escreverei como você pode criar um GHA que execute um script R e salve o resultado no repositório do GitHub. Acompanhe!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#agradecimentos",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#agradecimentos",
-    "title": "Introdução ao GitHub Actions para quem programa em R",
-    "section": "Agradecimentos",
-    "text": "Agradecimentos\n\nDaniel Falbel, Athos Damiani e Julio Trecenti: as pessoas que me apresentaram ao GitHub Actions, responderam perguntas e enviaram vários links incríveis.Obrigada!\nAs pessoas que contribuem com o repositório r-lib/actions: 🏆 Este repositório foi a fonte mais significativa de conteúdo sobre GitHub Actions for R para mim.\nJulio Trecenti: obrigada por revisar o post!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#referências",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#referências",
-    "title": "Introdução ao GitHub Actions para quem programa em R",
-    "section": "Referências",
-    "text": "Referências\n\nGitHub Actions\nPacote usethis\nRepositório r-lib/actions\nDocumentação do GitHub sobre workflows"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#example",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#example",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "Example",
-    "text": "Example\nHere is an example of a simple Workflow file. The workflow starts when pressing a button on GitHub (the event), and it installs R and then prints the message “Hello R World!” on the console.\n# Event - What starts this workflow?\non:\n  workflow_dispatch:\n\n# Name of the workflow\nname: hello-r-world\n\n# Jobs - What the computer should do? \njobs:\n  write-message:\n    # Use Ubuntu   \n    runs-on: ubuntu-latest \n    steps:\n       # Install R\n      - uses: r-lib/actions/setup-r@v3    \n      - name: print-message   \n        # Code to execute R script\n        run: Rscript -e 'print(\"Hello R World!\")'"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html",
-    "title": "Introducción a GitHub Actions para usuarias de R",
-    "section": "",
-    "text": "English  Español  Português\n¡Oye! Este es el primer post de la serie “GitHub Actions”. Esta serie de post es un material complementario para mi charla relámpago en la Conferencia RStudio - rstudio::conf 2022.\nEn esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#qué-es-github-actions",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#qué-es-github-actions",
-    "title": "Introducción a GitHub Actions para usuarias de R",
-    "section": "¿Qué es GitHub Actions?",
-    "text": "¿Qué es GitHub Actions?\nGitHub Actions es una herramienta de GitHub que nos permite automatizar tareas con código. Por ejemplo, podemos especificar una serie de comandos para que se ejecuten cuando se active.\nPodemos hacer muchas automatizaciones diferentes con GitHub Actions, como:\n\nDescargar y guardar un archivo todos los días (como .csv/ .xlsx/ .json…);\nEjecutar un script en R y guardar los resultados en una base de datos o una hoja de cálculo de Google, por ejemplo;\nEjecución de rutinas de web scraping;\nActualizar documentos RMarkdown o Quarto;\n¡Etcétera! 🚀"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-usar-gha-en-un-paquete-en-r",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-usar-gha-en-un-paquete-en-r",
-    "title": "Introducción a GitHub Actions para usuáries de R",
-    "section": "¿Cómo usar GHA en un paquete en R?",
-    "text": "¿Cómo usar GHA en un paquete en R?\nGitHub Actions se usa ampliamente en el desarrollo de paquetes para CI/CD. Por ejemplo, las personas que desarrollan paquetes usan GitHub Actions para probar su código, ejecutar rutinas de chequeo, actualizar la documentación y el sitio web del paquete, y más.\n\n\n\n\n\n\n¿Qué es CI/CD en el contexto de paquetes en R?\n\n\n\nLa integración continua (CI) es una práctica de desarrollo que requiere que las personas que desarrollan el paquete integren regularmente el código en el repositorio, después de lo cual se realizan chequeos y pruebas automatizadas para verificar la integridad del nuevo código.\nLa entrega continua (CD) es una metodología de desarrollo de software en la que los cambios de código se verifican, prueban y lanzan automáticamente a producción. Esto permite que se lancen con frecuencia nuevas versiones de los paquetes.\n\n\nEl paquete usethis nos ayuda a configurar GitHub Actions en paquetes R. Es fundamental saber que, por defecto, las Actions creadas usando usethis provienen del repositorio r-lib/actions. Guarde este enlace; el contenido es muy relevante!\n\n\n\n\n\n\n🏆\n\n\n\nMe gustaría agradecer todo el trabajo realizado por quienes contribuyen al repositorio r-lib/actions . 🏆 Para mí, este repositorio fue la fuente de contenido y código más importante sobre GitHub Actions en R.\n\n\n\n\n\n\n\nAquí hay algunos ejemplos de cómo configurar GH Actions en paquetes:\n\nPara realizar chequeos (como devtools::check()) en un paquete siempre que haya un cambio de código, utilice:\n\n\nusethis::use_github_action(\"check-release\")\n\nEsto es útil porque cada vez que ocurre un error en el cheque, recibimos un correo electrónico de GitHub ⚠️. De esa manera, sabemos que algo está malo en el código y podemos solucionarlo lo antes posible.\nPara actualizar el sitio web del paquete (como pkgdown::build_site()) cada vez que haya un cambio en el código, utilice:\n\nusethis::use_github_action(\"pkgdown\")\n\nEsto permite que el sitio web y la documentación del paquete estén siempre actualizados. 📌"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-usar-gha-en-un-script-en-r",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-usar-gha-en-un-script-en-r",
-    "title": "Introducción a GitHub Actions para usuáries de R",
-    "section": "¿Cómo usar GHA en un script en R?",
-    "text": "¿Cómo usar GHA en un script en R?\nYa sabemos que podemos hacer automatizaciones realmente geniales en paquetes en R usando GitHub Actions. Pero la mayoría de las personas que programan en R que conozco usan scripts R y archivos RMarkdown en el día a día. No encontré ejemplos del uso de GHA con scripts simples (sin la estructura del paquete) en el repositorio r-lib/actions. Entonces, para eso, ¡necesitamos saber cómo funciona GHA!\nLa documentación de GitHub sobre flujos de trabajo es una fuente excelente para obtener más información sobre este tema.\nEn primer lugar, la automatización realizada con GHA se llama Workflow (o flujo de trabajo). El flujo de trabajo tiene dos partes principales: Events (Eventos) y Jobs (Trabajos).\n\nEvents/Eventos describen lo que puede iniciar un flujo de trabajo. Por ejemplo, un evento podría ser “iniciar este flujo de trabajo todos los días a las 9 am” o “cada vez que alguien hace un push al repositorio” (en otras palabras, cuando hay un cambio en el código).\nJobs/Trabajos describe lo que se supone que debe hacer la computadora. ¡Imagínese que comienza sin ningún software instalado! Por lo tanto, debemos decir qué sistema operativo (SO) queremos que ejecute nuestro código (por ejemplo, Ubuntu/Windows/Mac OS). Además, necesitamos instalar R y cualquier paquete necesario para ejecutar nuestro código. Después de eso, podemos agregar el script que queremos ejecutar en R y guardar los resultados generados."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#ejemplo",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#ejemplo",
-    "title": "Introducción a GitHub Actions para usuarias de R",
-    "section": "Ejemplo",
-    "text": "Ejemplo\nEste es un ejemplo de un archivo de workflow/flujo de trabajo simple. El flujo de trabajo comienza cuando presiona un botón en GitHub (el evento). Entonces, instala R e imprime el mensaje “Hello R World!” en la consola (el trabajo).\n# Evento/Event - ¿Qué inicia el flujo de trabajo/workflow?\non:\n  workflow_dispatch:\n\n# Nombre del workflow\nname: hello-r-world\n\n# Jobs/Trabajos - ¿Qué debe hacer la computadora?\njobs:\n  write-message:\n    # Usar Ubuntu   \n    runs-on: ubuntu-latest \n    steps:\n       # Instalar R\n      - uses: r-lib/actions/setup-r@v3    \n      - name: print-message   \n        # Código para ejecutar el script R\n        run: Rscript -e 'print(\"Hello R World!\")'"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#nos-vemos-en-el-siguiente-post",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#nos-vemos-en-el-siguiente-post",
-    "title": "Introducción a GitHub Actions para usuarias de R",
-    "section": "¡Nos vemos en el siguiente post!",
-    "text": "¡Nos vemos en el siguiente post!\nEsa es la idea general de GitHub Actions. En la próxima publicación, escribiré cómo puede crear un GHA que ejecute un script R y guarde el resultado en el repositorio de GitHub. ¡Nos vemos pronto!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#agradecimientos",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#agradecimientos",
-    "title": "Introducción a GitHub Actions para usuarias de R",
-    "section": "Agradecimientos",
-    "text": "Agradecimientos\nDaniel Falbel, Athos Damiani, y Julio Trecenti: las personas que me presentaron GitHub Actions, respondieron preguntas y enviaron muchos enlaces increíbles. ¡Gracias!\nPersonas que contribuyen al repositorio r-lib/actions: 🏆 Para mí, este repositorio fue la fuente de contenido más importante en GitHub Actions para R.\nJulio Trecenti: gracias por revisar la versión en Inglés del post!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#referencias",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#referencias",
-    "title": "Introducción a GitHub Actions para usuarias de R",
-    "section": "Referencias",
-    "text": "Referencias\n\nGitHub Actions\nPaquete usethis\nRepositorio r-lib/actions\nDocumentación de GitHub sobre flujos de trabajo"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-paquete-en-r",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-paquete-en-r",
-    "title": "Introducción a GitHub Actions para usuarias de R",
-    "section": "¿Cómo utilizar GHA en un paquete en R?",
-    "text": "¿Cómo utilizar GHA en un paquete en R?\nGitHub Actions se utiliza ampliamente en el desarrollo de paquetes para CI/CD. Por ejemplo, las personas que desarrollan paquetes usan GitHub Actions para probar su código, ejecutar rutinas de chequeo, actualizar la documentación y el sitio web del paquete, y más.\n\n\n\n\n\n\n¿Qué es CI/CD en el contexto de paquetes en R?\n\n\n\nLa integración continua (CI) es una práctica de desarrollo que requiere que las personas que desarrollan el paquete integren regularmente el código en el repositorio, después de lo cual se realizan chequeos y pruebas automatizadas para verificar la integridad del nuevo código.\nLa entrega continua (CD) es una metodología de desarrollo de software en la que los cambios de código se verifican, prueban y lanzan automáticamente a producción. Esto permite que se lancen con frecuencia nuevas versiones de los paquetes.\n\n\nEl paquete usethis nos ayuda a configurar GitHub Actions en paquetes R. Es fundamental saber que, por defecto, las Actions creadas usando usethis provienen del repositorio r-lib/actions. ¡Guarde este enlace; el contenido es muy relevante!\n\n\n\n\n\n\n🏆\n\n\n\nMe gustaría agradecer todo el trabajo realizado por quienes contribuyen al repositorio r-lib/actions. 🏆 Para mí, este repositorio fue la fuente de contenido y código más importante sobre GitHub Actions en R.\n\n\n\n\n\n\n\nAquí hay algunos ejemplos de cómo configurar GH Actions en paquetes:\n\nPara realizar chequeos (como devtools::check()) en un paquete siempre que haya un cambio de código, utilice:\n\n\nusethis::use_github_action(\"check-release\")\n\nEsto es útil porque cada vez que ocurre un error en el cheque, recibimos un correo electrónico de GitHub ⚠️. De esa manera, sabemos que algo está malo en el código y podemos solucionarlo lo antes posible.\nPara actualizar el sitio web del paquete (como pkgdown::build_site()) cada vez que haya un cambio en el código, utilice:\n\nusethis::use_github_action(\"pkgdown\")\n\nEsto permite que el sitio web y la documentación del paquete estén siempre actualizados. 📌"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-script-en-r",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#cómo-utilizar-gha-en-un-script-en-r",
-    "title": "Introducción a GitHub Actions para usuarias de R",
-    "section": "¿Cómo utilizar GHA en un script en R?",
-    "text": "¿Cómo utilizar GHA en un script en R?\nYa sabemos que podemos hacer automatizaciones realmente geniales en paquetes en R utilizando GitHub Actions. Pero la mayoría de las personas que programan en R que conozco utilizan scripts R y archivos RMarkdown en el día a día. No encontré ejemplos del uso de GHA con scripts simples (sin la estructura del paquete) en el repositorio r-lib/actions. Entonces, para eso, ¡necesitamos saber cómo funciona GHA!\nLa documentación de GitHub sobre flujos de trabajo es una fuente excelente para obtener más información sobre este tema.\nEn primer lugar, la automatización realizada con GHA se llama Workflow (o flujo de trabajo). El flujo de trabajo tiene dos partes principales: Events (Eventos) y Jobs (Trabajos).\n\nEvents/Eventos describen lo que puede iniciar un flujo de trabajo. Por ejemplo, un evento podría ser “comenzar este flujo de trabajo todos los días a las 9 am” o “cada vez que alguien hace un push al repositorio” (en otras palabras, cuando hay un cambio en el código).\nJobs/Trabajos describe lo que se supone que debe hacer la computadora. ¡Imagínese que comienza sin ningún software instalado! Por lo tanto, debemos decir qué sistema operativo (SO) queremos que ejecute nuestro código (por ejemplo, Ubuntu/Windows/Mac OS). Además, necesitamos instalar R y cualquier paquete necesario para ejecutar nuestro código. Después de eso, podemos agregar el script que queremos ejecutar en R y guardar los resultados generados."
-  },
-  {
     "objectID": "series-gha.html#posts-en-español",
     "href": "series-gha.html#posts-en-español",
     "title": "GitHub Actions Series: Making awesome automations",
     "section": "Posts en Español",
     "text": "Posts en Español\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nIntroducción a GitHub Actions para usuarias de R\n\n\nSerie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\n \n\n\n\n\nJun 30, 2022\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#posts-en-español",
-    "href": "index.html#posts-en-español",
-    "title": "Bea Milz",
-    "section": "Posts en Español",
-    "text": "Posts en Español\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nIntroducción a GitHub Actions para usuarias de R\n\n\nSerie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.\n\n\n\n\nGit\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\n \n\n\n\n\nJun 30, 2022\n\n\nBeatriz Milz\n\n\n5 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html",
-    "href": "posts/2019-08-12-tidydevday/en/index.html",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "",
-    "text": "English  Português\nIn this post, Beatriz Milz and Angélica Custódio talk about the experience of participating in the Tidyverse Developer Day 2019."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#o-tidy-dev-day",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#o-tidy-dev-day",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "O tidy-dev-day",
-    "text": "O tidy-dev-day\nTidyverse Developer Day (tidy-dev-day) is a day-long event where attendees learn more about how to contribute to tidyverse. The event reported here was the second edition. The first edition was at rstudio::conf2019.\nIn this issue, tidy-dev-day was a part of the conference useR!2019, which took place in Toulouse, France. The event took place the day before the start of the conference, bringing together several people who participated in it.\nSomething to note is that the useR!2019 organization has selected people to be awarded diversity grants, providing financial assistance to members of underrepresented groups in the R or historically marginalized. This initiative was fundamental for the participation of several people from different parts of the world, including the authors of this post (Bea and Angelica)."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#como-funcionou-o-evento",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#como-funcionou-o-evento",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Como funcionou o evento?",
-    "text": "Como funcionou o evento?\nO evento aconteceu no mesmo espaço da useR!2019, e tinha um código de conduta, com o objetivo de oferecer um ambiente seguro e amigável para todos os participantes. O evento não foi gratuito: foi necessário pagar uma taxa de $10 (dez dólares), com o intuito de diminuir o número de pessoas que se inscreve e não comparece no evento. No entanto, a organização aponta que o dinheiro será doado.\nComo o objetivo do evento é proporcionar um aprendizado sobre como contribuir com desenvolvimento e manutenção do tidyverse, estavam presentes diversos desenvolvedores e mantenedores do tidyverse, e também um time para ajudar os participantes, tirar dúvidas, etc.\nO material utilizado (instruções, apresentações, sugestões de material, etc) está disponível neste repositório no Github.\nEm uma parede no fundo da sala, haviam diversos post-its que indicavam issues a serem trabalhadas, e estavam separadas por pacotes, e também por cor, onde a cor indicava o tipo de issue (documentação, bug, feature). Os participantes escolhiam uma issue para trabalhar durante o evento, até a realização de um pull request. Em outra parede, os post-its estavam separados em: post-its de pull requests para serem avaliados pelo Hadley Wickham e outros contribuidores, e os post-its que já tinham sido avaliados e aceitos!\nOutra coisa legal é que o espaço disponibilizou diversas mesas agrupadas, o que ajudava a trabalhar em conjunto.\n\nLegenda: Foto tirada no tidy-dev-day, por @Dale_Masch.\nPara quem estava participando pela primeira vez eram recomendadas as issues de documentação, pois elas são mais naturais para quem nunca fez esse tipo de atividade antes. Para as pessoas que já tinham mais familiaridade eram recomendadas issues de bug ou feature que já exigem um conhecimento maior não só do pacote, mas também de como desenvolver a melhoria."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#experiência-pessoal---bea",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#experiência-pessoal---bea",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Experiência pessoal - Bea",
-    "text": "Experiência pessoal - Bea\nI never developed a package, and when I arrived at the event I didn’t even know how packages were structured. In the issue I chose, the goal was to improve an error message from the filter() function, from the package dplyr, so that the message would conform to the tidyverse style guide. \nCaption: Photo of the issue that I was working, and also of the special coin we received, for@Bea_Milz.\nInitially, I forked the dplyr repository, cloned it on my computer, and was at a loss as to what to do next. I didn’t know which directory the functions were in, I was afraid of changing something and causing an error in other functions in the package… But I’m glad I had help! Ildi Czeller showed me what directory the functions were in (by the way, it’s in /R), and then I was able to find the file I needed to change, and what part of the code was corresponding to the filter() function. One thing I got to know at the event and was very interesting is the concept of tests, as I had to change the test referring to the error message I was working on.\nAfter making the changes I felt were necessary, I made a pull request. Hadley replied that someone else was also working on this thread (there were two issues created for the same issue), and indicated where the person was sitting. So I went there and asked Colin (who was working on this same issue) if we could work on the issue together.\nEle foi super receptivo! Ele explicou como ele estava resolvendo, e eu também mostrei o que havia feito. O Hadley pediu para mudar uma função usada no teste, e ficamos trabalhando nisso juntos (no caso, eu estava mais aprendendo e perguntando para o Colin, pois os testes eram novidade para mim).\n\nLegenda: O pull request foi aceito!\nFoi uma experiência única, e aprendi muito nesse dia!"
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#experiência-pessoal---angélica",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#experiência-pessoal---angélica",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Experiência pessoal - Angélica",
-    "text": "Experiência pessoal - Angélica\nDurante o tidy-dev-day trabalhei em issues do ggplot2, foi uma experiência totalmente nova para mim e foi super gratificante a sensação de que eu aprendi e também pude contribuir.\nNo evento havia vários monitores facilitando a atividade, eles ajudavam desde como fazer o fork no github e trabalhar a issue no R até como fazer o pull request para fechar a issue. Contei com a ajuda da Ildi Czeller que era uma das monitoras e me auxiliou em todas as etapas, dando dicas desde configurações no git até ensinando atalhos no Rstudio que facilitaram a vida (estão documentados aqui).\n\nLegenda: Criando um pull request no pacote ggplot2.\nA atividade promoveu o engajamento e contribuição de todos, desde de quem era novato até quem já tinha bastante experiência. Era um espaço aberto para tirar dúvidas e pedir ajuda, em um determinado momento pude conversar com o Hadley e tirar dúvida sobre uma issue que eu estava trabalhando. Entender melhor qual era a interpretação de melhoria daquele ponto com um dos autores do pacote foi um aprendizado incrível."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#conclusão",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#conclusão",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Conclusão",
-    "text": "Conclusão\nAccording to Hadley, more than 40 pull requests were accepted, and almost 30 needed to be reviewed, which shows how the event:\n\n\n\nHuge thanks to everyone who contributed to tidyverse developer day! We merged over 40 PRs and have almost 30 more to review over the next few days pic.twitter.com/uM9Tg1dMeX\n\n— Hadley Wickham (@hadleywickham) July 8, 2019\n\n\n\nIt was an excellent opportunity to meet new people too! And to personally meet many references that we have in the community.\n\nCaption: Angelica and Bea showing the issues that were working on tidy-dev-day, by AngCustodio."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#how-does-the-event-work",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#how-does-the-event-work",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "How does the event work?",
-    "text": "How does the event work?\nThe event took place in the same space as useR!2019, and had a code of conduct, to provide a safe and friendly environment for all participants. The event was not free: it was necessary to pay a fee of $10 (ten dollars) to reduce the number of people who registered and did not attend the event. The organization pointed out that the money would be donated.\nAs the event’s purpose is to learn how to contribute to the development and maintenance of the tidyverse, several developers and maintainers of the tidyverse were present, as well as a team to help participants, answer questions, etc.\nThe material used (instructions, presentations, material suggestions, etc.) is available in this Github repository.\nOn a wall at the back of the room, there were several post-its that indicated issues to be worked on, and packages separated them, and also by color, where the color indicated the type of issue (documentation, bug, feature).\nParticipants chose an issue to work on during the event until a pull request was made. On another wall, post-its were separated into pull request post-its to be evaluated by Hadley Wickham and other contributors, and post-its that had already been reviewed and accepted!\nAnother cool thing is that the space provided several tables grouped together, which helped to work together.\n\nCaption: Photo shoot on Tidy-Dev-Day, by @Dale_Masch.\nFor those who were participating for the first time, documentation issues were recommended, as they are more natural for those who have never done this type of activity before. For people who were already more familiar, bug or feature issues were recommended that already require a greater knowledge of the package and how to develop the feature."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#personal-experience---bea",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#personal-experience---bea",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Personal experience - Bea",
-    "text": "Personal experience - Bea\nI never developed a package, and when I arrived at the event, I didn’t even know how packages were structured. In the issue I chose, the goal was to improve an error message from the filter() function from the package dplyr, so that the message would conform to the tidyverse style guide. \nCaption: Photo of the issue I was working on and the unique coin we received for@Bea_Milz.\nInitially, I forked the dplyr repository, cloned it on my computer, and was at a loss as to what to do next. I didn’t know which directory the functions were in, and I was afraid of changing something and causing an error in other functions in the package… But I’m glad I had help! Ildi Czeller showed me what directory the functions were in (by the way, it’s in /R), and then I was able to find the file I needed to change and what part of the code was corresponding to the filter() function. One thing heard about for the first time was tests, as I had to change the test referring to the error message I was working on.\nAfter making the changes I felt were necessary, I made a pull request. Hadley replied that someone else was also working on this thread (there were two issues created for the same issue), and indicated where the person was sitting. So I went there and asked Colin (who was working on this same issue) if we could work on the issue together.\nHe was super responsive! He explained how he was solving it, and I also showed him what I had done. Hadley asked to change a function used in the test, and we worked on it together (in this case, I was mostly learning and asking Colin, as tests were new to me).\n\nLegenda: The pull request was accepted!\nIt was a unique experience, and I learned a lot that day!"
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#personal-experience---angélica",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#personal-experience---angélica",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Personal experience - Angélica",
-    "text": "Personal experience - Angélica\nDuring tidy-dev-day I worked on issues of ggplot2, it was a totally new experience for me, and it was super gratifying to feel that I learned and also contributed.\nAt the event, several monitors were facilitating the activity. They helped the participants with activities like how to do a fork on GitHub, how to work the issue in R, how to make a pull request, and so on. I had the help of Ildi Czeller, who was one of the monitors and helped me at every step, giving tips from git settings to teaching shortcuts in Rstudio that made life easier (they are documented here).\n\n\n\n\n\nCaption: Creating a pull request in the ggplot2 package.\nThe activity promoted the engagement and contribution of everyone, from those who were new to those who already had a lot of experience. It was an open space to ask questions and ask for help. At one point, I was able to talk to Hadley and ask questions about an issue I was working on. Understanding better what the interpretation of improvement was at that point with one of the authors of the package was an incredible learning experience."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#the-tidy-dev-day",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#the-tidy-dev-day",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "The tidy-dev-day",
-    "text": "The tidy-dev-day\nTidyverse Developer Day (tidy-dev-day) is a day-long event where attendees learn more about how to contribute to tidyverse. The event reported here was the second edition. The first edition was at rstudio::conf2019.\nIn this issue, tidy-dev-day was a part of the conference useR!2019, which took place in Toulouse, France. The event took place the day before the start of the conference, bringing together several people who participated in it.\nSomething to note is that the useR!2019 organization has selected people to be awarded diversity grants, providing financial assistance to members of underrepresented groups in the R or historically marginalized. This initiative was fundamental for the participation of several people from different parts of the world, including the authors of this post (Bea and Angelica)."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#conclusion",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#conclusion",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Conclusion",
-    "text": "Conclusion\nAccording to Hadley, more than 40 pull requests were accepted, and almost 30 needed to be reviewed, which shows how the event:\n\n\n\nHuge thanks to everyone who contributed to tidyverse developer day! We merged over 40 PRs and have almost 30 more to review over the next few days pic.twitter.com/uM9Tg1dMeX\n\n— Hadley Wickham (@hadleywickham) July 8, 2019\n\n\n\nIt was an excellent opportunity to meet new people too! And to personally meet many references that we have in the community.\n\nCaption: Angelica and Bea showing the issues that were working on tidy-dev-day, by AngCustodio."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#what-is-tidy-dev-day",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#what-is-tidy-dev-day",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "What is tidy-dev-day?",
-    "text": "What is tidy-dev-day?\nTidyverse Developer Day (tidy-dev-day) is a day-long event where attendees learn more about how to contribute to tidyverse. The first edition was at rstudio::conf2019.\nThis was the second edition of tidy-dev-day and was a part of the useR!2019 conference, which took place in Toulouse, France. The event happened the day before the start of the conference, bringing together several people who participated in it.\nSomething to note is that the useR!2019 organization offered diversity scholarships, providing financial assistance to members of underrepresented groups in the R to participate in the conference. The diversity scholarships were fundamental for the participation of several people from different parts of the world, including the authors of this post (Bea and Angelica)."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#how-was-tidy-dev-day",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#how-was-tidy-dev-day",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "How was tidy-dev-day?",
-    "text": "How was tidy-dev-day?\nThe event had a code of conduct to provide a safe and friendly space for all participants.\nIn the event, participants had the opportunity to learn how to contribute to the tidyverse. Several developers and maintainers of the tidyverse were present and with a team of helpers. They helped participants, answered questions, reviewed the contributions, and so on.\nThe material used (instructions, presentations, suggested materials, etc.) is available in this Github repository.\nOn a wall of the room, several post-its indicated issues to be worked on, separated by packages and color. The color stated the type of issue (documentation, bug, feature).\nParticipants could choose an issue to work on during the event.\nOn another wall, post-its were separated into pull request post-its to be reviewed by Hadley Wickham and other maintainers, and post-its that had already been reviewed and accepted!\nAnother cool thing is that the space had several tables grouped, which helped to work with other people.\n\nCaption: Photo of the Tidy-Dev-Day, by @Dale_Masch.\nFor those participating for the first time, they recommended issues related to documentation improvements, as they are more natural for those who have never made a package contribution before.\nFor those who were already more familiar with package development, they recommended bug or feature issues, as they require a greater knowledge of package development."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#beas-experience",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#beas-experience",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Bea’s experience",
-    "text": "Bea’s experience\nBy the time of the event, I have not developed a package yet. So when I arrived at the event, I didn’t knew how packages were structured. In the issue I choseto work on, the goal was to improve an error message from the function dplyr::filter(), so that the message would conform to the tidyverse style guide. \nCaption: Photo of the issue I was working on and the unique coin we received that day. Photo by @Bea_Milz.\nInitially, I forked the dplyr repository, cloned it to my computer, and did not know what to do next.\nI didn’t knew which directory the functions were in, and I was afraid of changing something and causing an error in other functions of the package… But I’m glad I had help!\nIldi Czeller showed me what directory the functions were in (by the way, it’s in /R), and then I was able to find the file I needed to change and what part of the code was corresponding to the filter() function. That was the first time I heard about tests, and I had to change the test referring to the error message I was working on.\nAfter making the changes I felt were necessary, I made a pull request. Hadley replied that someone else was also working on this issue and indicated where the person was sitting. So I went there and asked Colin (who was working on this same issue) if we could work together.\nHe was super welcoming! He explained how he was developing the improvement, and I also showed him what I had done. Hadley asked to change some tests, and we worked on it together (in this case, I was mostly learning and asking Colin, because tests were new to me).\n\nLegenda: The pull request was accepted!\nIt was a unique experience, and I learned a lot that day!"
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#angélicas-experience",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#angélicas-experience",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Angélica’s experience",
-    "text": "Angélica’s experience\nDuring tidy-dev-day, I worked on issues from ggplot2. It was a new experience, and it was gratifying to feel that I learned and contributed to the package.\nAt the event, several people facilitated the activity. They helped the participants with activities like how to do a fork on GitHub, work on the issue in R, make a pull request, and so on. I had the help of Ildi Czeller, who was one of the helpers and helped me at every step, giving tips from git settings to teaching shortcuts in Rstudio that made life easier (they are documented here).\n\n\n\n\n\nCaption: Creating a pull request in the ggplot2 package.\nThe activity promoted the engagement and contribution of everyone, from those who were new to package development, to those who already had a lot of experience.\nIt was a welcoming space to ask questions and ask for help.\nAt one point, I was able to talk to Hadley and ask questions about an issue I was working on. Understanding better ggplot2 with one of the authors of the package was an incredible learning experience."
-  },
-  {
-    "objectID": "posts/2019-08-12-tidydevday/en/index.html#final-remarks",
-    "href": "posts/2019-08-12-tidydevday/en/index.html#final-remarks",
-    "title": "Tidyverse developer day 2019 (tidy-dev-day)",
-    "section": "Final remarks",
-    "text": "Final remarks\nAccording to Hadley, more than 40 pull requests were accepted, and almost 30 needed to be reviewed:\n\n\n\nHuge thanks to everyone who contributed to tidyverse developer day! We merged over 40 PRs and have almost 30 more to review over the next few days pic.twitter.com/uM9Tg1dMeX\n\n— Hadley Wickham (@hadleywickham) July 8, 2019\n\n\n\nIt was an excellent opportunity to meet new people too! And to meet many people from the community that we admire.\n\nCaption: Angelica and Bea showing the issues that they were working on tidy-dev-day. Photo by AngCustodio."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
-    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
-    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
-    "section": "",
-    "text": "English\nHi!\nThis is the second blog post in the “GitHub Action” Series. We are two weeks from the start of RStudio Conference - rstudio::conf 2022, and this post series is complementary material for the lightning talk that I will present!\nIf you have not read the earlier post in this series yet, I recommend reading it before continuing on this post:"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#what-we-will-talk-about-today",
-    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#what-we-will-talk-about-today",
-    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
-    "section": "What we will talk about today",
-    "text": "What we will talk about today\nThis post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the quarto-dev organization and save the result into the GitHub repository.\n\n\nCreate a GitHub Account\n\nCreate a repository\n\nCreate a README.md file (this is optional)\n\nCreate a R Script\n\nCreate the workflow\n\nWatch your awesome automation run"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#creating-your-first-workflow",
-    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#creating-your-first-workflow",
-    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
-    "section": "Creating your first workflow",
-    "text": "Creating your first workflow\n\nCreate a GitHub account\nTo start using GitHub Actions, first, you need to have an account on GitHub. You can create a new account for free! You also can sign in to your existing account if you already have one.\n\n\nCreate a repository\nGitHub Actions workflows work within a repository. So, the next step is to create one!\nIf you don’t know what a repository is, imagine having a directory on your computer, and you store files from a project in that directory. A repository is like that but in the cloud!\nTo create a repository, on the homepage of GitHub, click on the “+” icon in the top right corner and select New repository. Give your repository a name, then choose whether you want it to be public or private. Then click “Create repository”.\n\n\n\n\n\nFor this example, I created a repository called awesome-gha.\n\n\nCreate a README.md file\nNow that we have a repository, we can start creating and adding files to it. There are multiple ways you can interact with GitHub: you can use Git on command line, or clone the repository to your machine and use the RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.\nFirst, click on “Creating a new file”:\n\n\n\n\n\nTODO: UPDATE THIS IMAGE TO HAVE README.MD\nThen, add a name for the file: let’s create a file called README.md. This file is the first thing people see when accessing your repository, so adding some information about your project is nice. Then, you can add text and Markdown code in the “Edit new file” section, and finally, click on “Commit new file” to save your changes.\n\n\n\n\n\nAwesome! We have a repository, and now we can start working on our GitHub Actions.\n\n\n\n\n\n\n\nCreate an R Script\nNow we can start creating an R script. For a first GitHub Action, it is nice to start with something simple so we understand what is going on. To create a new file, click on “Add file” and then choose “Create new file”:\n\n\n\n\n\nIn this example, I created an R script in the path 01-rscript/script.R and added this code:\n\nprint(\"Hi! Welcome to a GH Actions with an R example :)\")\n\n# Install the packages  needed in the script -------\n\ninstall.packages(\"gh\")\ninstall.packages(\"dplyr\")\ninstall.packages(\"tidyr\")\ninstall.packages(\"readr\")\ninstall.packages(\"knitr\")\n\n# main script ------------------------------\n\n# get information about the repositories of the Quarto-dev organization.\nquarto_repos_raw <- gh::gh(\n  \"GET /orgs/{org}/repos\",\n  org = \"quarto-dev\",\n  type = \"public\",\n  sort = \"updated\",\n  per_page = 100\n)\n\n# transform into a tibble with fewer columns\nquarto_repos <- quarto_repos_raw |>\n  purrr::map(unlist, recursive = TRUE)  |>\n  purrr::map_dfr(tibble::enframe, .id = \"id_repo\") |>\n  tidyr::pivot_wider() |>\n  dplyr::transmute(\n    name,\n    url = html_url,\n    description,\n    stars = as.numeric(stargazers_count),\n    forks = as.numeric(forks_count),\n    open_issues = as.numeric(open_issues_count)\n  ) |>\n  dplyr::arrange(dplyr::desc(stars))\n\n\n# write CSV file with the result\nquarto_repos |>\n  readr::write_csv(\"01-rscript/quarto_repos.csv\")\n\n# write the README.md file\n\n# create table to add on README\ntable <- quarto_repos |>\n  dplyr::mutate(description = tidyr::replace_na(description, \"\")) |>\n  knitr::kable()\n\n# Write the content on README\npaste0(\n  \"# Repositories from quarto-dev\nMade by [Bea Milz](https://twitter.com/beamilz).\nUpdated with GitHub Actions in \",\nformat(Sys.Date(), '%b %d %Y'),\n\".\n<hr> \\n\n\",\npaste(table, collapse = \"\\n\")\n) |> writeLines(\"01-rscript/README.md\")\n\nprint(\"The end! Congrats!\")\n\nCode available here: https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/script.R\nTo save the file in this path, type 01-rscript/script.R in the blank space for the file’s name. GitHub will understand that we want to create a directory called 01-rscript and then write a file called script.R inside this directory. Copy and paste the code above and click on the green button that says “Commit new file”.\n\n\n\n\n\nBut what does this code do? First, we need to install all the packages required by the code to run. Then, it accesses the GitHub API and gets information about the public repositories in the quarto-dev organization. Then, it transforms the collected data and creates a nice table. It writes a CSV with the table and also writes in a README.md file! But for now, we only created this file, and to run with GHA, we need to create a file to store the workflow.\n\n\nCreate the workflow\nWe store the workflow in a YAML file that defines when and how the action should run.\nBut before we create this file, let’s understand what the code does!\n\n\nEvents\nFirst, we need to write the events. The events store information about what can start this workflow!\n\non:\n  schedule: \n    - cron:  \"0 9 * * *\" \n  workflow_dispatch:\n\nIn this example, we will use two events:\n\nSchedule: We can set a workflow to start at a scheduled time. I always use a website called crontab guru and its examples to find out how to write schedule that I want in cron syntax! In this example, I wrote \"0 9 * * *\", and according to crontab guru this workflow will be activated every day at 9 am UTC:\n\n\n\n\n\n\n\nWorkflow dispatch: this event allows us to activate the workflow any time that we want. We need to press a button on the GitHub website (I will show a print screen soon), or request the activation using the GitHub API (this example I’ll leave for future posts!).\n\n\n\nName\nWe need to give the workflow a name (don’t use special characters, let’s keep it simple!).\n\nname: 01-rscript\n\n\n\nJobs\nThe jobs describe what the computer should do! In this example, we will install R on an Ubuntu machine, run the script and then save the results in the repository.\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest # use Ubuntu\n    env:\n      # The GitHub token will be available \n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }} \n    steps:\n      # imports an action from another repository, \n      # that enables the machine\n      # to access the code inside our repository\n      - uses: actions/checkout@v3 \n      # imports an action from another repository, \n      # that installs R on the machine\n      - uses: r-lib/actions/setup-r@v2\n        with:\n          # uses the RStudio Package Manager\n          use-public-rspm: true\n\n      - name: Execute Script\n        # executes the RScript stored in the file\n        # 01-rscript/script.R\n        run: |\n          Rscript \"01-rscript/script.R\"\n\n        # save the results in the repository\n        # using git in the command line\n      - name: Commit results\n        run: |\n          git config --local user.email \"actions@github.com\"\n          git config --local user.name \"GitHub Actions\"\n          git add .\n          git commit -m \"Results from R script\" || echo \"No changes to commit\"\n          git push origin || echo \"No changes to commit\"\n\nThe complete workflow has these three parts: on: (the events that start the workflow), name: (the name of the repository), and jobs: (the instructions for the machine to run).\n\n\nWe have a workflow!\nThis is the complete code for the workflow:\n\non:\n  schedule:\n    - cron:  \"0 9 * * *\"\n  workflow_dispatch:\n\nname: 01-rscript\n\njobs:\n  run-r-script:\n    runs-on: ubuntu-latest\n    env:\n      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}\n    steps:\n      - uses: actions/checkout@v3\n      - uses: r-lib/actions/setup-r@v2\n        with:\n          use-public-rspm: true\n\n      - name: Execute Script\n        run: |\n          Rscript \"01-rscript/script.R\"\n\n      - name: Commit results\n        run: |\n          git config --local user.email \"actions@github.com\"\n          git config --local user.name \"GitHub Actions\"\n          git add .\n          git commit -m \"Results from R script\" || echo \"No changes to commit\"\n          git push origin || echo \"No changes to commit\"\n\nNow we need to save this into a yaml file. This file must be stored in the .github/workflows directory.\nTo create a new file, click on “Add file” and then choose “Create new file”:\n\n\n\n\n\nTo save the file in the right path, type .github/workflows/01-rscript.yaml in the blank space for the file’s name. GitHub will understand that we want to create a directory called .github/, and then another called workflows/ inside, and then write a file called 01-rscript.yaml inside this directory.\nCopy and paste the code above and click on the green button that says “Commit new file”.\n\n\n\n\n\nCode available here: https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-rscript.yaml\nNow we have a repository with a README.md file, an R script inside the 01-rscript/ directory, and a GitHub workflow inside the .github/workflows/ directory:"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#watch-your-awesome-automation-run",
-    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#watch-your-awesome-automation-run",
-    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
-    "section": "Watch your awesome automation run",
-    "text": "Watch your awesome automation run\nYAY! Now that we created the files needed, we can first experiment with the workflow_dispatch button. I made a quick GIF on how to trigger a GHA with the button:\n You can see this page at this link: https://github.com/beatrizmilz/r-actions-example/runs/7273362628?check_suite_focus=true\nAfter a couple of minutes, we can see that the action succeeded:\n\n\n\n\n\nWe can check the directory 01-rscript, and there are two new files with the results from the script: quarto_repos.csv and README.md. In this README.md, we can monitor the repositories in the quarto-dev organization and see which are the most popular repositories!\n\n\n\n\n\nSee the complete list here: https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md\n\n\n\n\n\n\nWhat if it does not work!?\n\n\n\nThe workflow can fail if everything is not correct. For example, the workflow will fail if we forget to install a package used in the script. If this happens, you will probably receive an email from GitHub with an alert.\nBut don’t be scared! This is pretty common. When I started using GHA in 2020, I got several failures before success. My tip in these cases is: to breathe, be calm, read the logs (the text on the black page I showed in the GIF above) and start debugging."
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#see-you-in-the-next-post",
-    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#see-you-in-the-next-post",
-    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
-    "section": "See you in the next post!",
-    "text": "See you in the next post!\nI hope this post was useful to you! In the next post, I plan to show how we can use the structure of an R package in GHA and cache our dependencies to make the workflows run faster.\nStay tuned!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#references",
-    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#references",
-    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
-    "section": "References",
-    "text": "References\n\nAll the files created in this repository are available here\nGitHub Actions\nPackage usethis\nr-lib/actions Repository\nGitHub documentation about workflows\nUnderstanding the workflow file\n\nThanks for reviewing the post, Julio Trecenti!"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#tweet",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#tweet",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "Tweet",
-    "text": "Tweet\n\n\n\nI wrote a new blog post about \"Introduction to GitHub Actions to R users\"!https://t.co/lCBH4vIGa2This post is complementary material for my lightning talk at the @rstudio conference!Feedback is always welcome :)#rstats #github #githubactions #rstudioconf #rstudioconf2022\n\n— Beatriz Milz (@BeaMilz) June 30, 2022"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#what-we-will-talk-about-in-this-post",
-    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#what-we-will-talk-about-in-this-post",
-    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
-    "section": "What we will talk about in this post",
-    "text": "What we will talk about in this post\nThis post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the quarto-dev organization and save the result into the GitHub repository.\n\n\nCreate a GitHub Account\n\nCreate a repository\n\nCreate a README.md file (this is optional)\n\nCreate an R Script\n\nCreate the workflow\n\nWatch your awesome automation run"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#share-and-support",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/en/index.html#share-and-support",
-    "title": "Introduction to GitHub Actions to R users",
-    "section": "Share and support!",
-    "text": "Share and support!\nIf you like these kind of content, consider supporting me at GitHub Sponsors, or sharing it on Twitter:\n\n\n\nI wrote a new blog post about \"Introduction to GitHub Actions to R users\"!https://t.co/lCBH4vIGa2This post is complementary material for my lightning talk at the @rstudio conference!Feedback is always welcome :)#rstats #github #githubactions #rstudioconf #rstudioconf2022\n\n— Beatriz Milz (@BeaMilz) June 30, 2022"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#comparte-y-apoya",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/es/index.html#comparte-y-apoya",
-    "title": "Introducción a GitHub Actions para usuarias de R",
-    "section": "Comparte y apoya!",
-    "text": "Comparte y apoya!\nSi te gusta este tipo de contenido, considera apoyarme en GitHub Sponsors, o compártelo en Twitter: ):\n\n\n\nI wrote a new blog post about \"Introduction to GitHub Actions to R users\"!https://t.co/lCBH4vIGa2This post is complementary material for my lightning talk at the @rstudio conference!Feedback is always welcome :)#rstats #github #githubactions #rstudioconf #rstudioconf2022\n\n— Beatriz Milz (@BeaMilz) June 30, 2022"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#compartilhe-e-apoie",
-    "href": "posts/series-gha/2022-series-gha-1-what-is/pt/index.html#compartilhe-e-apoie",
-    "title": "Introdução ao GitHub Actions para quem programa em R",
-    "section": "Compartilhe e apoie!",
-    "text": "Compartilhe e apoie!\nSe você gosta desse tipo de conteúdo, considere me apoiar no GitHub Sponsors ou compartilhar o conteúdo no Twitter:\n\n\n\nI wrote a new blog post about \"Introduction to GitHub Actions to R users\"!https://t.co/lCBH4vIGa2This post is complementary material for my lightning talk at the @rstudio conference!Feedback is always welcome :)#rstats #github #githubactions #rstudioconf #rstudioconf2022\n\n— Beatriz Milz (@BeaMilz) June 30, 2022"
-  },
-  {
-    "objectID": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#share-and-support",
-    "href": "posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html#share-and-support",
-    "title": "Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users",
-    "section": "Share and support!",
-    "text": "Share and support!\nIf you like these kind of content, consider supporting me at GitHub Sponsors, or sharing it on Twitter.\n\n\n\n2 WEEKS UNTIL #rstudioconf2022!🎉The 2nd post about using GitHub Actions for R users is out!I show how to write a workflow that uses R to collect data about the repos by @quarto_pub on GitHub and save the results!https://t.co/4Y6HkyZwgx#rstats #github #rstudioconf @rstudio\n\n— Beatriz Milz (@BeaMilz) July 11, 2022"
   }
 ]

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Beatriz Milz">
-<meta name="dcterms.date" content="2022-06-29">
 
-<title>Bea Milz - Introduction to GitHub Actions</title>
+<title>Bea Milz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,22 +18,24 @@ ul.task-list{list-style: none;}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -55,6 +55,29 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts-es .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posts-es'] = new List('listing-posts-es', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
 
 <script type="text/javascript">
@@ -73,7 +96,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
-<meta property="og:title" content="Bea Milz - Introduction to GitHub Actions">
+<meta property="og:title" content="Bea Milz">
 <meta property="og:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="og:image" content="https://beamilz.com/social.png">
 
@@ -84,10 +107,11 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../../styles.css">
-<meta name="twitter:title" content="Bea Milz - Introduction to GitHub Actions">
-<meta name="twitter:image" content="https://beamilz.com/posts/series-gha-1-what-is/en/featured.png">
+<link rel="stylesheet" href="../styles.css">
+<meta name="twitter:title" content="Bea Milz">
+<meta name="twitter:image" content="https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/es/featured.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="675">
@@ -100,7 +124,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../../index.html">
+      <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -109,22 +133,35 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+    <a class="nav-link" href="../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
         <li>
-    <a class="dropdown-item" href="../../../">
+    <a class="dropdown-item" href="../">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../posts/en.html">
+    <a class="dropdown-item" href="../posts/en.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../posts/pt.html">
+    <a class="dropdown-item" href="../posts/pt.html">
  <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
+        <li>
+    <a class="dropdown-item" href="../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
   </li>
@@ -132,20 +169,17 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
         <li>
-    <a class="dropdown-item" href="../../../talks/en/index.html">
+    <a class="dropdown-item" href="../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../talks/pt/index.html">
+    <a class="dropdown-item" href="../talks/pt/index.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://github.com/sponsors/beatrizmilz/">GitHub Sponsors</a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
@@ -164,42 +198,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Introduction to GitHub Actions</h1>
-            <p class="subtitle lead">GitHub Actions Series - 1</p>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Git</div>
-                <div class="quarto-category">GitHub</div>
-                <div class="quarto-category">GitHub Actions</div>
-                <div class="quarto-category">Automations</div>
-                <div class="quarto-category">RStudio</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Beatriz Milz </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">June 29, 2022</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -207,62 +206,107 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#create-a-github-account" id="toc-create-a-github-account" class="nav-link active" data-scroll-target="#create-a-github-account">Create a GitHub account</a></li>
-  <li><a href="#create-a-repository" id="toc-create-a-repository" class="nav-link" data-scroll-target="#create-a-repository">Create a repository</a></li>
-  <li><a href="#create-a-readme.md-file" id="toc-create-a-readme.md-file" class="nav-link" data-scroll-target="#create-a-readme.md-file">Create a README.md file</a></li>
-  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo">TODO</a></li>
+  <li><a href="#posts-en-español" id="toc-posts-en-español" class="nav-link active" data-scroll-target="#posts-en-español">Posts en Español</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bea Milz</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<p><a href="../../../posts/series-gha-1-what-is/en/index.html"> <button type="button" class="btn btn-primary">English</button></a> <a href="../../../posts/series-gha-1-what-is/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
-<p>Hi! This is the first blog post in the “GitHub Action” Series. In this post, I will briefly introduce GitHub Actions and show how you can start using your R scripts.</p>
-<p><a href="https://github.com/features/actions">GitHub Actions</a> is a feature by GitHub that enables us to automate software development workflows. For example, with GitHub Actions, we can specify a series of commands to run when certain events occur in the repository, such as pushing code to a branch, creating a new pull request, pushing a button, etc.</p>
-<section id="create-a-github-account" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-github-account">Create a GitHub account</h2>
-<p>To start using GitHub Actions, first, you need to have an account on <a href="https://github.com/">GitHub</a>. You can create a new account for free! You also can sign in to your existing account if you already have one.</p>
-</section>
-<section id="create-a-repository" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-repository">Create a repository</h2>
-<p>The next step is to create a Repository. If you don’t know what a repository is, imagine having a directory on your computer, and you store files from a project in that directory. A repository is like that but in the cloud!</p>
-<p>To create a repository, on the homepage of GitHub, click on the “+” icon in the top right corner and select <a href="https://github.com/new">New repository</a>. Give your repository a name, then choose whether you want it to be public or private. Then click “Create repository”.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/create-repo.png" class="img-fluid figure-img"></p>
-</figure>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="posts-en-español" class="level2">
+<h2 class="anchored" data-anchor-id="posts-en-español">Posts en Español</h2>
+<div id="listing-posts-es" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-posts-es-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts-es'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<p>For this example, I created a repository called <a href="https://github.com/beatrizmilz/awesome-gha">awesome-gha</a>.</p>
-</section>
-<section id="create-a-readme.md-file" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-readme.md-file">Create a README.md file</h2>
-<p>Now that we have a repository, we can start creating and adding files to it. There are different ways you can interact with GitHub: you can clone the repository to your machine and use RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.</p>
-<p>First, click on “Creating a new file”:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/repo.png" class="img-fluid figure-img"></p>
-</figure>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1657915668055" data-listing-reading-time-sort="5.285">
+<div class="thumbnail">
+<p><a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html"> <img src="../posts/series-gha/2022-series-gha-1-what-is/es/featured.png" class="thumnail-image"> </a></p>
 </div>
-<p>Then, add a name for the file: let’s create a file called README.md. This file is the first thing people see when accessing your repository, so it is nice to add some information about your project. Then, you can add text and Markdown code in the “Edit new file” section, and finally, click on “Commit new file” to save your changes.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/commit.png" class="img-fluid figure-img"></p>
-</figure>
+<div class="body">
+<a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html">
+<h3 class="no-anchor listing-title">
+Introducción a GitHub Actions para usuarias de R
+</h3>
+<div class="listing-subtitle">
+Serie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.
 </div>
-<p>Awesome! We have a repository and now we can start working on our GitHub Actions.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/readme.png" class="img-fluid figure-img"></p>
-</figure>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Git'); return false;">
+Git
 </div>
-</section>
-<section id="todo" class="level2">
-<h2 class="anchored" data-anchor-id="todo">TODO</h2>
-<p>The workflow file is a YAML file that defines when and how the action should run. This file must be stored in the .github/workflows directory.</p>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
+GitHub
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
+GitHub Actions
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Automations'); return false;">
+Automations
+</div>
+</div>
+<a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html">
+<div class="listing-date">
+Jun 30, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+5 min
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
 
 
 </section>
@@ -361,8 +405,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -394,5 +436,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
