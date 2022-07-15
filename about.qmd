@@ -12,7 +12,7 @@ about:
       text: Resume
       href: https://beatrizmilz.github.io/resume/index.pdf  
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/beatrizmilz
     - icon: twitter
       text: Twitter
@@ -20,10 +20,11 @@ about:
 ---
 
 <center>
-<div class="btn-group" role="group" aria-label="About">
-  <a href="about.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> 
-    <a href="about-pt.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">Português</button></a> 
-</div>
+
+::: {.btn-group role="group" aria-label="About"}
+<a href="about.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> <a href="about-pt.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">Português</button></a>   <a href="about-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
+:::
+
 </center>
 
 ::: {#hero-heading}

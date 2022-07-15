@@ -28,6 +28,8 @@ website:
             href: posts/en.qmd
           - text: Português
             href: posts/pt.qmd
+          - text: Español
+            href: posts/es.qmd
       - text: Series
         menu:
           - text: GitHub Actions
@@ -40,10 +42,6 @@ website:
             href: talks/pt/index.qmd
       - text: Resume
         href: https://beatrizmilz.github.io/resume/index.pdf
-      # - text: My blog in Portuguese
-      #   href: https://beatrizmilz.com/blog/
-      - text: GitHub Sponsors
-        href: https://github.com/sponsors/beatrizmilz/
       - icon: github
         href: https://github.com/beatrizmilz/blog-en
       - icon: twitter
