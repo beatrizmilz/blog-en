@@ -40,6 +40,8 @@ website:
             href: talks/en/index.qmd
           - text: Português
             href: talks/pt/index.qmd
+          - text: Español
+            href: talks/es/index.qmd
       - text: Resume
         href: https://beatrizmilz.github.io/resume/index.pdf
       - icon: github
