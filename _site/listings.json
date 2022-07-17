@@ -48,6 +48,12 @@
     "items": []
   },
   {
+    "listing": "/talks/es/index.html",
+    "items": [
+      "/talks/es/2020-funciones-r4ds/index.html"
+    ]
+  },
+  {
     "listing": "/talks/en/index.html",
     "items": [
       "/talks/en/2021-learnr-latinr/index.html",

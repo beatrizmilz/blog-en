@@ -12,6 +12,9 @@
     "talks/pt/index.qmd": [
       "*/*.qmd"
     ],
+    "talks/es/index.qmd": [
+      "*/*.qmd"
+    ],
     "talks/en/index.qmd": [
       "*/*.qmd"
     ],
