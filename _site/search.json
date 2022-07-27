@@ -1467,6 +1467,20 @@
     "href": "talks/en/2022-rstudio-conf/index.html",
     "title": "Making awesome automations with GitHub Actions",
     "section": "",
-    "text": "Event: rstudio::conf(2022)\nTalk in conference schedule\nComplementary materials:\n\nBlog post: Introduction to GitHub Actions to R users\nBlog post: Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users\n\nSlides:"
+    "text": "Event: rstudio::conf(2022)\nTalk in conference schedule\nSlides"
+  },
+  {
+    "objectID": "talks/en/2022-rstudio-conf/index.html#complementary-materials",
+    "href": "talks/en/2022-rstudio-conf/index.html#complementary-materials",
+    "title": "Making awesome automations with GitHub Actions",
+    "section": "Complementary materials",
+    "text": "Complementary materials\n\nBlog post: Introduction to GitHub Actions to R users\nBlog post: Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users\nGitHub repository: awesome-gha - Awesome GitHub Actions for R\nPublic workflow examples:\n\nsigbm - This repository has a workflow that downloads the excel file with public data related to mining dams in Brazil, every day, and stores it in the repository. There is no R code!\nnoticiasgov - This repository has a workflow that scrapes news from the official government of Sao Paulo page, and stores it in a CSV file."
+  },
+  {
+    "objectID": "talks/en/2022-rstudio-conf/index.html#slides",
+    "href": "talks/en/2022-rstudio-conf/index.html#slides",
+    "title": "Making awesome automations with GitHub Actions",
+    "section": "Slides",
+    "text": "Slides\n\nSlides:"
   }
 ]

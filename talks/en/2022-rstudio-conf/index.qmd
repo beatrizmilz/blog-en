@@ -6,21 +6,31 @@ author:
 date: "2022-07-28"
 categories: [Talks, GitHub Actions, GitHub]
 image: "featured.png"
+toc: true
 ---
 
 -   Event: [rstudio::conf(2022)](https://www.rstudio.com/conference/2022/schedule/)
 
-- [Talk in conference schedule](https://sched.co/11ia9)
+-   [Talk in conference schedule](https://sched.co/11ia9)
 
-- Complementary materials:
+- [Slides](https://beatrizmilz.github.io/rstudioconf2022/)
 
-  - [Blog post: Introduction to GitHub Actions to R users](https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/en/)
+## Complementary materials
 
-  - [Blog post: Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users](https://beamilz.com/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/)
+- [Blog post: Introduction to GitHub Actions to R users](https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/en/)
 
+- [Blog post: Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users](https://beamilz.com/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/)
+    
+- [GitHub repository: awesome-gha - Awesome GitHub Actions for R](https://github.com/beatrizmilz/awesome-gha)
 
-- [Slides](https://beatrizmilz.github.io/rstudioconf2022/):
+- Public workflow examples:
+
+  - [sigbm](https://github.com/beatrizmilz/sigbm) - This repository has a workflow that downloads the excel file with public data related to mining dams in Brazil, every day, and stores it in the repository. There is no R code!
+  
+  - [noticiasgov](https://github.com/beatrizmilz/noticiasgov/) - This repository has a workflow that scrapes news from the official government of Sao Paulo page, and stores it in a CSV file.
+    
+## Slides
+
+-   [Slides](https://beatrizmilz.github.io/rstudioconf2022/):
 
 [![](featured.png){fig-align="center"}](https://beatrizmilz.github.io/rstudioconf2022/)
-
-
