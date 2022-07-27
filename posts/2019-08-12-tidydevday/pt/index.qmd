@@ -30,35 +30,25 @@ multilang()
 Esse post foi origalmente publicado no [blog da Curso-R](https://blog.curso-r.com/posts/2019-08-12-tidydevday/).
 :::
 
-Este post tem como objetivo relatar a experiência de participar do Tidyverse Developer Day 2019, e tem como autoras a [Beatriz Milz](https://beatrizmilz.com) e a [Angélica Custódio](https://www.linkedin.com/in/angelicacustodio/).
-A Bea é doutoranda em Ciência Ambiental na USP, e é uma das co-organizadoras do [R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/), que é uma organização que tem como objetivo promover a diversidade de gênero na comunidade da linguagem R.
-A Angélica é formada em estatística pela UFSCar, e mestranda em Ciência da Computação na UFABC, também faz parte do [R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/) e do [PyLadies São Paulo](https://www.meetup.com/PyLadiesSP/).
+Este post tem como objetivo relatar a experiência de participar do Tidyverse Developer Day 2019, e tem como autoras a [Beatriz Milz](https://beatrizmilz.com) e a [Angélica Custódio](https://www.linkedin.com/in/angelicacustodio/). A Bea é doutoranda em Ciência Ambiental na USP, e é uma das co-organizadoras do [R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/), que é uma organização que tem como objetivo promover a diversidade de gênero na comunidade da linguagem R. A Angélica é formada em estatística pela UFSCar, e mestranda em Ciência da Computação na UFABC, também faz parte do [R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/) e do [PyLadies São Paulo](https://www.meetup.com/PyLadiesSP/).
 
 ## O tidy-dev-day
 
-O [Tidyverse Developer Day](https://github.com/tidyverse/dev-day-2019) (tidy-dev-day) é um evento com duração de um dia, onde os participantes aprendem mais sobre como contribuir com o [tidyverse](https://www.tidyverse.org/).
-O evento relatado aqui foi a segunda edição, sendo que a primeira aconteceu na [rstudio::conf2019](https://resources.rstudio.com/tidyverse/tidyverse-developer-day-2019).
+O [Tidyverse Developer Day](https://github.com/tidyverse/dev-day-2019) (tidy-dev-day) é um evento com duração de um dia, onde os participantes aprendem mais sobre como contribuir com o [tidyverse](https://www.tidyverse.org/). O evento relatado aqui foi a segunda edição, sendo que a primeira aconteceu na [rstudio::conf2019](https://resources.rstudio.com/tidyverse/tidyverse-developer-day-2019).
 
-Nesta edição, o tidy-dev-day foi à parte da conferência [useR!2019](https://user2019.r-project.org/), que ocorreu em Toulouse, na França.
-O evento ocorreu um dia antes do início da conferência, reunindo diversas pessoas que participaram dela.
+Nesta edição, o tidy-dev-day foi à parte da conferência [useR!2019](https://user2019.r-project.org/), que ocorreu em Toulouse, na França. O evento ocorreu um dia antes do início da conferência, reunindo diversas pessoas que participaram dela.
 
-Algo a destacar é que a organização da [useR!2019](https://user2019.r-project.org/) selecionou pessoas para serem contempladas com bolsas de diversidade, fornecendo ajuda financeira a membros de grupos sub-representados na comunidade de R, ou historicamente marginalizados.
-Essa iniciativa foi fundamental para a participação de diversas pessoas, de diferentes partes do mundo.
-Inclusive para as duas pessoas que estão escrevendo agora sobre a experiência lá.
+Algo a destacar é que a organização da [useR!2019](https://user2019.r-project.org/) selecionou pessoas para serem contempladas com bolsas de diversidade, fornecendo ajuda financeira a membros de grupos sub-representados na comunidade de R, ou historicamente marginalizados. Essa iniciativa foi fundamental para a participação de diversas pessoas, de diferentes partes do mundo. Inclusive para as duas pessoas que estão escrevendo agora sobre a experiência lá.
 
 ## Como funcionou o evento?
 
-O evento aconteceu no mesmo espaço da [useR!2019](https://user2019.r-project.org/), e tinha um [código de conduta](https://github.com/tidyverse/dev-day-2019/blob/master/CODE_OF_CONDUCT.md), com o objetivo de oferecer um ambiente seguro e amigável para todos os participantes.
-O evento não foi gratuito: foi necessário pagar uma taxa de \$10 (dez dólares), com o intuito de diminuir o número de pessoas que se inscreve e não comparece no evento.
-No entanto, a organização aponta que o dinheiro será doado.
+O evento aconteceu no mesmo espaço da [useR!2019](https://user2019.r-project.org/), e tinha um [código de conduta](https://github.com/tidyverse/dev-day-2019/blob/master/CODE_OF_CONDUCT.md), com o objetivo de oferecer um ambiente seguro e amigável para todos os participantes. O evento não foi gratuito: foi necessário pagar uma taxa de \$10 (dez dólares), com o intuito de diminuir o número de pessoas que se inscreve e não comparece no evento. No entanto, a organização aponta que o dinheiro será doado.
 
 Como o objetivo do evento é proporcionar um aprendizado sobre como contribuir com desenvolvimento e manutenção do tidyverse, estavam presentes diversos desenvolvedores e mantenedores do tidyverse, e também um time para ajudar os participantes, tirar dúvidas, etc.
 
 O material utilizado (instruções, apresentações, sugestões de material, etc) está disponível [neste repositório no Github](https://github.com/tidyverse/dev-day-2019).
 
-Em uma parede no fundo da sala, haviam diversos post-its que indicavam issues a serem trabalhadas, e estavam separadas por pacotes, e também por cor, onde a cor indicava o tipo de issue (documentação, bug, feature).
-Os participantes escolhiam uma issue para trabalhar durante o evento, até a realização de um pull request.
-Em outra parede, os post-its estavam separados em: post-its de pull requests para serem avaliados pelo [Hadley Wickham](http://hadley.nz/) e outros contribuidores, e os post-its que já tinham sido avaliados e aceitos!
+Em uma parede no fundo da sala, haviam diversos post-its que indicavam issues a serem trabalhadas, e estavam separadas por pacotes, e também por cor, onde a cor indicava o tipo de issue (documentação, bug, feature). Os participantes escolhiam uma issue para trabalhar durante o evento, até a realização de um pull request. Em outra parede, os post-its estavam separados em: post-its de pull requests para serem avaliados pelo [Hadley Wickham](http://hadley.nz/) e outros contribuidores, e os post-its que já tinham sido avaliados e aceitos!
 
 Outra coisa legal é que o espaço disponibilizou diversas mesas agrupadas, o que ajudava a trabalhar em conjunto.
 
@@ -66,28 +56,17 @@ Outra coisa legal é que o espaço disponibilizou diversas mesas agrupadas, o qu
 
 **Legenda:** Foto tirada no tidy-dev-day, por [\@Dale_Masch](https://twitter.com/Dale_Masch).
 
-Para quem estava participando pela primeira vez eram recomendadas as issues de documentação, pois elas são mais naturais para quem nunca fez esse tipo de atividade antes.
-Para as pessoas que já tinham mais familiaridade eram recomendadas issues de bug ou feature que já exigem um conhecimento maior não só do pacote, mas também de como desenvolver a melhoria.
+Para quem estava participando pela primeira vez eram recomendadas as issues de documentação, pois elas são mais naturais para quem nunca fez esse tipo de atividade antes. Para as pessoas que já tinham mais familiaridade eram recomendadas issues de bug ou feature que já exigem um conhecimento maior não só do pacote, mas também de como desenvolver a melhoria.
 
 ## Experiência pessoal - Bea
 
-Eu nunca desenvovi um pacote, e ao chegar no evento nem sabia como pacotes eram estruturados.
-Na [issue que eu escolhi](https://github.com/tidyverse/dplyr/issues/3698), o objetivo era para melhorar uma mensagem de erro da função `filter()`, do pacote [`dplyr`](https://dplyr.tidyverse.org/), para que a mensagem estivesse de acordo com o [style guide do tidyverse](https://style.tidyverse.org/).
-![](https://i.imgur.com/VYgvY7k.jpg)
+Eu nunca desenvovi um pacote, e ao chegar no evento nem sabia como pacotes eram estruturados. Na [issue que eu escolhi](https://github.com/tidyverse/dplyr/issues/3698), o objetivo era para melhorar uma mensagem de erro da função `filter()`, do pacote [`dplyr`](https://dplyr.tidyverse.org/), para que a mensagem estivesse de acordo com o [style guide do tidyverse](https://style.tidyverse.org/). ![](https://i.imgur.com/VYgvY7k.jpg)
 
 **Legenda:** Foto da issue que estava trabalhando, e também da moeda especial que recebemos, por [\@Bea_Milz](https://twitter.com/Bea_Milz).
 
-Inicialmente, eu fiz o fork do repositório do dplyr, o clone no meu computador, e fiquei sem saber o que fazer depois.
-Eu não sabia em qual diretório ficavam as funções, estava com receio de alterar algo e causar algum erro em outras funções do pacote... Mas ainda bem que tive ajuda!
-A [Ildi Czeller](https://ildiczeller.com/) me mostrou em qual diretório as funções estavam (aliás, é no `/R`), e e então consegui encontrar o arquivo que precisava alterar, e qual parte do código era correspondente à função `filter()`.
-Uma coisa que conheci no evento e foi muito interessante é o conceito de testes, pois tive que alterar o teste referente à mensagem de erro que eu estava trabalhando.
+Inicialmente, eu fiz o fork do repositório do dplyr, o clone no meu computador, e fiquei sem saber o que fazer depois. Eu não sabia em qual diretório ficavam as funções, estava com receio de alterar algo e causar algum erro em outras funções do pacote... Mas ainda bem que tive ajuda! A [Ildi Czeller](https://ildiczeller.com/) me mostrou em qual diretório as funções estavam (aliás, é no `/R`), e e então consegui encontrar o arquivo que precisava alterar, e qual parte do código era correspondente à função `filter()`. Uma coisa que conheci no evento e foi muito interessante é o conceito de testes, pois tive que alterar o teste referente à mensagem de erro que eu estava trabalhando.
 
-Após fazer as alterações que entendi que eram necessárias, fiz um [pull request](https://github.com/tidyverse/dplyr/pull/4477).
-O Hadley respondeu que outra pessoa também estava trabalhando neste tópico (haviam duas issues criadas para o mesmo problema), e indicou onde a pessoa estava sentada.
-Então fui lá e perguntei para o [Colin](https://github.com/rundel) (que estava trabalhando nesse mesmo problema) se poderíamos trabalhar na issue juntos.
-Ele foi super receptivo!
-Ele explicou como ele estava resolvendo, e eu também mostrei o que havia feito.
-O Hadley pediu para mudar uma função usada no teste, e ficamos trabalhando nisso juntos (no caso, eu estava mais aprendendo e perguntando para o Colin, pois os testes eram novidade para mim).
+Após fazer as alterações que entendi que eram necessárias, fiz um [pull request](https://github.com/tidyverse/dplyr/pull/4477). O Hadley respondeu que outra pessoa também estava trabalhando neste tópico (haviam duas issues criadas para o mesmo problema), e indicou onde a pessoa estava sentada. Então fui lá e perguntei para o [Colin](https://github.com/rundel) (que estava trabalhando nesse mesmo problema) se poderíamos trabalhar na issue juntos. Ele foi super receptivo! Ele explicou como ele estava resolvendo, e eu também mostrei o que havia feito. O Hadley pediu para mudar uma função usada no teste, e ficamos trabalhando nisso juntos (no caso, eu estava mais aprendendo e perguntando para o Colin, pois os testes eram novidade para mim).
 
 ![](https://i.imgur.com/zllw6qX.png)
 
@@ -99,16 +78,13 @@ Foi uma experiência única, e aprendi muito nesse dia!
 
 Durante o tidy-dev-day trabalhei em issues do [ggplot2](https://ggplot2.tidyverse.org/), foi uma experiência totalmente nova para mim e foi super gratificante a sensação de que eu aprendi e também pude contribuir.
 
-No evento havia vários monitores facilitando a atividade, eles ajudavam desde como fazer o fork no github e trabalhar a issue no R até como fazer o pull request para fechar a issue.
-Contei com a ajuda da [Ildi Czeller](https://ildiczeller.com/) que era uma das monitoras e me auxiliou em todas as etapas, dando dicas desde configurações no git até ensinando atalhos no Rstudio que facilitaram a vida (estão documentados [aqui](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)).
+No evento havia vários monitores facilitando a atividade, eles ajudavam desde como fazer o fork no github e trabalhar a issue no R até como fazer o pull request para fechar a issue. Contei com a ajuda da [Ildi Czeller](https://ildiczeller.com/) que era uma das monitoras e me auxiliou em todas as etapas, dando dicas desde configurações no git até ensinando atalhos no Rstudio que facilitaram a vida (estão documentados [aqui](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)).
 
 ![](https://i.imgur.com/Svktt2C.png)
 
 **Legenda:** Criando um pull request no pacote ggplot2.
 
-A atividade promoveu o engajamento e contribuição de todos, desde de quem era novato até quem já tinha bastante experiência.
-Era um espaço aberto para tirar dúvidas e pedir ajuda, em um determinado momento pude conversar com o [Hadley](http://hadley.nz/) e tirar dúvida sobre uma issue que eu estava trabalhando.
-Entender melhor qual era a interpretação de melhoria daquele ponto com um dos autores do pacote foi um aprendizado incrível.
+A atividade promoveu o engajamento e contribuição de todos, desde de quem era novato até quem já tinha bastante experiência. Era um espaço aberto para tirar dúvidas e pedir ajuda, em um determinado momento pude conversar com o [Hadley](http://hadley.nz/) e tirar dúvida sobre uma issue que eu estava trabalhando. Entender melhor qual era a interpretação de melhoria daquele ponto com um dos autores do pacote foi um aprendizado incrível.
 
 ## Conclusão
 
@@ -118,8 +94,7 @@ Segundo o [Hadley](http://hadley.nz/), mais de 40 pull requests foram aceitos, e
 
 <p lang="en" dir="ltr">
 
-Huge thanks to everyone who contributed to tidyverse developer day!
-We merged over 40 PRs and have almost 30 more to review over the next few days <a href="https://t.co/uM9Tg1dMeX">pic.twitter.com/uM9Tg1dMeX</a>
+Huge thanks to everyone who contributed to tidyverse developer day! We merged over 40 PRs and have almost 30 more to review over the next few days <a href="https://t.co/uM9Tg1dMeX">pic.twitter.com/uM9Tg1dMeX</a>
 
 </p>
 
@@ -130,8 +105,7 @@ We merged over 40 PRs and have almost 30 more to review over the next few days <
 ```{=html}
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
-Foi uma ótima oportunidade para conhecer pessoas novas também!
-E para conhecer pessoalmente muitas referências que temos na comunidade.
+Foi uma ótima oportunidade para conhecer pessoas novas também! E para conhecer pessoalmente muitas referências que temos na comunidade.
 
 ![](https://i.imgur.com/oWtQFxi.jpg)
 

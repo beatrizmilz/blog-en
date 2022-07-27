@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.515">
+<meta name="generator" content="quarto-1.0.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,7 +35,7 @@ ul.task-list{list-style: none;}
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,6 +77,12 @@ ul.task-list{list-style: none;}
       window['quarto-listing-loaded']();
     }
   });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
 
@@ -204,7 +210,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-page-left">
       <h1 class="title">Presentaciones en español</h1>
                       </div>
   </div>
@@ -260,7 +266,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Study,R-Ladies,Communities" data-listing-date-sort="1588561200000" data-listing-file-modified-sort="1658021614285" data-listing-reading-time-sort="0.14">
+<div class="quarto-post image-right" data-index="0" data-categories="Study,R-Ladies,Communities" data-listing-date-sort="1588564800000" data-listing-file-modified-sort="1658706616447" data-listing-reading-time-sort="0.14">
 <div class="thumbnail">
 <p><a href="../../talks/es/2020-funciones-r4ds/index.html"> <img src="../../talks/es/2020-funciones-r4ds/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -308,6 +314,24 @@ No matching items
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

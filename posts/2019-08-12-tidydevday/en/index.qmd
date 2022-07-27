@@ -27,34 +27,30 @@ multilang()
 ```
 
 ::: callout-tip
-
 ## Notes from 8th July 2022
+
 Hi! This post was written three years ago, in 2019. In this post, my friend Angélica and I share the experience of participating in the Tidyverse Developer Day 2019.
 
 As [rstudio::conf 2022](https://www.rstudio.com/conference/) is coming up, I thought it would be nice to translate this post.
 
 While translating it, I remembered more about that day and thought about how much I had learned since then. That event was essential for me, and I learned so much 💜. So, thanks to **everyone** involved, specially [RStudio](https://www.rstudio.com/) and the [tidyverse](https://github.com/tidyverse) team that organized this event.
 
-
 This post was originally published on [Curso-R's blog](https://blog.curso-r.com/posts/2019-08-12-tidydevday/).
 :::
 
 In this post, [Beatriz Milz](https://beamilz.com) and [Angélica Custódio](https://www.linkedin.com%20/in/angelicacustodio/) talk about the experience of participating in the Tidyverse Developer Day 2019.
 
-- Bea is a Ph.D. student in Environmental Science at the University of Sao Paulo and is one of the co-organizers of [R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/), which is an organization that aims to promote gender diversity in the R community.
+-   Bea is a Ph.D. student in Environmental Science at the University of Sao Paulo and is one of the co-organizers of [R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/), which is an organization that aims to promote gender diversity in the R community.
 
-- Angélica has a degree in statistics from UFSCar, and a master's in Computer Science at UFABC. She is also part of [R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/) and [PyLadies São Paulo](https://www.meetup.com/PyLadiesSP/).
+-   Angélica has a degree in statistics from UFSCar, and a master's in Computer Science at UFABC. She is also part of [R-Ladies São Paulo](https://www.meetup.com/rladies-sao-paulo/) and [PyLadies São Paulo](https://www.meetup.com/PyLadiesSP/).
 
 ## What is tidy-dev-day?
 
-[Tidyverse Developer Day](https://github.com/tidyverse/dev-day-2019) (tidy-dev-day) is a day-long event where attendees learn more about how to contribute to [tidyverse](https://www.tidyverse.org/).
-The first edition was at [rstudio::conf2019](https://resources.rstudio.com/tidyverse/tidyverse-developer-day-2019). 
+[Tidyverse Developer Day](https://github.com/tidyverse/dev-day-2019) (tidy-dev-day) is a day-long event where attendees learn more about how to contribute to [tidyverse](https://www.tidyverse.org/). The first edition was at [rstudio::conf2019](https://resources.rstudio.com/tidyverse/tidyverse-developer-day-2019).
 
-This was the second edition of tidy-dev-day and was a part of the  [useR!2019 conference](https://user2019.r-project.org/), which took place in Toulouse, France.
-The event happened the day before the start of the conference, bringing together several people who participated in it.
+This was the second edition of tidy-dev-day and was a part of the [useR!2019 conference](https://user2019.r-project.org/), which took place in Toulouse, France. The event happened the day before the start of the conference, bringing together several people who participated in it.
 
-Something to note is that the [useR!2019](https://user2019.r-project.org/) organization offered diversity scholarships, providing financial assistance to members of underrepresented groups in the R to participate in the conference.
-The diversity scholarships were fundamental for the participation of several people from different parts of the world, including the authors of this post (Bea and Angelica).
+Something to note is that the [useR!2019](https://user2019.r-project.org/) organization offered diversity scholarships, providing financial assistance to members of underrepresented groups in the R to participate in the conference. The diversity scholarships were fundamental for the participation of several people from different parts of the world, including the authors of this post (Bea and Angelica).
 
 ## How was tidy-dev-day?
 
@@ -82,9 +78,7 @@ For those who were already more familiar with package development, they recommen
 
 ## Bea's experience
 
-By the time of the event, I have not developed a package yet. So when I arrived at the event, I didn't knew how packages were structured.
-In the [issue I chose](https://github.com/tidyverse/dplyr/issues/3698)to work on, the goal was to improve an error message from the function [`dplyr::filter()`](https://dplyr.tidyverse.org/), so that the message would conform to the [tidyverse style guide](https://style.tidyverse.org/).
-![](https://i.imgur.com/VYgvY7k.jpg)
+By the time of the event, I have not developed a package yet. So when I arrived at the event, I didn't knew how packages were structured. In the [issue I chose](https://github.com/tidyverse/dplyr/issues/3698)to work on, the goal was to improve an error message from the function [`dplyr::filter()`](https://dplyr.tidyverse.org/), so that the message would conform to the [tidyverse style guide](https://style.tidyverse.org/). ![](https://i.imgur.com/VYgvY7k.jpg)
 
 **Caption:** Photo of the issue I was working on and the unique coin we received that day. Photo by [\@Bea_Milz](https://twitter.com/Bea_Milz).
 
@@ -92,16 +86,11 @@ Initially, I forked the dplyr repository, cloned it to my computer, and did not 
 
 I didn't knew which directory the functions were in, and I was afraid of changing something and causing an error in other functions of the package... But I'm glad I had help!
 
-[Ildi Czeller](https://ildiczeller.com/) showed me what directory the functions were in (by the way, it's in `/R`), and then I was able to find the file I needed to change and what part of the code was corresponding to the `filter()` function.
-That was the first time I heard about [tests](https://testthat.r-lib.org/), and I had to change the test referring to the error message I was working on.
+[Ildi Czeller](https://ildiczeller.com/) showed me what directory the functions were in (by the way, it's in `/R`), and then I was able to find the file I needed to change and what part of the code was corresponding to the `filter()` function. That was the first time I heard about [tests](https://testthat.r-lib.org/), and I had to change the test referring to the error message I was working on.
 
-After making the changes I felt were necessary, I made a [pull request](https://github.com/tidyverse/dplyr/pull/4477).
-Hadley replied that someone else was also working on this issue and indicated where the person was sitting.
-So I went there and asked [Colin](https://github.com/rundel) (who was working on this same issue) if we could work together.
+After making the changes I felt were necessary, I made a [pull request](https://github.com/tidyverse/dplyr/pull/4477). Hadley replied that someone else was also working on this issue and indicated where the person was sitting. So I went there and asked [Colin](https://github.com/rundel) (who was working on this same issue) if we could work together.
 
-He was super welcoming!
-He explained how he was developing the improvement, and I also showed him what I had done.
-Hadley asked to change some tests, and we worked on it together (in this case, I was mostly learning and asking Colin, because tests were new to me).
+He was super welcoming! He explained how he was developing the improvement, and I also showed him what I had done. Hadley asked to change some tests, and we worked on it together (in this case, I was mostly learning and asking Colin, because tests were new to me).
 
 ![](https://i.imgur.com/zllw6qX.png)
 
@@ -113,9 +102,7 @@ It was a unique experience, and I learned a **lot** that day!
 
 During tidy-dev-day, I worked on issues from [ggplot2](https://ggplot2.tidyverse.org/). It was a new experience, and it was gratifying to feel that I learned and contributed to the package.
 
-At the event, several people facilitated the activity.
-They helped the participants with activities like how to do a fork on GitHub, work on the issue in R, make a pull request, and so on.
-I had the help of [Ildi Czeller](https://ildiczeller.com/), who was one of the helpers and helped me at every step, giving tips from git settings to teaching shortcuts in Rstudio that made life easier (they are documented [here](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)).
+At the event, several people facilitated the activity. They helped the participants with activities like how to do a fork on GitHub, work on the issue in R, make a pull request, and so on. I had the help of [Ildi Czeller](https://ildiczeller.com/), who was one of the helpers and helped me at every step, giving tips from git settings to teaching shortcuts in Rstudio that made life easier (they are documented [here](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)).
 
 ![](https://i.imgur.com/Svktt2C.png){fig-align="center" width="100%"}
 
@@ -125,8 +112,7 @@ The activity promoted the engagement and contribution of everyone, from those wh
 
 It was a welcoming space to ask questions and ask for help.
 
-At one point, I was able to talk to [Hadley](http://hadley.nz/) and ask questions about an issue I was working on.
-Understanding better ggplot2 with one of the authors of the package was an incredible learning experience.
+At one point, I was able to talk to [Hadley](http://hadley.nz/) and ask questions about an issue I was working on. Understanding better ggplot2 with one of the authors of the package was an incredible learning experience.
 
 ## Final remarks
 
@@ -138,8 +124,7 @@ According to [Hadley](http://hadley.nz/), more than 40 pull requests were accept
 
 <p lang="en" dir="ltr">
 
-Huge thanks to everyone who contributed to tidyverse developer day!
-We merged over 40 PRs and have almost 30 more to review over the next few days <a href="https://t.co/uM9Tg1dMeX">pic.twitter.com/uM9Tg1dMeX</a>
+Huge thanks to everyone who contributed to tidyverse developer day! We merged over 40 PRs and have almost 30 more to review over the next few days <a href="https://t.co/uM9Tg1dMeX">pic.twitter.com/uM9Tg1dMeX</a>
 
 </p>
 
@@ -152,8 +137,7 @@ We merged over 40 PRs and have almost 30 more to review over the next few days <
 ```
 </center>
 
-It was an excellent opportunity to meet new people too!
-And to meet many people from the community that we admire.
+It was an excellent opportunity to meet new people too! And to meet many people from the community that we admire.
 
 ![](https://i.imgur.com/oWtQFxi.jpg)
 

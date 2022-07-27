@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.515">
+<meta name="generator" content="quarto-1.0.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,7 +35,7 @@ ul.task-list{list-style: none;}
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,6 +77,12 @@ ul.task-list{list-style: none;}
       window['quarto-listing-loaded']();
     }
   });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
 
@@ -111,11 +117,12 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="Bea Milz - Talks">
-<meta name="twitter:image" content="https://beamilz.com/talks/en/2021-learnr-latinr/featured.png">
+<meta name="twitter:description" content="I have been giving talks since 2018, but mostly in Portuguese. Those presentations are available in my blog in Portuguese. Here you can find my presentations that were in English. :) Enjoy!">
+<meta name="twitter:image" content="https://beamilz.com/talks/en/2022-rstudio-conf/featured.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1396">
-<meta name="twitter:image-width" content="2488">
+<meta name="twitter:image-height" content="675">
+<meta name="twitter:image-width" content="1200">
 </head>
 
 <body class="nav-fixed">
@@ -204,7 +211,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-page-left">
       <h1 class="title">Talks</h1>
                       </div>
   </div>
@@ -222,7 +229,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Communities">Communities <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R Markdown">R Markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R-Ladies">R-Ladies <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Talks">Talks <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Teaching">Teaching <span class="quarto-category-count">(3)</span></div><div class="category" data-category="gradethis">gradethis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="knitr">knitr <span class="quarto-category-count">(1)</span></div><div class="category" data-category="learnr">learnr <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Communities">Communities <span class="quarto-category-count">(2)</span></div><div class="category" data-category="GitHub">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GitHub Actions">GitHub Actions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R Markdown">R Markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R-Ladies">R-Ladies <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Talks">Talks <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Teaching">Teaching <span class="quarto-category-count">(3)</span></div><div class="category" data-category="gradethis">gradethis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="knitr">knitr <span class="quarto-category-count">(1)</span></div><div class="category" data-category="learnr">learnr <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -268,7 +275,48 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Talks,learnr,Teaching,gradethis" data-listing-date-sort="1636513200000" data-listing-file-modified-sort="1654398183429" data-listing-reading-time-sort="0.095">
+<div class="quarto-post image-right" data-index="0" data-categories="Talks,GitHub Actions,GitHub" data-listing-date-sort="1658980800000" data-listing-file-modified-sort="1658880930787" data-listing-reading-time-sort="0.195">
+<div class="thumbnail">
+<p><a href="../../talks/en/2022-rstudio-conf/index.html"> <img src="../../talks/en/2022-rstudio-conf/featured.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../../talks/en/2022-rstudio-conf/index.html">
+<h3 class="no-anchor listing-title">
+Making awesome automations with GitHub Actions
+</h3>
+<div class="listing-subtitle">
+rstudio::conf(2022)
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Talks'); return false;">
+Talks
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
+GitHub Actions
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
+GitHub
+</div>
+</div>
+<a href="../../talks/en/2022-rstudio-conf/index.html">
+<div class="listing-description">
+Event: rstudio::conf(2022)
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../../talks/en/2022-rstudio-conf/index.html">
+<div class="listing-date">
+Jul 28, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Talks,learnr,Teaching,gradethis" data-listing-date-sort="1636520400000" data-listing-file-modified-sort="1658706616446" data-listing-reading-time-sort="0.095">
 <div class="thumbnail">
 <p><a href="../../talks/en/2021-learnr-latinr/index.html"> <img src="../../talks/en/2021-learnr-latinr/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -312,7 +360,7 @@ Beatriz Milz, Fernando Correa
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Communities,R-Ladies" data-listing-date-sort="1619578800000" data-listing-file-modified-sort="1654398160387" data-listing-reading-time-sort="0.04">
+<div class="quarto-post image-right" data-index="2" data-categories="Communities,R-Ladies" data-listing-date-sort="1619582400000" data-listing-file-modified-sort="1658706616444" data-listing-reading-time-sort="0.04">
 <div class="thumbnail">
 <p><a href="../../talks/en/2021-experience-useR/index.html"> <img src="../../talks/en/2021-experience-useR/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -350,7 +398,7 @@ Beatriz Milz
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Teaching" data-listing-date-sort="1600830000000" data-listing-file-modified-sort="1654398142080" data-listing-reading-time-sort="0.06">
+<div class="quarto-post image-right" data-index="3" data-categories="Teaching" data-listing-date-sort="1600833600000" data-listing-file-modified-sort="1658706616436" data-listing-reading-time-sort="0.06">
 <div class="thumbnail">
 <p><a href="../../talks/en/2020-RStudio-certification/index.html"> <img src="../../talks/en/2020-RStudio-certification/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -385,7 +433,7 @@ Beatriz Milz
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Talks,R-Ladies,Communities" data-listing-date-sort="1562814000000" data-listing-file-modified-sort="1654398210214" data-listing-reading-time-sort="0.06">
+<div class="quarto-post image-right" data-index="4" data-categories="Talks,R-Ladies,Communities" data-listing-date-sort="1562817600000" data-listing-file-modified-sort="1658706616433" data-listing-reading-time-sort="0.06">
 <div class="thumbnail">
 <p><a href="../../talks/en/2019-user-rladies-sp/index.html"> <img src="../../talks/en/2019-user-rladies-sp/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -426,7 +474,7 @@ Beatriz Milz, Bruna Wundervald
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="R Markdown,knitr,Teaching" data-listing-date-sort="1543975200000" data-listing-file-modified-sort="1654398121014" data-listing-reading-time-sort="0.085">
+<div class="quarto-post image-right" data-index="5" data-categories="R Markdown,knitr,Teaching" data-listing-date-sort="1543986000000" data-listing-file-modified-sort="1658706616427" data-listing-reading-time-sort="0.085">
 <div class="thumbnail">
 <p><a href="../../talks/en/2018-knitr-codata/index.html"> <img src="../../talks/en/2018-knitr-codata/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -474,6 +522,24 @@ No matching items
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

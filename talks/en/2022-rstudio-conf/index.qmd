@@ -1,0 +1,26 @@
+---
+title: " Making awesome automations with GitHub Actions "
+subtitle: "rstudio::conf(2022)"
+author: 
+  - "Beatriz Milz"
+date: "2022-07-28"
+categories: [Talks, GitHub Actions, GitHub]
+image: "featured.png"
+---
+
+-   Event: [rstudio::conf(2022)](https://www.rstudio.com/conference/2022/schedule/)
+
+- [Talk in conference schedule](https://sched.co/11ia9)
+
+- Complementary materials:
+
+  - [Blog post: Introduction to GitHub Actions to R users](https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/en/)
+
+  - [Blog post: Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users](https://beamilz.com/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/)
+
+
+- [Slides](https://beatrizmilz.github.io/rstudioconf2022/):
+
+[![](featured.png){fig-align="center"}](https://beatrizmilz.github.io/rstudioconf2022/)
+
+

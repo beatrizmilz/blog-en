@@ -56,6 +56,7 @@
   {
     "listing": "/talks/en/index.html",
     "items": [
+      "/talks/en/2022-rstudio-conf/index.html",
       "/talks/en/2021-learnr-latinr/index.html",
       "/talks/en/2021-experience-useR/index.html",
       "/talks/en/2020-RStudio-certification/index.html",
