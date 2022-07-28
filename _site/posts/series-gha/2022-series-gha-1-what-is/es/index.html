@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Beatriz Milz">
 <meta name="dcterms.date" content="2022-06-30">
-
 <title>Bea Milz - Introducción a GitHub Actions para usuarias de R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -82,7 +79,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
@@ -98,8 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -117,37 +112,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - Introducción a GitHub Actions para usuarias de R">
 <meta property="og:description" content="Serie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-
 <link rel="stylesheet" href="../../../../styles.css">
 <meta name="twitter:title" content="Bea Milz - Introducción a GitHub Actions para usuarias de R">
 <meta name="twitter:description" content="Serie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.">
@@ -157,13 +141,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta name="twitter:image-height" content="675">
 <meta name="twitter:image-width" content="1200">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
@@ -172,13 +153,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../../">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -195,20 +176,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
     <a class="dropdown-item" href="../../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
     <a class="dropdown-item" href="../../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -221,7 +202,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -236,14 +217,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Introducción a GitHub Actions para usuarias de R</h1>
             <p class="subtitle lead">Serie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.</p>
@@ -280,28 +257,21 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#qué-es-github-actions" id="toc-qué-es-github-actions" class="nav-link active" data-scroll-target="#qué-es-github-actions">¿Qué es GitHub Actions?</a></li>
-  <li><a href="#cómo-utilizar-gha-en-un-paquete-en-r" id="toc-cómo-utilizar-gha-en-un-paquete-en-r" class="nav-link" data-scroll-target="#cómo-utilizar-gha-en-un-paquete-en-r">¿Cómo utilizar GHA en un paquete en R?</a></li>
-  <li><a href="#cómo-utilizar-gha-en-un-script-en-r" id="toc-cómo-utilizar-gha-en-un-script-en-r" class="nav-link" data-scroll-target="#cómo-utilizar-gha-en-un-script-en-r">¿Cómo utilizar GHA en un script en R?</a></li>
+<li><a href="#qu%C3%A9-es-github-actions" id="toc-qué-es-github-actions" class="nav-link active" data-scroll-target="#qu%C3%A9-es-github-actions">¿Qué es GitHub Actions?</a></li>
+  <li><a href="#c%C3%B3mo-utilizar-gha-en-un-paquete-en-r" id="toc-cómo-utilizar-gha-en-un-paquete-en-r" class="nav-link" data-scroll-target="#c%C3%B3mo-utilizar-gha-en-un-paquete-en-r">¿Cómo utilizar GHA en un paquete en R?</a></li>
+  <li><a href="#c%C3%B3mo-utilizar-gha-en-un-script-en-r" id="toc-cómo-utilizar-gha-en-un-script-en-r" class="nav-link" data-scroll-target="#c%C3%B3mo-utilizar-gha-en-un-script-en-r">¿Cómo utilizar GHA en un script en R?</a></li>
   <li><a href="#ejemplo" id="toc-ejemplo" class="nav-link" data-scroll-target="#ejemplo">Ejemplo</a></li>
   <li><a href="#nos-vemos-en-el-siguiente-post" id="toc-nos-vemos-en-el-siguiente-post" class="nav-link" data-scroll-target="#nos-vemos-en-el-siguiente-post">¡Nos vemos en el siguiente post!</a></li>
   <li><a href="#agradecimientos" id="toc-agradecimientos" class="nav-link" data-scroll-target="#agradecimientos">Agradecimientos</a></li>
   <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   <li><a href="#comparte-y-apoya" id="toc-comparte-y-apoya" class="nav-link" data-scroll-target="#comparte-y-apoya">Comparte y apoya!</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<p><a href="../../../../posts/series-gha/2022-series-gha-1-what-is/en/index.html"> <button type="button" class="btn btn-primary">English</button></a> <a href="../../../../posts/series-gha/2022-series-gha-1-what-is/es/index.html"> <button type="button" class="btn btn-primary">Español</button></a> <a href="../../../../posts/series-gha/2022-series-gha-1-what-is/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p><a href="../../../../posts/series-gha/2022-series-gha-1-what-is/en/index.html"> <button type="button" class="btn btn-primary">English</button></a> <a href="../../../../posts/series-gha/2022-series-gha-1-what-is/es/index.html"> <button type="button" class="btn btn-primary">Español</button></a> <a href="../../../../posts/series-gha/2022-series-gha-1-what-is/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -317,13 +287,11 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </div>
 <p>¡Oye! Este es el primer post de la serie “GitHub Actions”. Esta serie de post es un material complementario para mi charla relámpago en la <a href="https://www.rstudio.com/conference/">Conferencia RStudio - rstudio::conf 2022</a>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://rstudioconf2022.sched.com/event/11ia9?iframe=no"><img src="images/talk.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<figure class="figure"><p><a href="https://rstudioconf2022.sched.com/event/11ia9?iframe=no"><img src="images/talk.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
 <p>En esta publicación, <strong>presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R</strong>.</p>
-<section id="qué-es-github-actions" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-github-actions">¿Qué es GitHub Actions?</h2>
+<section id="qué-es-github-actions" class="level2"><h2 class="anchored" data-anchor-id="qué-es-github-actions">¿Qué es GitHub Actions?</h2>
 <p><a href="https://github.com/features/actions">GitHub Actions</a> es una herramienta de <a href="https://github.com/">GitHub</a> que nos permite automatizar tareas con código. Por ejemplo, podemos especificar una serie de comandos para que se ejecuten cuando se active.</p>
 <p>Podemos hacer muchas automatizaciones diferentes con GitHub Actions, como:</p>
 <ul>
@@ -332,10 +300,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <li><p>Ejecución de rutinas de web scraping;</p></li>
 <li><p>Actualizar documentos RMarkdown o Quarto;</p></li>
 <li><p>¡Etcétera! 🚀</p></li>
-</ul>
-</section>
-<section id="cómo-utilizar-gha-en-un-paquete-en-r" class="level2">
-<h2 class="anchored" data-anchor-id="cómo-utilizar-gha-en-un-paquete-en-r">¿Cómo utilizar GHA en un paquete en R?</h2>
+</ul></section><section id="cómo-utilizar-gha-en-un-paquete-en-r" class="level2"><h2 class="anchored" data-anchor-id="cómo-utilizar-gha-en-un-paquete-en-r">¿Cómo utilizar GHA en un paquete en R?</h2>
 <p>GitHub Actions se utiliza ampliamente en el desarrollo de paquetes para CI/CD. Por ejemplo, las personas que desarrollan paquetes usan GitHub Actions para probar su código, ejecutar rutinas de chequeo, actualizar la documentación y el sitio web del paquete, y más.</p>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -364,38 +329,32 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="callout-body-container callout-body">
 <p>Me gustaría agradecer todo el trabajo realizado por quienes contribuyen al <a href="https://github.com/r-lib/actions/graphs/contributors">repositorio r-lib/actions</a>. 🏆 Para mí, este repositorio fue la fuente de contenido y código más importante sobre GitHub Actions en R.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/r-lib/actions/blob/v2-branch/examples/README.md"><img src="images/actions-repo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<figure class="figure"><p><a href="https://github.com/r-lib/actions/blob/v2-branch/examples/README.md"><img src="images/actions-repo.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Aquí hay algunos ejemplos de cómo configurar GH Actions en paquetes:</p>
 <ul>
-<li>Para realizar chequeos (como <code>devtools::check()</code>) en un paquete siempre que haya un cambio de código, utilice:</li>
+<li>Para realizar chequeos (como <code><a href="https://devtools.r-lib.org/reference/check.html">devtools::check()</a></code>) en un paquete siempre que haya un cambio de código, utilice:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github_action</span>(<span class="st">"check-release"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/github_actions.html">use_github_action</a></span><span class="op">(</span><span class="st">"check-release"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Esto es útil porque cada vez que ocurre un error en el cheque, recibimos un correo electrónico de GitHub ⚠️. De esa manera, sabemos que algo está malo en el código y podemos solucionarlo lo antes posible.</p>
-<p>Para actualizar el sitio web del paquete (como <code>pkgdown::build_site()</code>) cada vez que haya un cambio en el código, utilice:</p>
+<p>Para actualizar el sitio web del paquete (como <code><a href="https://pkgdown.r-lib.org/reference/build_site.html">pkgdown::build_site()</a></code>) cada vez que haya un cambio en el código, utilice:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github_action</span>(<span class="st">"pkgdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/github_actions.html">use_github_action</a></span><span class="op">(</span><span class="st">"pkgdown"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Esto permite que el sitio web y la documentación del paquete estén siempre actualizados. 📌</p>
-</section>
-<section id="cómo-utilizar-gha-en-un-script-en-r" class="level2">
-<h2 class="anchored" data-anchor-id="cómo-utilizar-gha-en-un-script-en-r">¿Cómo utilizar GHA en un script en R?</h2>
+</section><section id="cómo-utilizar-gha-en-un-script-en-r" class="level2"><h2 class="anchored" data-anchor-id="cómo-utilizar-gha-en-un-script-en-r">¿Cómo utilizar GHA en un script en R?</h2>
 <p>Ya sabemos que podemos hacer automatizaciones realmente geniales en paquetes en R utilizando GitHub Actions. Pero la mayoría de las personas que programan en R que conozco utilizan scripts R y archivos RMarkdown en el día a día. No encontré ejemplos del uso de GHA con scripts simples (sin la estructura del paquete) en el repositorio <a href="https://github.com/r-lib/actions/blob/v2-branch/examples/README.md">r-lib/actions</a>. Entonces, para eso, ¡necesitamos saber cómo funciona GHA!</p>
 <p>La <a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions">documentación de GitHub sobre flujos de trabajo</a> es una fuente excelente para obtener más información sobre este tema.</p>
 <p>En primer lugar, la automatización realizada con GHA se llama <strong>Workflow</strong> (o flujo de trabajo). El flujo de trabajo tiene dos partes principales: <strong>Events</strong> (Eventos) y <strong>Jobs</strong> (Trabajos).</p>
 <ul>
 <li><p><strong>Events/Eventos</strong> describen lo que puede iniciar un flujo de trabajo. Por ejemplo, un evento podría ser “comenzar este flujo de trabajo todos los días a las 9 am” o “cada vez que alguien hace un push al repositorio” (en otras palabras, cuando hay un cambio en el código).</p></li>
 <li><p><strong>Jobs/Trabajos</strong> describe lo que se supone que debe hacer la computadora. ¡Imagínese que comienza sin ningún software instalado! Por lo tanto, debemos decir qué sistema operativo (SO) queremos que ejecute nuestro código (por ejemplo, Ubuntu/Windows/Mac OS). Además, necesitamos instalar R y cualquier paquete necesario para ejecutar nuestro código. Después de eso, podemos agregar el script que queremos ejecutar en R y guardar los resultados generados.</p></li>
-</ul>
-</section>
-<section id="ejemplo" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo">Ejemplo</h2>
+</ul></section><section id="ejemplo" class="level2"><h2 class="anchored" data-anchor-id="ejemplo">Ejemplo</h2>
 <p>Este es un ejemplo de un archivo de workflow/flujo de trabajo simple. El flujo de trabajo comienza cuando presiona un botón en GitHub (el evento). Entonces, instala R e imprime el mensaje “Hello R World!” en la consola (el trabajo).</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Evento/Event - ¿Qué inicia el flujo de trabajo/workflow?</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
@@ -415,28 +374,19 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> print-message   </span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">        # Código para ejecutar el script R</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> Rscript -e 'print("Hello R World!")' </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="nos-vemos-en-el-siguiente-post" class="level2">
-<h2 class="anchored" data-anchor-id="nos-vemos-en-el-siguiente-post">¡Nos vemos en el siguiente post!</h2>
+</section><section id="nos-vemos-en-el-siguiente-post" class="level2"><h2 class="anchored" data-anchor-id="nos-vemos-en-el-siguiente-post">¡Nos vemos en el siguiente post!</h2>
 <p>Esa es la idea general de GitHub Actions. En la próxima publicación, escribiré cómo puede crear un GHA que ejecute un script R y guarde el resultado en el repositorio de GitHub. ¡Nos vemos pronto!</p>
-</section>
-<section id="agradecimientos" class="level2">
-<h2 class="anchored" data-anchor-id="agradecimientos">Agradecimientos</h2>
+</section><section id="agradecimientos" class="level2"><h2 class="anchored" data-anchor-id="agradecimientos">Agradecimientos</h2>
 <p><a href="https://github.com/dfalbel">Daniel Falbel</a>, <a href="https://github.com/Athospd">Athos Damiani</a>, y <a href="https://github.com/jtrecenti">Julio Trecenti</a>: las personas que me presentaron GitHub Actions, respondieron preguntas y enviaron muchos enlaces increíbles. ¡Gracias!</p>
 <p>Personas que contribuyen al <a href="https://github.com/r-lib/actions/graphs/contributors">repositorio r-lib/actions</a>: 🏆 Para mí, este repositorio fue la fuente de contenido más importante en GitHub Actions para R.</p>
 <p><a href="https://github.com/jtrecenti">Julio Trecenti</a>: gracias por revisar la versión en Inglés del post!</p>
-</section>
-<section id="referencias" class="level2">
-<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+</section><section id="referencias" class="level2"><h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
 <ul>
 <li><p><a href="https://github.com/features/actions">GitHub Actions</a></p></li>
 <li><p><a href="https://usethis.r-lib.org/reference/github_actions.html">Paquete usethis</a></p></li>
 <li><p><a href="https://github.com/r-lib/actions/tree/v2-branch/examples#readme">Repositorio r-lib/actions</a></p></li>
 <li><p><a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions">Documentación de GitHub sobre flujos de trabajo</a></p></li>
-</ul>
-</section>
-<section id="comparte-y-apoya" class="level2">
-<h2 class="anchored" data-anchor-id="comparte-y-apoya">Comparte y apoya!</h2>
+</ul></section><section id="comparte-y-apoya" class="level2"><h2 class="anchored" data-anchor-id="comparte-y-apoya">Comparte y apoya!</h2>
 <p>Si te gusta este tipo de contenido, considera apoyarme en <a href="https://github.com/sponsors/beatrizmilz/">GitHub Sponsors</a>, o compártelo en Twitter: ):</p>
 <center>
 <blockquote class="twitter-tweet blockquote">
@@ -449,10 +399,7 @@ I wrote a new blog post about "Introduction to GitHub Actions to R users"!<a hre
 </center>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -562,16 +509,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -590,10 +535,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>

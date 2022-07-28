@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="dcterms.date" content="2020-12-17">
-
 <title>Bea Milz - Dicas para elaborar gráficos em R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -81,7 +78,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
@@ -97,8 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -116,37 +111,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - Dicas para elaborar gráficos em R">
 <meta property="og:description" content="No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de gráficos em relatórios.">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-
 <link rel="stylesheet" href="../../../styles.css">
 <meta name="twitter:title" content="Bea Milz - Dicas para elaborar gráficos em R">
 <meta name="twitter:description" content="No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de gráficos em relatórios.">
@@ -156,13 +140,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta name="twitter:image-height" content="3559">
 <meta name="twitter:image-width" content="4727">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
@@ -171,13 +152,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -194,20 +175,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
     <a class="dropdown-item" href="../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
     <a class="dropdown-item" href="../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -220,7 +201,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -235,14 +216,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Dicas para elaborar gráficos em R</h1>
             <p class="subtitle lead">No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de gráficos em relatórios.</p>
@@ -272,27 +249,22 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dicas-para-formatar-melhor-seus-gráficos" id="toc-dicas-para-formatar-melhor-seus-gráficos" class="nav-link active" data-scroll-target="#dicas-para-formatar-melhor-seus-gráficos">Dicas para formatar melhor seus gráficos</a></li>
-  <li><a href="#exemplo-diretores-de-sucesso" id="toc-exemplo-diretores-de-sucesso" class="nav-link" data-scroll-target="#exemplo-diretores-de-sucesso">Exemplo: Diretores de sucesso!</a>
+<li><a href="#dicas-para-formatar-melhor-seus-gr%C3%A1ficos" id="toc-dicas-para-formatar-melhor-seus-gráficos" class="nav-link active" data-scroll-target="#dicas-para-formatar-melhor-seus-gr%C3%A1ficos">Dicas para formatar melhor seus gráficos</a></li>
+  <li>
+<a href="#exemplo-diretores-de-sucesso" id="toc-exemplo-diretores-de-sucesso" class="nav-link" data-scroll-target="#exemplo-diretores-de-sucesso">Exemplo: Diretores de sucesso!</a>
   <ul class="collapse">
-  <li><a href="#preparar-a-base-de-dados" id="toc-preparar-a-base-de-dados" class="nav-link" data-scroll-target="#preparar-a-base-de-dados">Preparar a base de dados</a></li>
-  <li><a href="#criar-o-gráfico" id="toc-criar-o-gráfico" class="nav-link" data-scroll-target="#criar-o-gráfico">Criar o gráfico</a></li>
-  </ul></li>
-  <li><a href="#conclusões" id="toc-conclusões" class="nav-link" data-scroll-target="#conclusões">Conclusões</a></li>
+<li><a href="#preparar-a-base-de-dados" id="toc-preparar-a-base-de-dados" class="nav-link" data-scroll-target="#preparar-a-base-de-dados">Preparar a base de dados</a></li>
+  <li><a href="#criar-o-gr%C3%A1fico" id="toc-criar-o-gráfico" class="nav-link" data-scroll-target="#criar-o-gr%C3%A1fico">Criar o gráfico</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#conclus%C3%B5es" id="toc-conclusões" class="nav-link" data-scroll-target="#conclus%C3%B5es">Conclusões</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<p>No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Leia os posts completos através dos links a seguir:</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Leia os posts completos através dos links a seguir:</p>
 <ul>
 <li><p><a href="https://blog.curso-r.com/posts/2020-12-03-dicas-relatorios-r4ds1_tabelas/">Dicas para criar <strong>tabelas</strong></a></p></li>
 <li><p><a href="https://blog.curso-r.com/posts/2020-17-02-dicas-relatorios-r4ds1_graficos/">Dicas para <strong>gráficos</strong></a></p></li>
@@ -303,50 +275,45 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-blanks/ggplot2_blank.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-blanks/ggplot2_blank.png" class="img-fluid figure-img" style="width:50.0%"></p>
 <p></p><figcaption class="figure-caption">Ilustração sobre o pacote ggplot2, criada por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<section id="dicas-para-formatar-melhor-seus-gráficos" class="level2">
-<h2 class="anchored" data-anchor-id="dicas-para-formatar-melhor-seus-gráficos">Dicas para formatar melhor seus gráficos</h2>
+<section id="dicas-para-formatar-melhor-seus-gráficos" class="level2"><h2 class="anchored" data-anchor-id="dicas-para-formatar-melhor-seus-gráficos">Dicas para formatar melhor seus gráficos</h2>
 <p>Primeiro vamos carregar o pacote <a href="https://www.tidyverse.org/"><code>tidyverse</code></a>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>O próximo passo é carregar a base que utilizaremos como exemplo: a base de filmes do IMDB.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>imdb <span class="ot">&lt;-</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_delim</span>(</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/curso-r/202010-r4ds-1/master/dados/imdb2.csv"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">";"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">escape_double =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">trim_ws =</span> <span class="cn">TRUE</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_delim</a></span><span class="op">(</span></span>
+<span>    <span class="st">"https://raw.githubusercontent.com/curso-r/202010-r4ds-1/master/dados/imdb2.csv"</span>,</span>
+<span>    <span class="st">";"</span>,</span>
+<span>    escape_double <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>    trim_ws <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  <span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="exemplo-diretores-de-sucesso" class="level2">
-<h2 class="anchored" data-anchor-id="exemplo-diretores-de-sucesso">Exemplo: Diretores de sucesso!</h2>
-<section id="preparar-a-base-de-dados" class="level3">
-<h3 class="anchored" data-anchor-id="preparar-a-base-de-dados">Preparar a base de dados</h3>
+</section><section id="exemplo-diretores-de-sucesso" class="level2"><h2 class="anchored" data-anchor-id="exemplo-diretores-de-sucesso">Exemplo: Diretores de sucesso!</h2>
+<section id="preparar-a-base-de-dados" class="level3"><h3 class="anchored" data-anchor-id="preparar-a-base-de-dados">Preparar a base de dados</h3>
 <p>Neste exemplo, vamos criar um gráfico que apresente o lucro médio dos filmes segundo o diretor, para identificar pessoas diretoras de sucesso! Primeiro precisaremos obter as informações necessárias para criar o gráfico.</p>
-<p>A base imdb apresenta 3713 linhas, sendo que cada linha possui informação de um filme. Dentre as variáveis presentes na base são o orçamento e a receita dos filmes. Com essas variáveis, é possível calcular o lucro de cada filme. Porém, antes vamos remover os filmes das quais não temos as informações de orçamento e/ou receita (ou seja, <code>NA</code>). Existem diversas formas de remover os valores faltantes - <code>NA</code> - de uma base, então utilizaremos a função <a href="https://tidyr.tidyverse.org/reference/drop_na.html"><code>drop_na()</code></a>, do pacote tidyr, indicando como argumento as colunas em que desejamos remover os <code>NA</code>. Depois, utilizando a função <code>mutate()</code>, criaremos uma nova coluna que apresenta o valor do lucro de cada filme:</p>
+<p>A base imdb apresenta 3713 linhas, sendo que cada linha possui informação de um filme. Dentre as variáveis presentes na base são o orçamento e a receita dos filmes. Com essas variáveis, é possível calcular o lucro de cada filme. Porém, antes vamos remover os filmes das quais não temos as informações de orçamento e/ou receita (ou seja, <code>NA</code>). Existem diversas formas de remover os valores faltantes - <code>NA</code> - de uma base, então utilizaremos a função <a href="https://tidyr.tidyverse.org/reference/drop_na.html"><code>drop_na()</code></a>, do pacote tidyr, indicando como argumento as colunas em que desejamos remover os <code>NA</code>. Depois, utilizando a função <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>, criaremos uma nova coluna que apresenta o valor do lucro de cada filme:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>imdb_lucro <span class="ot">&lt;-</span> imdb <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(orcamento, receita) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lucro =</span> receita <span class="sc">-</span> orcamento)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_lucro</span> <span class="op">&lt;-</span> <span class="va">imdb</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">orcamento</span>, <span class="va">receita</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>lucro <span class="op">=</span> <span class="va">receita</span> <span class="op">-</span> <span class="va">orcamento</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Para obter a média do lucro por diretor, podemos utilizar as funções <code>group_by()</code> para agrupar por diretor, e <code>summarise()</code> para fazer as sumarizações necessárias: neste caso calcularemos a média (com a função <code>mean()</code>), e também o número de filmes por diretor (com a função <code>n()</code> - que conta o número de linhas, sendo que cada linha representa um filme).</p>
+<p>Para obter a média do lucro por diretor, podemos utilizar as funções <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> para agrupar por diretor, e <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code> para fazer as sumarizações necessárias: neste caso calcularemos a média (com a função <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code>), e também o número de filmes por diretor (com a função <code><a href="https://dplyr.tidyverse.org/reference/context.html">n()</a></code> - que conta o número de linhas, sendo que cada linha representa um filme).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>imdb_lucro_diretores <span class="ot">&lt;-</span> imdb_lucro <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(diretor) <span class="sc">%&gt;%</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">media_lucro =</span> <span class="fu">mean</span>(lucro),</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">numero_filmes =</span> <span class="fu">n</span>())</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(imdb_lucro_diretores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_lucro_diretores</span> <span class="op">&lt;-</span> <span class="va">imdb_lucro</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">diretor</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>media_lucro <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">lucro</span><span class="op">)</span>,</span>
+<span>            numero_filmes <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">imdb_lucro_diretores</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
   diretor         media_lucro numero_filmes
@@ -360,15 +327,15 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </div>
 </div>
 <p>Porém não podemos apresentar todas as 1419 pessoas diretoras no mesmo gráfico, pois não seria legível! Precisamos definir alguns critérios para selecionar as pessoas diretoras que aparecerão no gráfico.</p>
-<p>O primeiro critério escolhido é ter dirigido mais que um filme! Com a função <code>filter(condicao)</code>, esse critério é possível de ser satisfeito. Depois, ordenaremos a base de forma decrescente segundo o lucro médio, assim teremos nas primeiras linhas as pessoas diretoras com os maiores lucros médios. Isso é possível de ser feito com as funções <code>arrange(desc(variavel))</code>. Com a função <code>slice()</code>, podemos ‘cortar’ a base: utilizando como argumento <code>1:10</code>, estamos solicitando apenas as linhas 1 até 10.</p>
+<p>O primeiro critério escolhido é ter dirigido mais que um filme! Com a função <code>filter(condicao)</code>, esse critério é possível de ser satisfeito. Depois, ordenaremos a base de forma decrescente segundo o lucro médio, assim teremos nas primeiras linhas as pessoas diretoras com os maiores lucros médios. Isso é possível de ser feito com as funções <code>arrange(desc(variavel))</code>. Com a função <code><a href="https://dplyr.tidyverse.org/reference/slice.html">slice()</a></code>, podemos ‘cortar’ a base: utilizando como argumento <code>1:10</code>, estamos solicitando apenas as linhas 1 até 10.</p>
 <p>Neste caso, o resultado destes critérios será uma base com as 10 pessoas diretoras com maior lucro médio e que tenham dirigido mais de um filme.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>imdb_top_diretores <span class="ot">&lt;-</span> imdb_lucro_diretores <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(numero_filmes <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(media_lucro)) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>imdb_top_diretores</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_top_diretores</span> <span class="op">&lt;-</span> <span class="va">imdb_lucro_diretores</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">numero_filmes</span> <span class="op">&gt;</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">imdb_top_diretores</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 3
    diretor          media_lucro numero_filmes
@@ -385,123 +352,110 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 10 Andrew Adamson    130611730              4</code></pre>
 </div>
 </div>
-</section>
-<section id="criar-o-gráfico" class="level3">
-<h3 class="anchored" data-anchor-id="criar-o-gráfico">Criar o gráfico</h3>
+</section><section id="criar-o-gráfico" class="level3"><h3 class="anchored" data-anchor-id="criar-o-gráfico">Criar o gráfico</h3>
 <p>Agora podemos começar a criar o gráfico (e apresentar algumas dicas!).</p>
-<p>O código abaixo apresenta um gráfico de barras (<code>geom_col()</code>) simples, criado com o pacote <code>ggplot2</code>, e vamos melhorá-lo por etapas!</p>
+<p>O código abaixo apresenta um gráfico de barras (<code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code>) simples, criado com o pacote <code>ggplot2</code>, e vamos melhorá-lo por etapas!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>imdb_top_diretores <span class="sc">%&gt;%</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">x =</span> diretor, <span class="at">y =</span> media_lucro))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_top_diretores</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">diretor</span>, y <span class="op">=</span> <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>A primeira dica é: quando os nomes no eixo x estiverem se sobrepondo (no caso deste gráfico, o nome dos diretores), podemos inverter os eixos:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>imdb_top_diretores <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">y =</span> diretor, <span class="at">x =</span> media_lucro))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_top_diretores</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">diretor</span>, x <span class="op">=</span> <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Agora está muito mais fácil de ler os nomes dos diretores!</p>
-<p>Quando trabalhamos com variáveis que representam dinheiro (como no caso da variável lucro), podemos formatar os valores para que fiquem formatados como dinheiro, utilizando a função <code>scales::dollar()</code> :</p>
+<p>Quando trabalhamos com variáveis que representam dinheiro (como no caso da variável lucro), podemos formatar os valores para que fiquem formatados como dinheiro, utilizando a função <code><a href="https://scales.r-lib.org/reference/dollar_format.html">scales::dollar()</a></code> :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>imdb_top_diretores <span class="sc">%&gt;%</span> </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">y =</span> diretor, <span class="at">x =</span> media_lucro)) <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_top_diretores</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">diretor</span>, x <span class="op">=</span> <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/dollar_format.html">dollar</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Agora que os eixos estão bem formatados, podemos formatar a legenda para ficar claro o que cada eixo significa! A função <code>labs()</code> permite escrever o que desejamos que apareça como legenda em cada elemento (por exemplo: <code>labs(x = "Legenda do eixo X", y = "Legenda do eixo Y")</code> .</p>
+<p>Agora que os eixos estão bem formatados, podemos formatar a legenda para ficar claro o que cada eixo significa! A função <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> permite escrever o que desejamos que apareça como legenda em cada elemento (por exemplo: <code>labs(x = "Legenda do eixo X", y = "Legenda do eixo Y")</code> .</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>imdb_top_diretores <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">y =</span> diretor, <span class="at">x =</span> media_lucro)) <span class="sc">+</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Pessoas diretoras"</span>, <span class="at">y =</span> <span class="st">"Lucro médio"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_top_diretores</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">diretor</span>, x <span class="op">=</span> <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/dollar_format.html">dollar</a></span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Pessoas diretoras"</span>, y <span class="op">=</span> <span class="st">"Lucro médio"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>É interessante também ordenar as barras do gráfico de barras, pois facilita a comparação das categorias (neste caso, as pessoas diretoras).</p>
-<p>Para isso, podemos tratar a variável diretor como um fator (<code>factor</code>) <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, e ordenar os níveis (<code>levels</code>) de diretores segundo a variável <code>media_lucro</code>. A função <code>fct_reorder()</code> do pacote <a href="https://forcats.tidyverse.org/"><code>forcats</code></a> pode ser utilizada para isso, pois ela ordena os níveis de um fator utilizando a ordem de outra variável.</p>
+<p>Para isso, podemos tratar a variável diretor como um fator (<code>factor</code>) <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, e ordenar os níveis (<code>levels</code>) de diretores segundo a variável <code>media_lucro</code>. A função <code><a href="https://forcats.tidyverse.org/reference/fct_reorder.html">fct_reorder()</a></code> do pacote <a href="https://forcats.tidyverse.org/"><code>forcats</code></a> pode ser utilizada para isso, pois ela ordena os níveis de um fator utilizando a ordem de outra variável.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>imdb_top_diretores <span class="sc">%&gt;%</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diretor =</span> forcats<span class="sc">::</span><span class="fu">fct_reorder</span>(diretor, media_lucro)) <span class="sc">%&gt;%</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">y =</span> diretor, <span class="at">x =</span> media_lucro)) <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Pessoas diretoras"</span>, <span class="at">y =</span> <span class="st">"Lucro médio"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_top_diretores</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>diretor <span class="op">=</span> <span class="fu">forcats</span><span class="fu">::</span><span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_reorder.html">fct_reorder</a></span><span class="op">(</span><span class="va">diretor</span>, <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">diretor</span>, x <span class="op">=</span> <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/dollar_format.html">dollar</a></span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Pessoas diretoras"</span>, y <span class="op">=</span> <span class="st">"Lucro médio"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Por último (mas também importante) é uma dica estética, porém tem o poder de deixar o gráfico muito mais atrativo! Existem várias funções no pacote <code>ggplot2</code> com temas para os gráficos, e elas usam o prefixo <code>theme_</code> (por exemplo, <code>theme_light()</code>). Além disso, existem pacotes que oferecem mais temas, como o <a href="https://github.com/Mikata-Project/ggthemr">ggthemr</a> e o <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">ggthemes</a>!</p>
-<p>O exemplo abaixo utiliza o tema <code>theme_light()</code>:</p>
+<p>Por último (mas também importante) é uma dica estética, porém tem o poder de deixar o gráfico muito mais atrativo! Existem várias funções no pacote <code>ggplot2</code> com temas para os gráficos, e elas usam o prefixo <code>theme_</code> (por exemplo, <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_light()</a></code>). Além disso, existem pacotes que oferecem mais temas, como o <a href="https://github.com/Mikata-Project/ggthemr">ggthemr</a> e o <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">ggthemes</a>!</p>
+<p>O exemplo abaixo utiliza o tema <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_light()</a></code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>imdb_top_diretores <span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diretor =</span> forcats<span class="sc">::</span><span class="fu">fct_reorder</span>(diretor, media_lucro)) <span class="sc">%&gt;%</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">y =</span> diretor, <span class="at">x =</span> media_lucro)) <span class="sc">+</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Pessoas diretoras"</span>, <span class="at">y =</span> <span class="st">"Lucro médio"</span>) <span class="sc">+</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_top_diretores</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>diretor <span class="op">=</span> <span class="fu">forcats</span><span class="fu">::</span><span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_reorder.html">fct_reorder</a></span><span class="op">(</span><span class="va">diretor</span>, <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">diretor</span>, x <span class="op">=</span> <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/dollar_format.html">dollar</a></span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Pessoas diretoras"</span>, y <span class="op">=</span> <span class="st">"Lucro médio"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>O exemplo abaixo utiliza o tema <code>flat</code> do pacote <a href="https://github.com/Mikata-Project/ggthemr">ggthemr</a>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>imdb_top_diretores <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diretor =</span> forcats<span class="sc">::</span><span class="fu">fct_reorder</span>(diretor, media_lucro)) <span class="sc">%&gt;%</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">y =</span> diretor, <span class="at">x =</span> media_lucro)) <span class="sc">+</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>dollar) <span class="sc">+</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Pessoas diretoras"</span>, <span class="at">y =</span> <span class="st">"Lucro médio"</span>) <span class="sc">+</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  ggthemr<span class="sc">::</span><span class="fu">ggthemr</span>(<span class="st">"flat"</span>)<span class="sc">$</span>theme</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb_top_diretores</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>diretor <span class="op">=</span> <span class="fu">forcats</span><span class="fu">::</span><span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_reorder.html">fct_reorder</a></span><span class="op">(</span><span class="va">diretor</span>, <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">diretor</span>, x <span class="op">=</span> <span class="va">media_lucro</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/dollar_format.html">dollar</a></span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Pessoas diretoras"</span>, y <span class="op">=</span> <span class="st">"Lucro médio"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggthemr</span><span class="fu">::</span><span class="fu">ggthemr</span><span class="op">(</span><span class="st">"flat"</span><span class="op">)</span><span class="op">$</span><span class="va">theme</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://i.ibb.co/GQ2Ztmw/unnamed-chunk-12-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figure class="figure"><p><img src="https://i.ibb.co/GQ2Ztmw/unnamed-chunk-12-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="conclusões" class="level2">
-<h2 class="anchored" data-anchor-id="conclusões">Conclusões</h2>
+</section></section><section id="conclusões" class="level2"><h2 class="anchored" data-anchor-id="conclusões">Conclusões</h2>
 <p>Depois dessas dicas, o resultado é um gráfico mais atraente e informativo do que a versão básica que fizemos com o <code>ggplot2</code> no começo do post!</p>
 <p>Existem infinitas possibilidades para criar visualizações de dados com R. Neste post apresentamos algumas dicas simples para formatar melhor nossos gráficos, e no próximo post apresentaremos mais algumas dicas sobre relatórios com o pacote <code>R Markdown</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 
 
-</section>
-
-
-<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
+</section><div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 <ol>
 <li id="fn1" role="doc-endnote"><p>Falamos um pouco sobre fatores no <a href="https://www.curso-r.com/blog/2020-12-03-dicas-relatorios-r4ds1_tabelas/">post anterior</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -611,16 +565,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -639,10 +591,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

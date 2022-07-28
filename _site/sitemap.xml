@@ -2,198 +2,194 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://beamilz.com/about-pt.html</loc>
-    <lastmod>2022-07-27T00:11:42.376Z</lastmod>
+    <lastmod>2022-07-28T13:51:11.402Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2021-11-29-api-pokemon/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:43.479Z</lastmod>
+    <lastmod>2022-07-28T13:51:12.542Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2021-05-18-experimentando-o-r-410/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:44.578Z</lastmod>
+    <lastmod>2022-07-28T13:51:15.479Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2022-03-08-googlesheets4/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:45.714Z</lastmod>
+    <lastmod>2022-07-28T13:51:18.055Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/en.html</loc>
-    <lastmod>2022-07-28T11:11:58.268Z</lastmod>
+    <lastmod>2022-07-28T13:51:18.764Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2021-03-29-desvendando-erros/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:48.275Z</lastmod>
+    <lastmod>2022-07-28T13:51:39.127Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2019-08-12-tidydevday/pt/index.html</loc>
-    <lastmod>2022-07-27T00:18:00.835Z</lastmod>
+    <lastmod>2022-07-28T13:51:40.273Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2019-08-12-tidydevday/en/index.html</loc>
-    <lastmod>2022-07-27T00:18:10.492Z</lastmod>
+    <lastmod>2022-07-28T13:51:41.626Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:51.475Z</lastmod>
+    <lastmod>2022-07-28T13:51:58.788Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:52.441Z</lastmod>
+    <lastmod>2022-07-28T13:52:00.074Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2021-03-07-estudando-bibliometrix/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:54.241Z</lastmod>
+    <lastmod>2022-07-28T13:52:16.394Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2019-08-31-um-ano-aprendendo-r/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:55.105Z</lastmod>
+    <lastmod>2022-07-28T13:52:17.701Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:56.190Z</lastmod>
+    <lastmod>2022-07-28T13:52:19.088Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html</loc>
-    <lastmod>2022-07-27T00:11:57.124Z</lastmod>
+    <lastmod>2022-07-28T13:52:20.352Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2022-02-19-api-github-1/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:58.314Z</lastmod>
+    <lastmod>2022-07-28T13:52:36.207Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2022-06-11-bases-de-dados/pt/index.html</loc>
-    <lastmod>2022-07-27T00:11:59.352Z</lastmod>
+    <lastmod>2022-07-28T13:52:51.549Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/index.html</loc>
-    <lastmod>2022-07-27T00:12:00.598Z</lastmod>
+    <lastmod>2022-07-28T13:52:53.791Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html</loc>
-    <lastmod>2022-07-27T00:12:01.901Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:03.160Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/es/index.html</loc>
-    <lastmod>2022-07-27T00:12:04.260Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/en/index.html</loc>
-    <lastmod>2022-07-27T00:12:05.348Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:06.470Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2021-03-15-dicas-03-relatorio/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:07.458Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2020-12-03-dicas-01-tabelas/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:08.476Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2022-04-06-pacote-dados/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:09.537Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2019-01-29-meio-ano-r/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:10.574Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2022-03-18-onedrive/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:11.675Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:12.584Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:13.489Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/es.html</loc>
-    <lastmod>2022-07-27T00:12:13.846Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2021-05-24-naruto/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:15.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/2020-12-17-dicas-02-graficos/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:16.941Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/pt.html</loc>
-    <lastmod>2022-07-27T00:18:01.678Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/about-es.html</loc>
-    <lastmod>2022-07-27T00:12:18.100Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/pt/index.html</loc>
-    <lastmod>2022-07-27T00:12:18.475Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/es/index.html</loc>
-    <lastmod>2022-07-27T00:12:18.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/es/2020-funciones-r4ds/index.html</loc>
-    <lastmod>2022-07-27T00:12:19.715Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/en/2021-learnr-latinr/index.html</loc>
-    <lastmod>2022-07-27T00:12:20.635Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/en/2020-RStudio-certification/index.html</loc>
-    <lastmod>2022-07-27T00:12:21.542Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/en/2021-experience-useR/index.html</loc>
-    <lastmod>2022-07-27T00:12:22.438Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/en/index.html</loc>
-    <lastmod>2022-07-28T11:13:27.222Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/en/2018-knitr-codata/index.html</loc>
-    <lastmod>2022-07-27T00:12:23.428Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/en/2019-user-rladies-sp/index.html</loc>
-    <lastmod>2022-07-27T00:12:24.303Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/index.html</loc>
-    <lastmod>2022-07-28T11:11:59.449Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/about.html</loc>
-    <lastmod>2022-07-27T00:12:25.539Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/series-gha.html</loc>
-    <lastmod>2022-07-28T11:17:06.337Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/talks/en/2022-rstudio-conf/index.html</loc>
-    <lastmod>2022-07-28T11:13:26.711Z</lastmod>
-  </url>
-  <url>
-    <loc>https://beamilz.com/posts/series-gha/2022-06-28-github-actions-rstudio/en/index.html</loc>
-    <lastmod>2022-07-28T11:07:50.114Z</lastmod>
+    <lastmod>2022-07-28T13:52:56.317Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html</loc>
-    <lastmod>2022-07-28T11:11:57.649Z</lastmod>
+    <lastmod>2022-07-28T13:53:00.586Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/pt/index.html</loc>
+    <lastmod>2022-07-28T13:53:02.871Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/es/index.html</loc>
+    <lastmod>2022-07-28T13:53:04.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/en/index.html</loc>
+    <lastmod>2022-07-28T13:53:07.052Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html</loc>
+    <lastmod>2022-07-28T13:53:10.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2021-03-15-dicas-03-relatorio/pt/index.html</loc>
+    <lastmod>2022-07-28T13:53:13.001Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2020-12-03-dicas-01-tabelas/pt/index.html</loc>
+    <lastmod>2022-07-28T13:53:17.164Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2022-04-06-pacote-dados/pt/index.html</loc>
+    <lastmod>2022-07-28T13:53:36.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2019-01-29-meio-ano-r/pt/index.html</loc>
+    <lastmod>2022-07-28T13:53:37.613Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2022-03-18-onedrive/pt/index.html</loc>
+    <lastmod>2022-07-28T13:53:52.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/index.html</loc>
+    <lastmod>2022-07-28T13:53:54.403Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/index.html</loc>
+    <lastmod>2022-07-28T13:53:55.723Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/es.html</loc>
+    <lastmod>2022-07-28T13:53:56.218Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2021-05-24-naruto/pt/index.html</loc>
+    <lastmod>2022-07-28T13:54:00.246Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2020-12-17-dicas-02-graficos/pt/index.html</loc>
+    <lastmod>2022-07-28T13:54:03.232Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/pt.html</loc>
+    <lastmod>2022-07-28T13:54:04.096Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/about-es.html</loc>
+    <lastmod>2022-07-28T13:54:04.459Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/index.html</loc>
+    <lastmod>2022-07-28T13:54:05.809Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/es/index.html</loc>
+    <lastmod>2022-07-28T13:54:06.146Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/es/2020-funciones-r4ds/index.html</loc>
+    <lastmod>2022-07-28T13:54:07.081Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/en/2021-learnr-latinr/index.html</loc>
+    <lastmod>2022-07-28T13:54:08.063Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/en/2020-RStudio-certification/index.html</loc>
+    <lastmod>2022-07-28T13:54:09.031Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/en/2021-experience-useR/index.html</loc>
+    <lastmod>2022-07-28T13:54:10.138Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/en/index.html</loc>
+    <lastmod>2022-07-28T13:54:10.666Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/en/2018-knitr-codata/index.html</loc>
+    <lastmod>2022-07-28T13:54:11.643Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/en/2022-rstudio-conf/index.html</loc>
+    <lastmod>2022-07-28T13:54:12.551Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/en/2019-user-rladies-sp/index.html</loc>
+    <lastmod>2022-07-28T13:54:13.489Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/index.html</loc>
+    <lastmod>2022-07-28T13:54:14.417Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/about.html</loc>
+    <lastmod>2022-07-28T13:54:14.813Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/series-gha.html</loc>
+    <lastmod>2022-07-28T13:54:15.788Z</lastmod>
   </url>
 </urlset>

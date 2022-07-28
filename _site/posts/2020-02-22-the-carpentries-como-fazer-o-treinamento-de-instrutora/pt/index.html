@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Beatriz Milz">
 <meta name="dcterms.date" content="2020-02-22">
-
 <title>Bea Milz - The Carpentries: Como fazer o treinamento de instrutora?</title>
 <style>
 code{white-space: pre-wrap;}
@@ -18,7 +15,6 @@ div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 </style>
-
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
@@ -35,8 +31,7 @@ ul.task-list{list-style: none;}
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -54,37 +49,26 @@ ul.task-list{list-style: none;}
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - The Carpentries: Como fazer o treinamento de instrutora?">
 <meta property="og:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-
 <link rel="stylesheet" href="../../../styles.css">
 <meta name="twitter:title" content="Bea Milz - The Carpentries: Como fazer o treinamento de instrutora?">
 <meta name="twitter:description" content="Olá a todes!">
@@ -92,13 +76,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
@@ -107,13 +88,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -130,20 +111,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
     <a class="dropdown-item" href="../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
     <a class="dropdown-item" href="../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -156,7 +137,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -171,14 +152,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">The Carpentries: Como fazer o treinamento de instrutora?</h1>
                                 <div class="quarto-categories">
@@ -213,42 +190,35 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#o-que-é-a-the-carpentries" id="toc-o-que-é-a-the-carpentries" class="nav-link active" data-scroll-target="#o-que-é-a-the-carpentries">O que é a The Carpentries?</a></li>
+<li><a href="#o-que-%C3%A9-a-the-carpentries" id="toc-o-que-é-a-the-carpentries" class="nav-link active" data-scroll-target="#o-que-%C3%A9-a-the-carpentries">O que é a The Carpentries?</a></li>
   <li><a href="#como-conheci-a-the-carpentries" id="toc-como-conheci-a-the-carpentries" class="nav-link" data-scroll-target="#como-conheci-a-the-carpentries">Como conheci a The Carpentries?</a></li>
-  <li><a href="#treinamento-de-instrutora" id="toc-treinamento-de-instrutora" class="nav-link" data-scroll-target="#treinamento-de-instrutora">Treinamento de instrutora</a>
+  <li>
+<a href="#treinamento-de-instrutora" id="toc-treinamento-de-instrutora" class="nav-link" data-scroll-target="#treinamento-de-instrutora">Treinamento de instrutora</a>
   <ul class="collapse">
-  <li><a href="#registrando-o-interesse" id="toc-registrando-o-interesse" class="nav-link" data-scroll-target="#registrando-o-interesse">Registrando o interesse</a></li>
+<li><a href="#registrando-o-interesse" id="toc-registrando-o-interesse" class="nav-link" data-scroll-target="#registrando-o-interesse">Registrando o interesse</a></li>
   <li><a href="#email-de-aceite" id="toc-email-de-aceite" class="nav-link" data-scroll-target="#email-de-aceite">Email de aceite</a></li>
   <li><a href="#treinamento" id="toc-treinamento" class="nav-link" data-scroll-target="#treinamento">Treinamento</a></li>
   <li><a href="#community-discussion" id="toc-community-discussion" class="nav-link" data-scroll-target="#community-discussion">Community discussion</a></li>
   <li><a href="#contribuindo-com-os-materiais" id="toc-contribuindo-com-os-materiais" class="nav-link" data-scroll-target="#contribuindo-com-os-materiais">Contribuindo com os materiais</a></li>
   <li><a href="#live-coding" id="toc-live-coding" class="nav-link" data-scroll-target="#live-coding">Live Coding</a></li>
   <li><a href="#concluindo-o-checkout-process" id="toc-concluindo-o-checkout-process" class="nav-link" data-scroll-target="#concluindo-o-checkout-process">Concluindo o Checkout Process</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#desafios-para-a-comunidade-carpentries-no-brasil" id="toc-desafios-para-a-comunidade-carpentries-no-brasil" class="nav-link" data-scroll-target="#desafios-para-a-comunidade-carpentries-no-brasil">Desafios para a comunidade Carpentries no Brasil</a></li>
   <li><a href="#agradecimentos" id="toc-agradecimentos" class="nav-link" data-scroll-target="#agradecimentos">Agradecimentos:</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<p>Olá a todes! Neste post, vou contar um pouco sobre o que é a <a href="https://carpentries.org/">The Carpentries</a>, como conheci este projeto, como foi o treinamento para me tornar uma instrutora, e quais desafios que percebi para o crescimento da comunidade no Brasil.</p>
-<section id="o-que-é-a-the-carpentries" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-é-a-the-carpentries">O que é a The Carpentries?</h2>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>Olá a todes! Neste post, vou contar um pouco sobre o que é a <a href="https://carpentries.org/">The Carpentries</a>, como conheci este projeto, como foi o treinamento para me tornar uma instrutora, e quais desafios que percebi para o crescimento da comunidade no Brasil.</p>
+<section id="o-que-é-a-the-carpentries" class="level2"><h2 class="anchored" data-anchor-id="o-que-é-a-the-carpentries">O que é a The Carpentries?</h2>
 <center>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://carpentries.org/assets/img/TheCarpentries.svg" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://carpentries.org/assets/img/TheCarpentries.svg" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -264,38 +234,41 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>A The Carpentries engloba 3 projetos: <a href="http://www.datacarpentry.org/">Data Carpentry</a>, <a href="https://software-carpentry.org/">Software Carpentry</a> e <a href="https://librarycarpentry.org/">Library Carpentry</a>. Cada projeto tem um foco, mas todos criam materiais de ensino e promovem workshops sobre <code>R</code>, <code>Python</code>, <code>Git</code> e muito mais.</p>
 <p>Segue abaixo uma lista de materiais sobre <code>R</code> disponíveis nos projetos:</p>
 <ul>
-<li><p><strong>Data Carpentry</strong></p>
+<li>
+<p><strong>Data Carpentry</strong></p>
 <ul>
 <li><p><a href="https://datacarpentry.org/R-ecology-lesson/">Data Analysis and Visualization in R for Ecologists</a></p></li>
 <li><p><a href="https://datacarpentry.org/r-intro-geospatial">Introduction to R for Geospatial Data</a></p></li>
 <li><p><a href="https://datacarpentry.org/r-raster-vector-geospatial">Introduction to Geospatial Raster and Vector Data with R</a></p></li>
-</ul></li>
-<li><p><strong>Software Carpentry</strong></p>
+</ul>
+</li>
+<li>
+<p><strong>Software Carpentry</strong></p>
 <ul>
 <li><p><a href="http://swcarpentry.github.io/r-novice-inflammation">Programming with R</a></p></li>
 <li><p><a href="http://swcarpentry.github.io/r-novice-gapminder">R for Reproducible Scientific Analysis</a></p></li>
-</ul></li>
-<li><p><strong>Library Carpentry</strong></p>
+</ul>
+</li>
+<li>
+<p><strong>Library Carpentry</strong></p>
 <ul>
 <li><a href="https://librarycarpentry.org/lc-r/">Introduction to R</a></li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <p>Os materiais são desenvolvidos em inglês. Alguns materiais estão sendo traduzidos para espanhol, sendo uma iniciativa da comunidade da The Carpentries na América Latina. Infelizmente não estão disponíveis materiais em português, pois a comunidade brasileira da The Carpentries ainda é pequena, o que é possível de observar no mapa abaixo:</p>
 <center>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="mapa.jpg" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="mapa.jpg" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Mapa de instrutores(as) da Carpentries. Data: Fevereiro/2020 Fonte: <a href="https://carpentries.org/instructors-map/">Carpentries - Instructors Map</a>.</p>
 </center>
-</section>
-<section id="como-conheci-a-the-carpentries" class="level2">
-<h2 class="anchored" data-anchor-id="como-conheci-a-the-carpentries">Como conheci a The Carpentries?</h2>
+</section><section id="como-conheci-a-the-carpentries" class="level2"><h2 class="anchored" data-anchor-id="como-conheci-a-the-carpentries">Como conheci a The Carpentries?</h2>
 <p>Agora que já expliquei o que é a The Carpentries, vou falar um pouco sobre como eu conheci esse projeto.</p>
 <p>No segundo semestre de 2018, quando estava começando a aprender R, os organizadores do <a href="https://www.ictp-saifr.org/2018-codata-rda-school-of-research-data-science/">“2018 CODATA-RDA School of Research Data Science”</a> entraram em contato com as R-Ladies São Paulo para ministrar voluntariamente um dia e meio de aula de R <strong>em inglês</strong>. Mesmo com poucos meses de aprendizado, eu declarei interesse em participar. Na ocasião, a Haydee Svab e a Alissa Mune também participaram.</p>
 <p>Este curso ocorreu em dezembro de 2018, e utilizou o método da Carpentries de ensino, e também os materiais. O material utilizado foi o <a href="http://swcarpentry.github.io/r-novice-inflammation/">Programming with R</a>, da <a href="https://software-carpentry.org/">Software Carpentry</a>. Eu ministrei os conteúdos de Boas práticas (<a href="http://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R/index.html">Best Practices for Writing R Code</a>), e Relatórios dinâmicos com o <code>knitr</code> (<a href="http://swcarpentry.github.io/r-novice-inflammation/07-knitr-R/index.html">Dynamic Reports with knitr</a>), pois eram os conteúdos que eu tinha mais familiaridade. Foi uma oportunidade muito boa, onde eu aprendi bastante, e também conheci R-Ladies de outros capítulos da América Latina.</p>
@@ -303,8 +276,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://beatrizmilz.com/img/rladies_codata.jpg" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="https://beatrizmilz.com/img/rladies_codata.jpg" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -312,50 +284,34 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>R-Ladies no 2018 CODATA: <a href="https://twitter.com/SanchezTapiaA">Andrea Tapia - R-Ladies Rio de Janeiro</a>, <a href="https://twitter.com/ndasilva_stat">Natalia da Silva - R-Ladies Montevideo</a>, <a href="https://twitter.com/alissamune">Alissa Mune - R-Ladies São Paulo</a>, <a href="https://twitter.com/hsvab">Haydee Svab - R-Ladies São Paulo</a>, eu, e <a href="https://twitter.com/Fichulina">Marcela Alfaro - R-Ladies San José</a>.</p>
 </center>
 <p>Nessa ocasião, a <a href="https://twitter.com/Fichulina">Marce</a> explicou o que é a Carpentries, disse que temos poucos instrutores(as) no Brasil, e me motivou a me inscrever no processo para fazer o treinamento para ser uma instrutora.</p>
-</section>
-<section id="treinamento-de-instrutora" class="level2">
-<h2 class="anchored" data-anchor-id="treinamento-de-instrutora">Treinamento de instrutora</h2>
+</section><section id="treinamento-de-instrutora" class="level2"><h2 class="anchored" data-anchor-id="treinamento-de-instrutora">Treinamento de instrutora</h2>
 <p><a href="https://carpentries.github.io/instructor-training/">Nesta página</a> é possível encontrar informações sobre o treinamento. Abaixo vou descrever como foi o <strong>meu</strong> processo de treinamento.</p>
-<section id="registrando-o-interesse" class="level3">
-<h3 class="anchored" data-anchor-id="registrando-o-interesse">Registrando o interesse</h3>
+<section id="registrando-o-interesse" class="level3"><h3 class="anchored" data-anchor-id="registrando-o-interesse">Registrando o interesse</h3>
 <p>Depois do CODATA, eu demorei um pouco para começar. A primeira etapa foi preencher <a href="https://amy.carpentries.org/forms/request_training/">este formulário online</a> registrando o interesse em realizar o treinamento. Eu preenchi em março de 2019.</p>
-</section>
-<section id="email-de-aceite" class="level3">
-<h3 class="anchored" data-anchor-id="email-de-aceite">Email de aceite</h3>
+</section><section id="email-de-aceite" class="level3"><h3 class="anchored" data-anchor-id="email-de-aceite">Email de aceite</h3>
 <p>No início de abril de 2019, recebi o email em que indicava o link para me inscrever no treinamento. No site, são disponíveis diversas opções de datas e horários. Eu me inscrevi para realizar o treinamento em Julho/2019, pois o mesmo <strong>tem duração de 2 dias (online)</strong>, e no primeiro semestre eu estava ocupada com as disciplinas da pós.</p>
-</section>
-<section id="treinamento" class="level3">
-<h3 class="anchored" data-anchor-id="treinamento">Treinamento</h3>
+</section><section id="treinamento" class="level3"><h3 class="anchored" data-anchor-id="treinamento">Treinamento</h3>
 <p>O treinamento foi realizado em Julho/2019 através do Zoom (online), com duração de 2 dias. É importante destacar que o treinamento foi inteiramente realizado em inglês. <a href="https://carpentries.github.io/instructor-training/">Nesta página</a> é possível ver os conteúdos abordados. O curso foca em boas práticas para o ensino, e foi riquíssimo, contando com atividades práticas. Uma das minhas atividades favoritas foi em grupo: cada pessoa do grupo deveria compartilhar a tela do computador e apresentar uma curta aula, e os participantes do grupo fornecem feedbacks positivos e negativos.</p>
 <p>Depois de completar o treinamento, existem 3 etapas para concluir o checkout process: participar de uma reunião da comunidade (community discussion), fazer uma contribuição em algum material da Carpentries, e apresentar uma aula de 5 minutos codando ao vivo (live coding). Essas etapas devem ser realizadas em até 3 meses após participar do treinamento online.</p>
-</section>
-<section id="community-discussion" class="level3">
-<h3 class="anchored" data-anchor-id="community-discussion">Community discussion</h3>
+</section><section id="community-discussion" class="level3"><h3 class="anchored" data-anchor-id="community-discussion">Community discussion</h3>
 <p>Para participar da community discussion, existe um documento com diversas opções de horários e datas. Eu coloquei meu nome em uma opção de data que eu poderia participar. A reunião é online e dura 1 hora, e participaram pessoas que estão no treinamento, e também instrutores(as) experientes.</p>
 <p>Foi muito interessante ouvir as pessoas contando quais foram os aprendizados que tiveram nos workshops oferecidos. Algo que eu achei muito interessante são os relatos do que errado nos workshops, pois assim podemos pensar em formas de prevenir estes problemas em workshops futuros!</p>
-</section>
-<section id="contribuindo-com-os-materiais" class="level3">
-<h3 class="anchored" data-anchor-id="contribuindo-com-os-materiais">Contribuindo com os materiais</h3>
+</section><section id="contribuindo-com-os-materiais" class="level3"><h3 class="anchored" data-anchor-id="contribuindo-com-os-materiais">Contribuindo com os materiais</h3>
 <p>Como disse anteriormente, todos os materiais da Carpentries são desenvolvidos e aprimorados pela comunidade, através do GitHub. Então parte do treinamento é realizar uma contribuição, seja com um pull request, respondendo uma issue ou dando alguma sugestão/feedback.</p>
 <p>Eu estava estudando uma das lições da Data Carpentry para me preparar para a etapa de live coding. Em Agosto/2019, fiz uma contribuição respondendo uma <a href="https://github.com/datacarpentry/R-ecology-lesson/issues/559">issue</a> com uma sugestão relacionado à lição <a href="https://datacarpentry.org/R-ecology-lesson/">Data Analysis and Visualization in R for Ecologists</a>.</p>
-</section>
-<section id="live-coding" class="level3">
-<h3 class="anchored" data-anchor-id="live-coding">Live Coding</h3>
+</section><section id="live-coding" class="level3"><h3 class="anchored" data-anchor-id="live-coding">Live Coding</h3>
 <p>Essa foi a última etapa, que realizei em Setembro/2019! A dinâmica é a seguinte: deve-se escolhar uma lição da Carpentries (eu escolhi <a href="https://datacarpentry.org/R-ecology-lesson/">essa</a>), e estudar o material.</p>
 <p>Depois de estudar o conteúdo da lição <a href="https://datacarpentry.org/R-ecology-lesson/">Data Analysis and Visualization in R for Ecologists</a>, adicionei meu nome e a lição escolhida no documento com as datas disponíveis para o Live Coding.</p>
 <p>A avaliação é realizada em uma ligação no Zoom, com outras pessoas que estão em treinamento e uma pessoa avaliadora. A pessoa avaliadora então escolhe em qual tópico do curso a aula com live coding deve começar (por isso é necessário estudar todo o material escolhido!).</p>
 <p>Então eu compartilhei a minha tela com todos(as), abri o RStudio, e dei uma aula de 5 minutos em inglês, com live coding, utilizando as práticas que aprendemos no treinamento. Depois de apresentar a aula, é necessário fazer um feedback de si mesmo (positivo e negativo). O feedback que eu fiz para mim mesma é que senti que eu parava para pensar no termo em inglês, e isso prejudicava o ritmo da aula. A pessoa que estava avaliando me tranquilizou e disse que isso não afetou a qualidade da aula. As outras pessoas que estavam em treinamento elaboraram feedbacks, o que me deixou super feliz, já que recebi feedbacks bem legais (um exemplo foi falarem que a minha voz e jeito de falar é animada e deixou as pessoas interessadas no conteúdo apresentado).</p>
 <p>Depois de apresentar e receber os feedbacks, também assisti as aulas de outras pessoas em treinamento, e dei feedbacks.</p>
-</section>
-<section id="concluindo-o-checkout-process" class="level3">
-<h3 class="anchored" data-anchor-id="concluindo-o-checkout-process">Concluindo o Checkout Process</h3>
+</section><section id="concluindo-o-checkout-process" class="level3"><h3 class="anchored" data-anchor-id="concluindo-o-checkout-process">Concluindo o Checkout Process</h3>
 <p>Depois de cumprir todas essas etapas e informar por email (por exemplo, o link da issue que contribuí), esperei um tempo e verifiquei <a href="https://amy.carpentries.org/account/login/?next=/dashboard/">neste site</a> que já havia cumprido os requisitos. Preenchi os dados que faltavam, e em pouco tempo o meu nome apareceu na lista de instrutores(as): (é preciso utilizar o ctrl+F, pois são muitas pessoas!)</p>
 <center>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="print-pagina.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="print-pagina.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </div>
@@ -364,33 +320,24 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </center>
 <p>Desde então, posso organizar e dar aula em Workshops da Carpentries. Eu e o <a href="https://twitter.com/rgaiacs">Raniere Silva</a> estamos em contato com ideias de organizar workshops neste ano!</p>
 <p>Eu aprendi bastante neste treinamento, o que possibilitou ter um olhar crítico sobre as aulas e materiais que eu (e outras pessoas também) ofereço. Desenvolver a habilidade de fornecer feedbacks construtivos, e praticar live coding foram conteúdos que também gostei muito no treinamento da Carpentries.</p>
-</section>
-</section>
-<section id="desafios-para-a-comunidade-carpentries-no-brasil" class="level2">
-<h2 class="anchored" data-anchor-id="desafios-para-a-comunidade-carpentries-no-brasil">Desafios para a comunidade Carpentries no Brasil</h2>
+</section></section><section id="desafios-para-a-comunidade-carpentries-no-brasil" class="level2"><h2 class="anchored" data-anchor-id="desafios-para-a-comunidade-carpentries-no-brasil">Desafios para a comunidade Carpentries no Brasil</h2>
 <p>Dentre os desafios que percebi, o que mais chama a atenção é que o treinamento para se tornar uma pessoa instrutora é totalmente em inglês. Isso acaba dificultando a participação de muitas pessoas que não falam inglês. Além disso, existem poucos instrutores(as) certificados no Brasil. Consequentemente o material dos workshops estão em inglês, pois ainda não foram traduzidos.</p>
 <p>Nos países da América Latina que falam espanhol, as pessoas instrutoras trabalham em equipe para traduzir os materiais dos workshops, e também já ofereceram o treinamento para instrutores(as) em espanhol.</p>
 <p>Portanto, se queremos ter materiais e workshops em português, é essencial que a comunidade da Carpentries cresça no Brasil!</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://media0.giphy.com/media/QxZ0nbcVgMlPlnfZos/giphy-downsized.gif" class="img-fluid figure-img" style="width:40.0%"></p>
+<figure class="figure"><p><img src="https://media0.giphy.com/media/QxZ0nbcVgMlPlnfZos/giphy-downsized.gif" class="img-fluid figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Escrevi este post com o objetivo de deixar mais claro como foi este processo. Estou à disposição em caso de outras dúvidas: <i class="far fa-envelope"></i> <a href="mailto:milz.bea@gmail.com">milz.bea@gmail.com</a> e <a href="https://t.me/beamilz"><i class="fab fa-telegram"></i> telegram</a>.</p>
-</section>
-<section id="agradecimentos" class="level2">
-<h2 class="anchored" data-anchor-id="agradecimentos">Agradecimentos:</h2>
+</section><section id="agradecimentos" class="level2"><h2 class="anchored" data-anchor-id="agradecimentos">Agradecimentos:</h2>
 <p>Gostaria de agradecer algumas pessoas que fizeram parte do treinamento e avaliação, ou de alguma forma contribuíram com este processo: <a href="https://twitter.com/Fichulina">Marcela Alfaro</a>, <a href="https://twitter.com/microStevens">Sarah Stevens</a>, <a href="https://twitter.com/maneeshasane">Maneesha Sane</a>, <a href="https://twitter.com/fmic_">François Michonneau</a> e <a href="https://twitter.com/rgaiacs">Raniere Silva</a>.</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -500,16 +447,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -528,10 +473,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

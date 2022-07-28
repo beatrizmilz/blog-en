@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Beatriz Milz">
 <meta name="dcterms.date" content="2019-08-31">
-
 <title>Bea Milz - Um ano aprendendo R!</title>
 <style>
 code{white-space: pre-wrap;}
@@ -18,7 +15,6 @@ div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 </style>
-
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
@@ -35,8 +31,7 @@ ul.task-list{list-style: none;}
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -54,37 +49,26 @@ ul.task-list{list-style: none;}
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - Um ano aprendendo R!">
 <meta property="og:description" content="Um relato deste um ano aprendendo R!">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-
 <link rel="stylesheet" href="../../../styles.css">
 <meta name="twitter:title" content="Bea Milz - Um ano aprendendo R!">
 <meta name="twitter:description" content="Um relato deste um ano aprendendo R!">
@@ -92,13 +76,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
@@ -107,13 +88,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -130,20 +111,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
     <a class="dropdown-item" href="../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
     <a class="dropdown-item" href="../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -156,7 +137,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -171,14 +152,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Um ano aprendendo R!</h1>
             <p class="subtitle lead">Um relato deste um ano aprendendo R!</p>
@@ -213,39 +190,32 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-ladies-são-paulo" id="toc-r-ladies-são-paulo" class="nav-link active" data-scroll-target="#r-ladies-são-paulo">R-Ladies São Paulo 💜</a></li>
+<li><a href="#r-ladies-s%C3%A3o-paulo" id="toc-r-ladies-são-paulo" class="nav-link active" data-scroll-target="#r-ladies-s%C3%A3o-paulo">R-Ladies São Paulo 💜</a></li>
   <li><a href="#aprendizado" id="toc-aprendizado" class="nav-link" data-scroll-target="#aprendizado">Aprendizado</a></li>
-  <li><a href="#eventos" id="toc-eventos" class="nav-link" data-scroll-target="#eventos">Eventos</a>
+  <li>
+<a href="#eventos" id="toc-eventos" class="nav-link" data-scroll-target="#eventos">Eventos</a>
   <ul class="collapse">
-  <li><a href="#iv-ser-uff" id="toc-iv-ser-uff" class="nav-link" data-scroll-target="#iv-ser-uff">IV SER UFF</a></li>
+<li><a href="#iv-ser-uff" id="toc-iv-ser-uff" class="nav-link" data-scroll-target="#iv-ser-uff">IV SER UFF</a></li>
   <li><a href="#user2019" id="toc-user2019" class="nav-link" data-scroll-target="#user2019">useR!2019</a></li>
-  </ul></li>
-  <li><a href="#compartilhando-conhecimento" id="toc-compartilhando-conhecimento" class="nav-link" data-scroll-target="#compartilhando-conhecimento">Compartilhando conhecimento</a></li>
-  <li><a href="#próximos-passos" id="toc-próximos-passos" class="nav-link" data-scroll-target="#próximos-passos">Próximos passos</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#compartilhando-conhecimento" id="toc-compartilhando-conhecimento" class="nav-link" data-scroll-target="#compartilhando-conhecimento">Compartilhando conhecimento</a></li>
+  <li><a href="#pr%C3%B3ximos-passos" id="toc-próximos-passos" class="nav-link" data-scroll-target="#pr%C3%B3ximos-passos">Próximos passos</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<p>Esse post é uma continuação deste outro: <a href="https://beatrizmilz.com/2019/01/29/6-meses-de-r/">Meio ano de aprendizagem de R!</a>, onde relatei um pouco sobre os primeiros seis meses de aprendizagem em programação, principalmente na linguagem R.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>Esse post é uma continuação deste outro: <a href="https://beatrizmilz.com/2019/01/29/6-meses-de-r/">Meio ano de aprendizagem de R!</a>, onde relatei um pouco sobre os primeiros seis meses de aprendizagem em programação, principalmente na linguagem R.</p>
 <p>Como dito no post citado, eu começei a aprender <code>R</code> e programação em agosto de 2018. Ou seja, neste mês completo um ano de aprendizagem! 🎂 🎈 Foi um ano muito rico de experiências, onde conheci muitas pessoas queridas e aprendi muito também!</p>
-<section id="r-ladies-são-paulo" class="level1">
-<h1>R-Ladies São Paulo 💜</h1>
+<section id="r-ladies-são-paulo" class="level1"><h1>R-Ladies São Paulo 💜</h1>
 <p>Conhecer a organização <a href="https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo/">R-Ladies São Paulo</a> foi uma das melhores coisas que já me aconteceu, e ter a oportunidade de contribuir com a organização dos eventos é algo que faço com muita alegria. Na <a href="https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo/">R-Ladies</a>, sinto que é um espaço muito acolhedor e seguro para aprender sobre R, compartilhar conhecimento, tirar dúvidas, fazer amizades, e muito mais.</p>
 <p>Neste mês de agosto, também foi o aniversário de 1 ano da R-Ladies São Paulo, e a apresentação feita no evento está disponível <a href="https://beatrizmilz.github.io/R-Ladies_1ano/">neste link</a>. Foi um evento muito querido! E abaixo segue uma foto de como foi:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://beatrizmilz.com/img/1anorladies.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
+<figure class="figure"><p><img src="https://beatrizmilz.com/img/1anorladies.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
@@ -254,15 +224,14 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <center>
 <blockquote class="twitter-tweet blockquote">
 <p lang="pt" dir="ltr">
-</p><p>Sábado passado aconteceu o <a href="https://twitter.com/hashtag/meetup?src=hash&amp;ref_src=twsrc%5Etfw">#meetup</a> de aniversário de 1 ano da <a href="https://twitter.com/hashtag/RLadies?src=hash&amp;ref_src=twsrc%5Etfw">#RLadies</a> São Paulo! O evento aconteceu lá na <a href="https://twitter.com/thoughtworksbr?ref_src=twsrc%5Etfw"><span class="citation" data-cites="thoughtworksbr">@thoughtworksbr</span></a> , fomos super bem recebidas pela Chris, agradecemos muito pelo espaço e coffe break! Segue algumas fotos: <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/rstatsbr?src=hash&amp;ref_src=twsrc%5Etfw">#rstatsbr</a> <a href="https://t.co/FfW8Et1FVx">pic.twitter.com/FfW8Et1FVx</a></p>
-<p></p>
+</p>
+<p>Sábado passado aconteceu o <a href="https://twitter.com/hashtag/meetup?src=hash&amp;ref_src=twsrc%5Etfw">#meetup</a> de aniversário de 1 ano da <a href="https://twitter.com/hashtag/RLadies?src=hash&amp;ref_src=twsrc%5Etfw">#RLadies</a> São Paulo! O evento aconteceu lá na <a href="https://twitter.com/thoughtworksbr?ref_src=twsrc%5Etfw"><span class="citation" data-cites="thoughtworksbr">@thoughtworksbr</span></a> , fomos super bem recebidas pela Chris, agradecemos muito pelo espaço e coffe break! Segue algumas fotos: <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/rstatsbr?src=hash&amp;ref_src=twsrc%5Etfw">#rstatsbr</a> <a href="https://t.co/FfW8Et1FVx">pic.twitter.com/FfW8Et1FVx</a></p>
+
 <p>— R-Ladies São Paulo (<span class="citation" data-cites="RLadiesSaoPaulo">@RLadiesSaoPaulo</span>) <a href="https://twitter.com/RLadiesSaoPaulo/status/1165359598376771585?ref_src=twsrc%5Etfw">August 24, 2019</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
-</section>
-<section id="aprendizado" class="level1">
-<h1>Aprendizado</h1>
+</section><section id="aprendizado" class="level1"><h1>Aprendizado</h1>
 <p>Neste primeiro ano, fiz diversos cursos sobre R, sendo alguns online e outros presenciais, destacando os seguintes:</p>
 <ul>
 <li><p>Presencial, Setembro/2018 - <a href="https://www.curso-r.com/cursos/intro-r/">Introdução à Programação em R</a>, da <a href="https://www.curso-r.com/">Curso-R</a> - Neste curso, tive um contato maior com o pacote <a href="https://www.tidyverse.org/"><code>tidyverse</code></a>. Foi um divisor de águas para mim, e saí muito empolgada para aprender mais! Agradeço a <a href="https://www.curso-r.com/">Curso-R</a> pela bolsa recebida!</p></li>
@@ -271,34 +240,27 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <li><p>Online, 2019 - <a href="https://www.coursera.org/specializations/jhu-data-science">Coursera - Programa de cursos integrados Ciência de Dados (02/10)</a> - Atualmente estou fazendo esse programa de cursos oferecidos pela <a href="https://www.jhu.edu/">Johns Hopkins University</a>. Já completei dois cursos: <strong>As Ferramentas do Cientista de Dados</strong> e <strong>Linguagem R</strong>. Atualmente estou finalizando o curso de <strong>Obtenção e Limpeza de Dados</strong>, e sinceramente já deveria ter completado, porém sinto que meu ritmo é mais devagar mesmo em aulas online. Aulas presenciais me deixam mais empolgada! 😃</p></li>
 </ul>
 <p>Para os próximos meses espero conseguir evoluir no <a href="https://www.coursera.org/specializations/jhu-data-science">programa de Ciência de dados do Coursera</a>!</p>
-</section>
-<section id="eventos" class="level1">
-<h1>Eventos</h1>
-<section id="iv-ser-uff" class="level2">
-<h2 class="anchored" data-anchor-id="iv-ser-uff">IV SER UFF</h2>
+</section><section id="eventos" class="level1"><h1>Eventos</h1>
+<section id="iv-ser-uff" class="level2"><h2 class="anchored" data-anchor-id="iv-ser-uff">IV SER UFF</h2>
 <p>O <a href="http://ser.uff.br/">SER - International Seminar on Statistics with R</a>, é um evento realizado na Universidade Federal Fluminense, em Niterói - RJ. Essa foi a primeira conferência que participo sobre R, e aconteceu em maio de 2019.</p>
 <p>Conheci muitas pessoas legais nesse evento: R-Ladies de outros capítulos do Brasil, os organizadores do evento, algumas pessoas do grupo do telegram R Brasil e muito mais.</p>
 <p>Eu e a <a href="https://br.linkedin.com/in/hsvab">Haydee Svab</a> (co-organizadora do R-Ladies São Paulo) submetemos um mini-curso no evento, e ele foi aceito e oferecido junto ao evento do R-Ladies Niterói. O tema do mini-curso foi: <a href="https://beatrizmilz.github.io/IV-SER-RLadies/">Comunicando seus resultados: Criando apresentações com R</a>. Segue abaixo uma foto que tiramos com R-Ladies de outros capítulos, que participaram do mini-curso:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://beatrizmilz.com/img/rladiesniteroi.jpeg" class="img-fluid figure-img" style="width:90.0%"></p>
+<figure class="figure"><p><img src="https://beatrizmilz.com/img/rladiesniteroi.jpeg" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Outra participação no evento foi na apresentação de um pôster, que foi escrito por quatro co-organizadoras do R-Ladies São Paulo: eu, <a href="https://br.linkedin.com/in/brunagarbes">Bruna Garbes</a>, <a href="http://brunaw.com/">Bruna Wundervald</a> e <a href="https://br.linkedin.com/in/hsvab">Haydee Svab</a>. O texto do pôster está disponível online, e tem o seguinte título: <a href="http://periodicos.uff.br/anaisdoser/article/view/29327">Ensino de R através da Comunidade R-Ladies - Capítulo São Paulo</a>. O pôster em formato PDF está disponível neste <a href="https://github.com/brunaw/poster_rladies_SER/blob/master/poster_SER_2019.pdf">link</a>.</p>
-</section>
-<section id="user2019" class="level2">
-<h2 class="anchored" data-anchor-id="user2019">useR!2019</h2>
+</section><section id="user2019" class="level2"><h2 class="anchored" data-anchor-id="user2019">useR!2019</h2>
 <p>A <a href="https://user2019.r-project.org/">useR!2019</a> foi a segunda conferência que participei de R, e aconteceu em julho de 2019, em Toulouse, na França. Não vou me prolongar pois pretendo fazer um post só sobre o evento (sim, estou atrasada 😞). Eu e a <a href="https://twitter.com/angcustodio">Angélica Custódio</a> recebemos bolsas de diversidade para participar do evento. Nós escrevemos um post juntas, relatando a experiência de participar do <a href="https://www.curso-r.com/blog/2019-08-12-tidydevday/">tidyverse developer day</a>.</p>
 <p>Na foto a seguir, está o grupo de brasileiros que participaram do evento: <a href="https://www.researchgate.net/profile/Laurie_Baker2">Laurie Baker</a> (que não é Brasileira, mas andou conosco no evento), <a href="https://twitter.com/angcustodio">Angélica Custódio</a>, <a href="https://br.linkedin.com/in/jtrecenti">Julio Trecenti</a>, eu, <a href="https://github.com/dfalbel">Daniel Falbel</a> e o <a href="https://twitter.com/Williamorim89">William Amorim</a>. O Prof.&nbsp;<a href="http://www.leg.ufpr.br/~elias/">Elias Krainski</a> também participou, porém não está na foto.</p>
 <div class="cell" data-layout-align="center" data-preview="true">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://beatrizmilz.com/img/user2019-brasileiros.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
+<figure class="figure"><p><img src="https://beatrizmilz.com/img/user2019-brasileiros.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
@@ -313,22 +275,17 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://beatrizmilz.com/img/bia-e-angelica.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
+<figure class="figure"><p><img src="https://beatrizmilz.com/img/bia-e-angelica.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="compartilhando-conhecimento" class="level1">
-<h1>Compartilhando conhecimento</h1>
+</section></section><section id="compartilhando-conhecimento" class="level1"><h1>Compartilhando conhecimento</h1>
 <p>Apresentações me deixam nervosa, e isso não é segredo para ninguém.. Acabo falando super rápido, e depois fico me sentindo mal por isso.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://media1.giphy.com/media/qvWavuCEwjEPu/giphy.gif" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="https://media1.giphy.com/media/qvWavuCEwjEPu/giphy.gif" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -336,9 +293,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>Quero melhorar nessa questão (e se alguém tiver dicas, me enviem por favor), mas tento não deixar o receio de falar muito rápido me impedir de tentar compartilhar o que já aprendi.</p>
 <p>O que aprendi nesse 1 ano de R é devido à comunidade. Eu ainda preciso e quero aprendender muitas coisas ainda, mas acho válido compartilhar o que eu aprendi até então, e acredito que é uma forma de retribuir para a comunidade um pouco do que tanto que recebi até agora.</p>
 <p>As apresentações que fiz geralmente deixo disponível <a href="https://beatrizmilz.com/slides/">nessa página</a>, para que todos consigam consultar.</p>
-</section>
-<section id="próximos-passos" class="level1">
-<h1>Próximos passos</h1>
+</section><section id="próximos-passos" class="level1"><h1>Próximos passos</h1>
 <p>Em setembro, participarei da <a href="https://latin-r.com/">Latin-R</a> - Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo, pois fui selecionada para receber um bolsa de diversidade. Estou muito animada para conhecer mais pessoas da comunidade de R Latinoamericana.</p>
 <p>No projeto temático de pesquisa que faço parte (<a href="https://bv.fapesp.br/pt/auxilios/97000/governanca-ambiental-da-macrometropole-paulista-face-a-variabilidade-climatica/">Governança ambiental da Macrometrópole Paulista face à variabilidade climática</a>), existem pessoas que já programam em R, e também pessoas que tem interesse em aprender.</p>
 <p>Recentemente, eu e mais duas pessoas que já programam em R (a <a href="https://bv.fapesp.br/pt/pesquisador/698446/rosana-laura-da-silva/">Rosana Laura</a> e o <a href="http://lattes.cnpq.br/7678202356014883">Diego Braga</a>, ambos pós-graduandos em <a href="https://sites.google.com/site/pospgt/">Planejamento e Gestão do Território</a> na UFABC) começamos a organizar um grupo de estudos para que a equipe do projeto possa compartilhar conhecimentos sobre R, considerando que os temas de pesquisa são bem diversos e utilizam metodologias diferentes também. O primeiro encontro do grupo de estudos está programado para setembro de 2019!</p>
@@ -346,18 +301,14 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://media0.giphy.com/media/1iu8uG2cjYFZS6wTxv/giphy-downsized.gif" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="https://media0.giphy.com/media/1iu8uG2cjYFZS6wTxv/giphy-downsized.gif" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -467,16 +418,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -495,10 +444,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

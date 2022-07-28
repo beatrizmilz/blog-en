@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="dcterms.date" content="2020-12-03">
-
 <title>Bea Milz - Dicas para elaborar tabelas em R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -81,7 +78,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
@@ -97,8 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -116,37 +111,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - Dicas para elaborar tabelas em R">
 <meta property="og:description" content="No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de tabelas em relatórios.">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-
 <link rel="stylesheet" href="../../../styles.css">
 <meta name="twitter:title" content="Bea Milz - Dicas para elaborar tabelas em R">
 <meta name="twitter:description" content="No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de tabelas em relatórios.">
@@ -154,13 +138,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
@@ -169,13 +150,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -192,20 +173,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
     <a class="dropdown-item" href="../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
     <a class="dropdown-item" href="../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -218,7 +199,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -233,14 +214,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Dicas para elaborar tabelas em R</h1>
             <p class="subtitle lead">No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de tabelas em relatórios.</p>
@@ -269,59 +246,52 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dicas-para-formatar-melhor-suas-tabelas" id="toc-dicas-para-formatar-melhor-suas-tabelas" class="nav-link active" data-scroll-target="#dicas-para-formatar-melhor-suas-tabelas">5 Dicas para formatar melhor suas tabelas</a>
+<li>
+<a href="#dicas-para-formatar-melhor-suas-tabelas" id="toc-dicas-para-formatar-melhor-suas-tabelas" class="nav-link active" data-scroll-target="#dicas-para-formatar-melhor-suas-tabelas">5 Dicas para formatar melhor suas tabelas</a>
   <ul class="collapse">
-  <li><a href="#exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas" id="toc-exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas" class="nav-link" data-scroll-target="#exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas">Exemplo 1: Ordenar, formatar dinheiro e nomear as colunas</a></li>
+<li><a href="#exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas" id="toc-exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas" class="nav-link" data-scroll-target="#exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas">Exemplo 1: Ordenar, formatar dinheiro e nomear as colunas</a></li>
   <li><a href="#exemplo-2-arredondar-valores-e-ordenar-categorias" id="toc-exemplo-2-arredondar-valores-e-ordenar-categorias" class="nav-link" data-scroll-target="#exemplo-2-arredondar-valores-e-ordenar-categorias">Exemplo 2: Arredondar valores e ordenar categorias</a></li>
-  </ul></li>
-  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">Conclusão</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#conclus%C3%A3o" id="toc-conclusão" class="nav-link" data-scroll-target="#conclus%C3%A3o">Conclusão</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<p>No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Leia os posts completos através dos links a seguir:</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Leia os posts completos através dos links a seguir:</p>
 <ul>
 <li><p><a href="https://blog.curso-r.com/posts/2020-12-03-dicas-relatorios-r4ds1_tabelas/">Dicas para criar <strong>tabelas</strong></a></p></li>
 <li><p><a href="https://blog.curso-r.com/posts/2020-17-02-dicas-relatorios-r4ds1_graficos/">Dicas para <strong>gráficos</strong></a></p></li>
 <li><p><a href="https://blog.curso-r.com/posts/2021-03-15-dicas-relatorios-r4ds1_relatorios/">Dicas para <strong>relatórios</strong></a></p></li>
 </ul>
-<section id="dicas-para-formatar-melhor-suas-tabelas" class="level2">
-<h2 class="anchored" data-anchor-id="dicas-para-formatar-melhor-suas-tabelas">5 Dicas para formatar melhor suas tabelas</h2>
+<section id="dicas-para-formatar-melhor-suas-tabelas" class="level2"><h2 class="anchored" data-anchor-id="dicas-para-formatar-melhor-suas-tabelas">5 Dicas para formatar melhor suas tabelas</h2>
 <p>Agora seguimos para as dicas!</p>
 <p>Primeiro vamos carregar o pacote <code>tidyverse</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>O próximo passo é carregar a base que utilizaremos como exemplo: a base de filmes do IMDB.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>imdb <span class="ot">&lt;-</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_delim</span>(</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://raw.githubusercontent.com/curso-r/202010-r4ds-1/master/dados/imdb2.csv"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">";"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">escape_double =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">trim_ws =</span> <span class="cn">TRUE</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_delim</a></span><span class="op">(</span></span>
+<span>    <span class="st">"https://raw.githubusercontent.com/curso-r/202010-r4ds-1/master/dados/imdb2.csv"</span>,</span>
+<span>    <span class="st">";"</span>,</span>
+<span>    escape_double <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>    trim_ws <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas" class="level3">
-<h3 class="anchored" data-anchor-id="exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas">Exemplo 1: Ordenar, formatar dinheiro e nomear as colunas</h3>
-<p>No exemplo a seguir, primeiramente vamos selecionar as variáveis que representam o nome e o orçamento dos filmes (com a função <code>select()</code>). É interessante ordenar a tabela segundo alguma variável, para facilitar a leitura. No exemplo a seguir, vamos ordenar pelo orçamento de forma decrescente utilizando a função <code>arrange(desc(variavel))</code>.</p>
-<p>Vamos selecionar apenas as primeiras linhas da base, para facilitar a apresentação neste post (utilizando a função <code>head()</code>), e salvar em um objeto chamado <code>filmes_orcamento</code> (que usaremos nos códigos a seguir).</p>
+<section id="exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas" class="level3"><h3 class="anchored" data-anchor-id="exemplo-1-ordenar-formatar-dinheiro-e-nomear-as-colunas">Exemplo 1: Ordenar, formatar dinheiro e nomear as colunas</h3>
+<p>No exemplo a seguir, primeiramente vamos selecionar as variáveis que representam o nome e o orçamento dos filmes (com a função <code><a href="https://dplyr.tidyverse.org/reference/select.html">select()</a></code>). É interessante ordenar a tabela segundo alguma variável, para facilitar a leitura. No exemplo a seguir, vamos ordenar pelo orçamento de forma decrescente utilizando a função <code>arrange(desc(variavel))</code>.</p>
+<p>Vamos selecionar apenas as primeiras linhas da base, para facilitar a apresentação neste post (utilizando a função <code><a href="https://rdrr.io/r/utils/head.html">head()</a></code>), e salvar em um objeto chamado <code>filmes_orcamento</code> (que usaremos nos códigos a seguir).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>filmes_orcamento <span class="ot">&lt;-</span> imdb <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(titulo, orcamento) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(orcamento)) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>filmes_orcamento</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">filmes_orcamento</span> <span class="op">&lt;-</span> <span class="va">imdb</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">titulo</span>, <span class="va">orcamento</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">orcamento</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">filmes_orcamento</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   titulo                                    orcamento
@@ -334,10 +304,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 6 Avengers: Age of Ultron&nbsp;                  250000000</code></pre>
 </div>
 </div>
-<p>Para variáveis que representam dinheiro, é possível usar a função <code>scales::dollar()</code> para que os valores fiquem formatados como dinheiro (e fiquem mais legíveis!).</p>
+<p>Para variáveis que representam dinheiro, é possível usar a função <code><a href="https://scales.r-lib.org/reference/dollar_format.html">scales::dollar()</a></code> para que os valores fiquem formatados como dinheiro (e fiquem mais legíveis!).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>filmes_orcamento <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">orcamento =</span> scales<span class="sc">::</span><span class="fu">dollar</span>(orcamento)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">filmes_orcamento</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>orcamento <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/dollar_format.html">dollar</a></span><span class="op">(</span><span class="va">orcamento</span><span class="op">)</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   titulo                                    orcamento   
@@ -350,22 +320,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 6 Avengers: Age of Ultron&nbsp;                  $250,000,000</code></pre>
 </div>
 </div>
-<p>A tabela anteiror foi apresentada igual a um código que aparece como retorno no console do R, e isso não fica legal em um relatório. Existem diversas formas de apresentar tabelas, mas neste exemplo utilizaremos a função <code>knitr::kable()</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Além disso, é comum que o nome das variáveis estejam escritas com letras minúsculas, sem acentuação, etc (por exemplo: <code>orcamento</code>). Para que a tabela fique melhor formatada, podemos renomear o nome das colunas usando o argumento <code>col.names</code> da função <code>knitr::kable()</code>, informando um vetor com os novos nomes para as colunas da tabela.</p>
+<p>A tabela anteiror foi apresentada igual a um código que aparece como retorno no console do R, e isso não fica legal em um relatório. Existem diversas formas de apresentar tabelas, mas neste exemplo utilizaremos a função <code><a href="https://rdrr.io/pkg/knitr/man/kable.html">knitr::kable()</a></code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Além disso, é comum que o nome das variáveis estejam escritas com letras minúsculas, sem acentuação, etc (por exemplo: <code>orcamento</code>). Para que a tabela fique melhor formatada, podemos renomear o nome das colunas usando o argumento <code>col.names</code> da função <code><a href="https://rdrr.io/pkg/knitr/man/kable.html">knitr::kable()</a></code>, informando um vetor com os novos nomes para as colunas da tabela.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>imdb <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(titulo, orcamento) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(orcamento)) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">orcamento =</span> scales<span class="sc">::</span><span class="fu">dollar</span>(orcamento)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Título do filme"</span>, <span class="st">"Orçamento"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">titulo</span>, <span class="va">orcamento</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">orcamento</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>orcamento <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/dollar_format.html">dollar</a></span><span class="op">(</span><span class="va">orcamento</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Título do filme"</span>, <span class="st">"Orçamento"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">Título do filme</th>
 <th style="text-align: left;">Orçamento</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Pirates of the Caribbean: At World’s End&nbsp;</td>
@@ -396,17 +364,15 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </div>
 </div>
 <p>A tabela ficou mais fácil de ser lida. O que achou do resultado?</p>
-</section>
-<section id="exemplo-2-arredondar-valores-e-ordenar-categorias" class="level3">
-<h3 class="anchored" data-anchor-id="exemplo-2-arredondar-valores-e-ordenar-categorias">Exemplo 2: Arredondar valores e ordenar categorias</h3>
-<p>No exemplo a seguir, vamos calcular a nota média dos filmes na base do IMDB para cada classificação etária. Fazemos isso utilizando as funções <code>group_by()</code> e <code>summarise()</code>.</p>
+</section><section id="exemplo-2-arredondar-valores-e-ordenar-categorias" class="level3"><h3 class="anchored" data-anchor-id="exemplo-2-arredondar-valores-e-ordenar-categorias">Exemplo 2: Arredondar valores e ordenar categorias</h3>
+<p>No exemplo a seguir, vamos calcular a nota média dos filmes na base do IMDB para cada classificação etária. Fazemos isso utilizando as funções <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> e <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code>.</p>
 <p>Salvaremos o resultado em um objeto chamado <code>nota_classificacao</code> (que usaremos nos códigos a seguir).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>nota_classificacao <span class="ot">&lt;-</span> imdb <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(classificacao) <span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">nota_media_imdb =</span> <span class="fu">mean</span>(nota_imdb, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) </span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>nota_classificacao</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nota_classificacao</span> <span class="op">&lt;-</span> <span class="va">imdb</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">classificacao</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>nota_media_imdb <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">nota_imdb</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="va">nota_classificacao</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 2
   classificacao       nota_media_imdb
@@ -417,10 +383,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 4 Outros                         66.3</code></pre>
 </div>
 </div>
-<p>O primeiro ponto interessante para arrumar são os valores da variável <code>nota_media_imdb</code>, arredondando os valores para que não apareça as casas decimais. Para melhorar a apresentação, podemos usar a função <code>round()</code> (utilizada para arredondar números) junto com a função <code>mutate()</code> (que altera ou cria novas variáveis). Com o argumento <code>digits</code> da função <code>round()</code>, é possível definir quantas casas decimais você quer que o número tenha.</p>
+<p>O primeiro ponto interessante para arrumar são os valores da variável <code>nota_media_imdb</code>, arredondando os valores para que não apareça as casas decimais. Para melhorar a apresentação, podemos usar a função <code><a href="https://rdrr.io/r/base/Round.html">round()</a></code> (utilizada para arredondar números) junto com a função <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> (que altera ou cria novas variáveis). Com o argumento <code>digits</code> da função <code><a href="https://rdrr.io/r/base/Round.html">round()</a></code>, é possível definir quantas casas decimais você quer que o número tenha.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>nota_classificacao <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">nota_media_imdb =</span> <span class="fu">round</span>(nota_media_imdb, <span class="at">digits =</span> <span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nota_classificacao</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>nota_media_imdb <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">nota_media_imdb</span>, digits <span class="op">=</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 2
   classificacao       nota_media_imdb
@@ -433,33 +399,31 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </div>
 <p>Na base que estamos usando de exemplo, a variável <code>classificacao</code> é uma variável categórica do tipo <code>chr</code> (character), ou seja, um texto. Por padrão, a ordem utilizada é a alfabética (repare no resultado anterior, primeiro aparecem as classificações que começam com A, depois com L e por último a que começa com O).</p>
 <p>Para ordenar essa variável, precisamos transformar ela em um fator. Portanto, usaremos o pacote <code>forcats</code>, que faz parte do <code>tidyverse</code> e possui funções para trabalhar com fatores <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
-<p>Usando a função <code>mutate()</code> com <code>fct_relevel()</code> (do pacote <code>forcats</code>), podemos alterar a ordem dos níveis desta variável, passando como argumento:</p>
+<p>Usando a função <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> com <code><a href="https://forcats.tidyverse.org/reference/fct_relevel.html">fct_relevel()</a></code> (do pacote <code>forcats</code>), podemos alterar a ordem dos níveis desta variável, passando como argumento:</p>
 <ul>
 <li><p>a variável que queremos transformar em fator e alterar os seus níveis (os <code>levels</code>),</p></li>
 <li><p>um vetor com os níveis (<code>levels</code>), na ordem que desejamos.</p></li>
 </ul>
-<p>Posteriormente podemos ordenar a variável utilizando a função <code>arrange()</code>, e teremos como resultado a tabela ordenada de uma forma que faz mais sentido:</p>
+<p>Posteriormente podemos ordenar a variável utilizando a função <code><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange()</a></code>, e teremos como resultado a tabela ordenada de uma forma que faz mais sentido:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>nota_classificacao <span class="sc">%&gt;%</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">nota_media_imdb =</span> <span class="fu">round</span>(nota_media_imdb, <span class="at">digits =</span> <span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">classificacao =</span> forcats<span class="sc">::</span><span class="fu">fct_relevel</span>(</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    classificacao,</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="st">"Livre"</span>,</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">"A partir de 13 anos"</span>,</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"A partir de 18 anos"</span>,</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Outros"</span>)</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(classificacao) <span class="sc">%&gt;%</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Classificação etária"</span>,</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Nota média no IMDB"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nota_classificacao</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>nota_media_imdb <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">nota_media_imdb</span>, digits <span class="op">=</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>classificacao <span class="op">=</span> <span class="fu">forcats</span><span class="fu">::</span><span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_relevel.html">fct_relevel</a></span><span class="op">(</span></span>
+<span>    <span class="va">classificacao</span>,</span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Livre"</span>,</span>
+<span>      <span class="st">"A partir de 13 anos"</span>,</span>
+<span>      <span class="st">"A partir de 18 anos"</span>,</span>
+<span>      <span class="st">"Outros"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">classificacao</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Classificação etária"</span>,</span>
+<span>                             <span class="st">"Nota média no IMDB"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">Classificação etária</th>
 <th style="text-align: right;">Nota média no IMDB</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Livre</td>
@@ -481,26 +445,17 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </table>
 </div>
 </div>
-</section>
-</section>
-<section id="conclusão" class="level2">
-<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+</section></section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
 <p>Neste post conhecemos os trabalhos premiados no curso de <a href="https://www.curso-r.com/cursos/r4ds-1/">R para Ciência de dados I</a> oferecido em outubro/2020, assim como algumas dicas que surgiram a partir do feedback dos trabalhos.</p>
 <p>Nos próximos posts apresentaremos mais algumas dicas sobre gráficos com o pacote <code>ggplot2</code> e relatórios com o pacote <code>R Markdown</code>.</p>
 <p>E caso você tenha interesse em saber mais sobre os cursos, a <a href="https://www.curso-r.com/cursos/">página de cursos</a> foi atualizada, e as incrições para os cursos de 2021 já estão abertas!</p>
 
 
-</section>
-
-
-<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
+</section><div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 <ol>
 <li id="fn1" role="doc-endnote"><p>Outros pacotes que permitem criar tabelas são: <a href="https://rstudio.github.io/DT/">DT</a>, <a href="https://glin.github.io/reactable/index.html">reactable</a>, <a href="https://davidgohel.github.io/flextable/articles/overview.html">flextable</a> e <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html">kableExtra</a>. <a href="https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/">Essa página</a> também apresenta materiais muito ricos sobre elaboração de tabelas!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2" role="doc-endnote"><p>Caso queira saber mais sobre fatores e o pacote <code>forcats</code>, recomendo consutar <a href="https://www.curso-r.com/material/forcats/">este material da Curso-R</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -610,16 +565,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -638,10 +591,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="dcterms.date" content="2021-03-15">
-
 <title>Bea Milz - Dicas para elaborar relatórios em R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -81,7 +78,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
@@ -97,8 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -116,37 +111,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - Dicas para elaborar relatórios em R">
 <meta property="og:description" content="No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de relatórios em R.">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-
 <link rel="stylesheet" href="../../../styles.css">
 <meta name="twitter:title" content="Bea Milz - Dicas para elaborar relatórios em R">
 <meta name="twitter:description" content="No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de relatórios em R.">
@@ -156,13 +140,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta name="twitter:image-height" content="2814">
 <meta name="twitter:image-width" content="4678">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
@@ -171,13 +152,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -194,20 +175,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
     <a class="dropdown-item" href="../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
     <a class="dropdown-item" href="../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -220,7 +201,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -235,14 +216,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Dicas para elaborar relatórios em R</h1>
             <p class="subtitle lead">No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de relatórios em R.</p>
@@ -267,30 +244,25 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dicas-para-elaborar-relatórios" id="toc-dicas-para-elaborar-relatórios" class="nav-link active" data-scroll-target="#dicas-para-elaborar-relatórios">Dicas para elaborar relatórios</a>
+<li>
+<a href="#dicas-para-elaborar-relat%C3%B3rios" id="toc-dicas-para-elaborar-relatórios" class="nav-link active" data-scroll-target="#dicas-para-elaborar-relat%C3%B3rios">Dicas para elaborar relatórios</a>
   <ul class="collapse">
-  <li><a href="#contextualize" id="toc-contextualize" class="nav-link" data-scroll-target="#contextualize">Contextualize!</a></li>
-  <li><a href="#quem-é-o-seu-público-alvo" id="toc-quem-é-o-seu-público-alvo" class="nav-link" data-scroll-target="#quem-é-o-seu-público-alvo">Quem é o seu público-alvo?</a></li>
-  <li><a href="#controle-como-o-conteúdo-é-apresentado" id="toc-controle-como-o-conteúdo-é-apresentado" class="nav-link" data-scroll-target="#controle-como-o-conteúdo-é-apresentado">Controle como o conteúdo é apresentado!</a></li>
+<li><a href="#contextualize" id="toc-contextualize" class="nav-link" data-scroll-target="#contextualize">Contextualize!</a></li>
+  <li><a href="#quem-%C3%A9-o-seu-p%C3%BAblico-alvo" id="toc-quem-é-o-seu-público-alvo" class="nav-link" data-scroll-target="#quem-%C3%A9-o-seu-p%C3%BAblico-alvo">Quem é o seu público-alvo?</a></li>
+  <li><a href="#controle-como-o-conte%C3%BAdo-%C3%A9-apresentado" id="toc-controle-como-o-conteúdo-é-apresentado" class="nav-link" data-scroll-target="#controle-como-o-conte%C3%BAdo-%C3%A9-apresentado">Controle como o conteúdo é apresentado!</a></li>
   <li><a href="#tabelas" id="toc-tabelas" class="nav-link" data-scroll-target="#tabelas">Tabelas</a></li>
-  <li><a href="#código-em-linha" id="toc-código-em-linha" class="nav-link" data-scroll-target="#código-em-linha">Código em linha</a></li>
-  </ul></li>
-  <li><a href="#um-extra-escreva-sobre-assuntos-que-te-interessa" id="toc-um-extra-escreva-sobre-assuntos-que-te-interessa" class="nav-link" data-scroll-target="#um-extra-escreva-sobre-assuntos-que-te-interessa">Um extra: escreva sobre assuntos que te interessa!</a></li>
-  <li><a href="#conclusões" id="toc-conclusões" class="nav-link" data-scroll-target="#conclusões">Conclusões</a></li>
+  <li><a href="#c%C3%B3digo-em-linha" id="toc-código-em-linha" class="nav-link" data-scroll-target="#c%C3%B3digo-em-linha">Código em linha</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#um-extra-escreva-sobre-assuntos-que-te-interessa" id="toc-um-extra-escreva-sobre-assuntos-que-te-interessa" class="nav-link" data-scroll-target="#um-extra-escreva-sobre-assuntos-que-te-interessa">Um extra: escreva sobre assuntos que te interessa!</a></li>
+  <li><a href="#conclus%C3%B5es" id="toc-conclusões" class="nav-link" data-scroll-target="#conclus%C3%B5es">Conclusões</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<p>No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Leia os posts completos através dos links a seguir:</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Leia os posts completos através dos links a seguir:</p>
 <ul>
 <li><p><a href="https://blog.curso-r.com/posts/2020-12-03-dicas-relatorios-r4ds1_tabelas/">Dicas para criar <strong>tabelas</strong></a></p></li>
 <li><p><a href="https://blog.curso-r.com/posts/2020-17-02-dicas-relatorios-r4ds1_graficos/">Dicas para <strong>gráficos</strong></a></p></li>
@@ -302,69 +274,65 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/reproducibility_court.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/reproducibility_court.png" class="img-fluid figure-img" style="width:50.0%"></p>
 <p></p><figcaption class="figure-caption">Ilustração sobre o pacote rmarkdown, criada por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<section id="dicas-para-elaborar-relatórios" class="level2">
-<h2 class="anchored" data-anchor-id="dicas-para-elaborar-relatórios">Dicas para elaborar relatórios</h2>
-<section id="contextualize" class="level3">
-<h3 class="anchored" data-anchor-id="contextualize">Contextualize!</h3>
+<section id="dicas-para-elaborar-relatórios" class="level2"><h2 class="anchored" data-anchor-id="dicas-para-elaborar-relatórios">Dicas para elaborar relatórios</h2>
+<section id="contextualize" class="level3"><h3 class="anchored" data-anchor-id="contextualize">Contextualize!</h3>
 <p>A primeira dica é escrever uma introdução para ajudar a contextualizar a sua análise. Por exemplo:</p>
 <ul>
 <li><p>Qual é a pergunta que deseja responder a partir dos dados?</p></li>
-<li><p>Qual é a base de dados utilizadas? É legal também contextualizar a base.</p>
+<li>
+<p>Qual é a base de dados utilizadas? É legal também contextualizar a base.</p>
 <ul>
 <li>Qual é a fonte destes dados?</li>
 <li>De qual(ou quais) ano(s) essa base se refere?</li>
 <li>Quais são as variáveis presentes na base de dados?</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <p>Da mesma forma, é legal também escrever uma conclusão ao final da análise. A pergunta inicial foi respondida? Se sim, qual é a resposta?</p>
-</section>
-<section id="quem-é-o-seu-público-alvo" class="level3">
-<h3 class="anchored" data-anchor-id="quem-é-o-seu-público-alvo">Quem é o seu público-alvo?</h3>
+</section><section id="quem-é-o-seu-público-alvo" class="level3"><h3 class="anchored" data-anchor-id="quem-é-o-seu-público-alvo">Quem é o seu público-alvo?</h3>
 <p>É interessante pensar tambem quem são as pessoas do seu público alvo, e adaptar o relatório para este público. Para quem você está escrevendo?</p>
 <p>Por exemplo, em um relatório de negócios, dificilmente você deixará os códigos visíveis no seu relatório. Por outro lado, em um relatório feito para as pessoas do seu time de cientistas de dados, pode ser interessante deixar os códigos para que saibam o que foi feito na análise.</p>
-</section>
-<section id="controle-como-o-conteúdo-é-apresentado" class="level3">
-<h3 class="anchored" data-anchor-id="controle-como-o-conteúdo-é-apresentado">Controle como o conteúdo é apresentado!</h3>
+</section><section id="controle-como-o-conteúdo-é-apresentado" class="level3"><h3 class="anchored" data-anchor-id="controle-como-o-conteúdo-é-apresentado">Controle como o conteúdo é apresentado!</h3>
 <p>Os Chunks nos relatórios feitos com RMarkdown são campos de código onde podemos executar códigos em R. As <em>chunk options</em> (ou opções de chunk), definem como esse código e os resultados gerados aparecerão no relatório final. A seguir estão alguns úteis:</p>
 <ul>
 <li><p>Não é interessante aparecer mensagens de aviso (warnings) e mensagens geradas pelo código no relatório. Para ocultar essas mensagens e avisos, é possível utilizar as seguintes opções de chunk: <code>message = FALSE, warning = FALSE</code> (mas cuidado, pois essas mensagens podem não ser importantes para as pessoas leitoras do relatório, mas podem ser úteis para você!).</p></li>
-<li><p>Utilize as chunk options para personalizar como as imagens devem aparecer! Por exemplo:</p>
+<li>
+<p>Utilize as chunk options para personalizar como as imagens devem aparecer! Por exemplo:</p>
 <ul>
 <li><p><code>fig.align='center'</code> - para centralizar horizontalmente as imagens;</p></li>
 <li><p><code>echo=FALSE</code> - para não mostrar o código que gera as imagens;</p></li>
 <li><p><code>out.width="90%"</code> - para especificar a largura da página que deve ser ocupada pela imagem (neste exemplo, deixamos 90% para que a imagem ocupe 90% da largura disponível na página).</p></li>
-</ul></li>
-<li><p>Utilize as chunk options para personalizar como os códigos devem aparecer! Por exemplo:</p>
+</ul>
+</li>
+<li>
+<p>Utilize as chunk options para personalizar como os códigos devem aparecer! Por exemplo:</p>
 <ul>
 <li><p>Apresentar o código e o resultado: <code>echo=TRUE</code></p></li>
 <li><p>Apresentar apenas o código, e não executá-lo: <code>echo=TRUE, eval=FALSE</code></p></li>
 <li><p>Apresentar apenas os resultados: <code>echo=FALSE</code></p></li>
-</ul></li>
 </ul>
-</section>
-<section id="tabelas" class="level3">
-<h3 class="anchored" data-anchor-id="tabelas">Tabelas</h3>
+</li>
+</ul></section><section id="tabelas" class="level3"><h3 class="anchored" data-anchor-id="tabelas">Tabelas</h3>
 <p>Quando quiser representar dados em tabelas, não esqueça de formatá-las com alguma função com essa finalidade. Por exemplo, primeiro vamos criar uma tabela pequena com os 5 personagens com maior massa presentes na base <a href="https://dplyr.tidyverse.org/reference/starwars.html">starwars</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar o pacote tidyverse</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Criar uma tabela de exemplo</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>sw_top5_maiormassa <span class="ot">&lt;-</span> dplyr<span class="sc">::</span>starwars <span class="sc">%&gt;%</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(mass)) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, mass) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Carregar o pacote tidyverse</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Criar uma tabela de exemplo</span></span>
+<span><span class="va">sw_top5_maiormassa</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="va"><a href="https://dplyr.tidyverse.org/reference/starwars.html">starwars</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">mass</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">name</span>, <span class="va">mass</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Podemos apresentar esses dados usando apenas o nome da base criada, porém não ficará com uma formatação legal:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sw_top5_maiormassa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sw_top5_maiormassa</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 2
   name                   mass
@@ -376,18 +344,16 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 5 Tarfful                 136</code></pre>
 </div>
 </div>
-<p>Podemos usar diversas funções para formatar esses dados como uma tabela organizada. Um exemplo de função é a <code>knitr::kable()</code>:</p>
+<p>Podemos usar diversas funções para formatar esses dados como uma tabela organizada. Um exemplo de função é a <code><a href="https://rdrr.io/pkg/knitr/man/kable.html">knitr::kable()</a></code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sw_top5_maiormassa <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Nome"</span>, <span class="st">"Massa"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sw_top5_maiormassa</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Nome"</span>, <span class="st">"Massa"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">Nome</th>
 <th style="text-align: right;">Massa</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Jabba Desilijic Tiure</td>
@@ -415,26 +381,24 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </div>
 <p>Não esqueça de conferir <a href="https://www.curso-r.com/blog/2020-12-03-dicas-relatorios-r4ds1_tabelas/">este post</a> que apresenta dicas para formatar as tabelas!</p>
 <p>Confira também outras funções úteis para gerar tabelas, como por exemplo: <a href="https://gt.rstudio.com/"><code>gt::gt()</code></a>, <a href="https://rstudio.github.io/DT/"><code>DT::datatable()</code></a>, <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html"><code>kableExtra::kbl()</code></a> e muitas outras!</p>
-</section>
-<section id="código-em-linha" class="level3">
-<h3 class="anchored" data-anchor-id="código-em-linha">Código em linha</h3>
+</section><section id="código-em-linha" class="level3"><h3 class="anchored" data-anchor-id="código-em-linha">Código em linha</h3>
 <p>Podemos adicionar resultados de códigos junto aos textos, utilizando a seguinte sintaxe:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r codigo_em_r</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">`r codigo_em_r`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Por exemplo, podemos primeiro criar alguns objetos para usarmos no texto:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>personagem_mais_baixo <span class="ot">&lt;-</span> dplyr<span class="sc">::</span>starwars <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(height) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>media_altura <span class="ot">&lt;-</span> dplyr<span class="sc">::</span>starwars <span class="sc">%&gt;%</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">media_altura =</span> <span class="fu">mean</span>(height, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">personagem_mais_baixo</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="va"><a href="https://dplyr.tidyverse.org/reference/starwars.html">starwars</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">height</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">media_altura</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="va"><a href="https://dplyr.tidyverse.org/reference/starwars.html">starwars</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>media_altura <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">height</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Agora podemos usar estes objetos no texto:</p>
 <blockquote class="blockquote">
-<p>A base starwars, disponível no pacote <code>{dplyr}</code>, apresenta 87 personagens presentes nos filmes. O personagem com menor altura da franquia é o Yoda, com a altura de 66 centímetros. A média da altura dos personagens presentes na base é de 1.74 metros.</p>
+<p>A base starwars, disponível no pacote <a href="https://dplyr.tidyverse.org">dplyr</a>, apresenta 87 personagens presentes nos filmes. O personagem com menor altura da franquia é o Yoda, com a altura de 66 centímetros. A média da altura dos personagens presentes na base é de 1.74 metros.</p>
 </blockquote>
 <p>O código a seguir gera o parágrafo que apresentamos acima:</p>
 <div class="cell">
@@ -449,37 +413,27 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://media.giphy.com/media/Wn74RUT0vjnoU98Hnt/giphy.gif" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="https://media.giphy.com/media/Wn74RUT0vjnoU98Hnt/giphy.gif" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="um-extra-escreva-sobre-assuntos-que-te-interessa" class="level2">
-<h2 class="anchored" data-anchor-id="um-extra-escreva-sobre-assuntos-que-te-interessa">Um extra: escreva sobre assuntos que te interessa!</h2>
+</section></section><section id="um-extra-escreva-sobre-assuntos-que-te-interessa" class="level2"><h2 class="anchored" data-anchor-id="um-extra-escreva-sobre-assuntos-que-te-interessa">Um extra: escreva sobre assuntos que te interessa!</h2>
 <p>Uma última dica (que nem sempre é possível): escreva sobre temas que te interessa! As análises sempre ficam mais interessantes quando entendemos melhor os dados.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://media.giphy.com/media/3o8doOlGO3pjQa5h28/giphy.gif" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="https://media.giphy.com/media/3o8doOlGO3pjQa5h28/giphy.gif" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="conclusões" class="level2">
-<h2 class="anchored" data-anchor-id="conclusões">Conclusões</h2>
+</section><section id="conclusões" class="level2"><h2 class="anchored" data-anchor-id="conclusões">Conclusões</h2>
 <p>Essas dicas surgiram a partir da avaliação dos trabalhos do curso <a href="https://curso-r.com/cursos/r4ds-1/">R para Ciência de Dados I</a>. Porém existem muitas outras possibilidades para elaborar relatórios! Recomendamos a leitura do <a href="https://livro.curso-r.com/9-relatorios.html">capítulo sobre relatórios</a> do livro <a href="https://livro.curso-r.com/index.html">Ciência de Dados em R</a>. Além disso, dia 18 de março começam as aulas do curso de <a href="https://curso-r.com/cursos/visualizacao/">Relatórios e visualização de dados</a>, então se você tem interesse nesse tema, confira a página do curso!</p>
 <p>E caso você tenha interesse em saber mais sobre os outros cursos, confira a <a href="https://www.curso-r.com/cursos/">página de cursos</a>!</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -589,16 +543,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -617,10 +569,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

@@ -61,6 +61,7 @@ format:
     footnotes-hover: true
     include-in-header: meta.html
     toc: true
+    code-link: true
 
 editor: visual
 

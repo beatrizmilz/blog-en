@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Beatriz Milz">
 <meta name="dcterms.date" content="2022-02-19">
-
 <title>Bea Milz - Acessando APIs com R: GitHub - Parte 1</title>
 <style>
 code{white-space: pre-wrap;}
@@ -82,7 +79,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
@@ -98,8 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -117,37 +112,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - Acessando APIs com R: GitHub - Parte 1">
 <meta property="og:description" content="Segundo post sobre acesso à APIs.">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-
 <link rel="stylesheet" href="../../../styles.css">
 <meta name="twitter:title" content="Bea Milz - Acessando APIs com R: GitHub - Parte 1">
 <meta name="twitter:description" content="Segundo post sobre acesso à APIs.">
@@ -157,13 +141,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta name="twitter:image-height" content="1298">
 <meta name="twitter:image-width" content="1298">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
@@ -172,13 +153,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -195,20 +176,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
     <a class="dropdown-item" href="../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
     <a class="dropdown-item" href="../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -221,7 +202,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -236,14 +217,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Acessando APIs com R: GitHub - Parte 1</h1>
             <p class="subtitle lead">Segundo post sobre acesso à APIs.</p>
@@ -282,30 +259,25 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
-  <li><a href="#o-que-é-o-pacote-gh" id="toc-o-que-é-o-pacote-gh" class="nav-link" data-scroll-target="#o-que-é-o-pacote-gh">O que é o pacote <code>gh</code>?</a></li>
-  <li><a href="#primeiro-exemplo-com-o-pacote-gh" id="toc-primeiro-exemplo-com-o-pacote-gh" class="nav-link" data-scroll-target="#primeiro-exemplo-com-o-pacote-gh">Primeiro exemplo com o pacote <code>gh</code></a>
+<li><a href="#introdu%C3%A7%C3%A3o" id="toc-introdução" class="nav-link active" data-scroll-target="#introdu%C3%A7%C3%A3o">Introdução</a></li>
+  <li><a href="#o-que-%C3%A9-o-pacote-gh" id="toc-o-que-é-o-pacote-gh" class="nav-link" data-scroll-target="#o-que-%C3%A9-o-pacote-gh">O que é o pacote <code>gh</code>?</a></li>
+  <li>
+<a href="#primeiro-exemplo-com-o-pacote-gh" id="toc-primeiro-exemplo-com-o-pacote-gh" class="nav-link" data-scroll-target="#primeiro-exemplo-com-o-pacote-gh">Primeiro exemplo com o pacote <code>gh</code></a>
   <ul class="collapse">
-  <li><a href="#informações-gerais-da-organização-curso-r" id="toc-informações-gerais-da-organização-curso-r" class="nav-link" data-scroll-target="#informações-gerais-da-organização-curso-r">Informações gerais da organização Curso-R</a></li>
-  <li><a href="#acessando-informações-de-repositórios" id="toc-acessando-informações-de-repositórios" class="nav-link" data-scroll-target="#acessando-informações-de-repositórios">Acessando informações de repositórios</a></li>
+<li><a href="#informa%C3%A7%C3%B5es-gerais-da-organiza%C3%A7%C3%A3o-curso-r" id="toc-informações-gerais-da-organização-curso-r" class="nav-link" data-scroll-target="#informa%C3%A7%C3%B5es-gerais-da-organiza%C3%A7%C3%A3o-curso-r">Informações gerais da organização Curso-R</a></li>
+  <li><a href="#acessando-informa%C3%A7%C3%B5es-de-reposit%C3%B3rios" id="toc-acessando-informações-de-repositórios" class="nav-link" data-scroll-target="#acessando-informa%C3%A7%C3%B5es-de-reposit%C3%B3rios">Acessando informações de repositórios</a></li>
   <li><a href="#iterando-com-purrr-e-o-pacote-gh" id="toc-iterando-com-purrr-e-o-pacote-gh" class="nav-link" data-scroll-target="#iterando-com-purrr-e-o-pacote-gh">Iterando com purrr e o pacote <code>gh</code></a></li>
-  </ul></li>
-  <li><a href="#exemplo-de-visualização-com-os-dados-obtidos" id="toc-exemplo-de-visualização-com-os-dados-obtidos" class="nav-link" data-scroll-target="#exemplo-de-visualização-com-os-dados-obtidos">Exemplo de visualização com os dados obtidos!</a></li>
-  <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências">Referências</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#exemplo-de-visualiza%C3%A7%C3%A3o-com-os-dados-obtidos" id="toc-exemplo-de-visualização-com-os-dados-obtidos" class="nav-link" data-scroll-target="#exemplo-de-visualiza%C3%A7%C3%A3o-com-os-dados-obtidos">Exemplo de visualização com os dados obtidos!</a></li>
+  <li><a href="#refer%C3%AAncias" id="toc-referências" class="nav-link" data-scroll-target="#refer%C3%AAncias">Referências</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<div class="callout-tip callout callout-style-default callout-captioned">
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -318,8 +290,7 @@ Tip
 <p>Esse post foi origalmente publicado no <a href="https://blog.curso-r.com/posts/2022-02-19-api-github-1/">blog da Curso-R</a>.</p>
 </div>
 </div>
-<section id="introdução" class="level2">
-<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
 <p>Esse post faz parte de uma série sobre acesso à APIs com R! O primeiro post foi uma <a href="https://blog.curso-r.com/posts/2021-11-29-api-pokemon/">introdução sobre como acessar APIs com R</a>.</p>
 <p>Neste post mostraremos um exemplo usando a <strong>API do GitHub</strong>.</p>
 <p>O GitHub é uma plataforma onde conseguimos hospedar repositórios (pastas com nossos códigos e arquivos) com controle de versão usando o Git, e podemos fazer <strong>muitas</strong> coisas utilizando a sua API. E como dissemos no <a href="https://blog.curso-r.com/posts/2021-11-29-api-pokemon/">post anterior</a>: “o primeiro passo para acessar qualquer API é procurar uma documentação”. A boa notícia é que a <a href="https://docs.github.com/pt/rest">documentação da API do GitHub</a> está disponível em Português e é bem detalhada!</p>
@@ -328,23 +299,23 @@ Tip
 <pre><code>GET /orgs/octokit/repos</code></pre>
 <p>O equivalente a isso usando o pacote <code>httr</code> é:</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-1_5570c346fc65034c7ae81ca5bf771fc6">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># url_base - nunca muda na mesma API</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url_base <span class="ot">&lt;-</span> <span class="st">"https://api.github.com"</span>      </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># endpoint - é o que muda o resultado</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>endpoint <span class="ot">&lt;-</span> <span class="st">"/orgs/octokit/repos"</span>                 </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># precisamos colar os textos para criar o link</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>u_github <span class="ot">&lt;-</span> <span class="fu">paste0</span>(url_base, endpoint) </span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># ver como o texto ficou colado</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># u_github </span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; "https://api.github.com/orgs/octokit/repos"</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># fazer a requisição do tipo GET</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>r_github <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(u_github) </span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>r_github</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># url_base - nunca muda na mesma API</span></span>
+<span><span class="va">url_base</span> <span class="op">&lt;-</span> <span class="st">"https://api.github.com"</span>      </span>
+<span></span>
+<span><span class="co"># endpoint - é o que muda o resultado</span></span>
+<span><span class="va">endpoint</span> <span class="op">&lt;-</span> <span class="st">"/orgs/octokit/repos"</span>                 </span>
+<span></span>
+<span><span class="co"># precisamos colar os textos para criar o link</span></span>
+<span><span class="va">u_github</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">url_base</span>, <span class="va">endpoint</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="co"># ver como o texto ficou colado</span></span>
+<span><span class="co"># u_github </span></span>
+<span><span class="co"># &gt; "https://api.github.com/orgs/octokit/repos"</span></span>
+<span></span>
+<span><span class="co"># fazer a requisição do tipo GET</span></span>
+<span><span class="va">r_github</span> <span class="op">&lt;-</span> <span class="fu">httr</span><span class="fu">::</span><span class="fu"><a href="https://httr.r-lib.org/reference/GET.html">GET</a></span><span class="op">(</span><span class="va">u_github</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="va">r_github</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Response [https://api.github.com/orgs/octokit/repos]
   Date: 2022-06-11 22:22
@@ -364,93 +335,86 @@ Tip
 ...</code></pre>
 </div>
 </div>
-<p>Podemos acessar o resultado usando a função <code>httr::content()</code>, porém não vamos colocar o resultado no post pois ficaria muito longo.</p>
+<p>Podemos acessar o resultado usando a função <code><a href="https://httr.r-lib.org/reference/content.html">httr::content()</a></code>, porém não vamos colocar o resultado no post pois ficaria muito longo.</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-2_71568c4f15217f1f658b978faeb395fb">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># httr::content(r_github)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># httr::content(r_github)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="o-que-é-o-pacote-gh" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-é-o-pacote-gh">O que é o pacote <code>gh</code>?</h2>
+</section><section id="o-que-é-o-pacote-gh" class="level2"><h2 class="anchored" data-anchor-id="o-que-é-o-pacote-gh">O que é o pacote <code>gh</code>?</h2>
 <p>O pacote <a href="https://gh.r-lib.org/">gh</a> permite acessar a API do GitHub. A lógica mostrada anteriormente se aplica para esse pacote também: precisaremos consultar a documentação para verificar como fazer alguma tarefa com a API.</p>
-</section>
-<section id="primeiro-exemplo-com-o-pacote-gh" class="level2">
-<h2 class="anchored" data-anchor-id="primeiro-exemplo-com-o-pacote-gh">Primeiro exemplo com o pacote <code>gh</code></h2>
+</section><section id="primeiro-exemplo-com-o-pacote-gh" class="level2"><h2 class="anchored" data-anchor-id="primeiro-exemplo-com-o-pacote-gh">Primeiro exemplo com o pacote <code>gh</code>
+</h2>
 <p>Neste exemplo, vamos buscar as informações sobre os repositórios que são organização Curso-R no GitHub, gerar um dataframe, e ao final fazer uma visualização simples.</p>
-<section id="informações-gerais-da-organização-curso-r" class="level3">
-<h3 class="anchored" data-anchor-id="informações-gerais-da-organização-curso-r">Informações gerais da organização Curso-R</h3>
+<section id="informações-gerais-da-organização-curso-r" class="level3"><h3 class="anchored" data-anchor-id="informações-gerais-da-organização-curso-r">Informações gerais da organização Curso-R</h3>
 <p>Podemos buscar informações sobre a organização da Curso-R no GitHub:</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-3_aa9eb46dc0fa83b0fadd3134ba4e8131">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gh_curso_r <span class="ot">&lt;-</span> gh<span class="sc">::</span><span class="fu">gh</span>(<span class="st">"GET /orgs/{org}"</span>,</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">org =</span> <span class="st">"curso-r"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gh_curso_r</span> <span class="op">&lt;-</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span><span class="st">"GET /orgs/{org}"</span>,</span>
+<span>                     org <span class="op">=</span> <span class="st">"curso-r"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A sintaxe do pacote <code>gh</code> é similar ao <a href="https://github.com/tidyverse/glue"><code>glue</code></a>. Quando queremos buscar uma informação que está em uma variável (no caso “curso-r”), colocamos os <code>{variavel}</code> no primeiro argumento e escrevemos <code>variavel=</code> nos argumentos seguintes.</p>
 <p>Como vimos, o resultado é uma lista. Para consultar o número de repositórios públicos, podemos usar o <code>$</code> para acessar essa informação dentro da lista:</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-4_4bc7b3f0bbd76f50ee3a900b30924b4f">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>gh_curso_r<span class="sc">$</span>public_repos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gh_curso_r</span><span class="op">$</span><span class="va">public_repos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 313</code></pre>
 </div>
 </div>
 <p>Olha só, a Curso-R tem atualmente 313 repositórios públicos no GitHub! Temos muitos repositórios pois criamos um diferente para cada curso, para que quem faz aula com a gente tenha sempre um lugar para olhar todos os materiais, de forma organizada e independente.</p>
-</section>
-<section id="acessando-informações-de-repositórios" class="level3">
-<h3 class="anchored" data-anchor-id="acessando-informações-de-repositórios">Acessando informações de repositórios</h3>
+</section><section id="acessando-informações-de-repositórios" class="level3"><h3 class="anchored" data-anchor-id="acessando-informações-de-repositórios">Acessando informações de repositórios</h3>
 <p>Podemos buscar informações sobre os repositórios que pertencem à organização Curso-R no GitHub:</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-5_fbcf4ec1a47a30a6c98a1002422ba0a0">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>repositorios_cursor <span class="ot">&lt;-</span> gh<span class="sc">::</span><span class="fu">gh</span>(<span class="st">"GET /orgs/{org}/repos"</span>, <span class="at">org =</span> <span class="st">"curso-r"</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A classe que retorna é uma lista</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(repositorios_cursor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">repositorios_cursor</span> <span class="op">&lt;-</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span><span class="st">"GET /orgs/{org}/repos"</span>, org <span class="op">=</span> <span class="st">"curso-r"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># A classe que retorna é uma lista</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">repositorios_cursor</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "gh_response" "list"       </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># É uma lista grande!</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(repositorios_cursor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># É uma lista grande!</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">repositorios_cursor</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 30</code></pre>
 </div>
 </div>
 <p>Esse código retornou informações de apenas 30 repositórios. Portanto, precisamos repetir o processo para obter informações de todos os repositórios.</p>
-</section>
-<section id="iterando-com-purrr-e-o-pacote-gh" class="level3">
-<h3 class="anchored" data-anchor-id="iterando-com-purrr-e-o-pacote-gh">Iterando com purrr e o pacote <code>gh</code></h3>
+</section><section id="iterando-com-purrr-e-o-pacote-gh" class="level3"><h3 class="anchored" data-anchor-id="iterando-com-purrr-e-o-pacote-gh">Iterando com purrr e o pacote <code>gh</code>
+</h3>
 <p>A documentação do pacote aponta que é possível buscar informações de 100 repositórios por vez. Se queremos buscar todos os repositórios, primeiro precisamos calcular quantas vezes vamos repetir o processo todo:</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-6_40c4627c3c9a21db268b3372a7c26145">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>numero_repos_publicos <span class="ot">&lt;-</span> gh_curso_r<span class="sc">$</span>public_repos</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># podemos buscar 100 repositórios por vez,</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># então podemos dividir o numero de repositorios</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># por 100, e arredondar "para cima"</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># (é para isso que a função ceiling() serve!)</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>numero_paginas <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(numero_repos_publicos<span class="sc">/</span><span class="dv">100</span>)</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>numero_paginas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">numero_repos_publicos</span> <span class="op">&lt;-</span> <span class="va">gh_curso_r</span><span class="op">$</span><span class="va">public_repos</span></span>
+<span></span>
+<span><span class="co"># podemos buscar 100 repositórios por vez,</span></span>
+<span><span class="co"># então podemos dividir o numero de repositorios</span></span>
+<span><span class="co"># por 100, e arredondar "para cima"</span></span>
+<span><span class="co"># (é para isso que a função ceiling() serve!)</span></span>
+<span><span class="va">numero_paginas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">ceiling</a></span><span class="op">(</span><span class="va">numero_repos_publicos</span><span class="op">/</span><span class="fl">100</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">numero_paginas</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4</code></pre>
 </div>
 </div>
-<p>Precisaremos repetir 4 vezes! Agora podemos usar a função <code>purrr::map()</code> para repetir o acesso à API quantas vezes forem necessárias para obter as informações de todos os repositórios da Curso-R:</p>
+<p>Precisaremos repetir 4 vezes! Agora podemos usar a função <code><a href="https://purrr.tidyverse.org/reference/map.html">purrr::map()</a></code> para repetir o acesso à API quantas vezes forem necessárias para obter as informações de todos os repositórios da Curso-R:</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-7_39710953f866c0ae212cd3d648b55177">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>repos_cursor <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map</span>(<span class="dv">1</span><span class="sc">:</span>numero_paginas, </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                           <span class="at">.f =</span> <span class="sc">~</span>gh<span class="sc">::</span><span class="fu">gh</span>(</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GET /orgs/{org}/repos"</span>, </span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">org =</span> <span class="st">"curso-r"</span>, <span class="co"># organizacao</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">"public"</span>, <span class="co"># tipo de repositorio </span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sort =</span> <span class="st">"updated"</span>, <span class="co"># forma de ordenar a busca</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">per_page =</span> <span class="dv">100</span>, <span class="co"># numero de resultados por pagina</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">page =</span> .x <span class="co"># numero da pagina que será substituido</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">repos_cursor</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="va">numero_paginas</span>, </span>
+<span>                           .f <span class="op">=</span> <span class="op">~</span><span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span></span>
+<span>    <span class="st">"GET /orgs/{org}/repos"</span>, </span>
+<span>    org <span class="op">=</span> <span class="st">"curso-r"</span>, <span class="co"># organizacao</span></span>
+<span>    type <span class="op">=</span> <span class="st">"public"</span>, <span class="co"># tipo de repositorio </span></span>
+<span>    sort <span class="op">=</span> <span class="st">"updated"</span>, <span class="co"># forma de ordenar a busca</span></span>
+<span>    per_page <span class="op">=</span> <span class="fl">100</span>, <span class="co"># numero de resultados por pagina</span></span>
+<span>    page <span class="op">=</span> <span class="va">.x</span> <span class="co"># numero da pagina que será substituido</span></span>
+<span>  <span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>O resultado ainda é uma lista… podemos usar a magia do pacote purrr e transformar essa lista em um dataframe:</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-8_03455063d13eeed0b634bafa256e4e06">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>lista_repos <span class="ot">&lt;-</span>  repos_cursor  <span class="sc">|&gt;</span> </span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">flatten</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map</span>(unlist, <span class="at">recursive =</span> <span class="cn">TRUE</span>)  <span class="sc">|&gt;</span> </span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map_dfr</span>(tibble<span class="sc">::</span>enframe, <span class="at">.id =</span> <span class="st">"id_repo"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_wider</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>lista_repos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lista_repos</span> <span class="op">&lt;-</span>  <span class="va">repos_cursor</span>  <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu">flatten</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">unlist</span>, recursive <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>  <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="fu">tibble</span><span class="fu">::</span><span class="va"><a href="https://tibble.tidyverse.org/reference/enframe.html">enframe</a></span>, .id <span class="op">=</span> <span class="st">"id_repo"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/janitor/man/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">lista_repos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 313 × 108
    id_repo id        node_id        name  full_name private owner_login owner_id
@@ -476,40 +440,36 @@ Tip
 </div>
 <p>Vamos fazer mais uma etapa de organização dos dados: são muitas colunas, e não precisaremos de todas para terminar o post. Também filtramos a base para remover os forks, já que não seriam repositórios da Curso-R originalmente.</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-9_264fc9e1bc41ff6b62734b836acce9a9">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df_repos_cursor <span class="ot">&lt;-</span> lista_repos  <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(fork <span class="sc">==</span> <span class="cn">FALSE</span>)  <span class="sc">|&gt;</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    name,</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    created_at,</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    default_branch</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  )  <span class="sc">|&gt;</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">data_criacao =</span> readr<span class="sc">::</span><span class="fu">parse_datetime</span>(created_at),</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">ano_criacao =</span> <span class="fu">as.Date</span>(lubridate<span class="sc">::</span><span class="fu">floor_date</span>(data_criacao, <span class="st">"year"</span>))</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df_repos_cursor</span> <span class="op">&lt;-</span> <span class="va">lista_repos</span>  <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">fork</span> <span class="op">==</span> <span class="cn">FALSE</span><span class="op">)</span>  <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span></span>
+<span>    <span class="va">name</span>,</span>
+<span>    <span class="va">created_at</span>,</span>
+<span>    <span class="va">default_branch</span></span>
+<span>  <span class="op">)</span>  <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    data_criacao <span class="op">=</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/parse_datetime.html">parse_datetime</a></span><span class="op">(</span><span class="va">created_at</span><span class="op">)</span>,</span>
+<span>    ano_criacao <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/round_date.html">floor_date</a></span><span class="op">(</span><span class="va">data_criacao</span>, <span class="st">"year"</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="exemplo-de-visualização-com-os-dados-obtidos" class="level2">
-<h2 class="anchored" data-anchor-id="exemplo-de-visualização-com-os-dados-obtidos">Exemplo de visualização com os dados obtidos!</h2>
+</section></section><section id="exemplo-de-visualização-com-os-dados-obtidos" class="level2"><h2 class="anchored" data-anchor-id="exemplo-de-visualização-com-os-dados-obtidos">Exemplo de visualização com os dados obtidos!</h2>
 <p>Em 2020, o <a href="https://lente.dev">Caio</a> escreveu um post sobre o uso do <a href="https://blog.curso-r.com/posts/2020-07-27-github-main-branch/">termo ‘master’ no GitHub</a>. Lá no post é explicado sobre a questão da substituição do termo ‘master’. Em 2020 a GitHub anunciou que faria a transição para o termo main (principal), e desde então muitas pessoas e organizações estão renomeando a branch principal de seus repositórios para ‘main’(inclusive existe um <a href="https://www.tidyverse.org/blog/2021/10/renaming-default-branch/">post no blog da RStudio sobre isso</a>).</p>
 <p>Usando os dados obtidos nesse post, vamos explorar os repositórios da Curso-R e averiguar qual é o nome da branch principal dos repositórios ao longo do tempo?</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-10_231422e63500576517177479ddc0b7b2">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>main_percent <span class="ot">&lt;-</span> <span class="fu">mean</span>(df_repos_cursor<span class="sc">$</span>default_branch <span class="sc">==</span> <span class="st">"main"</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>main_percent <span class="ot">&lt;-</span> scales<span class="sc">::</span><span class="fu">percent</span>(main_percent)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>df_repos_cursor  <span class="sc">|&gt;</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">count</span>(ano_criacao, default_branch)  <span class="sc">|&gt;</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">y =</span> n, <span class="at">x =</span> ano_criacao, <span class="at">fill =</span> default_branch)) <span class="sc">+</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%Y"</span>, <span class="at">date_breaks =</span> <span class="st">"1 year"</span>) <span class="sc">+</span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Pastel1"</span>) <span class="sc">+</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Ano de criação"</span>, <span class="at">y =</span> <span class="st">"Número de repositórios"</span>, <span class="at">fill =</span> <span class="st">"Nome da Branch"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="va">main_percent</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">df_repos_cursor</span><span class="op">$</span><span class="va">default_branch</span> <span class="op">==</span> <span class="st">"main"</span><span class="op">)</span></span>
+<span><span class="va">main_percent</span> <span class="op">&lt;-</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/percent_format.html">percent</a></span><span class="op">(</span><span class="va">main_percent</span><span class="op">)</span></span>
+<span><span class="va">df_repos_cursor</span>  <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">ano_criacao</span>, <span class="va">default_branch</span><span class="op">)</span>  <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">n</span>, x <span class="op">=</span> <span class="va">ano_criacao</span>, fill <span class="op">=</span> <span class="va">default_branch</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_date.html">scale_x_date</a></span><span class="op">(</span>date_labels <span class="op">=</span> <span class="st">"%Y"</span>, date_breaks <span class="op">=</span> <span class="st">"1 year"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Pastel1"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Ano de criação"</span>, y <span class="op">=</span> <span class="st">"Número de repositórios"</span>, fill <span class="op">=</span> <span class="st">"Nome da Branch"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -518,9 +478,7 @@ Tip
 <p>É isso! Dúvidas, sugestões e críticas, mande aqui nos comentários. <strong>Postem também quais exemplos, dentre os que foram listados, vocês gostariam de saber mais!!</strong></p>
 <p>Se você quiser saber mais sobre acessar APIs, o <a href="https://loja.curso-r.com/web-scraping.html">curso de Web Scraping</a> é uma ótima oportunidade!</p>
 <p>Até a próxima!</p>
-</section>
-<section id="referências" class="level2">
-<h2 class="anchored" data-anchor-id="referências">Referências</h2>
+</section><section id="referências" class="level2"><h2 class="anchored" data-anchor-id="referências">Referências</h2>
 <ul>
 <li><p><a href="https://curso-r.github.io/main-web-scraping/slides/02-introducao-ao-ws.html#8">Slides do curso de Web Scraping sobre APIs</a></p></li>
 <li><p><a href="https://curso-r.github.io/main-deploy/docs/index.html#12">Slides do curso de Deploy</a></p></li>
@@ -528,10 +486,7 @@ Tip
 </ul>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -641,16 +596,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -669,10 +622,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

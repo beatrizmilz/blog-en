@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Beatriz Milz">
 <meta name="dcterms.date" content="2022-03-08">
-
 <title>Bea Milz - Acessando dados do Google Sheets com R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -82,7 +79,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
@@ -98,8 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -117,37 +112,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - Acessando dados do Google Sheets com R">
 <meta property="og:description" content="Post publicado no blog da Curso-R.">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-
 <link rel="stylesheet" href="../../../styles.css">
 <meta name="twitter:title" content="Bea Milz - Acessando dados do Google Sheets com R">
 <meta name="twitter:description" content="Post publicado no blog da Curso-R.">
@@ -157,13 +141,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta name="twitter:image-height" content="278">
 <meta name="twitter:image-width" content="240">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
@@ -172,13 +153,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -195,20 +176,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
     <a class="dropdown-item" href="../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
     <a class="dropdown-item" href="../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -221,7 +202,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -236,14 +217,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Acessando dados do Google Sheets com R</h1>
             <p class="subtitle lead">Post publicado no blog da Curso-R.</p>
@@ -280,29 +257,24 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a>
+<li>
+<a href="#introdu%C3%A7%C3%A3o" id="toc-introdução" class="nav-link active" data-scroll-target="#introdu%C3%A7%C3%A3o">Introdução</a>
   <ul class="collapse">
-  <li><a href="#autenticação" id="toc-autenticação" class="nav-link" data-scroll-target="#autenticação">Autenticação</a></li>
-  <li><a href="#função-sheet_properties" id="toc-função-sheet_properties" class="nav-link" data-scroll-target="#função-sheet_properties">Função <code>sheet_properties()</code></a></li>
-  <li><a href="#função-read_sheet" id="toc-função-read_sheet" class="nav-link" data-scroll-target="#função-read_sheet">Função <code>read_sheet()</code></a></li>
-  <li><a href="#outras-funções" id="toc-outras-funções" class="nav-link" data-scroll-target="#outras-funções">Outras funções</a></li>
+<li><a href="#autentica%C3%A7%C3%A3o" id="toc-autenticação" class="nav-link" data-scroll-target="#autentica%C3%A7%C3%A3o">Autenticação</a></li>
+  <li><a href="#fun%C3%A7%C3%A3o-sheet_properties" id="toc-função-sheet_properties" class="nav-link" data-scroll-target="#fun%C3%A7%C3%A3o-sheet_properties">Função <code>sheet_properties()</code></a></li>
+  <li><a href="#fun%C3%A7%C3%A3o-read_sheet" id="toc-função-read_sheet" class="nav-link" data-scroll-target="#fun%C3%A7%C3%A3o-read_sheet">Função <code>read_sheet()</code></a></li>
+  <li><a href="#outras-fun%C3%A7%C3%B5es" id="toc-outras-funções" class="nav-link" data-scroll-target="#outras-fun%C3%A7%C3%B5es">Outras funções</a></li>
   <li><a href="#e-o-google-forms" id="toc-e-o-google-forms" class="nav-link" data-scroll-target="#e-o-google-forms">E o Google Forms?</a></li>
-  </ul></li>
-  <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências">Referências</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#refer%C3%AAncias" id="toc-referências" class="nav-link" data-scroll-target="#refer%C3%AAncias">Referências</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<div class="callout-tip callout callout-style-default callout-captioned">
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -315,15 +287,14 @@ Tip
 <p>Esse post foi origalmente publicado no <a href="https://blog.curso-r.com/posts/2022-03-08-googlesheets4/">blog da Curso-R</a>.</p>
 </div>
 </div>
-<section id="introdução" class="level2">
-<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
 <p>O <a href="https://docs.google.com/spreadsheets/u/0/">Google Sheets</a> é um editor de planilhas da Google, que funciona vinculado ao Google Drive (ou seja, os arquivos ficam na nuvem). O pacote <a href="https://googlesheets4.tidyverse.org/">googlesheets4</a> permite interagir com o Google Sheets através do R. Neste post, vamos mostrar alguns exemplos sobre como podemos importar dados usando o pacote <code>googlesheets4</code>.</p>
 <p>Primeiramente, é necessário instalar o pacote:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"googlesheets4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"googlesheets4"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Então, podemos carregá-lo:</p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-1_416f200bdb52fece3b11f214d45acf2e">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar pacote googlesheets4</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googlesheets4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Carregar pacote googlesheets4</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org">googlesheets4</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Neste exemplo, usaremos a tabela da <a href="https://cran.r-project.org/web/packages/gapminder/README.html">base de dados Gapminder</a>, que apresenta algumas informações por país e ano, como a população total, expectativa de vida ao nascer e o PIB per capita.</p>
 <p>Para importar uma tabela que está no Google Sheets, primeiramente precisamos identificá-la para que o R saiba qual arquivo queremos abrir. Uma forma de fazer isso é usando a <em>URL</em> (ou <em>Uniform Resource Locator</em>), que é também conhecido como <em>o link que usamos no navegador</em>.</p>
@@ -335,25 +306,23 @@ Tip
 <p>Um exemplo de url é o seguinte, e ele encaminha para <a href="https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077">essa tabela</a>.</p>
 <pre><code>https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077</code></pre>
 <p>Sabendo a URL da planilha, podemos salvar em um objeto no R para facilitar o uso!</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># salvar a url/link da planilha que queremos acessar</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>url_planilha <span class="ot">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="autenticação" class="level3">
-<h3 class="anchored" data-anchor-id="autenticação">Autenticação</h3>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># salvar a url/link da planilha que queremos acessar</span></span>
+<span><span class="va">url_planilha</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="autenticação" class="level3"><h3 class="anchored" data-anchor-id="autenticação">Autenticação</h3>
 <p>Para evitar que alguém que não tem acesso a uma Google Sheet consiga ler a mesma sem permissão, o pacote nos direciona para fazer uma autenticação com uma conta do Google. Esse direcionamento é feito quando usamos alguma função que necessita de autenticação pela primeira vez, e a cada sessão do R (ou seja, sempre que reiniciar), o R perguntará novamente com qual email do Google gostaríamos de autenticar.</p>
 <p>Exemplo: No meu caso, eu já autentiquei anteriormente, então ele apresenta os emails já autenticados.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>respostas_formulario <span class="ot">&lt;-</span> <span class="fu">read_sheet</span>(url)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># → The googlesheets4 package is requesting access to your Google account</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   Select a pre-authorised account or enter '0' to obtain a new token</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   Press Esc/Ctrl + C to cancel</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1: bmilz@curso-r.com</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2: milz.bea@gmail.com</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">respostas_formulario</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span>
+<span><span class="co"># → The googlesheets4 package is requesting access to your Google account</span></span>
+<span><span class="co">#   Select a pre-authorised account or enter '0' to obtain a new token</span></span>
+<span><span class="co">#   Press Esc/Ctrl + C to cancel</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># 1: bmilz@curso-r.com</span></span>
+<span><span class="co"># 2: milz.bea@gmail.com</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Para fazer uma nova autenticação, basta escolher a opção <code>0</code>, e uma janela do navegador abrirá para fazer a autenticação:</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-3_e73f6dbb46814a483d869b8d41d560d2">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/auth1.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="img/auth1.png" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </div>
@@ -362,8 +331,7 @@ Tip
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-4_fd9b1cabcda317912083ff28054bea46">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/auth2.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="img/auth2.png" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </div>
@@ -373,85 +341,79 @@ Tip
 <p>DEU ERRO! Caso dê erro ao abrir o arquivo, se certifique que você tem acesso de leitura ou edição do Google Sheets desejado.</p>
 </blockquote>
 <p>Agora podemos experimenta as funções do pacote!</p>
-</section>
-<section id="função-sheet_properties" class="level3">
-<h3 class="anchored" data-anchor-id="função-sheet_properties">Função <code>sheet_properties()</code></h3>
-<p>A função <code>sheet_properties()</code> permite ver quais abas (chamaremos muitas vezes de <em>sheets</em>, pois é a forma usada no pacote) estão disponíveis na tabela:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ver as propriedades da planilha (conseguimos descobrir quais sheets </span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># estão disponíveis)</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sheet_properties</span>(url_planilha)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 5 × 8</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="do">##   name     index         id type  visible grid_rows grid_columns data  </span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="do">##   &lt;chr&gt;    &lt;int&gt;      &lt;int&gt; &lt;chr&gt; &lt;lgl&gt;       &lt;int&gt;        &lt;int&gt; &lt;list&gt;</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 Africa       0  780868077 GRID  TRUE          625            6 &lt;NULL&gt;</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 Americas     1   45759261 GRID  TRUE          301            6 &lt;NULL&gt;</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="do">## 3 Asia         2 1984823455 GRID  TRUE          397            6 &lt;NULL&gt;</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="do">## 4 Europe       3 1503562052 GRID  TRUE          361            6 &lt;NULL&gt;</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="do">## 5 Oceania      4 1796776040 GRID  TRUE           25            6 &lt;NULL&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="função-sheet_properties" class="level3"><h3 class="anchored" data-anchor-id="função-sheet_properties">Função <code>sheet_properties()</code>
+</h3>
+<p>A função <code><a href="https://googlesheets4.tidyverse.org/reference/sheet_properties.html">sheet_properties()</a></code> permite ver quais abas (chamaremos muitas vezes de <em>sheets</em>, pois é a forma usada no pacote) estão disponíveis na tabela:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># ver as propriedades da planilha (conseguimos descobrir quais sheets </span></span>
+<span><span class="co"># estão disponíveis)</span></span>
+<span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/sheet_properties.html">sheet_properties</a></span><span class="op">(</span><span class="va">url_planilha</span><span class="op">)</span></span>
+<span><span class="co">## # A tibble: 5 × 8</span></span>
+<span><span class="co">##   name     index         id type  visible grid_rows grid_columns data  </span></span>
+<span><span class="co">##   &lt;chr&gt;    &lt;int&gt;      &lt;int&gt; &lt;chr&gt; &lt;lgl&gt;       &lt;int&gt;        &lt;int&gt; &lt;list&gt;</span></span>
+<span><span class="co">## 1 Africa       0  780868077 GRID  TRUE          625            6 &lt;NULL&gt;</span></span>
+<span><span class="co">## 2 Americas     1   45759261 GRID  TRUE          301            6 &lt;NULL&gt;</span></span>
+<span><span class="co">## 3 Asia         2 1984823455 GRID  TRUE          397            6 &lt;NULL&gt;</span></span>
+<span><span class="co">## 4 Europe       3 1503562052 GRID  TRUE          361            6 &lt;NULL&gt;</span></span>
+<span><span class="co">## 5 Oceania      4 1796776040 GRID  TRUE           25            6 &lt;NULL&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Com isso, sabemos que a tabela que informamos tem 5 abas, sendo elas: Africa, Americas, Asia, Europe e Oceania.</p>
-</section>
-<section id="função-read_sheet" class="level3">
-<h3 class="anchored" data-anchor-id="função-read_sheet">Função <code>read_sheet()</code></h3>
-<p>A função mais útil (na minha opinião) do pacote é a que usamos para ler os dados: <code>read_sheet()</code>!</p>
-<p>Se usarmos essa função sem nenhum argumento além do <em>url</em> da planilha, por padrão a primeira sheet será importada. Como vimos no resultado da função <code>sheet_properties()</code>, a primeira aba da base contém os dados dos países que estão no continente Africano. Então os dados que serão importados são referentes à este continente:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>planilha <span class="ot">&lt;-</span> <span class="fu">read_sheet</span>(url_planilha)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(planilha)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Rows: 624</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Columns: 6</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="do">## $ country   &lt;chr&gt; "Algeria", "Algeria", "Algeria", "Algeria", "Algeria", "Alge…</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="do">## $ continent &lt;chr&gt; "Africa", "Africa", "Africa", "Africa", "Africa", "Africa", …</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="do">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="do">## $ lifeExp   &lt;dbl&gt; 43.077, 45.685, 48.303, 51.407, 54.518, 58.014, 61.368, 65.7…</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="do">## $ pop       &lt;dbl&gt; 9279525, 10270856, 11000948, 12760499, 14760787, 17152804, 2…</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="do">## $ gdpPercap &lt;dbl&gt; 2449.0082, 3013.9760, 2550.8169, 3246.9918, 4182.6638, 4910.…</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="função-read_sheet" class="level3"><h3 class="anchored" data-anchor-id="função-read_sheet">Função <code>read_sheet()</code>
+</h3>
+<p>A função mais útil (na minha opinião) do pacote é a que usamos para ler os dados: <code><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet()</a></code>!</p>
+<p>Se usarmos essa função sem nenhum argumento além do <em>url</em> da planilha, por padrão a primeira sheet será importada. Como vimos no resultado da função <code><a href="https://googlesheets4.tidyverse.org/reference/sheet_properties.html">sheet_properties()</a></code>, a primeira aba da base contém os dados dos países que estão no continente Africano. Então os dados que serão importados são referentes à este continente:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">planilha</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url_planilha</span><span class="op">)</span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">planilha</span><span class="op">)</span></span>
+<span><span class="co">## Rows: 624</span></span>
+<span><span class="co">## Columns: 6</span></span>
+<span><span class="co">## $ country   &lt;chr&gt; "Algeria", "Algeria", "Algeria", "Algeria", "Algeria", "Alge…</span></span>
+<span><span class="co">## $ continent &lt;chr&gt; "Africa", "Africa", "Africa", "Africa", "Africa", "Africa", …</span></span>
+<span><span class="co">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
+<span><span class="co">## $ lifeExp   &lt;dbl&gt; 43.077, 45.685, 48.303, 51.407, 54.518, 58.014, 61.368, 65.7…</span></span>
+<span><span class="co">## $ pop       &lt;dbl&gt; 9279525, 10270856, 11000948, 12760499, 14760787, 17152804, 2…</span></span>
+<span><span class="co">## $ gdpPercap &lt;dbl&gt; 2449.0082, 3013.9760, 2550.8169, 3246.9918, 4182.6638, 4910.…</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Podemos também usar o argumento <code>sheet =</code> para especificar qual aba queremos importar. Podemos fazer a busca pela posição (ou seja, informando um número), ou pelo nome da aba:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># abrir uma sheet específica: pela posição</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>planilha_sheet_3 <span class="ot">&lt;-</span> <span class="fu">read_sheet</span>(url_planilha, <span class="at">sheet =</span> <span class="dv">3</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(planilha_sheet_3)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Rows: 396</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Columns: 6</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="do">## $ country   &lt;chr&gt; "Afghanistan", "Afghanistan", "Afghanistan", "Afghanistan", …</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="do">## $ continent &lt;chr&gt; "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asi…</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="do">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="do">## $ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.8…</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="do">## $ pop       &lt;dbl&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 12…</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="do">## $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, …</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># abrir uma sheet específica: pelo nome</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>planilha_asia <span class="ot">&lt;-</span> <span class="fu">read_sheet</span>(url_planilha, <span class="at">sheet =</span> <span class="st">"Asia"</span>)</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(planilha_asia)</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="do">## Rows: 396</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="do">## Columns: 6</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="do">## $ country   &lt;chr&gt; "Afghanistan", "Afghanistan", "Afghanistan", "Afghanistan", …</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="do">## $ continent &lt;chr&gt; "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asi…</span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="do">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="do">## $ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.8…</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="do">## $ pop       &lt;dbl&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 12…</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="do">## $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># abrir uma sheet específica: pela posição</span></span>
+<span><span class="va">planilha_sheet_3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url_planilha</span>, sheet <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">planilha_sheet_3</span><span class="op">)</span></span>
+<span><span class="co">## Rows: 396</span></span>
+<span><span class="co">## Columns: 6</span></span>
+<span><span class="co">## $ country   &lt;chr&gt; "Afghanistan", "Afghanistan", "Afghanistan", "Afghanistan", …</span></span>
+<span><span class="co">## $ continent &lt;chr&gt; "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asi…</span></span>
+<span><span class="co">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
+<span><span class="co">## $ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.8…</span></span>
+<span><span class="co">## $ pop       &lt;dbl&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 12…</span></span>
+<span><span class="co">## $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, …</span></span>
+<span></span>
+<span><span class="co"># abrir uma sheet específica: pelo nome</span></span>
+<span><span class="va">planilha_asia</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url_planilha</span>, sheet <span class="op">=</span> <span class="st">"Asia"</span><span class="op">)</span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">planilha_asia</span><span class="op">)</span></span>
+<span><span class="co">## Rows: 396</span></span>
+<span><span class="co">## Columns: 6</span></span>
+<span><span class="co">## $ country   &lt;chr&gt; "Afghanistan", "Afghanistan", "Afghanistan", "Afghanistan", …</span></span>
+<span><span class="co">## $ continent &lt;chr&gt; "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asi…</span></span>
+<span><span class="co">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
+<span><span class="co">## $ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.8…</span></span>
+<span><span class="co">## $ pop       &lt;dbl&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 12…</span></span>
+<span><span class="co">## $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Como todas as tabelas da base tem a mesma estrutura, podemos usar o pacote <a href="https://purrr.tidyverse.org/reference/map.html">purrr</a> para importar todas as abas de uma vez:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a função sheet_names permite buscar apenas o nome das abas</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>nome_abas <span class="ot">&lt;-</span> <span class="fu">sheet_names</span>(url_planilha)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># com o purrr, podemos abrir todas as abas de uma vez!</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>gapminder_completo <span class="ot">&lt;-</span> nome_abas <span class="sc">|&gt;</span> </span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map_dfr</span>(<span class="sc">~</span> <span class="fu">read_sheet</span>(url_planilha, <span class="at">sheet =</span> .x))</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(gapminder_completo)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Rows: 1,704</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Columns: 6</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="do">## $ country   &lt;chr&gt; "Algeria", "Algeria", "Algeria", "Algeria", "Algeria", "Alge…</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="do">## $ continent &lt;chr&gt; "Africa", "Africa", "Africa", "Africa", "Africa", "Africa", …</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="do">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="do">## $ lifeExp   &lt;dbl&gt; 43.077, 45.685, 48.303, 51.407, 54.518, 58.014, 61.368, 65.7…</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="do">## $ pop       &lt;dbl&gt; 9279525, 10270856, 11000948, 12760499, 14760787, 17152804, 2…</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="do">## $ gdpPercap &lt;dbl&gt; 2449.0082, 3013.9760, 2550.8169, 3246.9918, 4182.6638, 4910.…</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="outras-funções" class="level3">
-<h3 class="anchored" data-anchor-id="outras-funções">Outras funções</h3>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># a função sheet_names permite buscar apenas o nome das abas</span></span>
+<span><span class="va">nome_abas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/sheet_properties.html">sheet_names</a></span><span class="op">(</span><span class="va">url_planilha</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># com o purrr, podemos abrir todas as abas de uma vez!</span></span>
+<span><span class="va">gapminder_completo</span> <span class="op">&lt;-</span> <span class="va">nome_abas</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="op">~</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url_planilha</span>, sheet <span class="op">=</span> <span class="va">.x</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">gapminder_completo</span><span class="op">)</span></span>
+<span><span class="co">## Rows: 1,704</span></span>
+<span><span class="co">## Columns: 6</span></span>
+<span><span class="co">## $ country   &lt;chr&gt; "Algeria", "Algeria", "Algeria", "Algeria", "Algeria", "Alge…</span></span>
+<span><span class="co">## $ continent &lt;chr&gt; "Africa", "Africa", "Africa", "Africa", "Africa", "Africa", …</span></span>
+<span><span class="co">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
+<span><span class="co">## $ lifeExp   &lt;dbl&gt; 43.077, 45.685, 48.303, 51.407, 54.518, 58.014, 61.368, 65.7…</span></span>
+<span><span class="co">## $ pop       &lt;dbl&gt; 9279525, 10270856, 11000948, 12760499, 14760787, 17152804, 2…</span></span>
+<span><span class="co">## $ gdpPercap &lt;dbl&gt; 2449.0082, 3013.9760, 2550.8169, 3246.9918, 4182.6638, 4910.…</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="outras-funções" class="level3"><h3 class="anchored" data-anchor-id="outras-funções">Outras funções</h3>
 <p>Esse pacote tem muitas outras funções que interagem com o Googles Sheets, mas que não fazem parte do escopo deste post, como criar uma nova aba e escrever dados em uma aba. Essas funções também são muito úteis!</p>
-</section>
-<section id="e-o-google-forms" class="level3">
-<h3 class="anchored" data-anchor-id="e-o-google-forms">E o Google Forms?</h3>
+</section><section id="e-o-google-forms" class="level3"><h3 class="anchored" data-anchor-id="e-o-google-forms">E o Google Forms?</h3>
 <p>Eu gosto muito de usar esse pacote para importar respostas de <a href="https://docs.google.com/forms/u/0/">formulários do Google</a>, pois o Google permite vincular respostas dos formulários em uma Google Sheets.</p>
 <p>Aqui mostrarei como fazer isso! Primeiro precisamos criar um formulário (caso ele ainda não exista):</p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-5_766b3cdfd7b47c7aeac493363c4c8294">
@@ -477,22 +439,19 @@ Tip
 <p><img src="img/forms4.png" class="img-fluid" width="1373"></p>
 </div>
 </div>
-<p>Cada coluna terá informações de uma pergunta do formulário. Inicialmente, a base terá 0 linhas, pois quando criamos o formulário ele tem 0 respostas. Porém, após alguém responder o formulário, a Google Sheet é automaticamente atualizada e apresentará a resposta. Podemos importar os dados usando a função <code>read_sheet()</code>, como mostrado anteriormente:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ch3aMraacwhNo1sU4Z9b54nWYG8gdl18UfLJMzquL8s/"</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>respostas_formulario <span class="ot">&lt;-</span> <span class="fu">read_sheet</span>(url)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>respostas_formulario</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 1 × 2</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="do">##   `Carimbo de data/hora` `Pergunta sem título`</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="do">##   &lt;dttm&gt;                 &lt;chr&gt;                </span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 2022-03-08 21:29:01    Opção 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cada coluna terá informações de uma pergunta do formulário. Inicialmente, a base terá 0 linhas, pois quando criamos o formulário ele tem 0 respostas. Porém, após alguém responder o formulário, a Google Sheet é automaticamente atualizada e apresentará a resposta. Podemos importar os dados usando a função <code><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet()</a></code>, como mostrado anteriormente:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">url</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ch3aMraacwhNo1sU4Z9b54nWYG8gdl18UfLJMzquL8s/"</span></span>
+<span></span>
+<span><span class="va">respostas_formulario</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">respostas_formulario</span></span>
+<span><span class="co">## # A tibble: 1 × 2</span></span>
+<span><span class="co">##   `Carimbo de data/hora` `Pergunta sem título`</span></span>
+<span><span class="co">##   &lt;dttm&gt;                 &lt;chr&gt;                </span></span>
+<span><span class="co">## 1 2022-03-08 21:29:01    Opção 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>É isso! Dúvidas, sugestões e críticas, mande aqui nos comentários. <strong>Postem também quais funções do pacote vocês gostariam de saber mais!!</strong></p>
 <p>Até a próxima!</p>
-</section>
-</section>
-<section id="referências" class="level2">
-<h2 class="anchored" data-anchor-id="referências">Referências</h2>
+</section></section><section id="referências" class="level2"><h2 class="anchored" data-anchor-id="referências">Referências</h2>
 <ul>
 <li><p><a href="https://googlesheets4.tidyverse.org/">Documentação do pacote googlesheets4</a></p></li>
 <li><p><a href="https://purrr.tidyverse.org/reference/map.html">Documentação do pacote purrr</a></p></li>
@@ -500,10 +459,7 @@ Tip
 </ul>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -613,16 +569,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -641,10 +595,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
