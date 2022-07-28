@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/posts/en.html</loc>
-    <lastmod>2022-07-27T00:18:11.074Z</lastmod>
+    <lastmod>2022-07-28T11:11:58.268Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2021-03-29-desvendando-erros/pt/index.html</loc>
@@ -162,7 +162,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/talks/en/index.html</loc>
-    <lastmod>2022-07-27T11:04:30.997Z</lastmod>
+    <lastmod>2022-07-28T11:13:27.222Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/en/2018-knitr-codata/index.html</loc>
@@ -174,7 +174,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/index.html</loc>
-    <lastmod>2022-07-27T00:18:12.066Z</lastmod>
+    <lastmod>2022-07-28T11:11:59.449Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/about.html</loc>
@@ -182,10 +182,18 @@
   </url>
   <url>
     <loc>https://beamilz.com/series-gha.html</loc>
-    <lastmod>2022-07-27T00:12:26.468Z</lastmod>
+    <lastmod>2022-07-28T11:12:00.759Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/en/2022-rstudio-conf/index.html</loc>
-    <lastmod>2022-07-27T11:04:30.474Z</lastmod>
+    <lastmod>2022-07-28T11:13:26.711Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/series-gha/2022-06-28-github-actions-rstudio/en/index.html</loc>
+    <lastmod>2022-07-28T11:07:50.114Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html</loc>
+    <lastmod>2022-07-28T11:11:57.649Z</lastmod>
   </url>
 </urlset>

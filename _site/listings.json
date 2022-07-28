@@ -2,6 +2,7 @@
   {
     "listing": "/posts/en.html",
     "items": [
+      "/posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html",
       "/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
       "/posts/2019-08-12-tidydevday/en/index.html",
       "/posts/series-gha/2022-series-gha-1-what-is/en/index.html",
@@ -67,6 +68,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html",
       "/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
       "/posts/2019-08-12-tidydevday/en/index.html",
       "/posts/series-gha/2022-series-gha-1-what-is/en/index.html",
@@ -101,6 +103,7 @@
   {
     "listing": "/series-gha.html",
     "items": [
+      "/posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html",
       "/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
       "/posts/series-gha/2022-series-gha-1-what-is/en/index.html",
       "/posts/series-gha/2022-series-gha-1-what-is/pt/index.html",

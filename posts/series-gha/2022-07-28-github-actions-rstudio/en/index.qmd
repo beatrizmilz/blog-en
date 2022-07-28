@@ -2,12 +2,20 @@
 title: "How important is GitHub Actions to RStudio/Posit?"
 subtitle: "Code for a plot in my talk at rstudio::conf 2022!"
 author: "Beatriz Milz"
-date: "2022-06-27"
-categories: ["Git", "GitHub", "GitHub Actions", "Automations", "RStudio"]
-# image: "img/search.png"
+date: "2022-07-28"
+categories: ["GitHub", "GitHub Actions", "Automations", "RStudio", "Posit"]
+image: "img/rstudio_ggplot.png"
 toc: true
-draft: true
+draft: false
 ---
+
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE,
+  include = TRUE,
+  fig.align = "center"
+)
+```
 
 ```{r multilang-buttons}
 #| results: asis
@@ -16,33 +24,39 @@ source(here::here("R/multilang.R"))
 multilang()
 ```
 
-This post is a complementary material for my talk at rstudio::conf 2022! 
-I'm writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk. 
+This post is a complementary material for [my talk at rstudio::conf 2022](https://beamilz.com/talks/en/2022-rstudio-conf/) (which is happening **TODAY!!!**)!
 
-The plot uses data from the GitHub API, collected with the help of the package `gh`. The plot was created using ggplot2, and shows the cumulative actions runs on GitHub repositories in organizations related to RStudio/Posit.
+I'm writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk:
 
-::: {.callout-note icon=false}
+```{r}
+#| echo: false
+#| eval: true
 
+knitr::include_graphics("img/rstudio_ggplot.png")
+```
+
+The plot uses data from the GitHub API, collected with the help of the package `gh` and `tidyverse`. The plot was created using `ggplot2`, and shows the actions runs per month on GitHub repositories in organizations related to RStudio/Posit.
+
+::: {.callout-note icon="false"}
 ## Important
 
-The version of the plot presented in the talk uses data until May 2022, because we had to deliver the slides by the start of July. The plot presented in this blog post uses data until the day before the conference started (so, July 24th 2022).
-
-
+The version of the plot presented in the talk uses data until May 2022, because we had to deliver the slides by the start of July. The plot presented in this blog post uses data collected in July 27th, but filtered to show action runs until May 2022.
 :::
 
-First, I had to look for the organizations. This was the list of organizations related to RStudio/Posit that I found on GitHub:
+First, I had to look for the organizations. This was the list of organizations related to [RStudio/Posit](https://posit.co/) that I found on GitHub:
 
-- [tidyverse](https://github.com/tidyverse)
-- [r-lib](https://github.com/r-lib)
-- [mlverse](https://github.com/mlverse)
-- [tidymodels](https://github.com/tidymodels)
-- [rstudio](https://github.com/rstudio)
-- [quarto-dev](https://github.com/quarto-dev)
+-   [tidyverse](https://github.com/tidyverse)
+-   [r-lib](https://github.com/r-lib)
+-   [mlverse](https://github.com/mlverse)
+-   [tidymodels](https://github.com/tidymodels)
+-   [rstudio](https://github.com/rstudio)
+-   [quarto-dev](https://github.com/quarto-dev)
 
+There might be more that I don't know about!
 
 So, here is a vector with the names of the organizations:
 
-```{r, eval = FALSE}
+```{r}
 rstudio_orgs <-
   c("rstudio",
     "tidyverse",
@@ -54,7 +68,7 @@ rstudio_orgs <-
 
 Then, I created an R function that looks for all public repositories in a organization:
 
-```{r, eval = FALSE}
+```{r}
 find_repos_github_org <- function(organisation) {
   # get info about the org
   gh_org <- gh::gh("GET /orgs/{org}",
@@ -89,15 +103,17 @@ find_repos_github_org <- function(organisation) {
 
 And then I executed that function for all organizations using `purrr`:
 
-```{r, eval = FALSE}
+```{r}
 rstudio_repositories <- rstudio_orgs |>
   purrr::map_dfr(find_repos_github_org)
 ```
 
-This is what I found: 
+This is what I found (click to unfold the glimpsed result):
 
-```{r, eval = FALSE}
+```{r}
+#| code-fold: true
 dplyr::glimpse(rstudio_repositories)
+
 # Rows: 599
 # Columns: 114
 # $ id_repo                     <chr> "1", "2", "3", "4", …
@@ -223,7 +239,7 @@ original_rstudio_repos <- rstudio_repositories |>
   dplyr::filter(fork == FALSE)
 ```
 
-At this point, I have a tibble with more than 500 repositories. I wanted to get the action runs for every one of this repositories! So I wrote another function to do that, and save the result for each repository in a local file.
+At this point, I had a tibble with more than 500 repositories. I wanted to get the action runs for every one of this repositories! So I wrote another function to do that, and save the result for each repository in a local file.
 
 ```{r}
 get_repo_github_actions_runs <- function(repo_full_name) {
@@ -252,7 +268,8 @@ get_repo_github_actions_runs <- function(repo_full_name) {
     purrr::map(purrr::compact) |>
     purrr::map(purrr::discard, ~ is.list(.x)) |>
     purrr::map_dfr(tibble::as_tibble, .id = "id") |>
-    dplyr::mutate(repo = repo_full_name, .before = tidyselect::everything())
+    dplyr::mutate(repo = repo_full_name, 
+                  .before = tidyselect::everything())
   
   fs::dir_create("data/repos/")
   readr::write_rds(
@@ -266,7 +283,7 @@ get_repo_github_actions_runs <- function(repo_full_name) {
 }
 ```
 
-Then I used purrr again, to run this function for every repository. This took quite some time to run!
+Then I used purrr again, to run this function for every repository. **This took quite some time to run!**
 
 ```{r}
 original_rstudio_repos |>
@@ -274,11 +291,57 @@ original_rstudio_repos |>
   purrr::walk(get_repo_github_actions_runs)
 ```
 
-At this point, I had one `.Rds` file per repository, so more than 500 files. Thankfully I know the arts of purrr and used that magic to import all the files into a single tibble:
+At this point, I had one `.Rds` file per repository, so more than 500 files. Thankfully I know the arts of `purrr` and used that magic to import all the files into a single tibble:
 
 ```{r}
 df_complete_runs <- fs::dir_ls("data/repos/") |>
   purrr::map_dfr(readr::read_rds)
+```
+
+```{r}
+dplyr::glimpse(df_complete_runs)
+# Rows: 333,594
+# Columns: 28
+# $ repo                 <chr> "mlverse/cuda.ml", "mlverse/cuda.m…
+# $ id                   <chr> "1", "2", "3", "4", "5", "6", "7",…
+# $ name                 <chr> "R-CMD-check", "pages build and de…
+# $ node_id              <chr> "WFR_kwLOFqIlBc5kYBiS", "WFR_kwLOF…
+# $ head_branch          <chr> "main", "main", "main", "main", "m…
+# $ head_sha             <chr> "54fc9575e271b6a94c8650bea1887bb7f…
+# $ path                 <chr> ".github/workflows/R-CMD-check.yam…
+# $ run_number           <int> 221, 13, 220, 12, 219, 11, 218, 21…
+# $ event                <chr> "push", "dynamic", "push", "dynami…
+# $ status               <chr> "completed", "completed", "complet…
+# $ conclusion           <chr> "success", "success", "success", "…
+# $ workflow_id          <int> 14189930, 17359975, 14189930, 1735…
+# $ check_suite_id       <dbl> 4901217228, 4901217123, 4886275561…
+# $ check_suite_node_id  <chr> "CS_kwDOFqIlBc8AAAABJCKjzA", "CS_k…
+# $ url                  <chr> "https://api.github.com/repos/mlve…
+# $ html_url             <chr> "https://github.com/mlverse/cuda.m…
+# $ created_at           <chr> "2022-01-11T18:30:04Z", "2022-01-1…
+# $ updated_at           <chr> "2022-01-11T22:37:18Z", "2022-01-1…
+# $ run_attempt          <int> 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1…
+# $ run_started_at       <chr> "2022-01-11T18:30:04Z", "2022-01-1…
+# $ jobs_url             <chr> "https://api.github.com/repos/mlve…
+# $ logs_url             <chr> "https://api.github.com/repos/mlve…
+# $ check_suite_url      <chr> "https://api.github.com/repos/mlve…
+# $ artifacts_url        <chr> "https://api.github.com/repos/mlve…
+# $ cancel_url           <chr> "https://api.github.com/repos/mlve…
+# $ rerun_url            <chr> "https://api.github.com/repos/mlve…
+# $ workflow_url         <chr> "https://api.github.com/repos/mlve…
+# $ previous_attempt_url <chr> NA, NA, NA, NA, NA, NA, "https://a…
+```
+
+Then, I counted action runs per month:
+
+```{r}
+counted_data <- df_complete_runs |>
+  dplyr::mutate(
+    start_date = lubridate::as_date(run_started_at),
+    run_month = lubridate::floor_date(start_date, "month")
+  ) |>
+  dplyr::filter(conclusion != "skipped", start_date < "2022-06-01") |>
+  dplyr::count(run_month)
 ```
 
 With this tibble, I was able to use tidyverse and ggplot2 to create the plot!
@@ -287,20 +350,11 @@ With this tibble, I was able to use tidyverse and ggplot2 to create the plot!
 library(ggplot2)
 options(scipen = 9999)
 
-base_data <- df_complete_runs |>
-  dplyr::mutate(
-    start_date = lubridate::as_date(run_started_at),
-    run_month = lubridate::floor_date(start_date, "month")
-  ) |>
-  dplyr::filter(conclusion != "skipped", start_date < "2022-06-01") |>
-  dplyr::count(run_month)
-
-
-max_min <- base_data |>
+max_min <- counted_data |>
   dplyr::filter(run_month %in% c(min(run_month), max(run_month))) |>
   dplyr::mutate(label = glue::glue("{round(n/1000)}k"))
 
-base_graph <- base_data |>
+base_graph <- counted_data |>
   ggplot() +
   geom_line(aes(x = run_month, y = n), color = "#80868b", size = 1.5)
 
@@ -317,7 +371,7 @@ final_graph <- base_graph +
   labs(
     y = "Actions runs per month",
     x = "",
-    title = "Actions runs by RStudio's organizations on GitHub",
+    title = "Actions runs by RStudio/Posit organizations on GitHub",
     caption = "Plot made by @BeaMilz. Data from the GitHub API."
   ) +
   scale_x_date(
@@ -348,12 +402,21 @@ final_graph <- base_graph +
   )
 
 
-# ggsave(
-#   "img/rstudio_ggplot.png",
-#   plot = final_graph,
-#   dpi = 300,
-#   height = 5,
-#   width = 7
-# )
+ggsave(
+  "img/rstudio_ggplot.png",
+  plot = final_graph,
+  dpi = 300,
+  height = 5,
+  width = 7
+)
 ```
 
+🎉 Now we have the plot showed in the talk! 🎉
+
+```{r}
+#| eval: true
+#| include: true
+knitr::include_graphics("img/rstudio_ggplot.png")
+```
+
+Thanks!!
