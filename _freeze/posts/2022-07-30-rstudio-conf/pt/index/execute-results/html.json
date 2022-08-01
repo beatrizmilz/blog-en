@@ -1,0 +1,14 @@
+{
+  "hash": "5ea0b88e37a6e18fa2088930bdb4517f",
+  "result": {
+    "markdown": "---\ntitle: \"rstudio::conf 2022\"\ndate: \"2022-07-30\"\ncategories: [\"Event\", \"Community\", \"RStudio\", \"Posit\", \"Teaching\"]\nimage: \"welcome_to_rstats.jpeg\"\nauthor: [\"Beatriz Milz\"]\nsubtitle: \"Relato da participação do evento da RStudio!\"\ndraft: true\ntoc: true\n---\n\n<a href=\"../pt/index.qmd\"> <button type=\"button\" class=\"btn btn-primary\">Português</button></a>\n\n\nOlá! Nesta semana, participei do evento da RStudio: a rstudio::conf 2022!\n\nOutros posts de relatos do evento:\n\n-   Julio Trecenti: [Parte 1](https://blog.curso-r.com/posts/2022-07-27-rstudio-conf-2022/) e [Parte 2](https://blog.curso-r.com/posts/2022-07-29-rstudio-conf-2022-dia2/).\n\n-   [Millie O. Symns](https://milliesymns.com/blog/2022-07-29-rstudio-conf-reflections/)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
