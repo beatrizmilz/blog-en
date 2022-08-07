@@ -21,7 +21,15 @@
     "index.qmd": [
       "posts/**/en/*.qmd",
       "posts/**/pt/*.qmd",
-      "posts/**/es/*.qmd"
+      "posts/**/es/*.qmd",
+      "talks/**/*.qmd",
+      "talks/**/**/*.qmd",
+      "talks/**/**/index.qmd",
+      "talks/***/index.qmd",
+      "talks/**",
+      "talks/**.qmd",
+      "talks/{pt,es,en}/**/*.qmd",
+      "talks/{pt,es,en}/*/index.qmd"
     ],
     "series-gha.qmd": [
       "posts/series-gha/*/en/*.qmd",
