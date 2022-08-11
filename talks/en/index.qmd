@@ -12,17 +12,10 @@ page-layout: full
 title-block-banner: true
 ---
 
-I have been giving talks since 2018, but mostly in Portuguese.
-Those presentations are available in my [blog in Portuguese](https://beatrizmilz.com/talk/).
-Here you can find my presentations that were in English.
-:) Enjoy!
+I have been giving talks since 2018, but mostly in Portuguese. Those presentations are available in my [blog in Portuguese](https://beatrizmilz.com/talk/). Here you can find my presentations that were in English. :) Enjoy!
 
 ------------------------------------------------------------------------
 
 **Next activities**:
 
--   July 25-26th , 2022 - [rstudio::conf(2022)](https://www.rstudio.com/conference/) - Teaching Assistant (TA) in the [workshop **Building Tidy Tools**](https://www.rstudio.com/conference/2022/workshops/build-tidy-tools/), taught by Emma Rand and Ian Lyttle.
-
--   July 25-28th, 2022 - [rstudio::conf(2022)](https://www.rstudio.com/conference/) - Lightning Talk: "Making awesome automations with GitHub Actions".
-
-------------------------------------------------------------------------
+-   29th October, 2022 - 8pm WAT - Running code while we're sleeping: Introduction to GitHub Actions for R users - [R-Ladies Abuja](https://www.meetup.com/pt-BR/rladies-abuja/)
