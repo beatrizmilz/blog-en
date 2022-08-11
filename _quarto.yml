@@ -36,6 +36,8 @@ website:
             href: series-gha.qmd
       - text: Talks
         menu:
+          - text: All/Todas
+            href: talks/index.qmd
           - text: English
             href: talks/en/index.qmd
           - text: Português

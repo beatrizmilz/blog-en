@@ -35,6 +35,10 @@
       "posts/series-gha/*/en/*.qmd",
       "posts/series-gha/*/pt/*.qmd",
       "posts/series-gha/*/es/*.qmd"
+    ],
+    "talks/index.qmd": [
+      "talks/{pt,es,en}/*/index.qmd",
+      "{pt,es,en}/*/index.qmd"
     ]
   }
 }

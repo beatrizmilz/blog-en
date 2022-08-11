@@ -116,5 +116,17 @@
       "/posts/series-gha/2022-series-gha-1-what-is/pt/index.html",
       "/posts/series-gha/2022-series-gha-1-what-is/es/index.html"
     ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/en/2022-rstudio-conf/index.html",
+      "/talks/en/2021-learnr-latinr/index.html",
+      "/talks/en/2021-experience-useR/index.html",
+      "/talks/en/2020-RStudio-certification/index.html",
+      "/talks/es/2020-funciones-r4ds/index.html",
+      "/talks/en/2019-user-rladies-sp/index.html",
+      "/talks/en/2018-knitr-codata/index.html"
+    ]
   }
 ]

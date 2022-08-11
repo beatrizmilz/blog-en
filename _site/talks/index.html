@@ -58,20 +58,20 @@ ul.task-list{list-style: none;}
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts-en .list');
+    const listingTargetEl = window.document.querySelector('#listing-talks .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts-en'] = new List('listing-posts-en', options);
+    window['quarto-listings']['listing-talks'] = new List('listing-talks', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -117,7 +117,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../styles.css">
 <meta name="twitter:title" content="Bea Milz">
-<meta name="twitter:image" content="https://beamilz.com/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/featured.png">
+<meta name="twitter:image" content="https://beamilz.com/talks/en/2022-rstudio-conf/featured.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="675">
@@ -220,10 +220,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#posts-in-english" id="toc-posts-in-english" class="nav-link active" data-scroll-target="#posts-in-english">Posts in English</a></li>
+  <li><a href="#talkspalestras" id="toc-talkspalestras" class="nav-link active" data-scroll-target="#talkspalestras">Talks/Palestras</a></li>
   </ul>
 </nav>
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Communities"><span class="quarto-category-count category-cloud-5">Communities</span></div><div class="category" data-category="GitHub"><span class="quarto-category-count category-cloud-2">GitHub</span></div><div class="category" data-category="GitHub Actions"><span class="quarto-category-count category-cloud-2">GitHub Actions</span></div><div class="category" data-category="R Markdown"><span class="quarto-category-count category-cloud-2">R Markdown</span></div><div class="category" data-category="R-Ladies"><span class="quarto-category-count category-cloud-5">R-Ladies</span></div><div class="category" data-category="Study"><span class="quarto-category-count category-cloud-2">Study</span></div><div class="category" data-category="Talks"><span class="quarto-category-count category-cloud-5">Talks</span></div><div class="category" data-category="Teaching"><span class="quarto-category-count category-cloud-5">Teaching</span></div><div class="category" data-category="gradethis"><span class="quarto-category-count category-cloud-2">gradethis</span></div><div class="category" data-category="knitr"><span class="quarto-category-count category-cloud-2">knitr</span></div><div class="category" data-category="learnr"><span class="quarto-category-count category-cloud-2">learnr</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -243,298 +243,163 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 
 </header>
 
-<section id="posts-in-english" class="level2">
-<h2 class="anchored" data-anchor-id="posts-in-english">Posts in English</h2>
-<div id="listing-posts-en" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-posts-en-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts-en'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<section id="talkspalestras" class="level2">
+<h2 class="anchored" data-anchor-id="talkspalestras">Talks/Palestras</h2>
+<div id="listing-talks" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Talks,GitHub Actions,GitHub" data-listing-date-sort="1658977200000" data-listing-file-modified-sort="1659006802951" data-listing-reading-time-sort="0.75">
+<a href="../talks/en/2022-rstudio-conf/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../talks/en/2022-rstudio-conf/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Making awesome automations with GitHub Actions
+</h5>
+<div class="card-subtitle listing-subtitle">
+rstudio::conf(2022)
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="GitHub,GitHub Actions,Automations,RStudio,Posit" data-listing-date-sort="1658977200000" data-listing-file-modified-sort="1659016166003" data-listing-reading-time-sort="19.62">
-<div class="thumbnail">
-<p><a href="../posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html"> <img src="../posts/series-gha/2022-07-28-github-actions-rstudio/en/img/rstudio_ggplot.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html">
-<h3 class="no-anchor listing-title">
-How important is GitHub Actions to RStudio/Posit?
-</h3>
-<div class="listing-subtitle">
-Code for a plot in my talk at rstudio::conf 2022!
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
-GitHub
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
-GitHub Actions
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Automations'); return false;">
-Automations
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
-RStudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Posit'); return false;">
-Posit
-</div>
-</div>
-<a href="../posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="../posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 28, 2022
 </div>
-<div class="listing-author">
-Beatriz Milz
 </div>
-<div class="listing-reading-time">
-19 min
+</div>
 </div>
 </a>
 </div>
+<div class="g-col-1" data-index="1" data-categories="Talks,learnr,Teaching,gradethis" data-listing-date-sort="1636513200000" data-listing-file-modified-sort="1658706616446" data-listing-reading-time-sort="0.095">
+<a href="../talks/en/2021-learnr-latinr/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../talks/en/2021-learnr-latinr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Scaling feedback using learnr and gradethis in a introductory R course
+</h5>
+<div class="card-subtitle listing-subtitle">
+LatinR 2021
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Git,GitHub,GitHub Actions,Automations,RStudio" data-listing-date-sort="1657422000000" data-listing-file-modified-sort="1658706616425" data-listing-reading-time-sort="10.785">
-<div class="thumbnail">
-<p><a href="../posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html"> <img src="../posts/series-gha/2022-series-gha-2-creating-your-first-action/en/featured.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html">
-<h3 class="no-anchor listing-title">
-Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users
-</h3>
-<div class="listing-subtitle">
-GitHub Actions Series 2 - In this post, I will show how you can create a workflow to monitor repositories from the quarto-dev organization on GitHub!
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Git'); return false;">
-Git
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
-GitHub
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
-GitHub Actions
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Automations'); return false;">
-Automations
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
-RStudio
-</div>
-</div>
-<a href="../posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="../posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
-Jul 10, 2022
+Nov 10, 2021
 </div>
-<div class="listing-author">
-Beatriz Milz
 </div>
-<div class="listing-reading-time">
-10 min
+</div>
 </div>
 </a>
 </div>
+<div class="g-col-1" data-index="2" data-categories="Communities,R-Ladies" data-listing-date-sort="1619578800000" data-listing-file-modified-sort="1658706616444" data-listing-reading-time-sort="0.04">
+<a href="../talks/en/2021-experience-useR/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../talks/en/2021-experience-useR/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+My experience at useR 2019
+</h5>
+<div class="card-subtitle listing-subtitle">
+Meetup R-Ladies and useR 2021
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1657249200000" data-listing-file-modified-sort="1658881088666" data-listing-reading-time-sort="5.53">
-<div class="thumbnail">
-<p><a href="../posts/2019-08-12-tidydevday/en/index.html"> <img src="https://i.imgur.com/Oz6x6GY.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/2019-08-12-tidydevday/en/index.html">
-<h3 class="no-anchor listing-title">
-Tidyverse developer day 2019 (tidy-dev-day)
-</h3>
-<div class="listing-subtitle">
-The experience of participating in the Tidyverse Developer Day 2019.
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
-Events
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('tidyverse'); return false;">
-tidyverse
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
-RStudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R Packages'); return false;">
-R Packages
-</div>
-</div>
-<a href="../posts/2019-08-12-tidydevday/en/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="../posts/2019-08-12-tidydevday/en/index.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
-Jul 8, 2022
+Apr 28, 2021
 </div>
-<div class="listing-author">
-Beatriz Milz, Angélica Custódio
 </div>
-<div class="listing-reading-time">
-5 min
+</div>
 </div>
 </a>
 </div>
+<div class="g-col-1" data-index="3" data-categories="Teaching" data-listing-date-sort="1600830000000" data-listing-file-modified-sort="1658706616436" data-listing-reading-time-sort="0.06">
+<a href="../talks/en/2020-RStudio-certification/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../talks/en/2020-RStudio-certification/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Adding figures in R Markdown
+</h5>
+<div class="card-subtitle listing-subtitle">
+Teaching exam - RStudio
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1658706616390" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="../posts/series-gha/2022-series-gha-1-what-is/en/index.html"> <img src="../posts/series-gha/2022-series-gha-1-what-is/en/featured.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/series-gha/2022-series-gha-1-what-is/en/index.html">
-<h3 class="no-anchor listing-title">
-Introduction to GitHub Actions to R users
-</h3>
-<div class="listing-subtitle">
-GitHub Actions Series 1 - In this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R.
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Git'); return false;">
-Git
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
-GitHub
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
-GitHub Actions
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Automations'); return false;">
-Automations
-</div>
-</div>
-<a href="../posts/series-gha/2022-series-gha-1-what-is/en/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="../posts/series-gha/2022-series-gha-1-what-is/en/index.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
-Jun 30, 2022
+Sep 23, 2020
 </div>
-<div class="listing-author">
-Beatriz Milz
 </div>
-<div class="listing-reading-time">
-5 min
+</div>
 </div>
 </a>
 </div>
+<div class="g-col-1" data-index="4" data-categories="Study,R-Ladies,Communities" data-listing-date-sort="1588561200000" data-listing-file-modified-sort="1658706616447" data-listing-reading-time-sort="0.14">
+<a href="../talks/es/2020-funciones-r4ds/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../talks/es/2020-funciones-r4ds/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Funciones - R para Ciencia de Datos
+</h5>
+<div class="card-subtitle listing-subtitle">
+Grupo de Estudios para la Certificación de RStudio
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Teaching,RStudio,Communities,Translation" data-listing-date-sort="1654657200000" data-listing-file-modified-sort="1658706616239" data-listing-reading-time-sort="8.005">
-<div class="thumbnail">
-<p><a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html"> <img src="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/featured-photo.jpeg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html">
-<h3 class="no-anchor listing-title">
-RStudio Instructor Training and Certification
-</h3>
-<div class="listing-subtitle">
-This post describes how I studied and did the RStudio Instructor Training and Certification.
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
-Teaching
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
-RStudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Translation'); return false;">
-Translation
-</div>
-</div>
-<a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
-Jun 8, 2022
+May 4, 2020
 </div>
-<div class="listing-author">
-Beatriz Milz
 </div>
-<div class="listing-reading-time">
-8 min
+</div>
 </div>
 </a>
 </div>
+<div class="g-col-1" data-index="5" data-categories="Talks,R-Ladies,Communities" data-listing-date-sort="1562814000000" data-listing-file-modified-sort="1658706616433" data-listing-reading-time-sort="0.06">
+<a href="../talks/en/2019-user-rladies-sp/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../talks/en/2019-user-rladies-sp/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The evolution and importance of the R-Ladies São Paulo chapter in Brazil
+</h5>
+<div class="card-subtitle listing-subtitle">
+useR 2019
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Quarto,Tutorial,Blog" data-listing-date-sort="1654398000000" data-listing-file-modified-sort="1658706616386" data-listing-reading-time-sort="14.275">
-<div class="thumbnail">
-<p><a href="../posts/2022-06-05-creating-a-blog-with-quarto/en/index.html"> <img src="../posts/2022-06-05-creating-a-blog-with-quarto/en/img/search.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/2022-06-05-creating-a-blog-with-quarto/en/index.html">
-<h3 class="no-anchor listing-title">
-Creating a blog with Quarto in 10 steps
-</h3>
-<div class="listing-subtitle">
-In this post, I introduce you to my new blog and show how you can create a blog with Quarto for R users.
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
-Quarto
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
-Tutorial
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Blog'); return false;">
-Blog
-</div>
-</div>
-<a href="../posts/2022-06-05-creating-a-blog-with-quarto/en/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="../posts/2022-06-05-creating-a-blog-with-quarto/en/index.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
-Jun 5, 2022
+Jul 11, 2019
 </div>
-<div class="listing-author">
-Beatriz Milz
 </div>
-<div class="listing-reading-time">
-14 min
+</div>
 </div>
 </a>
 </div>
+<div class="g-col-1" data-index="6" data-categories="R Markdown,knitr,Teaching" data-listing-date-sort="1543975200000" data-listing-file-modified-sort="1658706616427" data-listing-reading-time-sort="0.085">
+<a href="../talks/en/2018-knitr-codata/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../talks/en/2018-knitr-codata/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Producing Reports with knitr and R
+</h5>
+<div class="card-subtitle listing-subtitle">
+CODATA-RDA School of Research Data Science
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Dec 5, 2018
+</div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">

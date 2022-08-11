@@ -11,6 +11,7 @@ main, p{
 
 :root {
     --bs-blue: #9172be;
+    --bs-primary: #eb6864;
 }
 
 div.quarto-post .thumbnail img {
@@ -139,4 +140,19 @@ div.quarto-about-trestles .about-entity .about-link:hover {
 
 .nav-link {
     color: var(--bs-purple);
+}
+
+.btn-primary:hover {
+  color: #000;
+  background-color: #f0f1ff;
+  border-color: #f0f1ff;
+  padding: .375rem .75rem;
+  font-size: 1.1rem !important;
+  margin-top: -9px;
+}
+
+.btn-primary {
+  padding: .375rem .75rem;
+  font-size: 1.1rem !important;
+  margin-top: -9px;
 }
