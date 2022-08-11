@@ -17,7 +17,17 @@ include-in-header: meta.html
 toc: true
 ---
 
+
+## Next activities
+
+-   29th October, 2022 - 8pm WAT - Running code while we're sleeping: Introduction to GitHub Actions for R users - [R-Ladies Abuja](https://www.meetup.com/pt-BR/rladies-abuja/)
+
+## Próximas atividades
+
+-   2022 - Cursos na [Curso-R](https://curso-r.com/): Relatórios e apresentações (agosto), Web scraping (setembro), Visualização de dados (outubro), Relatórios e apresentações (novembro), Deploy (dezembro). [Formulário de bolsas](https://forms.gle/9t1JGHLH3TBdzUFLA).
+
 ## Talks/Palestras
+
 
 ::: {#talks}
 :::

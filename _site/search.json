@@ -1397,7 +1397,7 @@
     "href": "talks/en/index.html",
     "title": "Talks",
     "section": "",
-    "text": "Next activities:\n\n29th October, 2022 - 8pm WAT - Running code while we’re sleeping: Introduction to GitHub Actions for R users - R-Ladies Abuja\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\n\nTalks\n\n\nGitHub Actions\n\n\nGitHub\n\n\n\n\n\n\n\n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n\nTalks\n\n\nlearnr\n\n\nTeaching\n\n\ngradethis\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2021\n\n\nBeatriz Milz, Fernando Correa\n\n\n\n\n\n\n  \n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n\nCommunities\n\n\nR-Ladies\n\n\n\n\n\n\n\n\n\n\n\nApr 28, 2021\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nSep 23, 2020\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n\nTalks\n\n\nR-Ladies\n\n\nCommunities\n\n\n\n\n\n\n\n\n\n\n\nJul 11, 2019\n\n\nBeatriz Milz, Bruna Wundervald\n\n\n\n\n\n\n  \n\n\n\n\nProducing Reports with knitr and R\n\n\nCODATA-RDA School of Research Data Science\n\n\n\n\nR Markdown\n\n\nknitr\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2018\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nrstudio::conf(2022)\n\n\n\n\nTalks\n\n\nGitHub Actions\n\n\nGitHub\n\n\n\n\n\n\n\n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\n\nLatinR 2021\n\n\n\n\nTalks\n\n\nlearnr\n\n\nTeaching\n\n\ngradethis\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2021\n\n\nBeatriz Milz, Fernando Correa\n\n\n\n\n\n\n  \n\n\n\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n\nCommunities\n\n\nR-Ladies\n\n\n\n\n\n\n\n\n\n\n\nApr 28, 2021\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\n\nTeaching exam - RStudio\n\n\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nSep 23, 2020\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\n\nuseR 2019\n\n\n\n\nTalks\n\n\nR-Ladies\n\n\nCommunities\n\n\n\n\n\n\n\n\n\n\n\nJul 11, 2019\n\n\nBeatriz Milz, Bruna Wundervald\n\n\n\n\n\n\n  \n\n\n\n\n\nCODATA-RDA School of Research Data Science\n\n\n\n\nR Markdown\n\n\nknitr\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2018\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/en/2018-knitr-codata/index.html",
@@ -1523,6 +1523,20 @@
     "href": "talks/index.html",
     "title": "Bea Milz",
     "section": "",
-    "text": "rstudio::conf(2022)\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLatinR 2021\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMeetup R-Ladies and useR 2021\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeaching exam - RStudio\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\nMay 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nuseR 2019\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCODATA-RDA School of Research Data Science\n\n\n\nDec 5, 2018\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "29th October, 2022 - 8pm WAT - Running code while we’re sleeping: Introduction to GitHub Actions for R users - R-Ladies Abuja"
+  },
+  {
+    "objectID": "talks/index.html#próximas-atividades",
+    "href": "talks/index.html#próximas-atividades",
+    "title": "Bea Milz",
+    "section": "Próximas atividades",
+    "text": "Próximas atividades\n\n2022 - Cursos na Curso-R: Relatórios e apresentações (agosto), Web scraping (setembro), Visualização de dados (outubro), Relatórios e apresentações (novembro), Deploy (dezembro). Formulário de bolsas."
+  },
+  {
+    "objectID": "talks/index.html#talkspalestras",
+    "href": "talks/index.html#talkspalestras",
+    "title": "Bea Milz",
+    "section": "Talks/Palestras",
+    "text": "Talks/Palestras\n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\nMay 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\nCODATA-RDA School of Research Data Science\n\n\n\nDec 5, 2018\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -11,11 +11,3 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
-
-I have been giving talks since 2018, but mostly in Portuguese. Those presentations are available in my [blog in Portuguese](https://beatrizmilz.com/talk/). Here you can find my presentations that were in English. :) Enjoy!
-
-------------------------------------------------------------------------
-
-**Next activities**:
-
--   29th October, 2022 - 8pm WAT - Running code while we're sleeping: Introduction to GitHub Actions for R users - [R-Ladies Abuja](https://www.meetup.com/pt-BR/rladies-abuja/)
