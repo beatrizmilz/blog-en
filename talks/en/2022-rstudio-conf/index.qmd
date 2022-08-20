@@ -11,14 +11,14 @@ toc: true
 
 -   Event: [rstudio::conf(2022)](https://www.rstudio.com/conference/2022/schedule/)
 
--   [Talk in conference schedule](https://sched.co/11ia9)
+-   [Talk video](https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/)
+
 
 -   [Slides](https://beatrizmilz.github.io/rstudioconf2022/)
 
 ## Complementary materials
 
 -   [Blog post: How important is GitHub Actions to RStudio/Posit? Code for a plot in my talk!](https://beamilz.com/posts/series-gha/2022-07-28-github-actions-rstudio/en/)
-
 
 -   [Blog post: Introduction to GitHub Actions to R users](https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/en/)
 
@@ -36,4 +36,4 @@ toc: true
 
 -   [Slides](https://beatrizmilz.github.io/rstudioconf2022/):
 
-[![](featured.png){fig-align="center"}](https://beatrizmilz.github.io/rstudioconf2022/)
+[![](featured.png){fig-align="center"}](https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/)
