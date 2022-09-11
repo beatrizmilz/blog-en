@@ -1,0 +1,124 @@
+---
+title: "Não escreva senhas nos scripts!"
+subtitle: ""
+author: "Beatriz Milz"
+date: "2022-09-11"
+categories: ["Tutorial"]
+image: "askforpassword.png"
+toc: true
+draft: true
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+## Introdução
+
+As vezes precisamos usar alguma senha para rodar o códgo, como por exemplo ao usar uma API que solicita autenticação. Mas isso significa que devemos escrever a senha no próprio script `.R`, por exemplo?
+
+**Não!** Inclusive isso é um pouco perigoso. Imagina armazenar a senha para um serviço pago, esquecer e disponibilizar o script no GitHub? É receita para receber uma notificação do cartão de crédito cobrando algo que nem usamos... É, já ouvi casos assim!
+
+Então neste post trago algumas dicas para evitar salvar as senhas nos scripts quando estiver programando.
+
+## Variáveis de ambiente
+
+Uma forma de fazer isso é com as variáveis de ambiente. TODO: O QUE SÃO VARIÁVEIS DE AMBIENTE?
+
+A função `Sys.setenv()` permite que você salve a senha/token nas variáveis de ambiente. Cuidado, rode essa etapa no console e não salve no script (pois justamente queremos não armazenar as senhas no script, certo?).
+
+```{r}
+Sys.setenv(MINHA_SENHA = 1234)
+```
+
+Para buscar o valor salvo na variável, pode usar a função `Sys.getenv()`. Essa função podemos usar no nosso script sem problemas!
+
+```{r}
+Sys.getenv("MINHA_SENHA")
+```
+
+## Indo além com a ajuda do usethis
+
+As variáveis de ambiente podem ser vinculadas ao `.Rproj` ativo, ou ao usuário do computador. Elas ficam salvas no arquivo `.Renviron`. Para abrir o arquivo e ver as variáveis de ambiente salvas, você pode usar a função `usethis::edit_r_environ()`:
+
+```{r}
+#| eval: false
+# Abre as variáveis de ambiente para o usuário do computador
+usethis::edit_r_environ(scope = "user")
+#> • Modify '/Users/beatrizmilz/.Renviron'
+#> • Restart R for changes to take effect
+
+# Abre as variáveis de ambiente para o projeto ativo
+usethis::edit_r_environ(scope = "project")
+#> ✔ Setting active project to '/Users/beatrizmilz/Documents/GitHub/blog-en'
+#> • Modify '.Renviron'
+#> • Restart R for changes to take effect
+```
+
+O padrão para armazenar variáveis neste arquivo é:
+
+    NOME_VAR='SENHAAQUI12345'
+
+**Atenção!** Depois de alterar o arquivo `.Renviron`, é necessário reiniciar o R para que as mudanças sejam consideradas. Isso porque esse arquivo é carregado ao iniciar o R.
+
+**Atenção 2**: Caso você use um arquivo `.Renviron` vinculado ao seu projeto `.Rproj`, cuidado ao subir esse arquivo para o GitHub, é perigoso pois pessoas poderão ver suas senhas. Se o seu repositório for público, é essencial que você adicione ele no `.gitignore`, assim ele será ignorado pelo Git. A função `usethis::use_git_ignore()` pode nos ajudar nisso:
+
+
+```{r}
+#| eval: false
+usethis::use_git_ignore(".Renviron")
+#> ✔ Adding '.Renviron' to '.gitignore'
+```
+
+## Solicitar a senha
+
+E quando queremos que a pessoa usuária possa sempre escrever a senha? Existe uma função para isso: `rstudioapi::askForPassword()`. Podemos inclusive escrever a frase que será mostrada ao perguntar a senha. A senha digitada será retornada como um texto, e podemos salvar em um objeto para utilizar posteriormente no que for necessário.
+
+```{r}
+#| eval: false
+senha_informada <- rstudioapi::askForPassword(
+  "Escreva sua senha por favor!"
+  )
+```
+
+![Pop up feito pela função ask for password.](askforpassword.png){fig-align="center" width="90%"}
+
+## GitHub Actions
+
+E quando precisamos usar senhas em códigos rodados através do GitHub Actions? Se você não conhece nada sobre GHA, [eu tenho alguns posts sobre isso](series-gha.qmd)!
+
+Quando estamos usando GHA, podemos adicionar senhas na sessão SECRETS do GitHub. Assim ninguém (exceto você, quando cria um SECRETS), verá a senha/credenciais.
+
+Isso fica nas configurações do repositório, e o link usa esse padrão:
+```
+https://github.com/SEU-USUARIO/SEU-REPOSITORIO/settings/secrets/actions
+```
+
+Exemplo de um repositório privado meu:
+
+![Print screen da página de secrets.](githubsecrets.png){fig-align="center" width="90%"}
+
+Também é preciso adaptar o código do action para buscar essa variável no Secrets. Exemplo de código:
+
+```
+      - name: Execute Script
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+          NOME_VAR: ${{ secrets.NOME_VAR }}
+        run: |
+          Rscript "seu_script.R"
+```
+
+Com isso é possível acessar essas variáveis com senha, no script usando a função `Sys.getenv('NOME_VAR')` que mostrei acima.
+
+## Mais camadas de segurança
+
+TODO https://httr2.r-lib.org/articles/wrapping-apis.html#secret-management
+
+
+## Conclusão
+
+Esperamos que este post seja interessante para você, e que as suas senhas estejam sempre protegidas! Bons estudos e até a próxima!
