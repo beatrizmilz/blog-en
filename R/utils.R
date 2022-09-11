@@ -8,6 +8,8 @@ rename_md_to_qmd <- function(folder = "talks/pt"){
   qmd_files <- stringr::str_replace(md_files, "\\.md",".qmd")
 
   fs::file_move(md_files, qmd_files)
+
+  qmd_files
 }
 
 
@@ -62,16 +64,6 @@ toc: true",
   print(input_file)
 }
 
-# folder = "talks/pt"
-# folders <- list.dirs(folder, full.names = TRUE)
-# qmd_files <- folders |>
-#   list.files(pattern = "\\.qmd", full.names = TRUE)
-# input_file <- qmd_files[1]
-# alterar_yaml(input_file)
-
-
-
-
 read_yaml_matter <- function(input_file) {
   # https://stackoverflow.com/questions/62095329/how-to-edit-an-r-markdown-yaml-header-programmatically/62096216#62096216
   input_lines <- readLines(input_file)
@@ -119,7 +111,7 @@ read_yaml_talks_pt <- function(){
     for (position in 1:length(yaml_atual$links)) {
       item <- yaml_atual$links[[position]]
 
-      if(item$icon_pack %in% c("fas", "far")){
+      if(item$icon_pack %in% c("fas", "far", "fa")){
         item$icon_pack <- "solid"
       } else if(item$icon_pack == "fab"){
         item$icon_pack <- "brands"
@@ -138,6 +130,12 @@ read_yaml_talks_pt <- function(){
 }
 
 
+convert_apero_talks_to_quarto <- function(folder = "talks/pt") {
+  arquivos <- rename_md_to_qmd()
+
+  arquivos |>
+    purrr::walk(alterar_yaml)
+}
 
 
 

@@ -142,7 +142,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/talks/pt/index.html</loc>
-    <lastmod>2022-09-11T19:41:07.528Z</lastmod>
+    <lastmod>2022-09-11T20:24:25.051Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/es/index.html</loc>
@@ -182,7 +182,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/index.html</loc>
-    <lastmod>2022-09-11T19:41:09.205Z</lastmod>
+    <lastmod>2022-09-11T20:24:26.630Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/about.html</loc>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/talks/index.html</loc>
-    <lastmod>2022-09-11T19:41:09.784Z</lastmod>
+    <lastmod>2022-09-11T20:24:27.218Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2022-08-12-rstudio-conf/pt/index.html</loc>
@@ -219,5 +219,13 @@
   <url>
     <loc>https://beamilz.com/talks/pt/2021-blogdown-apero/index.html</loc>
     <lastmod>2022-09-11T19:41:07.004Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2022-05-cebrap-lab-intro-R/index.html</loc>
+    <lastmod>2022-09-11T20:22:25.841Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2022-ser-uff/index.html</loc>
+    <lastmod>2022-09-11T20:24:24.531Z</lastmod>
   </url>
 </urlset>
