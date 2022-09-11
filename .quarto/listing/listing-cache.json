@@ -29,7 +29,8 @@
       "talks/**",
       "talks/**.qmd",
       "talks/{pt,es,en}/**/*.qmd",
-      "talks/{pt,es,en}/*/index.qmd"
+      "talks/{pt,es,en}/*/index.qmd",
+      "posts/**/*/index.qmd"
     ],
     "series-gha.qmd": [
       "posts/series-gha/*/en/*.qmd",
@@ -39,6 +40,10 @@
     "talks/index.qmd": [
       "talks/{pt,es,en}/*/index.qmd",
       "{pt,es,en}/*/index.qmd"
+    ],
+    "posts/index.qmd": [
+      "posts/**/*/index.qmd",
+      "**/*/index.qmd"
     ]
   }
 }

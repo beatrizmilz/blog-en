@@ -130,5 +130,41 @@
       "/talks/en/2019-user-rladies-sp/index.html",
       "/talks/en/2018-knitr-codata/index.html"
     ]
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/2022-08-12-rstudio-conf/pt/index.html",
+      "/posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html",
+      "/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
+      "/posts/2019-08-12-tidydevday/en/index.html",
+      "/posts/series-gha/2022-series-gha-1-what-is/en/index.html",
+      "/posts/series-gha/2022-series-gha-1-what-is/es/index.html",
+      "/posts/series-gha/2022-series-gha-1-what-is/pt/index.html",
+      "/posts/2022-06-11-bases-de-dados/pt/index.html",
+      "/posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html",
+      "/posts/2022-06-05-creating-a-blog-with-quarto/en/index.html",
+      "/posts/2022-04-06-pacote-dados/pt/index.html",
+      "/posts/2022-03-18-onedrive/pt/index.html",
+      "/posts/2022-03-08-googlesheets4/pt/index.html",
+      "/posts/2022-02-19-api-github-1/pt/index.html",
+      "/posts/2021-11-29-api-pokemon/pt/index.html",
+      "/posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html",
+      "/posts/2021-05-24-naruto/pt/index.html",
+      "/posts/2021-05-18-experimentando-o-r-410/pt/index.html",
+      "/posts/2021-03-29-desvendando-erros/pt/index.html",
+      "/posts/2021-03-15-dicas-03-relatorio/pt/index.html",
+      "/posts/2021-03-07-estudando-bibliometrix/pt/index.html",
+      "/posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html",
+      "/posts/2020-12-17-dicas-02-graficos/pt/index.html",
+      "/posts/2020-12-03-dicas-01-tabelas/pt/index.html",
+      "/posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/index.html",
+      "/posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/index.html",
+      "/posts/2019-08-31-um-ano-aprendendo-r/pt/index.html",
+      "/posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/index.html",
+      "/posts/2019-08-12-tidydevday/pt/index.html",
+      "/posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/index.html",
+      "/posts/2019-01-29-meio-ano-r/pt/index.html"
+    ]
   }
 ]

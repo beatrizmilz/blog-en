@@ -27,7 +27,16 @@ listing:
     categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 3      
+    page-size: 3  
+  - id: posts
+    contents: posts/**/*/index.qmd
+    type: grid
+    fields: [image, date, title]
+    sort: "date desc"
+    categories: cloud
+    sort-ui: false
+    filter-ui: false
+    page-size: 3          
   - id: posts-es
     contents: posts/**/es/*.qmd
     type: default
@@ -43,8 +52,16 @@ comments: false
 include-in-header: meta.html  
 toc: true
 ---
+## Recent posts / Posts recentes
 
-## Talks/Palestras 
+::: {#posts}
+:::
+
+ <a href="../posts/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a>
+
+<br>
+
+## Recent Talks / Palestras recentes
 
 
 <a href="../talks/index.html"> <button type="button" class="btn btn-danger float-end btn-sm">Next activities/Atividades futuras</button></a><br>
@@ -55,6 +72,9 @@ toc: true
 :::
 
  <a href="../talks/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todas</button></a>
+
+
+
 
 ## Posts in English
 

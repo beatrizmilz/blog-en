@@ -23,7 +23,7 @@ website:
       - text: Posts
         menu:
           - text: All posts
-            href: /
+            href: posts/index.qmd
           - text: English
             href: posts/en.qmd
           - text: Português
