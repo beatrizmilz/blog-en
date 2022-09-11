@@ -7,8 +7,8 @@ listing:
     fields: [image, date, title, subtitle]
     sort: "date desc"
     categories: cloud
-    sort-ui: false
-    filter-ui: false
+    sort-ui: true
+    filter-ui: true
     page-size: 36     
 page-layout: full
 title-block-banner: false

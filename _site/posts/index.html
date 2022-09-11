@@ -245,6 +245,28 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-talks">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-talks-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-talks'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-categories="Community,RStudio,Events" data-listing-date-sort="1660273200000" data-listing-file-modified-sort="1662914904799" data-listing-reading-time-sort="14.955">
 <a href="../posts/2022-08-12-rstudio-conf/pt/index.html" class="quarto-grid-link">

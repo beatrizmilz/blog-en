@@ -145,7 +145,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
         <li>
-    <a class="dropdown-item" href="../">
+    <a class="dropdown-item" href="../posts/index.html">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
@@ -263,6 +263,28 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <section id="talkspalestras" class="level2">
 <h2 class="anchored" data-anchor-id="talkspalestras">Talks/Palestras</h2>
 <div id="listing-talks" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-talks-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-talks'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-categories="Talks,GitHub Actions,GitHub" data-listing-date-sort="1658977200000" data-listing-file-modified-sort="1661035590918" data-listing-reading-time-sort="0.74">
 <a href="../talks/en/2022-rstudio-conf/index.html" class="quarto-grid-link">
