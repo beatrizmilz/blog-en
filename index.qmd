@@ -44,12 +44,17 @@ include-in-header: meta.html
 toc: true
 ---
 
-## Talks/Palestras
+## Talks/Palestras 
+
+
+<a href="../talks/index.html"> <button type="button" class="btn btn-danger float-end btn-sm">Next activities/Atividades futuras</button></a><br>
+
+
 
 ::: {#talks}
 :::
 
-<a href="../talks/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todas</button></a>
+ <a href="../talks/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todas</button></a>
 
 ## Posts in English
 
@@ -59,8 +64,6 @@ toc: true
 <a href="../posts/en.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a>
 
 ## Posts em Português
-
-
 
 ::: {#posts-ptbr}
 :::
