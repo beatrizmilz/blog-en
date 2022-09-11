@@ -135,9 +135,6 @@ convert_apero_talks_to_quarto <- function(folder = "talks/pt") {
 
   arquivos |>
     purrr::walk(alterar_yaml)
+
 }
-
-
-
-
 

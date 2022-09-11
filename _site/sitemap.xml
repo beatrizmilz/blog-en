@@ -142,11 +142,11 @@
   </url>
   <url>
     <loc>https://beamilz.com/talks/pt/index.html</loc>
-    <lastmod>2022-09-11T20:24:25.051Z</lastmod>
+    <lastmod>2022-09-11T20:34:30.589Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/es/index.html</loc>
-    <lastmod>2022-08-11T12:50:58.703Z</lastmod>
+    <lastmod>2022-09-11T20:34:51.461Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/es/2020-funciones-r4ds/index.html</loc>
@@ -166,7 +166,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/talks/en/index.html</loc>
-    <lastmod>2022-09-11T17:46:26.488Z</lastmod>
+    <lastmod>2022-09-11T20:34:37.240Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/en/2018-knitr-codata/index.html</loc>
@@ -182,7 +182,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/index.html</loc>
-    <lastmod>2022-09-11T20:24:26.630Z</lastmod>
+    <lastmod>2022-09-11T20:34:58.670Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/about.html</loc>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/talks/index.html</loc>
-    <lastmod>2022-09-11T20:24:27.218Z</lastmod>
+    <lastmod>2022-09-11T20:34:56.660Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2022-08-12-rstudio-conf/pt/index.html</loc>
@@ -227,5 +227,149 @@
   <url>
     <loc>https://beamilz.com/talks/pt/2022-ser-uff/index.html</loc>
     <lastmod>2022-09-11T20:24:24.531Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-3rday-xaringan/index.html</loc>
+    <lastmod>2022-09-11T20:32:43.683Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-learnr-latinr/index.html</loc>
+    <lastmod>2022-09-11T20:28:22.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-colaborando-com-a-comunidade-hacktoberfest-curso-r/index.html</loc>
+    <lastmod>2022-09-11T20:28:24.345Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-github-actions-gyn/index.html</loc>
+    <lastmod>2022-09-11T20:28:26.230Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-workflow-r4ds/index.html</loc>
+    <lastmod>2022-09-11T20:28:28.047Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-jornalismo-com-r/index.html</loc>
+    <lastmod>2022-09-11T20:28:29.877Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-ser-uff/index.html</loc>
+    <lastmod>2022-09-11T20:28:31.690Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-git-e-github-gyn/index.html</loc>
+    <lastmod>2022-09-11T20:28:34.023Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-experiencia-useR/index.html</loc>
+    <lastmod>2022-09-11T20:28:35.840Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-git-github-ence/index.html</loc>
+    <lastmod>2022-09-11T20:28:37.806Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-python-brasil/index.html</loc>
+    <lastmod>2022-09-11T20:28:39.555Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-intro-R-senacamb/index.html</loc>
+    <lastmod>2022-09-11T20:28:41.316Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-rmarkdown-ai-inclusive/index.html</loc>
+    <lastmod>2022-09-11T20:28:43.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-ufv-R/index.html</loc>
+    <lastmod>2022-09-11T20:28:44.904Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2021-learnr-pet-ufpr/index.html</loc>
+    <lastmod>2022-09-11T20:28:46.777Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2018-introducao-r-ufabc/index.html</loc>
+    <lastmod>2022-09-11T20:32:49.330Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2018-knitr-codata/index.html</loc>
+    <lastmod>2022-09-11T20:30:29.046Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2018-r-desafios-macroamb/index.html</loc>
+    <lastmod>2022-09-11T20:30:36.611Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2018-xaringan-rladies-sp/index.html</loc>
+    <lastmod>2022-09-11T20:30:43.870Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2019-carpentries-satrday/index.html</loc>
+    <lastmod>2022-09-11T20:30:51.091Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2019-git-github-saopaulo/index.html</loc>
+    <lastmod>2022-09-11T20:30:58.712Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-user-latin-america/index.html</loc>
+    <lastmod>2022-09-11T20:32:16.458Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-hacktoberfest/index.html</loc>
+    <lastmod>2022-09-11T20:32:18.308Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-rmarkdown-geocast/index.html</loc>
+    <lastmod>2022-09-11T20:32:20.089Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-RStudio-certification/index.html</loc>
+    <lastmod>2022-09-11T20:32:21.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2019-vis-nerdzao/index.html</loc>
+    <lastmod>2022-09-11T20:32:23.811Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-git-e-github-gyn/index.html</loc>
+    <lastmod>2022-09-11T20:32:26.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-xaringan-ime-usp-amostra/index.html</loc>
+    <lastmod>2022-09-11T20:32:27.756Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2019-xaringan-ser-uff/index.html</loc>
+    <lastmod>2022-09-11T20:32:29.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-python-brasil/index.html</loc>
+    <lastmod>2022-09-11T20:32:31.354Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-colaborando-com-a-comunidade-curso-r/index.html</loc>
+    <lastmod>2022-09-11T20:32:33.114Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-dplyr-joins-curso-r/index.html</loc>
+    <lastmod>2022-09-11T20:32:34.761Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-xaringan-ime-usp/index.html</loc>
+    <lastmod>2022-09-11T20:32:36.489Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-xaringan-latinr/index.html</loc>
+    <lastmod>2022-09-11T20:32:38.238Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-funciones-r4ds/index.html</loc>
+    <lastmod>2022-09-11T20:32:40.042Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/pt/2020-intro-R-Curitiba/index.html</loc>
+    <lastmod>2022-09-11T20:32:41.882Z</lastmod>
   </url>
 </urlset>

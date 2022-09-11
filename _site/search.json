@@ -1355,14 +1355,14 @@
     "href": "talks/pt/index.html",
     "title": "Apresentações em português",
     "section": "",
-    "text": "Minhas apresentações anteriores estão neste link. Aos poucos irei migrar o conteúdo para essa página :)\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\n\n\n\n\nPalestra\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\n\n\n\n\nTreinamento\n\n\n\n\n\n\n\n\n\n\n\nMay 20, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\n\n\n\n\nApresentação\n\n\n\n\n\n\n\n\n\n\n\nMay 12, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\nCurso\n\n\n\n\n\n\n\n\n\n\n\nMay 9, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\nCurso\n\n\n\n\n\n\n\n\n\n\n\nFeb 2, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\n\nLives no Youtube\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2021\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
+    "text": "Minhas apresentações anteriores estão neste link. Aos poucos irei migrar o conteúdo para essa página :)\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\n\n\n\n\n\n\nMay 25, 2022\n\n\n\n\n\n\n  \n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\n\n\n\n\n\n\nMay 20, 2022\n\n\n\n\n\n\n  \n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\n\n\n\n\n\n\nMay 12, 2022\n\n\n\n\n\n\n  \n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n\nMay 9, 2022\n\n\n\n\n\n\n  \n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n\nFeb 2, 2022\n\n\n\n\n\n\n  \n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n\n\n\n\n\n\nNov 26, 2021\n\n\n\n\n\n\n  \n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\n\n\n\n\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n  \n\n\n\n\nLinguagem R para Cientistas Ambientais\n\n\n\n\n\n\n\n\n\nNov 8, 2021\n\n\n\n\n\n\n  \n\n\n\n\nComunicando os resultados de projetos em Ciência de Dados\n\n\nConhecendo o R Markdown\n\n\n\n\n\n\nOct 22, 2021\n\n\n\n\n\n\n  \n\n\n\n\nColaborando com a Comunidade - Especial Hacktoberfest\n\n\n\n\n\n\n\n\n\nOct 13, 2021\n\n\n\n\n\n\n  \n\n\n\n\nFazendo amizade com a Python reticulada\n\n\nIntrodução ao uso de Python e R no RStudio com o pacote reticulate\n\n\n\n\n\n\nOct 13, 2021\n\n\n\n\n\n\n  \n\n\n\n\nComo aprender R tem sido importante na minha trajetória como Gestora Ambiental\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\n\n\n\n\n  \n\n\n\n\nIntrodução ao GitHub Actions\n\n\n\n\n\n\n\n\n\nSep 18, 2021\n\n\n\n\n\n\n  \n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n\n\n\n\n\n\nSep 11, 2021\n\n\n\n\n\n\n  \n\n\n\n\nFaça apresentações ninja em R\n\n\nConhecendo o pacote xaringan\n\n\n\n\n\n\nSep 9, 2021\n\n\n\n\n\n\n  \n\n\n\n\nJornalismo com R\n\n\n\n\n\n\n\n\n\nAug 29, 2021\n\n\n\n\n\n\n  \n\n\n\n\nCriando tutoriais interativos com R\n\n\nConhecendo o pacote learnr\n\n\n\n\n\n\nAug 13, 2021\n\n\n\n\n\n\n  \n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\n\n\n\nJul 30, 2021\n\n\n\n\n\n\n  \n\n\n\n\nCapítulos de Workflow do livro R for Data Science\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\n\n\n\nJul 14, 2021\n\n\n\n\n\n\n  \n\n\n\n\nColeta de dados automatizada e integração contínua utilizando GitHub Actions\n\n\nExemplos com o Pacote Mananciais\n\n\n\n\n\n\nJun 10, 2021\n\n\n\n\n\n\n  \n\n\n\n\nMinha experiência na useR! 2019\n\n\nApresentado em Inglês\n\n\n\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n  \n\n\n\n\nEnsino de programação - Como fazer parte da comunidade global The Carpentries?\n\n\n\n\n\n\n\n\n\nNov 4, 2020\n\n\n\n\n\n\n  \n\n\n\n\ndplyr joins - Juntando bases de dados\n\n\n\n\n\n\n\n\n\nNov 3, 2020\n\n\n\n\n\n\n  \n\n\n\n\nComunicando seus resultados em R\n\n\nAprenda a criar apresentações reprodutíveis\n\n\n\n\n\n\nOct 19, 2020\n\n\n\n\n\n\n  \n\n\n\n\nAprenda a usar Git e GitHub no RStudio!\n\n\nR-Ladies SP na Hacktoberfest\n\n\n\n\n\n\nOct 17, 2020\n\n\n\n\n\n\n  \n\n\n\n\nR Markdown\n\n\nUsando o R para comunicar seus resultados\n\n\n\n\n\n\nSep 29, 2020\n\n\n\n\n\n\n  \n\n\n\n\nAdding figures in R Markdown\n\n\nApresentado em Inglês\n\n\n\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n  \n\n\n\n\nColaborando com a Comunidade\n\n\n\n\n\n\n\n\n\nSep 10, 2020\n\n\n\n\n\n\n  \n\n\n\n\nGit e GitHub no RStudio\n\n\n\n\n\n\n\n\n\nAug 27, 2020\n\n\n\n\n\n\n  \n\n\n\n\nIntrodução a Linguagem R\n\n\n\n\n\n\n\n\n\nAug 27, 2020\n\n\n\n\n\n\n  \n\n\n\n\nCommunities of practice in Latin America\n\n\nR and Friends\n\n\n\n\n\n\nJul 8, 2020\n\n\n\n\n\n\n  \n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de estudos para a RStudio Certification\n\n\n\n\n\n\nMay 4, 2020\n\n\n\n\n\n\n  \n\n\n\n\nThe Carpentries\n\n\n\n\n\n\n\n\n\nNov 30, 2019\n\n\n\n\n\n\n  \n\n\n\n\nApresentações no R ⚔ com xaringan\n\n\n\n\n\n\n\n\n\nSep 17, 2019\n\n\n\n\n\n\n  \n\n\n\n\nPrimeiros passos utilizando o Git e GitHub no RStudio\n\n\n\n\n\n\n\n\n\nSep 12, 2019\n\n\n\n\n\n\n  \n\n\n\n\nIntrodução ao pacote xaringan - Criando apresentações com R\n\n\n\n\n\n\n\n\n\nAug 27, 2019\n\n\n\n\n\n\n  \n\n\n\n\nDashboards, gráficos, mapas - Possibilidades de visualização de dados com R\n\n\n\n\n\n\n\n\n\nAug 2, 2019\n\n\n\n\n\n\n  \n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nLightning Talk - Education & community\n\n\n\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n  \n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n\n\n\n\n\n\nMay 20, 2019\n\n\n\n\n\n\n  \n\n\n\n\nProducing Reports with knitr and R\n\n\n\n\n\n\n\n\n\nDec 5, 2018\n\n\n\n\n\n\n  \n\n\n\n\nOficina de Introdução ao R\n\n\n\n\n\n\n\n\n\nNov 29, 2018\n\n\n\n\n\n\n  \n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n\n\n\n\n\n\nNov 21, 2018\n\n\n\n\n\n\n  \n\n\n\n\nR e Desafios no Projeto Temático - Oficina de Introdução ao R\n\n\n\n\n\n\n\n\n\nOct 17, 2018\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/es/index.html",
     "href": "talks/es/index.html",
     "title": "Presentaciones en español",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\n\nStudy\n\n\nR-Ladies\n\n\nCommunities\n\n\n\n\n\n\n\n\n\n\n\nMay 4, 2020\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\n\n\n\nMay 4, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/es/2020-funciones-r4ds/index.html",
@@ -1397,7 +1397,7 @@
     "href": "talks/en/index.html",
     "title": "Talks",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nrstudio::conf(2022)\n\n\n\n\nTalks\n\n\nGitHub Actions\n\n\nGitHub\n\n\n\n\n\n\n\n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\n\nLatinR 2021\n\n\n\n\nTalks\n\n\nlearnr\n\n\nTeaching\n\n\ngradethis\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2021\n\n\nBeatriz Milz, Fernando Correa\n\n\n\n\n\n\n  \n\n\n\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n\nCommunities\n\n\nR-Ladies\n\n\n\n\n\n\n\n\n\n\n\nApr 28, 2021\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\n\nTeaching exam - RStudio\n\n\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nSep 23, 2020\n\n\nBeatriz Milz\n\n\n\n\n\n\n  \n\n\n\n\n\nuseR 2019\n\n\n\n\nTalks\n\n\nR-Ladies\n\n\nCommunities\n\n\n\n\n\n\n\n\n\n\n\nJul 11, 2019\n\n\nBeatriz Milz, Bruna Wundervald\n\n\n\n\n\n\n  \n\n\n\n\n\nCODATA-RDA School of Research Data Science\n\n\n\n\nR Markdown\n\n\nknitr\n\n\nTeaching\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2018\n\n\nBeatriz Milz\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nrstudio::conf(2022)\n\n\n\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n  \n\n\n\n\n\nLatinR 2021\n\n\n\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n  \n\n\n\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n  \n\n\n\n\n\nTeaching exam - RStudio\n\n\n\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n  \n\n\n\n\n\nuseR 2019\n\n\n\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n  \n\n\n\n\n\nCODATA-RDA School of Research Data Science\n\n\n\n\n\n\nDec 5, 2018\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/en/2018-knitr-codata/index.html",
@@ -1502,7 +1502,7 @@
     "href": "index.html#recent-talks-palestras-recentes",
     "title": "Bea Milz",
     "section": "Recent Talks / Palestras recentes",
-    "text": "Recent Talks / Palestras recentes\n Next activities/Atividades futuras\n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\nMay 25, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\nMay 20, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\nMay 12, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\nMay 9, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nFeb 2, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\nJul 30, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\nMay 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\nCODATA-RDA School of Research Data Science\n\n\n\nDec 5, 2018\n\n\n\n\n\n\n\n\nNo matching items\n\n\n  \n\n\n See all/Ver todas"
+    "text": "Recent Talks / Palestras recentes\n Next activities/Atividades futuras\n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\nMay 25, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\nMay 20, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\nMay 12, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\nMay 9, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nFeb 2, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\nNov 26, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R para Cientistas Ambientais\n\n\n\nNov 8, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando os resultados de projetos em Ciência de Dados\n\n\nConhecendo o R Markdown\n\n\n\nOct 22, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade - Especial Hacktoberfest\n\n\n\nOct 13, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFazendo amizade com a Python reticulada\n\n\nIntrodução ao uso de Python e R no RStudio com o pacote reticulate\n\n\n\nOct 13, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComo aprender R tem sido importante na minha trajetória como Gestora Ambiental\n\n\n\nSep 30, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions\n\n\n\nSep 18, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\nSep 11, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFaça apresentações ninja em R\n\n\nConhecendo o pacote xaringan\n\n\n\nSep 9, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJornalismo com R\n\n\n\nAug 29, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCriando tutoriais interativos com R\n\n\nConhecendo o pacote learnr\n\n\n\nAug 13, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\nJul 30, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCapítulos de Workflow do livro R for Data Science\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\nJul 14, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nColeta de dados automatizada e integração contínua utilizando GitHub Actions\n\n\nExemplos com o Pacote Mananciais\n\n\n\nJun 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMinha experiência na useR! 2019\n\n\nApresentado em Inglês\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnsino de programação - Como fazer parte da comunidade global The Carpentries?\n\n\n\nNov 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr joins - Juntando bases de dados\n\n\n\nNov 3, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados em R\n\n\nAprenda a criar apresentações reprodutíveis\n\n\n\nOct 19, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAprenda a usar Git e GitHub no RStudio!\n\n\nR-Ladies SP na Hacktoberfest\n\n\n\nOct 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR Markdown\n\n\nUsando o R para comunicar seus resultados\n\n\n\nSep 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nApresentado em Inglês\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade\n\n\n\nSep 10, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub no RStudio\n\n\n\nAug 27, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução a Linguagem R\n\n\n\nAug 27, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America\n\n\nR and Friends\n\n\n\nJul 8, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\nMay 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de estudos para a RStudio Certification\n\n\n\nMay 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\nNov 30, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentações no R ⚔ com xaringan\n\n\n\nSep 17, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiros passos utilizando o Git e GitHub no RStudio\n\n\n\nSep 12, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote xaringan - Criando apresentações com R\n\n\n\nAug 27, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards, gráficos, mapas - Possibilidades de visualização de dados com R\n\n\n\nAug 2, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nLightning Talk - Education & community\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\nMay 20, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\nCODATA-RDA School of Research Data Science\n\n\n\nDec 5, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\n\nDec 5, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOficina de Introdução ao R\n\n\n\nNov 29, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\nNov 21, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR e Desafios no Projeto Temático - Oficina de Introdução ao R\n\n\n\nOct 17, 2018\n\n\n\n\n\n\n\n\nNo matching items\n\n\n  \n\n\n See all/Ver todas"
   },
   {
     "objectID": "index.html#talkspalestras",
@@ -1537,7 +1537,7 @@
     "href": "talks/index.html#talkspalestras",
     "title": "Bea Milz",
     "section": "Talks/Palestras",
-    "text": "Talks/Palestras\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\nMay 25, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\nMay 20, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\nMay 12, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\nMay 9, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nFeb 2, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\nJul 30, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\nMay 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\nCODATA-RDA School of Research Data Science\n\n\n\nDec 5, 2018\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Talks/Palestras\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\nMay 25, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\nMay 20, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\nMay 12, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\nMay 9, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nFeb 2, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\nNov 26, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\n\nNov 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R para Cientistas Ambientais\n\n\n\nNov 8, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando os resultados de projetos em Ciência de Dados\n\n\nConhecendo o R Markdown\n\n\n\nOct 22, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade - Especial Hacktoberfest\n\n\n\nOct 13, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFazendo amizade com a Python reticulada\n\n\nIntrodução ao uso de Python e R no RStudio com o pacote reticulate\n\n\n\nOct 13, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComo aprender R tem sido importante na minha trajetória como Gestora Ambiental\n\n\n\nSep 30, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions\n\n\n\nSep 18, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\nSep 11, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFaça apresentações ninja em R\n\n\nConhecendo o pacote xaringan\n\n\n\nSep 9, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJornalismo com R\n\n\n\nAug 29, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCriando tutoriais interativos com R\n\n\nConhecendo o pacote learnr\n\n\n\nAug 13, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\nJul 30, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCapítulos de Workflow do livro R for Data Science\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\nJul 14, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nColeta de dados automatizada e integração contínua utilizando GitHub Actions\n\n\nExemplos com o Pacote Mananciais\n\n\n\nJun 10, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMinha experiência na useR! 2019\n\n\nApresentado em Inglês\n\n\n\nApr 28, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnsino de programação - Como fazer parte da comunidade global The Carpentries?\n\n\n\nNov 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr joins - Juntando bases de dados\n\n\n\nNov 3, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados em R\n\n\nAprenda a criar apresentações reprodutíveis\n\n\n\nOct 19, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAprenda a usar Git e GitHub no RStudio!\n\n\nR-Ladies SP na Hacktoberfest\n\n\n\nOct 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR Markdown\n\n\nUsando o R para comunicar seus resultados\n\n\n\nSep 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nApresentado em Inglês\n\n\n\nSep 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade\n\n\n\nSep 10, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub no RStudio\n\n\n\nAug 27, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução a Linguagem R\n\n\n\nAug 27, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America\n\n\nR and Friends\n\n\n\nJul 8, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\nMay 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de estudos para a RStudio Certification\n\n\n\nMay 4, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\nNov 30, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentações no R ⚔ com xaringan\n\n\n\nSep 17, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiros passos utilizando o Git e GitHub no RStudio\n\n\n\nSep 12, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote xaringan - Criando apresentações com R\n\n\n\nAug 27, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards, gráficos, mapas - Possibilidades de visualização de dados com R\n\n\n\nAug 2, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nLightning Talk - Education & community\n\n\n\nJul 11, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\nMay 20, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\nCODATA-RDA School of Research Data Science\n\n\n\nDec 5, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\n\nDec 5, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOficina de Introdução ao R\n\n\n\nNov 29, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\nNov 21, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR e Desafios no Projeto Temático - Oficina de Introdução ao R\n\n\n\nOct 17, 2018\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2022-08-12-rstudio-conf/pt/index.html",
@@ -1699,5 +1699,278 @@
     "title": "Quarto - Conhecendo a evolução do R Markdown",
     "section": "",
     "text": "VI International Seminar on Statistics with RLink do evento: http://ser.uff.br/Lugar: Online\nMateriais\n\n\n Slides  GitHub  Video  Slides em PDF"
+  },
+  {
+    "objectID": "talks/pt/2021-3rday-xaringan/index.html",
+    "href": "talks/pt/2021-3rday-xaringan/index.html",
+    "title": "Faça apresentações ninja em R",
+    "section": "",
+    "text": "Evento:"
+  },
+  {
+    "objectID": "talks/pt/2021-3rday-xaringan/index.html#descrição",
+    "href": "talks/pt/2021-3rday-xaringan/index.html#descrição",
+    "title": "Faça apresentações ninja em R",
+    "section": "Descrição",
+    "text": "Descrição\nO xaringan é um pacote que tem como objetivo possibilitar a criação de apresentações em com R. Sob o contexto de programação em R, a combinação entre os pacotes RMarkdown e xaringan nos oferece uma elegante forma de criar slides usando R e RStudio, permitindo adicionar códigos que são executados ao gerar a apresentação. Com isso, a proposta desta oficina consiste em apresentar uma introdução sobre como criar apresentações usando os pacotes mencionados. O público alvo deste minicurso são pessoas de todas as áreas, que tenham interesse em aprender como criar slides reprodutíveis usando R."
+  },
+  {
+    "objectID": "talks/pt/2021-3rday-xaringan/index.html#pré-requisitos",
+    "href": "talks/pt/2021-3rday-xaringan/index.html#pré-requisitos",
+    "title": "Faça apresentações ninja em R",
+    "section": "Pré-requisitos",
+    "text": "Pré-requisitos\n\nTutorial de Markdown - não é obrigatório, porém é recomendado.\nR, faça o download da versão mais recente neste link.\nRStudio, faça o download da versão mais recente neste link.\nInstalar pacotes:\n\ninstall.packages(\"knitr\")\ninstall.packages(\"rmarkdown\")\ninstall.packages(\"xaringan\")\ninstall.packages(\"xaringanthemer\")\ninstall.packages(\"pagedown\")"
+  },
+  {
+    "objectID": "talks/pt/2021-learnr-latinr/index.html",
+    "href": "talks/pt/2021-learnr-latinr/index.html",
+    "title": "Scaling feedback using learnr and gradethis in a introductory R course",
+    "section": "",
+    "text": "LatinR 2021Link do evento: https://latin-r.com/Lugar: Online\nMateriais\n\n\n Slides  Texto  Video  Sessão de perguntas"
+  },
+  {
+    "objectID": "talks/pt/2021-colaborando-com-a-comunidade-hacktoberfest-curso-r/index.html",
+    "href": "talks/pt/2021-colaborando-com-a-comunidade-hacktoberfest-curso-r/index.html",
+    "title": "Colaborando com a Comunidade - Especial Hacktoberfest",
+    "section": "",
+    "text": "Canal da Curso-RLink do evento: https://www.youtube.com/c/CursoR6/featuredLugar: Online\nMateriais\n\n\n Video  Slides"
+  },
+  {
+    "objectID": "talks/pt/2021-github-actions-gyn/index.html",
+    "href": "talks/pt/2021-github-actions-gyn/index.html",
+    "title": "Introdução ao GitHub Actions",
+    "section": "",
+    "text": "Evento:\nBoas vindas!\nÉ muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o Código de Conduta da R-Ladies."
+  },
+  {
+    "objectID": "talks/pt/2021-github-actions-gyn/index.html#conteúdo",
+    "href": "talks/pt/2021-github-actions-gyn/index.html#conteúdo",
+    "title": "Introdução ao GitHub Actions",
+    "section": "Conteúdo",
+    "text": "Conteúdo\n\nPré-requisitos\nProjetos no RStudio (ou .RProj)\nEstrutura básica de um pacote em R\nRevisão sobre Git e GitHub\nO que é integração contínua e GitHub Actions?\n\nExemplos usando GitHub Actions para:\n\nExecutar a checagem de um pacote em R\nAutomatizar uma tarefa\n\n\nReferências\n\nComunidades e locais amigáveis para fazer perguntas :)\n\nEventos e redes sociais das R-Ladies no Brasil\nFórum Curso-R\nTelegram R-Brasil"
+  },
+  {
+    "objectID": "talks/pt/2021-workflow-r4ds/index.html",
+    "href": "talks/pt/2021-workflow-r4ds/index.html",
+    "title": "Capítulos de Workflow do livro R for Data Science",
+    "section": "",
+    "text": "Grupo de estudos - R-Ladies São PauloLugar: Online\nMateriais\n\n\n Slides  Video  Livro de referência"
+  },
+  {
+    "objectID": "talks/pt/2021-jornalismo-com-r/index.html",
+    "href": "talks/pt/2021-jornalismo-com-r/index.html",
+    "title": "Jornalismo com R",
+    "section": "",
+    "text": "3º Domingo de DadosLink do evento: https://eventos.congresse.me/ddadosabraji#Lugar: Online\nMateriais\n\n\n Materiais da atividade  Inscrições"
+  },
+  {
+    "objectID": "talks/pt/2021-ser-uff/index.html",
+    "href": "talks/pt/2021-ser-uff/index.html",
+    "title": "Coleta de dados automatizada e integração contínua utilizando GitHub Actions",
+    "section": "",
+    "text": "V International Seminar on Statistics with RLink do evento: http://ser.uff.br/Lugar: Online\nMateriais\n\n\n Slides  Materiais  Video  Pacote Mananciais \n\n\nO GitHub Actions (GHA) permite automatizar fluxos de trabalho de desenvolvimento de pacotes em R. Nessa palestra, será mostrado alguns exemplos de uso de GitHub Actions no pacote Mananciais, que disponibiliza dados sobre o volume operacional em reservatórios utilizados para abastecimento público na Região Metropolitana de São Paulo. Os exemplos que utilizam GHA são atualização da base de dados, checagem do pacote, execução de testes e avaliação da cobertura de testes. Este pacote foi pensado para atender demandas de pessoas pesquisadoras que não somente utilizam R, disponibilizando também a base de dados atualizada diariamente em csv e em xlsx."
+  },
+  {
+    "objectID": "talks/pt/2021-git-e-github-gyn/index.html",
+    "href": "talks/pt/2021-git-e-github-gyn/index.html",
+    "title": "Introdução à utilização do Git e GitHub no RStudio",
+    "section": "",
+    "text": "Meetup R-Ladies GoiâniaLink do evento: https://www.rladiesgyn.com/Lugar: Online\nMateriais\n\n\n Slide em HTML  Gravação \n\n\nBoas vindas!\nÉ muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o Código de Conduta da R-Ladies.\nPré-requisitos\nPara praticar o que faremos na apresentação, esses são os pré-requisitos:\n\nInstale o R\n\nInstale o RStudio\n\nInstale o Git, neste link escolha o sistema operacional que você utiliza, e instale utilizando o arquivo baixado.\nCrie uma conta no GitHub, é gratuito.\nInstale alguns pacotes:\n\n\ninstall.packages(\"usethis\")\ninstall.packages(\"rmarkdown\")\n\nComunidades e locais amigáveis para fazer perguntas :)\n\nEventos e redes sociais das R-Ladies no Brasil\nFórum Curso-R\nTelegram R-Brasil"
+  },
+  {
+    "objectID": "talks/pt/2021-experiencia-useR/index.html",
+    "href": "talks/pt/2021-experiencia-useR/index.html",
+    "title": "Minha experiência na useR! 2019",
+    "section": "",
+    "text": "R-Ladies + useR! 2021Lugar: Online\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2021-git-github-ence/index.html",
+    "href": "talks/pt/2021-git-github-ence/index.html",
+    "title": "Introdução à utilização do Git e GitHub no RStudio",
+    "section": "",
+    "text": "5ª SEMIC - 5ª Semana de Iniciação Científica da ENCELugar: Online\nMateriais\n\n\n Slides \n\n\nBoas vindas! O público-alvo desta apresentação são pessoas que utilizam o R para análise de dados, tem um conhecimento básico sobre Git e GitHub e querem utilizar essas ferramentas diretamente do RStudio.\nÉ muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o Código de Conduta da R-Ladies.\nResumo\nO conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos em R. Também aprenderemos a disponibilizar conteúdos dos projetos de forma online, através do GitHub Pages.\nPré-requisitos\nPara praticar o que faremos na apresentação, esses são os pré-requisitos:\n\nInstale o R\n\nInstale o RStudio\n\nInstale o Git, neste link escolha o sistema operacional que você utiliza, e instale utilizando o arquivo baixado.\nCrie uma conta no GitHub, é gratuito.\nInstale alguns pacotes:\n\n\ninstall.packages(\"usethis\")\ninstall.packages(\"rmarkdown\")\n\nComunidades e locais amigáveis para fazer perguntas :)\n\nEventos e redes sociais das R-Ladies no Brasil\nFórum Curso-R\nTelegram R-Brasil"
+  },
+  {
+    "objectID": "talks/pt/2021-python-brasil/index.html",
+    "href": "talks/pt/2021-python-brasil/index.html",
+    "title": "Fazendo amizade com a Python reticulada",
+    "section": "",
+    "text": "Python Brasil 2021 - 13 de outubro, quarta-feira, das 15:50 às 16:35Link do evento: https://2021.pythonbrasil.org.br/Lugar: Online\nMateriais\n\n\n Slides  Video  Inscrições \n\n\nEssa palestra tem como objetivo apresentar um conteúdo introdutório e será mostrada na IDE RStudio, usando arquivos RMarkdown. Será apresentado uma introdução ao pacote reticulate. Depois será apresentado um pacote maravilhoso que funciona bem com reticulate e Python para criar vários produtos que podem ser disponibilizados na internet: o R Markdown."
+  },
+  {
+    "objectID": "talks/pt/2021-intro-R-senacamb/index.html",
+    "href": "talks/pt/2021-intro-R-senacamb/index.html",
+    "title": "Linguagem R para Cientistas Ambientais",
+    "section": "",
+    "text": "SENACAMB - Semana Nacional de Ciências AmbientaisLink do evento: https://linktr.ee/senacambLugar: Online\nMateriais\n\n\n Material completo  Gravação - dia 1  Gravação - dia 2 \n\n\nMais informações em breve!\nBoas vindas! O público-alvo desta apresentação são pessoas com interesse em começar a utilizar R para análise de dados.\nÉ muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o Código de Conduta da R-Ladies.\nComunidades e locais amigáveis para fazer perguntas :)\n\nEventos e redes sociais das R-Ladies no Brasil\nFórum Curso-R\nTelegram R-Brasil\nPara aprender mais\n\nLivro R para Ciência de Dados: Gratuito em Inglês e em Espanhol.\n\nCurso-R:\n\nMaterial de estudo\nBlog\nLivro - em desenvolvimento\nLives e vídeos no Youtube\nCursos\nFórum"
+  },
+  {
+    "objectID": "talks/pt/2021-rmarkdown-ai-inclusive/index.html",
+    "href": "talks/pt/2021-rmarkdown-ai-inclusive/index.html",
+    "title": "Comunicando os resultados de projetos em Ciência de Dados",
+    "section": "",
+    "text": "AI InclusiveLink do evento: https://www.sympla.com.br/comunicando-os-resultados-de-projetos-em-ciencia-de-dados__1374355Lugar: Online\nMateriais\n\n\n Slide em HTML  Live coding  Video \n\n\nBoas vindas!\nÉ muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o Código de Conduta da AI Inclusive.\nComunidades e locais amigáveis para fazer perguntas :)\n\nEventos e redes sociais das R-Ladies no Brasil\nFórum Curso-R\nTelegram R-Brasil"
+  },
+  {
+    "objectID": "talks/pt/2021-ufv-R/index.html",
+    "href": "talks/pt/2021-ufv-R/index.html",
+    "title": "Como aprender R tem sido importante na minha trajetória como Gestora Ambiental",
+    "section": "",
+    "text": "Disciplina de análise e visualização de dados com R - UFVLugar: Online\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2021-learnr-pet-ufpr/index.html",
+    "href": "talks/pt/2021-learnr-pet-ufpr/index.html",
+    "title": "Criando tutoriais interativos com R",
+    "section": "",
+    "text": "Canal PET-Estatística UFPRLink do evento: https://www.youtube.com/watch?v=fTW5ASpn7TELugar: Online\nMateriais\n\n\n Video  Slides"
+  },
+  {
+    "objectID": "talks/pt/2018-introducao-r-ufabc/index.html",
+    "href": "talks/pt/2018-introducao-r-ufabc/index.html",
+    "title": "Oficina de Introdução ao R",
+    "section": "",
+    "text": "UFABC - Campus São Bernardo do CampoLugar: São Bernardo do Campo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2018-knitr-codata/index.html",
+    "href": "talks/pt/2018-knitr-codata/index.html",
+    "title": "Producing Reports with knitr and R",
+    "section": "",
+    "text": "CODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESPLugar: São Paulo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2018-r-desafios-macroamb/index.html",
+    "href": "talks/pt/2018-r-desafios-macroamb/index.html",
+    "title": "R e Desafios no Projeto Temático - Oficina de Introdução ao R",
+    "section": "",
+    "text": "Instituto de Energia e Ambiente - Universidade de São PauloLugar: São Paulo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2018-xaringan-rladies-sp/index.html",
+    "href": "talks/pt/2018-xaringan-rladies-sp/index.html",
+    "title": "Comunicando seus resultados - criando apresentações com R",
+    "section": "",
+    "text": "Meetup R-Ladies São PauloLugar: São Paulo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2019-carpentries-satrday/index.html",
+    "href": "talks/pt/2019-carpentries-satrday/index.html",
+    "title": "The Carpentries",
+    "section": "",
+    "text": "SatRday São Paulo 2019Link do evento: https://saopaulo2019.satrdays.org/Lugar: São Paulo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2019-git-github-saopaulo/index.html",
+    "href": "talks/pt/2019-git-github-saopaulo/index.html",
+    "title": "Primeiros passos utilizando o Git e GitHub no RStudio",
+    "section": "",
+    "text": "Meetup R-Ladies São PauloLugar: São Paulo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2020-user-latin-america/index.html",
+    "href": "talks/pt/2020-user-latin-america/index.html",
+    "title": "Communities of practice in Latin America",
+    "section": "",
+    "text": "useR! 2020Link do evento: https://user2020.r-project.org/Lugar: Online\nMateriais\n\n\n Video \n\n\nExtras:\n\nBlog da RConsortium:\n\nLatin American Communities and Organizations: useR!2020"
+  },
+  {
+    "objectID": "talks/pt/2020-hacktoberfest/index.html",
+    "href": "talks/pt/2020-hacktoberfest/index.html",
+    "title": "Aprenda a usar Git e GitHub no RStudio!",
+    "section": "",
+    "text": "Meetup R-Ladies São PauloLink do evento: https://github.com/R-Ladies-Sao-Paulo/RLadies-BrasilLugar: Online\nMateriais\n\n\n Materiais  Video"
+  },
+  {
+    "objectID": "talks/pt/2020-rmarkdown-geocast/index.html",
+    "href": "talks/pt/2020-rmarkdown-geocast/index.html",
+    "title": "R Markdown",
+    "section": "",
+    "text": "Canal GeoCast BrasilLink do evento: https://www.youtube.com/c/geocastbrasil/featuredLugar: Online\nMateriais\n\n\n Video  Slides \n\n\nBoas vindas! O público-alvo deste material são pessoas que utilizam o R para análise de dados, e gostariam de gerar relatórios dinâmicos com diferentes tipos de outputs.\nÉ muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o Código de Conduta da R-Ladies.\n\n\nArquivos de exemplo mostrados na live:\n\nExemplo de R Markdown com parâmetros: .Rmd e .html\n\nExemplo de código para gerar vários relatórios com parâmetros: .R\n\nArquivos gerados no exemplo: Sistema Cantareira, Guarapiranga e Rio Grande"
+  },
+  {
+    "objectID": "talks/pt/2020-RStudio-certification/index.html",
+    "href": "talks/pt/2020-RStudio-certification/index.html",
+    "title": "Adding figures in R Markdown",
+    "section": "",
+    "text": "Exame de certificação da RStudioLugar: Online\nMateriais\n\n\n Slides  Material completo"
+  },
+  {
+    "objectID": "talks/pt/2019-vis-nerdzao/index.html",
+    "href": "talks/pt/2019-vis-nerdzao/index.html",
+    "title": "Dashboards, gráficos, mapas - Possibilidades de visualização de dados com R",
+    "section": "",
+    "text": "Meetup NerdzãoLugar: São Paulo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2020-git-e-github-gyn/index.html",
+    "href": "talks/pt/2020-git-e-github-gyn/index.html",
+    "title": "Git e GitHub no RStudio",
+    "section": "",
+    "text": "Meetup R-Ladies GoiâniaLugar: Online\nMateriais\n\n\n Slide em PDF  Slide em HTML \n\n\nBoas vindas! O público-alvo desta apresentação são pessoas que utilizam o R para análise de dados, tem um conhecimento básico sobre Git e GitHub e querem utilizar essas ferramentas diretamente do RStudio.\nÉ muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o Código de Conduta da R-Ladies.\nPré-requisitos\nA atividade será expositiva. Porém, para praticar posteriormente, esses são os pré-requisitos:\n\n\nUsando no RStudio Cloud:\n\nConta no GitHub\nConta na RStudio Cloud\n\n\n\nUsando no seu computador (recomendado):\n\nR\nRStudio\nGit\nConta no GitHub\nInstalação do pacote usethis:\n\n\n\n\ninstall.packages(\"usethis\")\n\nMaterial complementar\n\nScript em R usado no RStudio Cloud durante a apresentação para configurar o Git e GitHub\nEventos\nEventos passados e futuros com uso deste material:\n\nR-Ladies Goiânia, 27 de agosto de 2020. Apresentação utilizada disponível em PDF.\nR-Ladies São Paulo, 12 de setembro de 2019. Apresentação utilizada disponível aqui.\nPara aprender mais\n\nVideos do evento “R-Ladies SP na Hacktoberfest 2020”\nEvento Hacktoberfest\nPost sobre o assunto no Blog da Curso-R, por Caio Lente\nLivro Happy Git with R, em Inglês\nFolha de dicas sobre Git (Cheat Sheet), em Português\nFolhas de dicas da RStudio (Cheat Sheets) , em Inglês\nLive Stream Curso-R #7 - Colaborando com a Comunidade:\n\n\n\nComunidades e locais amigáveis para fazer perguntas :)\n\nEventos e redes sociais das R-Ladies no Brasil\nFórum Curso-R\nTelegram R-Brasil"
+  },
+  {
+    "objectID": "talks/pt/2020-xaringan-ime-usp-amostra/index.html",
+    "href": "talks/pt/2020-xaringan-ime-usp-amostra/index.html",
+    "title": "Apresentações no R ⚔ com xaringan",
+    "section": "",
+    "text": "14ª aMostra Estatística 2019 IME/USPLink do evento: https://www.ime.usp.br/~amostra/Lugar: São Paulo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2019-xaringan-ser-uff/index.html",
+    "href": "talks/pt/2019-xaringan-ser-uff/index.html",
+    "title": "Comunicando seus resultados - criando apresentações com R",
+    "section": "",
+    "text": "SER UFF 2019Lugar: São Paulo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2020-python-brasil/index.html",
+    "href": "talks/pt/2020-python-brasil/index.html",
+    "title": "Ensino de programação - Como fazer parte da comunidade global The Carpentries?",
+    "section": "",
+    "text": "Python Brasil 2020Lugar: Online\nMateriais\n\n\n Slides  Video \n\n\nOutros materiais:\n\nPost: The Carpentries: Como fazer o treinamento de instrutora?"
+  },
+  {
+    "objectID": "talks/pt/2020-colaborando-com-a-comunidade-curso-r/index.html",
+    "href": "talks/pt/2020-colaborando-com-a-comunidade-curso-r/index.html",
+    "title": "Colaborando com a Comunidade",
+    "section": "",
+    "text": "Canal da Curso-RLink do evento: https://www.youtube.com/c/CursoR6/featuredLugar: Online\nMateriais\n\n\n Video"
+  },
+  {
+    "objectID": "talks/pt/2020-dplyr-joins-curso-r/index.html",
+    "href": "talks/pt/2020-dplyr-joins-curso-r/index.html",
+    "title": "dplyr joins - Juntando bases de dados",
+    "section": "",
+    "text": "Canal da Curso-RLink do evento: https://www.youtube.com/c/CursoR6/featuredLugar: Online\nMateriais\n\n\n Video  Códigos  Documentação"
+  },
+  {
+    "objectID": "talks/pt/2020-xaringan-ime-usp/index.html",
+    "href": "talks/pt/2020-xaringan-ime-usp/index.html",
+    "title": "Introdução ao pacote xaringan - Criando apresentações com R",
+    "section": "",
+    "text": "Disciplina no IME/USPLugar: São Paulo\nMateriais\n\n\n Slides"
+  },
+  {
+    "objectID": "talks/pt/2020-xaringan-latinr/index.html",
+    "href": "talks/pt/2020-xaringan-latinr/index.html",
+    "title": "Comunicando seus resultados em R",
+    "section": "",
+    "text": "LatinR 2020Link do evento: https://latin-r.com/Lugar: Online\nMateriais\n\n\n Slides  Materiais  Video"
+  },
+  {
+    "objectID": "talks/pt/2020-funciones-r4ds/index.html",
+    "href": "talks/pt/2020-funciones-r4ds/index.html",
+    "title": "Funciones - R para Ciencia de Datos",
+    "section": "",
+    "text": "Grupo de estudos para a RStudio CertificationLugar: Online\nMateriais\n\n\n Slides  Livro de referência"
+  },
+  {
+    "objectID": "talks/pt/2020-intro-R-Curitiba/index.html",
+    "href": "talks/pt/2020-intro-R-Curitiba/index.html",
+    "title": "Introdução a Linguagem R",
+    "section": "",
+    "text": "R-Ladies CuritibaLugar: Online\nMateriais\n\n\n Slide em PDF  Slide em HTML \n\n\nBoas vindas! O público-alvo desta apresentação são pessoas om interesse em começar a utilizar R para análise de dados.\nÉ muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o Código de Conduta da R-Ladies.\nPré-requisitos\n\nConta na RStudio Cloud\nMaterial Complementar\n\nAcompanhe a palestra com o material disponível em  RStudio Cloud\n\nCaso queira usar no seu computador, os arquivos disponibilizados na Cloud são os seguintes:\n\n1-introducao.R\n2-operadores.R\n3-tipos_dados.R\n4-tipos_objetos.R\n5-pacotes.R\n\nrladies.csv - Base de dados usada no arquivo 4-tipos_objetos.R.\n\n\nEventos\nEventos passados e futuros com uso deste material:\n\n\nR-Ladies Curitiba, 26 de agosto de 2020. Apresentação em PDF.\nComunidades e locais amigáveis para fazer perguntas :)\n\nEventos e redes sociais das R-Ladies no Brasil\nFórum Curso-R\nTelegram R-Brasil\nPara aprender mais\n\nLivro R para Ciência de Dados: Gratuito em Inglês e em Espanhol.\n\nCurso-R:\n\nMaterial de estudo\nBlog\nLivro - em desenvolvimento\nLives e vídeos no Youtube\nCursos\nFórum"
   }
 ]

@@ -1,0 +1,53 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz
+categories: Workshop
+date: '2021-09-09'
+event: 3º R Day - Encontro Nacional de Usuários do R
+event_url: http://rday.leg.ufpr.br/
+links:
+- icon: user-plus
+  icon_pack: fa
+  name: Inscrições
+  url: http://rday.leg.ufpr.br/
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/slidesR/xaringan/09-2021-rday.html
+location: Online
+subtitle: Conhecendo o pacote xaringan
+title: Faça apresentações ninja em R
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+------------------------------------------------------------------------
+
+## Descrição
+
+O xaringan é um pacote que tem como objetivo possibilitar a criação de apresentações em com R. Sob o contexto de programação em R, a combinação entre os pacotes RMarkdown e xaringan nos oferece uma elegante forma de criar slides usando R e RStudio, permitindo adicionar códigos que são executados ao gerar a apresentação. Com isso, a proposta desta oficina consiste em apresentar uma introdução sobre como criar apresentações usando os pacotes mencionados. O público alvo deste minicurso são pessoas de todas as áreas, que tenham interesse em aprender como criar slides reprodutíveis usando R.
+
+## Pré-requisitos
+
+-   [Tutorial de Markdown](https://beatriz-milz.shinyapps.io/tutorial_markdown/) - não é obrigatório, porém é recomendado.
+
+-   R, faça o download da versão mais recente [neste link](https://cran.r-project.org/).
+
+-   RStudio, faça o download da versão mais recente [neste link](https://www.rstudio.com/products/rstudio/download/).
+
+-   Instalar pacotes:
+
+<!-- -->
+
+    install.packages("knitr")
+    install.packages("rmarkdown")
+    install.packages("xaringan")
+    install.packages("xaringanthemer")
+    install.packages("pagedown")

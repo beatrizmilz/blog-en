@@ -5,6 +5,7 @@ listing:
   contents: "*/*.qmd"
   sort: "date desc"
   type: default
+  fields: [image, date, title, subtitle]  
   categories: true
   sort-ui: true
   filter-ui: true

@@ -1,0 +1,42 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz e Fernando Correa
+coautoria: Fernando Correa
+coautoria_url: https://twitter.com/curso_r
+categories: Palestra
+date: '2021-11-10'
+event: LatinR 2021
+event_url: https://latin-r.com/
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://curso-r.github.io/LatinR2021/
+- icon: github
+  icon_pack: fab
+  name: Texto
+  url: https://github.com/curso-r/LatinR2021/blob/main/submission/submission.pdf
+- icon: youtube
+  icon_pack: fab
+  name: Video
+  url: https://youtu.be/7v7XPtizdzU
+- icon: youtube
+  icon_pack: fab
+  name: Sessão de perguntas
+  url: https://youtu.be/4TCNocxRtwo?t=2708
+location: Online
+title: Scaling feedback using learnr and gradethis in a introductory R course
+image: featured.png
+
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+
+---

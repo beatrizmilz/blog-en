@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
@@ -259,9 +259,6 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
          <option value="listing-date-sort" data-direction="desc">
           Date - Newest
         </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
      </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -283,30 +280,11 @@ Making awesome automations with GitHub Actions
 rstudio::conf(2022)
 </div>
 </a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Talks'); return false;">
-Talks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
-GitHub Actions
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
-GitHub
-</div>
-</div>
-<a href="../../talks/en/2022-rstudio-conf/index.html">
-<div class="listing-description">
-Event: rstudio::conf(2022)
-</div>
-</a>
 </div>
 <div class="metadata">
 <a href="../../talks/en/2022-rstudio-conf/index.html">
 <div class="listing-date">
 Jul 28, 2022
-</div>
-<div class="listing-author">
-Beatriz Milz
 </div>
 </a>
 </div>
@@ -324,33 +302,11 @@ Scaling feedback using learnr and gradethis in a introductory R course
 LatinR 2021
 </div>
 </a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Talks'); return false;">
-Talks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('learnr'); return false;">
-learnr
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
-Teaching
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('gradethis'); return false;">
-gradethis
-</div>
-</div>
-<a href="../../talks/en/2021-learnr-latinr/index.html">
-<div class="listing-description">
-Event: LatinR 2021
-</div>
-</a>
 </div>
 <div class="metadata">
 <a href="../../talks/en/2021-learnr-latinr/index.html">
 <div class="listing-date">
 Nov 10, 2021
-</div>
-<div class="listing-author">
-Beatriz Milz, Fernando Correa
 </div>
 </a>
 </div>
@@ -368,27 +324,11 @@ My experience at useR 2019
 Meetup R-Ladies and useR 2021
 </div>
 </a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
-R-Ladies
-</div>
-</div>
-<a href="../../talks/en/2021-experience-useR/index.html">
-<div class="listing-description">
-This presentation was not recorded.
-</div>
-</a>
 </div>
 <div class="metadata">
 <a href="../../talks/en/2021-experience-useR/index.html">
 <div class="listing-date">
 Apr 28, 2021
-</div>
-<div class="listing-author">
-Beatriz Milz
 </div>
 </a>
 </div>
@@ -406,24 +346,11 @@ Adding figures in R Markdown
 Teaching exam - RStudio
 </div>
 </a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
-Teaching
-</div>
-</div>
-<a href="../../talks/en/2020-RStudio-certification/index.html">
-<div class="listing-description">
-This presentation was not recorded.
-</div>
-</a>
 </div>
 <div class="metadata">
 <a href="../../talks/en/2020-RStudio-certification/index.html">
 <div class="listing-date">
 Sep 23, 2020
-</div>
-<div class="listing-author">
-Beatriz Milz
 </div>
 </a>
 </div>
@@ -441,30 +368,11 @@ The evolution and importance of the R-Ladies São Paulo chapter in Brazil
 useR 2019
 </div>
 </a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Talks'); return false;">
-Talks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
-R-Ladies
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-</div>
-<a href="../../talks/en/2019-user-rladies-sp/index.html">
-<div class="listing-description">
-Event: useR! 2019
-</div>
-</a>
 </div>
 <div class="metadata">
 <a href="../../talks/en/2019-user-rladies-sp/index.html">
 <div class="listing-date">
 Jul 11, 2019
-</div>
-<div class="listing-author">
-Beatriz Milz, Bruna Wundervald
 </div>
 </a>
 </div>
@@ -482,30 +390,11 @@ Producing Reports with knitr and R
 CODATA-RDA School of Research Data Science
 </div>
 </a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R Markdown'); return false;">
-R Markdown
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('knitr'); return false;">
-knitr
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
-Teaching
-</div>
-</div>
-<a href="../../talks/en/2018-knitr-codata/index.html">
-<div class="listing-description">
-This presentation was not recorded.
-</div>
-</a>
 </div>
 <div class="metadata">
 <a href="../../talks/en/2018-knitr-codata/index.html">
 <div class="listing-date">
 Dec 5, 2018
-</div>
-<div class="listing-author">
-Beatriz Milz
 </div>
 </a>
 </div>

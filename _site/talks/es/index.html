@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
@@ -145,7 +145,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
         <li>
-    <a class="dropdown-item" href="../../">
+    <a class="dropdown-item" href="../../posts/index.html">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
@@ -259,9 +259,6 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
          <option value="listing-date-sort" data-direction="desc">
           Date - Newest
         </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
      </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -283,30 +280,11 @@ Funciones - R para Ciencia de Datos
 Grupo de Estudios para la Certificación de RStudio
 </div>
 </a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Study'); return false;">
-Study
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
-R-Ladies
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-</div>
-<a href="../../talks/es/2020-funciones-r4ds/index.html">
-<div class="listing-description">
-Estas diapositivas fueron hechas para presentarlas en el Grupo de Estudios para la Certificación de RStudio. Están basados en el libro R for Data Science.
-</div>
-</a>
 </div>
 <div class="metadata">
 <a href="../../talks/es/2020-funciones-r4ds/index.html">
 <div class="listing-date">
 May 4, 2020
-</div>
-<div class="listing-author">
-Beatriz Milz
 </div>
 </a>
 </div>

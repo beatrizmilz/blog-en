@@ -1,0 +1,27 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz
+categories: Apresentação
+date: '2021-09-30'
+event: Disciplina de análise e visualização de dados com R - UFV
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/slidesR/pessoal/09-2021-UFV.html
+location: Online
+title: Como aprender R tem sido importante na minha trajetória como Gestora Ambiental
+image: featured.jpeg
+
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+
+---
