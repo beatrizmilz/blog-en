@@ -166,7 +166,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/talks/en/index.html</loc>
-    <lastmod>2022-09-11T20:34:37.240Z</lastmod>
+    <lastmod>2022-09-11T21:34:58.695Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/en/2018-knitr-codata/index.html</loc>
@@ -182,7 +182,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/index.html</loc>
-    <lastmod>2022-09-11T21:19:26.361Z</lastmod>
+    <lastmod>2022-09-11T21:35:00.480Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/about.html</loc>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/talks/index.html</loc>
-    <lastmod>2022-09-11T20:34:56.660Z</lastmod>
+    <lastmod>2022-09-11T21:35:01.168Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/posts/2022-08-12-rstudio-conf/pt/index.html</loc>
@@ -371,5 +371,9 @@
   <url>
     <loc>https://beamilz.com/talks/pt/2020-intro-R-Curitiba/index.html</loc>
     <lastmod>2022-09-11T20:32:41.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/talks/en/2022-interview-reproducible-research-scout/index.html</loc>
+    <lastmod>2022-09-11T21:34:58.164Z</lastmod>
   </url>
 </urlset>

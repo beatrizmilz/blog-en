@@ -103,6 +103,7 @@
     "listing": "/talks/en/index.html",
     "items": [
       "/talks/en/2022-rstudio-conf/index.html",
+      "/talks/en/2022-interview-reproducible-research-scout/index.html",
       "/talks/en/2021-learnr-latinr/index.html",
       "/talks/en/2021-experience-useR/index.html",
       "/talks/en/2020-RStudio-certification/index.html",
@@ -144,6 +145,7 @@
       "/posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/index.html",
       "/posts/2019-01-29-meio-ano-r/pt/index.html",
       "/talks/en/2022-rstudio-conf/index.html",
+      "/talks/en/2022-interview-reproducible-research-scout/index.html",
       "/talks/pt/2022-ser-uff/index.html",
       "/talks/pt/2022-rmarkdown-bost/index.html",
       "/talks/pt/2022-texto-e-codigo-geeq/index.html",
@@ -210,6 +212,7 @@
     "listing": "/talks/index.html",
     "items": [
       "/talks/en/2022-rstudio-conf/index.html",
+      "/talks/en/2022-interview-reproducible-research-scout/index.html",
       "/talks/pt/2022-ser-uff/index.html",
       "/talks/pt/2022-rmarkdown-bost/index.html",
       "/talks/pt/2022-texto-e-codigo-geeq/index.html",
