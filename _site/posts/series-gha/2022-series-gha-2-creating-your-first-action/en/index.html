@@ -160,7 +160,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
 <li>
-    <a class="dropdown-item" href="../../../../">
+    <a class="dropdown-item" href="../../../../posts/index.html">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
@@ -190,6 +190,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
 <li>
+    <a class="dropdown-item" href="../../../../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -284,6 +288,19 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content"><p><a href="../../../../posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html"> <button type="button" class="btn btn-primary">English</button></a></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Hi! Since I wrote this blogpost, I learned awesome new stuff. So I updated this post in september 2022, to document easier practises with Actions :) While I updated the post, I also renamed the directory <code>01-rscript</code> to <code>01-monitoring-quarto-repos</code>, but didn’t update the images :( So keep that in mind!</p>
+</div>
+</div>
 <p>Hi!</p>
 <p>This is the second blog post in the “GitHub Action” Series. We are two weeks from the start of <a href="https://www.rstudio.com/conference/">RStudio Conference - rstudio::conf 2022</a>, and this post series is complementary material for the lightning talk that I will present!</p>
 <div class="quarto-figure quarto-figure-center">
@@ -296,7 +313,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <a href="../../../../posts/series-gha/2022-series-gha-1-what-is/en/">Introduction to GitHub Actions to R users</a> - this post is a good introduction on how GitHub Actions works!</li>
 </ul>
 <section id="what-we-will-talk-about-in-this-post" class="level2"><h2 class="anchored" data-anchor-id="what-we-will-talk-about-in-this-post">What we will talk about in this post</h2>
-<p>This post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the <a href="https://github.com/quarto-dev/">quarto-dev</a> organization and save the result into the GitHub repository.</p>
+<p>This post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the <a href="https://github.com/quarto-dev/">quarto</a> organizations and save the result into the GitHub repository.</p>
 <ul class="task-list">
 <li><p><input type="checkbox" disabled="">
 Create a GitHub Account</p></li>
@@ -329,7 +346,6 @@ Watch your awesome automation run</p></li>
 <figure class="figure"><p><img src="images/repo.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>TODO: UPDATE THIS IMAGE TO HAVE README.MD</p>
 <p>Then, add a name for the file: let’s create a file called <code>README.md</code>. This file is the first thing people see when accessing your repository, so adding some information about your project is nice. Then, you can add text and Markdown code in the “Edit new file” section, and finally, click on “Commit new file” to save your changes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="images/commit.png" class="img-fluid figure-img"></p>
@@ -346,31 +362,28 @@ Watch your awesome automation run</p></li>
 <figure class="figure"><p><img src="images/create-new-file.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>In this example, I created an R script in the path <code>01-rscript/script.R</code> and added this code:</p>
+<p>In this example, I created an R script in the path <code>01-monitoring-quarto-repos/script.R</code> and added this code:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">"Hi! Welcome to a GH Actions with an R example :)"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Install the packages  needed in the script -------</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"gh"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"dplyr"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyr"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"readr"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"knitr"</span><span class="op">)</span></span>
+<span><span class="co"># get information about the repositories on the Quarto organizations.</span></span>
 <span></span>
-<span><span class="co"># main script ------------------------------</span></span>
+<span><span class="va">quarto_orgs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"quarto-dev"</span>, <span class="st">"quarto-ext"</span>, <span class="st">"quarto-journals"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># get information about the repositories of the Quarto-dev organization.</span></span>
-<span><span class="va">quarto_repos_raw</span> <span class="op">&lt;-</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span></span>
+<span><span class="va">quarto_repos_raw</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">quarto_orgs</span>, <span class="op">~</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span></span>
 <span>  <span class="st">"GET /orgs/{org}/repos"</span>,</span>
-<span>  org <span class="op">=</span> <span class="st">"quarto-dev"</span>,</span>
+<span>  org <span class="op">=</span> <span class="va">.x</span>,</span>
 <span>  type <span class="op">=</span> <span class="st">"public"</span>,</span>
 <span>  sort <span class="op">=</span> <span class="st">"updated"</span>,</span>
 <span>  per_page <span class="op">=</span> <span class="fl">100</span></span>
-<span><span class="op">)</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># transform into a tibble with fewer columns</span></span>
+<span></span>
+<span><span class="co"># transform into a tibble with few cols</span></span>
 <span><span class="va">quarto_repos</span> <span class="op">&lt;-</span> <span class="va">quarto_repos_raw</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu">flatten</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">unlist</span>, recursive <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>  <span class="op">|&gt;</span></span>
 <span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="fu">tibble</span><span class="fu">::</span><span class="va"><a href="https://tibble.tidyverse.org/reference/enframe.html">enframe</a></span>, .id <span class="op">=</span> <span class="st">"id_repo"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -387,7 +400,7 @@ Watch your awesome automation run</p></li>
 <span></span>
 <span><span class="co"># write CSV file with the result</span></span>
 <span><span class="va">quarto_repos</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv</a></span><span class="op">(</span><span class="st">"01-rscript/quarto_repos.csv"</span><span class="op">)</span></span>
+<span>  <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv</a></span><span class="op">(</span><span class="st">"01-monitoring-quarto-repos/quarto_repos.csv"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># write the README.md file</span></span>
 <span></span>
@@ -406,17 +419,17 @@ Watch your awesome automation run</p></li>
 <span><span class="st">&lt;hr&gt; \n</span></span>
 <span><span class="st">"</span>,</span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">table</span>, collapse <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span></span>
-<span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/writeLines.html">writeLines</a></span><span class="op">(</span><span class="st">"01-rscript/README.md"</span><span class="op">)</span></span>
+<span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/writeLines.html">writeLines</a></span><span class="op">(</span><span class="st">"01-monitoring-quarto-repos/README.md"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">"The end! Congrats!"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Code available here: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/script.R" class="uri">https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/script.R</a></p>
+<p>Code available here: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-monitoring-quarto-repos/script.R" class="uri">https://github.com/beatrizmilz/awesome-gha/blob/main/01-monitoring-quarto-repos/script.R</a></p>
 <p>To save the file in this path, type <code>01-rscript/script.R</code> in the blank space for the file’s name. GitHub will understand that we want to create a directory called <code>01-rscript</code> and then write a file called <code>script.R</code> inside this directory. Copy and paste the code above and click on the green button that says “Commit new file”.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="images/create-new-file2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>But what does this code do? First, we need to install all the packages required by the code to run. Then, it accesses the GitHub API and gets information about the public repositories in the <a href="https://github.com/quarto-dev/">quarto-dev</a> organization. Then, it transforms the collected data and creates a nice table. It writes a CSV with the table and also writes in a <code>README.md</code> file! But for now, we only created this file, and to run with GHA, we need to create a file to store the workflow.</p>
+<p>But what does this code do? First, we need to install all the packages required by the code to run. Then, it accesses the GitHub API and gets information about the public repositories in <a href="https://github.com/quarto-dev/">quarto</a> organizations. Then, it transforms the collected data and creates a nice table. It writes a CSV with the table and also writes in a <code>README.md</code> file! But for now, we only created this file, and to run with GHA, we need to create a file to store the workflow.</p>
 </section><section id="create-the-workflow" class="level3"><h3 class="anchored" data-anchor-id="create-the-workflow">Create the workflow</h3>
 <p>We store the workflow in a YAML file that defines when and how the action should run.</p>
 <p>But before we create this file, let’s understand what the code does!</p>
@@ -466,21 +479,34 @@ Watch your awesome automation run</p></li>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">          # uses the RStudio Package Manager</span></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">use-public-rspm</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Execute Script</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">        # executes the RScript stored in the file</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co">        # 01-rscript/script.R</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>          Rscript "01-rscript/script.R"</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co">        # save the results in the repository</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co">        # using git in the command line</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Commit results</span></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>          git config --local user.email "actions@github.com"</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>          git config --local user.name "GitHub Actions"</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>          git add .</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>          git commit -m "Results from R script" || echo "No changes to commit"</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>          git push origin || echo "No changes to commit"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="at">        </span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">      # imports an action from another repository, </span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co">      # that deals with the dependencies</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> r-lib/actions/setup-r-dependencies@v2</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co">          # here we have to add all the packages we used in the script!</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="fu">          packages</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>            any::gh</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>            any::dplyr</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>            any::tidyr</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>            any::readr</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>            any::knitr   </span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Execute Script</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="co">        # executes the RScript stored in the file</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co">        # 01-monitoring-quarto-repos/script.R</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>          Rscript "01-monitoring-quarto-repos/script.R"                        </span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="co">        # save the results in the repository</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="co">        # using git in the command line</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Commit results</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>          git config --local user.email "actions@github.com"</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>          git config --local user.name "GitHub Actions"</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>          git add .</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>          git commit -m "Results from R script" || echo "No changes to commit"</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>          git push origin || echo "No changes to commit"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The complete workflow has these three parts: <code>on:</code> (the events that start the workflow), <code>name:</code> (the name of the repository), and <code>jobs:</code> (the instructions for the machine to run).</p>
 </section><section id="we-have-a-workflow" class="level3"><h3 class="anchored" data-anchor-id="we-have-a-workflow">We have a workflow!</h3>
@@ -504,17 +530,26 @@ Watch your awesome automation run</p></li>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">use-public-rspm</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Execute Script</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>          Rscript "01-rscript/script.R"</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Commit results</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>          git config --local user.email "actions@github.com"</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>          git config --local user.name "GitHub Actions"</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>          git add .</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>          git commit -m "Results from R script" || echo "No changes to commit"</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>          git push origin || echo "No changes to commit"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> r-lib/actions/setup-r-dependencies@v2</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="fu">          packages</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            any::gh</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            any::dplyr</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            any::tidyr</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            any::readr</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            any::knitr</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Execute Script</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>          Rscript "01-monitoring-quarto-repos/script.R"</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Commit results</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>          git config --local user.email "actions@github.com"</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>          git config --local user.name "GitHub Actions"</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>          git add .</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>          git commit -m "Results from R script" || echo "No changes to commit"</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>          git push origin || echo "No changes to commit"-</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we need to save this into a <code>yaml</code> file. This file must be stored in the <code>.github/workflows</code> directory.</p>
 <p>To create a new file, click on “Add file” and then choose “Create new file”:</p>
@@ -522,14 +557,14 @@ Watch your awesome automation run</p></li>
 <figure class="figure"><p><img src="images/create-new-file-3.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>To save the file in the right path, type <code>.github/workflows/01-rscript.yaml</code> in the blank space for the file’s name. GitHub will understand that we want to create a directory called <code>.github/</code>, and then another called <code>workflows/</code> inside, and then write a file called <code>01-rscript.yaml</code> inside this directory.</p>
+<p>To save the file in the right path, type <code>.github/workflows/01-monitoring-quarto-repos.yaml</code> in the blank space for the file’s name. GitHub will understand that we want to create a directory called <code>.github/</code>, and then another called <code>workflows/</code> inside, and then write a file called <code>01-monitoring-quarto-repos.yaml</code> inside this directory.</p>
 <p>Copy and paste the code above and click on the green button that says “Commit new file”.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="images/create-new-file-4.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Code available here: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-rscript.yaml" class="uri">https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-rscript.yaml</a></p>
-<p>Now we have a repository with a <code>README.md</code> file, an R script inside the <code>01-rscript/</code> directory, and a GitHub workflow inside the <code>.github/workflows/</code> directory:</p>
+<p>Code available here: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-monitoring-quarto-repos.yaml" class="uri">https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-monitoring-quarto-repos.yaml</a></p>
+<p>Now we have a repository with a <code>README.md</code> file, an R script inside the <code>01-monitoring-quarto-repos/</code> directory, and a GitHub workflow inside the <code>.github/workflows/</code> directory:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="images/repo-2.png" class="img-fluid figure-img"></p>
 </figure>
@@ -542,12 +577,12 @@ Watch your awesome automation run</p></li>
 <figure class="figure"><p><img src="images/logs.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>We can check the directory <code>01-rscript</code>, and there are two new files with the results from the script: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/quarto_repos.csv"><code>quarto_repos.csv</code></a> and <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md"><code>README.md</code></a>. In this <code>README.md</code>, we can monitor the repositories in the <a href="https://github.com/quarto-dev/">quarto-dev</a> organization and see which are the most popular repositories!</p>
+<p>We can check the directory <code>01-monitoring-quarto-repos</code>, and there are two new files with the results from the script: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-monitoring-quarto-repos/quarto_repos.csv"><code>quarto_repos.csv</code></a> and <a href="https://github.com/beatrizmilz/awesome-gha/tree/main/01-monitoring-quarto-repos#readme"><code>README.md</code></a>. In this <code>README.md</code>, we can monitor the repositories in the <a href="https://github.com/quarto-dev/">quarto</a> organizations and see which are the most popular repositories!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="images/after-workflow.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>See the complete list here: <a href="https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md" class="uri">https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md</a></p>
+<p>See the complete list here: <a href="https://github.com/beatrizmilz/awesome-gha/tree/main/01-monitoring-quarto-repos#readme" class="uri">https://github.com/beatrizmilz/awesome-gha/tree/main/01-monitoring-quarto-repos#readme</a></p>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -563,7 +598,7 @@ What if it does not work!?
 </div>
 </div>
 </section><section id="see-you-in-the-next-post" class="level2"><h2 class="anchored" data-anchor-id="see-you-in-the-next-post">See you in the next post!</h2>
-<p>I hope this post was useful to you! In the next post, I plan to show how we can use the structure of an R package in GHA and cache our dependencies to make the workflows run faster.</p>
+<p>I hope this post was useful to you!</p>
 <p>Stay tuned!</p>
 </section><section id="references" class="level2"><h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
@@ -580,9 +615,10 @@ What if it does not work!?
 <center>
 <blockquote class="twitter-tweet blockquote">
 <p lang="en" dir="ltr">
-2 WEEKS UNTIL <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a>!🎉<br><br>The 2nd post about using GitHub Actions for R users is out!<br>I show how to write a workflow that uses R to collect data about the repos by <a href="https://twitter.com/quarto_pub?ref_src=twsrc%5Etfw"><span class="citation" data-cites="quarto_pub">@quarto_pub</span></a> on GitHub and save the results!<a href="https://t.co/4Y6HkyZwgx">https://t.co/4Y6HkyZwgx</a><a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/github?src=hash&amp;ref_src=twsrc%5Etfw">#github</a> <a href="https://twitter.com/hashtag/rstudioconf?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf</a> <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw"><span class="citation" data-cites="rstudio">@rstudio</span></a>
 </p>
-— Beatriz Milz (<span class="citation" data-cites="BeaMilz">@BeaMilz</span>) <a href="https://twitter.com/BeaMilz/status/1546457734790483969?ref_src=twsrc%5Etfw">July 11, 2022</a>
+<p>2 WEEKS UNTIL <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a>!🎉<br><br>The 2nd post about using GitHub Actions for R users is out!<br>I show how to write a workflow that uses R to collect data about the repos by <a href="https://twitter.com/quarto_pub?ref_src=twsrc%5Etfw"><span class="citation" data-cites="quarto_pub">@quarto_pub</span></a> on GitHub and save the results!<a href="https://t.co/4Y6HkyZwgx">https://t.co/4Y6HkyZwgx</a><a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/github?src=hash&amp;ref_src=twsrc%5Etfw">#github</a> <a href="https://twitter.com/hashtag/rstudioconf?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf</a> <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw"><span class="citation" data-cites="rstudio">@rstudio</span></a></p>
+
+<p>— Beatriz Milz (<span class="citation" data-cites="BeaMilz">@BeaMilz</span>) <a href="https://twitter.com/BeaMilz/status/1546457734790483969?ref_src=twsrc%5Etfw">July 11, 2022</a></p>
 </blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>

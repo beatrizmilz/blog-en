@@ -16,10 +16,15 @@ source(here::here("R/multilang.R"))
 multilang()
 ```
 
+::: callout-tip
+
+Hi! Since I wrote this blogpost, I learned awesome new stuff. So I updated this post in september 2022, to document easier practises with Actions :) While I updated the post, I also renamed the directory `01-rscript` to  `01-monitoring-quarto-repos`, but didn't update the images :( So keep that in mind!
+:::
+
+
 Hi!
 
-This is the second blog post in the "GitHub Action" Series.
-We are two weeks from the start of [RStudio Conference - rstudio::conf 2022](https://www.rstudio.com/conference/), and this post series is complementary material for the lightning talk that I will present!
+This is the second blog post in the "GitHub Action" Series. We are two weeks from the start of [RStudio Conference - rstudio::conf 2022](https://www.rstudio.com/conference/), and this post series is complementary material for the lightning talk that I will present!
 
 [![](featured.png){fig-align="center" width="70%"}](https://rstudioconf2022.sched.com/event/11ia9?iframe=no)
 
@@ -29,7 +34,7 @@ If you have not read the earlier post in this series yet, I recommend reading it
 
 ## What we will talk about in this post
 
-This post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the  [quarto-dev](https://github.com/quarto-dev/) organization and save the result into the GitHub repository.
+This post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the [quarto](https://github.com/quarto-dev/) organizations and save the result into the GitHub repository.
 
 -   [ ] Create a GitHub Account
 
@@ -47,21 +52,15 @@ This post is a tutorial on how to use GitHub Actions with an R script, using Git
 
 ### Create a GitHub account
 
-To start using GitHub Actions, first, you need to have an account on [GitHub](https://github.com/).
-You can create a new account for free!
-You also can sign in to your existing account if you already have one.
+To start using GitHub Actions, first, you need to have an account on [GitHub](https://github.com/). You can create a new account for free! You also can sign in to your existing account if you already have one.
 
 ### Create a repository
 
-GitHub Actions workflows work within a repository.
-So, the next step is to create one!
+GitHub Actions workflows work within a repository. So, the next step is to create one!
 
-If you don't know what a repository is, imagine having a directory on your computer, and you store files from a project in that directory.
-A repository is like that but in the cloud!
+If you don't know what a repository is, imagine having a directory on your computer, and you store files from a project in that directory. A repository is like that but in the cloud!
 
-To create a repository, on the homepage of GitHub, click on the "+" icon in the top right corner and select [New repository](https://github.com/new).
-Give your repository a name, then choose whether you want it to be public or private.
-Then click "Create repository".
+To create a repository, on the homepage of GitHub, click on the "+" icon in the top right corner and select [New repository](https://github.com/new). Give your repository a name, then choose whether you want it to be public or private. Then click "Create repository".
 
 ![](images/create-repo.png){fig-align="center"}
 
@@ -69,62 +68,50 @@ For this example, I created a repository called [awesome-gha](https://github.com
 
 ### Create a `README.md` file
 
-Now that we have a repository, we can start creating and adding files to it.
-There are multiple ways you can interact with GitHub: you can use Git on command line, or clone the repository to your machine and use the RStudio Git Pane, for example.
-For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.
+Now that we have a repository, we can start creating and adding files to it. There are multiple ways you can interact with GitHub: you can use Git on command line, or clone the repository to your machine and use the RStudio Git Pane, for example. For this post, I will use GitHub in the browser, so even if you are not used to using Git on your machine, it will be possible to follow along.
 
 First, click on "Creating a new file":
 
 ![](images/repo.png){fig-align="center"}
 
-TODO: UPDATE THIS IMAGE TO HAVE README.MD
-
-Then, add a name for the file: let's create a file called `README.md`.
-This file is the first thing people see when accessing your repository, so adding some information about your project is nice.
-Then, you can add text and Markdown code in the "Edit new file" section, and finally, click on "Commit new file" to save your changes.
+Then, add a name for the file: let's create a file called `README.md`. This file is the first thing people see when accessing your repository, so adding some information about your project is nice. Then, you can add text and Markdown code in the "Edit new file" section, and finally, click on "Commit new file" to save your changes.
 
 ![](images/commit.png){fig-align="center"}
 
-Awesome!
-We have a repository, and now we can start working on our GitHub Actions.
+Awesome! We have a repository, and now we can start working on our GitHub Actions.
 
 ![](images/readme.png){fig-align="center"}
 
 ### Create an R Script
 
-Now we can start creating an R script.
-For a first GitHub Action, it is nice to start with something simple so we understand what is going on.
-To create a new file, click on "Add file" and then choose "Create new file":
+Now we can start creating an R script. For a first GitHub Action, it is nice to start with something simple so we understand what is going on. To create a new file, click on "Add file" and then choose "Create new file":
 
 ![](images/create-new-file.png){fig-align="center"}
 
-In this example, I created an R script in the path `01-rscript/script.R` and added this code:
+In this example, I created an R script in the path `01-monitoring-quarto-repos/script.R` and added this code:
 
 ```{r}
 #| eval: false
 print("Hi! Welcome to a GH Actions with an R example :)")
 
-# Install the packages  needed in the script -------
 
-install.packages("gh")
-install.packages("dplyr")
-install.packages("tidyr")
-install.packages("readr")
-install.packages("knitr")
+# get information about the repositories on the Quarto organizations.
 
-# main script ------------------------------
+quarto_orgs <- c("quarto-dev", "quarto-ext", "quarto-journals")
 
-# get information about the repositories of the Quarto-dev organization.
-quarto_repos_raw <- gh::gh(
+quarto_repos_raw <-
+  purrr::map(quarto_orgs, ~ gh::gh(
   "GET /orgs/{org}/repos",
-  org = "quarto-dev",
+  org = .x,
   type = "public",
   sort = "updated",
   per_page = 100
-)
+))
 
-# transform into a tibble with fewer columns
+
+# transform into a tibble with few cols
 quarto_repos <- quarto_repos_raw |>
+  purrr::flatten() |>
   purrr::map(unlist, recursive = TRUE)  |>
   purrr::map_dfr(tibble::enframe, .id = "id_repo") |>
   tidyr::pivot_wider() |>
@@ -141,7 +128,7 @@ quarto_repos <- quarto_repos_raw |>
 
 # write CSV file with the result
 quarto_repos |>
-  readr::write_csv("01-rscript/quarto_repos.csv")
+  readr::write_csv("01-monitoring-quarto-repos/quarto_repos.csv")
 
 # write the README.md file
 
@@ -160,25 +147,19 @@ format(Sys.Date(), '%b %d %Y'),
 <hr> \n
 ",
 paste(table, collapse = "\n")
-) |> writeLines("01-rscript/README.md")
+) |> writeLines("01-monitoring-quarto-repos/README.md")
 
 print("The end! Congrats!")
+
 ```
 
-Code available here: <https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/script.R>
+Code available here: <https://github.com/beatrizmilz/awesome-gha/blob/main/01-monitoring-quarto-repos/script.R>
 
-To save the file in this path, type `01-rscript/script.R` in the blank space for the file's name.
-GitHub will understand that we want to create a directory called `01-rscript` and then write a file called `script.R` inside this directory.
-Copy and paste the code above and click on the green button that says "Commit new file".
+To save the file in this path, type `01-rscript/script.R` in the blank space for the file's name. GitHub will understand that we want to create a directory called `01-rscript` and then write a file called `script.R` inside this directory. Copy and paste the code above and click on the green button that says "Commit new file".
 
 ![](images/create-new-file2.png){fig-align="center"}
 
-But what does this code do?
-First, we need to install all the packages required by the code to run.
-Then, it accesses the GitHub API and gets information about the public repositories in the [quarto-dev](https://github.com/quarto-dev/) organization.
-Then, it transforms the collected data and creates a nice table.
-It writes a CSV with the table and also writes in a `README.md` file!
-But for now, we only created this file, and to run with GHA, we need to create a file to store the workflow.
+But what does this code do? First, we need to install all the packages required by the code to run. Then, it accesses the GitHub API and gets information about the public repositories in [quarto](https://github.com/quarto-dev/) organizations. Then, it transforms the collected data and creates a nice table. It writes a CSV with the table and also writes in a `README.md` file! But for now, we only created this file, and to run with GHA, we need to create a file to store the workflow.
 
 ### Create the workflow
 
@@ -188,8 +169,7 @@ But before we create this file, let's understand what the code does!
 
 ### Events
 
-First, we need to write the events.
-The events store information about what can start this workflow!
+First, we need to write the events. The events store information about what can start this workflow!
 
 ```{yaml}
 #| eval: false
@@ -200,14 +180,11 @@ on:
   workflow_dispatch:
 ```
 
-
 In this example, we will use two events:
 
 -   [Schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule): We can set a workflow to start at a scheduled time. I always use a website called [crontab guru](https://crontab.guru/) and its [examples](https://crontab.guru/examples.html) to find out how to write schedule that I want in *cron* syntax! In this example, I wrote `"0 9 * * *"`, and according to [crontab guru](https://crontab.guru/) this workflow will be activated every day at 9 am UTC:
 
 ![](images/crontab-guru.png){fig-align="center"}
-
-
 
 -   [Workflow dispatch](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch): this event allows us to activate the workflow any time that we want. We need to **press a button** on the GitHub website (I will show a print screen soon), or request the activation using the GitHub API (this example I'll leave for future posts!).
 
@@ -246,11 +223,25 @@ jobs:
           # uses the RStudio Package Manager
           use-public-rspm: true
 
+
+        
+      # imports an action from another repository, 
+      # that deals with the dependencies
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with: 
+          # here we have to add all the packages we used in the script!
+          packages: |
+            any::gh
+            any::dplyr
+            any::tidyr
+            any::readr
+            any::knitr   
+
       - name: Execute Script
         # executes the RScript stored in the file
-        # 01-rscript/script.R
+        # 01-monitoring-quarto-repos/script.R
         run: |
-          Rscript "01-rscript/script.R"
+          Rscript "01-monitoring-quarto-repos/script.R"                        
 
         # save the results in the repository
         # using git in the command line
@@ -263,7 +254,7 @@ jobs:
           git push origin || echo "No changes to commit"
 ```
 
-The complete workflow has these three parts: `on: ` (the events that start the workflow), `name:` (the name of the repository), and `jobs:` (the instructions for the machine to run).
+The complete workflow has these three parts: `on:` (the events that start the workflow), `name:` (the name of the repository), and `jobs:` (the instructions for the machine to run).
 
 ### We have a workflow!
 
@@ -290,9 +281,18 @@ jobs:
         with:
           use-public-rspm: true
 
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::gh
+            any::dplyr
+            any::tidyr
+            any::readr
+            any::knitr
+
       - name: Execute Script
         run: |
-          Rscript "01-rscript/script.R"
+          Rscript "01-monitoring-quarto-repos/script.R"
 
       - name: Commit results
         run: |
@@ -300,7 +300,8 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add .
           git commit -m "Results from R script" || echo "No changes to commit"
-          git push origin || echo "No changes to commit"
+          git push origin || echo "No changes to commit"-
+
 ```
 
 Now we need to save this into a `yaml` file. This file must be stored in the `.github/workflows` directory.
@@ -309,17 +310,15 @@ To create a new file, click on "Add file" and then choose "Create new file":
 
 ![](images/create-new-file-3.png){fig-align="center"}
 
-To save the file in the right path, type `.github/workflows/01-rscript.yaml` in the blank space for the file's name.
-GitHub will understand that we want to create a directory called `.github/`, and then another called `workflows/` inside,  and then write a file called `01-rscript.yaml` inside this directory.
+To save the file in the right path, type `.github/workflows/01-monitoring-quarto-repos.yaml` in the blank space for the file's name. GitHub will understand that we want to create a directory called `.github/`, and then another called `workflows/` inside, and then write a file called `01-monitoring-quarto-repos.yaml` inside this directory.
 
 Copy and paste the code above and click on the green button that says "Commit new file".
 
-
 ![](images/create-new-file-4.png){fig-align="center"}
 
-Code available here: <https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-rscript.yaml>
+Code available here: <https://github.com/beatrizmilz/awesome-gha/blob/main/.github/workflows/01-monitoring-quarto-repos.yaml>
 
-Now we have a repository with a `README.md` file, an R script inside the `01-rscript/` directory, and a GitHub workflow inside the  `.github/workflows/` directory:
+Now we have a repository with a `README.md` file, an R script inside the `01-monitoring-quarto-repos/` directory, and a GitHub workflow inside the `.github/workflows/` directory:
 
 ![](images/repo-2.png){fig-align="center"}
 
@@ -327,21 +326,17 @@ Now we have a repository with a `README.md` file, an R script inside the `01-rsc
 
 YAY! Now that we created the files needed, we can first experiment with the `workflow_dispatch` button. I made a quick GIF on how to trigger a GHA with the button:
 
-![](images/gif.gif){fig-align="center"}
-You can see this page at this link: <https://github.com/beatrizmilz/r-actions-example/runs/7273362628?check_suite_focus=true>
+![](images/gif.gif){fig-align="center"} You can see this page at this link: <https://github.com/beatrizmilz/r-actions-example/runs/7273362628?check_suite_focus=true>
 
 After a couple of minutes, we can see that the action succeeded:
 
 ![](images/logs.png){fig-align="center"}
 
-We can check the directory `01-rscript`, and there are two new files with the results from the script: [`quarto_repos.csv`](https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/quarto_repos.csv) and [`README.md`](https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md). In this `README.md`, we can monitor the repositories in the [quarto-dev](https://github.com/quarto-dev/) organization and see which are the most popular repositories!
-
-
+We can check the directory `01-monitoring-quarto-repos`, and there are two new files with the results from the script: [`quarto_repos.csv`](https://github.com/beatrizmilz/awesome-gha/blob/main/01-monitoring-quarto-repos/quarto_repos.csv) and [`README.md`](https://github.com/beatrizmilz/awesome-gha/tree/main/01-monitoring-quarto-repos#readme). In this `README.md`, we can monitor the repositories in the [quarto](https://github.com/quarto-dev/) organizations and see which are the most popular repositories!
 
 ![](images/after-workflow.png){fig-align="center"}
 
-See the complete list here: 
-<https://github.com/beatrizmilz/awesome-gha/blob/main/01-rscript/README.md>
+See the complete list here: <https://github.com/beatrizmilz/awesome-gha/tree/main/01-monitoring-quarto-repos#readme>
 
 ::: callout-tip
 ## What if it does not work!?
@@ -351,16 +346,15 @@ The workflow can fail if everything is not correct. For example, the workflow wi
 But don't be scared! This is pretty common. When I started using GHA in 2020, I got several failures before success. My tip in these cases is: to breathe, be calm, read the logs (the text on the black page I showed in the GIF above) and start debugging.
 :::
 
-
 ## See you in the next post!
 
-I hope this post was useful to you! In the next post, I plan to show how we can use the structure of an R package in GHA and cache our dependencies to make the workflows run faster.
+I hope this post was useful to you!
 
 Stay tuned!
 
 ## References
 
-- [All the files created in this repository are available here](https://github.com/beatrizmilz/awesome-gha)
+-   [All the files created in this repository are available here](https://github.com/beatrizmilz/awesome-gha)
 
 -   [GitHub Actions](https://github.com/features/actions)
 
@@ -370,16 +364,29 @@ Stay tuned!
 
 -   [GitHub documentation about workflows](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 
-- [Understanding the workflow file](https://docs.github.com/en/actions/using-workflows/about-workflows#understanding-the-workflow-file)
-
+-   [Understanding the workflow file](https://docs.github.com/en/actions/using-workflows/about-workflows#understanding-the-workflow-file)
 
 Thanks for reviewing the post, [Julio Trecenti](https://github.com/jtrecenti)!
-
 
 ## Share and support!
 
 If you like these kind of content, consider supporting me at [GitHub Sponsors](https://github.com/sponsors/beatrizmilz/), or sharing it on Twitter.
 
 <center>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">2 WEEKS UNTIL <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a>!🎉<br><br>The 2nd post about using GitHub Actions for R users is out!<br>I show how to write a workflow that uses R to collect data about the repos by <a href="https://twitter.com/quarto_pub?ref_src=twsrc%5Etfw">@quarto_pub</a> on GitHub and save the results!<a href="https://t.co/4Y6HkyZwgx">https://t.co/4Y6HkyZwgx</a><a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/github?src=hash&amp;ref_src=twsrc%5Etfw">#github</a> <a href="https://twitter.com/hashtag/rstudioconf?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf</a> <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw">@rstudio</a></p>&mdash; Beatriz Milz (@BeaMilz) <a href="https://twitter.com/BeaMilz/status/1546457734790483969?ref_src=twsrc%5Etfw">July 11, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+2 WEEKS UNTIL <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a>!🎉<br><br>The 2nd post about using GitHub Actions for R users is out!<br>I show how to write a workflow that uses R to collect data about the repos by <a href="https://twitter.com/quarto_pub?ref_src=twsrc%5Etfw">@quarto_pub</a> on GitHub and save the results!<a href="https://t.co/4Y6HkyZwgx">https://t.co/4Y6HkyZwgx</a><a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/github?src=hash&amp;ref_src=twsrc%5Etfw">#github</a> <a href="https://twitter.com/hashtag/rstudioconf?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf</a> <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw">@rstudio</a>
+
+</p>
+
+--- Beatriz Milz (@BeaMilz) <a href="https://twitter.com/BeaMilz/status/1546457734790483969?ref_src=twsrc%5Etfw">July 11, 2022</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
 </center>
