@@ -1,0 +1,28 @@
+---
+toc: true
+author: Beatriz Milz
+categories: Apresentação
+date: '2022-05-12'
+event: Grupo de Estudos de Ecologia Quantitativa (GEEQ)
+links:
+- icon: youtube
+  icon_pack: fab
+  name: Youtube
+  url: https://youtu.be/-28kKOnX5hU
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/2022-texto-e-codigo-geeq/
+location: Online
+title: Texto e código - Escrevendo documentos Científicos com R
+image: featured.jpeg
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+------------------------------------------------------------------------

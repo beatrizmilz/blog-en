@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Beatriz Milz">
-<meta name="dcterms.date" content="2022-07-28">
-
-<title>Bea Milz - Making awesome automations with GitHub Actions</title>
+<meta name="dcterms.date" content="2022-02-02">
+<title>Bea Milz - Relatórios reprodutíveis com R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,7 +15,6 @@ div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 </style>
-
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
@@ -35,8 +31,7 @@ ul.task-list{list-style: none;}
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -54,53 +49,36 @@ ul.task-list{list-style: none;}
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
-<meta property="og:title" content="Bea Milz - Making awesome automations with GitHub Actions">
-<meta property="og:description" content="rstudio::conf(2022)">
+<meta property="og:title" content="Bea Milz - Relatórios reprodutíveis com R">
+<meta property="og:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-
 <link rel="stylesheet" href="../../../styles.css">
-<meta name="twitter:title" content="Bea Milz - Making awesome automations with GitHub Actions">
-<meta name="twitter:description" content="rstudio::conf(2022)">
-<meta name="twitter:image" content="https://beamilz.com/talks/en/2022-rstudio-conf/featured.png">
+<meta name="twitter:title" content="Bea Milz - Relatórios reprodutíveis com R">
+<meta name="twitter:image" content="https://beamilz.com/talks/pt/2022-verao-ime-usp-relatorios/featured.jpg">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="675">
-<meta name="twitter:image-width" content="1200">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
   </a>
@@ -109,13 +87,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../posts/index.html">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -132,20 +110,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
     <a class="dropdown-item" href="../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
     <a class="dropdown-item" href="../../../talks/index.html">
  <span class="dropdown-text">All/Todas</span></a>
   </li>  
@@ -162,7 +140,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -177,36 +155,20 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#complementary-materials" id="toc-complementary-materials" class="nav-link active" data-scroll-target="#complementary-materials">Complementary materials</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Making awesome automations with GitHub Actions</h1>
-<p class="subtitle lead">rstudio::conf(2022)</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Relatórios reprodutíveis com R</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Talks</div>
-    <div class="quarto-category">GitHub Actions</div>
-    <div class="quarto-category">GitHub</div>
+    <div class="quarto-category">Curso</div>
   </div>
   </div>
 
@@ -224,50 +186,24 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 28, 2022</p>
+      <p class="date">February 2, 2022</p>
     </div>
   </div>
     
   </div>
   
 
-</header>
-
-<ul>
-<li><p>Event: <a href="https://www.rstudio.com/conference/2022/schedule/">rstudio::conf(2022)</a></p></li>
-<li><p><a href="https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/">Talk video</a></p></li>
-<li><p><a href="https://beatrizmilz.github.io/rstudioconf2022/">Slides</a></p></li>
-</ul>
-<section id="complementary-materials" class="level2">
-<h2 class="anchored" data-anchor-id="complementary-materials">Complementary materials</h2>
-<ul>
-<li><p><a href="https://beamilz.com/posts/series-gha/2022-07-28-github-actions-rstudio/en/">Blog post: How important is GitHub Actions to RStudio/Posit? Code for a plot in my talk!</a></p></li>
-<li><p><a href="https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/en/">Blog post: Introduction to GitHub Actions to R users</a></p></li>
-<li><p><a href="https://beamilz.com/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/">Blog post: Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users</a></p></li>
-<li><p><a href="https://github.com/beatrizmilz/awesome-gha">GitHub repository: awesome-gha - Awesome GitHub Actions for R</a></p></li>
-<li><p>Public workflow examples:</p>
-<ul>
-<li><p><a href="https://github.com/beatrizmilz/sigbm">sigbm</a> - This repository has a workflow that downloads the excel file with public data related to mining dams in Brazil, every day, and stores it in the repository. There is no R code!</p></li>
-<li><p><a href="https://github.com/beatrizmilz/noticiasgov/">noticiasgov</a> - This repository has a workflow that scrapes news from the official government of Sao Paulo page, and stores it in a CSV file.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<ul>
-<li><a href="https://beatrizmilz.github.io/rstudioconf2022/">Slides</a>:</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/"><img src="featured.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+</header><script src="https://kit.fontawesome.com/1bb720cc6f.js" crossorigin="anonymous"></script><b>Evento: </b>Programa de Verão IME-USP<br><b>Link do evento:</b> <a href="https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php">https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php</a><br><b>Lugar: </b>Online<br><h2 class="anchored">
+Materiais
+</h2>
+<br><center>
+<a href="https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Materiais</button></a> <a href="https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Slides</button></a> <a href="https://cursosextensao.usp.br/enrol/index.php?id=2991" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-chalkboard-teacher"></i> Plataforma USP</button></a> <br><br><img src="featured.jpg" class="img-fluid quarto-figure-center" style="max-width:80%"><br>
+</center>
+<hr>
 
 
-</section>
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -377,16 +313,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -405,10 +339,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
