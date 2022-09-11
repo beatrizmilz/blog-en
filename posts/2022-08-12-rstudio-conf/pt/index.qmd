@@ -23,6 +23,7 @@ knitr::opts_chunk$set(
 source(here::here("R/multilang.R"))
 multilang()
 ```
+
 ::: callout-tip
 Esse post foi origalmente publicado no [blog da Curso-R](https://blog.curso-r.com/posts/2022-08-12-rstudio-conf-impressoes/).
 :::
@@ -206,6 +207,12 @@ Como comentei anteriormente, eu e a Flávia fomos selecionadas para receber uma 
 
 A minha palestra relâmpago foi sobre um tema que tenho aprendido nos últimos 2 anos e acho muito útil e interessante: automatizações com GitHub Actions.
 
+::: callout-tip
+A gravação da palestra está disponível [no site da conferência](https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/)!
+
+[![](img/gravacao.webp){fig-alt="Frame do video da palestra" fig-align="center" width="80%"}](https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/)
+:::
+
 Um destaque foi o treinamento recebido pela [Articulation](https://www.articulationinc.com/). Todas as pessoas que palestraram no evento receberam convites para participar de um treinamento para oferecer palestras mais interessantes, e eu participei em duas atividades. O treinamento recebido me fez reformular completamente a minha proposta, diminuindo o escopo da palestra e focando em um público-alvo mais restrito: pessoas que ainda não usam GitHub Actions!
 
 Palestrar na rstudio::conf() foi uma experiência muito legal! A energia da platéia foi muito boa, e várias pessoas falaram comigo após a palestra dizendo que acharam interessante!
@@ -239,7 +246,7 @@ The material for my talk at <a href="https://twitter.com/hashtag/rstudioconf2022
 
 O [Quarto](https://quarto.org/), para quem não conhece, é a nova geração do RMarkdown. Eu já venho usando o Quarto desde outubro de 2021, enquanto ele estava sendo desenvolvido e aprimorado. Então poucas coisas foram novidades para mim nas palestras sobre Quarto, mas eu gostei de ver como foi dado ênfase! A [keynote 'Hello Quarto'](https://mine.quarto.pub/hello-quarto/#/hello-quarto-title) da [Mine Çetinkaya-Rundel](https://twitter.com/minebocek) e da [Julia Stewart Lowndes](https://twitter.com/juliesquid) foi maravilhosa, com lindas artes da [Allison Horst](https://twitter.com/allison_horst).
 
-[![One penguin standing on another penguin's shoulders in a snowscape, looking through a telescope at a Quarto logo "moon" in the night sky.](img/hello-quarto.png)](https://mine.quarto.pub/hello-quarto/)
+[![One penguin standing on another penguin\'s shoulders in a snowscape, looking through a telescope at a Quarto logo "moon" in the night sky.](img/hello-quarto.png)](https://mine.quarto.pub/hello-quarto/)
 
 > Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.
 
