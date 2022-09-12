@@ -1,8 +1,8 @@
 ---
-title: "Interview with Beatriz Milz"
-subtitle: "Youtube Channel"
+title: "Interview for the Reproducible Research Scout Youtube Channel"
 author: 
   - "Beatriz Milz"
+  - "Raniere Silva"
 date: "2022-06-20"
 categories: [Communities, Reproducible Research]
 image: "featured.png"
@@ -16,10 +16,12 @@ image: "featured.png"
 
 -   [01:07](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=67s) How do you define "reproducible research"?
 
--  [02:19](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=139s) How was your first contact with R?
+-   [02:19](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=139s) How was your first contact with R?
 
 -   [04:11](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=251s) How did the R package mananciais start?
 
--    [06:14](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=374s) Tips to start with R
+-   [06:14](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=374s) Tips to start with R
 
--    [10:19](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=619s) Other projects to follow
+-   [10:19](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=619s) Other projects to follow
+
+
