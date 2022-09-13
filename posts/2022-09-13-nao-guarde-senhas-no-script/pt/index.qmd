@@ -30,7 +30,7 @@ Uma forma de fazer isso é com as variáveis de ambiente (*environment variables
 
 Simplificando, as variáveis de ambientes são objetos que são carregados ao iniciar a sessão do R. Então eles ficarão disponíveis para uso, apesar de não aparecer no painel *Environment* do RStudio.
 
-Uma forma de saber quais são as nossas variáveis de ambiente é usando a função `Sys.getenv()` sem argumentos. Atenção, várias variáveis de configuração irão aparecer nesse output e não recomendo alterá-las.
+Uma forma de saber quais são as nossas variáveis de ambiente é usando a função `Sys.getenv()` sem argumentos. Atenção, várias variáveis de configuração irão aparecer no output e não recomendo alterá-las.
 
 ::: {.callout-caution collapse="true"}
 ## Expanda para ver o output da função `Sys.getenv()`
@@ -232,7 +232,7 @@ Eu ainda não testei essas funções pois o pacote `httr2` é bem recente. Segun
 
 ## Conclusão
 
-Esperamos que este post seja interessante para você, e que as suas senhas estejam sempre protegidas! Bons estudos e até a próxima!
+Espero que este post seja interessante para você, e que as suas senhas estejam sempre protegidas! Bons estudos e até a próxima!
 
 ## Referências
 
