@@ -279,7 +279,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </section><section id="variáveis-de-ambiente" class="level2"><h2 class="anchored" data-anchor-id="variáveis-de-ambiente">Variáveis de ambiente</h2>
 <p>Uma forma de fazer isso é com as variáveis de ambiente (<em>environment variables</em>). Não vou detalhar o conceito de ambientes mas deixei um link nas referências, ao final do post.</p>
 <p>Simplificando, as variáveis de ambientes são objetos que são carregados ao iniciar a sessão do R. Então eles ficarão disponíveis para uso, apesar de não aparecer no painel <em>Environment</em> do RStudio.</p>
-<p>Uma forma de saber quais são as nossas variáveis de ambiente é usando a função <code><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv()</a></code> sem argumentos. Atenção, várias variáveis de configuração irão aparecer nesse output e não recomendo alterá-las.</p>
+<p>Uma forma de saber quais são as nossas variáveis de ambiente é usando a função <code><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv()</a></code> sem argumentos. Atenção, várias variáveis de configuração irão aparecer no output e não recomendo alterá-las.</p>
 <div class="callout-caution callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -466,7 +466,7 @@ XPC_SERVICE_NAME
 <p>Para mais camadas de segurança, recomendo a leitura da <a href="https://httr2.r-lib.org/articles/wrapping-apis.html#secret-management">documentação do pacote httr2, no trecho sobre <em>Secret management</em></a>. Nesse trecho, além de apresentar a opção utilizando a função <code><a href="https://usethis.r-lib.org/reference/edit.html">usethis::edit_r_environ()</a></code>, também é apresentado as funções <code>httr2::secret_encrypt()</code> e <code>htt2::secret_decrypt()</code>.</p>
 <p>Eu ainda não testei essas funções pois o pacote <code>httr2</code> é bem recente. Segundo o autor do pacote (o <a href="https://hadley.nz/">Hadley Wickham</a>), com essas funções é possível usar criptografia para lidar com as senhas/tokens.</p>
 </section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
-<p>Esperamos que este post seja interessante para você, e que as suas senhas estejam sempre protegidas! Bons estudos e até a próxima!</p>
+<p>Espero que este post seja interessante para você, e que as suas senhas estejam sempre protegidas! Bons estudos e até a próxima!</p>
 </section><section id="referências" class="level2"><h2 class="anchored" data-anchor-id="referências">Referências</h2>
 <ul>
 <li><p><a href="https://rstudio-education.github.io/hopr/environments.html#assignment">Environments/Ambientes - Hands-On Programming with R</a></p></li>

@@ -134,7 +134,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/posts/pt.html</loc>
-    <lastmod>2022-09-13T11:33:37.112Z</lastmod>
+    <lastmod>2022-09-13T12:01:49.357Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/about-es.html</loc>
@@ -182,7 +182,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/index.html</loc>
-    <lastmod>2022-09-13T11:33:38.912Z</lastmod>
+    <lastmod>2022-09-13T12:01:51.377Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/about.html</loc>
@@ -202,7 +202,7 @@
   </url>
   <url>
     <loc>https://beamilz.com/posts/index.html</loc>
-    <lastmod>2022-09-13T11:33:39.657Z</lastmod>
+    <lastmod>2022-09-13T12:01:52.161Z</lastmod>
   </url>
   <url>
     <loc>https://beamilz.com/talks/pt/2022-rmarkdown-bost/index.html</loc>
@@ -375,5 +375,9 @@
   <url>
     <loc>https://beamilz.com/talks/en/2022-interview-reproducible-research-scout/index.html</loc>
     <lastmod>2022-09-11T21:37:54.944Z</lastmod>
+  </url>
+  <url>
+    <loc>https://beamilz.com/posts/2022-09-13-nao-guarde-senhas-no-script/pt/index.html</loc>
+    <lastmod>2022-09-13T12:01:48.325Z</lastmod>
   </url>
 </urlset>

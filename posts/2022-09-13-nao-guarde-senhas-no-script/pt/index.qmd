@@ -6,7 +6,7 @@ date: "2022-09-13"
 categories: ["Tutorial"]
 image: "logo-featured.jpg"
 toc: true
-draft: true
+draft: false
 ---
 
 ```{r multilang-buttons}
