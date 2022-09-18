@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz Milz">
+<meta name="author" content="Angélica Custódio">
+<meta name="dcterms.date" content="2022-07-08">
+<title>Bea Milz - Tidyverse developer day 2019 (tidy-dev-day)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - Tidyverse developer day 2019 (tidy-dev-day)">
+<meta property="og:description" content="The experience of participating in the Tidyverse Developer Day 2019.">
+<meta property="og:image" content="https://beamilz.com/social.png">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - Tidyverse developer day 2019 (tidy-dev-day)">
+<meta name="twitter:description" content="The experience of participating in the Tidyverse Developer Day 2019.">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
+    <a class="dropdown-item" href="../../../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
+    <a class="dropdown-item" href="../../../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/en/index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/pt/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/es/index.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Tidyverse developer day 2019 (tidy-dev-day)</h1>
+            <p class="subtitle lead">The experience of participating in the Tidyverse Developer Day 2019.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Events</div>
+                <div class="quarto-category">Communities</div>
+                <div class="quarto-category">tidyverse</div>
+                <div class="quarto-category">RStudio</div>
+                <div class="quarto-category">R Packages</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+               <p>Angélica Custódio </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 8, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#what-is-tidy-dev-day" id="toc-what-is-tidy-dev-day" class="nav-link active" data-scroll-target="#what-is-tidy-dev-day">What is tidy-dev-day?</a></li>
+  <li><a href="#how-was-tidy-dev-day" id="toc-how-was-tidy-dev-day" class="nav-link" data-scroll-target="#how-was-tidy-dev-day">How was tidy-dev-day?</a></li>
+  <li><a href="#beas-experience" id="toc-beas-experience" class="nav-link" data-scroll-target="#beas-experience">Bea’s experience</a></li>
+  <li><a href="#ang%C3%A9licas-experience" id="toc-angélicas-experience" class="nav-link" data-scroll-target="#ang%C3%A9licas-experience">Angélica’s experience</a></li>
+  <li><a href="#final-remarks" id="toc-final-remarks" class="nav-link" data-scroll-target="#final-remarks">Final remarks</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p><a href="../../../posts/2019-08-12-tidydevday/en/index.html"> <button type="button" class="btn btn-primary">English</button></a> <a href="../../../posts/2019-08-12-tidydevday/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Notes from 8th July 2022
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Hi! This post was written three years ago, in 2019. In this post, my friend Angélica and I share the experience of participating in the Tidyverse Developer Day 2019.</p>
+<p>As <a href="https://www.rstudio.com/conference/">rstudio::conf 2022</a> is coming up, I thought it would be nice to translate this post.</p>
+<p>While translating it, I remembered more about that day and thought about how much I had learned since then. That event was essential for me, and I learned so much 💜. So, thanks to <strong>everyone</strong> involved, specially <a href="https://www.rstudio.com/">RStudio</a> and the <a href="https://github.com/tidyverse">tidyverse</a> team that organized this event.</p>
+<p>This post was originally published on <a href="https://blog.curso-r.com/posts/2019-08-12-tidydevday/">Curso-R’s blog</a>.</p>
+</div>
+</div>
+<p>In this post, <a href="https://beamilz.com">Beatriz Milz</a> and <a href="https://www.linkedin.com%20/in/angelicacustodio/">Angélica Custódio</a> talk about the experience of participating in the Tidyverse Developer Day 2019.</p>
+<ul>
+<li><p>Bea is a Ph.D.&nbsp;student in Environmental Science at the University of Sao Paulo and is one of the co-organizers of <a href="https://www.meetup.com/rladies-sao-paulo/">R-Ladies São Paulo</a>, which is an organization that aims to promote gender diversity in the R community.</p></li>
+<li><p>Angélica has a degree in statistics from UFSCar, and a master’s in Computer Science at UFABC. She is also part of <a href="https://www.meetup.com/rladies-sao-paulo/">R-Ladies São Paulo</a> and <a href="https://www.meetup.com/PyLadiesSP/">PyLadies São Paulo</a>.</p></li>
+</ul>
+<section id="what-is-tidy-dev-day" class="level2"><h2 class="anchored" data-anchor-id="what-is-tidy-dev-day">What is tidy-dev-day?</h2>
+<p><a href="https://github.com/tidyverse/dev-day-2019">Tidyverse Developer Day</a> (tidy-dev-day) is a day-long event where attendees learn more about how to contribute to <a href="https://www.tidyverse.org/">tidyverse</a>. The first edition was at <a href="https://resources.rstudio.com/tidyverse/tidyverse-developer-day-2019">rstudio::conf2019</a>.</p>
+<p>This was the second edition of tidy-dev-day and was a part of the <a href="https://user2019.r-project.org/">useR!2019 conference</a>, which took place in Toulouse, France. The event happened the day before the start of the conference, bringing together several people who participated in it.</p>
+<p>Something to note is that the <a href="https://user2019.r-project.org/">useR!2019</a> organization offered diversity scholarships, providing financial assistance to members of underrepresented groups in the R to participate in the conference. The diversity scholarships were fundamental for the participation of several people from different parts of the world, including the authors of this post (Bea and Angelica).</p>
+</section><section id="how-was-tidy-dev-day" class="level2"><h2 class="anchored" data-anchor-id="how-was-tidy-dev-day">How was tidy-dev-day?</h2>
+<p>The event had a <a href="https://github.com/tidyverse/dev-day-%202019/blob/master/CODE_OF_CONDUCT.md">code of conduct</a> to provide a safe and friendly space for all participants.</p>
+<p>In the event, participants had the opportunity to learn how to contribute to the tidyverse. Several developers and maintainers of the tidyverse were present and with a team of helpers. They helped participants, answered questions, reviewed the contributions, and so on.</p>
+<p>The material used (instructions, presentations, suggested materials, etc.) is available <a href="https://github.com/tidyverse/dev-day-2019">in this Github repository</a>.</p>
+<p>On a wall of the room, several post-its indicated issues to be worked on, separated by packages and color. The color stated the type of issue (documentation, bug, feature).</p>
+<p>Participants could choose an issue to work on during the event.</p>
+<p>On another wall, post-its were separated into pull request post-its to be reviewed by <a href="http://hadley.nz/">Hadley Wickham</a> and other maintainers, and post-its that had already been reviewed and accepted!</p>
+<p>Another cool thing is that the space had several tables grouped, which helped to work with other people.</p>
+<p><img src="https://i.imgur.com/Oz6x6GY.jpg" class="img-fluid"></p>
+<p><strong>Caption:</strong> Photo of the Tidy-Dev-Day, by <a href="https://twitter.com/Dale_Masch">@Dale_Masch</a>.</p>
+<p>For those participating for the first time, they recommended issues related to documentation improvements, as they are more natural for those who have never made a package contribution before.</p>
+<p>For those who were already more familiar with package development, they recommended bug or feature issues, as they require a greater knowledge of package development.</p>
+</section><section id="beas-experience" class="level2"><h2 class="anchored" data-anchor-id="beas-experience">Bea’s experience</h2>
+<p>By the time of the event, I have not developed a package yet. So when I arrived at the event, I didn’t knew how packages were structured. In the <a href="https://github.com/tidyverse/dplyr/issues/3698">issue I chose</a>to work on, the goal was to improve an error message from the function <a href="https://dplyr.tidyverse.org/"><code>dplyr::filter()</code></a>, so that the message would conform to the <a href="https://style.tidyverse.org/">tidyverse style guide</a>. <img src="https://i.imgur.com/VYgvY7k.jpg" class="img-fluid"></p>
+<p><strong>Caption:</strong> Photo of the issue I was working on and the unique coin we received that day. Photo by <a href="https://twitter.com/Bea_Milz">@Bea_Milz</a>.</p>
+<p>Initially, I forked the dplyr repository, cloned it to my computer, and did not know what to do next.</p>
+<p>I didn’t knew which directory the functions were in, and I was afraid of changing something and causing an error in other functions of the package… But I’m glad I had help!</p>
+<p><a href="https://ildiczeller.com/">Ildi Czeller</a> showed me what directory the functions were in (by the way, it’s in <code>/R</code>), and then I was able to find the file I needed to change and what part of the code was corresponding to the <code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code> function. That was the first time I heard about <a href="https://testthat.r-lib.org/">tests</a>, and I had to change the test referring to the error message I was working on.</p>
+<p>After making the changes I felt were necessary, I made a <a href="https://github.com/tidyverse/dplyr/pull/4477">pull request</a>. Hadley replied that someone else was also working on this issue and indicated where the person was sitting. So I went there and asked <a href="https://github.com/rundel">Colin</a> (who was working on this same issue) if we could work together.</p>
+<p>He was super welcoming! He explained how he was developing the improvement, and I also showed him what I had done. Hadley asked to change some tests, and we worked on it together (in this case, I was mostly learning and asking Colin, because tests were new to me).</p>
+<p><img src="https://i.imgur.com/zllw6qX.png" class="img-fluid"></p>
+<p><strong>Legenda:</strong> The <a href="https://github.com/tidyverse/dplyr/pull/4476">pull request</a> was accepted!</p>
+<p>It was a unique experience, and I learned a <strong>lot</strong> that day!</p>
+</section><section id="angélicas-experience" class="level2"><h2 class="anchored" data-anchor-id="angélicas-experience">Angélica’s experience</h2>
+<p>During tidy-dev-day, I worked on issues from <a href="https://ggplot2.tidyverse.org/">ggplot2</a>. It was a new experience, and it was gratifying to feel that I learned and contributed to the package.</p>
+<p>At the event, several people facilitated the activity. They helped the participants with activities like how to do a fork on GitHub, work on the issue in R, make a pull request, and so on. I had the help of <a href="https://ildiczeller.com/">Ildi Czeller</a>, who was one of the helpers and helped me at every step, giving tips from git settings to teaching shortcuts in Rstudio that made life easier (they are documented <a href="https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts">here</a>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://i.imgur.com/Svktt2C.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p><strong>Caption:</strong> Creating a pull request in the ggplot2 package.</p>
+<p>The activity promoted the engagement and contribution of everyone, from those who were new to package development, to those who already had a lot of experience.</p>
+<p>It was a welcoming space to ask questions and ask for help.</p>
+<p>At one point, I was able to talk to <a href="http://hadley.nz/">Hadley</a> and ask questions about an issue I was working on. Understanding better ggplot2 with one of the authors of the package was an incredible learning experience.</p>
+</section><section id="final-remarks" class="level2"><h2 class="anchored" data-anchor-id="final-remarks">Final remarks</h2>
+<p>According to <a href="http://hadley.nz/">Hadley</a>, more than 40 pull requests were accepted, and almost 30 needed to be reviewed:</p>
+<center>
+<blockquote class="twitter-tweet blockquote" data-lang="en">
+<p lang="en" dir="ltr">
+</p>
+<p>Huge thanks to everyone who contributed to tidyverse developer day! We merged over 40 PRs and have almost 30 more to review over the next few days <a href="https://t.co/uM9Tg1dMeX">pic.twitter.com/uM9Tg1dMeX</a></p>
+
+<p>— Hadley Wickham (<span class="citation" data-cites="hadleywickham">@hadleywickham</span>) <a href="https://twitter.com/hadleywickham/status/1148252922272190464?ref_src=twsrc%5Etfw">July 8, 2019</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<p>It was an excellent opportunity to meet new people too! And to meet many people from the community that we admire.</p>
+<p><img src="https://i.imgur.com/oWtQFxi.jpg" class="img-fluid"></p>
+<p><strong>Caption:</strong> Angelica and Bea showing the issues that they were working on tidy-dev-day. Photo by <a href="https://twitter.com/angcustodio">AngCustodio</a>.</p>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

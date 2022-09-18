@@ -1,0 +1,158 @@
+/* css styles */
+
+main, p{
+  font-size: 1.1rem !important;
+}
+
+.callout.callout-style-default .callout-body {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+:root {
+    --bs-blue: #9172be;
+    --bs-primary: #eb6864;
+}
+
+div.quarto-post .thumbnail img {
+    width: 100%;
+    object-fit: contain;
+    max-height: 150px;
+}
+
+.quarto-listing-category.category-cloud{
+    font-family: 'News Cycle';
+
+}
+
+
+.quarto-listing-category.category-cloud .category-cloud-6 {
+    background: #f0fff2;
+    border-radius: 10%;
+
+}
+
+.quarto-listing-category.category-cloud .category-cloud-5 {
+    background: aliceblue;
+    border-radius: 10%;
+
+}
+
+.quarto-listing-category.category-cloud .category-cloud-4 {
+    background: #fdf0ff;
+    border-radius: 10%;
+
+}
+
+.quarto-listing-category.category-cloud .category-cloud-3 {
+    background: #fff0f0;
+    border-radius: 10%;
+}
+
+.quarto-listing-category.category-cloud .category-cloud-2 {
+    background: #f2f0ff;
+    border-radius: 10%;
+
+}
+
+.quarto-listing-category.category-cloud .category-cloud-1 {
+    background: #f0f1ff;
+    border-radius: 10%;
+
+}
+
+.navbar-dark {
+    background-color: var(--bs-blue);
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: var(--bs-blue);
+    border-color: var(--bs-blue);
+}
+
+.quarto-title-banner {
+    margin-bottom: 1em;
+    color: rgba(255,255,255,.7);
+    background: var(--bs-blue);
+}
+
+
+.page-link {
+      color: var(--bs-blue);
+}
+
+
+.page-link:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: var(--bs-blue);
+    border-color: var(--bs-blue);
+}
+
+a{
+  color: var(--bs-blue);
+}
+
+b, strong {
+    color: var(--bs-blue);
+    font-weight: bolder;
+}
+
+div.quarto-post .listing-categories .listing-category {
+    color: var(--bs-blue);
+    border: solid 1px var(--bs-gray-400);
+    font-size: .8em;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--bs-blue);
+    border-color: var(--bs-blue);
+}
+
+.sidebar nav[role=doc-toc] ul>li>a.active {
+    border-left: 1px solid var(--bs-blue);
+    color: var(--bs-blue) !important;
+}
+
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+    border-left: 1px solid var(--bs-blue);
+    color: var(--bs-blue) !important;
+}
+
+div.quarto-about-trestles .about-entity .about-link:hover {
+    color: var(--bs-blue);
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: var(--bs-blue);
+}
+
+.alert-primary {
+    color: var(--bs-gray-dark);
+    background-color: var(--bs-body-bg);
+    border-color: var(--bs-blue);
+    border-style: dashed;
+}
+
+.nav-link {
+    color: var(--bs-purple);
+}
+
+.btn-primary:hover {
+  color: #000;
+  background-color: #f0f1ff;
+  border-color: #f0f1ff;
+  padding: .375rem .75rem;
+  font-size: 1.1rem !important;
+  margin-top: -9px;
+}
+
+.btn-primary {
+  padding: .375rem .75rem;
+  font-size: 1.1rem !important;
+  margin-top: -9px;
+}

@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Bea Milz</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts-ptbr .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 10,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posts-ptbr'] = new List('listing-posts-ptbr', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags -->
+<title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz">
+<meta property="og:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="og:image" content="https://beamilz.com/social.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta name="twitter:title" content="Bea Milz">
+<meta name="twitter:image" content="https://beamilz.com/posts/2022-09-13-nao-guarde-senhas-no-script/pt/logo-featured.jpg">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
+        <li>
+    <a class="dropdown-item" href="../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
+        <li>
+    <a class="dropdown-item" href="../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
+        <li>
+    <a class="dropdown-item" href="../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../talks/en/index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../talks/pt/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../talks/es/index.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#posts-em-português" id="toc-posts-em-português" class="nav-link active" data-scroll-target="#posts-em-português">Posts em Português</a></li>
+  </ul>
+</nav>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="API"><span class="quarto-category-count category-cloud-2">API</span></div><div class="category" data-category="Automations"><span class="quarto-category-count category-cloud-1">Automations</span></div><div class="category" data-category="Azure"><span class="quarto-category-count category-cloud-1">Azure</span></div><div class="category" data-category="Communities"><span class="quarto-category-count category-cloud-2">Communities</span></div><div class="category" data-category="Community"><span class="quarto-category-count category-cloud-1">Community</span></div><div class="category" data-category="Data cleaning"><span class="quarto-category-count category-cloud-1">Data cleaning</span></div><div class="category" data-category="Data import"><span class="quarto-category-count category-cloud-2">Data import</span></div><div class="category" data-category="Datasets"><span class="quarto-category-count category-cloud-1">Datasets</span></div><div class="category" data-category="Debug"><span class="quarto-category-count category-cloud-1">Debug</span></div><div class="category" data-category="Events"><span class="quarto-category-count category-cloud-1">Events</span></div><div class="category" data-category="Excel"><span class="quarto-category-count category-cloud-1">Excel</span></div><div class="category" data-category="Git"><span class="quarto-category-count category-cloud-1">Git</span></div><div class="category" data-category="GitHub"><span class="quarto-category-count category-cloud-1">GitHub</span></div><div class="category" data-category="GitHub Actions"><span class="quarto-category-count category-cloud-1">GitHub Actions</span></div><div class="category" data-category="Google"><span class="quarto-category-count category-cloud-1">Google</span></div><div class="category" data-category="Google Sheets"><span class="quarto-category-count category-cloud-1">Google Sheets</span></div><div class="category" data-category="Maps"><span class="quarto-category-count category-cloud-1">Maps</span></div><div class="category" data-category="Microsoft"><span class="quarto-category-count category-cloud-1">Microsoft</span></div><div class="category" data-category="Microsoft365R"><span class="quarto-category-count category-cloud-1">Microsoft365R</span></div><div class="category" data-category="One Drive"><span class="quarto-category-count category-cloud-1">One Drive</span></div><div class="category" data-category="Pipe"><span class="quarto-category-count category-cloud-1">Pipe</span></div><div class="category" data-category="R"><span class="quarto-category-count category-cloud-2">R</span></div><div class="category" data-category="R Packages"><span class="quarto-category-count category-cloud-1">R Packages</span></div><div class="category" data-category="R-Ladies"><span class="quarto-category-count category-cloud-2">R-Ladies</span></div><div class="category" data-category="RMarkdown"><span class="quarto-category-count category-cloud-1">RMarkdown</span></div><div class="category" data-category="RStudio"><span class="quarto-category-count category-cloud-2">RStudio</span></div><div class="category" data-category="Reproducibility"><span class="quarto-category-count category-cloud-1">Reproducibility</span></div><div class="category" data-category="Research"><span class="quarto-category-count category-cloud-1">Research</span></div><div class="category" data-category="Shiny"><span class="quarto-category-count category-cloud-1">Shiny</span></div><div class="category" data-category="Studying"><span class="quarto-category-count category-cloud-1">Studying</span></div><div class="category" data-category="Tables"><span class="quarto-category-count category-cloud-1">Tables</span></div><div class="category" data-category="Teaching"><span class="quarto-category-count category-cloud-2">Teaching</span></div><div class="category" data-category="The Carpentries"><span class="quarto-category-count category-cloud-1">The Carpentries</span></div><div class="category" data-category="Tips"><span class="quarto-category-count category-cloud-1">Tips</span></div><div class="category" data-category="Tutorial"><span class="quarto-category-count category-cloud-2">Tutorial</span></div><div class="category" data-category="Web Scraping"><span class="quarto-category-count category-cloud-2">Web Scraping</span></div><div class="category" data-category="ggplot2"><span class="quarto-category-count category-cloud-1">ggplot2</span></div><div class="category" data-category="httr"><span class="quarto-category-count category-cloud-1">httr</span></div><div class="category" data-category="purrr"><span class="quarto-category-count category-cloud-2">purrr</span></div><div class="category" data-category="rvest"><span class="quarto-category-count category-cloud-1">rvest</span></div><div class="category" data-category="tidyverse"><span class="quarto-category-count category-cloud-1">tidyverse</span></div></div></div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bea Milz</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="posts-em-português" class="level2">
+<h2 class="anchored" data-anchor-id="posts-em-português">Posts em Português</h2>
+<div id="listing-posts-ptbr" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-posts-ptbr-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts-ptbr'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Tutorial" data-listing-date-sort="1663038000000" data-listing-file-modified-sort="1663512369489" data-listing-reading-time-sort="10.6">
+<div class="thumbnail">
+<p><a href="../posts/2022-09-13-nao-guarde-senhas-no-script/pt/index.html"> <img src="../posts/2022-09-13-nao-guarde-senhas-no-script/pt/logo-featured.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2022-09-13-nao-guarde-senhas-no-script/pt/index.html">
+<h3 class="no-anchor listing-title">
+Como usar senhas sem escreve-las nos scripts
+</h3>
+<div class="listing-subtitle">
+Usando senhas, tokens e keys no código em R de forma segura.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
+Tutorial
+</div>
+</div>
+<a href="../posts/2022-09-13-nao-guarde-senhas-no-script/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2022-09-13-nao-guarde-senhas-no-script/pt/index.html">
+<div class="listing-date">
+Sep 13, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+10 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Community,RStudio,Events" data-listing-date-sort="1660273200000" data-listing-file-modified-sort="1663512369488" data-listing-reading-time-sort="14.955">
+<div class="thumbnail">
+<p><a href="../posts/2022-08-12-rstudio-conf/pt/index.html"> <img src="../posts/2022-08-12-rstudio-conf/pt/img/lunch-with-hadley.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2022-08-12-rstudio-conf/pt/index.html">
+<h3 class="no-anchor listing-title">
+Impressões pessoais da rstudio::conf(2022)
+</h3>
+<div class="listing-subtitle">
+Nesse post, apresentamos nossas impressões pessoais sobre o evento que aconteceu em Washington DC!
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Community'); return false;">
+Community
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
+RStudio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
+Events
+</div>
+</div>
+<a href="../posts/2022-08-12-rstudio-conf/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2022-08-12-rstudio-conf/pt/index.html">
+<div class="listing-date">
+Aug 12, 2022
+</div>
+<div class="listing-author">
+Julio Trecenti, Flavia E. Rius, Beatriz Milz
+</div>
+<div class="listing-reading-time">
+14 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656558000000" data-listing-file-modified-sort="1663512369498" data-listing-reading-time-sort="5.15">
+<div class="thumbnail">
+<p><a href="../posts/series-gha/2022-series-gha-1-what-is/pt/index.html"> <img src="../posts/series-gha/2022-series-gha-1-what-is/pt/featured.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/series-gha/2022-series-gha-1-what-is/pt/index.html">
+<h3 class="no-anchor listing-title">
+Introdução ao GitHub Actions para quem programa em R
+</h3>
+<div class="listing-subtitle">
+Série GitHub Actions - 1 - Neste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Git'); return false;">
+Git
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
+GitHub
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
+GitHub Actions
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Automations'); return false;">
+Automations
+</div>
+</div>
+<a href="../posts/series-gha/2022-series-gha-1-what-is/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/series-gha/2022-series-gha-1-what-is/pt/index.html">
+<div class="listing-date">
+Jun 30, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+5 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="Tutorial,Teaching,Datasets,Data import" data-listing-date-sort="1654916400000" data-listing-file-modified-sort="1663512369482" data-listing-reading-time-sort="2.905">
+<div class="thumbnail">
+<p><a href="../posts/2022-06-11-bases-de-dados/pt/index.html"> <img src="../posts/2022-06-11-bases-de-dados/pt/welcome_to_rstats.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2022-06-11-bases-de-dados/pt/index.html">
+<h3 class="no-anchor listing-title">
+Bases de dados: para praticar e ensinar
+</h3>
+<div class="listing-subtitle">
+Quer saber como acessar várias bases de dados com R? Imagem: por Allison Horst.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
+Tutorial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
+Teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Datasets'); return false;">
+Datasets
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data import'); return false;">
+Data import
+</div>
+</div>
+<a href="../posts/2022-06-11-bases-de-dados/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2022-06-11-bases-de-dados/pt/index.html">
+<div class="listing-date">
+Jun 11, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz, Tereza Lacerda
+</div>
+<div class="listing-reading-time">
+2 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="Tutorial,Teaching,Datasets,Data import,R Packages" data-listing-date-sort="1649214000000" data-listing-file-modified-sort="1663512369463" data-listing-reading-time-sort="3.325">
+<div class="thumbnail">
+<p><a href="../posts/2022-04-06-pacote-dados/pt/index.html"> <img src="../posts/2022-04-06-pacote-dados/pt/dados-hex-featured.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2022-04-06-pacote-dados/pt/index.html">
+<h3 class="no-anchor listing-title">
+Pacote dados: bases em português para praticar e ensinar
+</h3>
+<div class="listing-subtitle">
+Quer saber como acessar várias bases de dados em Português com R? Post publicado no blog da Curso-R.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
+Tutorial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
+Teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Datasets'); return false;">
+Datasets
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data import'); return false;">
+Data import
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R Packages'); return false;">
+R Packages
+</div>
+</div>
+<a href="../posts/2022-04-06-pacote-dados/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2022-04-06-pacote-dados/pt/index.html">
+<div class="listing-date">
+Apr 6, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+3 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="API,One Drive,Data import,Excel,Microsoft,Azure,Microsoft365R" data-listing-date-sort="1647572400000" data-listing-file-modified-sort="1663512369462" data-listing-reading-time-sort="6.13">
+<div class="thumbnail">
+<p><a href="../posts/2022-03-18-onedrive/pt/index.html"> <img src="../posts/2022-03-18-onedrive/pt/featured-hex.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2022-03-18-onedrive/pt/index.html">
+<h3 class="no-anchor listing-title">
+Acessando dados do seu One Drive com R
+</h3>
+<div class="listing-subtitle">
+Post publicado no blog da Curso-R.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('API'); return false;">
+API
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('One Drive'); return false;">
+One Drive
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data import'); return false;">
+Data import
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Excel'); return false;">
+Excel
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Microsoft'); return false;">
+Microsoft
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Azure'); return false;">
+Azure
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Microsoft365R'); return false;">
+Microsoft365R
+</div>
+</div>
+<a href="../posts/2022-03-18-onedrive/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2022-03-18-onedrive/pt/index.html">
+<div class="listing-date">
+Mar 18, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+6 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="API,Google,Data import,Google Sheets" data-listing-date-sort="1646708400000" data-listing-file-modified-sort="1663512369453" data-listing-reading-time-sort="7.635">
+<div class="thumbnail">
+<p><a href="../posts/2022-03-08-googlesheets4/pt/index.html"> <img src="../posts/2022-03-08-googlesheets4/pt/featured-hex.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2022-03-08-googlesheets4/pt/index.html">
+<h3 class="no-anchor listing-title">
+Acessando dados do Google Sheets com R
+</h3>
+<div class="listing-subtitle">
+Post publicado no blog da Curso-R.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('API'); return false;">
+API
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Google'); return false;">
+Google
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data import'); return false;">
+Data import
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Google Sheets'); return false;">
+Google Sheets
+</div>
+</div>
+<a href="../posts/2022-03-08-googlesheets4/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2022-03-08-googlesheets4/pt/index.html">
+<div class="listing-date">
+Mar 8, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+7 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="API,purrr,httr,Web Scraping,Git,GitHub" data-listing-date-sort="1645239600000" data-listing-file-modified-sort="1663512369438" data-listing-reading-time-sort="5.66">
+<div class="thumbnail">
+<p><a href="../posts/2022-02-19-api-github-1/pt/index.html"> <img src="../posts/2022-02-19-api-github-1/pt/octocat-featured.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2022-02-19-api-github-1/pt/index.html">
+<h3 class="no-anchor listing-title">
+Acessando APIs com R: GitHub - Parte 1
+</h3>
+<div class="listing-subtitle">
+Segundo post sobre acesso à APIs.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('API'); return false;">
+API
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('purrr'); return false;">
+purrr
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('httr'); return false;">
+httr
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Web Scraping'); return false;">
+Web Scraping
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Git'); return false;">
+Git
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
+GitHub
+</div>
+</div>
+<a href="../posts/2022-02-19-api-github-1/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2022-02-19-api-github-1/pt/index.html">
+<div class="listing-date">
+Feb 19, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+5 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="API,purrr,httr,Web Scraping" data-listing-date-sort="1638154800000" data-listing-file-modified-sort="1663512369438" data-listing-reading-time-sort="3.995">
+<div class="thumbnail">
+<p><a href="../posts/2021-11-29-api-pokemon/pt/index.html"> <img src="../posts/2021-11-29-api-pokemon/pt/API-drake-featured.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2021-11-29-api-pokemon/pt/index.html">
+<h3 class="no-anchor listing-title">
+Acessando APIs com R: Exemplos com a PokéAPI!
+</h3>
+<div class="listing-subtitle">
+Primeiro post sobre acesso à APIs usando R.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('API'); return false;">
+API
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('purrr'); return false;">
+purrr
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('httr'); return false;">
+httr
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Web Scraping'); return false;">
+Web Scraping
+</div>
+</div>
+<a href="../posts/2021-11-29-api-pokemon/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2021-11-29-api-pokemon/pt/index.html">
+<div class="listing-date">
+Nov 29, 2021
+</div>
+<div class="listing-author">
+Beatriz Milz, Julio Trecenti
+</div>
+<div class="listing-reading-time">
+3 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="R" data-listing-date-sort="1625281200000" data-listing-file-modified-sort="1663512369432" data-listing-reading-time-sort="15.95">
+<div class="thumbnail">
+<p><a href="../posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html"> <img src="../posts/2021-07-01-pixar-uma-historia-de-dados/pt/hex-featured.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html">
+<h3 class="no-anchor listing-title">
+Pixar: Uma História de dados
+</h3>
+</a><div class="listing-subtitle"><a href="../posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html">
+Post publicado no blog da </a><a href="https://escoladedados.org/2021/07/pixar-uma-historia-de-dados/">Escola de Dados</a>
+</div>
+
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+</div>
+<a href="../posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html">
+<div class="listing-date">
+Jul 3, 2021
+</div>
+<div class="listing-author">
+Fernando Barbalho, Emmanuelle Nunes, Beatriz Milz
+</div>
+<div class="listing-reading-time">
+15 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="Tutorial,Web Scraping,Data cleaning,purrr,rvest" data-listing-date-sort="1621825200000" data-listing-file-modified-sort="1663512369427" data-listing-reading-time-sort="10.87">
+<div class="thumbnail">
+<p><a href="../posts/2021-05-24-naruto/pt/index.html"> <img data-src="../posts/2021-05-24-naruto/pt/featured-photo.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2021-05-24-naruto/pt/index.html">
+<h3 class="no-anchor listing-title">
+Buscando informações na Wikipédia: Lista de episódios de Naruto Shippuden
+</h3>
+<div class="listing-subtitle">
+Post publicado no blog da Curso-R.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
+Tutorial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Web Scraping'); return false;">
+Web Scraping
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data cleaning'); return false;">
+Data cleaning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('purrr'); return false;">
+purrr
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('rvest'); return false;">
+rvest
+</div>
+</div>
+<a href="../posts/2021-05-24-naruto/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2021-05-24-naruto/pt/index.html">
+<div class="listing-date">
+May 24, 2021
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+10 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-categories="RStudio,R,Pipe" data-listing-date-sort="1621306800000" data-listing-file-modified-sort="1663512369427" data-listing-reading-time-sort="4">
+<div class="thumbnail">
+<p><a href="../posts/2021-05-18-experimentando-o-r-410/pt/index.html"> <img data-src="../posts/2021-05-18-experimentando-o-r-410/pt/featured-photo.svg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2021-05-18-experimentando-o-r-410/pt/index.html">
+<h3 class="no-anchor listing-title">
+Experimentando o R 4.1.0
+</h3>
+<div class="listing-subtitle">
+Primeiras impressões ao usar o nova versão do R
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
+RStudio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Pipe'); return false;">
+Pipe
+</div>
+</div>
+<a href="../posts/2021-05-18-experimentando-o-r-410/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2021-05-18-experimentando-o-r-410/pt/index.html">
+<div class="listing-date">
+May 18, 2021
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+4 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-categories="R,Debug" data-listing-date-sort="1616986800000" data-listing-file-modified-sort="1663512369427" data-listing-reading-time-sort="8.32">
+<div class="thumbnail">
+<p><a href="../posts/2021-03-29-desvendando-erros/pt/index.html"> <img data-src="../posts/2021-03-29-desvendando-erros/pt/featured-photo.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2021-03-29-desvendando-erros/pt/index.html">
+<h3 class="no-anchor listing-title">
+Desvendando erros: Entendendo mensagens de erro comuns em R
+</h3>
+<div class="listing-subtitle">
+Post publicado no blog da Curso-R. Esse post tem como objetivo listar alguns erros comuns quando programamos em R, e dicas de como resolvê-los!
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Debug'); return false;">
+Debug
+</div>
+</div>
+<a href="../posts/2021-03-29-desvendando-erros/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2021-03-29-desvendando-erros/pt/index.html">
+<div class="listing-date">
+Mar 29, 2021
+</div>
+<div class="listing-author">
+Beatriz Milz e Fernando Corrêa
+</div>
+<div class="listing-reading-time">
+8 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-listing-date-sort="1615777200000" data-listing-file-modified-sort="1663512369426" data-listing-reading-time-sort="4.9">
+<div class="thumbnail">
+<p><a href="../posts/2021-03-15-dicas-03-relatorio/pt/index.html"> <img data-src="../posts/2021-03-15-dicas-03-relatorio/pt/featured-photo.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2021-03-15-dicas-03-relatorio/pt/index.html">
+<h3 class="no-anchor listing-title">
+Dicas para elaborar relatórios em R
+</h3>
+<div class="listing-subtitle">
+No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de relatórios em R.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../posts/2021-03-15-dicas-03-relatorio/pt/index.html">
+<div class="listing-date">
+Mar 15, 2021
+</div>
+<div class="listing-reading-time">
+4 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-categories="Studying,Research" data-listing-date-sort="1615086000000" data-listing-file-modified-sort="1663512369421" data-listing-reading-time-sort="8.775">
+<div class="thumbnail">
+<p><a href="../posts/2021-03-07-estudando-bibliometrix/pt/index.html"> <img data-src="../posts/2021-03-07-estudando-bibliometrix/pt/featured-photo.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2021-03-07-estudando-bibliometrix/pt/index.html">
+<h3 class="no-anchor listing-title">
+Conhecendo o pacote bibliometrix
+</h3>
+<div class="listing-subtitle">
+Primeiras impressões utilizando o pacote <code>{bibliometrix}</code>
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Studying'); return false;">
+Studying
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
+Research
+</div>
+</div>
+<a href="../posts/2021-03-07-estudando-bibliometrix/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2021-03-07-estudando-bibliometrix/pt/index.html">
+<div class="listing-date">
+Mar 7, 2021
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+8 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="15" data-categories="Teaching,RStudio,Communities" data-listing-date-sort="1614654000000" data-listing-file-modified-sort="1663512369290" data-listing-reading-time-sort="8.695">
+<div class="thumbnail">
+<p><a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html"> <img data-src="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/featured-photo.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html">
+<h3 class="no-anchor listing-title">
+Treinamento de instrutora e certificação da RStudio
+</h3>
+<div class="listing-subtitle">
+Este post relata como foi o processo pra mim de realizar a certificação da RStudio: RStudio Instructor Training and Certification.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
+Teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
+RStudio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
+Communities
+</div>
+</div>
+<a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html">
+<div class="listing-date">
+Mar 2, 2021
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+8 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="16" data-categories="Tips,ggplot2,tidyverse" data-listing-date-sort="1608174000000" data-listing-file-modified-sort="1663512369286" data-listing-reading-time-sort="5.45">
+<div class="thumbnail">
+<p><a href="../posts/2020-12-17-dicas-02-graficos/pt/index.html"> <img data-src="../posts/2020-12-17-dicas-02-graficos/pt/featured-photo.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2020-12-17-dicas-02-graficos/pt/index.html">
+<h3 class="no-anchor listing-title">
+Dicas para elaborar gráficos em R
+</h3>
+<div class="listing-subtitle">
+No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de gráficos em relatórios.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tips'); return false;">
+Tips
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
+ggplot2
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('tidyverse'); return false;">
+tidyverse
+</div>
+</div>
+<a href="../posts/2020-12-17-dicas-02-graficos/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2020-12-17-dicas-02-graficos/pt/index.html">
+<div class="listing-date">
+Dec 17, 2020
+</div>
+<div class="listing-reading-time">
+5 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="17" data-categories="Tips,Tables" data-listing-date-sort="1606964400000" data-listing-file-modified-sort="1663512369255" data-listing-reading-time-sort="4.185">
+<div class="thumbnail">
+<p><a href="../posts/2020-12-03-dicas-01-tabelas/pt/index.html"> <img data-src="../posts/2020-12-03-dicas-01-tabelas/pt/featured-photo.gif" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2020-12-03-dicas-01-tabelas/pt/index.html">
+<h3 class="no-anchor listing-title">
+Dicas para elaborar tabelas em R
+</h3>
+<div class="listing-subtitle">
+No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de tabelas em relatórios.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Tips'); return false;">
+Tips
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tables'); return false;">
+Tables
+</div>
+</div>
+<a href="../posts/2020-12-03-dicas-01-tabelas/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2020-12-03-dicas-01-tabelas/pt/index.html">
+<div class="listing-date">
+Dec 3, 2020
+</div>
+<div class="listing-reading-time">
+4 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="18" data-categories="Reproducibility,Maps" data-listing-date-sort="1595818800000" data-listing-file-modified-sort="1663512369250" data-listing-reading-time-sort="16.515">
+<div class="thumbnail">
+<p><a href="../posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/index.html"> <img data-src="../posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/featured.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/index.html">
+<h3 class="no-anchor listing-title">
+Criando mapas com os pacotes tidyverse e geobr
+</h3>
+<div class="listing-subtitle">
+Utilizando dados sobre coleta e tratamento de esgoto no Estado De São Paulo
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Reproducibility'); return false;">
+Reproducibility
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Maps'); return false;">
+Maps
+</div>
+</div>
+<a href="../posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/index.html">
+<div class="listing-date">
+Jul 27, 2020
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+16 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="19" data-categories="Teaching,Communities,The Carpentries" data-listing-date-sort="1582340400000" data-listing-file-modified-sort="1663512369245" data-listing-reading-time-sort="8.045">
+<div class="thumbnail">
+<p><a href="../posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/index.html"> <img data-src="../posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/mapa.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/index.html">
+<h3 class="no-anchor listing-title">
+The Carpentries: Como fazer o treinamento de instrutora?
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
+Teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
+Communities
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('The Carpentries'); return false;">
+The Carpentries
+</div>
+</div>
+<a href="../posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/index.html">
+<div class="listing-date">
+Feb 22, 2020
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+8 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="20" data-categories="R-Ladies,Communities" data-listing-date-sort="1567220400000" data-listing-file-modified-sort="1663512369244" data-listing-reading-time-sort="5.76">
+<div class="thumbnail">
+<p><a href="../posts/2019-08-31-um-ano-aprendendo-r/pt/index.html"> <img data-src="../posts/2019-08-31-um-ano-aprendendo-r/pt/featured-photo.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2019-08-31-um-ano-aprendendo-r/pt/index.html">
+<h3 class="no-anchor listing-title">
+Um ano aprendendo R!
+</h3>
+<div class="listing-subtitle">
+Um relato deste um ano aprendendo R!
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
+R-Ladies
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
+Communities
+</div>
+</div>
+<a href="../posts/2019-08-31-um-ano-aprendendo-r/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2019-08-31-um-ano-aprendendo-r/pt/index.html">
+<div class="listing-date">
+Aug 31, 2019
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+5 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="21" data-categories="Shiny" data-listing-date-sort="1566356400000" data-listing-file-modified-sort="1663512369243" data-listing-reading-time-sort="3.385">
+<div class="thumbnail">
+<p><a href="../posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/index.html"> <img data-src="../posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/featured-photo.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/index.html">
+<h3 class="no-anchor listing-title">
+Desenvolvendo meu primeiro Shiny App
+</h3>
+<div class="listing-subtitle">
+O objetivo deste post é compartilhar um pouco sobre a minha experiência no desenvolvimento do meu primeiro Shiny App.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Shiny'); return false;">
+Shiny
+</div>
+</div>
+<a href="../posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/index.html">
+<div class="listing-date">
+Aug 21, 2019
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+3 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="22" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1565578800000" data-listing-file-modified-sort="1663512369243" data-listing-reading-time-sort="5.505">
+<div class="thumbnail">
+<p><a href="../posts/2019-08-12-tidydevday/pt/index.html"> <img data-src="https://i.imgur.com/Oz6x6GY.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2019-08-12-tidydevday/pt/index.html">
+<h3 class="no-anchor listing-title">
+Tidyverse developer day 2019 (tidy-dev-day)
+</h3>
+<div class="listing-subtitle">
+Este post tem como objetivo relatar a experiência de participar do Tidyverse Developer Day 2019.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
+Events
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
+Communities
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('tidyverse'); return false;">
+tidyverse
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
+RStudio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R Packages'); return false;">
+R Packages
+</div>
+</div>
+<a href="../posts/2019-08-12-tidydevday/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2019-08-12-tidydevday/pt/index.html">
+<div class="listing-date">
+Aug 12, 2019
+</div>
+<div class="listing-author">
+Beatriz Milz, Angélica Custódio
+</div>
+<div class="listing-reading-time">
+5 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="23" data-categories="R-Ladies,RMarkdown" data-listing-date-sort="1561345200000" data-listing-file-modified-sort="1663512369241" data-listing-reading-time-sort="2.905">
+<div class="thumbnail">
+<p><a href="../posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/index.html"> <img data-src="../posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/featured-photo.gif" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/index.html">
+<h3 class="no-anchor listing-title">
+Compartilhando conteúdo
+</h3>
+<div class="listing-subtitle">
+Como compartilhar conteúdo sobre R, utilizando R?
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
+R-Ladies
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RMarkdown'); return false;">
+RMarkdown
+</div>
+</div>
+<a href="../posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/index.html">
+<div class="listing-date">
+Jun 24, 2019
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+2 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="24" data-categories="Communities,R-Ladies" data-listing-date-sort="1548727200000" data-listing-file-modified-sort="1663512369241" data-listing-reading-time-sort="4.125">
+<div class="thumbnail">
+<p><a href="../posts/2019-01-29-meio-ano-r/pt/index.html"> <img data-src="../posts/2019-01-29-meio-ano-r/pt/featured-photo.jpeg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../posts/2019-01-29-meio-ano-r/pt/index.html">
+<h3 class="no-anchor listing-title">
+Meio ano de aprendizagem de R!
+</h3>
+<div class="listing-subtitle">
+Neste texto, gostaria de compartilhar um pouco sobre os primeiros seis meses de aprendizagem em programação, principalmente na linguagem R.
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
+Communities
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
+R-Ladies
+</div>
+</div>
+<a href="../posts/2019-01-29-meio-ano-r/pt/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="../posts/2019-01-29-meio-ano-r/pt/index.html">
+<div class="listing-date">
+Jan 29, 2019
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+4 min
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="posts-ptbr-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

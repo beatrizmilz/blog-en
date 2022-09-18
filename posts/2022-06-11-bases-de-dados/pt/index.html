@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz Milz">
+<meta name="author" content="Tereza Lacerda">
+<meta name="dcterms.date" content="2022-06-11">
+<title>Bea Milz - Bases de dados: para praticar e ensinar</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - Bases de dados: para praticar e ensinar">
+<meta property="og:description" content="Quer saber como acessar várias bases de dados com R? Imagem: por Allison Horst.">
+<meta property="og:image" content="https://beamilz.com/social.png">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+<script src="../../../site_libs/kePrint-0.0.1/kePrint.js"></script><link href="../../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - Bases de dados: para praticar e ensinar">
+<meta name="twitter:description" content="Quer saber como acessar várias bases de dados com R? Imagem: por Allison Horst.">
+<meta name="twitter:image" content="https://beamilz.com/posts/2022-06-11-bases-de-dados/pt/welcome_to_rstats.jpeg">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
+    <a class="dropdown-item" href="../../../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
+    <a class="dropdown-item" href="../../../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/en/index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/pt/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/es/index.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Bases de dados: para praticar e ensinar</h1>
+            <p class="subtitle lead">Quer saber como acessar várias bases de dados com R? Imagem: por Allison Horst.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Tutorial</div>
+                <div class="quarto-category">Teaching</div>
+                <div class="quarto-category">Datasets</div>
+                <div class="quarto-category">Data import</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+               <p>Tereza Lacerda </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 11, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#introdu%C3%A7%C3%A3o" id="toc-introdução" class="nav-link active" data-scroll-target="#introdu%C3%A7%C3%A3o">Introdução</a></li>
+  <li>
+<a href="#bases-de-dados-em-portugu%C3%AAs" id="toc-bases-de-dados-em-português" class="nav-link" data-scroll-target="#bases-de-dados-em-portugu%C3%AAs">Bases de dados em Português</a>
+  <ul class="collapse">
+<li><a href="#pacote-dados" id="toc-pacote-dados" class="nav-link" data-scroll-target="#pacote-dados">Pacote dados</a></li>
+  <li><a href="#base-dos-dados" id="toc-base-dos-dados" class="nav-link" data-scroll-target="#base-dos-dados">Base dos dados</a></li>
+  <li><a href="#pacote-de-bases-usadas-em-cursos-da-curso-r" id="toc-pacote-de-bases-usadas-em-cursos-da-curso-r" class="nav-link" data-scroll-target="#pacote-de-bases-usadas-em-cursos-da-curso-r">Pacote de bases usadas em cursos da Curso-R</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#bases-de-dados-em-ingl%C3%AAs" id="toc-bases-de-dados-em-inglês" class="nav-link" data-scroll-target="#bases-de-dados-em-ingl%C3%AAs">Bases de dados em Inglês</a>
+  <ul class="collapse">
+<li><a href="#bases-do-tidytuesday" id="toc-bases-do-tidytuesday" class="nav-link" data-scroll-target="#bases-do-tidytuesday">Bases do tidytuesday</a></li>
+  <li><a href="#pacote-islr" id="toc-pacote-islr" class="nav-link" data-scroll-target="#pacote-islr">Pacote ISLR</a></li>
+  <li><a href="#kaggle" id="toc-kaggle" class="nav-link" data-scroll-target="#kaggle">Kaggle</a></li>
+  </ul>
+</li>
+  <li><a href="#conclus%C3%A3o" id="toc-conclusão" class="nav-link" data-scroll-target="#conclus%C3%A3o">Conclusão</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p><a href="../../../posts/2022-06-11-bases-de-dados/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="welcome_to_rstats.jpeg" class="img-fluid figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+<p>Esse post foi origalmente publicado no <a href="https://blog.curso-r.com/posts/2022-06-11-bases-de-dados/">blog da Curso-R</a>. <a href="https://twitter.com/allison_horst">Ilustração usada na imagem por Allison Horst</a>.</p>
+</div>
+</div>
+<section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>Neste post, listamos alguns lugares onde encontrar bases de dados interessantes para quem está aprendendo e quer praticar com novas bases, e também para quem quer ensinar R e procura bases de dados para criar exemplos!</p>
+<p>O post será separado em: bases em português (sejam elas traduzidas ou originais), e em inglês.</p>
+</section><section id="bases-de-dados-em-português" class="level2"><h2 class="anchored" data-anchor-id="bases-de-dados-em-português">Bases de dados em Português</h2>
+<section id="pacote-dados" class="level3"><h3 class="anchored" data-anchor-id="pacote-dados">Pacote dados</h3>
+<p>O pacote está <strong>disponível no CRAN</strong> e pode ser instalado utilizando o seguinte código:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"dados"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://blog.curso-r.com/posts/2022-04-06-pacote-dados/">Escrevemos um post recentemente focado neste pacote, então recomendamos checar lá</a>! Para acessar as bases de dados, utilize a função <code><a href="https://github.com/cienciadedatos/dados">library(dados)</a></code> ou use com <code>dados::nome_da_base</code>. Por exemplo:</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cienciadedatos/dados">dados</a></span><span class="op">)</span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="fu">dados</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/dados/man/pixar_filmes.html">pixar_filmes</a></span><span class="op">)</span></span>
+<span><span class="co">## Rows: 27</span></span>
+<span><span class="co">## Columns: 5</span></span>
+<span><span class="co">## $ ordem_lancamento         &lt;chr&gt; "1", "2", "3", "4", "5", "6", "7", "8", "9", …</span></span>
+<span><span class="co">## $ filme                    &lt;chr&gt; "Toy Story - Um Mundo de Aventuras", "Vida de…</span></span>
+<span><span class="co">## $ data_lancamento          &lt;date&gt; 1995-11-22, 1998-11-25, 1999-11-24, 2001-11-…</span></span>
+<span><span class="co">## $ duracao                  &lt;dbl&gt; 81, 95, 92, 92, 100, 115, 117, 111, 98, 96, 1…</span></span>
+<span><span class="co">## $ classificacao_indicativa &lt;chr&gt; "Livre", "Livre", "Livre", "Livre", "Livre", …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="base-dos-dados" class="level3"><h3 class="anchored" data-anchor-id="base-dos-dados">Base dos dados</h3>
+<p>A <a href="https://staging.basedosdados.org/">Base dos Dados</a> é um projeto super interessante. Lá, são disponibilizadas diversas bases públicas, e várias delas já estão tratadas, como: Relação Anual de Informações Sociais (RAIS), Índice de Desenvolvimento da Educação Básica (Ideb), Censo Demográfico, entre outros!</p>
+<p>Consulte as bases tratadas <a href="https://staging.basedosdados.org/dataset?resource_type=bdm_table&amp;order_by=score">neste link</a>.</p>
+<p>Os dados são disponibilizados em um BigQuery, portanto o acesso tem algumas etapas a mais. Recomendamos olhar os seguintes links:</p>
+<ul>
+<li><a href="https://blog.curso-r.com/posts/2021-05-28-basedosdados/">Acessando bases públicas em R: o pacote basedosdados</a></li>
+<li><a href="https://www.youtube.com/watch?v=8D4jK-YCxLU&amp;t=2688s">Live da Curso-R - Unboxing do pacote basedosdados</a></li>
+<li><a href="https://basedosdados.github.io/mais/">Documentação do BD+</a></li>
+</ul></section><section id="pacote-de-bases-usadas-em-cursos-da-curso-r" class="level3"><h3 class="anchored" data-anchor-id="pacote-de-bases-usadas-em-cursos-da-curso-r">Pacote de bases usadas em cursos da Curso-R</h3>
+<p>Algumas bases de dados foram traduzidas por pessoas da Curso-R, e disponibilizadas nesse pacote para serem usadas nos cursos. Esse pacote não está disponível no CRAN, então caso queira instalar, utilize os seguintes comandos:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"curso-r/basesCursoR"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para verificar quais são as bases disponíveis no pacote, utilize a seguinte função: <code><a href="https://rdrr.io/pkg/basesCursoR/man/bases_disponiveis.html">basesCursoR::bases_disponiveis()</a></code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">basesCursoR</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/basesCursoR/man/bases_disponiveis.html">bases_disponiveis</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">##  [1] "adult"           "airbnb_rj"       "ames"            "cetesb"         </span></span>
+<span><span class="co">##  [5] "covid"           "credito"         "imdb_avaliacoes" "imdb_completa"  </span></span>
+<span><span class="co">##  [9] "imdb_pessoas"    "imdb_top_cast"   "imdb"            "pokemon"        </span></span>
+<span><span class="co">## [13] "ssp"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Para carregar alguma base do pacote, utilize a função <code>basesCursoR::pegar_base("nome_da_base")</code>, por exemplo:</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pokemon</span> <span class="op">&lt;-</span> <span class="fu">basesCursoR</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/basesCursoR/man/pegar_base.html">pegar_base</a></span><span class="op">(</span><span class="st">"pokemon"</span><span class="op">)</span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">pokemon</span><span class="op">)</span></span>
+<span><span class="co">## Rows: 949</span></span>
+<span><span class="co">## Columns: 20</span></span>
+<span><span class="co">## $ id              &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…</span></span>
+<span><span class="co">## $ id_especie      &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…</span></span>
+<span><span class="co">## $ id_geracao      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …</span></span>
+<span><span class="co">## $ pokemon         &lt;chr&gt; "bulbasaur", "ivysaur", "venusaur", "charmander", "cha…</span></span>
+<span><span class="co">## $ altura          &lt;dbl&gt; 0.7, 1.0, 2.0, 0.6, 1.1, 1.7, 0.5, 1.0, 1.6, 0.3, 0.7,…</span></span>
+<span><span class="co">## $ peso            &lt;dbl&gt; 6.9, 13.0, 100.0, 8.5, 19.0, 90.5, 9.0, 22.5, 85.5, 2.…</span></span>
+<span><span class="co">## $ exp_base        &lt;dbl&gt; 64, 142, 236, 62, 142, 240, 63, 142, 239, 39, 72, 178,…</span></span>
+<span><span class="co">## $ tipo_1          &lt;chr&gt; "grama", "grama", "grama", "fogo", "fogo", "fogo", "ág…</span></span>
+<span><span class="co">## $ tipo_2          &lt;chr&gt; "venenoso", "venenoso", "venenoso", NA, NA, "voador", …</span></span>
+<span><span class="co">## $ hp              &lt;dbl&gt; 45, 60, 80, 39, 58, 78, 44, 59, 79, 45, 50, 60, 40, 45…</span></span>
+<span><span class="co">## $ ataque          &lt;dbl&gt; 49, 62, 82, 52, 64, 84, 48, 63, 83, 30, 20, 45, 35, 25…</span></span>
+<span><span class="co">## $ defesa          &lt;dbl&gt; 49, 63, 83, 43, 58, 78, 65, 80, 100, 35, 55, 50, 30, 5…</span></span>
+<span><span class="co">## $ ataque_especial &lt;dbl&gt; 65, 80, 100, 60, 80, 109, 50, 65, 85, 20, 25, 90, 20, …</span></span>
+<span><span class="co">## $ defesa_especial &lt;dbl&gt; 65, 80, 100, 50, 65, 85, 64, 80, 105, 20, 25, 80, 20, …</span></span>
+<span><span class="co">## $ velocidade      &lt;dbl&gt; 45, 60, 80, 65, 80, 100, 43, 58, 78, 45, 30, 70, 50, 3…</span></span>
+<span><span class="co">## $ cor_1           &lt;chr&gt; "#78C850", "#78C850", "#78C850", "#F08030", "#F08030",…</span></span>
+<span><span class="co">## $ cor_2           &lt;chr&gt; "#A040A0", "#A040A0", "#A040A0", NA, NA, "#A890F0", NA…</span></span>
+<span><span class="co">## $ cor_final       &lt;chr&gt; "#81A763", "#81A763", "#81A763", NA, NA, "#DE835E", NA…</span></span>
+<span><span class="co">## $ url_imagem      &lt;chr&gt; "https://raw.githubusercontent.com/phalt/pokeapi/maste…</span></span>
+<span><span class="co">## $ url_icone       &lt;chr&gt; "//cdn.bulbagarden.net/upload/e/ec/001MS.png", "//cdn.…</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="bases-de-dados-em-inglês" class="level2"><h2 class="anchored" data-anchor-id="bases-de-dados-em-inglês">Bases de dados em Inglês</h2>
+<section id="bases-do-tidytuesday" class="level3"><h3 class="anchored" data-anchor-id="bases-do-tidytuesday">Bases do tidytuesday</h3>
+<p>O <a href="https://github.com/rfordatascience/tidytuesday">tidytuesday</a> é um projeto bem legal da comunidade de R! Toda semana é disponibilizada uma base de dados. QUALQUER pessoa que queira participar pode participar, fazendo uma visualização com a base disponibilizada!</p>
+<p>Um lugar legal para ver as visualizações criadas pelas pessoas é no twitter, pesquisando a hashtag <a href="https://twitter.com/search?q=tidytuesday&amp;src=typed_query"><code>#tidytuesday</code></a>.</p>
+<p>É possível consultar a lista de bases de dados neste link: <a href="https://github.com/rfordatascience/tidytuesday#datasets">tidytuesday datasets</a>. Ao entrar na página de uma base de dados, o código para carregar a mesma é mostrado. Por exemplo: para usar os dados de <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-01-25/readme.md">Jogos de tabuleiro</a>, podemos usar o seguinte código:</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">jogos_ratings</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-25/ratings.csv'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">jogos_ratings</span><span class="op">)</span></span>
+<span><span class="co">## Rows: 21,831</span></span>
+<span><span class="co">## Columns: 10</span></span>
+<span><span class="co">## $ num           &lt;dbl&gt; 105, 189, 428, 72, 103, 191, 100, 3, 15, 35, 30, 182, 13…</span></span>
+<span><span class="co">## $ id            &lt;dbl&gt; 30549, 822, 13, 68448, 36218, 9209, 178900, 167791, 1733…</span></span>
+<span><span class="co">## $ name          &lt;chr&gt; "Pandemic", "Carcassonne", "Catan", "7 Wonders", "Domini…</span></span>
+<span><span class="co">## $ year          &lt;dbl&gt; 2008, 2000, 1995, 2010, 2008, 2004, 2015, 2016, 2015, 20…</span></span>
+<span><span class="co">## $ rank          &lt;dbl&gt; 106, 190, 429, 73, 104, 192, 101, 4, 16, 36, 31, 183, 14…</span></span>
+<span><span class="co">## $ average       &lt;dbl&gt; 7.59, 7.42, 7.14, 7.74, 7.61, 7.41, 7.60, 8.42, 8.11, 7.…</span></span>
+<span><span class="co">## $ bayes_average &lt;dbl&gt; 7.487, 7.309, 6.970, 7.634, 7.499, 7.305, 7.508, 8.274, …</span></span>
+<span><span class="co">## $ users_rated   &lt;dbl&gt; 108975, 108738, 108024, 89982, 81561, 76171, 74419, 7421…</span></span>
+<span><span class="co">## $ url           &lt;chr&gt; "/boardgame/30549/pandemic", "/boardgame/822/carcassonne…</span></span>
+<span><span class="co">## $ thumbnail     &lt;chr&gt; "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__mi…</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="pacote-islr" class="level3"><h3 class="anchored" data-anchor-id="pacote-islr">Pacote ISLR</h3>
+<p>O pacote ISLR acompanha o livro <a href="https://www.statlearning.com/">Introduction to Statistical Learning</a> (disponível <a href="https://hastie.su.domains/ISLR2/ISLRv2_website.pdf">gratuitamente aqui</a>). Apresenta bases de dados interessantes para treinar modelagem, acompanhando os exemplos do livro.</p>
+<p>Você pode instalar o pacote através do CRAN, usando a função <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code>:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"ISLR"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Essas são as bases de dados disponíveis no pacote, que podem ser acessadas utilizando a função <code><a href="https://www.statlearning.com">library(ISLR)</a></code> ou use com <code>ISLR::nome_da_base</code>. :</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class=" lightable-material lightable-striped lightable-hover" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead><tr>
+<th style="text-align:left;"> Nome </th>
+   <th style="text-align:left;"> Descrição </th>
+  </tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> Auto </td>
+   <td style="text-align:left;"> Auto Data Set </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Caravan </td>
+   <td style="text-align:left;"> The Insurance Company (TIC) Benchmark </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Carseats </td>
+   <td style="text-align:left;"> Sales of Child Car Seats </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> College </td>
+   <td style="text-align:left;"> U.S. News and World Report's College Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Credit </td>
+   <td style="text-align:left;"> Credit Card Balance Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Default </td>
+   <td style="text-align:left;"> Credit Card Default Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Hitters </td>
+   <td style="text-align:left;"> Baseball Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Khan </td>
+   <td style="text-align:left;"> Khan Gene Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> NCI60 </td>
+   <td style="text-align:left;"> NCI 60 Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> OJ </td>
+   <td style="text-align:left;"> Orange Juice Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Portfolio </td>
+   <td style="text-align:left;"> Portfolio Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Smarket </td>
+   <td style="text-align:left;"> S&amp;P Stock Market Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Wage </td>
+   <td style="text-align:left;"> Mid-Atlantic Wage Data </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> Weekly </td>
+   <td style="text-align:left;"> Weekly S&amp;P Stock Market Data </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="kaggle" class="level3"><h3 class="anchored" data-anchor-id="kaggle">Kaggle</h3>
+<p>O <a href="https://www.kaggle.com/">Kaggle</a> é uma plataforma onde é possível participar de competições de Machine Learning!</p>
+<p>Por lá, também estão disponíveis diversas bases de dados, na <a href="https://www.kaggle.com/datasets">página de datasets</a>. Um ponto importante para citar é que qualquer pessoa consegue fazer upload de uma base lá no Kaggle, então pesquise com calma e veja as bases mais bem avaliadas no tema que você quer explorar! Depois que escolher, é possível baixar a base de dados e importar para o R.</p>
+</section></section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>Esperamos que este post seja interessante para quem está aprendendo e quer praticar com novas bases, e também para quem quer ensinar R e procura bases de dados para criar exemplos! Bons estudos e até a próxima!</p>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz Milz e Fernando Corrêa">
+<meta name="dcterms.date" content="2021-03-29">
+<title>Bea Milz - Desvendando erros: Entendendo mensagens de erro comuns em R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - Desvendando erros: Entendendo mensagens de erro comuns em R">
+<meta property="og:description" content="Post publicado no blog da Curso-R. Esse post tem como objetivo listar alguns erros comuns quando programamos em R, e dicas de como resolvê-los!">
+<meta property="og:image" content="https://beamilz.com/social.png">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - Desvendando erros: Entendendo mensagens de erro comuns em R">
+<meta name="twitter:description" content="Post publicado no blog da Curso-R. Esse post tem como objetivo listar alguns erros comuns quando programamos em R, e dicas de como resolvê-los!">
+<meta name="twitter:image" content="https://beamilz.com/posts/2021-03-29-desvendando-erros/pt/featured-photo.jpeg">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
+    <a class="dropdown-item" href="../../../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
+    <a class="dropdown-item" href="../../../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/en/index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/pt/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/es/index.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Desvendando erros: Entendendo mensagens de erro comuns em R</h1>
+            <p class="subtitle lead">Post publicado no blog da Curso-R. Esse post tem como objetivo listar alguns erros comuns quando programamos em R, e dicas de como resolvê-los!</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Debug</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz e Fernando Corrêa </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 29, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#objeto-n%C3%A3o-encontrado" id="toc-objeto-não-encontrado" class="nav-link active" data-scroll-target="#objeto-n%C3%A3o-encontrado">Objeto não encontrado</a></li>
+  <li><a href="#n%C3%A3o-foi-poss%C3%ADvel-encontrar-a-fun%C3%A7%C3%A3o" id="toc-não-foi-possível-encontrar-a-função" class="nav-link" data-scroll-target="#n%C3%A3o-foi-poss%C3%ADvel-encontrar-a-fun%C3%A7%C3%A3o">Não foi possível encontrar a função “…”</a></li>
+  <li><a href="#argumento-n%C3%A3o-num%C3%A9rico-para-operador-bin%C3%A1rio-non-numeric-argument-to-binary-operator" id="toc-argumento-não-numérico-para-operador-binário-non-numeric-argument-to-binary-operator" class="nav-link" data-scroll-target="#argumento-n%C3%A3o-num%C3%A9rico-para-operador-bin%C3%A1rio-non-numeric-argument-to-binary-operator">Argumento não numérico para operador binário / non-numeric argument to binary operator</a></li>
+  <li><a href="#conflito-de-fun%C3%A7%C3%B5es" id="toc-conflito-de-funções" class="nav-link" data-scroll-target="#conflito-de-fun%C3%A7%C3%B5es">Conflito de funções</a></li>
+  <li><a href="#n%C3%A3o-existe-um-pacote-chamado-there-is-no-package-called-.." id="toc-não-existe-um-pacote-chamado-there-is-no-package-called-.." class="nav-link" data-scroll-target="#n%C3%A3o-existe-um-pacote-chamado-there-is-no-package-called-..">Não existe um pacote chamado … / There is no package called ..</a></li>
+  <li><a href="#o-pacote-n%C3%A3o-est%C3%A1-dispon%C3%ADvel-para-essa-vers%C3%A3o-do-r-package-is-not-available-for-this-version-of-r" id="toc-o-pacote-não-está-disponível-para-essa-versão-do-r-package-is-not-available-for-this-version-of-r" class="nav-link" data-scroll-target="#o-pacote-n%C3%A3o-est%C3%A1-dispon%C3%ADvel-para-essa-vers%C3%A3o-do-r-package-is-not-available-for-this-version-of-r">O pacote … não está disponível para essa versão do R / Package ‘…’ is not available for this version of R</a></li>
+  <li><a href="#o-arquivo-n%C3%A3o-existe-no-diret%C3%B3rio-de-trabalho-atual-does-not-exist-in-current-working-directory" id="toc-o-arquivo-não-existe-no-diretório-de-trabalho-atual-does-not-exist-in-current-working-directory" class="nav-link" data-scroll-target="#o-arquivo-n%C3%A3o-existe-no-diret%C3%B3rio-de-trabalho-atual-does-not-exist-in-current-working-directory">O arquivo … não existe no diretório de trabalho atual / … does not exist in current working directory</a></li>
+  <li><a href="#conclus%C3%A3o" id="toc-conclusão" class="nav-link" data-scroll-target="#conclus%C3%A3o">Conclusão</a></li>
+  <li><a href="#gostou-quer-saber-mais" id="toc-gostou-quer-saber-mais" class="nav-link" data-scroll-target="#gostou-quer-saber-mais">Gostou? Quer saber mais?</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>Leia o post no blog da Curso-R: <a href="https://blog.curso-r.com/posts/2021-03-29-desvendando-erros/">acesse aqui!</a></p>
+<p>Quando estamos programando, é muito comum executar algum código e ele gerar um erro! Algumas vezes é difícil entender as mensagens de erro para começar a buscar ajuda, e isso pode atrasar nossas tarefas (e também nos desanimar).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/stormyr.gif?raw=true" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Ilustração por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Principalmente quando estamos iniciando a nossa jornada de aprendizagem de R, alguns erros podem ser mais frequentes. Esse post tem como objetivo listar alguns desses erros comuns, baseado na minha experiência aprendendo e ensinando R, e também respondendo dúvidas :)</p>
+<p>Vamos então ler um pouco sobre alguns erros frequentes, e como resolvê-los? Prepara um café ou chá, e vamos lá! ☕</p>
+<section id="objeto-não-encontrado" class="level2"><h2 class="anchored" data-anchor-id="objeto-não-encontrado">Objeto não encontrado</h2>
+<p>Imagine que queremos calcular a média do orçamento dos filmes que fazem parte da base de dados sobre filmes do IMDB, e recebemos o seguinte erro:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">imdb</span><span class="op">$</span><span class="va">orcamento</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in mean(imdb$orcamento, na.rm = TRUE): objeto 'imdb' não encontrado</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
+<p>O R está dizendo para nós que não está encontrando o objeto <code>imdb</code>! Como podemos resolver esse erro? Precisamos carregar esse objeto no nosso ambiente, para que ele esteja disponível para uso!</p>
+<p>Para isso, precisamos usar o sinal de atribuição: <code>&lt;-</code>.</p>
+<p>No exemplo abaixo, importamos o arquivo <code>imdb.csv</code> e salvamos essa base de dados no objeto <code>imdb</code>. Dessa forma, não obtemos um erro quando tentamos calcular a média da mesma forma que fizemos anteriormente, pois o objeto será encontrado e o código conseguirá ser executado!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/curso-r/202010-r4ds-1/master/dados/imdb2.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">imdb</span><span class="op">$</span><span class="va">orcamento</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">## [1] 35237114</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="não-foi-possível-encontrar-a-função" class="level2"><h2 class="anchored" data-anchor-id="não-foi-possível-encontrar-a-função">Não foi possível encontrar a função “…”</h2>
+<p>Já tentou executar um código e o retorno foi essa mensagem de erro?</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glimpse</span><span class="op">(</span><span class="va">imdb</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in glimpse(imdb): não foi possível encontrar a função "glimpse"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
+<p>Isso significa que o R não encontrou essa função. No R, podemos instalar pacotes que contém funções para que a gente utilize nas nossas rotinas. Porém, é preciso carregar o pacote para que as funções do mesmo fiquem disponíveis para uso. Podemos carregar um pacote utilizando a função <code><a href="https://rdrr.io/r/base/library.html">library()</a></code>.</p>
+<p>No exemplo abaixo, a função <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code> faz parte do pacote <a href="https://dplyr.tidyverse.org">dplyr</a>. Carregando o pacote no início do código deixará todas as funções do pacote <a href="https://dplyr.tidyverse.org">dplyr</a> disponíveis para uso (incluindo a função que queremos usar):</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">imdb</span><span class="op">)</span></span>
+<span><span class="co">## Rows: 3,713</span></span>
+<span><span class="co">## Columns: 15</span></span>
+<span><span class="co">## $ titulo         &lt;chr&gt; "Avatar&nbsp;", "Pirates of the Caribbean: At World's End&nbsp;",…</span></span>
+<span><span class="co">## $ ano            &lt;dbl&gt; 2009, 2007, 2012, 2012, 2007, 2010, 2015, 2016, 2006, 2…</span></span>
+<span><span class="co">## $ diretor        &lt;chr&gt; "James Cameron", "Gore Verbinski", "Christopher Nolan",…</span></span>
+<span><span class="co">## $ duracao        &lt;dbl&gt; 178, 169, 164, 132, 156, 100, 141, 183, 169, 151, 150, …</span></span>
+<span><span class="co">## $ cor            &lt;chr&gt; "Color", "Color", "Color", "Color", "Color", "Color", "…</span></span>
+<span><span class="co">## $ generos        &lt;chr&gt; "Action|Adventure|Fantasy|Sci-Fi", "Action|Adventure|Fa…</span></span>
+<span><span class="co">## $ pais           &lt;chr&gt; "USA", "USA", "USA", "USA", "USA", "USA", "USA", "USA",…</span></span>
+<span><span class="co">## $ classificacao  &lt;chr&gt; "A partir de 13 anos", "A partir de 13 anos", "A partir…</span></span>
+<span><span class="co">## $ orcamento      &lt;dbl&gt; 237000000, 300000000, 250000000, 263700000, 258000000, …</span></span>
+<span><span class="co">## $ receita        &lt;dbl&gt; 760505847, 309404152, 448130642, 73058679, 336530303, 2…</span></span>
+<span><span class="co">## $ nota_imdb      &lt;dbl&gt; 7.9, 7.1, 8.5, 6.6, 6.2, 7.8, 7.5, 6.9, 6.1, 7.3, 6.5, …</span></span>
+<span><span class="co">## $ likes_facebook &lt;dbl&gt; 33000, 0, 164000, 24000, 0, 29000, 118000, 197000, 0, 5…</span></span>
+<span><span class="co">## $ ator_1         &lt;chr&gt; "CCH Pounder", "Johnny Depp", "Tom Hardy", "Daryl Sabar…</span></span>
+<span><span class="co">## $ ator_2         &lt;chr&gt; "Joel David Moore", "Orlando Bloom", "Christian Bale", …</span></span>
+<span><span class="co">## $ ator_3         &lt;chr&gt; "Wes Studi", "Jack Davenport", "Joseph Gordon-Levitt", …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Outra forma de utilizar a função sem que seja necessário carregar o pacote, é utilizando o operador <code>::</code> (você pode ler mais sobre ele <a href="https://curso-r.github.io/zen-do-r/funcoes-deps.html#quatro-pontos">neste capítulo do livro Zen do R</a>).</p>
+<p>Leia o código abaixo como: quero usar a função <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code> do pacote <code>dplyr</code></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">imdb</span><span class="op">)</span></span>
+<span><span class="co">## Rows: 3,713</span></span>
+<span><span class="co">## Columns: 15</span></span>
+<span><span class="co">## $ titulo         &lt;chr&gt; "Avatar&nbsp;", "Pirates of the Caribbean: At World's End&nbsp;",…</span></span>
+<span><span class="co">## $ ano            &lt;dbl&gt; 2009, 2007, 2012, 2012, 2007, 2010, 2015, 2016, 2006, 2…</span></span>
+<span><span class="co">## $ diretor        &lt;chr&gt; "James Cameron", "Gore Verbinski", "Christopher Nolan",…</span></span>
+<span><span class="co">## $ duracao        &lt;dbl&gt; 178, 169, 164, 132, 156, 100, 141, 183, 169, 151, 150, …</span></span>
+<span><span class="co">## $ cor            &lt;chr&gt; "Color", "Color", "Color", "Color", "Color", "Color", "…</span></span>
+<span><span class="co">## $ generos        &lt;chr&gt; "Action|Adventure|Fantasy|Sci-Fi", "Action|Adventure|Fa…</span></span>
+<span><span class="co">## $ pais           &lt;chr&gt; "USA", "USA", "USA", "USA", "USA", "USA", "USA", "USA",…</span></span>
+<span><span class="co">## $ classificacao  &lt;chr&gt; "A partir de 13 anos", "A partir de 13 anos", "A partir…</span></span>
+<span><span class="co">## $ orcamento      &lt;dbl&gt; 237000000, 300000000, 250000000, 263700000, 258000000, …</span></span>
+<span><span class="co">## $ receita        &lt;dbl&gt; 760505847, 309404152, 448130642, 73058679, 336530303, 2…</span></span>
+<span><span class="co">## $ nota_imdb      &lt;dbl&gt; 7.9, 7.1, 8.5, 6.6, 6.2, 7.8, 7.5, 6.9, 6.1, 7.3, 6.5, …</span></span>
+<span><span class="co">## $ likes_facebook &lt;dbl&gt; 33000, 0, 164000, 24000, 0, 29000, 118000, 197000, 0, 5…</span></span>
+<span><span class="co">## $ ator_1         &lt;chr&gt; "CCH Pounder", "Johnny Depp", "Tom Hardy", "Daryl Sabar…</span></span>
+<span><span class="co">## $ ator_2         &lt;chr&gt; "Joel David Moore", "Orlando Bloom", "Christian Bale", …</span></span>
+<span><span class="co">## $ ator_3         &lt;chr&gt; "Wes Studi", "Jack Davenport", "Joseph Gordon-Levitt", …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="argumento-não-numérico-para-operador-binário-non-numeric-argument-to-binary-operator" class="level2"><h2 class="anchored" data-anchor-id="argumento-não-numérico-para-operador-binário-non-numeric-argument-to-binary-operator">Argumento não numérico para operador binário / non-numeric argument to binary operator</h2>
+<p>De toda a nossa lista de problemas, esse é aquele com a mensagem de erro mais complicada. Você já tentou fazer algum cálculo como esse abaixo e o retorno foi essa mensagem de erro?</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="st">"a"</span></span>
+<span><span class="va">x</span><span class="op">+</span><span class="fl">1</span></span>
+<span><span class="co">#&gt; Error in x + 1: argumento não-numérico para operador binário</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><sup>Created on 2021-03-29 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v0.3.0)</sup></p>
+<p>Isso é muito comum, principalmente quando estamos trabalhando em scripts mais longos, e essa mensagem de erro é o R tentando nos avisar que nós estamos passando um texto, no caso a letra “a”, para uma operação que espera receber um número. Na verdade, o R é até um pouco mais preciso: a operação esperava um número e nós frustramos essa expectativa, por isso o erro menciona um “argumento não-numérico”. No caso nós tentamos fazer uma conta (a adição representada pelo símbolo <code>+</code>) usando um texto.</p>
+<p>O que podemos fazer quando esse erro aparece? Minha recomendação é examinar o seu código para verificar que tipo de argumento as suas operações matemáticas (por exemplo <code>+</code>, <code>-</code>, <code>*</code> e <code>^</code>) estão recebendo. Muito provavelmente algum desses argumentos não é um número…</p>
+</section><section id="conflito-de-funções" class="level2"><h2 class="anchored" data-anchor-id="conflito-de-funções">Conflito de funções</h2>
+<p>Um problema silencioso que pode acontecer é o conflito de funções. Esse tipo de erro é um pouco mais complicado de identificar pois a mensagem de erro causada por esse problema não é padronizada.</p>
+<p><strong>Mas o que é um conflito de funções?</strong></p>
+<p>O R permite que a gente instale e carregue diversos pacotes. E esses pacotes podem ter funções com nomes iguais.</p>
+<p>Por exemplo, o pacote <a href="https://dplyr.tidyverse.org">dplyr</a> possui uma função chamada <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code>, assim como o pacote <code>{base}</code> também tem uma função com o mesmo nome (o <code>{base}</code> sempre está carregado quando iniciamos o R).</p>
+<p>Quando usamos uma função sem usar o operador <code>::</code>, o R vai buscar no ambiente a função com esse nome que foi carregada por último. Então podemos usar uma função A quando queremos realmente usar a função B.</p>
+<p>Exemplo: queremos filtrar os filmes do diretor Zack Snyder. Obtemos esse erro dizendo que o objeto imdb não foi encontrado, porém o objeto está carregado!</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">imdb</span>, <span class="va">diretor</span> <span class="op">==</span> <span class="st">"Zack Snyder"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in as.ts(x): objeto 'imdb' não encontrado</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
+<p>Isso acontece pois o R utilizou a função <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> do pacote <code>{base}</code>, e não a função <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> do pacote <a href="https://dplyr.tidyverse.org">dplyr</a>!</p>
+<p>Uma forma de evitar esses erros de conflitos é utilizar o operador <code>::</code>, que foi citado anteriormente. Assim estamos falando explicitamente em qual pacote essa função está:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">imdb</span>, <span class="va">diretor</span> <span class="op">==</span> <span class="st">"Zack Snyder"</span><span class="op">)</span></span>
+<span><span class="co">## # A tibble: 7 × 15</span></span>
+<span><span class="co">##   titulo         ano diretor duracao cor   generos pais  classificacao orcamento</span></span>
+<span><span class="co">##   &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt;</span></span>
+<span><span class="co">## 1 Batman v Su…  2016 Zack S…     183 Color Action… USA   A partir de … 250000000</span></span>
+<span><span class="co">## 2 Man of Stee…  2013 Zack S…     143 Color Action… USA   A partir de … 225000000</span></span>
+<span><span class="co">## 3 Watchmen&nbsp;     2009 Zack S…     215 Color Action… USA   A partir de … 130000000</span></span>
+<span><span class="co">## 4 Legend of t…  2010 Zack S…     101 Color Action… USA   Livre          80000000</span></span>
+<span><span class="co">## 5 Sucker Punc…  2011 Zack S…     128 Color Action… USA   A partir de …  82000000</span></span>
+<span><span class="co">## 6 300&nbsp;          2006 Zack S…     117 Color Action… USA   A partir de …  65000000</span></span>
+<span><span class="co">## 7 Dawn of the…  2004 Zack S…     110 Color Action… USA   A partir de …  26000000</span></span>
+<span><span class="co">## # … with 6 more variables: receita &lt;dbl&gt;, nota_imdb &lt;dbl&gt;,</span></span>
+<span><span class="co">## #   likes_facebook &lt;dbl&gt;, ator_1 &lt;chr&gt;, ator_2 &lt;chr&gt;, ator_3 &lt;chr&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="não-existe-um-pacote-chamado-there-is-no-package-called-.." class="level2"><h2 class="anchored" data-anchor-id="não-existe-um-pacote-chamado-there-is-no-package-called-..">Não existe um pacote chamado … / There is no package called ..</h2>
+<p>Quando queremos carregar um pacote, e ele não está instalado, o erro gerado é esse:</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in library(tidyverse) : there is no package called ‘tidyverse’</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
+<p>Como resolver? Precisamos instalar o pacote!</p>
+<p>A forma mais comum de instalação de um pacote é através do CRAN, utilizando a função <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code>:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Após instalar o pacote, conseguiremos carregá-lo normalmente!</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; ── Attaching packages ───── tidyverse 1.3.0 ──</span></span>
+<span><span class="co">#&gt; ✓ ggplot2 3.3.3     ✓ purrr   0.3.4</span></span>
+<span><span class="co">#&gt; ✓ tibble  3.1.0     ✓ dplyr   1.0.5</span></span>
+<span><span class="co">#&gt; ✓ tidyr   1.1.3     ✓ stringr 1.4.0</span></span>
+<span><span class="co">#&gt; ✓ readr   1.4.0     ✓ forcats 0.5.1</span></span>
+<span><span class="co">#&gt; ── Conflicts ──────── tidyverse_conflicts() ──</span></span>
+<span><span class="co">#&gt; x dplyr::filter() masks stats::filter()</span></span>
+<span><span class="co">#&gt; x dplyr::lag()    masks stats::lag()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="o-pacote-não-está-disponível-para-essa-versão-do-r-package-is-not-available-for-this-version-of-r" class="level2"><h2 class="anchored" data-anchor-id="o-pacote-não-está-disponível-para-essa-versão-do-r-package-is-not-available-for-this-version-of-r">O pacote … não está disponível para essa versão do R / Package ‘…’ is not available for this version of R</h2>
+<p>Nesse exemplo, mostraremos um caso onde não é gerado um erro, e sim uma mensagem de aviso (<em>warning</em>). Entretanto, o código não executa como esperamos, e pode impossibilitar a execução das etapas seguintes dos scripts.</p>
+<p>Imagine que queremos calcular a média da massa corporal dos Pinguins que fazem parte da base de dados sobre <a href="https://cienciadedatos.github.io/dados/reference/pinguins.html">Pinguins</a>, disponível no pacote {<a href="https://cienciadedatos.github.io/dados/">dados</a>}.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"dados"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: package 'dados' is not available for this version of R</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; A version of this package for your version of R might be available elsewhere,</span></span>
+<span><span class="co">#&gt; see the ideas at</span></span>
+<span><span class="co">#&gt; https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
+<p>Essa mensagem acontece quando queremos instalar um pacote que não está disponível no CRAN. O que eu recomendo, neste caso, é buscar o repositório no GitHub do pacote desejado.</p>
+<p>No caso do pacote que estamos mostrando neste exemplo, <a href="https://github.com/cienciadedatos/dados">este é o link do repositório</a>.</p>
+<p>Caso queira instalar o pacote através do GitHub, devemos utilizar a função <code>install_github()</code> do pacote <a href="https://remotes.r-lib.org">remotes</a>. Como argumento, devemos informar a organização ou pessoa a quem este repositório “pertence”, e o nome do repositório: <code>"nome_da_organizacao/nome_do_repositorio"</code>. No caso do pacote <a href="https://github.com/cienciadedatos/dados">dados</a>, a organização é <a href="https://github.com/cienciadedatos">cienciadedatos</a>, e o repositório é chamado de <a href="https://github.com/cienciadedatos/dados">dados</a>. Portanto, para instalar esse pacote, devemos executar o código a seguir:</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"cienciadedatos/dados"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Agora conseguimos utilizar funções e bases de dados do pacote <code>dados</code>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cienciadedatos/dados">dados</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">## [1] 4201.754</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="o-arquivo-não-existe-no-diretório-de-trabalho-atual-does-not-exist-in-current-working-directory" class="level2"><h2 class="anchored" data-anchor-id="o-arquivo-não-existe-no-diretório-de-trabalho-atual-does-not-exist-in-current-working-directory">O arquivo … não existe no diretório de trabalho atual / … does not exist in current working directory</h2>
+<p>E quando queremos importar uma base de dados (ou outro arquivo) para trabalhar no R, e recebemos essa mensagem?</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">(</span><span class="st">"imdb2.csv"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; i Using ',' as decimal and '.' as grouping mark. Use `read_delim()` for more control.</span></span>
+<span><span class="co">#&gt; Error: 'imdb2.csv' does not exist in current working directory ('C:/Users/seu_usuario/Documents').</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><sup>Created on 2021-03-29 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v0.3.0)</sup></p>
+<p>O R está informando que não encontrou o arquivo que a gente deseja importar. A maior parte das vezes quando esse erro acontece é por que 1) esse arquivo não existe no nosso computador, ou 2) estamos indicando o caminho incorreto até o arquivo.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/cracked_setwd.png?raw=true" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Ilustração sobre projetos no RStudio, por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Vamos considerar que já sabemos que o arquivo existe no computador, e trabalhar na resolução da segunda opção: precisamos corrigir o caminho até o arquivo. É muito mais fácil lidar com isso quando trabalhamos com projetos no RStudio (<code>.Rproj</code>). Recomendo muito ler <a href="https://curso-r.github.io/zen-do-r/rproj-dir.html#diret%C3%B3rio-de-trabalho">desse capítulo do livro Zen do R</a>, pois fala bastante sobre as vantagens dessa abordagem.</p>
+<p>Quando trabalhamos com projetos no RStudio (<code>.Rproj</code>), os caminhos são relativos à pasta raiz do projeto. Recomendo adicionar dentro do seu projeto o arquivo que deseja abrir. E para descobrir o caminho, existe uma super dica: o RStudio nos ajuda a navegar nos arquivos presentes no nosso projeto. É necessário escrever duas aspas <code>""</code>, posicionar o mouse entre elas (isso é, clicando entre as suas aspas como se a gente fosse escrever algo dentro delas), e apertar a tecla TAB do teclado. O RStudio abrirá janelinha que possibilitará que a gente navegue nos arquivos do nosso projeto dessa forma.</p>
+<div class="cell" data-layout-align="center">
+
+</div>
+<p>Descobrindo o caminho correto, podemos importar a base sem que aquele erro seja gerado!</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">(</span><span class="st">"dados/imdb2.csv"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; ℹ Using ',' as decimal and '.' as grouping mark. Use `read_delim()` for more control.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ── Column specification ────────────────────────────────────────────────────────</span></span>
+<span><span class="co">#&gt; cols(</span></span>
+<span><span class="co">#&gt;   titulo = col_character(),</span></span>
+<span><span class="co">#&gt;   ano = col_double(),</span></span>
+<span><span class="co">#&gt;   diretor = col_character(),</span></span>
+<span><span class="co">#&gt;   duracao = col_double(),</span></span>
+<span><span class="co">#&gt;   cor = col_character(),</span></span>
+<span><span class="co">#&gt;   generos = col_character(),</span></span>
+<span><span class="co">#&gt;   pais = col_character(),</span></span>
+<span><span class="co">#&gt;   classificacao = col_character(),</span></span>
+<span><span class="co">#&gt;   orcamento = col_double(),</span></span>
+<span><span class="co">#&gt;   receita = col_double(),</span></span>
+<span><span class="co">#&gt;   nota_imdb = col_double(),</span></span>
+<span><span class="co">#&gt;   likes_facebook = col_double(),</span></span>
+<span><span class="co">#&gt;   ator_1 = col_character(),</span></span>
+<span><span class="co">#&gt;   ator_2 = col_character(),</span></span>
+<span><span class="co">#&gt;   ator_3 = col_character()</span></span>
+<span><span class="co">#&gt; )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
+</section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>Espero que essas dicas sejam úteis para você resolver os erros no futuro, e você seja mais feliz enquanto escreve seus códigos em R! E caso ainda tenha dúvidas, recomendo perguntar lá no <a href="https://discourse.curso-r.com/">Fórum Discourse da Curso-R</a>!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/heartyr.gif?raw=true" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Ilustração por <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="gostou-quer-saber-mais" class="level2"><h2 class="anchored" data-anchor-id="gostou-quer-saber-mais">Gostou? Quer saber mais?</h2>
+<p>Se você quiser aprender um pouco mais sobre R em geral, dê uma olhada nos <a href="https://curso-r.com/#portfolio">Cursos da Curso-R</a> e aproveite!</p>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Julio Trecenti">
+<meta name="author" content="Flavia E. Rius">
+<meta name="author" content="Beatriz Milz">
+<meta name="dcterms.date" content="2022-08-12">
+<title>Bea Milz - Impressões pessoais da rstudio::conf(2022)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - Impressões pessoais da rstudio::conf(2022)">
+<meta property="og:description" content="Nesse post, apresentamos nossas impressões pessoais sobre o evento que aconteceu em Washington DC!">
+<meta property="og:image" content="https://beamilz.com/social.png">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - Impressões pessoais da rstudio::conf(2022)">
+<meta name="twitter:description" content="Nesse post, apresentamos nossas impressões pessoais sobre o evento que aconteceu em Washington DC!">
+<meta name="twitter:image" content="https://beamilz.com/posts/2022-08-12-rstudio-conf/pt/img/lunch-with-hadley.jpg">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
+    <a class="dropdown-item" href="../../../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
+    <a class="dropdown-item" href="../../../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/en/index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/pt/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/es/index.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Impressões pessoais da rstudio::conf(2022)</h1>
+            <p class="subtitle lead">Nesse post, apresentamos nossas impressões pessoais sobre o evento que aconteceu em Washington DC!</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Community</div>
+                <div class="quarto-category">RStudio</div>
+                <div class="quarto-category">Events</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-contents">
+               <p>Julio Trecenti </p>
+               <p>Flavia E. Rius </p>
+               <p>Beatriz Milz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 12, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li>
+<a href="#fl%C3%A1via-e.-rius" id="toc-flávia-e.-rius" class="nav-link active" data-scroll-target="#fl%C3%A1via-e.-rius">Flávia E. Rius</a>
+  <ul class="collapse">
+<li>
+<a href="#workshop-machine-learning-with-tidymodels" id="toc-workshop-machine-learning-with-tidymodels" class="nav-link" data-scroll-target="#workshop-machine-learning-with-tidymodels">Workshop: Machine Learning With Tidymodels</a>
+  <ul class="collapse">
+<li><a href="#pontos-altos-do-workshop" id="toc-pontos-altos-do-workshop" class="nav-link" data-scroll-target="#pontos-altos-do-workshop">Pontos altos do workshop:</a></li>
+  <li><a href="#pontos-n%C3%A3o-t%C3%A3o-altos-do-workshop" id="toc-pontos-não-tão-altos-do-workshop" class="nav-link" data-scroll-target="#pontos-n%C3%A3o-t%C3%A3o-altos-do-workshop">Pontos não tão altos do workshop:</a></li>
+  </ul>
+</li>
+  <li><a href="#palestras" id="toc-palestras" class="nav-link" data-scroll-target="#palestras">Palestras</a></li>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">tl;dr</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#beatriz-milz" id="toc-beatriz-milz" class="nav-link" data-scroll-target="#beatriz-milz">Beatriz Milz</a>
+  <ul class="collapse">
+<li><a href="#antes-da-confer%C3%AAncia" id="toc-antes-da-conferência" class="nav-link" data-scroll-target="#antes-da-confer%C3%AAncia">Antes da conferência</a></li>
+  <li><a href="#participando-do-workshop-como-ta" id="toc-participando-do-workshop-como-ta" class="nav-link" data-scroll-target="#participando-do-workshop-como-ta">Participando do workshop como TA</a></li>
+  <li><a href="#bolsa-de-diversidade" id="toc-bolsa-de-diversidade" class="nav-link" data-scroll-target="#bolsa-de-diversidade">Bolsa de diversidade</a></li>
+  <li><a href="#palestrando-na-rstudioconf" id="toc-palestrando-na-rstudioconf" class="nav-link" data-scroll-target="#palestrando-na-rstudioconf">Palestrando na rstudio::conf()</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#encontros" id="toc-encontros" class="nav-link" data-scroll-target="#encontros">Encontros</a></li>
+  <li><a href="#stickers" id="toc-stickers" class="nav-link" data-scroll-target="#stickers">Stickers</a></li>
+  <li><a href="#conclus%C3%A3o-da-bea" id="toc-conclusão-da-bea" class="nav-link" data-scroll-target="#conclus%C3%A3o-da-bea">Conclusão da Bea</a></li>
+  </ul>
+</li>
+  <li><a href="#julio-trecenti" id="toc-julio-trecenti" class="nav-link" data-scroll-target="#julio-trecenti">Julio Trecenti</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p><a href="../../../posts/2022-08-12-rstudio-conf/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Esse post foi origalmente publicado no <a href="https://blog.curso-r.com/posts/2022-08-12-rstudio-conf-impressoes/">blog da Curso-R</a>.</p>
+</div>
+</div>
+<p>A rstudio::conf(2022) acabou, mas não saiu de nós. Ficaram as memórias, as coisas novas para estudar, e as novas amizades. Nesse post, falamos um pouco de nossas experiências pessoais na conferência. O texto conta com a participação especial da Flávia E. Rius, que particiou do evento comigo (Julio) e com a Beatriz. Confira!</p>
+<section id="flávia-e.-rius" class="level1"><h1>Flávia E. Rius</h1>
+<p><strong>Twitter</strong>: <a href="https://twitter.com/flaviaerius">@flaviaerius</a></p>
+<p><strong>Blog</strong>: <a href="https://flaviaerius.netlify.app" class="uri">https://flaviaerius.netlify.app</a></p>
+<p>Participei da rstudio::conf() pela primeira vez neste ano de 2022, e última, já que ano que vem será posit::conf(), e vou contar sobre a minha experiência neste post. Pra deixar todos no contexto, vou me apresentar. Eu sou a Flávia E. Rius, cientista de dados na Mendelics/meuDNA, empresas de análise genômica (sim, do DNA!) Uso o R para a maior parte do meu trabalho, principalmente em limpeza, processamento e estruturação de dados, modelos, e criação de reports e relatórios em Rmarkdown (era pré-Quarto.) Além disso, dou mentorias online para pessoas do mundo todo em R, bioinformática e estatística. Como a Bea, apliquei para a bolsa de Diversity Scholar para participar da conferência, e fui escolhida para recebê-la (yay!)</p>
+<p>Essa foi a minha primeira conferência de R, e também a primeira relacionada a Data Science fora do mundo da bioinformática. Foi uma experiência completamente nova.</p>
+<p>Escolhi o workshop de <strong><em>Machine Learning With Tidymodels</em></strong>, que aconteceu nos primeiros dois dias do congresso, das 9 às 17h. Os outros dois dias consistiram em palestras acontecendo paralelamente em diferentes salas, e a tarefa de escolher a quais participar não foi fácil.</p>
+<p>A primeira impressão que tive ao chegar foi do hotel, gigantesco, e com uma estrutura pra congressos que eu nunca tinha visto antes. O hotel fica localizado numa espécie de cidade turística artificial, chamada National Harbor, no estado de Maryland.</p>
+<section id="workshop-machine-learning-with-tidymodels" class="level2"><h2 class="anchored" data-anchor-id="workshop-machine-learning-with-tidymodels">Workshop: Machine Learning With Tidymodels</h2>
+<p>Confesso que fui descobrir uma migalha do que eram os tidymodels uma semana antes do workshop. Escolhi ele porque queria aprender mais sobre machine learning (ML), e, apesar de saber que a ferramenta preferida para a aplicação de ML é scikit-learn no python, achei interessantíssimo aprender no R, linguagem que já é confortável pra mim.</p>
+<p>Tidymodels são ferramentas dentro de diversos pacotes que, juntas, formam uma maneira nova de criar modelos estatísticos e de ML no R. Dentre os pacotes estão: <code>recipes</code>, <code>rsample</code>, <code>parsnip</code>, <code>workflows</code>, <code>vetiver</code>, etc..</p>
+<p>Resumi em tópicos os pontos altos e não tão altos do workshop abaixo.</p>
+<section id="pontos-altos-do-workshop" class="level3"><h3 class="anchored" data-anchor-id="pontos-altos-do-workshop">Pontos altos do workshop:</h3>
+<ul>
+<li><p><strong>Modularidade</strong>: com os tidymodels cada etapa é um módulo que fica guardado em uma variável e pode ser aplicada para novos dados. Por exemplo a receita do pacote <code>recipes</code> e o workflow do pacote <code>workflows</code>. Isso é feito no intuito de guardar todo o processo aplicado nos dados de treino, para, no final, repetir para os dados de teste, ou mesmo reaplicar um pré-processamento e <em>feature engineering</em> para um novo set de dados, por exemplo.</p></li>
+<li><p><strong>Professores</strong>: Max Kuhn, Julia Silge e Davis Vaughan foram professores excepcionais, com destaque para a Julia, que é fenomenal na didática. Ela explica de uma forma muito fácil e completa, para que todos possam entender. Todos trouxeram sua expertise, um complementando o outro sobre os as dúvidas que iam surgindo (aliás, o grupo de alunos também era muito bom, com dúvidas bastante pertinentes e complementares ao workshop.) Os <em>Teaching Assistants</em> (TAs) foram muito bons em ajudar com as dúvidas, e mesmo os professores, quando não estavam dando a aula, atuaram como TAs, ajudando com as dúvidas dos alunos.</p></li>
+<li><p><a href="https://vetiver.rstudio.com/"><strong>vetiver</strong></a>: em particular, essa ferramenta fez meus olhos brilharem, apesar de ter sido mostrada bem brevemente. É uma maneira de construir uma API a partir do R para deploy de modelos de machine learning, que já resulta na página da API, e pode até gerar a Dockerfile pra deploy da API em plataformas como o Google App Engine ou AWS.</p></li>
+</ul></section><section id="pontos-não-tão-altos-do-workshop" class="level3"><h3 class="anchored" data-anchor-id="pontos-não-tão-altos-do-workshop">Pontos não tão altos do workshop:</h3>
+<ul>
+<li>
+<strong>Conceitos de ML</strong>: foram usados exemplos de árvores de decisão (<em>decision trees</em>) e <em>random forests</em>, mas faltou explicar com mais detalhe o que são, e em quais situações podem ser usados. Eu relevei absolutamente essa parte porque sei que não é fácil passar todo o conteúdo necessário, ainda mais em um workshop de apenas dois dias com tanto conteúdo sobre ML e aplicações na ferramenta de foco, os tidymodels.</li>
+</ul>
+<p>Se você tiver interesse em saber mais sobre o workshop, todo o conteúdo está disponível online:</p>
+<ul>
+<li><p><a href="https://workshops.tidymodels.org/"><strong>Slides e pré-requisitos</strong></a>: todos os slides foram feitos com Quarto, o que significa que são interativos, ou seja, é possível copiar código e clicar nos links dos slides.</p></li>
+<li><p><a href="https://workshops.tidymodels.org/slides/annotations.html"><strong>Material complementar</strong></a>: são informações extras sobre alguns slides, que também podem ser acessadas pelo ícone <strong>i</strong> vermelho no canto superior direito.</p></li>
+</ul>
+<center>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p>
+<p>Lots of stickers (my first ones!) and learning in the first day of <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a> .<br><br>Loving the ML with Tidymodels workshop, and the amazing people around here! <a href="https://t.co/JAckV0atWw">pic.twitter.com/JAckV0atWw</a></p>
+
+<p>— Flávia E. Rius (<span class="citation" data-cites="flaviaerius">@flaviaerius</span>) <a href="https://twitter.com/flaviaerius/status/1551723814966394880?ref_src=twsrc%5Etfw">July 26, 2022</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+</section></section><section id="palestras" class="level2"><h2 class="anchored" data-anchor-id="palestras">Palestras</h2>
+<p>Os dias 3 e 4 da conferência consistiram em palestras, sendo elas quatro <em>keynotes</em>, que são as palestras principais, grandes, sem nenhuma outra acontecendo em paralelo.</p>
+<p>A primeira keynote foi sobre tidymodels, com a Julia Silge e o Max Kuhn, e também contou com o super anúncio da mudança de nome da <strong>RStudio</strong> para <strong>Posit</strong> pelo Hadley Wickham e o JJ Allaire, fundador e CEO da RStudio (agora Posit.)</p>
+<p>A segunda foi com o Joe Cheng, CTO da RStudio. Ele contou a história sobre como o <strong>Shiny</strong> surgiu, e trouxe novidades como o <strong>Shiny para python</strong> e a versão <em>no code</em> do Shiny para R, usando apenas ferramentas de apontar e clicar.</p>
+<p>A terceira, com a Mine Çetinkaya e a Julia Stewart, falou sobre as maravilhas do <strong>Quarto</strong>. Uma ferramenta que me chamou muito a atenção é o <em>multiplex</em>, em que o link dos seus slides construídos em Quarto muda os slides conforme você muda na sua apresentação! Muito mágico! Claro que tem muita coisa interessante no Quarto além disso, recomendo dar uma olhada.</p>
+<p>A última, com o Jeff Leek, contou sobre o seu projeto social de trazer jovens da periferia para o aprendizado e aplicação de ciência de dados, o <a href="https://www.datatrail.org/">Data Trail</a>. Um projeto muito bonito, em que os alunos são pagos para fazerem o curso, e, ao fim, têm acesso a um estágio na área.</p>
+<p>Entre as keynotes várias palestras interessantes aconteceram. As que mais me chamaram a atenção foram:</p>
+<ul>
+<li><p><strong><em>Demistifying MLOps</em></strong>, da Isabel Zimmerman, onde ela fez um paralelo entre fazer cookies e os processos de construção, deploy e manutenção de modelos de machine learning usando o <code>vetiver</code>;</p></li>
+<li><p><strong><em>Making Data Pipelines With R</em></strong>, da Meghan S Harris, com dicas valiosas de organização e documentação para pipelines de análise de dados;</p></li>
+<li><p><strong><em>Garbage Data</em></strong>, do Jim Kloet, que falou sobre o que fazer com a garbage data (dados lixo) e da importância de definir a coleta de dados corretamente;</p></li>
+<li><p><strong><em>Exploring Query Optimization</em></strong>, da Rebecca Hadi, sobre como lidar com queries de tabelas no SQL com mais de um bilhão de colunas;</p></li>
+<li><p><strong><em>dm: Analyze, build and deploy relational data models</em></strong>, do Kirill Muller, que mostrou um pacote muito interessante para construir esquemas de bancos de dados relacionais a partir de tibbles no R;</p></li>
+<li><p><strong><em>The Future of missing data</em></strong>, do Nicholas Tierney, sobre como lidar com dados faltantes, inclusive trazendo maneiras de incluir tais dados em sua análise para entender o que pode ter acontecido com eles.</p></li>
+<li><p><strong><em>Small Team Large Organization: Building Impactful Shiny Dashboards at NIH</em></strong>, do Jon Nye, que falou sobre o uso de um modelo de machine learning para classificar solicitações de <em>grants</em> (verbas para pesquisa) de acordo com o tema e a relevância;</p></li>
+<li><p><strong><em>Building a ggplot2 rollercoaster</em></strong>, do Tyler Morgan-Wall, em que ele empregou seus pacotes de animação 3D no R <code>rayshader</code> e <code>rayrender</code> para obter um cenário 3D com gráficos do ggplot, e criou o pacote <code>rayrollercoaster</code> especificamente para a apresentação! A montanha-russa percorre os gráficos usando o percurso que você criar. A meu ponto de vista, a montanha-russa em si é mais uma diversão, mas os outros pacotes do Tyler são bastante úteis para visualização 3D.</p></li>
+</ul>
+<p>Lembrando que essas foram minhas palestras favoritas de acordo com o que posso aplicar e meus interesses, e dentro das que assisti.</p>
+<p>Em resumo, a conferência foi bastante enriquecedora. Aprendi muito sobre tidymodels, machine learning em geral, Quarto, e sobre diversos novos pacotes muito úteis no R (e alguns com versão em python também.)</p>
+<p>Se você estiver considerando ir à conferência no ano que vem, saiba que será um tempo muito bem aproveitado!</p>
+<p>Não deixe de aplicar para a bolsa de diversidade!</p>
+</section><section id="tldr" class="level2"><h2 class="anchored" data-anchor-id="tldr">tl;dr</h2>
+<ul>
+<li>rstudio:conf(2022) foi fenomenal, com uma pegada tech, muitas novidades aplicáveis, e muita gente interessante;</li>
+<li>workshop de ML com tidymodels trouxe uma análise de dados reais aplicando conceitos de ML como split de amostra, feature engineering, reamostragem e tunagem. Valeu muito a pena (confira o conteúdo aberto em <a href="workshops.tidymodels.org">workshops.tidymodels.org</a>);</li>
+<li>Julio, Bea e Dani aqui do curso-R são pessoas excepcionais, foi o maior prazer conhecê-los!</li>
+</ul></section></section><section id="beatriz-milz" class="level1"><h1>Beatriz Milz</h1>
+<p><strong>Twitter</strong>: <a href="https://twitter.com/BeaMilz">@BeaMilz</a></p>
+<p><strong>Blog</strong>: <a href="https://beamilz.com" class="uri">https://beamilz.com</a></p>
+<p>Muito do que eu achei interessante já foi falado pela Flávia (neste post) e pelo Júlio (em posts anteriores) sobre a conferência, então vou abordar aqui o que for diferente! Além disso, adicionei alguns tweets postados durante o evento, pois é uma forma legal de ver fotos e conversas que aconteceram por lá!</p>
+<section id="antes-da-conferência" class="level2"><h2 class="anchored" data-anchor-id="antes-da-conferência">Antes da conferência</h2>
+<p>Como a Flávia, essa também foi a primeira vez que participo da rstudio::conf(). Uma curiosidade é que, por pouco, eu não participei! Eu havia lido um anúncio anteriormente dizendo que o evento não aconteceria, então não fiquei acompanhando o site. Porém, no <strong>último dia disponível</strong> para submeter para a bolsa de diversidade e palestras, eu vi um tweet sobre a conferência e descobri que ela iria acontecer! Compartilhei com as minhas redes e logo corri para submeter uma palestra e também para a bolsa de diversidade.</p>
+<p>Um tempo depois, recebi um email com o convite para ser <em>Teaching Assistant</em> (TA) no workshop Building Tidy Tools, ministrado pela <a href="https://twitter.com/er13_r">Emma Rand</a> e pelo <a href="https://twitter.com/ijlyttle">Ian Lyttle</a>. Eu aceitei e aí começou o processo de organizar tudo para participar do evento! Também recebi depois o email dizendo que a bolsa de diversidade foi aprovada, e que a palestra que eu submeti foi aprovada como uma <em>lightning talk</em> (uma palestra de 5 minutos)! Enfim, fiquei extremamente grata por todas essas oportunidades.</p>
+<center>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p>
+<p>Tomorrow starts the <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw"><span class="citation" data-cites="rstudio">@rstudio</span></a> Conference! I’m very excited to be part of it :)<br><br>Thanks <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw"><span class="citation" data-cites="rstudio">@rstudio</span></a> for the diversity scholarship!🥳<br><br>Also, glad to be part of the group of R Brazilian users at the conference <a href="https://twitter.com/flaviaerius?ref_src=twsrc%5Etfw"><span class="citation" data-cites="flaviaerius">@flaviaerius</span></a> <a href="https://twitter.com/jtrecenti?ref_src=twsrc%5Etfw"><span class="citation" data-cites="jtrecenti">@jtrecenti</span></a> <a href="https://twitter.com/dfalbel?ref_src=twsrc%5Etfw"><span class="citation" data-cites="dfalbel">@dfalbel</span></a> 🌎<a href="https://twitter.com/hashtag/rstudioconf?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a> <a href="https://t.co/WvLpFZIaw5">pic.twitter.com/WvLpFZIaw5</a></p>
+
+<p>— Beatriz Milz (<span class="citation" data-cites="BeaMilz">@BeaMilz</span>) <a href="https://twitter.com/BeaMilz/status/1551343102023143424?ref_src=twsrc%5Etfw">July 24, 2022</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+</section><section id="participando-do-workshop-como-ta" class="level2"><h2 class="anchored" data-anchor-id="participando-do-workshop-como-ta">Participando do workshop como TA</h2>
+<p>Participar como Teaching Assistant do workshop Building Tidy Tools foi uma experiência INCRÍVEL! As pessoas ministrantes do workshop (<a href="https://twitter.com/er13_r">Emma Rand</a> e <a href="https://twitter.com/ijlyttle">Ian Lyttle</a>) são extremamente gentis, e mesmo antes do workshop eles incluiam os TAs nas conversas via email para que a gente já tivesse familiaridade com a estrutura do workshop e os materiais que seriam utilizados.</p>
+<p>Aliás, todos os materiais para este workshop estão disponíveis <a href="https://rstudio-conf-2022.github.io/build-tidy-tools/">neste site</a>!</p>
+<p>No primeiro dia do workshop, o foco foi abordar como podemos criar um pacote: no final do primeiro dia, as pessoas participantes já tinham um pacote criado, com algumas funções e seus testes, disponível online, e com uma página web feita com pkgdown! Nesse dia, consegui auxiliar bastante pessoas com dúvidas que surgiam sobre configuração do ambiente para desenvolvimento de pacotes, e os erros que apareciam no caminho durante o workshop. Eu já tinha bastante experiência com vários dos erros que aconteciam, pois eu utilizo pacotes diariamente e também <a href="https://loja.curso-r.com/pacotes.html">sou uma das professoras do curso de pacotes na Curso-R</a>.</p>
+<p>No segundo dia do workshop, o conteúdo foi aprofundado e o foco foi a construção de funções de forma que elas funcionem bem de acordo com a filosofia do tidyverse, sendo o destaque (na minha opinião) o conteúdo sobre design de funções e <em>tidy eval</em>.</p>
+<center>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p>
+<p>A couple of ussies at the end of “Building Tidy Tools” workshop at <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a><a href="https://twitter.com/er13_r?ref_src=twsrc%5Etfw"><span class="citation" data-cites="er13_r">@er13_r</span></a> is a wonderful collaborator! Thanks to TAs <a href="https://twitter.com/tladeras?ref_src=twsrc%5Etfw"><span class="citation" data-cites="tladeras">@tladeras</span></a> <a href="https://twitter.com/BeaMilz?ref_src=twsrc%5Etfw"><span class="citation" data-cites="BeaMilz">@BeaMilz</span></a> <a href="https://twitter.com/heyhayhay__?ref_src=twsrc%5Etfw"><span class="citation" data-cites="heyhayhay__">@heyhayhay__</span></a> Kailey Mulligan and Elliot Murphy, who kept things moving!<br><br>Thanks also to all our students, great energy! <a href="https://t.co/oclaAfO9d8">pic.twitter.com/oclaAfO9d8</a></p>
+
+<p>— Ian Lyttle (<span class="citation" data-cites="ijlyttle">@ijlyttle</span>) <a href="https://twitter.com/ijlyttle/status/1552044478772527105?ref_src=twsrc%5Etfw">July 26, 2022</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<p>Em resumo: foi uma oportunidade maravilhosa, e agradeço muito à <a href="https://twitter.com/minebocek">Mine Çetinkaya-Rundel</a> (que estava na organização dos workshops neste evento), aos instrutores e outros TAs, e também aos estudantes que participaram do workshop!</p>
+</section><section id="bolsa-de-diversidade" class="level2"><h2 class="anchored" data-anchor-id="bolsa-de-diversidade">Bolsa de diversidade</h2>
+<p>Como comentei anteriormente, eu e a Flávia fomos selecionadas para receber uma bolsa de diversidade. Algo que gostei muito foi terem criado um canal do Slack, antes mesmo da conferência, para que pudessemos conversar e conhecer outros bolsistas! Assim, quando chegamos no evento já conheciamos várias pessoas e foi mais fácil de se conectar :) Essa foto tem o registro das pessoas que participaram como bolsistas:</p>
+<p><img src="img/diversity_scholars.jpg" class="img-fluid" alt="Imagem das pessoas que participaram como bolsistas de diversidade."> Fonte: Imagem disponibilizada por Katherine Vu (RStudio).</p>
+</section><section id="palestrando-na-rstudioconf" class="level2"><h2 class="anchored" data-anchor-id="palestrando-na-rstudioconf">Palestrando na rstudio::conf()</h2>
+<p>A minha palestra relâmpago foi sobre um tema que tenho aprendido nos últimos 2 anos e acho muito útil e interessante: automatizações com GitHub Actions.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A gravação da palestra está disponível <a href="https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/">no site da conferência</a>!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/"><img src="img/gravacao.webp" class="img-fluid figure-img" alt="Frame do video da palestra" style="width:80.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Um destaque foi o treinamento recebido pela <a href="https://www.articulationinc.com/">Articulation</a>. Todas as pessoas que palestraram no evento receberam convites para participar de um treinamento para oferecer palestras mais interessantes, e eu participei em duas atividades. O treinamento recebido me fez reformular completamente a minha proposta, diminuindo o escopo da palestra e focando em um público-alvo mais restrito: pessoas que ainda não usam GitHub Actions!</p>
+<p>Palestrar na rstudio::conf() foi uma experiência muito legal! A energia da platéia foi muito boa, e várias pessoas falaram comigo após a palestra dizendo que acharam interessante!</p>
+<p>Todo material (slides e material complementar) <a href="https://beamilz.com/talks/en/2022-rstudio-conf/">está disponível no meu blog</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://beatrizmilz.github.io/rstudioconf2022/"><img src="img/talk.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Primeiro slide da palestra</figcaption><p></p>
+</figure>
+</div>
+<p>O Julio me ajudou bastante durante a criação dessa palestra, dando vários feedbacks, e eu o agradeço muito! Além disso, ele comentou um pouco da minha palestra <a href="https://blog.curso-r.com/posts/2022-07-29-rstudio-conf-2022-dia2/">no post sobre o segundo dia do evento</a>.</p>
+<center>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p>
+<p>The material for my talk at <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a> about GitHub Actions is available on my blog:<a href="https://t.co/07rEJwFCPn">https://t.co/07rEJwFCPn</a><br><br>Thanks everyone that watched and supported!!<a href="https://twitter.com/hashtag/rstudioconf?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf</a> <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw"><span class="citation" data-cites="rstudio">@rstudio</span></a> <a href="https://twitter.com/github?ref_src=twsrc%5Etfw"><span class="citation" data-cites="github">@github</span></a> <a href="https://twitter.com/GitHubBrasil?ref_src=twsrc%5Etfw"><span class="citation" data-cites="GitHubBrasil">@GitHubBrasil</span></a> <a href="https://t.co/SHF3bK09Qr">pic.twitter.com/SHF3bK09Qr</a></p>
+
+<p>— Beatriz Milz (<span class="citation" data-cites="BeaMilz">@BeaMilz</span>) <a href="https://twitter.com/BeaMilz/status/1552681946198720516?ref_src=twsrc%5Etfw">July 28, 2022</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+</section><section id="quarto" class="level2"><h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>O <a href="https://quarto.org/">Quarto</a>, para quem não conhece, é a nova geração do RMarkdown. Eu já venho usando o Quarto desde outubro de 2021, enquanto ele estava sendo desenvolvido e aprimorado. Então poucas coisas foram novidades para mim nas palestras sobre Quarto, mas eu gostei de ver como foi dado ênfase! A <a href="https://mine.quarto.pub/hello-quarto/#/hello-quarto-title">keynote ‘Hello Quarto’</a> da <a href="https://twitter.com/minebocek">Mine Çetinkaya-Rundel</a> e da <a href="https://twitter.com/juliesquid">Julia Stewart Lowndes</a> foi maravilhosa, com lindas artes da <a href="https://twitter.com/allison_horst">Allison Horst</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://mine.quarto.pub/hello-quarto/"><img src="img/hello-quarto.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">One penguin standing on another penguin's shoulders in a snowscape, looking through a telescope at a Quarto logo “moon” in the night sky.</figcaption><p></p>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</p>
+</blockquote>
+<p>Tenho usado bastante e sei que ainda tem muita coisa legal para ser lançada relacionado ao Quarto. Eu e o Julio ficamos tão empolgados, que reestruturamos o <a href="https://loja.curso-r.com/relatorios-e-apresentacoes-automaticas.html">curso de relatórios da Curso-R</a> (próxima turma começa em 16/08/2022) para abordar bastante conteúdo sobre essa ferramenta nova!</p>
+</section><section id="encontros" class="level2"><h2 class="anchored" data-anchor-id="encontros">Encontros</h2>
+<p>Uma das coisas mais divertidas foi conhecer tanta gente legal da comunidade, e conversar nos períodos das refeições e nos eventos no período da noite, que dão espaço para conversas entre participates. O tweet abaixo foi tirado na primeira noite do evento: eu e o Julio levamos alguns jogos e jogamos com algumas pessoas que conhecemos por lá!</p>
+<center>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p>
+<p>Part of the fun in R events are playing games with people that we meet from the community! <a href="https://twitter.com/hashtag/rstudioconf?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf</a> <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a> <a href="https://twitter.com/hashtag/hanabi?src=hash&amp;ref_src=twsrc%5Etfw">#hanabi</a> <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw"><span class="citation" data-cites="rstudio">@rstudio</span></a> <a href="https://twitter.com/flaviaerius?ref_src=twsrc%5Etfw"><span class="citation" data-cites="flaviaerius">@flaviaerius</span></a> <a href="https://twitter.com/Devin_lj?ref_src=twsrc%5Etfw"><span class="citation" data-cites="Devin_lj">@Devin_lj</span></a> <a href="https://twitter.com/jtrecenti?ref_src=twsrc%5Etfw"><span class="citation" data-cites="jtrecenti">@jtrecenti</span></a> and David Christensen 🎉 <a href="https://t.co/thndW1Le9C">pic.twitter.com/thndW1Le9C</a></p>
+
+<p>— Beatriz Milz (<span class="citation" data-cites="BeaMilz">@BeaMilz</span>) <a href="https://twitter.com/BeaMilz/status/1551739749408415751?ref_src=twsrc%5Etfw">July 26, 2022</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+</section><section id="stickers" class="level2"><h2 class="anchored" data-anchor-id="stickers">Stickers</h2>
+<p>Uma febre durante o evento é aumentar a coleção de stickers. Esse tweet feito pelo Luis resume vários momentos durante a conferência em que várias pessoas buscavam algum sticker de pacotes queridos em uma mesa cheia deles!</p>
+<center>
+<blockquote class="twitter-tweet blockquote">
+<p lang="qme" dir="ltr">
+</p>
+<p><a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a> <a href="https://t.co/cCn5me1rjc">pic.twitter.com/cCn5me1rjc</a></p>
+
+<p>— Luis D. Verde Arregoitia (<span class="citation" data-cites="LuisDVerde">@LuisDVerde</span>) <a href="https://twitter.com/LuisDVerde/status/1552037693332357120?ref_src=twsrc%5Etfw">July 26, 2022</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<p>Eu trouxe de volta vários stickers, e já colei no meu computador e estou distribuindo entre os amigos! Esse é o meu computador após a conferência:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/note-pos-evento.jpeg" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Notebook com vários stickers!</figcaption><p></p>
+</figure>
+</div>
+</section><section id="conclusão-da-bea" class="level2"><h2 class="anchored" data-anchor-id="conclusão-da-bea">Conclusão da Bea</h2>
+<p>Enfim, essa conferência foi <strong>INCRÍVEL</strong>! Espero ter oportunidades de participar nas conferências da <a href="https://www.rstudio.com/blog/rstudio-is-becoming-posit/">posit</a> no futuro :)</p>
+</section></section><section id="julio-trecenti" class="level1"><h1>Julio Trecenti</h1>
+<p>Como eu já comentei sobre tudo o que passei nos posts anteriores – <a href="https://blog.curso-r.com/posts/2022-07-27-rstudio-conf-2022/">dia 1: aqui</a> e <a href="https://blog.curso-r.com/posts/2022-07-29-rstudio-conf-2022-dia2/">dia 2: aqui</a> – serei bem breve.</p>
+<p>Para mim, a parte mais legal foram os encotros e reencontros presenciais. Além da companhia sempre maravilhosa da Bea e da companhia da Flávia que nos acompanhou em toda a viagem, também encontramos novas pessoas do Brasil, reencontramos amigos e conhecemos novas pessoas de fora.</p>
+<p>Na parte técnica, para mim o mais legal foi ver como a RStudio, agora Posit, está se aproximando de forma amigável de outras linguagens de programação. Ao invés de simplesmente começar a fazer ferramentas para o Python, a empresa decidiu criar ferramentas multi-linguagem, focando na produção científica (como o <a href="https://quarto.org">Quarto</a>), que vai muito além das linguagens de programação.</p>
+<p>E claro, meu lado tiete adorou ter refeições com o <a href="https://hadley.nz">Hadley</a> e conversar com outras pessoas famosas, como o JJ Allaire, o <a href="https://github.com/cderv">Christophe Dervieux</a> e o <a href="https://twitter.com/tylermorganwall">Tyler Morgan-Wall</a>.</p>
+<center>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p>
+<p>Thankfully Julio asked for a picture, otherwise no one would believe that we had lunch with <a href="https://twitter.com/hadleywickham?ref_src=twsrc%5Etfw"><span class="citation" data-cites="hadleywickham">@hadleywickham</span></a> and <a href="https://twitter.com/chrisderv?ref_src=twsrc%5Etfw"><span class="citation" data-cites="chrisderv">@chrisderv</span></a> 😄 <a href="https://twitter.com/jtrecenti?ref_src=twsrc%5Etfw"><span class="citation" data-cites="jtrecenti">@jtrecenti</span></a> <a href="https://twitter.com/flaviaerius?ref_src=twsrc%5Etfw"><span class="citation" data-cites="flaviaerius">@flaviaerius</span></a> <a href="https://twitter.com/rprimi?ref_src=twsrc%5Etfw"><span class="citation" data-cites="rprimi">@rprimi</span></a> e <a href="https://twitter.com/anakiki1505?ref_src=twsrc%5Etfw"><span class="citation" data-cites="anakiki1505">@anakiki1505</span></a> ! <a href="https://twitter.com/hashtag/rstudioconf2022?src=hash&amp;ref_src=twsrc%5Etfw">#rstudioconf2022</a> <a href="https://twitter.com/hashtag/RStudioConf?src=hash&amp;ref_src=twsrc%5Etfw">#RStudioConf</a> <a href="https://twitter.com/hashtag/posit?src=hash&amp;ref_src=twsrc%5Etfw">#posit</a> <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw"><span class="citation" data-cites="rstudio">@rstudio</span></a> <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://t.co/R8jAOyfUxd">pic.twitter.com/R8jAOyfUxd</a></p>
+
+<p>— Beatriz Milz (<span class="citation" data-cites="BeaMilz">@BeaMilz</span>) <a href="https://twitter.com/BeaMilz/status/1552343987536728064?ref_src=twsrc%5Etfw">July 27, 2022</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<p>Abraços e até a próxima!</p>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz Milz">
+<meta name="dcterms.date" content="2022-06-05">
+<title>Bea Milz - Creating a blog with Quarto in 10 steps</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - Creating a blog with Quarto in 10 steps">
+<meta property="og:description" content="In this post, I introduce you to my new blog and show how you can create a blog with Quarto for R users.">
+<meta property="og:image" content="https://beamilz.com/social.png">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+<!-- Primary Meta Tags --><title>Bea Milz - Creating a blog with Quarto in 10 steps</title>
+<meta name="title" content="Bea Milz - Creating a blog with Quarto in 10 steps">
+<meta name="description" content="In this post, I introduce you to my new blog and show how you can create a blog with Quarto.">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - Creating a blog with Quarto in 10 steps">
+<meta property="og:description" content="In this post, I introduce you to my new blog and show how you can create a blog with Quarto.">
+<meta property="og:image" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/img/search.png">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - Creating a blog with Quarto in 10 steps">
+<meta property="twitter:description" content="In this post, I introduce you to my new blog and show how you can create a blog with Quarto.">
+<meta property="twitter:image" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/img/search.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - Creating a blog with Quarto in 10 steps">
+<meta name="twitter:description" content="In this post, I introduce you to my new blog and show how you can create a blog with Quarto for R users.">
+<meta name="twitter:image" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/img/search.png">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="655">
+<meta name="twitter:image-width" content="1397">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
+    <a class="dropdown-item" href="../../../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
+    <a class="dropdown-item" href="../../../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/en/index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/pt/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/es/index.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Creating a blog with Quarto in 10 steps</h1>
+            <p class="subtitle lead">In this post, I introduce you to my new blog and show how you can create a blog with Quarto for R users.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Quarto</div>
+                <div class="quarto-category">Tutorial</div>
+                <div class="quarto-category">Blog</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 5, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#so-here-comes-quarto" id="toc-so-here-comes-quarto" class="nav-link" data-scroll-target="#so-here-comes-quarto">So, here comes <span>Quarto</span>…</a></li>
+  <li>
+<a href="#how-to-create-a-blog-with-quarto" id="toc-how-to-create-a-blog-with-quarto" class="nav-link" data-scroll-target="#how-to-create-a-blog-with-quarto">How to create a blog with Quarto?</a>
+  <ul class="collapse">
+<li><a href="#open-new-tabs" id="toc-open-new-tabs" class="nav-link" data-scroll-target="#open-new-tabs">1 - Open new tabs!</a></li>
+  <li><a href="#install-or-update-quarto" id="toc-install-or-update-quarto" class="nav-link" data-scroll-target="#install-or-update-quarto">2 - Install or update Quarto</a></li>
+  <li><a href="#create-a-project-for-the-blog" id="toc-create-a-project-for-the-blog" class="nav-link" data-scroll-target="#create-a-project-for-the-blog">3 - Create a project for the blog</a></li>
+  <li><a href="#preview-your-blog" id="toc-preview-your-blog" class="nav-link" data-scroll-target="#preview-your-blog">4 - Preview your blog</a></li>
+  <li><a href="#create-a-github-repository" id="toc-create-a-github-repository" class="nav-link" data-scroll-target="#create-a-github-repository">5 - Create a GitHub repository</a></li>
+  <li><a href="#deploy-with-netlify" id="toc-deploy-with-netlify" class="nav-link" data-scroll-target="#deploy-with-netlify">6 - Deploy with Netlify</a></li>
+  <li><a href="#change-the-colors-of-your-blog" id="toc-change-the-colors-of-your-blog" class="nav-link" data-scroll-target="#change-the-colors-of-your-blog">7 - Change the colors of your blog</a></li>
+  <li><a href="#setting-up-comments" id="toc-setting-up-comments" class="nav-link" data-scroll-target="#setting-up-comments">8 - Setting up Comments</a></li>
+  <li><a href="#add-content-in-your-blog" id="toc-add-content-in-your-blog" class="nav-link" data-scroll-target="#add-content-in-your-blog">9 - Add content in your blog</a></li>
+  <li><a href="#tweet-about-it" id="toc-tweet-about-it" class="nav-link" data-scroll-target="#tweet-about-it">10 - Tweet about it!</a></li>
+  </ul>
+</li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#thanks" id="toc-thanks" class="nav-link" data-scroll-target="#thanks">Thanks!</a></li>
+  <li><a href="#edit-more-content-about-this-topic" id="toc-edit-more-content-about-this-topic" class="nav-link" data-scroll-target="#edit-more-content-about-this-topic">Edit: More content about this topic!</a></li>
+  <li><a href="#edit-2-tweet" id="toc-edit-2-tweet" class="nav-link" data-scroll-target="#edit-2-tweet">Edit 2: Tweet</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p><a href="../../../posts/2022-06-05-creating-a-blog-with-quarto/en/index.html"> <button type="button" class="btn btn-primary">English</button></a></p>
+<section id="welcome" class="level2"><h2 class="anchored" data-anchor-id="welcome">Welcome!</h2>
+<p>Hi! Welcome to my new blog.</p>
+<p>My name is Beatriz, and I have been writing blog posts about R and Data Science since 2019, in my <a href="https://beatrizmilz.com/blog/">blog written in Portuguese</a> (I am Brazilian 🇧🇷). You can read more about me in the <a href="../../../about.html">about page</a>, and check my presentations on the <a href="../../../talks/index.html">talks</a> page.</p>
+<p>I think that some of the blog posts I write would be useful to a broader audience, so I wanted to start blogging in English (or translating blog posts that I wrote).</p>
+<p>My <a href="https://beatrizmilz.com/blog/">blog in Portuguese</a> was build using <a href="https://pkgs.rstudio.com/blogdown/">blogdown</a> and <a href="https://github.com/hugo-apero/">Hugo Apéro</a>, and I really like it. I searched if it was possible to adapt the blog that I had to a multi-language blog (so I could have posts in Portuguese, English and Spanish), but I had no success on my quest.</p>
+</section><section id="so-here-comes-quarto" class="level2"><h2 class="anchored" data-anchor-id="so-here-comes-quarto">So, here comes <a href="https://quarto.org/">Quarto</a>…</h2>
+<p>I started using quarto in October 2021, and so far I have created <a href="https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html">websites</a> and presentations with it (I even made a <a href="https://beatrizmilz.github.io/2022-SER-quarto/">presentation about quarto using quarto</a>). I was excited to test Quarto to create a blog sometime ago, but I really liked my blog with blogdown/Apéro.</p>
+<p>So when I started thinking about writing blog posts in English, I thought that it would be a good idea to create a separate, brand new blog to store content in English, using Quarto.</p>
+<p>My <a href="https://beatrizmilz.com/blog/">blog in Portuguese</a> will continue to exist, and I will continue to post there (in Portuguese). In this blog, I’ll add content in English.</p>
+<p>Now that I explained why this blog was created, I’m going to write about some of the steps that you need to take to create a blog with Quarto.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A lot of the steps that I explain in this post can be used to create other outputs with Quarto, such as websites, presentations, and books.</p>
+</div>
+</div>
+</section><section id="how-to-create-a-blog-with-quarto" class="level1"><h1>How to create a blog with Quarto?</h1>
+<section id="open-new-tabs" class="level2"><h2 class="anchored" data-anchor-id="open-new-tabs">1 - Open new tabs!</h2>
+<p>First of all: the Quarto team made a huge effort writing <a href="https://quarto.org/docs/websites/website-blog.html">the documentation</a>. I suggest that you open it in another tab, and use the Search button in the top-right of the docs page (believe me, the search feature used in Quarto is awesome!).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://quarto.org/docs/websites/website-blog.html"><img src="img/search.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Print screen of the Quarto Documentation about blogs.</figcaption><p></p>
+</figure>
+</div>
+<p>Second: I think it is nice to look at other blogs made with Quarto to see what you can do. I have not found a lot of blogs made with Quarto, and I think because it is a new software. So, take a look at these blogs:</p>
+<ul>
+<li><p><a href="https://blog.djnavarro.net/">Notes from a data witch: A data science blog by Danielle Navarro</a> - Danielle is a data scientist and she has an awesome blog made with Quarto. The code used to create the blog is <a href="https://github.com/djnavarro/quarto-blog">available on GitHub</a>. But also don’t miss her <a href="https://art.djnavarro.net/">art gallery</a>!</p></li>
+<li><p>This blog! Check other pages and see what you would like to have in your personal page. The code used to create this blog is <a href="https://github.com/beatrizmilz/blog-en">available on GitHub</a>.</p></li>
+</ul></section><section id="install-or-update-quarto" class="level2"><h2 class="anchored" data-anchor-id="install-or-update-quarto">2 - Install or update Quarto</h2>
+<p>I have been using Quarto for more than half a year now, so I had already installed Quarto.</p>
+<p>But one thing that I do frequently is to <a href="https://quarto.org/docs/get-started/">update quarto</a>. I recommend you do the same because if you use an older version, you might get a bug that has already been fixed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://quarto.org/docs/get-started/"><img src="img/install-quarto.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Print screen of the Quarto ‘Get Started’ page.</figcaption><p></p>
+</figure>
+</div>
+</section><section id="create-a-project-for-the-blog" class="level2"><h2 class="anchored" data-anchor-id="create-a-project-for-the-blog">3 - Create a project for the blog</h2>
+<p>I’m an <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a> user, so I created a new RStudio Project using the interface:</p>
+<ol type="1">
+<li>Click the <code>Project:</code> button, and then in <code>New Project...</code>:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/new_project/01-new-project.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>Choose <code>New Directory</code>:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/new_project/02-new-directory.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>Choose <code>Quarto blog</code>:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/new_project/03-new-quarto-blog.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>Choose the directory name (the name of the folder where your blog will be stored) and where in your computer you want to save it. Then click <code>Create Project</code>:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/new_project/04-name-and-path.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ol start="5" type="1">
+<li>Voilá! The structure of your blog is ready 🎉. Check the <code>Files</code> panel and explore the files stored there.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/new_project/05-project-created.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</section><section id="preview-your-blog" class="level2"><h2 class="anchored" data-anchor-id="preview-your-blog">4 - Preview your blog</h2>
+<p>You can preview how your blog is going to look like if you open an <code>.qmd</code> file and click the <strong>Render</strong> button. The preview of your blog will show on the Viewer Pane in the RStudio IDE.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/render.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>But you can also click the <strong>Show in new window</strong> button (circled in red in the image above) to preview it in your browser:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/preview.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>Nice! Your blog exists on your computer now. But we still need to put it online, so other people can read your posts. In the next two sections I’ll show you how to do that!</p>
+</section><section id="create-a-github-repository" class="level2"><h2 class="anchored" data-anchor-id="create-a-github-repository">5 - Create a GitHub repository</h2>
+<p>Using Git and GitHub will help you to put your blog online (and also have an online copy of the code in case anything happens with the version in your computer).</p>
+<p>You need the package <a href="https://usethis.r-lib.org/">usethis</a> for this part:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"usethis"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+What is Git? GitHub? (Click to expand!)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you have not used Git and GitHub with RStudio IDE before, I recommend you to take some time to prepare your environment and configure everything before continuing reading this post.</p>
+<p><strong>You can read detailed information about how to do this in the book <a href="https://happygitwithr.com/">Happy Git with R</a>.</strong></p>
+<p>Here is a useful check-list you can use:</p>
+<ul class="task-list">
+<li><p><input type="checkbox" disabled=""><a href="https://git-scm.com/downloads">Install Git on your computer</a></p></li>
+<li><p><input type="checkbox" disabled=""><a href="https://github.com/">Create a free account on GitHub</a></p></li>
+<li><p><input type="checkbox" disabled="">
+Install package <a href="https://usethis.r-lib.org/">usethis</a>: <code>install.packages("usethis")</code></p></li>
+<li><p><input type="checkbox" disabled="">
+Introduce yourself to Git:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git_config.html">use_git_config</a></span><span class="op">(</span></span>
+<span>  <span class="co"># your name</span></span>
+<span>  user.name <span class="op">=</span> <span class="st">"Captain Marvel"</span>,</span>
+<span>  <span class="co"># your email used in your GitHub account</span></span>
+<span>  user.email <span class="op">=</span> <span class="st">"awesomecaptain@gmail.com"</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul class="task-list">
+<li><p><input type="checkbox" disabled="">
+Create a GitHub PAT Token with <code><a href="https://usethis.r-lib.org/reference/github-token.html">usethis::create_github_token()</a></code> (is like a password)</p></li>
+<li><p><input type="checkbox" disabled="">
+Store your token with <code><a href="https://rdrr.io/pkg/gitcreds/man/gitcreds_get.html">gitcreds::gitcreds_set()</a></code></p></li>
+<li><p><input type="checkbox" disabled="">
+Restart your R Session (usually <code>CTRL + SHIFT + F10</code> will do the work)</p></li>
+<li><p><input type="checkbox" disabled="">
+Use <code><a href="https://usethis.r-lib.org/reference/git_sitrep.html">usethis::git_sitrep()</a></code> to check if your name, email and PAT are configured. The most important thing to look for is: <code>Personal access token for 'https://github.com': '&lt;discovered&gt;'</code>.</p></li>
+</ul>
+<p>If it is all configured, you are ready to continue reading this post. 🚀</p>
+</div>
+</div>
+</div>
+<p>If you already configure Git and GitHub with RStudio IDE, you can use these two functions from the <a href="https://usethis.r-lib.org/">usethis</a> package, in the project that you created:</p>
+<ol type="1">
+<li>
+<code>use_git()</code> to start the version control of your project (the function will ask you if you want to commit your changes and restart RStudio, you can accept it):</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git.html">use_git</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co"># ✔ Setting active project to '/Users/Desktop/name-of-your-blog/'</span></span>
+<span><span class="co"># ✔ Initialising Git repo</span></span>
+<span><span class="co"># ✔ Adding '.Rproj.user', '.Rhistory', '.Rdata', '.httr-oauth', '.DS_Store' to '.gitignore'</span></span>
+<span><span class="co"># There are 8 uncommitted files:</span></span>
+<span><span class="co"># * '_quarto.yml'</span></span>
+<span><span class="co"># * '.gitignore'</span></span>
+<span><span class="co"># * 'about.qmd'</span></span>
+<span><span class="co"># * 'example-quarto-blog.Rproj'</span></span>
+<span><span class="co"># * 'index.qmd'</span></span>
+<span><span class="co"># * 'posts/'</span></span>
+<span><span class="co"># * 'profile.jpg'</span></span>
+<span><span class="co"># * 'styles.css'</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Is it ok to commit them?</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># 1: Not now</span></span>
+<span><span class="co"># 2: Yup</span></span>
+<span><span class="co"># 3: Negative</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># Selection: 2</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># ✔ Adding files</span></span>
+<span><span class="co"># ✔ Making a commit with message 'Initial commit'</span></span>
+<span><span class="co"># • A restart of RStudio is required to activate the Git pane</span></span>
+<span><span class="co"># Restart now?</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># 1: No way</span></span>
+<span><span class="co"># 2: Definitely</span></span>
+<span><span class="co"># 3: No</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># Selection: 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>
+<code>use_github()</code> to create a GitHub repository to store your code, and a new window will open with your repository:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_github.html">use_github</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co"># ℹ Defaulting to 'https' Git protocol</span></span>
+<span><span class="co"># ✔ Setting active project to '/Users/beatrizmilz/Desktop/name-of-your-blog'</span></span>
+<span><span class="co"># ✔ Creating GitHub repository 'beatrizmilz/name-of-your-blog'</span></span>
+<span><span class="co"># ✔ Setting remote 'origin' to 'https://github.com/beatrizmilz/name-of-your-blog.git'</span></span>
+<span><span class="co"># ✔ Pushing 'main' branch to GitHub and setting 'origin/main' as upstream branch</span></span>
+<span><span class="co"># ✔ Opening URL 'https://github.com/beatrizmilz/name-of-your-blog'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/new-repo.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>This is the repository used in this example: <a href="https://github.com/beatrizmilz/name-of-your-blog" class="uri">https://github.com/beatrizmilz/name-of-your-blog</a></p>
+</section><section id="deploy-with-netlify" class="level2"><h2 class="anchored" data-anchor-id="deploy-with-netlify">6 - Deploy with Netlify</h2>
+<p>Next, we will create a URL to put the blog online. This step is called <strong>deploy</strong>, and we will use a service called <a href="https://www.netlify.com/">Netlify</a> for this purpose.</p>
+<ol type="1">
+<li><p>First, Sign up or Log in on <a href="https://www.netlify.com/">Netlify</a>. I recommend signing in using your GitHub account.</p></li>
+<li><p>Then, you can click <strong>Add new site</strong> and <strong>Import an existing project</strong>:</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/netlify/add-new-site.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>Next, you need to connect to a Git provider. In this case, click the link to GitHub. It may ask you to authenticate with GitHub if you have not done this already.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/netlify/connect-to-git.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>Then, in <strong>Pick a repository from GitHub</strong>, choose the repository that you created for your blog:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/netlify/pick-repo.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<ol start="5" type="1">
+<li>This step is really important, so don’t hurry up and take your time to do it with care! In <strong>Import an existing project from a Git repository</strong>, you <strong>only</strong> have to change one thing: the <strong>Base directory</strong> field. You need to write the name of the directory used to store the HTML files of your blog. By default, it is <code>_site</code>. This is because when you generate your blog, by default Quarto saves all the HTML files generated for your site in the directory called <code>_site</code>. Everything else will be filled out by Netlify, so don’t change anything else. Check if everything looks like the image below and then click <strong>Deploy site</strong>:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/netlify/site-settings.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<ol start="6" type="1">
+<li>When you first deploy a website on Netlify, it will show an automatic URL. In this case it was <em>peppy-cat-2e067c.netlify.app</em>. You can change it to a more personal URL, which would be easier for other people to type and remember. To change your site URL, click <strong>Site settings</strong>:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/netlify/first-deploy.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>Then click <strong>Change site name</strong>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/netlify/site-details.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>And choose the name used for the URL of your blog, writing it on the field <strong>Site name</strong>. Below this field, you can see how the URL of your blog is going to look like! After choosing it, click <strong>Save</strong>. If you need, you can change it after.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/netlify/change-site-name.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>Now the blog that I am creating as an example is available in this link: <a href="https://your-awesome-blog-with-quarto.netlify.app/" class="uri">https://your-awesome-blog-with-quarto.netlify.app/</a></p>
+</section><section id="change-the-colors-of-your-blog" class="level2"><h2 class="anchored" data-anchor-id="change-the-colors-of-your-blog">7 - Change the colors of your blog</h2>
+<p>You can change the colors, fonts and more of the style of your blog by changing the <strong>theme</strong> in the file <code>_quarto.yml</code>. You can create your own theme or choose between the options on the <a href="https://quarto.org/docs/output-formats/html-themes.html#overview">Quarto documentation</a>.</p>
+<p>Open the <code>_quarto.yml</code> file and choose another theme that you liked from the documentation. In this example, I changed the theme to <code>minty</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> minty</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/theme.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>If you know CSS and would like to change the theme yourself, you can edit the <code>styles.css</code> file.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+How can I update my blog with the changes I made? (Click to expand!)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If this is your first time using Git and GitHub in RStudio IDE, I’ll show you the steps to update your blog!</p>
+<p>First, you need to find the Git Pane in RStudio IDE. If it is not there, I recommend restarting RStudio and opening your project again.</p>
+<p>Then, in your Git Pane, the list of files with changes will appear. Check the boxes of the files that you want to update, and click <strong>Commit</strong>:</p>
+<p><img src="img/git-pane/stage.png" class="img-fluid" data-fig-align="center" style="width:100.0%"> Next, you need to write a message that, in a few words, explains what was changed. Write this message in the <strong>Commit message</strong> field, and the click <strong>Commit</strong>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/git-pane/write-commit-message.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>Finally, close the Git window, then click <strong>Push</strong> (it is the green up-arrow button on the Git pane).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/git-pane/status.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>After all the changes are sent to GitHub, the Git Pane will be empty, meaning that there are no new changes:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/git-pane/no-changes.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>Now, wait a minute and then check your blog online!</p>
+</div>
+</div>
+</div>
+</section><section id="setting-up-comments" class="level2"><h2 class="anchored" data-anchor-id="setting-up-comments">8 - Setting up Comments</h2>
+<p>It is nice to add a comments section on our blog posts, so people can write their opinion about it.</p>
+<p>The <a href="https://quarto.org/docs/output-formats/html-basics.html#commenting">quarto documentation</a> explains how to add comments with three different options: <a href="https://web.hypothes.is/">Hypothes.is</a>, <a href="https://utteranc.es/">Utterances</a> and <a href="https://giscus.app/">Giscus</a>. You can use whatever suits you best.</p>
+<p>I chose to use <a href="https://giscus.app/">Giscus</a> and here I’ll tell you how to set it up!</p>
+<ol type="1">
+<li><p>Your repository needs to be public on GitHub. The default is to be public, it will only be private if you changed it (you can change it back on your repository settings on GitHub).</p></li>
+<li><p>Install the <a href="https://github.com/apps/giscus">Giscus App</a>. Go to <a href="https://github.com/apps/giscus">this website</a> and click the <strong>Install button</strong>:</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/giscus-install.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>Then, Giscus will ask you in which repositories you would like to give permission to Giscus. You can choose what you prefer. I chose to give access only to the repository that I’m going to need this service, so I chose <strong>Only select repository</strong> and pick the repository of the blog.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/giscus-repo.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>You have to enable the <strong>Discussions</strong> in your repository. First, go to your repository, and click <strong>Settings</strong>:</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/github-repo.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>Then, scroll down to the <strong>Features</strong> sections, and check the box of the <strong>Discussions</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/enable-discussions.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>Open the <code>_quarto.yml</code> file and add this code. Remember to update the information of your repo: in this example is <code>beatrizmilz/name-of-your-blog</code> because <code>beatrizmilz</code> is my GitHub account, and <code>name-of-your-blog</code> is the repository of this example blog.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">comments</span><span class="kw">:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">giscus</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">repo</span><span class="kw">:</span><span class="at"> YOURGITHUBACCOUNT/YOURREPO</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Remember to commit all the changes before checking the online version! If you missed that, go back to the end of <a href="#change-the-colors-of-your-blog">section 7</a> and read the collapsed tip.</p>
+<p>Now we have a comments section on the blog! People need to log in with GitHub in order to write a comment or give a reaction:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/giscus-deployed.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When we activate the comments, as default they appear in almost every page! You can hide the comments in specific pages by adding <code>comments: false</code> in the YAML headers of <code>*.qmd</code> files that you want to hide.</p>
+</div>
+</div>
+</section><section id="add-content-in-your-blog" class="level2"><h2 class="anchored" data-anchor-id="add-content-in-your-blog">9 - Add content in your blog</h2>
+<p>Your blog is live! Now you can make some changes and add your content in it. Here is a list of things that you might like to do!</p>
+<ul>
+<li><p><code>_quarto.yml</code>: In this file, you can do a lot of things, such as: changing the name that will appear in the blog, add links to your twitter and GitHub account, change the navigation bar options, and so on. You can check how I configured this in <a href="https://github.com/beatrizmilz/blog-en/blob/main/_quarto.yml">this file</a>.</p></li>
+<li><p>Write about yourself, so people can get to know you. You can do that in the <code>about.qmd</code> file. There, you can add links to your social media, a photo, and other information about you that you think might be relevant. You can change the template of this page, in the <code>template</code> option. You can check all the templates <a href="https://quarto.org/docs/websites/website-about.html">in the Quarto documentation</a>. In this <a href="about.qmd">personal blog</a>, I chose to use <code>trestles</code>.</p></li>
+<li><p>Write blog posts! Your blog posts are stored in the <code>posts/</code> directory. Each post has to have a folder, and inside this folder you need a <code>index.qmd</code> file. But follow along the template that is already there and you will be good to go. Also, I recommend checking the awesome options described on the <a href="https://quarto.org/docs/output-formats/html-basics.html">Quarto documentation</a>.</p></li>
+<li><p>If you are out of ideas about what to write, my advice is to write something that you already know, want to learn, or something that you like a lot. I enjoy reading blog posts that people write about topics they are interested in!</p></li>
+</ul></section><section id="tweet-about-it" class="level2"><h2 class="anchored" data-anchor-id="tweet-about-it">10 - Tweet about it!</h2>
+<p>Congratulations, you have created your blog with Quarto! ✨</p>
+<p>After writing your first blogpost, you can start sharing it to the world. 📢📢📢</p>
+<p>My suggestion to you is: Write a tweet! You can use the <a href="https://twitter.com/search?q=%23RStats&amp;src=typeahead_click"><code>#rstats</code> hashtag</a> if the content of your blog is about R and you can cite <a href="https://twitter.com/quarto_pub">@quarto_pub</a>.</p>
+<p>If this post was relevant to you, you can also cite me with <a href="https://twitter.com/BeaMilz">@BeaMilz</a>, so I can retweet about your blog!</p>
+</section></section><section id="conclusion" class="level1"><h1>Conclusion</h1>
+<p>To me, a person who is used to using blogdown, Quarto is an awesome tool, has simple code and is full of great documentation. I also think that the experience is similar to using <a href="https://rstudio.github.io/distill/">Distill</a>.</p>
+<p>I hope this content was useful and that you enjoy the reading. Please let me know in the comments if there is anything that is not clear!</p>
+</section><section id="thanks" class="level1"><h1>Thanks!</h1>
+<p>Thanks for reading this post, and now I would like to thank awesome people that, without their work, this post would not exist:</p>
+<ul>
+<li><p>The team that developed Quarto (<a href="https://github.com/quarto-dev/quarto-cli/graphs/contributors">here</a> and <a href="https://github.com/quarto-dev/quarto-web/graphs/contributors">here</a>). They continue to improve it, they answer questions on the <a href="https://github.com/quarto-dev/quarto-web/discussions">Discussions</a>, and they wrote that <a href="https://quarto.org/docs/guide/">AWESOME DOCUMENTATION</a>! 🏆</p></li>
+<li><p><a href="https://www.apreshill.com/">Alison Hill</a> - she is an important part of the R and R-Ladies community, and she wrote tons of content about writing blogs with R. I have been learning from her material since 2018 (when I started to create my <a href="https://beatrizmilz.com/talk/">blog in Portuguese</a>). A lot of what I know about creating blogs with R, I learned from her materials and talks. Thanks Alison 💜.</p></li>
+<li><p><a href="https://twitter.com/jtrecenti">Julio Trecenti</a> is my partner. We talk about Quarto a lot, and I learn so much from him. Apart from that, I would like to thank him for reviewing my content and always supporting me ❤️.</p></li>
+</ul></section><section id="edit-more-content-about-this-topic" class="level1"><h1>Edit: More content about this topic!</h1>
+<ul>
+<li>
+<a href="https://twitter.com/rappa753">Albert Rapp</a> wrote a <a href="https://twitter.com/rappa753/status/1531692573126959106?s=20&amp;t=ZZEhdvLXRRvL2NEUhj7oFg">“tweetutorial”: a twitter thread</a> with a lot of tips to customize blogs made with Quarto.</li>
+</ul></section><section id="edit-2-tweet" class="level1"><h1>Edit 2: Tweet</h1>
+<p>Here is my tweet about this blog post:</p>
+<center>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p>
+<p>I started a new blog to write content in English.<br>The first post is ‘Creating a blog with Quarto in 10 steps’<a href="https://twitter.com/quarto_pub?ref_src=twsrc%5Etfw"><span class="citation" data-cites="quarto_pub">@quarto_pub</span></a> <br><br>In this post, I introduce you to my new blog and show how you can create a blog with Quarto:<a href="https://t.co/u9Umh3X5eu">https://t.co/u9Umh3X5eu</a><a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/rladies?src=hash&amp;ref_src=twsrc%5Etfw">#rladies</a> feedback is welcome!</p>
+
+<p>— Beatriz Milz (<span class="citation" data-cites="BeaMilz">@BeaMilz</span>) <a href="https://twitter.com/BeaMilz/status/1533534492702408704?ref_src=twsrc%5Etfw">June 5, 2022</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

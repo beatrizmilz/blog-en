@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz Milz">
+<meta name="dcterms.date" content="2022-07-28">
+<title>Bea Milz - How important is GitHub Actions to RStudio/Posit?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - How important is GitHub Actions to RStudio/Posit?">
+<meta property="og:description" content="Code for a plot in my talk at rstudio::conf 2022!">
+<meta property="og:image" content="https://beamilz.com/social.png">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+<link rel="stylesheet" href="../../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - How important is GitHub Actions to RStudio/Posit?">
+<meta name="twitter:description" content="Code for a plot in my talk at rstudio::conf 2022!">
+<meta name="twitter:image" content="https://beamilz.com/posts/series-gha/2022-07-28-github-actions-rstudio/en/img/rstudio_ggplot.png">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="1500">
+<meta name="twitter:image-width" content="2100">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
+    <a class="dropdown-item" href="../../../../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
+    <a class="dropdown-item" href="../../../../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../talks/en/index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../talks/pt/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../talks/es/index.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">How important is GitHub Actions to RStudio/Posit?</h1>
+            <p class="subtitle lead">Code for a plot in my talk at rstudio::conf 2022!</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">GitHub</div>
+                <div class="quarto-category">GitHub Actions</div>
+                <div class="quarto-category">Automations</div>
+                <div class="quarto-category">RStudio</div>
+                <div class="quarto-category">Posit</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 28, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="cell" data-layout-align="center">
+
+</div>
+<p>This post is a complementary material for <a href="https://beamilz.com/talks/en/2022-rstudio-conf/">my talk at rstudio::conf 2022</a> (which is happening <strong>TODAY!!!</strong>)!</p>
+<p>I’m writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/rstudio_ggplot.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The plot uses data from the GitHub API, collected with the help of the package <code>gh</code> and <code>tidyverse</code>. The plot was created using <code>ggplot2</code>, and shows the actions runs per month on GitHub repositories in organizations related to RStudio/Posit.</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The version of the plot presented in the talk uses data until May 2022, because we had to deliver the slides by the start of July. The plot presented in this blog post uses data collected in July 27th, but filtered to show action runs until May 2022.</p>
+</div>
+</div>
+<p>First, I had to look for the organizations. This was the list of organizations related to <a href="https://posit.co/">RStudio/Posit</a> that I found on GitHub:</p>
+<ul>
+<li><a href="https://github.com/tidyverse">tidyverse</a></li>
+<li><a href="https://github.com/r-lib">r-lib</a></li>
+<li><a href="https://github.com/mlverse">mlverse</a></li>
+<li><a href="https://github.com/tidymodels">tidymodels</a></li>
+<li><a href="https://github.com/rstudio">rstudio</a></li>
+<li><a href="https://github.com/quarto-dev">quarto-dev</a></li>
+</ul>
+<p>There might be more that I don’t know about!</p>
+<p>So, here is a vector with the names of the organizations:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rstudio_orgs</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"rstudio"</span>,</span>
+<span>    <span class="st">"tidyverse"</span>,</span>
+<span>    <span class="st">"r-lib"</span>,</span>
+<span>    <span class="st">"mlverse"</span>,</span>
+<span>    <span class="st">"tidymodels"</span>,</span>
+<span>    <span class="st">"quarto-dev"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, I created an R function that looks for all public repositories in a organization:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">find_repos_github_org</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">organisation</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="co"># get info about the org</span></span>
+<span>  <span class="va">gh_org</span> <span class="op">&lt;-</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span><span class="st">"GET /orgs/{org}"</span>,</span>
+<span>                   org <span class="op">=</span> <span class="va">organisation</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">number_of_public_repos</span> <span class="op">&lt;-</span> <span class="va">gh_org</span><span class="op">$</span><span class="va">public_repos</span></span>
+<span>  </span>
+<span>  </span>
+<span>  <span class="va">pages_to_iterate</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">ceiling</a></span><span class="op">(</span><span class="va">number_of_public_repos</span> <span class="op">/</span> <span class="fl">100</span><span class="op">)</span></span>
+<span>  </span>
+<span>  </span>
+<span>  <span class="va">repos_org_list</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span></span>
+<span>    <span class="fl">1</span><span class="op">:</span><span class="va">pages_to_iterate</span>,</span>
+<span>    .f <span class="op">=</span> <span class="op">~</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span></span>
+<span>      <span class="st">"GET /orgs/{org}/repos"</span>,</span>
+<span>      org <span class="op">=</span> <span class="va">organisation</span>,</span>
+<span>      type <span class="op">=</span> <span class="st">"public"</span>,</span>
+<span>      sort <span class="op">=</span> <span class="st">"updated"</span>,</span>
+<span>      per_page <span class="op">=</span> <span class="fl">100</span>,</span>
+<span>      page <span class="op">=</span> <span class="va">.x</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">repos_org_df</span> <span class="op">&lt;-</span> <span class="va">repos_org_list</span>  <span class="op">|&gt;</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu">flatten</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">unlist</span>, recursive <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>  <span class="op">|&gt;</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="fu">tibble</span><span class="fu">::</span><span class="va"><a href="https://tibble.tidyverse.org/reference/enframe.html">enframe</a></span>, .id <span class="op">=</span> <span class="st">"id_repo"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/janitor/man/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And then I executed that function for all organizations using <code>purrr</code>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rstudio_repositories</span> <span class="op">&lt;-</span> <span class="va">rstudio_orgs</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="va">find_repos_github_org</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This is what I found (click to unfold the glimpsed result):</p>
+<div class="cell" data-layout-align="center">
+<details><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">rstudio_repositories</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Rows: 599</span></span>
+<span><span class="co"># Columns: 114</span></span>
+<span><span class="co"># $ id_repo                     &lt;chr&gt; "1", "2", "3", "4", …</span></span>
+<span><span class="co"># $ id                          &lt;chr&gt; "390115983", "168794…</span></span>
+<span><span class="co"># $ node_id                     &lt;chr&gt; "MDEwOlJlcG9zaXRvcnk…</span></span>
+<span><span class="co"># $ name                        &lt;chr&gt; "py-shiny", "chromot…</span></span>
+<span><span class="co"># $ full_name                   &lt;chr&gt; "rstudio/py-shiny", …</span></span>
+<span><span class="co"># $ private                     &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ owner_login                 &lt;chr&gt; "rstudio", "rstudio"…</span></span>
+<span><span class="co"># $ owner_id                    &lt;chr&gt; "513560", "513560", …</span></span>
+<span><span class="co"># $ owner_node_id               &lt;chr&gt; "MDEyOk9yZ2FuaXphdGl…</span></span>
+<span><span class="co"># $ owner_avatar_url            &lt;chr&gt; "https://avatars.git…</span></span>
+<span><span class="co"># $ owner_gravatar_id           &lt;chr&gt; "", "", "", "", "", …</span></span>
+<span><span class="co"># $ owner_url                   &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_html_url              &lt;chr&gt; "https://github.com/…</span></span>
+<span><span class="co"># $ owner_followers_url         &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_following_url         &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_gists_url             &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_starred_url           &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_subscriptions_url     &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_organizations_url     &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_repos_url             &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_events_url            &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_received_events_url   &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ owner_type                  &lt;chr&gt; "Organization", "Org…</span></span>
+<span><span class="co"># $ owner_site_admin            &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ html_url                    &lt;chr&gt; "https://github.com/…</span></span>
+<span><span class="co"># $ description                 &lt;chr&gt; "Shiny for Python", …</span></span>
+<span><span class="co"># $ fork                        &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ url                         &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ forks_url                   &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ keys_url                    &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ collaborators_url           &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ teams_url                   &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ hooks_url                   &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ issue_events_url            &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ events_url                  &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ assignees_url               &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ branches_url                &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ tags_url                    &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ blobs_url                   &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ git_tags_url                &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ git_refs_url                &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ trees_url                   &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ statuses_url                &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ languages_url               &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ stargazers_url              &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ contributors_url            &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ subscribers_url             &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ subscription_url            &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ commits_url                 &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ git_commits_url             &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ comments_url                &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ issue_comment_url           &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ contents_url                &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ compare_url                 &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ merges_url                  &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ archive_url                 &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ downloads_url               &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ issues_url                  &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ pulls_url                   &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ milestones_url              &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ notifications_url           &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ labels_url                  &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ releases_url                &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ deployments_url             &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ created_at                  &lt;chr&gt; "2021-07-27T20:19:49…</span></span>
+<span><span class="co"># $ updated_at                  &lt;chr&gt; "2022-07-27T23:47:04…</span></span>
+<span><span class="co"># $ pushed_at                   &lt;chr&gt; "2022-07-27T20:48:42…</span></span>
+<span><span class="co"># $ git_url                     &lt;chr&gt; "git://github.com/rs…</span></span>
+<span><span class="co"># $ ssh_url                     &lt;chr&gt; "git@github.com:rstu…</span></span>
+<span><span class="co"># $ clone_url                   &lt;chr&gt; "https://github.com/…</span></span>
+<span><span class="co"># $ svn_url                     &lt;chr&gt; "https://github.com/…</span></span>
+<span><span class="co"># $ homepage                    &lt;chr&gt; "https://shiny.rstud…</span></span>
+<span><span class="co"># $ size                        &lt;chr&gt; "7850", "16032", "31…</span></span>
+<span><span class="co"># $ stargazers_count            &lt;chr&gt; "19", "125", "1532",…</span></span>
+<span><span class="co"># $ watchers_count              &lt;chr&gt; "19", "125", "1532",…</span></span>
+<span><span class="co"># $ language                    &lt;chr&gt; "JavaScript", "R", "…</span></span>
+<span><span class="co"># $ has_issues                  &lt;chr&gt; "TRUE", "TRUE", "TRU…</span></span>
+<span><span class="co"># $ has_projects                &lt;chr&gt; "TRUE", "TRUE", "FAL…</span></span>
+<span><span class="co"># $ has_downloads               &lt;chr&gt; "TRUE", "TRUE", "TRU…</span></span>
+<span><span class="co"># $ has_wiki                    &lt;chr&gt; "TRUE", "TRUE", "FAL…</span></span>
+<span><span class="co"># $ has_pages                   &lt;chr&gt; "TRUE", "TRUE", "FAL…</span></span>
+<span><span class="co"># $ forks_count                 &lt;chr&gt; "0", "18", "335", "1…</span></span>
+<span><span class="co"># $ archived                    &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ disabled                    &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ open_issues_count           &lt;chr&gt; "48", "27", "44", "1…</span></span>
+<span><span class="co"># $ license_key                 &lt;chr&gt; "mit", NA, NA, "othe…</span></span>
+<span><span class="co"># $ license_name                &lt;chr&gt; "MIT License", NA, N…</span></span>
+<span><span class="co"># $ license_spdx_id             &lt;chr&gt; "MIT", NA, NA, "NOAS…</span></span>
+<span><span class="co"># $ license_url                 &lt;chr&gt; "https://api.github.…</span></span>
+<span><span class="co"># $ license_node_id             &lt;chr&gt; "MDc6TGljZW5zZTEz", …</span></span>
+<span><span class="co"># $ allow_forking               &lt;chr&gt; "TRUE", "TRUE", "TRU…</span></span>
+<span><span class="co"># $ is_template                 &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ web_commit_signoff_required &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ visibility                  &lt;chr&gt; "public", "public", …</span></span>
+<span><span class="co"># $ forks                       &lt;chr&gt; "0", "18", "335", "1…</span></span>
+<span><span class="co"># $ open_issues                 &lt;chr&gt; "48", "27", "44", "1…</span></span>
+<span><span class="co"># $ watchers                    &lt;chr&gt; "19", "125", "1532",…</span></span>
+<span><span class="co"># $ default_branch              &lt;chr&gt; "main", "main", "mai…</span></span>
+<span><span class="co"># $ permissions_admin           &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ permissions_maintain        &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ permissions_push            &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ permissions_triage          &lt;chr&gt; "FALSE", "FALSE", "F…</span></span>
+<span><span class="co"># $ permissions_pull            &lt;chr&gt; "TRUE", "TRUE", "TRU…</span></span>
+<span><span class="co"># $ topics1                     &lt;chr&gt; NA, NA, "blog-engine…</span></span>
+<span><span class="co"># $ topics2                     &lt;chr&gt; NA, NA, "blogdown", …</span></span>
+<span><span class="co"># $ topics3                     &lt;chr&gt; NA, NA, "hugo", NA, …</span></span>
+<span><span class="co"># $ topics4                     &lt;chr&gt; NA, NA, "r", NA, NA,…</span></span>
+<span><span class="co"># $ topics5                     &lt;chr&gt; NA, NA, "rmarkdown",…</span></span>
+<span><span class="co"># $ topics6                     &lt;chr&gt; NA, NA, "rstudio", N…</span></span>
+<span><span class="co"># $ topics7                     &lt;chr&gt; NA, NA, "website-gen…</span></span>
+<span><span class="co"># $ topics                      &lt;chr&gt; NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co"># $ topics8                     &lt;chr&gt; NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co"># $ topics9                     &lt;chr&gt; NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co"># $ topics10                    &lt;chr&gt; NA, NA, NA, NA, NA, …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Then, I filtered the repositories to remove the repositories that are forks, in order to see only the original repos:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">original_rstudio_repos</span> <span class="op">&lt;-</span> <span class="va">rstudio_repositories</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">fork</span> <span class="op">==</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>At this point, I had a tibble with more than 500 repositories. I wanted to get the action runs for every one of this repositories! So I wrote another function to do that, and save the result for each repository in a local file.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">get_repo_github_actions_runs</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">repo_full_name</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/ui.html">ui_info</a></span><span class="op">(</span><span class="st">"Starting with {repo_full_name}..."</span><span class="op">)</span></span>
+<span>  <span class="va">total_count</span> <span class="op">&lt;-</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span></span>
+<span>    <span class="st">"GET /repos/{full_name}/actions/runs"</span>,</span>
+<span>    full_name <span class="op">=</span> <span class="va">repo_full_name</span>,</span>
+<span>    per_page <span class="op">=</span> <span class="fl">1</span></span>
+<span>  <span class="op">)</span><span class="op">$</span><span class="va">total_count</span></span>
+<span>  </span>
+<span>  </span>
+<span>  <span class="va">pages_to_iterate</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">ceiling</a></span><span class="op">(</span><span class="va">total_count</span> <span class="op">/</span> <span class="fl">100</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">list_all_runs</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span></span>
+<span>    <span class="fl">1</span><span class="op">:</span><span class="va">pages_to_iterate</span>,</span>
+<span>    <span class="op">~</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span></span>
+<span>      <span class="st">"GET /repos/{full_name}/actions/runs"</span>,</span>
+<span>      full_name <span class="op">=</span> <span class="va">repo_full_name</span>,</span>
+<span>      per_page <span class="op">=</span> <span class="fl">100</span>,</span>
+<span>      page <span class="op">=</span> <span class="va">.x</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">runs_df</span> <span class="op">&lt;-</span> <span class="va">list_all_runs</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/pluck.html">pluck</a></span><span class="op">(</span><span class="st">"workflow_runs"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu">purrr</span><span class="fu">::</span><span class="va"><a href="https://purrr.tidyverse.org/reference/keep.html">compact</a></span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu">purrr</span><span class="fu">::</span><span class="va"><a href="https://purrr.tidyverse.org/reference/keep.html">discard</a></span>, <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">is.list</a></span><span class="op">(</span><span class="va">.x</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="fu">tibble</span><span class="fu">::</span><span class="va"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span>, .id <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">repo_full_name</span>, </span>
+<span>                  .before <span class="op">=</span> <span class="fu">tidyselect</span><span class="fu">::</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/create.html">dir_create</a></span><span class="op">(</span><span class="st">"data/repos/"</span><span class="op">)</span></span>
+<span>  <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_rds.html">write_rds</a></span><span class="op">(</span></span>
+<span>    <span class="va">runs_df</span>,</span>
+<span>    <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span></span>
+<span>      <span class="st">"data/repos/runs_{stringr::str_replace(repo_full_name, '/', '_')}_{Sys.Date()}.Rds"</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/ui.html">ui_done</a></span><span class="op">(</span><span class="st">"Done with {repo_full_name}..."</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then I used purrr again, to run this function for every repository. <strong>This took quite some time to run!</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">original_rstudio_repos</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">full_name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">walk</a></span><span class="op">(</span><span class="va">get_repo_github_actions_runs</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>At this point, I had one <code>.Rds</code> file per repository, so more than 500 files. Thankfully I know the arts of <code>purrr</code> and used that magic to import all the files into a single tibble:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df_complete_runs</span> <span class="op">&lt;-</span> <span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="st">"data/repos/"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="fu">readr</span><span class="fu">::</span><span class="va"><a href="https://readr.tidyverse.org/reference/read_rds.html">read_rds</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">df_complete_runs</span><span class="op">)</span></span>
+<span><span class="co"># Rows: 333,594</span></span>
+<span><span class="co"># Columns: 28</span></span>
+<span><span class="co"># $ repo                 &lt;chr&gt; "mlverse/cuda.ml", "mlverse/cuda.m…</span></span>
+<span><span class="co"># $ id                   &lt;chr&gt; "1", "2", "3", "4", "5", "6", "7",…</span></span>
+<span><span class="co"># $ name                 &lt;chr&gt; "R-CMD-check", "pages build and de…</span></span>
+<span><span class="co"># $ node_id              &lt;chr&gt; "WFR_kwLOFqIlBc5kYBiS", "WFR_kwLOF…</span></span>
+<span><span class="co"># $ head_branch          &lt;chr&gt; "main", "main", "main", "main", "m…</span></span>
+<span><span class="co"># $ head_sha             &lt;chr&gt; "54fc9575e271b6a94c8650bea1887bb7f…</span></span>
+<span><span class="co"># $ path                 &lt;chr&gt; ".github/workflows/R-CMD-check.yam…</span></span>
+<span><span class="co"># $ run_number           &lt;int&gt; 221, 13, 220, 12, 219, 11, 218, 21…</span></span>
+<span><span class="co"># $ event                &lt;chr&gt; "push", "dynamic", "push", "dynami…</span></span>
+<span><span class="co"># $ status               &lt;chr&gt; "completed", "completed", "complet…</span></span>
+<span><span class="co"># $ conclusion           &lt;chr&gt; "success", "success", "success", "…</span></span>
+<span><span class="co"># $ workflow_id          &lt;int&gt; 14189930, 17359975, 14189930, 1735…</span></span>
+<span><span class="co"># $ check_suite_id       &lt;dbl&gt; 4901217228, 4901217123, 4886275561…</span></span>
+<span><span class="co"># $ check_suite_node_id  &lt;chr&gt; "CS_kwDOFqIlBc8AAAABJCKjzA", "CS_k…</span></span>
+<span><span class="co"># $ url                  &lt;chr&gt; "https://api.github.com/repos/mlve…</span></span>
+<span><span class="co"># $ html_url             &lt;chr&gt; "https://github.com/mlverse/cuda.m…</span></span>
+<span><span class="co"># $ created_at           &lt;chr&gt; "2022-01-11T18:30:04Z", "2022-01-1…</span></span>
+<span><span class="co"># $ updated_at           &lt;chr&gt; "2022-01-11T22:37:18Z", "2022-01-1…</span></span>
+<span><span class="co"># $ run_attempt          &lt;int&gt; 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1…</span></span>
+<span><span class="co"># $ run_started_at       &lt;chr&gt; "2022-01-11T18:30:04Z", "2022-01-1…</span></span>
+<span><span class="co"># $ jobs_url             &lt;chr&gt; "https://api.github.com/repos/mlve…</span></span>
+<span><span class="co"># $ logs_url             &lt;chr&gt; "https://api.github.com/repos/mlve…</span></span>
+<span><span class="co"># $ check_suite_url      &lt;chr&gt; "https://api.github.com/repos/mlve…</span></span>
+<span><span class="co"># $ artifacts_url        &lt;chr&gt; "https://api.github.com/repos/mlve…</span></span>
+<span><span class="co"># $ cancel_url           &lt;chr&gt; "https://api.github.com/repos/mlve…</span></span>
+<span><span class="co"># $ rerun_url            &lt;chr&gt; "https://api.github.com/repos/mlve…</span></span>
+<span><span class="co"># $ workflow_url         &lt;chr&gt; "https://api.github.com/repos/mlve…</span></span>
+<span><span class="co"># $ previous_attempt_url &lt;chr&gt; NA, NA, NA, NA, NA, NA, "https://a…</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, I counted action runs per month:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">counted_data</span> <span class="op">&lt;-</span> <span class="va">df_complete_runs</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    start_date <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/as_date.html">as_date</a></span><span class="op">(</span><span class="va">run_started_at</span><span class="op">)</span>,</span>
+<span>    run_month <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/round_date.html">floor_date</a></span><span class="op">(</span><span class="va">start_date</span>, <span class="st">"month"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">conclusion</span> <span class="op">!=</span> <span class="st">"skipped"</span>, <span class="va">start_date</span> <span class="op">&lt;</span> <span class="st">"2022-06-01"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">run_month</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With this tibble, I was able to use tidyverse and ggplot2 to create the plot!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="fl">9999</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">max_min</span> <span class="op">&lt;-</span> <span class="va">counted_data</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">run_month</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">run_month</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">run_month</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>label <span class="op">=</span> <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"{round(n/1000)}k"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">base_graph</span> <span class="op">&lt;-</span> <span class="va">counted_data</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">run_month</span>, y <span class="op">=</span> <span class="va">n</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"#80868b"</span>, size <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="va">final_graph</span> <span class="op">&lt;-</span> <span class="va">base_graph</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">15</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    panel.grid.minor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    panel.grid.major <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    plot.title.position <span class="op">=</span> <span class="st">"plot"</span>,</span>
+<span>    plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>family <span class="op">=</span> <span class="st">"Montserrat"</span>, color <span class="op">=</span> <span class="st">"#4c83b6"</span><span class="op">)</span>,</span>
+<span>    text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>family <span class="op">=</span> <span class="st">"Montserrat"</span>, color <span class="op">=</span> <span class="st">"#80868b"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    y <span class="op">=</span> <span class="st">"Actions runs per month"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">""</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"Actions runs by RStudio/Posit organizations on GitHub"</span>,</span>
+<span>    caption <span class="op">=</span> <span class="st">"Plot made by @BeaMilz. Data from the GitHub API."</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_date.html">scale_x_date</a></span><span class="op">(</span></span>
+<span>    date_labels <span class="op">=</span> <span class="st">"%b/%y"</span>,</span>
+<span>    date_breaks <span class="op">=</span> <span class="st">"4 month"</span>,</span>
+<span>    limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"2020-03-01"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"2022-06-01"</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span></span>
+<span>    limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25000</span><span class="op">)</span>,</span>
+<span>    labels <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>      <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"{x/1000}k"</span><span class="op">)</span></span>
+<span>    <span class="op">}</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">max_min</span>,</span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">run_month</span>, y <span class="op">=</span> <span class="va">n</span><span class="op">)</span>,</span>
+<span>    size <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"#4c83b6"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggrepel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ggrepel/man/geom_text_repel.html">geom_text_repel</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="va">max_min</span>,</span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">run_month</span>, y <span class="op">=</span> <span class="va">n</span>, label <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    size <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"#4c83b6"</span>,</span>
+<span>    nudge_y <span class="op">=</span> <span class="fl">4000</span>,</span>
+<span>    nudge_x <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>    min.segment.length <span class="op">=</span> <span class="fl">0</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span></span>
+<span>  <span class="st">"img/rstudio_ggplot.png"</span>,</span>
+<span>  plot <span class="op">=</span> <span class="va">final_graph</span>,</span>
+<span>  dpi <span class="op">=</span> <span class="fl">300</span>,</span>
+<span>  height <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>  width <span class="op">=</span> <span class="fl">7</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>🎉 Now we have the plot showed in the talk! 🎉</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"img/rstudio_ggplot.png"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/rstudio_ggplot.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Thanks!!</p>
+
+
+
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

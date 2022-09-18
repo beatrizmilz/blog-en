@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz Milz">
+<meta name="dcterms.date" content="2021-07-30">
+<title>Bea Milz - Conhecendo o Hugo Apéro</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - Conhecendo o Hugo Apéro">
+<meta property="og:description" content="Fazendo blogs com blogdown e R">
+<meta property="og:image" content="https://beamilz.com/social.png">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - Conhecendo o Hugo Apéro">
+<meta name="twitter:description" content="Fazendo blogs com blogdown e R">
+<meta name="twitter:image" content="https://beamilz.com/talks/pt/2021-blogdown-apero/featured.jpeg">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
+    <a class="dropdown-item" href="../../../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
+    <a class="dropdown-item" href="../../../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/en/index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/pt/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/es/index.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#links-%C3%BAteis" id="toc-links-úteis" class="nav-link active" data-scroll-target="#links-%C3%BAteis">Links úteis:</a></li>
+  <li>
+<a href="#exemplos-de-sites-e-blogs-com-blogdown" id="toc-exemplos-de-sites-e-blogs-com-blogdown" class="nav-link" data-scroll-target="#exemplos-de-sites-e-blogs-com-blogdown">Exemplos de sites e blogs com blogdown:</a>
+  <ul class="collapse">
+<li><a href="#com-ap%C3%A9ro" id="toc-com-apéro" class="nav-link" data-scroll-target="#com-ap%C3%A9ro">Com Apéro:</a></li>
+  <li><a href="#com-outros-temas" id="toc-com-outros-temas" class="nav-link" data-scroll-target="#com-outros-temas">Com outros temas:</a></li>
+  </ul>
+</li>
+  <li><a href="#c%C3%B3digo-usado" id="toc-código-usado" class="nav-link" data-scroll-target="#c%C3%B3digo-usado">Código usado</a></li>
+  <li><a href="#onde-mudo-o-conte%C3%BAdo" id="toc-onde-mudo-o-conteúdo" class="nav-link" data-scroll-target="#onde-mudo-o-conte%C3%BAdo">Onde mudo o conteúdo?</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Conhecendo o Hugo Apéro</h1>
+<p class="subtitle lead">Fazendo blogs com blogdown e R</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Lives no Youtube</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Beatriz Milz </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 30, 2021</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header><script src="https://kit.fontawesome.com/1bb720cc6f.js" crossorigin="anonymous"></script><b>Evento: </b>Canal GeoCast Brasil<br><b>Link do evento:</b> <a href="https://www.youtube.com/c/geocastbrasil/featured">https://www.youtube.com/c/geocastbrasil/featured</a><br><b>Lugar: </b>Online<br><h2 class="anchored">
+Materiais
+</h2>
+<br><center>
+<a href="https://youtu.be/4Ixl2RjZEYI" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-brands fa-youtube"></i> Video</button></a> <br><br><img src="featured.jpeg" class="img-fluid quarto-figure-center" style="max-width:80%"><br>
+</center>
+<hr>
+<section id="links-úteis" class="level2"><h2 class="anchored" data-anchor-id="links-úteis">Links úteis:</h2>
+<ul>
+<li><p><a href="https://pkgs.rstudio.com/blogdown/">Pacote blogdown</a></p></li>
+<li><p><a href="https://rstudio.github.io/distill/">Pacote distill</a></p></li>
+<li><p><a href="https://bookdown.org/yihui/blogdown/">Livro sobre o pacote blogdown</a></p></li>
+<li><p><a href="https://hugo-apero.netlify.app/">Documentação do Hugo Apéro</a></p></li>
+<li><p><a href="https://alison.rbind.io/">Alison Hill - criadora do Apéro</a></p></li>
+<li><p><a href="https://alison.rbind.io/blog/2020-12-new-year-new-blogdown/">Tutorial da Alison Hill sobre blogdown</a></p></li>
+<li><p><a href="https://www.netlify.com/">Netlify - Site para fazer o deploy</a></p></li>
+<li><p><a href="https://livro.curso-r.com/9-1-markdown.html">Saiba mais sobre Markdown</a></p></li>
+<li><p><a href="https://themes.gohugo.io/">Outros temas para hugo</a></p></li>
+<li><p><a href="https://github.com/themefisher">Mais temas de hugo - themefisher</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=PjUcR2cZTW8&amp;t=2s">Video Curso-R: Making of de um blog do zero com blogdown</a></p></li>
+<li><p>Icones: <a href="https://fontawesome.com/">Font Awesome</a> e <a href="https://jpswalsh.github.io/academicons/">Academic Icons</a></p></li>
+</ul></section><section id="exemplos-de-sites-e-blogs-com-blogdown" class="level2"><h2 class="anchored" data-anchor-id="exemplos-de-sites-e-blogs-com-blogdown">Exemplos de sites e blogs com blogdown:</h2>
+<section id="com-apéro" class="level3"><h3 class="anchored" data-anchor-id="com-apéro">Com Apéro:</h3>
+<ul>
+<li><p><a href="https://alison.rbind.io/">Blog da Alison Hill</a></p></li>
+<li><p><a href="https://ndtj.com.br/">Núcleo de Direito, Tecnologia e Jurimetria</a></p></li>
+<li><p><a href="https://hugo-apero-docs.netlify.app/project/">Todos esses sites…</a></p></li>
+</ul></section><section id="com-outros-temas" class="level3"><h3 class="anchored" data-anchor-id="com-outros-temas">Com outros temas:</h3>
+<ul>
+<li><p><a href="https://mauriciovancine.github.io/pt/">Blog do Mauricio Vancine</a></p></li>
+<li><p><a href="https://sicam.com.br/">III SICAM</a></p></li>
+<li><p><a href="https://curso-r.com/">Site da Curso-R</a></p></li>
+<li><p><a href="https://blog.curso-r.com/">Blog da Curso-R</a></p></li>
+</ul></section></section><section id="código-usado" class="level2"><h2 class="anchored" data-anchor-id="código-usado">Código usado</h2>
+<ul>
+<li><p>Antes disso: tenha o <a href="https://livro.curso-r.com/1-instalacao.html">R e o RStudio instalados</a>, tenha uma conta no <a href="https://github.com/">GitHub</a>, configure o GitHub com o RStudio (veja <a href="https://curso-r.github.io/main-pacotes/slides/index.html#65">essa apresentação</a>), crie uma conta no <a href="https://app.netlify.com/">Netlify</a>.</p></li>
+<li><p>Baseado <a href="https://alison.rbind.io/blog/2020-12-new-year-new-blogdown/">neste post da Alison Hill</a> e na <a href="https://hugo-apero-docs.netlify.app/start/">documentação do Hugo Apéro</a></p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># 1) instalar o blogdown</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">'rstudio/blogdown'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 1.1) Verifique a versão instalada do Hugo. </span></span>
+<span> <span class="fu">blogdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/blogdown/reference/hugo_cmd.html">hugo_version</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co"># &gt; [1] ‘0.83.1’</span></span>
+<span></span>
+<span><span class="co"># 1.2) Caso não tenha o Hugo instalado, instale com a função:</span></span>
+<span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/blogdown/reference/install_hugo.html">install_hugo</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Caso tenha dificuldades em instalar o Hugo, veja esse site: </span></span>
+<span><span class="co"># https://gohugo.io/getting-started/installing/</span></span>
+<span></span>
+<span><span class="co"># 2) Criar um projeto no RStudio. Como primeiro argumento, </span></span>
+<span><span class="co"># informar o caminho até o projeto, e o nome do projeto</span></span>
+<span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_package.html">create_project</a></span><span class="op">(</span><span class="st">"~/Desktop/live-blogdown"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 3) Criar o blog com blogdown, e tema Apero</span></span>
+<span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/blogdown/reference/hugo_cmd.html">new_site</a></span><span class="op">(</span>theme <span class="op">=</span> <span class="st">"hugo-apero/hugo-apero"</span>, </span>
+<span>           format <span class="op">=</span> <span class="st">"toml"</span>,</span>
+<span>           sample <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>           empty_dirs <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 4) Serve site: </span></span>
+<span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/blogdown/reference/serve_site.html">serve_site</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 5) Criar um post:</span></span>
+<span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/blogdown/reference/hugo_cmd.html">new_post</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Olá mundo!"</span>, </span>
+<span>                     ext <span class="op">=</span> <span class="st">'.Rmarkdown'</span>, </span>
+<span>                     subdir <span class="op">=</span> <span class="st">"blog"</span><span class="op">)</span></span>
+<span>                     </span>
+<span><span class="co"># 6) Iniciar o controle de versão neste projeto                     </span></span>
+<span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git.html">use_git</a></span><span class="op">(</span><span class="op">)</span>   </span>
+<span></span>
+<span><span class="co"># 7) Criar um repositório no GitHub conectado à este projeto</span></span>
+<span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_github.html">use_github</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Depois disso, é necessário conectar o repositório com o <a href="https://app.netlify.com/">netlify</a> para fazer o deploy do site:</p>
+<ol type="1">
+<li><p>Faça login (ou o cadastro, de preferência com a conta do GitHub.</p></li>
+<li><p>Escolha “<strong>New site from Git</strong>”.</p></li>
+<li><p>Em “<strong>Connect to Git provider</strong>”, escolha “<strong>GitHub</strong>”. Autorize o GitHub, caso seja necessário.</p></li>
+<li><p>Em “<strong>Pick a repository</strong>”, escolha o repositório que você criou com o projeto do blog.</p></li>
+<li><p>Em “<strong>Site settings, and deploy!</strong>”, não é necessário editar nada :) Clique em “<strong>Deploy Site</strong>”.</p></li>
+<li><p>Depois de uns minutos, o deploy estará feito, porém com uma URL “esquisita” e difícil de lembrar. Para mudar, clique em “<strong>Site settings</strong>” e então “<strong>Change site name</strong>”. Escolha uma URL mais amigável e clique em “Save”.</p></li>
+</ol></section><section id="onde-mudo-o-conteúdo" class="level2"><h2 class="anchored" data-anchor-id="onde-mudo-o-conteúdo">Onde mudo o conteúdo?</h2>
+<ul>
+<li><p><code>nome_do_projeto/content/talk</code> - Conteúdo das palestras. Cada palestra deve ter uma pasta, com pelo menos 2 arquivos: <code>index.md</code> (com o conteúdo), e uma imagem que deve ter o nome <code>featured</code> (pode usar diferentes extensões, como <code>.jpg</code>/<code>.png</code>.</p></li>
+<li><p><code>nome_do_projeto/content/project</code> - Conteúdo dos projetos. Cada projeto deve ter uma pasta, com pelo menos 2 arquivos: <code>index.md</code> (com o conteúdo), e uma imagem que deve ter o nome <code>featured</code> (pode usar diferentes extensões, como <code>.jpg</code>/<code>.png</code>. Caso a imagem seja um hex sticker (adesivo), nomeie com <code>hex</code> também (ex. <code>featured-hex.jpg</code>)</p></li>
+<li><p><code>nome_do_projeto/content/blog</code> - Posts do blog. Cada post deve ter uma pasta, com pelo menos 2 arquivos: <code>index</code> (com o conteúdo) - pode ser com extensão <code>.md</code>, <code>.Rmd</code> ou <code>.Rmarkdown</code>, porém <strong>recomend</strong> usar <code>.Rmarkdown</code>; e uma imagem que deve ter o nome <code>featured</code> (pode usar diferentes extensões, como <code>.jpg</code>/<code>.png</code>.</p></li>
+<li><p><code>nome_do_projeto/content/about</code> - conteúdo sobre a pessoa que está escrevendo, dividido entre header, main e sidebar.</p></li>
+</ul>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

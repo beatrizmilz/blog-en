@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz Milz">
+<meta name="dcterms.date" content="2019-06-24">
+<title>Bea Milz - Compartilhando conteúdo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
+<meta name="title" content="Bea Milz - a data science blog">
+<meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+<meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="og:title" content="Bea Milz - Compartilhando conteúdo">
+<meta property="og:description" content="Como compartilhar conteúdo sobre R, utilizando R?">
+<meta property="og:image" content="https://beamilz.com/social.png">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
+<meta property="twitter:title" content="Bea Milz - a data science blog">
+<meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="twitter:image" content="https://beamilz.com/social.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - Compartilhando conteúdo">
+<meta name="twitter:description" content="Como compartilhar conteúdo sobre R, utilizando R?">
+<meta name="twitter:image" content="https://beamilz.com/posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/featured-photo.gif">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Bea Milz</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
+    <a class="dropdown-item" href="../../../series-gha.html">
+ <span class="dropdown-text">GitHub Actions</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
+    <a class="dropdown-item" href="../../../talks/index.html">
+ <span class="dropdown-text">All/Todas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/en/index.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/pt/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../talks/es/index.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+<div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Compartilhando conteúdo</h1>
+            <p class="subtitle lead">Como compartilhar conteúdo sobre R, utilizando R?</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R-Ladies</div>
+                <div class="quarto-category">RMarkdown</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 24, 2019</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li>
+<a href="#atualiza%C3%A7%C3%A3o-da-p%C3%A1gina" id="toc-atualização-da-página" class="nav-link active" data-scroll-target="#atualiza%C3%A7%C3%A3o-da-p%C3%A1gina">Atualização da página</a>
+  <ul class="collapse">
+<li><a href="#conte%C3%BAdos-online" id="toc-conteúdos-online" class="nav-link" data-scroll-target="#conte%C3%BAdos-online">Conteúdos online</a></li>
+  <li><a href="#compartilhando-conte%C3%BAdo-sobre-r-e-utilizando-r" id="toc-compartilhando-conteúdo-sobre-r-e-utilizando-r" class="nav-link" data-scroll-target="#compartilhando-conte%C3%BAdo-sobre-r-e-utilizando-r">Compartilhando conteúdo sobre R e utilizando R</a></li>
+  <li><a href="#git-e-github" id="toc-git-e-github" class="nav-link" data-scroll-target="#git-e-github">Git e Github</a></li>
+  <li><a href="#at%C3%A9-logo" id="toc-até-logo" class="nav-link" data-scroll-target="#at%C3%A9-logo">Até logo!</a></li>
+  </ul>
+</li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="atualização-da-página" class="level1"><h1>Atualização da página</h1>
+<p>No último final de semana, utilizei algumas horas para reformular essa página. Eu utilizava o tema <a href="https://themes.gohugo.io/academic/">Academic</a>, porém queria algo mais simples, então mudei para o <a href="https://themes.gohugo.io/hugo-lithium-theme/">Lithium</a>. Além disso, também habilitei os comentários com o <a href="https://disqus.com/">Disqus</a>, habilitei o <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> e também resolvi testar o <a href="https://netlify.com/">Netlify</a> (que aliás achei incrível).</p>
+<p>Durante esse processo, algumas dificuldades apareceram… Também lembrei da primeira vez que criei uma página com o <a href="https://github.com/rstudio/blogdown"><code>blogdown</code></a>, onde graças à muitos conteúdos online eu consegui colocar no ar depois de várias mensagens de erro.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://media.giphy.com/media/ktvFa67wmjDEI/giphy.gif" class="img-fluid figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="conteúdos-online" class="level2"><h2 class="anchored" data-anchor-id="conteúdos-online">Conteúdos online</h2>
+<p>Os conteúdos online, que muitas pessoas disponibilizaram através de posts em blog, livros, documentação, dúvidas no <a href="https://pt.stackoverflow.com/">Stackoverflow</a>, me ajudaram muito a conseguir entender como funcionava o processo de criar uma página com o <a href="https://github.com/rstudio/blogdown"><code>blogdown</code></a>. Esses conteúdos foram essenciais também para entender como deixar esse site disponível online utilizando o <a href="https://github.com">Github</a> (lembrando que a minha formação é em Gestão Ambiental). Porém a maior parte desse conteúdo estava <strong>disponibilizado em inglês</strong>: foram poucos os materiais que encontrei em português.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://media.giphy.com/media/1iu8uG2cjYFZS6wTxv/giphy.gif" class="img-fluid figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Lembrei também da conversa que tive rapidamente no mês passado com a <a href="https://github.com/JuliaHellenFerreira">Julia</a>, co-organizadora do <a href="https://www.meetup.com/pt-BR/rladies-niteroi/">R-Ladies Niterói</a>, onde disse que seria interessante que ela disponibilizasse online as palestras que ela já fez, para que outras pessoas consigam consultar e aprender com o conteúdo.</p>
+<p>Se você está em dúvida se deve compartilhar conteúdo na internet, eu indico a palestra (em inglês) do <a href="http://varianceexplained.org/about/">David Robinson</a> na <code>rstudio::conf 2019</code>, chamada <a href="https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work">“The unreasonable effectiveness of public work”</a>.</p>
+<p>As formas de compartilhar conteúdo apontadas por David são: escrever um post em um blog, escrever um tweet, contribuir com projetos open source, dar palestras, gravar a tela enquanto faz alguma análise de dados e disponibilizar o vídeo, e escrever um livro sobre o assunto.</p>
+<p>Nessa palestra, David diz que se você der a mesma dica/conselho três vezes, escreva um post em um blog, assim muitas pessoas conseguem acessar esse conteúdo.</p>
+<!-- # ```{r echo=FALSE, fig.align='center', out.width="100%"} -->
+<!-- # blogdown::shortcode('tweet', '928447584712253440') -->
+<!-- # ``` -->
+</section><section id="compartilhando-conteúdo-sobre-r-e-utilizando-r" class="level2"><h2 class="anchored" data-anchor-id="compartilhando-conteúdo-sobre-r-e-utilizando-r">Compartilhando conteúdo sobre R e utilizando R</h2>
+<p>Por isso, pretendo fazer alguns posts <strong>em português</strong> com algumas <strong>dicas sobre como compartilhar conteúdo na internet</strong>, utilizando <code>R</code>. Não é segredo que eu sou fã dos pacotes criados pelo <a href="https://yihui.name">Yihui Xie</a>, então os temas que pretendo abordar são:</p>
+<ul>
+<li><p>Criar seu currículo com <code>R</code>, usando o pacote <a href="https://github.com/rstudio/pagedown"><code>pagedown</code></a>;</p></li>
+<li><p>Criar uma página/blog com <code>R</code>, usando o pacote <a href="https://github.com/rstudio/blogdown"><code>blogdown</code></a>.</p></li>
+<li><p>Criar apresentações com <code>R</code>, usando o pacote <a href="https://github.com/yihui/xaringan"><code>xaringan</code></a> - lembrando que existe uma apresentação sobre esse assunto disponível <a href="http://beatrizmilz.com/slides/">aqui</a>. O <a href="https://github.com/brunolucian">Bruno Lucian</a> se interessou em compartilhar esse conteúdo no blog <a href="https://www.dadosaleatorios.com.br/">Dados Aleatórios</a>, então quando estiver disponível eu colocarei o link para o post aqui também.</p></li>
+</ul></section><section id="git-e-github" class="level2"><h2 class="anchored" data-anchor-id="git-e-github">Git e Github</h2>
+<p>Para o compartilhar conteúdo, é interessante também utilizar <code>git</code> e Github. Mas considerando que nesse tema já existe bastante conteúdo em português, por enquanto vou focar nas ferramentas com <code>R</code>, que tem menos conteúdo disponível nessa língua.</p>
+<p>O post do <a href="https://woliveiras.com.br/">William Oliveira</a>, chamado <a href="https://medium.com/trainingcenter/plano-para-estudar-git-e-github-enquanto-aprende-programa%C3%A7%C3%A3o-f5d5f986f459">Plano para estudar Git e GitHub enquanto aprende programação</a>, me ajudou bastante a entender como começar a usar o <code>git</code>. Nesse post ele utiliza o terminal, e para algumas pessoas que estão iniciando essa abordagem pode ser um pouco intimidadora.</p>
+<p>Outra opção para quem está iniciando é utilizar o <a href="https://desktop.github.com/">Github Desktop</a>. Acredito que é uma interface amigável para quem está aprendendo como funciona o <code>git</code>.</p>
+</section><section id="até-logo" class="level2"><h2 class="anchored" data-anchor-id="até-logo">Até logo!</h2>
+<p>Pretendo postar sobre esses conteúdos logo logo. Enquanto isso, estou aberta à sugestões. Existem outras formas que vocês usam para divulgar conteúdo utilizando <code>R</code>? Existe alguma que você conheça e gostaria de aprender mais? Existem dificuldades? Se sim, quais?</p>
+<div class="cell" data-layout-align="center" data-preview="true">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="https://media.giphy.com/media/dNgK7Ws7y176U/giphy.gif" class="img-fluid figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/BeaMilz">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
