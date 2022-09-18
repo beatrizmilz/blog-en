@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.35">
+<meta name="generator" content="quarto-1.1.251">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <meta name="dcterms.date" content="2022-07-10">
@@ -10,10 +10,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -52,7 +57,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -65,7 +70,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -145,9 +150,11 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../../../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Bea Milz</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -262,7 +269,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
 <li><a href="#what-we-will-talk-about-in-this-post" id="toc-what-we-will-talk-about-in-this-post" class="nav-link active" data-scroll-target="#what-we-will-talk-about-in-this-post">What we will talk about in this post</a></li>
@@ -315,18 +322,12 @@ Tip
 <section id="what-we-will-talk-about-in-this-post" class="level2"><h2 class="anchored" data-anchor-id="what-we-will-talk-about-in-this-post">What we will talk about in this post</h2>
 <p>This post is a tutorial on how to use GitHub Actions with an R script, using GitHub on a browser :) We will write a GitHub Action workflow that runs an R script to collect data about the repositories in the <a href="https://github.com/quarto-dev/">quarto</a> organizations and save the result into the GitHub repository.</p>
 <ul class="task-list">
-<li><p><input type="checkbox" disabled="">
-Create a GitHub Account</p></li>
-<li><p><input type="checkbox" disabled="">
-Create a repository</p></li>
-<li><p><input type="checkbox" disabled="">
-Create a <code>README.md</code> file (this is optional)</p></li>
-<li><p><input type="checkbox" disabled="">
-Create an R Script</p></li>
-<li><p><input type="checkbox" disabled="">
-Create the workflow</p></li>
-<li><p><input type="checkbox" disabled="">
-Watch your awesome automation run</p></li>
+<li><p><input type="checkbox" disabled="">Create a GitHub Account</p></li>
+<li><p><input type="checkbox" disabled="">Create a repository</p></li>
+<li><p><input type="checkbox" disabled="">Create a <code>README.md</code> file (this is optional)</p></li>
+<li><p><input type="checkbox" disabled="">Create an R Script</p></li>
+<li><p><input type="checkbox" disabled="">Create the workflow</p></li>
+<li><p><input type="checkbox" disabled="">Watch your awesome automation run</p></li>
 </ul></section><section id="creating-your-first-workflow" class="level2"><h2 class="anchored" data-anchor-id="creating-your-first-workflow">Creating your first workflow</h2>
 <section id="create-a-github-account" class="level3"><h3 class="anchored" data-anchor-id="create-a-github-account">Create a GitHub account</h3>
 <p>To start using GitHub Actions, first, you need to have an account on <a href="https://github.com/">GitHub</a>. You can create a new account for free! You also can sign in to your existing account if you already have one.</p>
@@ -372,7 +373,7 @@ Watch your awesome automation run</p></li>
 <span><span class="va">quarto_orgs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"quarto-dev"</span>, <span class="st">"quarto-ext"</span>, <span class="st">"quarto-journals"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">quarto_repos_raw</span> <span class="op">&lt;-</span></span>
-<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">quarto_orgs</span>, <span class="op">~</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu"><a href="https://gh.r-lib.org/reference/gh.html">gh</a></span><span class="op">(</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">quarto_orgs</span>, <span class="op">~</span> <span class="fu">gh</span><span class="fu">::</span><span class="fu">gh</span><span class="op">(</span></span>
 <span>  <span class="st">"GET /orgs/{org}/repos"</span>,</span>
 <span>  org <span class="op">=</span> <span class="va">.x</span>,</span>
 <span>  type <span class="op">=</span> <span class="st">"public"</span>,</span>
@@ -693,7 +694,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
