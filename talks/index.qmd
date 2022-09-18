@@ -27,7 +27,9 @@ toc: true
 
 -   2022 - Cursos na [Curso-R](https://curso-r.com/): R para Ciência de Dados I (setembro), Visualização de dados (outubro), Relatórios e apresentações (novembro), Deploy (dezembro). [Formulário de bolsas de diversidade](https://forms.gle/9t1JGHLH3TBdzUFLA). [Os materiais dos cursos estão disponíveis online](https://curso-r.com/material/).
 
--   20/10/2022 - Indo além na organização de dados usando R com tidyverse - Minicurso com 4h no [XVIII Congresso Brasileiro de Limnologia (CBLimno)](https://www.instagram.com/ab.limno/).
+- 10/10/2022 - Tutorial: Comunicando seus resultados: Criando apresentações com Quarto. [Latin-R - Latinamerican Conference About the Use of R in R&D](https://latin-r.com/en). 
+
+-  20/10/2022 - Indo além na organização de dados usando R com tidyverse - Minicurso com 4h no [XVIII Congresso Brasileiro de Limnologia (CBLimno)](https://www.instagram.com/ab.limno/).
 
 -   2023 - Janeiro/Fevereiro - [Curso de verão no IME/USP - Relatórios reprodutíveis em R](https://www.ime.usp.br/~verao/).
 
