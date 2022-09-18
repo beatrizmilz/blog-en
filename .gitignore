@@ -6,3 +6,5 @@
 /.quarto/
 README.html
 .Renviron
+_site/
+.quarto/
