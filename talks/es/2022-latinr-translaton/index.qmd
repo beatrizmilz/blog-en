@@ -24,7 +24,7 @@ links:
 - icon: images
   icon_pack: far
   name: Slides
-  url: https://beamilz.com/talks/es/2022-latinr-translaton/slides_translaton.pdf
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/es/2022-latinr-translaton/slides_translaton.pdf
 # - icon: video
 #   icon_pack: fa
 #   name: Gravação
@@ -42,4 +42,3 @@ read_yaml_talks_pt()
 ```
 
 ------------------------------------------------------------------------
-
