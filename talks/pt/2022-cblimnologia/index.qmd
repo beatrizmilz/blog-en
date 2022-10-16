@@ -1,0 +1,28 @@
+---
+toc: true
+author: Beatriz Milz
+categories: minicurso
+date: '2022-10-20'
+event: "XVIII Congresso Brasileiro de Limnologia"
+event_url: https://ablimno.org.br/cblimno/
+links:
+# - icon: images
+#   icon_pack: far
+#   name: Materiais
+#   url: https://beatrizmilz.github.io/2022-cblimnologia/
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/2022-cblimnologia/
+location: Online
+title: "Indo além na organização de dados usando o R com tidyverse"
+image: featured.png
+draft: true
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
