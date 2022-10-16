@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.1.251">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Bea Milz</title>
+<meta name="author" content="Beatriz Milz">
+<meta name="dcterms.date" content="2022-10-20">
+<title>Bea Milz - Indo além na organização de dados usando o R com tidyverse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,26 +21,22 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -59,84 +54,40 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts-es .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts-es'] = new List('listing-posts-es', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Bea Milz - a data science blog</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Bea Milz - a data science blog</title>
 <meta name="title" content="Bea Milz - a data science blog">
 <meta name="description" content="Welcome to my blog! Here I write content about R and data science.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
-<meta property="og:title" content="Bea Milz">
+<meta property="og:title" content="Bea Milz - Indo além na organização de dados usando o R com tidyverse">
 <meta property="og:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="og:image" content="https://beamilz.com/social.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
+<!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="twitter:title" content="Bea Milz - a data science blog">
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="Bea Milz">
-<meta name="twitter:image" content="https://beamilz.com/posts/series-gha/2022-series-gha-1-what-is/es/featured.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - Indo além na organização de dados usando o R com tidyverse">
+<meta name="twitter:image" content="https://beamilz.com/talks/pt/2022-cblimnologia/featured.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="675">
-<meta name="twitter:image-width" content="1200">
+<meta name="twitter:image-height" content="1718">
+<meta name="twitter:image-width" content="3024">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
     </a>
   </div>
@@ -145,60 +96,60 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../about.html">Beatriz Milz</a>
+<li class="nav-item">
+    <a class="nav-link" href="../../../about.html">Beatriz Milz</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
-    <a class="dropdown-item" href="../posts/index.html">
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../posts/en.html">
+    <a class="dropdown-item" href="../../../posts/en.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../posts/pt.html">
+    <a class="dropdown-item" href="../../../posts/pt.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../posts/es.html">
+    <a class="dropdown-item" href="../../../posts/es.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">Series</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
-        <li>
-    <a class="dropdown-item" href="../series-gha.html">
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
+<li>
+    <a class="dropdown-item" href="../../../series-gha.html">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">Talks</a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
-        <li>
-    <a class="dropdown-item" href="../talks/index.html">
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
+<li>
+    <a class="dropdown-item" href="../../../talks/index.html">
  <span class="dropdown-text">All/Todas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../talks/en/index.html">
+    <a class="dropdown-item" href="../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../talks/pt/index.html">
+    <a class="dropdown-item" href="../../../talks/pt/index.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../talks/es/index.html">
+    <a class="dropdown-item" href="../../../talks/es/index.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">Resume</a>
   </li>  
@@ -213,127 +164,54 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#posts-en-español" id="toc-posts-en-español" class="nav-link active" data-scroll-target="#posts-en-español">Posts en Español</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bea Milz</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Indo além na organização de dados usando o R com tidyverse</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">minicurso</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Beatriz Milz </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 20, 2022</p>
+    </div>
+  </div>
     
   </div>
   
 
-</header>
-
-<section id="posts-en-español" class="level2">
-<h2 class="anchored" data-anchor-id="posts-en-español">Posts en Español</h2>
-<div id="listing-posts-es" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-posts-es-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts-es'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656547200000" data-listing-file-modified-sort="1665878657939" data-listing-reading-time-sort="5.285">
-<div class="thumbnail">
-<p><a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html"> <img src="../posts/series-gha/2022-series-gha-1-what-is/es/featured.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html">
-<h3 class="no-anchor listing-title">
-Introducción a GitHub Actions para usuarias de R
-</h3>
-<div class="listing-subtitle">
-Serie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Git'); return false;">
-Git
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
-GitHub
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
-GitHub Actions
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Automations'); return false;">
-Automations
-</div>
-</div>
-<a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html">
-<div class="listing-date">
-Jun 30, 2022
-</div>
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-reading-time">
-5 min
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+</header><script src="https://kit.fontawesome.com/1bb720cc6f.js" crossorigin="anonymous"></script><b>Evento: </b>XVIII Congresso Brasileiro de Limnologia<br><b>Link do evento:</b> <a href="https://ablimno.org.br/cblimno/">https://ablimno.org.br/cblimno/</a><br><b>Lugar: </b>Online<br><h2 class="anchored">
+Materiais
+</h2>
+<br><center>
+<a href="https://beatrizmilz.github.io/2022-cblimnologia/" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Slides</button></a> <br><br><img src="featured.png" class="img-fluid quarto-figure-center" style="max-width:80%"><br>
+</center>
 
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -444,14 +322,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -470,11 +348,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
 
 
-
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
