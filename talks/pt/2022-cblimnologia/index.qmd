@@ -6,10 +6,10 @@ date: '2022-10-20'
 event: "XVIII Congresso Brasileiro de Limnologia"
 event_url: https://ablimno.org.br/cblimno/
 links:
-# - icon: images
-#   icon_pack: far
-#   name: Materiais
-#   url: https://beatrizmilz.github.io/2022-cblimnologia/
+- icon: images
+  icon_pack: far
+  name: Materiais
+  url: https://github.com/beatrizmilz/2022-cblimnologia/
 - icon: images
   icon_pack: far
   name: Slides
@@ -17,7 +17,7 @@ links:
 location: Online
 title: "Indo além na organização de dados usando o R com tidyverse"
 image: featured.png
-draft: true
+draft: false
 ---
 
 ```{r}

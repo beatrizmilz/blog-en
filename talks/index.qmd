@@ -25,7 +25,7 @@ toc: true
 
 -   2022 - Cursos na [Curso-R](https://curso-r.com/): Relatórios e apresentações (novembro), Deploy (dezembro). [Formulário de bolsas de diversidade](https://forms.gle/9t1JGHLH3TBdzUFLA). [Os materiais dos cursos estão disponíveis online](https://curso-r.com/material/).
 
--   20/10/2022 - Indo além na organização de dados usando R com tidyverse - Minicurso com 4h no [XVIII Congresso Brasileiro de Limnologia (CBLimno)](https://www.instagram.com/ab.limno/).
+-   2022 - Novembro - Apresentação sobre Quarto na [aMostra Estatística - IME USP](https://www.instagram.com/amostraestatistica/).
 
 -   2023 - Janeiro/Fevereiro - [Curso de verão no IME/USP - Relatórios reprodutíveis em R](https://www.ime.usp.br/~verao/). Materiais: [2022](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/trabalho_final.html), [2023](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/).
 

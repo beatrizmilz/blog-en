@@ -1,0 +1,28 @@
+---
+toc: true
+author: Beatriz Milz
+categories: [GitHub, GitHub Actions]
+date: '2022-10-29'
+event: "R-Ladies Abuja, Nigeria"
+event_url: https://www.meetup.com/rladies-abuja/events/288082908/
+links:
+- icon: images
+  icon_pack: far
+  name: Website
+  url: https://beatrizmilz.github.io/2022-gha-rladies-abuja/
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/2022-gha-rladies-abuja/slides.html
+location: Online
+title: "Running code while we’re sleeping - Introduction to GitHub Actions for R users"
+image: featured.webp
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
