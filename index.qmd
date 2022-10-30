@@ -6,7 +6,7 @@ listing:
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]
     sort: "date desc"
-    categories: cloud
+    #categories: cloud
     sort-ui: false
     filter-ui: false
     page-size: 3
@@ -15,7 +15,7 @@ listing:
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]
     sort: "date desc"
-    categories: cloud
+    #categories: cloud
     sort-ui: false
     filter-ui: false
     page-size: 3   
@@ -24,7 +24,7 @@ listing:
     type: grid
     fields: [image, date, title, subtitle]
     sort: "date desc"
-    categories: cloud
+    #categories: cloud
     sort-ui: false
     filter-ui: false
     page-size: 3  
@@ -33,7 +33,7 @@ listing:
     type: grid
     fields: [image, date, title]
     sort: "date desc"
-    categories: cloud
+    #categories: cloud
     sort-ui: false
     filter-ui: false
     page-size: 3          
@@ -42,7 +42,7 @@ listing:
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]
     sort: "date desc"
-    categories: cloud
+    #categories: cloud
     sort-ui: false
     filter-ui: false
     page-size: 3       
@@ -52,29 +52,24 @@ comments: false
 include-in-header: meta.html  
 toc: true
 ---
+
 ## Recent posts / Posts recentes
 
 ::: {#posts}
 :::
 
- <a href="../posts/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a>
+<a href="../posts/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a>
 
 <br>
 
 ## Recent Talks / Palestras recentes
 
-
 <a href="../talks/index.html"> <button type="button" class="btn btn-danger float-end btn-sm">Next activities/Atividades futuras</button></a><br>
-
-
 
 ::: {#talks}
 :::
 
- <a href="../talks/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todas</button></a>
-
-
-
+<a href="../talks/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todas</button></a>
 
 ## Posts in English
 
