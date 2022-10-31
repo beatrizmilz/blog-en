@@ -2,6 +2,7 @@ project:
   type: website
 
 website:
+  page-navigation: true
   title: "Bea Milz"
   site-url: "https://beamilz.com/"
   google-analytics: "G-2J79YYG9CZ"
