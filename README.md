@@ -16,8 +16,8 @@ more info on how to create a blog with Quarto in the
 The deploy is made with [Netlify](https://www.netlify.com/), and the
 comments use [giscus](https://giscus.app/).
 
-As by June 16, 2022, this blog has **24 blog posts** and content from
-**5 talks/presentations**.
+As by November 02, 2022, this blog has **27 blog posts** and content
+from **55 talks/presentations**.
 
 Blogpost ideas:
 
