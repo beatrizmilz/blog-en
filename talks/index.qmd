@@ -21,7 +21,14 @@ toc: true
 
 -   2023 - Janeiro/Fevereiro - [Curso de verão no IME/USP - Relatórios reprodutíveis em R](https://www.ime.usp.br/~verao/). Materiais: [2022](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/trabalho_final.html), [2023](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/).
 
--   2023 - Cursos na [Curso-R](https://curso-r.com/): Visualização de dados (março), Relatórios e apresentações (abril). [Formulário de bolsas de diversidade](https://forms.gle/KpALbhvHXu9aVKXTA). [Os materiais dos cursos estão disponíveis online](https://curso-r.com/material/).
+- 2023 - Cursos na [Curso-R](https://curso-r.com/): Visualização de dados (março), Relatórios e apresentações (abril). [Formulário de bolsas de diversidade](https://forms.gle/KpALbhvHXu9aVKXTA). [Os materiais dos cursos estão disponíveis online](https://curso-r.com/material/).
+
+-  2023 - March - [GitHub Actions for R users. Data Science Masterclass Series - Escola Nacional de Saúde Pública/Universidade de Lisboa](/talks/Data_Science_ENSP.pdf).
+
+
+## Invitations / Convites
+
+Please email me at: [milz.bea@gmail.com](mailto:milz.bea@gmail.com)
 
 ## Talks/Palestras
 
