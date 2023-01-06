@@ -420,7 +420,7 @@ Tip
 <span></span>
 <span><span class="co"># com o purrr, podemos abrir todas as abas de uma vez!</span></span>
 <span><span class="va">gapminder_completo</span> <span class="op">&lt;-</span> <span class="va">nome_abas</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="op">~</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url_planilha</span>, sheet <span class="op">=</span> <span class="va">.x</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map_dfr.html">map_dfr</a></span><span class="op">(</span><span class="op">~</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url_planilha</span>, sheet <span class="op">=</span> <span class="va">.x</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">gapminder_completo</span><span class="op">)</span></span>
 <span><span class="co">## Rows: 1,704</span></span>
