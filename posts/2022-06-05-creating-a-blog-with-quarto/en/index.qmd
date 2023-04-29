@@ -9,7 +9,6 @@ toc: true
 draft: false
 twitter-card:
   image: "img/search.png"
-include-in-header: meta.html  
 ---
 
 ```{r multilang-buttons}

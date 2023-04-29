@@ -49,7 +49,6 @@ listing:
 page-layout: full
 title-block-banner: false
 comments: false
-include-in-header: meta.html  
 toc: true
 ---
 

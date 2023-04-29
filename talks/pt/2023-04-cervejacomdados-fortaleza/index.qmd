@@ -1,0 +1,29 @@
+---
+toc: true
+author: Beatriz Milz
+categories: Palestra relâmpago
+date: '2023-04-12'
+event: Cerveja com Dados Fortaleza
+links:
+- icon: github
+  icon_pack: fab
+  name: Código
+  url: https://github.com/beatrizmilz/2023-04-cervejacomdados-fortaleza
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/2023-04-cervejacomdados-fortaleza/
+location: Fortaleza, Ceará
+title: Utilizando GitHub Actions para baixar dados públicos
+subtitle: Um exemplo com dados de barragens de mineração 
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+------------------------------------------------------------------------
