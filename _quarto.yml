@@ -74,3 +74,6 @@ editor: visual
 comments:
   giscus:
     repo: beatrizmilz/blog-en
+
+execute:
+  freeze: true
