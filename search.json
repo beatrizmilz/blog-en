@@ -2203,5 +2203,33 @@
     "title": "Beatriz Milz",
     "section": "",
     "text": "English  Português  Español\n\n\n\n¡Hola! Mi nombre es Beatriz y soy una R-Lady de Brasil 🇧🇷 💜.\nSoy instructora de tidyverse certificada por RStudio y enseño R en Curso-R.\nEmpecé a escribir textos sobre R en 2019.\nSoy activa en la comunidad R en Brasil, participando en la coorganización de comunidades y eventos, como: R-Ladies São Paulo, Latin-R, y satRday São Paulo.\nEstoy haciendo un doctorado en la Universidad de São Paulo, en Ciencias Ambientales. Mi investigación trata sobre la transparencia de la información en la gestión de los recursos hídricos utilizados para el abastecimiento público en la Macrometrópolis de São Paulo."
+  },
+  {
+    "objectID": "quarto.html",
+    "href": "quarto.html",
+    "title": "Quarto Gallery",
+    "section": "",
+    "text": "I like Quarto - a lot! Here is some of the content that I made using Quarto."
+  },
+  {
+    "objectID": "quarto.html#websites",
+    "href": "quarto.html#websites",
+    "title": "Quarto Gallery",
+    "section": "Websites",
+    "text": "Websites\n\nMy personal blog: https://beamilz.com/\nR-Ladies Sao Paulo blog: https://rladies-sp.org/\nMy fianceé and I made our wedding website with Quarto: https://beaeju.com.br/"
+  },
+  {
+    "objectID": "quarto.html#presentations",
+    "href": "quarto.html#presentations",
+    "title": "Quarto Gallery",
+    "section": "Presentations",
+    "text": "Presentations\n\nUtilizando GitHub Actions para baixar dados públicos\n\nThere are more presentations made with Quarto in: Talks."
+  },
+  {
+    "objectID": "quarto.html#presentation-templates",
+    "href": "quarto.html#presentation-templates",
+    "title": "Quarto Gallery",
+    "section": "Presentation templates",
+    "text": "Presentation templates\n\nR-Ladies Quarto Theme - a theme for Slides https://github.com/beatrizmilz/quarto-rladies-theme\nSlides Curso-R - https://github.com/curso-r/quarto-cursor-theme"
   }
 ]
