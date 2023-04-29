@@ -1,5 +1,7 @@
 project:
   type: website
+  preview:
+    port: 4200
 
 website:
   page-navigation: true
