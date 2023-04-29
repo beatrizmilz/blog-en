@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -108,7 +108,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - Posts">
-<meta property="og:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="og:description" content="">
 <meta property="og:image" content="https://beamilz.com/social.png">
 
 <!-- Twitter -->
@@ -118,6 +118,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <meta property="twitter:description" content="Welcome to my blog! Here I write content about R and data science.">
 <meta property="twitter:image" content="https://beamilz.com/social.png">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
@@ -138,88 +139,90 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <span class="navbar-title">Bea Milz</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">
+    <a class="nav-link" href="../about.html" rel="" target="">
  <span class="menu-text">Beatriz Milz</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Posts</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
         <li>
-    <a class="dropdown-item" href="../posts/index.html">
+    <a class="dropdown-item" href="../posts/index.html" rel="" target="">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../posts/en.html">
+    <a class="dropdown-item" href="../posts/en.html" rel="" target="">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../posts/pt.html">
+    <a class="dropdown-item" href="../posts/pt.html" rel="" target="">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../posts/es.html">
+    <a class="dropdown-item" href="../posts/es.html" rel="" target="">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Series</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
         <li>
-    <a class="dropdown-item" href="../series-gha.html">
+    <a class="dropdown-item" href="../series-gha.html" rel="" target="">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Talks</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
         <li>
-    <a class="dropdown-item" href="../talks/index.html">
+    <a class="dropdown-item" href="../talks/index.html" rel="" target="">
  <span class="dropdown-text">All/Todas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../talks/en/index.html">
+    <a class="dropdown-item" href="../talks/en/index.html" rel="" target="">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../talks/pt/index.html">
+    <a class="dropdown-item" href="../talks/pt/index.html" rel="" target="">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../talks/es/index.html">
+    <a class="dropdown-item" href="../talks/es/index.html" rel="" target="">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf" rel="" target="">
  <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/BeaMilz" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -282,7 +285,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Tutorial" data-listing-date-sort="1663027200000" data-listing-file-modified-sort="1673025796995" data-listing-reading-time-sort="10.505">
+<div class="g-col-1" data-index="0" data-categories="Tutorial" data-listing-date-sort="1663027200000" data-listing-file-modified-sort="1682729179137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
 <a href="../posts/2022-09-13-nao-guarde-senhas-no-script/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -304,7 +307,7 @@ Sep 13, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Community,RStudio,Events" data-listing-date-sort="1660262400000" data-listing-file-modified-sort="1673025796991" data-listing-reading-time-sort="14.955">
+<div class="g-col-1" data-index="1" data-categories="Community,RStudio,Events" data-listing-date-sort="1660262400000" data-listing-file-modified-sort="1682729179137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15">
 <a href="../posts/2022-08-12-rstudio-conf/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -326,7 +329,7 @@ Aug 12, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="GitHub,GitHub Actions,Automations,RStudio,Posit" data-listing-date-sort="1658966400000" data-listing-file-modified-sort="1673025796995" data-listing-reading-time-sort="19.62">
+<div class="g-col-1" data-index="2" data-categories="GitHub,GitHub Actions,Automations,RStudio,Posit" data-listing-date-sort="1658966400000" data-listing-file-modified-sort="1682729179141" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20">
 <a href="../posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -348,7 +351,7 @@ Jul 28, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Git,GitHub,GitHub Actions,Automations,RStudio" data-listing-date-sort="1657411200000" data-listing-file-modified-sort="1673025797051" data-listing-reading-time-sort="12.245">
+<div class="g-col-1" data-index="3" data-categories="Git,GitHub,GitHub Actions,Automations,RStudio" data-listing-date-sort="1657411200000" data-listing-file-modified-sort="1682729179197" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
 <a href="../posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -370,12 +373,10 @@ Jul 10, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1657238400000" data-listing-file-modified-sort="1673025796683" data-listing-reading-time-sort="5.53">
+<div class="g-col-1" data-index="4" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1657238400000" data-listing-file-modified-sort="1682729178825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
 <a href="../posts/2019-08-12-tidydevday/en/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="https://i.imgur.com/Oz6x6GY.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="https://i.imgur.com/Oz6x6GY.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Tidyverse developer day 2019 (tidy-dev-day)
@@ -392,7 +393,7 @@ Jul 8, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656547200000" data-listing-file-modified-sort="1673025796999" data-listing-reading-time-sort="5">
+<div class="g-col-1" data-index="5" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656547200000" data-listing-file-modified-sort="1682729179145" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <a href="../posts/series-gha/2022-series-gha-1-what-is/en/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -414,7 +415,7 @@ Jun 30, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656547200000" data-listing-file-modified-sort="1673025797003" data-listing-reading-time-sort="5.285">
+<div class="g-col-1" data-index="6" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656547200000" data-listing-file-modified-sort="1682729179149" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
 <a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -436,7 +437,7 @@ Jun 30, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656547200000" data-listing-file-modified-sort="1673025797003" data-listing-reading-time-sort="5.15">
+<div class="g-col-1" data-index="7" data-categories="Git,GitHub,GitHub Actions,Automations" data-listing-date-sort="1656547200000" data-listing-file-modified-sort="1682729179149" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
 <a href="../posts/series-gha/2022-series-gha-1-what-is/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -458,7 +459,7 @@ Jun 30, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="Tutorial,Teaching,Datasets,Data import" data-listing-date-sort="1654905600000" data-listing-file-modified-sort="1673025796983" data-listing-reading-time-sort="2.905">
+<div class="g-col-1" data-index="8" data-categories="Tutorial,Teaching,Datasets,Data import" data-listing-date-sort="1654905600000" data-listing-file-modified-sort="1682729179129" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <a href="../posts/2022-06-11-bases-de-dados/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -480,7 +481,7 @@ Jun 11, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="Teaching,RStudio,Communities,Translation" data-listing-date-sort="1654646400000" data-listing-file-modified-sort="1673025796743" data-listing-reading-time-sort="8.005">
+<div class="g-col-1" data-index="9" data-categories="Teaching,RStudio,Communities,Translation" data-listing-date-sort="1654646400000" data-listing-file-modified-sort="1682729178889" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
 <a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/en/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -502,7 +503,7 @@ Jun 8, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="Quarto,Tutorial,Blog" data-listing-date-sort="1654387200000" data-listing-file-modified-sort="1673025796983" data-listing-reading-time-sort="14.275">
+<div class="g-col-1" data-index="10" data-categories="Quarto,Tutorial,Blog" data-listing-date-sort="1654387200000" data-listing-file-modified-sort="1682729179129" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15">
 <a href="../posts/2022-06-05-creating-a-blog-with-quarto/en/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -524,7 +525,7 @@ Jun 5, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="Tutorial,Teaching,Datasets,Data import,R Packages" data-listing-date-sort="1649203200000" data-listing-file-modified-sort="1673025796951" data-listing-reading-time-sort="3.325">
+<div class="g-col-1" data-index="11" data-categories="Tutorial,Teaching,Datasets,Data import,R Packages" data-listing-date-sort="1649203200000" data-listing-file-modified-sort="1682729179097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
 <a href="../posts/2022-04-06-pacote-dados/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -546,7 +547,7 @@ Apr 6, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="API,One Drive,Data import,Excel,Microsoft,Azure,Microsoft365R" data-listing-date-sort="1647561600000" data-listing-file-modified-sort="1673025796951" data-listing-reading-time-sort="6.13">
+<div class="g-col-1" data-index="12" data-categories="API,One Drive,Data import,Excel,Microsoft,Azure,Microsoft365R" data-listing-date-sort="1647561600000" data-listing-file-modified-sort="1682729179097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
 <a href="../posts/2022-03-18-onedrive/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -568,7 +569,7 @@ Mar 18, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="13" data-categories="API,Google,Data import,Google Sheets" data-listing-date-sort="1646697600000" data-listing-file-modified-sort="1673025796947" data-listing-reading-time-sort="7.635">
+<div class="g-col-1" data-index="13" data-categories="API,Google,Data import,Google Sheets" data-listing-date-sort="1646697600000" data-listing-file-modified-sort="1682729179089" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
 <a href="../posts/2022-03-08-googlesheets4/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -590,7 +591,7 @@ Mar 8, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="14" data-categories="API,purrr,httr,Web Scraping,Git,GitHub" data-listing-date-sort="1645228800000" data-listing-file-modified-sort="1673025796923" data-listing-reading-time-sort="5.66">
+<div class="g-col-1" data-index="14" data-categories="API,purrr,httr,Web Scraping,Git,GitHub" data-listing-date-sort="1645228800000" data-listing-file-modified-sort="1682729179069" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
 <a href="../posts/2022-02-19-api-github-1/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -612,7 +613,7 @@ Feb 19, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="15" data-categories="API,purrr,httr,Web Scraping" data-listing-date-sort="1638144000000" data-listing-file-modified-sort="1673025796923" data-listing-reading-time-sort="3.995">
+<div class="g-col-1" data-index="15" data-categories="API,purrr,httr,Web Scraping" data-listing-date-sort="1638144000000" data-listing-file-modified-sort="1682729179069" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
 <a href="../posts/2021-11-29-api-pokemon/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -634,7 +635,7 @@ Nov 29, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="16" data-categories="R" data-listing-date-sort="1625270400000" data-listing-file-modified-sort="1673025796919" data-listing-reading-time-sort="15.95">
+<div class="g-col-1" data-index="16" data-categories="R" data-listing-date-sort="1625270400000" data-listing-file-modified-sort="1682729179065" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16">
 <a href="../posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html" class="quarto-grid-link">
 </a><div class="quarto-grid-item card h-100 card-left"><a href="../posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html" class="quarto-grid-link">
 <p class="card-img-top">
@@ -656,7 +657,7 @@ Jul 3, 2021
 </div>
 
 </div>
-<div class="g-col-1" data-index="17" data-categories="Tutorial,Web Scraping,Data cleaning,purrr,rvest" data-listing-date-sort="1621814400000" data-listing-file-modified-sort="1673025796915" data-listing-reading-time-sort="10.87">
+<div class="g-col-1" data-index="17" data-categories="Tutorial,Web Scraping,Data cleaning,purrr,rvest" data-listing-date-sort="1621814400000" data-listing-file-modified-sort="1682729179061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
 <a href="../posts/2021-05-24-naruto/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -678,7 +679,7 @@ May 24, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="18" data-categories="RStudio,R,Pipe" data-listing-date-sort="1621296000000" data-listing-file-modified-sort="1673025796915" data-listing-reading-time-sort="4">
+<div class="g-col-1" data-index="18" data-categories="RStudio,R,Pipe" data-listing-date-sort="1621296000000" data-listing-file-modified-sort="1682729179061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
 <a href="../posts/2021-05-18-experimentando-o-r-410/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -700,7 +701,7 @@ May 18, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="19" data-categories="R,Debug" data-listing-date-sort="1616976000000" data-listing-file-modified-sort="1673025796915" data-listing-reading-time-sort="8.32">
+<div class="g-col-1" data-index="19" data-categories="R,Debug" data-listing-date-sort="1616976000000" data-listing-file-modified-sort="1682729179061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
 <a href="../posts/2021-03-29-desvendando-erros/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -722,7 +723,7 @@ Mar 29, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="20" data-listing-date-sort="1615766400000" data-listing-file-modified-sort="1673025796915" data-listing-reading-time-sort="4.9">
+<div class="g-col-1" data-index="20" data-listing-date-sort="1615766400000" data-listing-file-modified-sort="1682729179057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <a href="../posts/2021-03-15-dicas-03-relatorio/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -744,7 +745,7 @@ Mar 15, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="21" data-categories="Studying,Research" data-listing-date-sort="1615075200000" data-listing-file-modified-sort="1673025796907" data-listing-reading-time-sort="8.775">
+<div class="g-col-1" data-index="21" data-categories="Studying,Research" data-listing-date-sort="1615075200000" data-listing-file-modified-sort="1682729179049" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
 <a href="../posts/2021-03-07-estudando-bibliometrix/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -766,7 +767,7 @@ Mar 7, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="22" data-categories="Teaching,RStudio,Communities" data-listing-date-sort="1614643200000" data-listing-file-modified-sort="1673025796747" data-listing-reading-time-sort="8.695">
+<div class="g-col-1" data-index="22" data-categories="Teaching,RStudio,Communities" data-listing-date-sort="1614643200000" data-listing-file-modified-sort="1682729178889" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
 <a href="../posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -788,7 +789,7 @@ Mar 2, 2021
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="23" data-categories="Tips,ggplot2,tidyverse" data-listing-date-sort="1608163200000" data-listing-file-modified-sort="1673025796739" data-listing-reading-time-sort="5.45">
+<div class="g-col-1" data-index="23" data-categories="Tips,ggplot2,tidyverse" data-listing-date-sort="1608163200000" data-listing-file-modified-sort="1682729178885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
 <a href="../posts/2020-12-17-dicas-02-graficos/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -810,7 +811,7 @@ Dec 17, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="24" data-categories="Tips,Tables" data-listing-date-sort="1606953600000" data-listing-file-modified-sort="1673025796699" data-listing-reading-time-sort="4.185">
+<div class="g-col-1" data-index="24" data-categories="Tips,Tables" data-listing-date-sort="1606953600000" data-listing-file-modified-sort="1682729178845" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <a href="../posts/2020-12-03-dicas-01-tabelas/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -832,7 +833,7 @@ Dec 3, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="25" data-categories="Reproducibility,Maps" data-listing-date-sort="1595808000000" data-listing-file-modified-sort="1673025796691" data-listing-reading-time-sort="16.515">
+<div class="g-col-1" data-index="25" data-categories="Reproducibility,Maps" data-listing-date-sort="1595808000000" data-listing-file-modified-sort="1682729178837" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17">
 <a href="../posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -854,7 +855,7 @@ Jul 27, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="26" data-categories="Teaching,Communities,The Carpentries" data-listing-date-sort="1582329600000" data-listing-file-modified-sort="1673025796683" data-listing-reading-time-sort="8.045">
+<div class="g-col-1" data-index="26" data-categories="Teaching,Communities,The Carpentries" data-listing-date-sort="1582329600000" data-listing-file-modified-sort="1682729178829" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
 <a href="../posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -873,7 +874,7 @@ Feb 22, 2020
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="27" data-categories="R-Ladies,Communities" data-listing-date-sort="1567209600000" data-listing-file-modified-sort="1673025796683" data-listing-reading-time-sort="5.76">
+<div class="g-col-1" data-index="27" data-categories="R-Ladies,Communities" data-listing-date-sort="1567209600000" data-listing-file-modified-sort="1682729178829" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
 <a href="../posts/2019-08-31-um-ano-aprendendo-r/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -895,7 +896,7 @@ Aug 31, 2019
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="28" data-categories="Shiny" data-listing-date-sort="1566345600000" data-listing-file-modified-sort="1673025796683" data-listing-reading-time-sort="3.385">
+<div class="g-col-1" data-index="28" data-categories="Shiny" data-listing-date-sort="1566345600000" data-listing-file-modified-sort="1682729178825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
 <a href="../posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -917,12 +918,10 @@ Aug 21, 2019
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="29" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1565568000000" data-listing-file-modified-sort="1673025796683" data-listing-reading-time-sort="5.505">
+<div class="g-col-1" data-index="29" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1565568000000" data-listing-file-modified-sort="1682729178825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
 <a href="../posts/2019-08-12-tidydevday/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="https://i.imgur.com/Oz6x6GY.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="https://i.imgur.com/Oz6x6GY.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Tidyverse developer day 2019 (tidy-dev-day)
@@ -939,7 +938,7 @@ Aug 12, 2019
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="30" data-categories="R-Ladies,RMarkdown" data-listing-date-sort="1561334400000" data-listing-file-modified-sort="1673025796679" data-listing-reading-time-sort="2.905">
+<div class="g-col-1" data-index="30" data-categories="R-Ladies,RMarkdown" data-listing-date-sort="1561334400000" data-listing-file-modified-sort="1682729178825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <a href="../posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -961,7 +960,7 @@ Jun 24, 2019
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="31" data-categories="Communities,R-Ladies" data-listing-date-sort="1548720000000" data-listing-file-modified-sort="1673025796679" data-listing-reading-time-sort="4.125">
+<div class="g-col-1" data-index="31" data-categories="Communities,R-Ladies" data-listing-date-sort="1548720000000" data-listing-file-modified-sort="1682729178825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <a href="../posts/2019-01-29-meio-ano-r/pt/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1015,9 +1014,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1082,6 +1095,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1120,12 +1219,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.beamilz\.com\/**");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1139,6 +1238,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

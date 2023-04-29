@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.340">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Julio Trecenti">
 <meta name="author" content="Flavia E. Rius">
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -69,7 +69,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
 <meta property="og:title" content="Bea Milz - Impressões pessoais da rstudio::conf(2022)">
-<meta property="og:description" content="Welcome to my blog! Here I write content about R and data science.">
+<meta property="og:description" content="Nesse post, apresentamos nossas impressões pessoais sobre o evento que aconteceu em Washington DC!">
 <meta property="og:image" content="https://beamilz.com/social.png">
 <!-- Twitter --><meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/">
@@ -92,88 +92,90 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <span class="navbar-title">Bea Milz</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item">
-    <a class="nav-link" href="../../../about.html">
+    <a class="nav-link" href="../../../about.html" rel="" target="">
  <span class="menu-text">Beatriz Milz</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Posts</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
 <li>
-    <a class="dropdown-item" href="../../../posts/index.html">
+    <a class="dropdown-item" href="../../../posts/index.html" rel="" target="">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../posts/en.html">
+    <a class="dropdown-item" href="../../../posts/en.html" rel="" target="">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../posts/pt.html">
+    <a class="dropdown-item" href="../../../posts/pt.html" rel="" target="">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../posts/es.html">
+    <a class="dropdown-item" href="../../../posts/es.html" rel="" target="">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Series</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">
 <li>
-    <a class="dropdown-item" href="../../../series-gha.html">
+    <a class="dropdown-item" href="../../../series-gha.html" rel="" target="">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Talks</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
 <li>
-    <a class="dropdown-item" href="../../../talks/index.html">
+    <a class="dropdown-item" href="../../../talks/index.html" rel="" target="">
  <span class="dropdown-text">All/Todas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../talks/en/index.html">
+    <a class="dropdown-item" href="../../../talks/en/index.html" rel="" target="">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../talks/pt/index.html">
+    <a class="dropdown-item" href="../../../talks/pt/index.html" rel="" target="">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../talks/es/index.html">
+    <a class="dropdown-item" href="../../../talks/es/index.html" rel="" target="">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item">
-    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf" rel="" target="">
  <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/BeaMilz" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-<div id="quarto-search" class="" title="Search"></div>
+<div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
@@ -250,12 +252,12 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content"><p><a href="../../../posts/2022-08-12-rstudio-conf/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -364,12 +366,12 @@ Tip
 <p><img src="img/diversity_scholars.jpg" class="img-fluid" alt="Imagem das pessoas que participaram como bolsistas de diversidade."> Fonte: Imagem disponibilizada por Katherine Vu (RStudio).</p>
 </section><section id="palestrando-na-rstudioconf" class="level2"><h2 class="anchored" data-anchor-id="palestrando-na-rstudioconf">Palestrando na rstudio::conf()</h2>
 <p>A minha palestra relâmpago foi sobre um tema que tenho aprendido nos últimos 2 anos e acho muito útil e interessante: automatizações com GitHub Actions.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -386,8 +388,7 @@ Tip
 <p>Todo material (slides e material complementar) <a href="https://beamilz.com/talks/en/2022-rstudio-conf/">está disponível no meu blog</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="https://beatrizmilz.github.io/rstudioconf2022/"><img src="img/talk.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Primeiro slide da palestra</figcaption><p></p>
-</figure>
+<figcaption class="figure-caption">Primeiro slide da palestra</figcaption></figure>
 </div>
 <p>O Julio me ajudou bastante durante a criação dessa palestra, dando vários feedbacks, e eu o agradeço muito! Além disso, ele comentou um pouco da minha palestra <a href="https://blog.curso-r.com/posts/2022-07-29-rstudio-conf-2022-dia2/">no post sobre o segundo dia do evento</a>.</p>
 <center>
@@ -404,8 +405,7 @@ Tip
 <p>O <a href="https://quarto.org/">Quarto</a>, para quem não conhece, é a nova geração do RMarkdown. Eu já venho usando o Quarto desde outubro de 2021, enquanto ele estava sendo desenvolvido e aprimorado. Então poucas coisas foram novidades para mim nas palestras sobre Quarto, mas eu gostei de ver como foi dado ênfase! A <a href="https://mine.quarto.pub/hello-quarto/#/hello-quarto-title">keynote ‘Hello Quarto’</a> da <a href="https://twitter.com/minebocek">Mine Çetinkaya-Rundel</a> e da <a href="https://twitter.com/juliesquid">Julia Stewart Lowndes</a> foi maravilhosa, com lindas artes da <a href="https://twitter.com/allison_horst">Allison Horst</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="https://mine.quarto.pub/hello-quarto/"><img src="img/hello-quarto.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">One penguin standing on another penguin's shoulders in a snowscape, looking through a telescope at a Quarto logo “moon” in the night sky.</figcaption><p></p>
-</figure>
+<figcaption class="figure-caption">One penguin standing on another penguin's shoulders in a snowscape, looking through a telescope at a Quarto logo “moon” in the night sky.</figcaption></figure>
 </div>
 <blockquote class="blockquote">
 <p>Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</p>
@@ -438,8 +438,7 @@ Tip
 <p>Eu trouxe de volta vários stickers, e já colei no meu computador e estou distribuindo entre os amigos! Esse é o meu computador após a conferência:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="img/note-pos-evento.jpeg" class="img-fluid figure-img" style="width:50.0%"></p>
-<p></p><figcaption class="figure-caption">Notebook com vários stickers!</figcaption><p></p>
-</figure>
+<figcaption class="figure-caption">Notebook com vários stickers!</figcaption></figure>
 </div>
 </section><section id="conclusão-da-bea" class="level2"><h2 class="anchored" data-anchor-id="conclusão-da-bea">Conclusão da Bea</h2>
 <p>Enfim, essa conferência foi <strong>INCRÍVEL</strong>! Espero ter oportunidades de participar nas conferências da <a href="https://www.rstudio.com/blog/rstudio-is-becoming-posit/">posit</a> no futuro :)</p>
@@ -488,9 +487,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -555,6 +568,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -593,12 +692,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.beamilz\.com\/**");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -612,6 +711,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Blog made with 💜 and <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
 <li class="nav-item compact">
