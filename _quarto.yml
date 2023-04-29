@@ -33,6 +33,7 @@ website:
             href: posts/pt.qmd
           - text: Español
             href: posts/es.qmd
+
       - text: Series
         menu:
           - text: GitHub Actions
@@ -47,6 +48,7 @@ website:
             href: talks/pt/index.qmd
           - text: Español
             href: talks/es/index.qmd
+      - quarto.qmd
       - text: Resume
         href: https://beatrizmilz.github.io/resume/index.pdf
       - icon: github
@@ -64,7 +66,6 @@ format:
     link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/**'
     citations-hover: true
     footnotes-hover: true
-    include-in-header: meta.html
     toc: true
     code-link: true
 

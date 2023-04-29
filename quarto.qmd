@@ -1,0 +1,25 @@
+---
+title: "Quarto Gallery"
+---
+
+I like Quarto - a lot! Here is some of the content that I made using Quarto.
+
+## Websites
+
+-   My personal blog: <https://beamilz.com/>
+
+-   R-Ladies Sao Paulo blog: <https://rladies-sp.org/>
+
+- [My fianceé](https://twitter.com/jtrecenti/) and I made our wedding website with Quarto: <https://beaeju.com.br/>
+
+## Presentations
+
+-   [Utilizando GitHub Actions para baixar dados públicos](https://beatrizmilz.github.io/2023-04-cervejacomdados-fortaleza/index.html)
+
+There are more presentations made with Quarto in: [Talks](talks/index.qmd).
+
+## Presentation templates
+
+-   R-Ladies Quarto Theme - a theme for Slides <https://github.com/beatrizmilz/quarto-rladies-theme>
+
+-   Slides Curso-R - <https://github.com/curso-r/quarto-cursor-theme>
