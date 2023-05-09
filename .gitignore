@@ -6,4 +6,5 @@
 /.quarto/
 README.html
 .Renviron
-
+env/
+/env/
