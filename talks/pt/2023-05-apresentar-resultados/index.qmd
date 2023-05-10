@@ -14,6 +14,14 @@ links:
   icon_pack: fab
   name: Códigos
   url: https://github.com/beatrizmilz/2023-05-apresentar-resultados
+- icon: dashboard
+  icon_pack: far
+  name: "Dashboard criado na aula"
+  url: https://beatriz-milz.shinyapps.io/03-flexdashboard-shiny/
+- icon: github
+  icon_pack: fab
+  name: "Código do Dashboard criado na aula"
+  url: https://github.com/beatrizmilz/2023-05-apresentar-resultados/blob/main/exemplos/03-flexdashboard-shiny-editado.Rmd  
 location: Online
 title: "Apresentação de resultados no R"
 image: featured.png
