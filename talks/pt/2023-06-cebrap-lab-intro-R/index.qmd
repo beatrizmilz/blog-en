@@ -3,7 +3,7 @@
 toc: true
 author: Beatriz Milz
 categories: Curso
-date: '2022-05-09'
+date: '2023-06-26'
 event: cebrap.lab online
 event_url: https://cebrap.org.br/cebrap-lab/
 links:
@@ -14,11 +14,11 @@ links:
 - icon: book
   icon_pack: fas
   name: Material
-  url: https://github.com/beatrizmilz/cebrap-lab-intro-R-5-2022/archive/refs/heads/main.zip
+  url: https://github.com/beatrizmilz/2023-06-cebrap-lab-intro-R/archive/refs/heads/main.zip
 - icon: github
   icon_pack: fab
   name: GitHub
-  url: https://github.com/beatrizmilz/cebrap-lab-intro-R-5-2022
+  url: https://github.com/beatrizmilz/2023-06-cebrap-lab-intro-R
 location: Online
 title: Introdução ao R
 image: featured.jpeg

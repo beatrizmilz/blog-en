@@ -1,0 +1,38 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz
+categories: Curso
+date: '2023-08-28'
+event: cebrap.lab online
+event_url: https://cebrap.org.br/cebrap-lab/
+links:
+- icon: chalkboard-teacher
+  icon_pack: fas
+  name: Inscrições
+  url: https://cursos.cebrap.org.br/categoria-cursos/cursos/
+- icon: book
+  icon_pack: fas
+  name: Material
+  url: https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/archive/refs/heads/main.zip
+- icon: github
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/beatrizmilz/2023-08-cebrap-lab-viz
+location: Online
+title: Visualização de dados no R
+image: featured.jpeg
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+------------------------------------------------------------------------
+
+O curso “Visualização de dados” abordará o uso da linguagem de programação R para a geração de gráficos, bem como a criação de mapas simples. Serão apresentados alguns conceitos como: quais são as diferenças entre visualizações exploratórias e explicativas, boas práticas ao criar visualizações de dados, como criar gráficos simples (como gráficos de dispersão/pontos, gráfico de barras, gráfico de linhas, histograma, boxplots), como personalizar os gráficos, exportar os gráficos em formatos adequados para publicações acadêmicas, e como criar mapas simples usando a teoria de gráficos em R.
+
+Todas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, e o RStudio, e os pacotes ggplot2, sf, e geobr. O curso tem como público-alvo pessoas que tenham conhecimento básico em R, e queiram interesse em aprender a criar visualizações de dados.
