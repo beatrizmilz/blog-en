@@ -41,7 +41,7 @@ Unfortunately, I'm not accepting new invitations until June/2024 (or until I def
 
 Please email me at: [milz.bea\@gmail.com](mailto:milz.bea@gmail.com)
 
-## Talks/Palestras
+## Slides
 
 ::: {#talks}
 :::
