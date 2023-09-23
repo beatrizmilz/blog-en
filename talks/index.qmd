@@ -20,9 +20,9 @@ toc: true
 
 ### Eventos/Events
 
-- 19 a 23 de junho de 2023 - Manaus, AM, Brasil - [I Conferência Internacional de Políticas Públicas e Ciência de Dados](https://eventos.galoa.com.br/cippcdam-2023/page/2354-inicio)
+-   28 de outubro de 2023 - Bauru, SP - [1º Seminário Interdisciplinar em Ciência de Dados LInDA - I SINCID LINDA](https://eventos.faac.unesp.br/sincidlinda2023/)
 
-- 24 de novembro de 2023 - Medellín, Colombia - [RDay Medellín](https://rdaymedellin.github.io/index.html)
+-   24 de novembro de 2023 - Medellín, Colombia - [RDay Medellín](https://rdaymedellin.github.io/index.html)
 
 ### Cursos/Courses
 
@@ -36,6 +36,8 @@ toc: true
 -   2024 - Janeiro/Fevereiro - [Curso de verão no IME/USP - Relatórios reprodutíveis em R](https://www.ime.usp.br/~verao/). Materiais: [2022](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/trabalho_final.html), [2023](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/).
 
 ## Invitations / Convites
+
+Unfortunately, I'm not accepting new invitations until June/2024 (or until I defend my PhD).
 
 Please email me at: [milz.bea\@gmail.com](mailto:milz.bea@gmail.com)
 
