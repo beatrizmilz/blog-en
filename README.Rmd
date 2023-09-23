@@ -37,8 +37,3 @@ number_of_talks <- number_of_talks_es + number_of_talks_en + number_of_talks_pt
 ```
 
 As by `r format(Sys.Date(), "%B %d,  %Y")`, this blog has **`r number_of_posts` blog posts** and content from **`r number_of_talks` talks/presentations**.
-
-Blogpost ideas:
-
--   [ ] Creating a blog - part 2: setting up google analytics, improving tweet cards
--   [ ] Using quarto in the command line
