@@ -49,6 +49,7 @@ website:
           - text: Español
             href: talks/es/index.qmd
       - quarto.qmd
+      - videos.qmd
       - text: Resume
         href: https://beatrizmilz.github.io/resume/index.pdf
       - icon: github
