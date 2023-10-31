@@ -20,8 +20,6 @@ toc: true
 
 ### Eventos/Events
 
--   28 de outubro de 2023 - Bauru, SP - [1º Seminário Interdisciplinar em Ciência de Dados LInDA - I SINCID LINDA](https://eventos.faac.unesp.br/sincidlinda2023/)
-
 -   24 de novembro de 2023 - Medellín, Colombia - [R Day Colombia](https://rday-colombia.github.io/2023/)
 
 ### Cursos/Courses

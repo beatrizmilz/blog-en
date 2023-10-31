@@ -15,4 +15,4 @@ title-block-banner: true
 
 ------------------------------------------------------------------------
 
-Minhas apresentações anteriores estão [neste link](https://beatrizmilz.com/talk/). Aos poucos irei migrar o conteúdo para essa página :)
+
