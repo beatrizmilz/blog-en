@@ -1,0 +1,83 @@
+---
+title: "[1] Explorando Dados com R e a Bea"
+subtitle: "Onde a Bea compartilha textos, novidades, notícias sobre R, Ciência de Dados e a sua comunidade."
+author: "Beatriz Milz"
+date: "2023-11-12"
+categories: ["Newsletter"]
+image: "logo-featured.png"
+toc: true
+draft: false
+---
+
+Olá!
+
+Boas vindas à newsletter "Explorando Dados com R e a Bea", onde comento um pouco sobre novidades da comunidade de R, bem como compartilho conteúdos, etc.
+
+[![](NEWSLETTER.png){fig-align="center"}](https://www.linkedin.com/newsletters/7129591797797797888/)
+
+<center><a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888" target="_blank">Assinar no LinkedIn</a></center>
+
+Para quem não me conhece:
+
+> Olá! Eu sou uma [instrutora de tidyverse certificada pela Posit/RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/), e eu ensino R na [Curso-R](https://curso-r.com/). Eu comecei a escrever textos sobre R em 2019. Eu sou ativa na comunidade de R no Brasil, participando da co-organização de comunidades e eventos, como: [R-Ladies São Paulo](https://twitter.com/RLadiesSaoPaulo), [Latin-R](https://twitter.com/LatinR_Conf), e [satRday São Paulo](https://twitter.com/satRdaySP). Eu faço doutorado na [Universidade de São Paulo](http://www.iee.usp.br/), em Ciências Ambientais. Minha pesquisa é sobre **transparência de informações** na **gestão de recursos hídricos** usados para abastecimento público na Macrometrópole Paulista.
+
+Vamos para as novidades! :D
+
+### Novidades na comunidade:
+
+-   Em outubro aconteceu o evento "[**LatinR 2023**](https://latin-r.com/pt/) **-** Conferência Latino-Americana sobre o Uso de R em Pesquisa e Desenvolvimento". O evento aconteceu em Montevideu, no Uruguai, e contou com apresentações em inglês, português, e espanhol. Esse foi o primeiro encontro presencial da Latin-R desde que iniciou a pandemia de COVID-19 em 2020.  A edição de 2024 será online, e a edição de 2025 será presencial (mas ainda não sabemos em qual país!).
+
+### Atualizações sobre a tradução do livro "R for Data Science":
+
+-   A segunda edição do livro "R for Data Science" está sendo traduzido para o português, de forma voluntária, por pessoas na comunidade de R. O projeto é liderado por mim, com a participação de muitas pessoas.  É possível ler alguns capítulos que já foram traduzidos.  Acesse em: <https://cienciadedatos.github.io/pt-r4ds/>
+
+-   O destaque é o capítulo "Visualização de dados", traduzido pelo Bruno Mioto onde os autores do livro apresentam uma introdução ao pacote ggplot2. Acesse em: <https://cienciadedatos.github.io/pt-r4ds/data-visualize.html>
+
+### Conteúdo em destaque, produzido pela comunidade:
+
+-   No video "Como organizar seu banco de dados para análises estatísticas", Fernanda Peres compartilha várias dicas importantes para organizar os seus dados. O vídeo não foca em R, e é interessante para todas as pessoas que lidam com dados:  [Como organizar seu banco de dados para análises estatísticas](https://www.youtube.com/watch?v=wzfPR2oQ61A).
+
+### Conteúdos recentes produzidos por mim:
+
+-   Na aMostra de Estatística IME USP, eu e a Tereza Lacerda (que trabalha comigo na Curso-R) apresentamos um workshop chamado "Indo além na organização de dados usando o R com tidyverse".  Os slides estão disponíveis em: <https://curso-r.github.io/aMostra2023-organizacao-dados/>, e o código código usado na parte prática em: <https://github.com/curso-r/aMostra2023-organizacao-dados/blob/main/pratica-editada.R>
+
+-   No "1º Seminário Interdisciplinar em Ciência de Dados LInDA (I SINCID LINDA)", que aconteceu na Universidade Estadual Paulista (UNESP) - Campus Bauru, fiz uma apresentação chamada "Apresentando os resultados com R", abordando principalmente o Quarto! Os slides estão disponíveis em: <https://beatrizmilz.github.io/2023-10-1-sincid-linda-unesp/> . Agradecimentos especiais à Lívia Inglesis Barcellos, João Pedro Albino e Laboratório de Inteligência de Dados (LInDa) pela organização!
+
+### Próximas atividades e cursos que estou envolvida:
+
+-   No dia 24 de novembro, participarei do **R Day Colombia**, de forma remota, apresentando sobre o pacote purrr. Essa apresentação será em inglês. Saiba mais em: <https://rday-colombia.github.io/2023/>
+
+-   No dia 27 de novembro inicia o laboratório "**Análise quantitativa de texto**", que ministrarei no cebrap.lab. Neste laboratório, utilizaremos a abordagem apresentada por Julia Silge e David Robinson no livro  "Text Mining with R: A Tidy Approach" para analisar dados textuais. Saiba mais em: <https://cebrap.org.br/cebrap-lab/>
+
+-   Também no final de novembro inicia o curso "**Relatórios e apresentações automáticas**" na Curso-R, que será ministrado por mim e pelo Julio Trecenti. Recentemente, o curso foi reformulado para tratar sobre como criar relatórios e apresentações usando o Quarto: <https://loja.curso-r.com/relatorios-e-apresentacoes-automaticas.html>
+
+### Conclusão
+
+Espero que tenha gostado da newsletter. Se foi interessante para você, me ajude compartilhando o conteúdo, e siga a newsletter para receber as próximas edições!
+
+Obrigada, e até a próxima :D
+
+Bea Milz
+
+<https://beamilz.com/>
+
+```{css}
+      .libutton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 7px;
+        text-align: center;
+        outline: none;
+        text-decoration: none !important;
+        color: #ffffff !important;
+        width: 200px;
+        height: 32px;
+        border-radius: 16px;
+        background-color: #0A66C2;
+        font-family: "SF Pro Text", Helvetica, sans-serif;
+      }
+
+```
+
+<center><a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888" target="_blank">Assinar no LinkedIn</a></center>
