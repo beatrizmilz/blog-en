@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Beatriz Milz">
+<meta name="dcterms.date" content="2023-11-12">
 
-<title>Bea Milz - Talks</title>
+<title>Bea Milz - [1] Explorando Dados com R e a Bea</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,35 +61,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
 
 <script type="text/javascript">
@@ -101,14 +72,15 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="Bea Milz - Talks">
-<meta name="twitter:image" content="https://beamilz.com/talks/en/2022-gha-rladies-abuja/featured.webp">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Bea Milz - [1] Explorando Dados com R e a Bea">
+<meta name="twitter:description" content="Onde a Bea compartilha textos, novidades, notícias sobre R, Ciência de Dados e a sua comunidade.">
+<meta name="twitter:image" content="https://beamilz.com/posts/2023-11-12-newsletter-1/pt/logo-featured.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 </head>
 
 <body class="nav-fixed">
@@ -118,7 +90,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Bea Milz</span>
     </a>
   </div>
@@ -129,7 +101,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
+    <a class="nav-link" href="../../../about.html" rel="" target="">
  <span class="menu-text">Beatriz Milz</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -138,19 +110,19 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
         <li>
-    <a class="dropdown-item" href="../../posts/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../posts/index.html" rel="" target="">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/en.html" rel="" target="">
+    <a class="dropdown-item" href="../../../posts/en.html" rel="" target="">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/pt.html" rel="" target="">
+    <a class="dropdown-item" href="../../../posts/pt.html" rel="" target="">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/es.html" rel="" target="">
+    <a class="dropdown-item" href="../../../posts/es.html" rel="" target="">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
@@ -161,7 +133,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-series">    
         <li>
-    <a class="dropdown-item" href="../../series-gha.html" rel="" target="">
+    <a class="dropdown-item" href="../../../series-gha.html" rel="" target="">
  <span class="dropdown-text">GitHub Actions</span></a>
   </li>  
     </ul>
@@ -172,29 +144,29 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
         <li>
-    <a class="dropdown-item" href="../../talks/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../talks/index.html" rel="" target="">
  <span class="dropdown-text">All/Todas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../talks/en/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../talks/en/index.html" rel="" target="">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../talks/pt/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../talks/pt/index.html" rel="" target="">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../talks/es/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../talks/es/index.html" rel="" target="">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../quarto.html" rel="" target="">
+    <a class="nav-link" href="../../../quarto.html" rel="" target="">
  <span class="menu-text">Quarto Gallery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../videos.html" rel="" target="">
+    <a class="nav-link" href="../../../videos.html" rel="" target="">
  <span class="menu-text">Videos</span></a>
   </li>  
   <li class="nav-item">
@@ -221,241 +193,122 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Talks</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">[1] Explorando Dados com R e a Bea</h1>
+            <p class="subtitle lead">Onde a Bea compartilha textos, novidades, notícias sobre R, Ciência de Dados e a sua comunidade.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Newsletter</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 12, 2023</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Communities">Communities <span class="quarto-category-count">(3)</span></div><div class="category" data-category="GitHub">GitHub <span class="quarto-category-count">(2)</span></div><div class="category" data-category="GitHub Actions">GitHub Actions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R Markdown">R Markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R-Ladies">R-Ladies <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Reproducible Research">Reproducible Research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Talks">Talks <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Teaching">Teaching <span class="quarto-category-count">(3)</span></div><div class="category" data-category="gradethis">gradethis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="knitr">knitr <span class="quarto-category-count">(1)</span></div><div class="category" data-category="learnr">learnr <span class="quarto-category-count">(1)</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#novidades-na-comunidade" id="toc-novidades-na-comunidade" class="nav-link active" data-scroll-target="#novidades-na-comunidade">Novidades na comunidade:</a></li>
+  <li><a href="#atualizações-sobre-a-tradução-do-livro-r-for-data-science" id="toc-atualizações-sobre-a-tradução-do-livro-r-for-data-science" class="nav-link" data-scroll-target="#atualizações-sobre-a-tradução-do-livro-r-for-data-science">Atualizações sobre a tradução do livro “R for Data Science”:</a></li>
+  <li><a href="#conteúdo-em-destaque-produzido-pela-comunidade" id="toc-conteúdo-em-destaque-produzido-pela-comunidade" class="nav-link" data-scroll-target="#conteúdo-em-destaque-produzido-pela-comunidade">Conteúdo em destaque, produzido pela comunidade:</a></li>
+  <li><a href="#conteúdos-recentes-produzidos-por-mim" id="toc-conteúdos-recentes-produzidos-por-mim" class="nav-link" data-scroll-target="#conteúdos-recentes-produzidos-por-mim">Conteúdos recentes produzidos por mim:</a></li>
+  <li><a href="#próximas-atividades-e-cursos-que-estou-envolvida" id="toc-próximas-atividades-e-cursos-que-estou-envolvida" class="nav-link" data-scroll-target="#próximas-atividades-e-cursos-que-estou-envolvida">Próximas atividades e cursos que estou envolvida:</a></li>
+  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">Conclusão</a></li>
+  </ul>
+</nav>
     </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="GitHub,GitHub Actions" data-listing-date-sort="1667001600000" data-listing-file-modified-sort="1699831727506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../talks/en/2022-gha-rladies-abuja/index.html"> <img src="../../talks/en/2022-gha-rladies-abuja/featured.webp" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../talks/en/2022-gha-rladies-abuja/index.html">
-<h3 class="no-anchor listing-title">
-Running code while we’re sleeping - Introduction to GitHub Actions for R users
-</h3>
-<div class="listing-subtitle">
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../talks/en/2022-gha-rladies-abuja/index.html">
-<div class="listing-date">
-Oct 29, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Talks,GitHub Actions,GitHub" data-listing-date-sort="1658966400000" data-listing-file-modified-sort="1699831727518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../talks/en/2022-rstudio-conf/index.html"> <img src="../../talks/en/2022-rstudio-conf/featured.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../talks/en/2022-rstudio-conf/index.html">
-<h3 class="no-anchor listing-title">
-Making awesome automations with GitHub Actions
-</h3>
-<div class="listing-subtitle">
-rstudio::conf(2022)
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../talks/en/2022-rstudio-conf/index.html">
-<div class="listing-date">
-Jul 28, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Communities,Reproducible Research" data-listing-date-sort="1655683200000" data-listing-file-modified-sort="1699831727514" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../talks/en/2022-interview-reproducible-research-scout/index.html"> <img src="../../talks/en/2022-interview-reproducible-research-scout/featured.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../talks/en/2022-interview-reproducible-research-scout/index.html">
-<h3 class="no-anchor listing-title">
-Interview for the Reproducible Research Scout Youtube Channel
-</h3>
-<div class="listing-subtitle">
 
+
+
+<p>Olá!</p>
+<p>Boas vindas à newsletter “Explorando Dados com R e a Bea”, onde comento um pouco sobre novidades da comunidade de R, bem como compartilho conteúdos, etc.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.linkedin.com/newsletters/7129591797797797888/"><img src="NEWSLETTER.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../talks/en/2022-interview-reproducible-research-scout/index.html">
-<div class="listing-date">
-Jun 20, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Talks,learnr,Teaching,gradethis" data-listing-date-sort="1636502400000" data-listing-file-modified-sort="1699831727506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../talks/en/2021-learnr-latinr/index.html"> <img src="../../talks/en/2021-learnr-latinr/featured.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../talks/en/2021-learnr-latinr/index.html">
-<h3 class="no-anchor listing-title">
-Scaling feedback using learnr and gradethis in a introductory R course
-</h3>
-<div class="listing-subtitle">
-LatinR 2021
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../talks/en/2021-learnr-latinr/index.html">
-<div class="listing-date">
-Nov 10, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Communities,R-Ladies" data-listing-date-sort="1619568000000" data-listing-file-modified-sort="1699831727506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../talks/en/2021-experience-useR/index.html"> <img src="../../talks/en/2021-experience-useR/featured.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../talks/en/2021-experience-useR/index.html">
-<h3 class="no-anchor listing-title">
-My experience at useR 2019
-</h3>
-<div class="listing-subtitle">
-Meetup R-Ladies and useR 2021
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../talks/en/2021-experience-useR/index.html">
-<div class="listing-date">
-Apr 28, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Teaching" data-listing-date-sort="1600819200000" data-listing-file-modified-sort="1699831727494" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../talks/en/2020-RStudio-certification/index.html"> <img src="../../talks/en/2020-RStudio-certification/featured.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../talks/en/2020-RStudio-certification/index.html">
-<h3 class="no-anchor listing-title">
-Adding figures in R Markdown
-</h3>
-<div class="listing-subtitle">
-Teaching exam - RStudio
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../talks/en/2020-RStudio-certification/index.html">
-<div class="listing-date">
-Sep 23, 2020
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Talks,R-Ladies,Communities" data-listing-date-sort="1562803200000" data-listing-file-modified-sort="1699831727490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../talks/en/2019-user-rladies-sp/index.html"> <img src="../../talks/en/2019-user-rladies-sp/featured.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../talks/en/2019-user-rladies-sp/index.html">
-<h3 class="no-anchor listing-title">
-The evolution and importance of the R-Ladies São Paulo chapter in Brazil
-</h3>
-<div class="listing-subtitle">
-useR 2019
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../talks/en/2019-user-rladies-sp/index.html">
-<div class="listing-date">
-Jul 11, 2019
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="R Markdown,knitr,Teaching" data-listing-date-sort="1543968000000" data-listing-file-modified-sort="1699831727486" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../../talks/en/2018-knitr-codata/index.html"> <img src="../../talks/en/2018-knitr-codata/featured.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../../talks/en/2018-knitr-codata/index.html">
-<h3 class="no-anchor listing-title">
-Producing Reports with knitr and R
-</h3>
-<div class="listing-subtitle">
-CODATA-RDA School of Research Data Science
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../../talks/en/2018-knitr-codata/index.html">
-<div class="listing-date">
-Dec 5, 2018
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<center>
+<a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888" target="_blank">Assinar no LinkedIn</a>
+</center>
+<p>Para quem não me conhece:</p>
+<blockquote class="blockquote">
+<p>Olá! Eu sou uma <a href="https://education.rstudio.com/trainers/people/milz+beatriz/">instrutora de tidyverse certificada pela Posit/RStudio</a>, e eu ensino R na <a href="https://curso-r.com/">Curso-R</a>. Eu comecei a escrever textos sobre R em 2019. Eu sou ativa na comunidade de R no Brasil, participando da co-organização de comunidades e eventos, como: <a href="https://twitter.com/RLadiesSaoPaulo">R-Ladies São Paulo</a>, <a href="https://twitter.com/LatinR_Conf">Latin-R</a>, e <a href="https://twitter.com/satRdaySP">satRday São Paulo</a>. Eu faço doutorado na <a href="http://www.iee.usp.br/">Universidade de São Paulo</a>, em Ciências Ambientais. Minha pesquisa é sobre <strong>transparência de informações</strong> na <strong>gestão de recursos hídricos</strong> usados para abastecimento público na Macrometrópole Paulista.</p>
+</blockquote>
+<p>Vamos para as novidades! :D</p>
+<section id="novidades-na-comunidade" class="level3">
+<h3 class="anchored" data-anchor-id="novidades-na-comunidade">Novidades na comunidade:</h3>
+<ul>
+<li>Em outubro aconteceu o evento “<a href="https://latin-r.com/pt/"><strong>LatinR 2023</strong></a> <strong>-</strong> Conferência Latino-Americana sobre o Uso de R em Pesquisa e Desenvolvimento”. O evento aconteceu em Montevideu, no Uruguai, e contou com apresentações em inglês, português, e espanhol. Esse foi o primeiro encontro presencial da Latin-R desde que iniciou a pandemia de COVID-19 em 2020.&nbsp; A edição de 2024 será online, e a edição de 2025 será presencial (mas ainda não sabemos em qual país!).</li>
+</ul>
+</section>
+<section id="atualizações-sobre-a-tradução-do-livro-r-for-data-science" class="level3">
+<h3 class="anchored" data-anchor-id="atualizações-sobre-a-tradução-do-livro-r-for-data-science">Atualizações sobre a tradução do livro “R for Data Science”:</h3>
+<ul>
+<li><p>A segunda edição do livro “R for Data Science” está sendo traduzido para o português, de forma voluntária, por pessoas na comunidade de R. O projeto é liderado por mim, com a participação de muitas pessoas.&nbsp; É possível ler alguns capítulos que já foram traduzidos.&nbsp; Acesse em: <a href="https://cienciadedatos.github.io/pt-r4ds/" class="uri">https://cienciadedatos.github.io/pt-r4ds/</a></p></li>
+<li><p>O destaque é o capítulo “Visualização de dados”, traduzido pelo Bruno Mioto onde os autores do livro apresentam uma introdução ao pacote ggplot2. Acesse em: <a href="https://cienciadedatos.github.io/pt-r4ds/data-visualize.html" class="uri">https://cienciadedatos.github.io/pt-r4ds/data-visualize.html</a></p></li>
+</ul>
+</section>
+<section id="conteúdo-em-destaque-produzido-pela-comunidade" class="level3">
+<h3 class="anchored" data-anchor-id="conteúdo-em-destaque-produzido-pela-comunidade">Conteúdo em destaque, produzido pela comunidade:</h3>
+<ul>
+<li>No video “Como organizar seu banco de dados para análises estatísticas”, Fernanda Peres compartilha várias dicas importantes para organizar os seus dados. O vídeo não foca em R, e é interessante para todas as pessoas que lidam com dados:&nbsp; <a href="https://www.youtube.com/watch?v=wzfPR2oQ61A">Como organizar seu banco de dados para análises estatísticas</a>.</li>
+</ul>
+</section>
+<section id="conteúdos-recentes-produzidos-por-mim" class="level3">
+<h3 class="anchored" data-anchor-id="conteúdos-recentes-produzidos-por-mim">Conteúdos recentes produzidos por mim:</h3>
+<ul>
+<li><p>Na aMostra de Estatística IME USP, eu e a Tereza Lacerda (que trabalha comigo na Curso-R) apresentamos um workshop chamado “Indo além na organização de dados usando o R com tidyverse”.&nbsp; Os slides estão disponíveis em: <a href="https://curso-r.github.io/aMostra2023-organizacao-dados/" class="uri">https://curso-r.github.io/aMostra2023-organizacao-dados/</a>, e o código código usado na parte prática em: <a href="https://github.com/curso-r/aMostra2023-organizacao-dados/blob/main/pratica-editada.R" class="uri">https://github.com/curso-r/aMostra2023-organizacao-dados/blob/main/pratica-editada.R</a></p></li>
+<li><p>No “1º Seminário Interdisciplinar em Ciência de Dados LInDA (I SINCID LINDA)”, que aconteceu na Universidade Estadual Paulista (UNESP) - Campus Bauru, fiz uma apresentação chamada “Apresentando os resultados com R”, abordando principalmente o Quarto! Os slides estão disponíveis em: <a href="https://beatrizmilz.github.io/2023-10-1-sincid-linda-unesp/" class="uri">https://beatrizmilz.github.io/2023-10-1-sincid-linda-unesp/</a> . Agradecimentos especiais à Lívia Inglesis Barcellos, João Pedro Albino e Laboratório de Inteligência de Dados (LInDa) pela organização!</p></li>
+</ul>
+</section>
+<section id="próximas-atividades-e-cursos-que-estou-envolvida" class="level3">
+<h3 class="anchored" data-anchor-id="próximas-atividades-e-cursos-que-estou-envolvida">Próximas atividades e cursos que estou envolvida:</h3>
+<ul>
+<li><p>No dia 24 de novembro, participarei do <strong>R Day Colombia</strong>, de forma remota, apresentando sobre o pacote purrr. Essa apresentação será em inglês. Saiba mais em: <a href="https://rday-colombia.github.io/2023/" class="uri">https://rday-colombia.github.io/2023/</a></p></li>
+<li><p>No dia 27 de novembro inicia o laboratório “<strong>Análise quantitativa de texto</strong>”, que ministrarei no cebrap.lab. Neste laboratório, utilizaremos a abordagem apresentada por Julia Silge e David Robinson no livro&nbsp; “Text Mining with R: A Tidy Approach” para analisar dados textuais. Saiba mais em: <a href="https://cebrap.org.br/cebrap-lab/" class="uri">https://cebrap.org.br/cebrap-lab/</a></p></li>
+<li><p>Também no final de novembro inicia o curso “<strong>Relatórios e apresentações automáticas</strong>” na Curso-R, que será ministrado por mim e pelo Julio Trecenti. Recentemente, o curso foi reformulado para tratar sobre como criar relatórios e apresentações usando o Quarto: <a href="https://loja.curso-r.com/relatorios-e-apresentacoes-automaticas.html" class="uri">https://loja.curso-r.com/relatorios-e-apresentacoes-automaticas.html</a></p></li>
+</ul>
+</section>
+<section id="conclusão" class="level3">
+<h3 class="anchored" data-anchor-id="conclusão">Conclusão</h3>
+<p>Espero que tenha gostado da newsletter. Se foi interessante para você, me ajude compartilhando o conteúdo, e siga a newsletter para receber as próximas edições!</p>
+<p>Obrigada, e até a próxima :D</p>
+<p>Bea Milz</p>
+<p><a href="https://beamilz.com/" class="uri">https://beamilz.com/</a></p>
+<center>
+<a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888" target="_blank">Assinar no LinkedIn</a>
+</center>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -703,6 +556,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -737,5 +592,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
