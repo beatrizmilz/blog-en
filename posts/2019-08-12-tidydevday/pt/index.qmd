@@ -62,7 +62,7 @@ Para quem estava participando pela primeira vez eram recomendadas as issues de d
 
 Eu nunca desenvovi um pacote, e ao chegar no evento nem sabia como pacotes eram estruturados. Na [issue que eu escolhi](https://github.com/tidyverse/dplyr/issues/3698), o objetivo era para melhorar uma mensagem de erro da função `filter()`, do pacote [`dplyr`](https://dplyr.tidyverse.org/), para que a mensagem estivesse de acordo com o [style guide do tidyverse](https://style.tidyverse.org/). ![](https://i.imgur.com/VYgvY7k.jpg)
 
-**Legenda:** Foto da issue que estava trabalhando, e também da moeda especial que recebemos, por [\@Bea_Milz](https://twitter.com/Bea_Milz).
+**Legenda:** Foto da issue que estava trabalhando, e também da moeda especial que recebemos, por [\@Bea_Milz](https://www.linkedin.com/in/beatrizmilz/).
 
 Inicialmente, eu fiz o fork do repositório do dplyr, o clone no meu computador, e fiquei sem saber o que fazer depois. Eu não sabia em qual diretório ficavam as funções, estava com receio de alterar algo e causar algum erro em outras funções do pacote... Mas ainda bem que tive ajuda! A [Ildi Czeller](https://ildiczeller.com/) me mostrou em qual diretório as funções estavam (aliás, é no `/R`), e e então consegui encontrar o arquivo que precisava alterar, e qual parte do código era correspondente à função `filter()`. Uma coisa que conheci no evento e foi muito interessante é o conceito de testes, pois tive que alterar o teste referente à mensagem de erro que eu estava trabalhando.
 

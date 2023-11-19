@@ -13,13 +13,10 @@ website:
     right:
       - icon: github
         href: https://github.com/beatrizmilz/
-      - icon: twitter
-        href: https://twitter.com/BeaMilz
+      - icon: linkedin
+        href: https://www.linkedin.com/in/beatrizmilz/
       - icon: envelope
         href: mailto:milz.bea@gmail.com
-  twitter-card:
-    creator: "@beamilz"
-    card-style: summary_large_image
   navbar:
     right:
       - about.qmd
@@ -54,8 +51,8 @@ website:
         href: https://beatrizmilz.github.io/resume/index.pdf
       - icon: github
         href: https://github.com/beatrizmilz/blog-en
-      - icon: twitter
-        href: https://twitter.com/BeaMilz
+      - icon: linkedin
+        href: https://www.linkedin.com/in/beatrizmilz/
 
 format:
   html:

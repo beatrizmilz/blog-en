@@ -14,9 +14,9 @@ about:
     - icon: github
       text: GitHub
       href: https://github.com/beatrizmilz
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/BeaMilz      
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/beatrizmilz/  
 ---
 
 <center>
@@ -36,7 +36,7 @@ Soy [instructora de tidyverse certificada por RStudio](https://education.rstudio
 
 Empecé a escribir textos sobre R en 2019.
 
-Soy activa en la comunidad R en Brasil, participando en la coorganización de comunidades y eventos, como: [R-Ladies São Paulo](https://twitter.com/RLadiesSaoPaulo), [Latin-R](https://twitter.com/LatinR_Conf), y [satRday São Paulo](https://twitter.com/satRdaySP).
+Soy activa en la comunidad R en Brasil, participando en la coorganización de comunidades y eventos, como: [R-Ladies São Paulo](https://rladies-sp.org/), [Latin-R](https://latin-r.com/), y [satRday São Paulo](https://saopaulo2019.satrdays.org/).
 
 Estoy haciendo un doctorado en la [Universidad de São Paulo](http://www.iee.usp.br/), en Ciencias Ambientales.
 Mi investigación trata sobre la **transparencia de la información** en la **gestión de los recursos hídricos** utilizados para el abastecimiento público en la Macrometrópolis de São Paulo.

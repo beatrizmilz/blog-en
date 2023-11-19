@@ -80,7 +80,7 @@ For those who were already more familiar with package development, they recommen
 
 By the time of the event, I have not developed a package yet. So when I arrived at the event, I didn't knew how packages were structured. In the [issue I chose](https://github.com/tidyverse/dplyr/issues/3698)to work on, the goal was to improve an error message from the function [`dplyr::filter()`](https://dplyr.tidyverse.org/), so that the message would conform to the [tidyverse style guide](https://style.tidyverse.org/). ![](https://i.imgur.com/VYgvY7k.jpg)
 
-**Caption:** Photo of the issue I was working on and the unique coin we received that day. Photo by [\@Bea_Milz](https://twitter.com/Bea_Milz).
+**Caption:** Photo of the issue I was working on and the unique coin we received that day. Photo by [\@Bea_Milz](https://beamilz.com/).
 
 Initially, I forked the dplyr repository, cloned it to my computer, and did not know what to do next.
 
@@ -141,4 +141,4 @@ It was an excellent opportunity to meet new people too! And to meet many people 
 
 ![](https://i.imgur.com/oWtQFxi.jpg)
 
-**Caption:** Angelica and Bea showing the issues that they were working on tidy-dev-day. Photo by [AngCustodio](https://twitter.com/angcustodio).
+**Caption:** Angelica and Bea showing the issues that they were working on tidy-dev-day. Photo by [Angélica Custódio](https://www.linkedin.com/in/angelicacustodio/).
