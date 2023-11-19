@@ -8,3 +8,10 @@ README.html
 .Renviron
 env/
 /env/
+_site/
+_freeze/
+README_files/
+site_libs/
+.quarto/
+.quarto/preview/
+.quarto/idx/
