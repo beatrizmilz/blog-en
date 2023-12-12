@@ -1,0 +1,41 @@
+---
+title: "Pesquisa"
+---
+
+## Formação
+
+-   (2019-Atualmente) - Doutorado em Ciências Ambientais, Universidade de São Paulo, Brasil
+
+-   (2016-2018) - Mestrado em Ciências, no Programa de Pós-graduação em Análise Ambiental Integrada, na UNIFESP - Campus Diadema.
+
+
+-  (2012-2015) - Graduação em Gestão Ambiental, na EACH/USP.
+
+
+## Áreas de interesse
+
+-   Recursos hídricos
+
+-   Transparência e acesso à informação
+
+-   Governança da água
+
+-   Ciência de dados aplicado à ciências ambientais
+
+## Grupos de pesquisa
+
+-   (2019-Atualmente) - [Grupo de Acompanhamento e Estudos em Governança Ambiental](https://sites.usp.br/govamb/pagina-2/)
+
+-   (2019-2021) - [GovernAgua -- Transforming water governance in South America: from reaction to adaptation and anticipation](https://saras-institute.org/governagua-transforming-water-governance-in-south-america-from-reaction-to-adaptation-and-anticipation/) - Agência Financiadora: Inter-American Institute for Global Change Research (IAI)
+
+-   (2018-2022) - [MacroAmb: Governança Ambiental da Macrometrópole Paulista face à variabilidade climática](https://pesquisa.ufabc.edu.br/macroamb/governanca-de-saneamento-ambiental-e-analises-das-vulnerabilidades-na-macrometropole-paulista/) - Projeto temático FAPESP nº 2015-03804-9
+
+## Publicações
+
+A ferramenta abaixo apresenta alguns estudos, porém está desatualizada. 
+
+Em breve será atualizada.
+
+<iframe src="https://beatriz-milz.shinyapps.io/shinyresume/" width="100%" height="600px" style="border:none;">
+
+</iframe>

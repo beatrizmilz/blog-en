@@ -47,6 +47,10 @@ website:
             href: talks/pt/index.qmd
           - text: Español
             href: talks/es/index.qmd
+      - text: Research
+        menu:
+          - text: Português
+            href: research/index.qmd
 #      - quarto.qmd
 #      - videos.qmd
       - text: Resume
