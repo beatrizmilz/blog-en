@@ -18,22 +18,22 @@ toc: true
 
 ## Next activities / Próximas atividades
 
-### Eventos/Events
+<!-- ### Eventos/Events -->
 
--   24 de novembro de 2023 - Medellín, Colombia - [R Day Colombia](https://rday-colombia.github.io/2023/)
+<!-- -   24 de novembro de 2023 - Medellín, Colombia - [R Day Colombia](https://rday-colombia.github.io/2023/) -->
 
-### Cursos/Courses
+<!-- ### Cursos/Courses -->
 
--   2023 - Cursos na [Curso-R](https://curso-r.com/).
-    -   [Formulário de bolsas de diversidade](https://forms.gle/KpALbhvHXu9aVKXTA).
-    -   [Os materiais dos cursos estão disponíveis online](https://curso-r.com/material/).
--   2023 - Cursos no [CEBRAP.lab](https://cebrap.org.br/cebrap-lab/):
-    -   Introdução a linguagem de programação R
-    -   Visualização de dados no R
-    -   Análise quantitativa de texto
+<!-- -   2023 - Cursos na [Curso-R](https://curso-r.com/). -->
+<!--     -   [Formulário de bolsas de diversidade](https://forms.gle/KpALbhvHXu9aVKXTA). -->
+<!--     -   [Os materiais dos cursos estão disponíveis online](https://curso-r.com/material/). -->
+<!-- -   2023 - Cursos no [CEBRAP.lab](https://cebrap.org.br/cebrap-lab/): -->
+<!--     -   Introdução a linguagem de programação R -->
+<!--     -   Visualização de dados no R -->
+<!--     -   Análise quantitativa de texto -->
 -   2024 - Janeiro/Fevereiro - [Curso de verão no IME/USP - Relatórios reprodutíveis em R](https://www.ime.usp.br/~verao/). Materiais: [2022](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/trabalho_final.html), [2023](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/).
 
-## Invitations / Convites
+## Invitations
 
 Unfortunately, I'm not accepting new invitations until June/2024 (or until I defend my PhD).
 
