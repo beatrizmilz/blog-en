@@ -5,11 +5,11 @@ project:
 
 website:
   page-navigation: true
-  title: "Bea Milz"
+  title: "Beatriz Milz"
   site-url: "https://beamilz.com/"
   google-analytics: "G-2J79YYG9CZ"
   page-footer:
-    left: "Blog made with 💜 and [Quarto](https://quarto.org/), by Beatriz Milz. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+    left: "Website made with [Quarto](https://quarto.org/), by Beatriz Milz. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
     right:
       - icon: github
         href: https://github.com/beatrizmilz/
@@ -19,7 +19,14 @@ website:
         href: mailto:milz.bea@gmail.com
   navbar:
     right:
-      - about.qmd
+      - text: About
+        menu:
+          - text: English
+            href: about.qmd
+          - text: Português
+            href: about-pt.qmd
+          - text: Español
+            href: about-es.qmd
       - text: Posts
         menu:
           - text: All posts
@@ -30,11 +37,6 @@ website:
             href: posts/pt.qmd
           - text: Español
             href: posts/es.qmd
-
-      - text: Series
-        menu:
-          - text: GitHub Actions
-            href: series-gha.qmd
       - text: Talks
         menu:
           - text: All/Todas
@@ -45,8 +47,8 @@ website:
             href: talks/pt/index.qmd
           - text: Español
             href: talks/es/index.qmd
-      - quarto.qmd
-      - videos.qmd
+#      - quarto.qmd
+#      - videos.qmd
       - text: Resume
         href: https://beatrizmilz.github.io/resume/index.pdf
       - icon: github
@@ -57,8 +59,9 @@ website:
 format:
   html:
     smooth-scroll: true
-    theme: journal
-    css: styles.css
+    theme:
+      - pulse
+      - custom.scss
     link-external-icon: false
     link-external-newwindow: true
     link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/**'

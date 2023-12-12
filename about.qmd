@@ -22,20 +22,17 @@ about:
 <center>
 
 ::: {.btn-group role="group" aria-label="About"}
-<a href="about.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> <a href="about-pt.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">Português</button></a>   <a href="about-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
+<a href="about.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> <a href="about-pt.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">Português</button></a> <a href="about-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
 :::
 
 </center>
 
 ::: {#hero-heading}
-Hi!
-My name is Beatriz, and I am a R-Lady from Brazil 🇧🇷 💜.
+Hi! My name is Beatriz, and I am a R-Lady from Brazil 🇧🇷 💜.
 
 I'm a [tidyverse instructor certified by RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/), and I teach R at [Curso-R](https://curso-r.com/).
 
-I have been writing about R in my blog since 2019.
-I'm mostly active in the Brazilian R community, co-organizing communities and events, such as:  [R-Ladies São Paulo](https://rladies-sp.org/), [Latin-R](https://latin-r.com/), and [satRday São Paulo](https://saopaulo2019.satrdays.org/).
+I have been writing about R in my blog since 2019. I'm mostly active in the Brazilian R community, co-organizing communities and events, such as: [R-Ladies São Paulo](https://rladies-sp.org/), [Latin-R](https://latin-r.com/), and [satRday São Paulo](https://saopaulo2019.satrdays.org/).
 
-I'm a PhD Candidate at the [University of São Paulo](http://www.iee.usp.br/), in Environmental Sciences.
-My research is about **transparency of information** in the **management of water resources** that are used to supply the Macrometropolis of Sao Paulo.
+I'm a PhD Candidate at the [University of São Paulo](http://www.iee.usp.br/), in Environmental Sciences. My research is about **transparency of information** in the **management of water resources** that are used to supply the Macrometropolis of Sao Paulo.
 :::
