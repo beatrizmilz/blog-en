@@ -1,0 +1,40 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz e Laís Brasileiro
+categories: Workshop
+date: '2023-12-12'
+event: Meetup R-Ladies São Paulo
+event_url: https://www.meetup.com/pt-BR/rladies-sao-paulo/
+links:
+- icon: images
+  icon_pack: far
+  name: Materiais
+  url: https://r-ladies-sao-paulo.github.io/2023-12-dados-espaciais/
+- icon: github
+  icon_pack: fab
+  name: Códigos
+  url: https://github.com/r-ladies-sao-paulo/2023-12-dados-espaciais
+- icon: youtube
+  icon_pack: fab
+  name: Gravação
+  url: https://www.youtube.com/watch?v=B5VoI9d9Dm8
+location: Online
+title: Trabalhando com dados espaciais no R
+image: featured-sf.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+## Video
+
+<center>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/B5VoI9d9Dm8?si=nyJFV9CCd9MDPCj1&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</center>
