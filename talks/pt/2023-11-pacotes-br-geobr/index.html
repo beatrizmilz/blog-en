@@ -5,8 +5,8 @@
 <meta name="generator" content="quarto-1.3.450">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
-<meta name="dcterms.date" content="2019-08-21">
-<title>Beatriz Milz - Desenvolvendo meu primeiro Shiny App</title>
+<meta name="dcterms.date" content="2023-11-22">
+<title>Beatriz Milz - Conhecendo o pacote geobr</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -167,93 +167,52 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Desenvolvendo meu primeiro Shiny App</h1>
-            <p class="subtitle lead">O objetivo deste post é compartilhar um pouco sobre a minha experiência no desenvolvimento do meu primeiro Shiny App.</p>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Shiny</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Beatriz Milz </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">August 21, 2019</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
-   
-  <ul>
-<li><a href="#aprendendo-sobre-o-pacote-shiny" id="toc-aprendendo-sobre-o-pacote-shiny" class="nav-link active" data-scroll-target="#aprendendo-sobre-o-pacote-shiny">Aprendendo sobre o pacote Shiny</a></li>
-  <li><a href="#desenvolvimento" id="toc-desenvolvimento" class="nav-link" data-scroll-target="#desenvolvimento">Desenvolvimento</a></li>
-  <li><a href="#pr%C3%B3ximas-etapas" id="toc-próximas-etapas" class="nav-link" data-scroll-target="#pr%C3%B3ximas-etapas">Próximas etapas</a></li>
-  </ul></nav>
+        
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="aprendendo-sobre-o-pacote-shiny" class="level2"><h2 class="anchored" data-anchor-id="aprendendo-sobre-o-pacote-shiny">Aprendendo sobre o pacote Shiny</h2>
-<p>O objetivo deste post é compartilhar um pouco sobre a <strong>minha</strong> experiência no desenvolvimento do meu primeiro <a href="https://shiny.rstudio.com/">Shiny App</a>. O Shiny é um pacote do <code>R</code> utilizado para desenvolver web apps interativos. Exemplos de Shiny Apps estão disponíveis <a href="https://shiny.rstudio.com/gallery/">nessa página</a>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/thumbs/shiny.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Hex Logo do pacote Shiny</figcaption></figure>
-</div>
-</div>
-</div>
-<p>Quando conheci o Shiny, fiquei encantada. Parecia uma ótima forma de comunicar os dados interativamente, com as pessoas que não necessariamente conhecem o <code>R</code>. Então no começo do ano de 2019 coloquei como meta: gostaria de começar a aprender como usar esse pacote.</p>
-<p>No evento <a href="http://ser.uff.br/">IV SER - IV Internacional Seminar on Statistics with R</a> tive a oportunidade de assistir um <a href="https://github.com/daattali/shiny-mini-workshop">workshop sobre shiny</a>, oferecido pelo <a href="https://deanattali.com/">Dean Attali</a>, que é consultor Shiny e uma referência no tema! Foi um ótimo workshop e fiquei bem feliz de conseguir acompanhar os exercícios.</p>
-<p>Quando voltei do evento, não queria parar de estudar e praticar o que comecei a aprender. Então recebi um email da <a href="https://www.curso-r.com/">Curso-R</a> comunicando que havia turma aberta para o curso de <a href="https://www.curso-r.com/cursos/dashboards/">Dashboards com R</a>. Eu já havia participado de dois cursos da Curso-R (Introdução à programação em R e Webscrapping em R), e sabia que os cursos oferecidos eram muito bons. Então fiz a inscrição, e no mês de junho foram três sábados de estudos e bastante prática com Shiny! Recomendo muito o curso, os professores são muito bons.</p>
-</section><section id="desenvolvimento" class="level2"><h2 class="anchored" data-anchor-id="desenvolvimento">Desenvolvimento</h2>
-<p>Esse post é uma continuação do post <a href="https://beatrizmilz.com/2019/07/04/pesquisa-periodicos/">Ferramenta para Pesquisa de Periódicos</a>, onde descrevi o Shiny App que criei, mas agora o foco é relatar um pouco o processo de desenvolvimento. Todos os códigos estão disponíveis <a href="https://github.com/beatrizmilz/QualisCAPES">neste repositório no Github</a>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="https://beatrizmilz.com/img/periodicos_exemplo.gif" class="img-fluid figure-img" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Exemplo de uso - <a href="https://beatriz-milz.shinyapps.io/pesquisa_periodicos/">Página para Pesquisa de Periódicos</a></p>
-<p>Os dados foram obtidos no website da <a href="https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf">CAPES</a>. A página permite o download de uma tabela contendo o ISSN, título do periódico, área de avaliação e a nota na respectiva área. Utilizei os dados da avaliação mais recente disponível em junho/2019: 2013-2016.</p>
-<p>A IDE que utilizei foi o <a href="https://www.rstudio.com/">RStudio</a>, e os pacotes que usados foram:</p>
-<ul>
-<li><p><a href="https://shiny.rstudio.com/">shiny</a> - usado para criar a plataforma interativa;</p></li>
-<li><p><a href="https://rstudio.github.io/shinydashboard/">shinydashboard</a> - permite fazer dashboards com o shiny. Com a ajuda de <code>CSS</code>, consegui personalizar as cores do meu dashboard;</p></li>
-<li><p><a href="https://dreamrs.github.io/shinyWidgets/index.html">shinyWidgets</a> - oferece inputs diferentes, utilizei o <code>sliderTextInput()</code>.</p></li>
-<li><p><a href="https://rstudio.github.io/DT/">DT</a> - esse pacote permite usar tabelas no R utilizando a biblioteca JavaScript <a href="https://datatables.net/">DataTables</a>.</p></li>
-<li><p><a href="https://www.tidyverse.org/">tidyverse</a> - readr, dplyr, purrr e stringr - usei os pacotes que fazem parte do tidyverse em diversas etapas do processo, como ler a base de dados, filtrar, manipular, alterar, entre outros;</p></li>
-<li><p><a href="https://cran.r-project.org/web/packages/janitor/janitor.pdf">janitor</a> - usei a função <code>janitor::clean_names()</code> , que permite alterar nome de todas as colunas da base de dados, deixando-as no padrão <code>snake_case</code>.</p></li>
-</ul>
-<p>O deploy foi feito gratuitamente no <a href="https://www.shinyapps.io/">shinyapps.io</a>, diretamente do RStudio!</p>
-<p>A maior <strong>dificuldade</strong> que tive com esse dashboard foi o filtro que gera a tabela. Inicialmente, ele não resultava o que eu precisava… eu fiquei cerca de duas semanas com esse problema, até que levei para os professores da Curso-R na última aula. Agradeço imensamente ao <a href="https://github.com/jtrecenti">Julio Trecenti</a> e ao <a href="https://github.com/williamorim">William Amorim</a>, que solucionaram o problema! Sem a ajuda que recebi, esse Shiny App ainda estaria apenas no meu computador…</p>
-<p>Por outro lado, é muito gratificante ver tudo funcionando, ter ideias e conseguir implementá-las! Mostrei para algumas pessoas, que deram feedbacks sobre as dificuldades que tiveram ao utilizar a página. Isso foi muito importante também para aprimorar o Shiny App.</p>
-</section><section id="próximas-etapas" class="level2"><h2 class="anchored" data-anchor-id="próximas-etapas">Próximas etapas</h2>
-<p>Algumas pessoas sugeriram algumas melhorias que dependem de dados que não estão nessa base disponibilizada pela CAPES. Considerando que a nova avaliação do Qualis será disponibilizada nos próximos meses, e existem notícias de que essa avaliação será unificada (cada periódico terá apenas uma nota geral, e não uma nota por área de avaliação), achei melhor esperar os resultados do novo Qualis para então pensar nas possibilidades de atualização e melhoria deste Shiny App.</p>
-<p>Sobre o aprendizado de Shiny, eu gostaria de praticar mais. Já tenho uma ideia para um próximo Shiny App, agora o que falta é ter tempo para isso. Além disso, gostaria de aprender a utilizar o pacote <a href="https://github.com/ThinkR-open/golem"><code>golem</code></a>, e a deixar meus Apps disponíveis em outras plataformas, como por exemplo na <a href="https://aws.amazon.com/pt/">AWS</a> ou <a href="https://www.digitalocean.com">Digital Ocean</a>.</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Conhecendo o pacote geobr</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Meetup</div>
+  </div>
+  </div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Beatriz Milz </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 22, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header><script src="https://kit.fontawesome.com/1bb720cc6f.js" crossorigin="anonymous"></script><b>Evento: </b>Meetup R-Ladies São Paulo<br><b>Link do evento:</b> <a href="https://www.meetup.com/pt-BR/rladies-sao-paulo/">https://www.meetup.com/pt-BR/rladies-sao-paulo/</a><br><b>Lugar: </b>Online<br><h2 class="anchored">
+Materiais
+</h2>
+<br><center>
+<a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-geobr.html" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Materiais</button></a> <a href="https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Material completo do evento</button></a> <a href="https://github.com/R-Ladies-Sao-Paulo/2023-11-pacotes-br" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-brands fa-github"></i> Códigos</button></a> <br><br><img src="featured.png" class="img-fluid quarto-figure-center" style="max-width:80%"><br>
+</center>
+
+
+
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
