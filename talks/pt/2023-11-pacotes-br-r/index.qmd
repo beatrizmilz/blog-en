@@ -1,0 +1,32 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz
+categories: Meetup
+date: '2023-11-22'
+event: Meetup R-Ladies São Paulo
+event_url: https://www.meetup.com/pt-BR/rladies-sao-paulo/
+links:
+- icon: images
+  icon_pack: far
+  name: Materiais
+  url: https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/slide-pacotes-br.html
+- icon: images
+  icon_pack: far
+  name: Material completo do evento
+  url: https://r-ladies-sao-paulo.github.io/2023-11-pacotes-br/
+- icon: github
+  icon_pack: fab
+  name: Códigos
+  url: https://github.com/R-Ladies-Sao-Paulo/2023-11-pacotes-br
+location: Online
+title: Pacotes em R de dados brasileiros
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
