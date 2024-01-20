@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
-<meta name="dcterms.date" content="2021-03-07">
 <title>Beatriz Milz - Conhecendo o pacote bibliometrix</title>
 <style>
 code{white-space: pre-wrap;}
@@ -97,16 +96,16 @@ div.csl-indent {
   "type": "overlay",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
@@ -125,8 +124,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <span class="navbar-title">Beatriz Milz</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -235,16 +234,16 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">Autor</div>
       <div class="quarto-title-meta-contents">
                <p>Beatriz Milz </p>
             </div>
     </div>
       
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 7, 2021</p>
+        <p class="date">7 de março de 2021</p>
       </div>
     </div>
     
@@ -256,7 +255,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
    
   <ul>
 <li><a href="#introdu%C3%A7%C3%A3o" id="toc-introdução" class="nav-link active" data-scroll-target="#introdu%C3%A7%C3%A3o">Introdução</a></li>
@@ -287,7 +286,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>Olá! Eu costumo demorar bastante para escrever cada texto que adiciono neste blog, então consequentemente o blog demora <strong>muito</strong> para receber atualizações.</p>
 <p>Portanto, esse post será um pouco diferente dos posts anteriores! Será mais curtinho e simples, e <strong>não</strong> será um conteúdo completo, assim consigo postar o que é possível neste momento (e quem sabe faço os posts parte 2, 3, 4.. futuramente).</p>
 <p>Dito isso, eu comecei a escrever este post enquanto estudava o pacote <a href="https://bibliometrix.org/"><code>{bibliometrix}</code></a>. Eu estou estudando este pacote para utilizar na minha pesquisa, e provavelmente ainda ficarei estudando por um tempo, já que o mesmo tem muitas possibilidades. Este post servirá de registro do que aprendi até agora, e talvez eu o atualize ao longo do tempo!</p>
-<p>O <a href="https://bibliometrix.org/"><code>{bibliometrix}</code></a> <span class="citation" data-cites="bibliometrix2017 R-bibliometrix">(<a href="#ref-bibliometrix2017" role="doc-biblioref">Aria and Cuccurullo 2017</a>, <a href="#ref-R-bibliometrix" role="doc-biblioref">2022</a>)</span> é um pacote que oferece ferramentas para realizar análises bibliométricas. Os tutoriais que o pacote oferece são muito interessantes e foi essencial utilizar o pacote com <a href="https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html">este tutorial</a> aberto em outra aba!</p>
+<p>O <a href="https://bibliometrix.org/"><code>{bibliometrix}</code></a> <span class="citation" data-cites="bibliometrix2017 R-bibliometrix">(<a href="#ref-bibliometrix2017" role="doc-biblioref">Aria e Cuccurullo 2017</a>, <a href="#ref-R-bibliometrix" role="doc-biblioref">2022</a>)</span> é um pacote que oferece ferramentas para realizar análises bibliométricas. Os tutoriais que o pacote oferece são muito interessantes e foi essencial utilizar o pacote com <a href="https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html">este tutorial</a> aberto em outra aba!</p>
 </section><section id="obtendo-as-bases-de-dados" class="level2"><h2 class="anchored" data-anchor-id="obtendo-as-bases-de-dados">Obtendo as bases de dados</h2>
 <p>Antes de começar a usar o bibliometrix, é necessário obter as bases de dados que serão utilizadas. Neste exemplo, eu testei com dados obtidos nos repositórios <a href="https://www.scopus.com/">Scopus</a> e <a href="http://login.webofknowledge.com/">Web of Science</a>, sendo que o acesso foi feito através do “Acesso CAFe” no <a href="https://www-periodicos-capes-gov-br.ezl.periodicos.capes.gov.br/">Portal de Periódicos da Capes</a>.</p>
 <p>Para testar o pacote (e escrever este post), realizei a busca de artigos com uma <em>query</em> genérica (não é a que eu utilizarei na minha pesquisa), para fins didáticos.</p>
@@ -332,7 +331,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>Primeiramente vamos carregar alguns pacotes utilizados:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'dplyr'</code></pre>
@@ -347,7 +346,7 @@ Attaching package: 'dplyr'</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://www.bibliometrix.org">bibliometrix</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://www.bibliometrix.org">bibliometrix</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>To cite bibliometrix in publications, please use:
 
@@ -375,7 +374,7 @@ biblioshiny()</code></pre>
 <div class="cell">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_scopus</span> <span class="op">&lt;-</span> <span class="fu">bibliometrix</span><span class="fu">::</span><span class="fu">convert2df</span><span class="op">(</span><span class="st">"dados/scopus.bib"</span>,</span>
 <span>                                         dbsource <span class="op">=</span> <span class="st">"scopus"</span>,</span>
-<span>                                         format <span class="op">=</span> <span class="st">"bibtex"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>                                         format <span class="op">=</span> <span class="st">"bibtex"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Converting your scopus collection into a bibliographic dataframe
@@ -393,7 +392,7 @@ Generating affiliation field tag AU_UN from C1:  Done!</code></pre>
 <span><span class="va">arquivos_wos</span> <span class="op">&lt;-</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/list.files.html">list.files</a></span><span class="op">(</span><span class="st">"dados"</span>, pattern <span class="op">=</span> <span class="st">"^savedrecs_"</span>, full.names <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">arquivos_wos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">arquivos_wos</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "dados/savedrecs_1_500.bib"      "dados/savedrecs_1000_final.bib"
 [3] "dados/savedrecs_501_1000.bib"  </code></pre>
@@ -403,7 +402,7 @@ Generating affiliation field tag AU_UN from C1:  Done!</code></pre>
 <span></span>
 <span><span class="va">dados_wos</span> <span class="op">&lt;-</span> <span class="fu">bibliometrix</span><span class="fu">::</span><span class="fu">convert2df</span><span class="op">(</span><span class="va">arquivos_wos</span>,</span>
 <span>                                      dbsource <span class="op">=</span> <span class="st">"wos"</span>,</span>
-<span>                                      format <span class="op">=</span> <span class="st">"bibtex"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>                                      format <span class="op">=</span> <span class="st">"bibtex"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Converting your wos collection into a bibliographic dataframe
@@ -418,18 +417,18 @@ Generating affiliation field tag AU_UN from C1:  Done!</code></pre>
 <div class="cell">
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_brutos</span> <span class="op">&lt;-</span></span>
 <span>  <span class="fu">bibliometrix</span><span class="fu">::</span><span class="fu">mergeDbSources</span><span class="op">(</span><span class="va">dados_scopus</span>, <span class="va">dados_wos</span>,</span>
-<span>                               remove.duplicated <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>                               remove.duplicated <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
  1015 duplicated documents have been removed</code></pre>
 </div>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Obrigada beholdersaltitante!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Obrigada beholdersaltitante!</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Os dados exportados retornaram diferentes tipos de trabalhos, como editoriais, erratas, etc. Neste caso, quero apenas que ARTIGOS sejam mantidos na análise:</p>
 <div class="cell">
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Quais tipos de trabalhos existem na base?</span></span>
 <span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">dados_brutos</span>, <span class="va">DT</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>row.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>row.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <thead><tr class="header">
@@ -499,11 +498,11 @@ Generating affiliation field tag AU_UN from C1:  Done!</code></pre>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Filtraremos apenas os artigos NA BASE</span></span>
 <span></span>
 <span>  <span class="va">dados</span> <span class="op">&lt;-</span> <span class="va">dados_brutos</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">DT</span> <span class="op">==</span> <span class="st">"ARTICLE"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">DT</span> <span class="op">==</span> <span class="st">"ARTICLE"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Pronto! Agora temos a base preparada. O significado do nome das colunas pode ser conferido na documentação do pacote.</p>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,176
 Columns: 32
@@ -544,11 +543,11 @@ $ SR       &lt;chr&gt; "JOHNS C, 2021, ENVIRON SUSTAIN IND", "SAN JUAN MESONADA 
 </section><section id="funções-do-bibliometrix-para-analisar-os-dados" class="level3"><h3 class="anchored" data-anchor-id="funções-do-bibliometrix-para-analisar-os-dados">Funções do bibliometrix para analisar os dados</h3>
 <p>O pacote bibliometrix possui uma função chamada <code>bibliometrix::biblioAnalysis()</code>, que fornece uma sumarização dos dados. Não vou apresentar o resultado aqui pois é muito longo e não agrega muito no post, mas é possível ver um exemplo neste <a href="https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html">tutorial</a> do pacote.</p>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">resumo</span> <span class="op">&lt;-</span> <span class="fu">bibliometrix</span><span class="fu">::</span><span class="fu">biblioAnalysis</span><span class="op">(</span><span class="va">dados</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">resumo</span> <span class="op">&lt;-</span> <span class="fu">bibliometrix</span><span class="fu">::</span><span class="fu">biblioAnalysis</span><span class="op">(</span><span class="va">dados</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Algo interessante são os gráficos gerados pela função <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code> quando oferecemos o resultado da função <code>bibliometrix::biblioAnalysis()</code>. São gerados diversos gráficos padronizados automaticamente:</p>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">graficos_bibliometrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">resumo</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">graficos_bibliometrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">resumo</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -570,7 +569,7 @@ $ SR       &lt;chr&gt; "JOHNS C, 2021, ENVIRON SUSTAIN IND", "SAN JUAN MESONADA 
 <section id="autorases-mais-produtivasos" class="level3"><h3 class="anchored" data-anchor-id="autorases-mais-produtivasos">Autoras(es) mais produtivas(os)</h3>
 <section id="fazendo-com-bibliometrix" class="level4"><h4 class="anchored" data-anchor-id="fazendo-com-bibliometrix">Fazendo com bibliometrix</h4>
 <div class="cell">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">graficos_bibliometrix</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">graficos_bibliometrix</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$MostProdAuthors</code></pre>
 </div>
@@ -614,7 +613,7 @@ $ SR       &lt;chr&gt; "JOHNS C, 2021, ENVIRON SUSTAIN IND", "SAN JUAN MESONADA 
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html">coord_flip</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Pessoas autoras"</span>, </span>
-<span>       y <span class="op">=</span> <span class="st">"Quantidade de artigos"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>       y <span class="op">=</span> <span class="st">"Quantidade de artigos"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Expected 29 pieces. Missing pieces filled with `NA` in 1175 rows [1, 2,
 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...].</code></pre>
@@ -626,7 +625,7 @@ $ SR       &lt;chr&gt; "JOHNS C, 2021, ENVIRON SUSTAIN IND", "SAN JUAN MESONADA 
 </section></section><section id="produção-por-ano" class="level3"><h3 class="anchored" data-anchor-id="produção-por-ano">Produção por ano</h3>
 <section id="fazendo-com-bibliometrix-1" class="level4"><h4 class="anchored" data-anchor-id="fazendo-com-bibliometrix-1">Fazendo com bibliometrix</h4>
 <div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">graficos_bibliometrix</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">graficos_bibliometrix</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$AnnualScientProd</code></pre>
 </div>
@@ -653,7 +652,7 @@ $ SR       &lt;chr&gt; "JOHNS C, 2021, ENVIRON SUSTAIN IND", "SAN JUAN MESONADA 
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_area</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">'#002F80'</span>, alpha <span class="op">=</span> <span class="fl">.5</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Ano"</span>, y <span class="op">=</span> <span class="st">"Quantidade de artigos"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Ano"</span>, y <span class="op">=</span> <span class="st">"Quantidade de artigos"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Joining, by = c("PY", "n")</code></pre>
 </div>
@@ -664,7 +663,7 @@ $ SR       &lt;chr&gt; "JOHNS C, 2021, ENVIRON SUSTAIN IND", "SAN JUAN MESONADA 
 </section></section><section id="países-mais-produtivos" class="level3"><h3 class="anchored" data-anchor-id="países-mais-produtivos">Países mais produtivos</h3>
 <section id="fazendo-com-bibliometrix-2" class="level4"><h4 class="anchored" data-anchor-id="fazendo-com-bibliometrix-2">Fazendo com bibliometrix</h4>
 <div class="cell">
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">graficos_bibliometrix</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">graficos_bibliometrix</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$MostProdCountries</code></pre>
 </div>
@@ -679,7 +678,7 @@ $ SR       &lt;chr&gt; "JOHNS C, 2021, ENVIRON SUSTAIN IND", "SAN JUAN MESONADA 
 <span><span class="co"># Julio Trecenti deu uma dica sobre como obter</span></span>
 <span><span class="co"># os dados a partir de um objeto ggplot.</span></span>
 <span><span class="va">paises_mais_produtivos</span> <span class="op">&lt;-</span> <span class="va">graficos_bibliometrix</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="st">"data"</span><span class="op">]</span><span class="op">]</span></span>
-<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">paises_mais_produtivos</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">paises_mais_produtivos</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 20
 Columns: 3
@@ -697,7 +696,7 @@ $ Collaboration &lt;chr&gt; "MCP", "MCP", "MCP", "MCP", "MCP", "MCP", "MCP", "MC
 <span>       y <span class="op">=</span> <span class="st">"Quantidade de artigos"</span>,</span>
 <span>       fill <span class="op">=</span> <span class="st">"Colaboração"</span>, </span>
 <span>       caption <span class="op">=</span> <span class="st">"\n \n MCP: Publicação com pessoas autoras de mais de um país. \n</span></span>
-<span><span class="st">       SCP: Publicação com pessoas autoras de apenas um país."</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="st">       SCP: Publicação com pessoas autoras de apenas um país."</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -706,7 +705,7 @@ $ Collaboration &lt;chr&gt; "MCP", "MCP", "MCP", "MCP", "MCP", "MCP", "MCP", "MC
 <section id="fazendo-com-bibliometrix-3" class="level4"><h4 class="anchored" data-anchor-id="fazendo-com-bibliometrix-3">Fazendo com bibliometrix</h4>
 <div class="cell">
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Não encontrei a função. Mas tem essa opcão no biblioshiny.</span></span>
-<span><span class="co"># Pesquisar mais!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co"># Pesquisar mais!</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="fazendo-com-ggplot2" class="level4"><h4 class="anchored" data-anchor-id="fazendo-com-ggplot2">Fazendo com ggplot2</h4>
 <div class="cell">
@@ -724,7 +723,7 @@ $ Collaboration &lt;chr&gt; "MCP", "MCP", "MCP", "MCP", "MCP", "MCP", "MCP", "MC
 <span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html">coord_flip</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Periódico"</span>, </span>
-<span>           y <span class="op">=</span> <span class="st">"Quantidade de artigos"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>           y <span class="op">=</span> <span class="st">"Quantidade de artigos"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -741,12 +740,12 @@ $ Collaboration &lt;chr&gt; "MCP", "MCP", "MCP", "MCP", "MCP", "MCP", "MCP", "MC
 
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-bibliometrix2017" class="csl-entry" role="listitem">
-Aria, Massimo, and Corrado Cuccurullo. 2017. <span>“Bibliometrix: An r-Tool for Comprehensive Science Mapping Analysis.”</span> <em>Journal of Informetrics</em> 11 (4): 959–75. <a href="https://doi.org/10.1016/j.joi.2017.08.007">https://doi.org/10.1016/j.joi.2017.08.007</a>.
+Aria, Massimo, e Corrado Cuccurullo. 2017. <span>«bibliometrix: An R-tool for comprehensive science mapping analysis»</span>. <em>Journal of Informetrics</em> 11 (4): 959–75. <a href="https://doi.org/10.1016/j.joi.2017.08.007">https://doi.org/10.1016/j.joi.2017.08.007</a>.
 </div>
 <div id="ref-R-bibliometrix" class="csl-entry" role="listitem">
-———. 2022. <em>Bibliometrix: Comprehensive Science Mapping Analysis</em>. <a href="https://CRAN.R-project.org/package=bibliometrix">https://CRAN.R-project.org/package=bibliometrix</a>.
+———. 2022. <em>bibliometrix: Comprehensive Science Mapping Analysis</em>. <a href="https://CRAN.R-project.org/package=bibliometrix">https://CRAN.R-project.org/package=bibliometrix</a>.
 </div>
 </div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -802,12 +801,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

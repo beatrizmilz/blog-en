@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <meta name="author" content="Tereza Lacerda">
-<meta name="dcterms.date" content="2022-06-11">
 <title>Beatriz Milz - Bases de dados: para praticar e ensinar</title>
 <style>
 code{white-space: pre-wrap;}
@@ -79,16 +78,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "type": "overlay",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
@@ -108,8 +107,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <span class="navbar-title">Beatriz Milz</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -220,7 +219,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-heading">Autores</div>
       <div class="quarto-title-meta-contents">
                <p>Beatriz Milz </p>
                <p>Tereza Lacerda </p>
@@ -228,9 +227,9 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </div>
       
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 11, 2022</p>
+        <p class="date">11 de junho de 2022</p>
       </div>
     </div>
     
@@ -242,7 +241,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
    
   <ul>
 <li><a href="#introdu%C3%A7%C3%A3o" id="toc-introdução" class="nav-link active" data-scroll-target="#introdu%C3%A7%C3%A3o">Introdução</a></li>
@@ -273,7 +272,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Dica
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -290,7 +289,7 @@ Tip
 </section><section id="bases-de-dados-em-português" class="level2"><h2 class="anchored" data-anchor-id="bases-de-dados-em-português">Bases de dados em Português</h2>
 <section id="pacote-dados" class="level3"><h3 class="anchored" data-anchor-id="pacote-dados">Pacote dados</h3>
 <p>O pacote está <strong>disponível no CRAN</strong> e pode ser instalado utilizando o seguinte código:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"dados"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"dados"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><a href="https://blog.curso-r.com/posts/2022-04-06-pacote-dados/">Escrevemos um post recentemente focado neste pacote, então recomendamos checar lá</a>! Para acessar as bases de dados, utilize a função <code><a href="https://github.com/cienciadedatos/dados">library(dados)</a></code> ou use com <code>dados::nome_da_base</code>. Por exemplo:</p>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cienciadedatos/dados">dados</a></span><span class="op">)</span></span>
@@ -301,7 +300,7 @@ Tip
 <span><span class="co">## $ filme                    &lt;chr&gt; "Toy Story - Um Mundo de Aventuras", "Vida de…</span></span>
 <span><span class="co">## $ data_lancamento          &lt;date&gt; 1995-11-22, 1998-11-25, 1999-11-24, 2001-11-…</span></span>
 <span><span class="co">## $ duracao                  &lt;dbl&gt; 81, 95, 92, 92, 100, 115, 117, 111, 98, 96, 1…</span></span>
-<span><span class="co">## $ classificacao_indicativa &lt;chr&gt; "Livre", "Livre", "Livre", "Livre", "Livre", …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ classificacao_indicativa &lt;chr&gt; "Livre", "Livre", "Livre", "Livre", "Livre", …</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="base-dos-dados" class="level3"><h3 class="anchored" data-anchor-id="base-dos-dados">Base dos dados</h3>
 <p>A <a href="https://staging.basedosdados.org/">Base dos Dados</a> é um projeto super interessante. Lá, são disponibilizadas diversas bases públicas, e várias delas já estão tratadas, como: Relação Anual de Informações Sociais (RAIS), Índice de Desenvolvimento da Educação Básica (Ideb), Censo Demográfico, entre outros!</p>
@@ -314,14 +313,14 @@ Tip
 </ul></section><section id="pacote-de-bases-usadas-em-cursos-da-curso-r" class="level3"><h3 class="anchored" data-anchor-id="pacote-de-bases-usadas-em-cursos-da-curso-r">Pacote de bases usadas em cursos da Curso-R</h3>
 <p>Algumas bases de dados foram traduzidas por pessoas da Curso-R, e disponibilizadas nesse pacote para serem usadas nos cursos. Esse pacote não está disponível no CRAN, então caso queira instalar, utilize os seguintes comandos:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"curso-r/basesCursoR"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"curso-r/basesCursoR"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Para verificar quais são as bases disponíveis no pacote, utilize a seguinte função: <code>basesCursoR::bases_disponiveis()</code>.</p>
 <div class="cell">
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">basesCursoR</span><span class="fu">::</span><span class="fu">bases_disponiveis</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">##  [1] "adult"           "airbnb_rj"       "ames"            "cetesb"         </span></span>
 <span><span class="co">##  [5] "covid"           "credito"         "imdb_avaliacoes" "imdb_completa"  </span></span>
 <span><span class="co">##  [9] "imdb_pessoas"    "imdb_top_cast"   "imdb"            "pokemon"        </span></span>
-<span><span class="co">## [13] "ssp"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## [13] "ssp"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Para carregar alguma base do pacote, utilize a função <code>basesCursoR::pegar_base("nome_da_base")</code>, por exemplo:</p>
 <div class="cell">
@@ -348,7 +347,7 @@ Tip
 <span><span class="co">## $ cor_2           &lt;chr&gt; "#A040A0", "#A040A0", "#A040A0", NA, NA, "#A890F0", NA…</span></span>
 <span><span class="co">## $ cor_final       &lt;chr&gt; "#81A763", "#81A763", "#81A763", NA, NA, "#DE835E", NA…</span></span>
 <span><span class="co">## $ url_imagem      &lt;chr&gt; "https://raw.githubusercontent.com/phalt/pokeapi/maste…</span></span>
-<span><span class="co">## $ url_icone       &lt;chr&gt; "//cdn.bulbagarden.net/upload/e/ec/001MS.png", "//cdn.…</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ url_icone       &lt;chr&gt; "//cdn.bulbagarden.net/upload/e/ec/001MS.png", "//cdn.…</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="bases-de-dados-em-inglês" class="level2"><h2 class="anchored" data-anchor-id="bases-de-dados-em-inglês">Bases de dados em Inglês</h2>
 <section id="bases-do-tidytuesday" class="level3"><h3 class="anchored" data-anchor-id="bases-do-tidytuesday">Bases do tidytuesday</h3>
@@ -370,12 +369,12 @@ Tip
 <span><span class="co">## $ bayes_average &lt;dbl&gt; 7.487, 7.309, 6.970, 7.634, 7.499, 7.305, 7.508, 8.274, …</span></span>
 <span><span class="co">## $ users_rated   &lt;dbl&gt; 108975, 108738, 108024, 89982, 81561, 76171, 74419, 7421…</span></span>
 <span><span class="co">## $ url           &lt;chr&gt; "/boardgame/30549/pandemic", "/boardgame/822/carcassonne…</span></span>
-<span><span class="co">## $ thumbnail     &lt;chr&gt; "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__mi…</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ thumbnail     &lt;chr&gt; "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__mi…</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="pacote-islr" class="level3"><h3 class="anchored" data-anchor-id="pacote-islr">Pacote ISLR</h3>
 <p>O pacote ISLR acompanha o livro <a href="https://www.statlearning.com/">Introduction to Statistical Learning</a> (disponível <a href="https://hastie.su.domains/ISLR2/ISLRv2_website.pdf">gratuitamente aqui</a>). Apresenta bases de dados interessantes para treinar modelagem, acompanhando os exemplos do livro.</p>
 <p>Você pode instalar o pacote através do CRAN, usando a função <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code>:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"ISLR"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"ISLR"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Essas são as bases de dados disponíveis no pacote, que podem ser acessadas utilizando a função <code><a href="https://www.statlearning.com">library(ISLR)</a></code> ou use com <code>ISLR::nome_da_base</code>. :</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -506,12 +505,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

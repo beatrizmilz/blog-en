@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz e Fernando Corrêa">
-<meta name="dcterms.date" content="2021-03-29">
 <title>Beatriz Milz - Desvendando erros: Entendendo mensagens de erro comuns em R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -78,16 +77,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "type": "overlay",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
@@ -106,8 +105,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <span class="navbar-title">Beatriz Milz</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -216,16 +215,16 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">Autor</div>
       <div class="quarto-title-meta-contents">
                <p>Beatriz Milz e Fernando Corrêa </p>
             </div>
     </div>
       
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 29, 2021</p>
+        <p class="date">29 de março de 2021</p>
       </div>
     </div>
     
@@ -237,7 +236,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
    
   <ul>
 <li><a href="#objeto-n%C3%A3o-encontrado" id="toc-objeto-não-encontrado" class="nav-link active" data-scroll-target="#objeto-n%C3%A3o-encontrado">Objeto não encontrado</a></li>
@@ -267,7 +266,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <section id="objeto-não-encontrado" class="level2"><h2 class="anchored" data-anchor-id="objeto-não-encontrado">Objeto não encontrado</h2>
 <p>Imagine que queremos calcular a média do orçamento dos filmes que fazem parte da base de dados sobre filmes do IMDB, e recebemos o seguinte erro:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">imdb</span><span class="op">$</span><span class="va">orcamento</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Error in mean(imdb$orcamento, na.rm = TRUE): objeto 'imdb' não encontrado</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; Error in mean(imdb$orcamento, na.rm = TRUE): objeto 'imdb' não encontrado</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
 <p>O R está dizendo para nós que não está encontrando o objeto <code>imdb</code>! Como podemos resolver esse erro? Precisamos carregar esse objeto no nosso ambiente, para que ele esteja disponível para uso!</p>
 <p>Para isso, precisamos usar o sinal de atribuição: <code>&lt;-</code>.</p>
@@ -276,12 +275,12 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/curso-r/202010-r4ds-1/master/dados/imdb2.csv"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">imdb</span><span class="op">$</span><span class="va">orcamento</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="co">## [1] 35237114</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## [1] 35237114</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="não-foi-possível-encontrar-a-função" class="level2"><h2 class="anchored" data-anchor-id="não-foi-possível-encontrar-a-função">Não foi possível encontrar a função “…”</h2>
 <p>Já tentou executar um código e o retorno foi essa mensagem de erro?</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glimpse</span><span class="op">(</span><span class="va">imdb</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Error in glimpse(imdb): não foi possível encontrar a função "glimpse"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; Error in glimpse(imdb): não foi possível encontrar a função "glimpse"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
 <p>Isso significa que o R não encontrou essa função. No R, podemos instalar pacotes que contém funções para que a gente utilize nas nossas rotinas. Porém, é preciso carregar o pacote para que as funções do mesmo fiquem disponíveis para uso. Podemos carregar um pacote utilizando a função <code><a href="https://rdrr.io/r/base/library.html">library()</a></code>.</p>
 <p>No exemplo abaixo, a função <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code> faz parte do pacote <a href="https://dplyr.tidyverse.org">dplyr</a>. Carregando o pacote no início do código deixará todas as funções do pacote <a href="https://dplyr.tidyverse.org">dplyr</a> disponíveis para uso (incluindo a função que queremos usar):</p>
@@ -304,7 +303,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span><span class="co">## $ likes_facebook &lt;dbl&gt; 33000, 0, 164000, 24000, 0, 29000, 118000, 197000, 0, 5…</span></span>
 <span><span class="co">## $ ator_1         &lt;chr&gt; "CCH Pounder", "Johnny Depp", "Tom Hardy", "Daryl Sabar…</span></span>
 <span><span class="co">## $ ator_2         &lt;chr&gt; "Joel David Moore", "Orlando Bloom", "Christian Bale", …</span></span>
-<span><span class="co">## $ ator_3         &lt;chr&gt; "Wes Studi", "Jack Davenport", "Joseph Gordon-Levitt", …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ ator_3         &lt;chr&gt; "Wes Studi", "Jack Davenport", "Joseph Gordon-Levitt", …</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Outra forma de utilizar a função sem que seja necessário carregar o pacote, é utilizando o operador <code>::</code> (você pode ler mais sobre ele <a href="https://curso-r.github.io/zen-do-r/funcoes-deps.html#quatro-pontos">neste capítulo do livro Zen do R</a>).</p>
 <p>Leia o código abaixo como: quero usar a função <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code> do pacote <code>dplyr</code></p>
@@ -326,13 +325,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span><span class="co">## $ likes_facebook &lt;dbl&gt; 33000, 0, 164000, 24000, 0, 29000, 118000, 197000, 0, 5…</span></span>
 <span><span class="co">## $ ator_1         &lt;chr&gt; "CCH Pounder", "Johnny Depp", "Tom Hardy", "Daryl Sabar…</span></span>
 <span><span class="co">## $ ator_2         &lt;chr&gt; "Joel David Moore", "Orlando Bloom", "Christian Bale", …</span></span>
-<span><span class="co">## $ ator_3         &lt;chr&gt; "Wes Studi", "Jack Davenport", "Joseph Gordon-Levitt", …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ ator_3         &lt;chr&gt; "Wes Studi", "Jack Davenport", "Joseph Gordon-Levitt", …</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="argumento-não-numérico-para-operador-binário-non-numeric-argument-to-binary-operator" class="level2"><h2 class="anchored" data-anchor-id="argumento-não-numérico-para-operador-binário-non-numeric-argument-to-binary-operator">Argumento não numérico para operador binário / non-numeric argument to binary operator</h2>
 <p>De toda a nossa lista de problemas, esse é aquele com a mensagem de erro mais complicada. Você já tentou fazer algum cálculo como esse abaixo e o retorno foi essa mensagem de erro?</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="st">"a"</span></span>
 <span><span class="va">x</span><span class="op">+</span><span class="fl">1</span></span>
-<span><span class="co">#&gt; Error in x + 1: argumento não-numérico para operador binário</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; Error in x + 1: argumento não-numérico para operador binário</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><sup>Created on 2021-03-29 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v0.3.0)</sup></p>
 <p>Isso é muito comum, principalmente quando estamos trabalhando em scripts mais longos, e essa mensagem de erro é o R tentando nos avisar que nós estamos passando um texto, no caso a letra “a”, para uma operação que espera receber um número. Na verdade, o R é até um pouco mais preciso: a operação esperava um número e nós frustramos essa expectativa, por isso o erro menciona um “argumento não-numérico”. No caso nós tentamos fazer uma conta (a adição representada pelo símbolo <code>+</code>) usando um texto.</p>
 <p>O que podemos fazer quando esse erro aparece? Minha recomendação é examinar o seu código para verificar que tipo de argumento as suas operações matemáticas (por exemplo <code>+</code>, <code>-</code>, <code>*</code> e <code>^</code>) estão recebendo. Muito provavelmente algum desses argumentos não é um número…</p>
@@ -344,7 +343,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>Quando usamos uma função sem usar o operador <code>::</code>, o R vai buscar no ambiente a função com esse nome que foi carregada por último. Então podemos usar uma função A quando queremos realmente usar a função B.</p>
 <p>Exemplo: queremos filtrar os filmes do diretor Zack Snyder. Obtemos esse erro dizendo que o objeto imdb não foi encontrado, porém o objeto está carregado!</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">imdb</span>, <span class="va">diretor</span> <span class="op">==</span> <span class="st">"Zack Snyder"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Error in as.ts(x): objeto 'imdb' não encontrado</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; Error in as.ts(x): objeto 'imdb' não encontrado</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
 <p>Isso acontece pois o R utilizou a função <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> do pacote <code>{base}</code>, e não a função <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> do pacote <a href="https://dplyr.tidyverse.org">dplyr</a>!</p>
 <p>Uma forma de evitar esses erros de conflitos é utilizar o operador <code>::</code>, que foi citado anteriormente. Assim estamos falando explicitamente em qual pacote essa função está:</p>
@@ -361,16 +360,16 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span><span class="co">## 6 300&nbsp;          2006 Zack S…     117 Color Action… USA   A partir de …  65000000</span></span>
 <span><span class="co">## 7 Dawn of the…  2004 Zack S…     110 Color Action… USA   A partir de …  26000000</span></span>
 <span><span class="co">## # … with 6 more variables: receita &lt;dbl&gt;, nota_imdb &lt;dbl&gt;,</span></span>
-<span><span class="co">## #   likes_facebook &lt;dbl&gt;, ator_1 &lt;chr&gt;, ator_2 &lt;chr&gt;, ator_3 &lt;chr&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## #   likes_facebook &lt;dbl&gt;, ator_1 &lt;chr&gt;, ator_2 &lt;chr&gt;, ator_3 &lt;chr&gt;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="não-existe-um-pacote-chamado-there-is-no-package-called-.." class="level2"><h2 class="anchored" data-anchor-id="não-existe-um-pacote-chamado-there-is-no-package-called-..">Não existe um pacote chamado … / There is no package called ..</h2>
 <p>Quando queremos carregar um pacote, e ele não está instalado, o erro gerado é esse:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Error in library(tidyverse) : there is no package called ‘tidyverse’</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; Error in library(tidyverse) : there is no package called ‘tidyverse’</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
 <p>Como resolver? Precisamos instalar o pacote!</p>
 <p>A forma mais comum de instalação de um pacote é através do CRAN, utilizando a função <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code>:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Após instalar o pacote, conseguiremos carregá-lo normalmente!</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; ── Attaching packages ───── tidyverse 1.3.0 ──</span></span>
@@ -380,7 +379,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span><span class="co">#&gt; ✓ readr   1.4.0     ✓ forcats 0.5.1</span></span>
 <span><span class="co">#&gt; ── Conflicts ──────── tidyverse_conflicts() ──</span></span>
 <span><span class="co">#&gt; x dplyr::filter() masks stats::filter()</span></span>
-<span><span class="co">#&gt; x dplyr::lag()    masks stats::lag()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; x dplyr::lag()    masks stats::lag()</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section><section id="o-pacote-não-está-disponível-para-essa-versão-do-r-package-is-not-available-for-this-version-of-r" class="level2"><h2 class="anchored" data-anchor-id="o-pacote-não-está-disponível-para-essa-versão-do-r-package-is-not-available-for-this-version-of-r">O pacote … não está disponível para essa versão do R / Package ‘…’ is not available for this version of R</h2>
 <p>Nesse exemplo, mostraremos um caso onde não é gerado um erro, e sim uma mensagem de aviso (<em>warning</em>). Entretanto, o código não executa como esperamos, e pode impossibilitar a execução das etapas seguintes dos scripts.</p>
 <p>Imagine que queremos calcular a média da massa corporal dos Pinguins que fazem parte da base de dados sobre <a href="https://cienciadedatos.github.io/dados/reference/pinguins.html">Pinguins</a>, disponível no pacote {<a href="https://cienciadedatos.github.io/dados/">dados</a>}.</p>
@@ -389,23 +388,23 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; A version of this package for your version of R might be available elsewhere,</span></span>
 <span><span class="co">#&gt; see the ideas at</span></span>
-<span><span class="co">#&gt; https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
 <p>Essa mensagem acontece quando queremos instalar um pacote que não está disponível no CRAN. O que eu recomendo, neste caso, é buscar o repositório no GitHub do pacote desejado.</p>
 <p>No caso do pacote que estamos mostrando neste exemplo, <a href="https://github.com/cienciadedatos/dados">este é o link do repositório</a>.</p>
 <p>Caso queira instalar o pacote através do GitHub, devemos utilizar a função <code>install_github()</code> do pacote <a href="https://remotes.r-lib.org">remotes</a>. Como argumento, devemos informar a organização ou pessoa a quem este repositório “pertence”, e o nome do repositório: <code>"nome_da_organizacao/nome_do_repositorio"</code>. No caso do pacote <a href="https://github.com/cienciadedatos/dados">dados</a>, a organização é <a href="https://github.com/cienciadedatos">cienciadedatos</a>, e o repositório é chamado de <a href="https://github.com/cienciadedatos/dados">dados</a>. Portanto, para instalar esse pacote, devemos executar o código a seguir:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"cienciadedatos/dados"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"cienciadedatos/dados"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Agora conseguimos utilizar funções e bases de dados do pacote <code>dados</code>:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cienciadedatos/dados">dados</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="co">## [1] 4201.754</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## [1] 4201.754</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="o-arquivo-não-existe-no-diretório-de-trabalho-atual-does-not-exist-in-current-working-directory" class="level2"><h2 class="anchored" data-anchor-id="o-arquivo-não-existe-no-diretório-de-trabalho-atual-does-not-exist-in-current-working-directory">O arquivo … não existe no diretório de trabalho atual / … does not exist in current working directory</h2>
 <p>E quando queremos importar uma base de dados (ou outro arquivo) para trabalhar no R, e recebemos essa mensagem?</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">imdb</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">(</span><span class="st">"imdb2.csv"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; i Using ',' as decimal and '.' as grouping mark. Use `read_delim()` for more control.</span></span>
-<span><span class="co">#&gt; Error: 'imdb2.csv' does not exist in current working directory ('C:/Users/seu_usuario/Documents').</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; Error: 'imdb2.csv' does not exist in current working directory ('C:/Users/seu_usuario/Documents').</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><sup>Created on 2021-03-29 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v0.3.0)</sup></p>
 <p>O R está informando que não encontrou o arquivo que a gente deseja importar. A maior parte das vezes quando esse erro acontece é por que 1) esse arquivo não existe no nosso computador, ou 2) estamos indicando o caminho incorreto até o arquivo.</p>
 <div class="cell" data-layout-align="center">
@@ -439,7 +438,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span><span class="co">#&gt;   ator_1 = col_character(),</span></span>
 <span><span class="co">#&gt;   ator_2 = col_character(),</span></span>
 <span><span class="co">#&gt;   ator_3 = col_character()</span></span>
-<span><span class="co">#&gt; )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; )</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><sup>Created on 2021-03-26 by the <a href="https://reprex.tidyverse.org">reprex package</a> (v1.0.0)</sup></p>
 </section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
 <p>Espero que essas dicas sejam úteis para você resolver os erros no futuro, e você seja mais feliz enquanto escreve seus códigos em R! E caso ainda tenha dúvidas, recomendo perguntar lá no <a href="https://discourse.curso-r.com/">Fórum Discourse da Curso-R</a>!</p>
@@ -509,12 +508,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
-<meta name="dcterms.date" content="2020-07-27">
 <title>Beatriz Milz - Criando mapas com os pacotes tidyverse e geobr</title>
 <style>
 code{white-space: pre-wrap;}
@@ -97,16 +96,16 @@ div.csl-indent {
   "type": "overlay",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
@@ -125,8 +124,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <span class="navbar-title">Beatriz Milz</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -235,16 +234,16 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">Autor</div>
       <div class="quarto-title-meta-contents">
                <p>Beatriz Milz </p>
             </div>
     </div>
       
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 27, 2020</p>
+        <p class="date">27 de julho de 2020</p>
       </div>
     </div>
     
@@ -256,7 +255,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
    
   <ul>
 <li><a href="#dados-utilizados" id="toc-dados-utilizados" class="nav-link active" data-scroll-target="#dados-utilizados">Dados utilizados</a></li>
@@ -283,9 +282,9 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <section id="dados-utilizados" class="level2"><h2 class="anchored" data-anchor-id="dados-utilizados">Dados utilizados</h2>
 <ul>
 <li><p><strong>Dados de Saneamento:</strong> A Companhia Ambiental do Estado de São Paulo (CETESB)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> publica todos os anos o “<a href="https://cetesb.sp.gov.br/aguas-interiores/publicacoes-e-relatorios/">Relatório de Qualidade das Águas Interiores do Estado de São Paulo</a>”. Desde o relatório referente ao ano de 2016, é publicado o <strong>Apêndice C</strong>, que contém <strong>dados de saneamento por município</strong> do Estado de São Paulo. Os arquivos são disponibilizados em arquivo PDF, <a href="https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2018/03/Ap%C3%AAndice-C-Dados-do-saneamento-b%C3%A1sico...-munic%C3%ADpios-paulistas-2016_17-04.pdf">e especificamente para o ano de 2016 é um arquivo PDF que não possibilita copiar as informações</a> (como uma imagem, por exemplo). O relatório mais recente é referente ao ano de <a href="https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2019/10/Ap%C3%AAndice-C_Dados-de-Saneamento-por-Munic%C3%ADpio.pdf">2018</a>.</p></li>
-<li><p><strong>Dados shapefile dos municípios:</strong> Foi utilizado o pacote <a href="https://ipeagit.github.io/geobr/">geobr</a> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira and Goncalves 2021</a>)</span>, que possibilita acessar dados espaciais oficiais do Brasil.</p></li>
+<li><p><strong>Dados shapefile dos municípios:</strong> Foi utilizado o pacote <a href="https://ipeagit.github.io/geobr/">geobr</a> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira e Goncalves 2021</a>)</span>, que possibilita acessar dados espaciais oficiais do Brasil.</p></li>
 </ul>
-<p>Neste post, irei focar em mostrar como abri os dados, e utilizando principalmente o <code>tidyverse</code> <span class="citation" data-cites="tidyverse2019">(<a href="#ref-tidyverse2019" role="doc-biblioref">Wickham et al. 2019</a>)</span> e o pacote <code>geobr</code> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira and Goncalves 2021</a>)</span>, criei mapas com esses dados.</p>
+<p>Neste post, irei focar em mostrar como abri os dados, e utilizando principalmente o <code>tidyverse</code> <span class="citation" data-cites="tidyverse2019">(<a href="#ref-tidyverse2019" role="doc-biblioref">Wickham et al. 2019</a>)</span> e o pacote <code>geobr</code> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira e Goncalves 2021</a>)</span>, criei mapas com esses dados.</p>
 </section><section id="pacotes-necessários" class="level2"><h2 class="anchored" data-anchor-id="pacotes-necessários">Pacotes necessários</h2>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
@@ -300,7 +299,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://paleolimbot.github.io/ggspatial/">ggspatial</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="alert alert-primary" role="alert">
 <p><strong>O que é <code>::</code> ?</strong></p>
@@ -325,7 +324,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html">download.file</a></span><span class="op">(</span><span class="va">url</span>, <span class="co"># URL do arquivo a ser baixado</span></span>
 <span>              destfile <span class="op">=</span> <span class="st">"dados/apendice_c_2018.pdf"</span>, <span class="co"># Informar onde quer que seja salvo, e com qual nome e extensão </span></span>
 <span>              method <span class="op">=</span> <span class="st">"curl"</span> <span class="co"># Método utilizado para o download</span></span>
-<span>              <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>              <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Para fazer a conversão, utilizei o pacote <a href="https://www.github.com/expersso/pdftables">pdftables</a> <span class="citation" data-cites="R-pdftables">(<a href="#ref-R-pdftables" role="doc-biblioref">Persson 2016</a>)</span>, que possibilita converter o arquivo PDF para CSV diretamente do R, através da API (e omiti a minha chave da API no código):</p>
 <div class="alert alert-primary" role="alert">
@@ -344,7 +343,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span>                       <span class="co">#  Informar onde quer o arquivo gerado</span></span>
 <span>                       <span class="co"># seja salvo, e com qual nome e extensão</span></span>
 <span>                       api_key <span class="op">=</span> <span class="st">"..."</span> <span class="co"># Chave da API, gerada através do site.</span></span>
-<span>                       <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>                       <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A tabela convertida em <code>.csv</code> pode ser acessada <a href="https://beatrizmilz.github.io/2020-FLS6397/projeto_final/dados/apendice_c_2018.csv">neste link</a>. O próximo passo é carregar a base, usando a função <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv()</a></code>:</p>
 <div class="cell" data-layout-align="center">
@@ -368,7 +367,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span>    locale <span class="op">=</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/locale.html">locale</a></span><span class="op">(</span>encoding <span class="op">=</span> <span class="st">"ISO-8859-1"</span><span class="op">)</span>,</span>
 <span>    <span class="co"># encoding dos dados</span></span>
 <span>    skip <span class="op">=</span> <span class="fl">5</span> <span class="co"># Quantas linhas para pular no CSV antes de começar a ler os dados.</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="alert alert-primary" role="alert">
 <p><strong>Encoding?</strong></p>
@@ -388,7 +387,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <li>A base deve conter 645 linhas, referente ao número de municípios no estado de São Paulo<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">apendice_c_2018</span><span class="op">)</span> <span class="co"># consulta quantas linhas tem na base</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">apendice_c_2018</span><span class="op">)</span> <span class="co"># consulta quantas linhas tem na base</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 701</code></pre>
 </div>
@@ -397,11 +396,11 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">apendice_c_filtrado</span> <span class="op">&lt;-</span> <span class="va">apendice_c_2018</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="co"># Filtrar linhas que não contém nome de municípios</span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="va">municipio</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Estado de São Paulo"</span>, <span class="st">"Município"</span>, <span class="cn">NA</span>, <span class="st">"MUNICÍPIO"</span><span class="op">)</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="va">municipio</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Estado de São Paulo"</span>, <span class="st">"Município"</span>, <span class="cn">NA</span>, <span class="st">"MUNICÍPIO"</span><span class="op">)</span><span class="op">)</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Agora a base tem 645 linhas, o que corresponde aos 645 municípios do estado de SP. É importante também verificar o tipo de dados nas colunas:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">apendice_c_filtrado</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">apendice_c_filtrado</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 645
 Columns: 11
@@ -436,11 +435,11 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span>      <span class="fu"><a href="https://rdrr.io/r/base/double.html">as.double</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>    ictem <span class="op">=</span>  <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="va">ictem</span>, <span class="st">","</span>, <span class="st">"\\."</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/double.html">as.double</a></span><span class="op">(</span><span class="op">)</span></span>
 <span>    </span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Agora podemos observar novamente o tipo de dados nas colunas, e verificar se todos os dados estão no formato ideal para a análise:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">apendice_c</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">apendice_c</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 645
 Columns: 11
@@ -465,10 +464,10 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span><span class="co"># no ano de 2018, segundo o IBGE.</span></span>
 <span><span class="co"># Os dados salvos são da classe Simple Feature</span></span>
 <span></span>
-<span><span class="va">municipios_sp</span> <span class="op">&lt;-</span> <span class="fu">geobr</span><span class="fu">::</span><span class="fu">read_municipality</span><span class="op">(</span><span class="st">"SP"</span>, <span class="fl">2018</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">municipios_sp</span> <span class="op">&lt;-</span> <span class="fu">geobr</span><span class="fu">::</span><span class="fu">read_municipality</span><span class="op">(</span><span class="st">"SP"</span>, <span class="fl">2018</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="alert alert-primary" role="alert">
-<p>O pacote <code>geobr</code> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira and Goncalves 2021</a>)</span> é um pacote que disponibiliza funções para realizar o download de diversas bases de dados espaciais oficiais do Brasil. Você pode saber mais no <a href="https://github.com/ipeaGIT/geobr">repositório do pacote no GitHub</a>.</p>
+<p>O pacote <code>geobr</code> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira e Goncalves 2021</a>)</span> é um pacote que disponibiliza funções para realizar o download de diversas bases de dados espaciais oficiais do Brasil. Você pode saber mais no <a href="https://github.com/ipeaGIT/geobr">repositório do pacote no GitHub</a>.</p>
 <p>O pacote <code>sf</code> (Simple Features for R) <span class="citation" data-cites="R-sf sf2018">(<a href="#ref-R-sf" role="doc-biblioref">Pebesma 2022</a>, <a href="#ref-sf2018" role="doc-biblioref">2018</a>)</span> possibilita trabalhar com essas bases de dados espaciais. Gosto muito da seguinte ilustação da <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a> sobre esse pacote:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -498,7 +497,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span>    <span class="st">" Baixada Santista"</span>,</span>
 <span>    <span class="st">" Tietê/Sorocaba"</span></span>
 <span>  <span class="op">)</span></span>
-<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="unir-as-bases" class="level2"><h2 class="anchored" data-anchor-id="unir-as-bases">Unir as bases !</h2>
 <p>A base da CETESB não possui o código de município do IBGE (o ideal para fazer o Join). Neste caso, podemos usar o nome do município, porém é preciso padronizar os nomes em relação à maiúsculas/minúsculas, acentos, presença de traços, entre outros. A maior diferença encontrada foi na grafia do nome do município “São Luiz do Paraitinga”: segundo o site da Assembléia Legislativa do Estado de São Paulo, e o site do município, Luiz é escrito com Z, porém a base da CETESB utiliza a forma incorreta: “São Luís do Paraitinga”. Essas inconsistências foram corrigidas com código abaixo, usando principalmente funções dos pacotes <code>stringr</code>, <code>dplyr</code> e <code>abjutils</code>:</p>
@@ -518,7 +517,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span>  <span class="op">)</span>,</span>
 <span>  nome_muni <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/case.html">str_to_lower</a></span><span class="op">(</span><span class="va">nome_muni</span><span class="op">)</span>,</span>
 <span>  nome_muni <span class="op">=</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="va">nome_muni</span>, <span class="st">"-"</span>, <span class="st">" "</span><span class="op">)</span>,</span>
-<span>  nome_muni <span class="op">=</span> <span class="fu">abjutils</span><span class="fu">::</span><span class="fu">rm_accent</span><span class="op">(</span><span class="va">nome_muni</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  nome_muni <span class="op">=</span> <span class="fu">abjutils</span><span class="fu">::</span><span class="fu">rm_accent</span><span class="op">(</span><span class="va">nome_muni</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Após arrumar a base, podemos unir com as funções do tipo <code>join_*</code>, do pacote <code>dplyr</code> (Sim, é possível usar as funções do tipo <code>join_*</code> com objetos de classe Simple Feature, porém use-os como o primeiro argumento ao usar a função):</li>
@@ -528,7 +527,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">municipios_sp_limpo</span>, <span class="va">apendice_c_limpo</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">ugrhis</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">apendice_c_geo</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># Confirmando se a nova base tem o número de municípios do estado.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">apendice_c_geo</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># Confirmando se a nova base tem o número de municípios do estado.</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 645</code></pre>
 </div>
@@ -541,7 +540,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">ugrhi</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">ugrhis</span><span class="op">$</span><span class="va">ugrhi</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="co"># Filtra a coluna UGRHI. Apenas as UGRHIS que estão na tibble</span></span>
 <span>                                            <span class="co"># criada, permanecerão.</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>porc_real_trat <span class="op">=</span> <span class="va">atendimento_tratamento_porc</span> <span class="op">*</span> <span class="va">atendimento_coleta_porc</span> <span class="op">/</span> <span class="fl">100</span><span class="op">)</span> <span class="co"># Cria uma nova</span></span>
-<span><span class="co"># coluna, com o cálculo do número real de porcentagem de tratamento de esgoto.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co"># coluna, com o cálculo do número real de porcentagem de tratamento de esgoto.</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A base final que usaremos na análise contém dados de 171 municípios, que fazem parte de 6 UGRHIs diferentes. A soma da população urbana destes municípios é de 32.79 milhões de habitantes, o que corresponde à 75.1 % da população urbana do Estado de São Paulo (segundo os dados da base completa utilizada nessa análise).</p>
 </section><section id="visualizando-os-dados" class="level2"><h2 class="anchored" data-anchor-id="visualizando-os-dados">Visualizando os dados</h2>
@@ -570,11 +569,11 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span>    <span class="op">)</span>,</span>
 <span>    panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_rect</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>      <span class="fu">annotation_scale</span><span class="op">(</span>location <span class="op">=</span> <span class="st">"br"</span>, width_hint <span class="op">=</span> <span class="fl">0.30</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Com a função <code><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf()</a></code>, é possível criar mapas utilizando o pacote <code>ggplot2</code> e objetos de classe Simple Feature (sf). Assim podemos usar as nossas habilidades de criar gráficos lindos no <code>ggplot2</code>, e criar mapas também usando as funções que já conhecemos.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">saneamento</span><span class="op">)</span> <span class="co"># Função class() apresenta a classe do objeto. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">saneamento</span><span class="op">)</span> <span class="co"># Função class() apresenta a classe do objeto. </span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "sf"         "data.frame"</code></pre>
 </div>
@@ -603,7 +602,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggspatial</span><span class="fu">::</span><span class="fu">annotation_scale</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="co"># Adiciona o tema criado anteriormente</span></span>
-<span>  <span class="va">tema_mapa</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="va">tema_mapa</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="index_files/figure-html/mapa-area-estudo-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -630,7 +629,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span>    style <span class="op">=</span> <span class="va">north_arrow_fancy_orienteering</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggspatial</span><span class="fu">::</span><span class="fu">annotation_scale</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="va">tema_mapa</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="va">tema_mapa</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="index_files/figure-html/mapa-coleta-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -657,7 +656,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <span>    style <span class="op">=</span> <span class="va">north_arrow_fancy_orienteering</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggspatial</span><span class="fu">::</span><span class="fu">annotation_scale</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="va">tema_mapa</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="va">tema_mapa</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="index_files/figure-html/mapa-tratamento-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -682,7 +681,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 <li>As informações abaixo são interessantes para registrar a versão do R utilizada, versões de pacotes, entre outros.</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu">session_info</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu">session_info</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
@@ -775,7 +774,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 ──────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
-<p>O projeto foi realizado com R <span class="citation" data-cites="R-base">(<a href="#ref-R-base" role="doc-biblioref">R Core Team 2021</a>)</span>, e os pacotes: <a href="https://github.com/abjur/abjutils">abjutils</a> <span class="citation" data-cites="R-abjutils">(<a href="#ref-R-abjutils" role="doc-biblioref">Lente and Trecenti 2022</a>)</span>, <a href="https://dplyr.tidyverse.org">dplyr</a> <span class="citation" data-cites="R-dplyr">(<a href="#ref-R-dplyr" role="doc-biblioref">Wickham, François, et al. 2022</a>)</span>, <a href="https://ipeagit.github.io/geobr/">geobr</a> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira and Goncalves 2021</a>)</span>, <a href="https://ggplot2.tidyverse.org">ggplot2</a> <span class="citation" data-cites="R-ggplot2 ggplot22016">(<a href="#ref-R-ggplot2" role="doc-biblioref">Wickham, Chang, et al. 2022</a>; <a href="#ref-ggplot22016" role="doc-biblioref">Wickham 2016</a>)</span>, <a href="https://paleolimbot.github.io/ggspatial/">ggspatial</a> <span class="citation" data-cites="R-ggspatial">(<a href="#ref-R-ggspatial" role="doc-biblioref">Dunnington 2021</a>)</span>, <a href="https://yihui.org/knitr/">knitr</a> <span class="citation" data-cites="R-knitr knitr2015">(<a href="#ref-R-knitr" role="doc-biblioref">Xie 2022</a>, <a href="#ref-knitr2015" role="doc-biblioref">2015</a>)</span>, <a href="https://magrittr.tidyverse.org">magrittr</a> <span class="citation" data-cites="R-magrittr">(<a href="#ref-R-magrittr" role="doc-biblioref">Bache and Wickham 2022</a>)</span>, <a href="https://www.github.com/expersso/pdftables">pdftables</a> <span class="citation" data-cites="R-pdftables">(<a href="#ref-R-pdftables" role="doc-biblioref">Persson 2016</a>)</span>, <a href="https://readr.tidyverse.org">readr</a> <span class="citation" data-cites="R-readr">(<a href="#ref-R-readr" role="doc-biblioref">Wickham, Hester, and Bryan 2022</a>)</span>, <a href="https://github.com/rstudio/rmarkdown">rmarkdown</a> <span class="citation" data-cites="R-rmarkdown rmarkdown2018">(<a href="#ref-R-rmarkdown" role="doc-biblioref">Allaire et al. 2022</a>; <a href="#ref-rmarkdown2018" role="doc-biblioref">Xie, Allaire, and Grolemund 2018</a>)</span>, <a href="https://r-spatial.github.io/sf/">sf</a> <span class="citation" data-cites="R-sf sf2018">(<a href="#ref-R-sf" role="doc-biblioref">Pebesma 2022</a>, <a href="#ref-sf2018" role="doc-biblioref">2018</a>)</span>, <a href="https://stringr.tidyverse.org">stringr</a> <span class="citation" data-cites="R-stringr">(<a href="#ref-R-stringr" role="doc-biblioref">Wickham 2019</a>)</span>, <a href="https://tibble.tidyverse.org/">tibble</a> <span class="citation" data-cites="R-tibble">(<a href="#ref-R-tibble" role="doc-biblioref">Müller and Wickham 2022</a>)</span>.</p>
+<p>O projeto foi realizado com R <span class="citation" data-cites="R-base">(<a href="#ref-R-base" role="doc-biblioref">R Core Team 2021</a>)</span>, e os pacotes: <a href="https://github.com/abjur/abjutils">abjutils</a> <span class="citation" data-cites="R-abjutils">(<a href="#ref-R-abjutils" role="doc-biblioref">Lente e Trecenti 2022</a>)</span>, <a href="https://dplyr.tidyverse.org">dplyr</a> <span class="citation" data-cites="R-dplyr">(<a href="#ref-R-dplyr" role="doc-biblioref">Wickham, François, et al. 2022</a>)</span>, <a href="https://ipeagit.github.io/geobr/">geobr</a> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira e Goncalves 2021</a>)</span>, <a href="https://ggplot2.tidyverse.org">ggplot2</a> <span class="citation" data-cites="R-ggplot2 ggplot22016">(<a href="#ref-R-ggplot2" role="doc-biblioref">Wickham, Chang, et al. 2022</a>; <a href="#ref-ggplot22016" role="doc-biblioref">Wickham 2016</a>)</span>, <a href="https://paleolimbot.github.io/ggspatial/">ggspatial</a> <span class="citation" data-cites="R-ggspatial">(<a href="#ref-R-ggspatial" role="doc-biblioref">Dunnington 2021</a>)</span>, <a href="https://yihui.org/knitr/">knitr</a> <span class="citation" data-cites="R-knitr knitr2015">(<a href="#ref-R-knitr" role="doc-biblioref">Xie 2022</a>, <a href="#ref-knitr2015" role="doc-biblioref">2015</a>)</span>, <a href="https://magrittr.tidyverse.org">magrittr</a> <span class="citation" data-cites="R-magrittr">(<a href="#ref-R-magrittr" role="doc-biblioref">Bache e Wickham 2022</a>)</span>, <a href="https://www.github.com/expersso/pdftables">pdftables</a> <span class="citation" data-cites="R-pdftables">(<a href="#ref-R-pdftables" role="doc-biblioref">Persson 2016</a>)</span>, <a href="https://readr.tidyverse.org">readr</a> <span class="citation" data-cites="R-readr">(<a href="#ref-R-readr" role="doc-biblioref">Wickham, Hester, e Bryan 2022</a>)</span>, <a href="https://github.com/rstudio/rmarkdown">rmarkdown</a> <span class="citation" data-cites="R-rmarkdown rmarkdown2018">(<a href="#ref-R-rmarkdown" role="doc-biblioref">Allaire et al. 2022</a>; <a href="#ref-rmarkdown2018" role="doc-biblioref">Xie, Allaire, e Grolemund 2018</a>)</span>, <a href="https://r-spatial.github.io/sf/">sf</a> <span class="citation" data-cites="R-sf sf2018">(<a href="#ref-R-sf" role="doc-biblioref">Pebesma 2022</a>, <a href="#ref-sf2018" role="doc-biblioref">2018</a>)</span>, <a href="https://stringr.tidyverse.org">stringr</a> <span class="citation" data-cites="R-stringr">(<a href="#ref-R-stringr" role="doc-biblioref">Wickham 2019</a>)</span>, <a href="https://tibble.tidyverse.org/">tibble</a> <span class="citation" data-cites="R-tibble">(<a href="#ref-R-tibble" role="doc-biblioref">Müller e Wickham 2022</a>)</span>.</p>
 </section><section id="muito-obrigada" class="level2"><h2 class="anchored" data-anchor-id="muito-obrigada">Muito obrigada!</h2>
 <ul>
 <li><p>Ao Professor <a href="https://jonnyphillips.github.io/Website/">Jonathan Phillips</a>, pelo oferecimento da disciplina <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/">“FLS6397 - Introdução à Análise de Dados, Programação e Visualização para as Ciências Sociais”</a>, por sua disponibilidade para tirar as dúvidas de todes, disponibilização de todo material da aula na internet de forma aberta e gratuita, e pelo esforço para que a disciplina fosse proveitosa mesmo considerando o contexto de pandemia.</p></li>
@@ -785,65 +784,65 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-R-rmarkdown" class="csl-entry" role="listitem">
-Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2022. <em>Rmarkdown: Dynamic Documents for r</em>.
+Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, e Richard Iannone. 2022. <em>rmarkdown: Dynamic Documents for R</em>.
 </div>
 <div id="ref-R-magrittr" class="csl-entry" role="listitem">
-Bache, Stefan Milton, and Hadley Wickham. 2022. <em>Magrittr: A Forward-Pipe Operator for r</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
+Bache, Stefan Milton, e Hadley Wickham. 2022. <em>magrittr: A Forward-Pipe Operator for R</em>. <a href="https://CRAN.R-project.org/package=magrittr">https://CRAN.R-project.org/package=magrittr</a>.
 </div>
 <div id="ref-R-ggspatial" class="csl-entry" role="listitem">
-Dunnington, Dewey. 2021. <em>Ggspatial: Spatial Data Framework for Ggplot2</em>. <a href="https://CRAN.R-project.org/package=ggspatial">https://CRAN.R-project.org/package=ggspatial</a>.
+Dunnington, Dewey. 2021. <em>ggspatial: Spatial Data Framework for ggplot2</em>. <a href="https://CRAN.R-project.org/package=ggspatial">https://CRAN.R-project.org/package=ggspatial</a>.
 </div>
 <div id="ref-R-abjutils" class="csl-entry" role="listitem">
-Lente, Caio, and Julio Trecenti. 2022. <em>Abjutils: Useful Tools for Jurimetrical Analysis Used by the Brazilian Jurimetrics Association</em>. <a href="https://github.com/abjur/abjutils">https://github.com/abjur/abjutils</a>.
+Lente, Caio, e Julio Trecenti. 2022. <em>abjutils: Useful Tools for Jurimetrical Analysis Used by the Brazilian Jurimetrics Association</em>. <a href="https://github.com/abjur/abjutils">https://github.com/abjur/abjutils</a>.
 </div>
 <div id="ref-R-tibble" class="csl-entry" role="listitem">
-Müller, Kirill, and Hadley Wickham. 2022. <em>Tibble: Simple Data Frames</em>. <a href="https://CRAN.R-project.org/package=tibble">https://CRAN.R-project.org/package=tibble</a>.
+Müller, Kirill, e Hadley Wickham. 2022. <em>tibble: Simple Data Frames</em>. <a href="https://CRAN.R-project.org/package=tibble">https://CRAN.R-project.org/package=tibble</a>.
 </div>
 <div id="ref-sf2018" class="csl-entry" role="listitem">
-Pebesma, Edzer. 2018. <span>“<span class="nocase">Simple Features for R: Standardized Support for Spatial Vector Data</span>.”</span> <em><span>The R Journal</span></em> 10 (1): 439–46. <a href="https://doi.org/10.32614/RJ-2018-009">https://doi.org/10.32614/RJ-2018-009</a>.
+Pebesma, Edzer. 2018. <span>«<span>Simple Features for R: Standardized Support for Spatial Vector Data</span>»</span>. <em><span>The R Journal</span></em> 10 (1): 439–46. <a href="https://doi.org/10.32614/RJ-2018-009">https://doi.org/10.32614/RJ-2018-009</a>.
 </div>
 <div id="ref-R-sf" class="csl-entry" role="listitem">
-———. 2022. <em>Sf: Simple Features for r</em>. <a href="https://CRAN.R-project.org/package=sf">https://CRAN.R-project.org/package=sf</a>.
+———. 2022. <em>sf: Simple Features for R</em>. <a href="https://CRAN.R-project.org/package=sf">https://CRAN.R-project.org/package=sf</a>.
 </div>
 <div id="ref-R-geobr" class="csl-entry" role="listitem">
-Pereira, Rafael H. M., and Caio Nogueira Goncalves. 2021. <em>Geobr: Download Official Spatial Data Sets of Brazil</em>. <a href="https://github.com/ipeaGIT/geobr">https://github.com/ipeaGIT/geobr</a>.
+Pereira, Rafael H. M., e Caio Nogueira Goncalves. 2021. <em>geobr: Download Official Spatial Data Sets of Brazil</em>. <a href="https://github.com/ipeaGIT/geobr">https://github.com/ipeaGIT/geobr</a>.
 </div>
 <div id="ref-R-pdftables" class="csl-entry" role="listitem">
-Persson, Eric. 2016. <em>Pdftables: Programmatic Conversion of PDF Tables</em>. <a href="https://CRAN.R-project.org/package=pdftables">https://CRAN.R-project.org/package=pdftables</a>.
+Persson, Eric. 2016. <em>pdftables: Programmatic Conversion of PDF Tables</em>. <a href="https://CRAN.R-project.org/package=pdftables">https://CRAN.R-project.org/package=pdftables</a>.
 </div>
 <div id="ref-R-base" class="csl-entry" role="listitem">
 R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
 <div id="ref-ggplot22016" class="csl-entry" role="listitem">
-Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+Wickham, Hadley. 2016. <em>ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
 </div>
 <div id="ref-R-stringr" class="csl-entry" role="listitem">
-———. 2019. <em>Stringr: Simple, Consistent Wrappers for Common String Operations</em>. <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>.
+———. 2019. <em>stringr: Simple, Consistent Wrappers for Common String Operations</em>. <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>.
 </div>
 <div id="ref-tidyverse2019" class="csl-entry" role="listitem">
-Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome to the <span class="nocase">tidyverse</span>.”</span> <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>«Welcome to the <span>tidyverse</span>»</span>. <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
 </div>
 <div id="ref-R-ggplot2" class="csl-entry" role="listitem">
-Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2022. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, e Dewey Dunnington. 2022. <em>ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
 </div>
 <div id="ref-R-dplyr" class="csl-entry" role="listitem">
-Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2022. <em>Dplyr: A Grammar of Data Manipulation</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
+Wickham, Hadley, Romain François, Lionel Henry, e Kirill Müller. 2022. <em>dplyr: A Grammar of Data Manipulation</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.
 </div>
 <div id="ref-R-readr" class="csl-entry" role="listitem">
-Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2022. <em>Readr: Read Rectangular Text Data</em>. <a href="https://CRAN.R-project.org/package=readr">https://CRAN.R-project.org/package=readr</a>.
+Wickham, Hadley, Jim Hester, e Jennifer Bryan. 2022. <em>readr: Read Rectangular Text Data</em>. <a href="https://CRAN.R-project.org/package=readr">https://CRAN.R-project.org/package=readr</a>.
 </div>
 <div id="ref-knitr2015" class="csl-entry" role="listitem">
-Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
 </div>
 <div id="ref-R-knitr" class="csl-entry" role="listitem">
-———. 2022. <em>Knitr: A General-Purpose Package for Dynamic Report Generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+———. 2022. <em>knitr: A General-Purpose Package for Dynamic Report Generation in R</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
 </div>
 <div id="ref-rmarkdown2018" class="csl-entry" role="listitem">
-Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a>.
+Xie, Yihui, J. J. Allaire, e Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a>.
 </div>
-</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
 <ol>
 <li id="fn1"><p>https://cetesb.sp.gov.br/<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>https://support.rstudio.com/hc/en-us/articles/200532197-Character-Encoding<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -904,12 +903,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
