@@ -63,6 +63,9 @@ about:
     - icon: github
       text: GitHub
       href: https://github.com/beatrizmilz
+    - icon: instagram
+      text: Instagram
+      href: https://instagram.com/dadoseambiente
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/beatrizmilz/  
@@ -72,21 +75,23 @@ about:
 ---
 
 ::: {#hero-heading}
-**English:** Welcome to my website! You can find here my blog posts, talks, and other projects I'm working on.
 
 **Português:** Boas vindas à minha página pessoal! Aqui você pode encontrar meus textos do blog, palestras e outros projetos em que estou trabalhando.
+
+**English:** Welcome to my website! You can find here my blog posts, talks, and other projects I'm working on.
+
 :::
 
 ------------------------------------------------------------------------
 
-## Recent Talks / Palestras recentes
+## Apresentações recentes / Recent talks
+
+[Veja todas as apresentações aqui! / See all talks here!](/talks/index.html)
 
 ::: {#talks}
 :::
 
-## Recent posts / Posts recentes
+## Textos recentes / Recent posts
 
 ::: {#posts}
 :::
-
-

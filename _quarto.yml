@@ -66,6 +66,8 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/beatrizmilz/
 
+lang: pt
+
 format:
   html:
     smooth-scroll: true
