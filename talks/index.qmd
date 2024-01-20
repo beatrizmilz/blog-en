@@ -16,7 +16,7 @@ comments: false
 toc: true
 ---
 
-## Next activities / Próximas atividades
+## Próximas atividades/Next activities
 
 <!-- ### Eventos/Events -->
 
@@ -25,15 +25,32 @@ toc: true
 <!-- ### Cursos/Courses -->
 
 <!-- -   2023 - Cursos na [Curso-R](https://curso-r.com/). -->
+
 <!--     -   [Formulário de bolsas de diversidade](https://forms.gle/KpALbhvHXu9aVKXTA). -->
+
 <!--     -   [Os materiais dos cursos estão disponíveis online](https://curso-r.com/material/). -->
+
 <!-- -   2023 - Cursos no [CEBRAP.lab](https://cebrap.org.br/cebrap-lab/): -->
+
 <!--     -   Introdução a linguagem de programação R -->
+
 <!--     -   Visualização de dados no R -->
+
 <!--     -   Análise quantitativa de texto -->
+
+
 -   2024 - Janeiro/Fevereiro - [Curso de verão no IME/USP - Relatórios reprodutíveis em R](https://www.ime.usp.br/~verao/). Materiais: [2022](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/trabalho_final.html), [2023](https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/).
 
-## Invitations
+- 2024 - Janeiro/Fevereiro - [Curso: R para Ciência de Dados I - Curso-R](https://loja.curso-r.com/r-para-ciencia-de-dados-i.html). Cupom de 30% de desconto: `APRENDA-R-2024` válido até 27/01/2024 (atenção: o cupom só funciona após fazer cadastro/login no site).
+ 
+ - 2024 - Março/Abril - [Curso: R para Ciência de Dados II - Curso-R](https://loja.curso-r.com/r-para-ciencia-de-dados-ii.html). Cupom de 30% de desconto: `APRENDA-R-2024` válido até 27/01/2024 (atenção: o cupom só funciona após fazer cadastro/login no site).
+ 
+ - 2024 - Maio/Junho - [Curso: Relatórios e apresentações - Curso-R](https://loja.curso-r.com/r-para-ciencia-de-dados-i.html). Cupom de 30% de desconto: `APRENDA-R-2024` válido até 27/01/2024 (atenção: o cupom só funciona após fazer cadastro/login no site).
+ 
+ 
+ 
+
+## Convites/Invitations
 
 Please email me at: [milz.bea\@gmail.com](mailto:milz.bea@gmail.com)
 
