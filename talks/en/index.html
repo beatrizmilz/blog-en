@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
@@ -104,15 +111,42 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
@@ -124,93 +158,93 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">About</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
         <li>
-    <a class="dropdown-item" href="../../about.html" rel="" target="">
+    <a class="dropdown-item" href="../../about.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../about-pt.html" rel="" target="">
+    <a class="dropdown-item" href="../../about-pt.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../about-es.html" rel="" target="">
+    <a class="dropdown-item" href="../../about-es.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Posts</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
         <li>
-    <a class="dropdown-item" href="../../posts/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../posts/index.html">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/en.html" rel="" target="">
+    <a class="dropdown-item" href="../../posts/en.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/pt.html" rel="" target="">
+    <a class="dropdown-item" href="../../posts/pt.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../posts/es.html" rel="" target="">
+    <a class="dropdown-item" href="../../posts/es.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Talks</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">    
         <li>
-    <a class="dropdown-item" href="../../talks/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../talks/index.html">
  <span class="dropdown-text">All/Todas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../talks/en/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../talks/pt/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../talks/pt/index.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../talks/es/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../talks/es/index.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf" rel="" target="">
- <span class="menu-text">Resume</span></a>
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf"> 
+<span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888" rel="" target=""><i class="bi bi-newspaper" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888"> <i class="bi bi-newspaper" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/beatrizmilz/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/beatrizmilz/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -223,7 +257,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -239,6 +273,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Communities">Communities <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Functional Programming">Functional Programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GitHub">GitHub <span class="quarto-category-count">(2)</span></div><div class="category" data-category="GitHub Actions">GitHub Actions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Purrr">Purrr <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R Markdown">R Markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R-Ladies">R-Ladies <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Reproducible Research">Reproducible Research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Talks">Talks <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Teaching">Teaching <span class="quarto-category-count">(3)</span></div><div class="category" data-category="gradethis">gradethis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="knitr">knitr <span class="quarto-category-count">(1)</span></div><div class="category" data-category="learnr">learnr <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
 
 
 
@@ -271,198 +306,198 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Purrr,Functional Programming" data-listing-date-sort="1700784000000" data-listing-file-modified-sort="1705756752970" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="0" data-categories="Purrr,Functional Programming" data-listing-date-sort="1700784000000" data-listing-file-modified-sort="1707442964137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
 <div class="thumbnail">
-<p><a href="../../talks/en/2023-11-rday-colombia-purrr/index.html"> <img src="../../talks/en/2023-11-rday-colombia-purrr/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../../talks/en/2023-11-rday-colombia-purrr/index.html" class="no-external"></a></p><a href="../../talks/en/2023-11-rday-colombia-purrr/index.html" class="no-external">
+<p><img src="../../talks/en/2023-11-rday-colombia-purrr/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../../talks/en/2023-11-rday-colombia-purrr/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../talks/en/2023-11-rday-colombia-purrr/index.html">
 <h3 class="no-anchor listing-title">
-Purrr-fecting your R workflow - An introduction to functional programming
+<a href="../../talks/en/2023-11-rday-colombia-purrr/index.html" class="no-external">Purrr-fecting your R workflow - An introduction to functional programming</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="../../talks/en/2023-11-rday-colombia-purrr/index.html" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../talks/en/2023-11-rday-colombia-purrr/index.html">
+<a href="../../talks/en/2023-11-rday-colombia-purrr/index.html" class="no-external">
 <div class="listing-date">
 24 de nov. de 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="GitHub,GitHub Actions" data-listing-date-sort="1667001600000" data-listing-file-modified-sort="1705756752958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-categories="GitHub,GitHub Actions" data-listing-date-sort="1667001600000" data-listing-file-modified-sort="1707442964125" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="19">
 <div class="thumbnail">
-<p><a href="../../talks/en/2022-gha-rladies-abuja/index.html"> <img src="../../talks/en/2022-gha-rladies-abuja/featured.webp" class="thumbnail-image"> </a></p>
+<p><a href="../../talks/en/2022-gha-rladies-abuja/index.html" class="no-external"></a></p><a href="../../talks/en/2022-gha-rladies-abuja/index.html" class="no-external">
+<p><img src="../../talks/en/2022-gha-rladies-abuja/featured.webp" class="thumbnail-image"></p>
+</a><p><a href="../../talks/en/2022-gha-rladies-abuja/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../talks/en/2022-gha-rladies-abuja/index.html">
 <h3 class="no-anchor listing-title">
-Running code while we’re sleeping - Introduction to GitHub Actions for R users
+<a href="../../talks/en/2022-gha-rladies-abuja/index.html" class="no-external">Running code while we’re sleeping - Introduction to GitHub Actions for R users</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="../../talks/en/2022-gha-rladies-abuja/index.html" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../talks/en/2022-gha-rladies-abuja/index.html">
+<a href="../../talks/en/2022-gha-rladies-abuja/index.html" class="no-external">
 <div class="listing-date">
 29 de out. de 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Talks,GitHub Actions,GitHub" data-listing-date-sort="1658966400000" data-listing-file-modified-sort="1705756752970" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="2" data-categories="Talks,GitHub Actions,GitHub" data-listing-date-sort="1658966400000" data-listing-file-modified-sort="1707442964137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
 <div class="thumbnail">
-<p><a href="../../talks/en/2022-rstudio-conf/index.html"> <img src="../../talks/en/2022-rstudio-conf/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../../talks/en/2022-rstudio-conf/index.html" class="no-external"></a></p><a href="../../talks/en/2022-rstudio-conf/index.html" class="no-external">
+<p><img src="../../talks/en/2022-rstudio-conf/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../../talks/en/2022-rstudio-conf/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../talks/en/2022-rstudio-conf/index.html">
 <h3 class="no-anchor listing-title">
-Making awesome automations with GitHub Actions
+<a href="../../talks/en/2022-rstudio-conf/index.html" class="no-external">Making awesome automations with GitHub Actions</a>
 </h3>
 <div class="listing-subtitle">
-rstudio::conf(2022)
+<a href="../../talks/en/2022-rstudio-conf/index.html" class="no-external">rstudio::conf(2022)</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../talks/en/2022-rstudio-conf/index.html">
+<a href="../../talks/en/2022-rstudio-conf/index.html" class="no-external">
 <div class="listing-date">
 28 de jul. de 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Communities,Reproducible Research" data-listing-date-sort="1655683200000" data-listing-file-modified-sort="1705756752966" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-categories="Communities,Reproducible Research" data-listing-date-sort="1655683200000" data-listing-file-modified-sort="1707442964133" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="52">
 <div class="thumbnail">
-<p><a href="../../talks/en/2022-interview-reproducible-research-scout/index.html"> <img src="../../talks/en/2022-interview-reproducible-research-scout/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../../talks/en/2022-interview-reproducible-research-scout/index.html" class="no-external"></a></p><a href="../../talks/en/2022-interview-reproducible-research-scout/index.html" class="no-external">
+<p><img src="../../talks/en/2022-interview-reproducible-research-scout/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../../talks/en/2022-interview-reproducible-research-scout/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../talks/en/2022-interview-reproducible-research-scout/index.html">
 <h3 class="no-anchor listing-title">
-Interview for the Reproducible Research Scout Youtube Channel
+<a href="../../talks/en/2022-interview-reproducible-research-scout/index.html" class="no-external">Interview for the Reproducible Research Scout Youtube Channel</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="../../talks/en/2022-interview-reproducible-research-scout/index.html" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../talks/en/2022-interview-reproducible-research-scout/index.html">
+<a href="../../talks/en/2022-interview-reproducible-research-scout/index.html" class="no-external">
 <div class="listing-date">
 20 de jun. de 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Talks,learnr,Teaching,gradethis" data-listing-date-sort="1636502400000" data-listing-file-modified-sort="1705756752958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-categories="Talks,learnr,Teaching,gradethis" data-listing-date-sort="1636502400000" data-listing-file-modified-sort="1707442964125" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="19">
 <div class="thumbnail">
-<p><a href="../../talks/en/2021-learnr-latinr/index.html"> <img src="../../talks/en/2021-learnr-latinr/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../../talks/en/2021-learnr-latinr/index.html" class="no-external"></a></p><a href="../../talks/en/2021-learnr-latinr/index.html" class="no-external">
+<p><img src="../../talks/en/2021-learnr-latinr/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../../talks/en/2021-learnr-latinr/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../talks/en/2021-learnr-latinr/index.html">
 <h3 class="no-anchor listing-title">
-Scaling feedback using learnr and gradethis in a introductory R course
+<a href="../../talks/en/2021-learnr-latinr/index.html" class="no-external">Scaling feedback using learnr and gradethis in a introductory R course</a>
 </h3>
 <div class="listing-subtitle">
-LatinR 2021
+<a href="../../talks/en/2021-learnr-latinr/index.html" class="no-external">LatinR 2021</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../talks/en/2021-learnr-latinr/index.html">
+<a href="../../talks/en/2021-learnr-latinr/index.html" class="no-external">
 <div class="listing-date">
 10 de nov. de 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Communities,R-Ladies" data-listing-date-sort="1619568000000" data-listing-file-modified-sort="1705756752958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="5" data-categories="Communities,R-Ladies" data-listing-date-sort="1619568000000" data-listing-file-modified-sort="1707442964125" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="8">
 <div class="thumbnail">
-<p><a href="../../talks/en/2021-experience-useR/index.html"> <img src="../../talks/en/2021-experience-useR/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../../talks/en/2021-experience-useR/index.html" class="no-external"></a></p><a href="../../talks/en/2021-experience-useR/index.html" class="no-external">
+<p><img src="../../talks/en/2021-experience-useR/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../../talks/en/2021-experience-useR/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../talks/en/2021-experience-useR/index.html">
 <h3 class="no-anchor listing-title">
-My experience at useR 2019
+<a href="../../talks/en/2021-experience-useR/index.html" class="no-external">My experience at useR 2019</a>
 </h3>
 <div class="listing-subtitle">
-Meetup R-Ladies and useR 2021
+<a href="../../talks/en/2021-experience-useR/index.html" class="no-external">Meetup R-Ladies and useR 2021</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../talks/en/2021-experience-useR/index.html">
+<a href="../../talks/en/2021-experience-useR/index.html" class="no-external">
 <div class="listing-date">
 28 de abr. de 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Teaching" data-listing-date-sort="1600819200000" data-listing-file-modified-sort="1705756752946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="6" data-categories="Teaching" data-listing-date-sort="1600819200000" data-listing-file-modified-sort="1707442964113" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
 <div class="thumbnail">
-<p><a href="../../talks/en/2020-RStudio-certification/index.html"> <img src="../../talks/en/2020-RStudio-certification/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../../talks/en/2020-RStudio-certification/index.html" class="no-external"></a></p><a href="../../talks/en/2020-RStudio-certification/index.html" class="no-external">
+<p><img src="../../talks/en/2020-RStudio-certification/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../../talks/en/2020-RStudio-certification/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../talks/en/2020-RStudio-certification/index.html">
 <h3 class="no-anchor listing-title">
-Adding figures in R Markdown
+<a href="../../talks/en/2020-RStudio-certification/index.html" class="no-external">Adding figures in R Markdown</a>
 </h3>
 <div class="listing-subtitle">
-Teaching exam - RStudio
+<a href="../../talks/en/2020-RStudio-certification/index.html" class="no-external">Teaching exam - RStudio</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../talks/en/2020-RStudio-certification/index.html">
+<a href="../../talks/en/2020-RStudio-certification/index.html" class="no-external">
 <div class="listing-date">
 23 de set. de 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Talks,R-Ladies,Communities" data-listing-date-sort="1562803200000" data-listing-file-modified-sort="1705756752942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="7" data-categories="Talks,R-Ladies,Communities" data-listing-date-sort="1562803200000" data-listing-file-modified-sort="1707442964109" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
 <div class="thumbnail">
-<p><a href="../../talks/en/2019-user-rladies-sp/index.html"> <img src="../../talks/en/2019-user-rladies-sp/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../../talks/en/2019-user-rladies-sp/index.html" class="no-external"></a></p><a href="../../talks/en/2019-user-rladies-sp/index.html" class="no-external">
+<p><img src="../../talks/en/2019-user-rladies-sp/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../../talks/en/2019-user-rladies-sp/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../talks/en/2019-user-rladies-sp/index.html">
 <h3 class="no-anchor listing-title">
-The evolution and importance of the R-Ladies São Paulo chapter in Brazil
+<a href="../../talks/en/2019-user-rladies-sp/index.html" class="no-external">The evolution and importance of the R-Ladies São Paulo chapter in Brazil</a>
 </h3>
 <div class="listing-subtitle">
-useR 2019
+<a href="../../talks/en/2019-user-rladies-sp/index.html" class="no-external">useR 2019</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../talks/en/2019-user-rladies-sp/index.html">
+<a href="../../talks/en/2019-user-rladies-sp/index.html" class="no-external">
 <div class="listing-date">
 11 de jul. de 2019
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="R Markdown,knitr,Teaching" data-listing-date-sort="1543968000000" data-listing-file-modified-sort="1705756752938" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="8" data-categories="R Markdown,knitr,Teaching" data-listing-date-sort="1543968000000" data-listing-file-modified-sort="1707442964105" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
 <div class="thumbnail">
-<p><a href="../../talks/en/2018-knitr-codata/index.html"> <img src="../../talks/en/2018-knitr-codata/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../../talks/en/2018-knitr-codata/index.html" class="no-external"></a></p><a href="../../talks/en/2018-knitr-codata/index.html" class="no-external">
+<p><img src="../../talks/en/2018-knitr-codata/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../../talks/en/2018-knitr-codata/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../../talks/en/2018-knitr-codata/index.html">
 <h3 class="no-anchor listing-title">
-Producing Reports with knitr and R
+<a href="../../talks/en/2018-knitr-codata/index.html" class="no-external">Producing Reports with knitr and R</a>
 </h3>
 <div class="listing-subtitle">
-CODATA-RDA School of Research Data Science
+<a href="../../talks/en/2018-knitr-codata/index.html" class="no-external">CODATA-RDA School of Research Data Science</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="../../talks/en/2018-knitr-codata/index.html">
+<a href="../../talks/en/2018-knitr-codata/index.html" class="no-external">
 <div class="listing-date">
 5 de dez. de 2018
 </div>
@@ -553,10 +588,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.beamilz\.com\/**");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -566,8 +618,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -580,6 +641,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -623,6 +803,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -648,6 +829,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -705,26 +912,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.beamilz\.com\/**");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Website made with <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-left">
+<p>Website made with <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
@@ -764,6 +959,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

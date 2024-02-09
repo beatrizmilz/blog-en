@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Beatriz Milz - Creating a blog with Quarto in 10 steps</title>
@@ -20,7 +20,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -75,7 +75,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -84,6 +90,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
@@ -105,8 +112,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
@@ -118,93 +125,93 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">About</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">
 <li>
-    <a class="dropdown-item" href="../../../about.html" rel="" target="">
+    <a class="dropdown-item" href="../../../about.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../about-pt.html" rel="" target="">
+    <a class="dropdown-item" href="../../../about-pt.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../about-es.html" rel="" target="">
+    <a class="dropdown-item" href="../../../about-es.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Posts</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
 <li>
-    <a class="dropdown-item" href="../../../posts/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../posts/index.html">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../posts/en.html" rel="" target="">
+    <a class="dropdown-item" href="../../../posts/en.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../posts/pt.html" rel="" target="">
+    <a class="dropdown-item" href="../../../posts/pt.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../posts/es.html" rel="" target="">
+    <a class="dropdown-item" href="../../../posts/es.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-talks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Talks</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-talks">
 <li>
-    <a class="dropdown-item" href="../../../talks/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../talks/index.html">
  <span class="dropdown-text">All/Todas</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../talks/en/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../talks/en/index.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../talks/pt/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../talks/pt/index.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../talks/es/index.html" rel="" target="">
+    <a class="dropdown-item" href="../../../talks/es/index.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
 </li>
   <li class="nav-item">
-    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf" rel="" target="">
- <span class="menu-text">Resume</span></a>
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf"> 
+<span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888" rel="" target=""><i class="bi bi-newspaper" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888"> <i class="bi bi-newspaper" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/beatrizmilz/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/beatrizmilz/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-<div class="quarto-navbar-tools">
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
@@ -298,8 +305,8 @@ Tip
 <section id="open-new-tabs" class="level2"><h2 class="anchored" data-anchor-id="open-new-tabs">1 - Open new tabs!</h2>
 <p>First of all: the Quarto team made a huge effort writing <a href="https://quarto.org/docs/websites/website-blog.html">the documentation</a>. I suggest that you open it in another tab, and use the Search button in the top-right of the docs page (believe me, the search feature used in Quarto is awesome!).</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://quarto.org/docs/websites/website-blog.html"><img src="img/search.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Print screen of the Quarto Documentation about blogs.</figcaption></figure>
+<figure class="figure"><p><a href="https://quarto.org/docs/websites/website-blog.html"><img src="img/search.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Print screen of the Quarto Documentation about blogs."></a></p>
+<figcaption>Print screen of the Quarto Documentation about blogs.</figcaption></figure>
 </div>
 <p>Second: I think it is nice to look at other blogs made with Quarto to see what you can do. I have not found a lot of blogs made with Quarto, and I think because it is a new software. So, take a look at these blogs:</p>
 <ul>
@@ -309,8 +316,8 @@ Tip
 <p>I have been using Quarto for more than half a year now, so I had already installed Quarto.</p>
 <p>But one thing that I do frequently is to <a href="https://quarto.org/docs/get-started/">update quarto</a>. I recommend you do the same because if you use an older version, you might get a bug that has already been fixed.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://quarto.org/docs/get-started/"><img src="img/install-quarto.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Print screen of the Quarto ‘Get Started’ page.</figcaption></figure>
+<figure class="figure"><p><a href="https://quarto.org/docs/get-started/"><img src="img/install-quarto.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Print screen of the Quarto ‘Get Started’ page."></a></p>
+<figcaption>Print screen of the Quarto ‘Get Started’ page.</figcaption></figure>
 </div>
 </section><section id="create-a-project-for-the-blog" class="level2"><h2 class="anchored" data-anchor-id="create-a-project-for-the-blog">3 - Create a project for the blog</h2>
 <p>I’m an <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a> user, so I created a new RStudio Project using the interface:</p>
@@ -318,46 +325,46 @@ Tip
 <li>Click the <code>Project:</code> button, and then in <code>New Project...</code>:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/new_project/01-new-project.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figure class="figure"><p><img src="img/new_project/01-new-project.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 <ol start="2" type="1">
 <li>Choose <code>New Directory</code>:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/new_project/02-new-directory.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figure class="figure"><p><img src="img/new_project/02-new-directory.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 <ol start="3" type="1">
 <li>Choose <code>Quarto blog</code>:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/new_project/03-new-quarto-blog.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figure class="figure"><p><img src="img/new_project/03-new-quarto-blog.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 <ol start="4" type="1">
 <li>Choose the directory name (the name of the folder where your blog will be stored) and where in your computer you want to save it. Then click <code>Create Project</code>:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/new_project/04-name-and-path.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figure class="figure"><p><img src="img/new_project/04-name-and-path.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 <ol start="5" type="1">
 <li>Voilá! The structure of your blog is ready 🎉. Check the <code>Files</code> panel and explore the files stored there.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/new_project/05-project-created.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figure class="figure"><p><img src="img/new_project/05-project-created.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 </section><section id="preview-your-blog" class="level2"><h2 class="anchored" data-anchor-id="preview-your-blog">4 - Preview your blog</h2>
 <p>You can preview how your blog is going to look like if you open an <code>.qmd</code> file and click the <strong>Render</strong> button. The preview of your blog will show on the Viewer Pane in the RStudio IDE.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/render.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/render.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>But you can also click the <strong>Show in new window</strong> button (circled in red in the image above) to preview it in your browser:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/preview.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/preview.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>Nice! Your blog exists on your computer now. But we still need to put it online, so other people can read your posts. In the next two sections I’ll show you how to do that!</p>
@@ -383,10 +390,10 @@ What is Git? GitHub? (Click to expand!)
 <p><strong>You can read detailed information about how to do this in the book <a href="https://happygitwithr.com/">Happy Git with R</a>.</strong></p>
 <p>Here is a useful check-list you can use:</p>
 <ul class="task-list">
-<li><p><input type="checkbox"><a href="https://git-scm.com/downloads">Install Git on your computer</a></p></li>
-<li><p><input type="checkbox"><a href="https://github.com/">Create a free account on GitHub</a></p></li>
-<li><p><input type="checkbox">Install package <a href="https://usethis.r-lib.org/">usethis</a>: <code>install.packages("usethis")</code></p></li>
-<li><p><input type="checkbox">Introduce yourself to Git:</p></li>
+<li><p><label><input type="checkbox"><a href="https://git-scm.com/downloads">Install Git on your computer</a></label></p></li>
+<li><p><label><input type="checkbox"><a href="https://github.com/">Create a free account on GitHub</a></label></p></li>
+<li><p><label><input type="checkbox">Install package <a href="https://usethis.r-lib.org/">usethis</a>: <code>install.packages("usethis")</code></label></p></li>
+<li><p><label><input type="checkbox">Introduce yourself to Git:</label></p></li>
 </ul>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_git_config</span><span class="op">(</span></span>
@@ -397,10 +404,10 @@ What is Git? GitHub? (Click to expand!)
 <span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul class="task-list">
-<li><p><input type="checkbox">Create a GitHub PAT Token with <code>usethis::create_github_token()</code> (is like a password)</p></li>
-<li><p><input type="checkbox">Store your token with <code>gitcreds::gitcreds_set()</code></p></li>
-<li><p><input type="checkbox">Restart your R Session (usually <code>CTRL + SHIFT + F10</code> will do the work)</p></li>
-<li><p><input type="checkbox">Use <code>usethis::git_sitrep()</code> to check if your name, email and PAT are configured. The most important thing to look for is: <code>Personal access token for 'https://github.com': '&lt;discovered&gt;'</code>.</p></li>
+<li><p><label><input type="checkbox">Create a GitHub PAT Token with <code>usethis::create_github_token()</code> (is like a password)</label></p></li>
+<li><p><label><input type="checkbox">Store your token with <code>gitcreds::gitcreds_set()</code></label></p></li>
+<li><p><label><input type="checkbox">Restart your R Session (usually <code>CTRL + SHIFT + F10</code> will do the work)</label></p></li>
+<li><p><label><input type="checkbox">Use <code>usethis::git_sitrep()</code> to check if your name, email and PAT are configured. The most important thing to look for is: <code>Personal access token for 'https://github.com': '&lt;discovered&gt;'</code>.</label></p></li>
 </ul>
 <p>If it is all configured, you are ready to continue reading this post. 🚀</p>
 </div>
@@ -461,7 +468,7 @@ What is Git? GitHub? (Click to expand!)
 <span><span class="co"># ✔ Opening URL 'https://github.com/beatrizmilz/name-of-your-blog'</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/new-repo.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/new-repo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>This is the repository used in this example: <a href="https://github.com/beatrizmilz/name-of-your-blog" class="uri">https://github.com/beatrizmilz/name-of-your-blog</a></p>
@@ -472,45 +479,45 @@ What is Git? GitHub? (Click to expand!)
 <li><p>Then, you can click <strong>Add new site</strong> and <strong>Import an existing project</strong>:</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/netlify/add-new-site.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/netlify/add-new-site.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <ol start="3" type="1">
 <li>Next, you need to connect to a Git provider. In this case, click the link to GitHub. It may ask you to authenticate with GitHub if you have not done this already.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/netlify/connect-to-git.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/netlify/connect-to-git.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <ol start="4" type="1">
 <li>Then, in <strong>Pick a repository from GitHub</strong>, choose the repository that you created for your blog:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/netlify/pick-repo.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/netlify/pick-repo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <ol start="5" type="1">
 <li>This step is really important, so don’t hurry up and take your time to do it with care! In <strong>Import an existing project from a Git repository</strong>, you <strong>only</strong> have to change one thing: the <strong>Base directory</strong> field. You need to write the name of the directory used to store the HTML files of your blog. By default, it is <code>_site</code>. This is because when you generate your blog, by default Quarto saves all the HTML files generated for your site in the directory called <code>_site</code>. Everything else will be filled out by Netlify, so don’t change anything else. Check if everything looks like the image below and then click <strong>Deploy site</strong>:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/netlify/site-settings.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figure class="figure"><p><img src="img/netlify/site-settings.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 <ol start="6" type="1">
 <li>When you first deploy a website on Netlify, it will show an automatic URL. In this case it was <em>peppy-cat-2e067c.netlify.app</em>. You can change it to a more personal URL, which would be easier for other people to type and remember. To change your site URL, click <strong>Site settings</strong>:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/netlify/first-deploy.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/netlify/first-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>Then click <strong>Change site name</strong>:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/netlify/site-details.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/netlify/site-details.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>And choose the name used for the URL of your blog, writing it on the field <strong>Site name</strong>. Below this field, you can see how the URL of your blog is going to look like! After choosing it, click <strong>Save</strong>. If you need, you can change it after.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/netlify/change-site-name.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/netlify/change-site-name.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>Now the blog that I am creating as an example is available in this link: <a href="https://your-awesome-blog-with-quarto.netlify.app/" class="uri">https://your-awesome-blog-with-quarto.netlify.app/</a></p>
@@ -524,7 +531,7 @@ What is Git? GitHub? (Click to expand!)
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/theme.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/theme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>If you know CSS and would like to change the theme yourself, you can edit the <code>styles.css</code> file.</p>
@@ -543,19 +550,19 @@ How can I update my blog with the changes I made? (Click to expand!)
 <p>If this is your first time using Git and GitHub in RStudio IDE, I’ll show you the steps to update your blog!</p>
 <p>First, you need to find the Git Pane in RStudio IDE. If it is not there, I recommend restarting RStudio and opening your project again.</p>
 <p>Then, in your Git Pane, the list of files with changes will appear. Check the boxes of the files that you want to update, and click <strong>Commit</strong>:</p>
-<p><img src="img/git-pane/stage.png" class="img-fluid" style="width:100.0%" data-fig-align="center"> Next, you need to write a message that, in a few words, explains what was changed. Write this message in the <strong>Commit message</strong> field, and the click <strong>Commit</strong>:</p>
+<p><img src="img/git-pane/stage.png" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%"> Next, you need to write a message that, in a few words, explains what was changed. Write this message in the <strong>Commit message</strong> field, and the click <strong>Commit</strong>:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/git-pane/write-commit-message.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/git-pane/write-commit-message.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>Finally, close the Git window, then click <strong>Push</strong> (it is the green up-arrow button on the Git pane).</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/git-pane/status.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/git-pane/status.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>After all the changes are sent to GitHub, the Git Pane will be empty, meaning that there are no new changes:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/git-pane/no-changes.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/git-pane/no-changes.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>Now, wait a minute and then check your blog online!</p>
@@ -571,24 +578,24 @@ How can I update my blog with the changes I made? (Click to expand!)
 <li><p>Install the <a href="https://github.com/apps/giscus">Giscus App</a>. Go to <a href="https://github.com/apps/giscus">this website</a> and click the <strong>Install button</strong>:</p></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/giscus-install.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/giscus-install.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>Then, Giscus will ask you in which repositories you would like to give permission to Giscus. You can choose what you prefer. I chose to give access only to the repository that I’m going to need this service, so I chose <strong>Only select repository</strong> and pick the repository of the blog.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/giscus-repo.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figure class="figure"><p><img src="img/giscus-repo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
 </figure>
 </div>
 <ol start="3" type="1">
 <li>You have to enable the <strong>Discussions</strong> in your repository. First, go to your repository, and click <strong>Settings</strong>:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/github-repo.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="img/github-repo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>Then, scroll down to the <strong>Features</strong> sections, and check the box of the <strong>Discussions</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/enable-discussions.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figure class="figure"><p><img src="img/enable-discussions.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
 </figure>
 </div>
 <ol start="4" type="1">
@@ -602,7 +609,7 @@ How can I update my blog with the changes I made? (Click to expand!)
 <p>Remember to commit all the changes before checking the online version! If you missed that, go back to the end of <a href="#change-the-colors-of-your-blog">section 7</a> and read the collapsed tip.</p>
 <p>Now we have a comments section on the blog! People need to log in with GitHub in order to write a comment or give a reaction:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/giscus-deployed.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="img/giscus-deployed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -736,10 +743,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.beamilz\.com\/**");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -749,8 +773,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -763,6 +796,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -806,6 +958,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -831,6 +984,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -888,26 +1067,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.beamilz\.com\/**");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
-</script>
+</script><input type="hidden" id="giscus-base-theme" value="light"><input type="hidden" id="giscus-alt-theme" value="dark">
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">Website made with <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-left">
+<p>Website made with <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
