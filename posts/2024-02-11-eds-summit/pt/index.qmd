@@ -4,7 +4,7 @@ subtitle: "Relato da participação no evento *Environmental Data Science Summit
 author: "Beatriz Milz"
 date: "2024-02-11"
 categories: ["Events", "Environmental Data Science", "Ciências Ambientais", "Ciência de dados ambientais"]
-image: "logo-featured.png"
+image: "eds-nceas.png"
 toc: true
 draft: false
 ---
@@ -31,7 +31,7 @@ Segundo o [NCEAS](https://eds-summit.github.io/):
 
 ## Contextualizando a minha participação no evento
 
-Para fazer sentido o motivo de ser tão importante pra mim participar deste evento, é importante contextualizar as minhas experiências nos últimos anos:
+Para fazer sentido o motivo de ser tão importante pra mim participar deste evento, é importante contextualizar as minhas experiências nos últimos anos. *(Mas, se você quiser pular essa parte, pode ir direto para a próxima seção)*
 
 -   A minha formação universitária começou em **2012**, quando entrei no curso de Gestão Ambiental da EACH/USP.
 
@@ -44,6 +44,37 @@ Para fazer sentido o motivo de ser tão importante pra mim participar deste even
 -   Em 2021, participei do [Curso de Verão em Ciências Sociais Computacionais (*Summer Institute in Computational Social Science - SICSS*)](https://sicss.io/2024/fgv-ecmi-brazil/) (online devido à pandemia). Foi uma experiência incrível, durante 2 semanas, que me ajudou a entender melhor como a ciência de dados pode ser aplicada em outras áreas, e como a colaboração entre áreas pode ser muito enriquecedora. Fui super bem recebida, e aprendi muito com as pessoas que participaram do curso.
 
 -   Enquanto estava lendo os textos recomendados no SICSS, comecei a pensar: "será que tem algo parecido com isso, mas voltado para a área ambiental?". Foi aí que descobri o termo *Environmental Data Science*. Desde então, tenho pesquisado sobre isso, e juntado os links que encontro em um [repositório no GitHub](https://github.com/beatrizmilz/Environmental-Data-Science).
+
+[![Captura de tela do repositório](github-repo.png)](https://github.com/beatrizmilz/Environmental-Data-Science)
+
+- Um dos links que encontrei foi o do evento "Environmental Data Science Summit". Fiquei imediatamente interessada, mas quando fui me inscrever (dessa vez para a primeira edição), vi que o apoio financeiro para participar do evento era apenas para pessoas que moravam nos EUA. 
+
+- Certo tempo depois, vi que a segunda edição do evento estava com inscrições abertas. Dessa vez, não dizia nada no site sobre ser apenas para pessoas que moravam nos EUA. Me inscrevi! Fui selecionada, porém a organização apontou que não seria possível fornecer apoio financeiro para o deslocamento. Conversei com o meu marido, e decidimos que eu iria mesmo assim, pois acreditamos que o evento seria muito enriquecedor para a minha carreira.
+
+- Em resumo: eu queria muito ir para conectar com pessoas que estão na mesma área que eu, e para aprender mais sobre o que está sendo feito na área de *Environmental Data Science*!
+
+## Formato do evento
+
+O evento foi presencial, e contou com 4 apresentações principais (*keynotes*), atividades em grupo, e tempo para socialização e conexão entre os participantes.
+
+### Apresentações principais (*Keynotes*)
+
+#### Scott St. George
+
+...
+
+#### Somayeh Dodge
+
+...
+
+#### Clinton Johnson
+
+...
+
+#### Jamal Watkins
+
+...
+
 
 ## Próximas edições do evento
 
