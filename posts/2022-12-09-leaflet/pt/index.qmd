@@ -1,0 +1,57 @@
+---
+title: "Leaflet: Mapas interativos com R"
+subtitle: "Primeiros passos usando o leaflet"
+author: "Beatriz Milz"
+date: "2022-12-17"
+categories: ["Tutorial"]
+#image: "logo-featured.jpg"
+toc: true
+draft: false
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+Olá!
+
+O pacote `{leaflet}` permite a criação de mapas interativos, que são muito interessantes para adicionar em aplicativos Shiny, e também produtos em HTML feitos com Quarto e RMarkdown (seja um relatório, apresentação, etc).
+
+A ideia desse post não é ser grande! Teremos código e alguns exemplos para começar a entender como dar os primeiros passos. <!-- https://github.com/beatrizmilz/oficina_ds_mapas/blob/main/script-aula.Rmd -->
+
+```{r}
+geobr::list_geobr()
+```
+
+```{r}
+
+dados_pnud <- abjData::pnud_min
+
+
+dplyr::glimpse(dados_pnud)
+
+```
+
+## Criar mapa de pontos com o leaflet
+
+```{r}
+# dados_pnud |>
+#   leaflet::leaflet()
+```
+
+```{r}
+# dados_pnud |>
+#   leaflet::leaflet() |> 
+#   leaflet::addMarkers( ~ lon, ~ lat)
+```
+
+```{r}
+# sigbm |>
+#   leaflet::leaflet() |>
+#   leaflet::addProviderTiles("Esri.WorldImagery") |>
+#   leaflet::addMarkers( ~ long, ~ lat,
+#                        clusterOptions = leaflet::markerClusterOptions())
+```
