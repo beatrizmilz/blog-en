@@ -6,7 +6,7 @@ date: "2024-02-11"
 categories: ["Events", "Environmental Data Science", "Ciências Ambientais", "Ciência de dados ambientais"]
 image: "eds-nceas.png"
 toc: true
-draft: false
+draft: true
 ---
 
 ## Introdução
@@ -49,11 +49,11 @@ Para fazer sentido o motivo de ser tão importante pra mim participar deste even
 
 [![Captura de tela do repositório](github-repo.png)](https://github.com/beatrizmilz/Environmental-Data-Science)
 
-- Um dos links que encontrei foi o do evento "Environmental Data Science Summit". Fiquei imediatamente interessada, mas quando fui me inscrever (dessa vez para a primeira edição), vi que o apoio financeiro para participar do evento era apenas para pessoas que moravam nos EUA. 
+-   Um dos links que encontrei foi o do evento "Environmental Data Science Summit". Fiquei imediatamente interessada, mas quando fui me inscrever (dessa vez para a primeira edição), vi que o apoio financeiro para participar do evento era apenas para pessoas que moravam nos EUA.
 
-- Certo tempo depois, vi que a segunda edição do evento estava com inscrições abertas. Dessa vez, não dizia nada no site sobre ser apenas para pessoas que moravam nos EUA. Me inscrevi! Fui selecionada, porém a organização apontou que não seria possível fornecer apoio financeiro para o deslocamento. Conversei com o meu marido, e decidimos que eu iria mesmo assim, pois acreditamos que o evento seria muito enriquecedor para a minha carreira.
+-   Certo tempo depois, vi que a segunda edição do evento estava com inscrições abertas. Dessa vez, não dizia nada no site sobre ser apenas para pessoas que moravam nos EUA. Me inscrevi! Fui selecionada, porém a organização apontou que não seria possível fornecer apoio financeiro para o deslocamento. Conversei com o meu marido, e decidimos que eu iria mesmo assim, pois acreditamos que o evento seria muito enriquecedor para a minha carreira.
 
-- Em resumo: eu queria muito ir para conectar com pessoas que estão na mesma área que eu, e para aprender mais sobre o que está sendo feito na área de *Environmental Data Science*!
+-   Em resumo: eu queria muito ir para conectar com pessoas que estão na mesma área que eu, e para aprender mais sobre o que está sendo feito na área de *Environmental Data Science*!
 
 ## Formato do evento
 
@@ -76,7 +76,6 @@ O evento foi presencial, e contou com 4 apresentações principais (*keynotes*),
 #### Jamal Watkins
 
 ...
-
 
 ## Próximas edições do evento
 
