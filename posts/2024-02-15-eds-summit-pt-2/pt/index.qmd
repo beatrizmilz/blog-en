@@ -1,0 +1,92 @@
+---
+title: "Porque era importante para mim participar de um evento sobre Ciência de Dados Ambientais?"
+subtitle: "Série: Relato da participação no evento *Environmental Data Science Summit* - Parte 1"
+author: "Beatriz Milz"
+date: "2024-02-11"
+categories: ["Events", "Environmental Data Science", "Ciências Ambientais", "Ciência de dados ambientais"]
+image: "eds-nceas.png"
+toc: true
+draft: true
+---
+
+## Introdução
+
+Entre os dias 6 e 7 de fevereiro de 2024, participei do evento [*Environmental Data Science Summit*](https://eds-summit.github.io/), em Santa Bárbara - Califórnia.
+
+Para compartilhar as minhas impressões sobre essa experiência, comecei a escrever um texto e ele ficou tão grande que decidi dividir em partes. Neste primeiro texto, vou falar sobre o meu interesse em participar no evento!
+
+Se você não me conhece ainda, eu sou a Beatriz Milz. Atualmente doutoranda em Ciências Ambientais no [Instituto de Energia e Ambiente - Universidade de São Paulo (PROCAM/IEE/USP)](http://www.iee.usp.br/?q=pt-br/programa-de-p%C3%B3s-gradua%C3%A7%C3%A3o-em-ci%C3%AAncia-ambiental), com o privilégio de ser orientada pelo [Prof. Dr. Pedro R. Jacobi](https://scholar.google.com.br/citations?user=LavkF8cAAAAJ&hl=pt-BR), e co-orientada pela [Profa. Dra. Sandra Momm](https://scholar.google.com.br/citations?hl=pt-BR&user=c6tyJTkAAAAJ), duas pessoas incríveis! Desde 2018, comecei a estudar programação para análise de dados, para utilizar na minha pesquisa. Atualmente também trabalho como cientista de dados na [R6](http://www.rseis.com.br/), uma empresa de consultoria e treinamentos na área de estatística e ciência de dados.
+
+## Sobre o evento
+
+O evento "Environmental Data Science Summit" foi organizado pelo [National Center for Ecological Analysis and Synthesis](https://www.nceas.ucsb.edu/) (NCEAS), um centro de pesquisa afiliado à [Universidade da Califórnia em Santa Bárbara (UCSB)](https://www.ucsb.edu/).
+
+O objetivo do evento é construir e fomentar a colaboração dentro da comunidade de **Ciência de Dados Ambientais**.
+
+Mas, afinal, o que é Ciência de Dados Ambientais? Vamos lá!
+
+## O que é Ciência de Dados Ambientais?
+
+Segundo o [NCEAS](https://eds-summit.github.io/):
+
+> **Ciência de Dados Ambientais** (*Environmental Data Science* - EDS) é um campo em crescimento, que utiliza abordagens interdisciplinares para investigar e responder a questões ambientais com ferramentas modernas de ciência de dados. O campo é amplo, diverso e está em expansão.
+
+## Contextualizando a minha participação no evento
+
+Para fazer sentido o motivo de ser tão importante pra mim participar deste evento, é importante contextualizar as minhas experiências nos últimos anos. *(Mas, se você quiser pular essa parte, pode ir direto para a próxima seção)*
+
+-   A minha formação universitária começou em **2012**, quando entrei no curso de Gestão Ambiental da EACH/USP.
+
+-   Entre **2014 e 2015**, fiz um estágio no Núcleo Técnico de Gestão Ambiental, da Secretaria Municipal de Segurança Urbana, da Prefeitura Municipal de São Paulo (NTGA/SMSU/PMSP). No NTGA, eu trabalhei em um projeto relacionado à resgate de animais silvestres vitimados, e nesse projeto eu participava ativamente na **elaboração de relatórios e mapas, a partir dos dados de ocorrências** atendidas pela Guarda Civil Metropolitana Ambiental. Nessa época, fiz cursos e aprendi bastante na prática sobre Sistemas de Informações Geográficas (SIG), Geoprocessamento, Excel, e como usar o QGIS.
+
+-   Quando comecei a aprender R em 2018, já com o mestrado finalizado, eu me encantei com o RMarkdown e com a possibilidade de criar relatórios reprodutíveis. Para mim, ficou claro que usar programação para realizar minhas pesquisas era uma forma muito mais rápida e eficiente do que eu estava acostumada. Isso me incentivou a estudar e aprender mais sobre o assunto.
+
+-   No doutorado, o percurso de cientista ambiental que usava R para análise de dados foi um pouco solitário: não encontrei pessoas no programa com interesses similares, nem disciplinas que me ajudassem a aprofundar nesse caminho. Por isso, eu comecei a buscar disciplinas e eventos, em outros institutos/cursos, que me ajudassem a me aprofundar nesse caminho.
+
+-   Em 2021, participei do [Curso de Verão em Ciências Sociais Computacionais (*Summer Institute in Computational Social Science - SICSS*)](https://sicss.io/2024/fgv-ecmi-brazil/) (online devido à pandemia). Foi uma experiência incrível, durante 2 semanas, que me ajudou a entender melhor como a ciência de dados pode ser aplicada em outras áreas, e como a colaboração entre áreas pode ser muito enriquecedora. Fui super bem recebida, e aprendi muito com as pessoas que participaram do curso.
+
+-   Enquanto estava lendo os textos recomendados no SICSS, comecei a pensar: "será que tem algo parecido com isso, mas voltado para a área ambiental?". Foi aí que descobri o termo *Environmental Data Science*. Desde então, tenho pesquisado sobre isso, e juntado os links que encontro em um [repositório no GitHub](https://github.com/beatrizmilz/Environmental-Data-Science).
+
+[![Captura de tela do repositório](github-repo.png)](https://github.com/beatrizmilz/Environmental-Data-Science)
+
+-   Um dos links que encontrei foi o do evento "Environmental Data Science Summit". Fiquei imediatamente interessada, mas quando fui me inscrever (dessa vez para a primeira edição), vi que o apoio financeiro para participar do evento era apenas para pessoas que moravam nos EUA.
+
+-   Certo tempo depois, vi que a segunda edição do evento estava com inscrições abertas. Dessa vez, não dizia nada no site sobre ser apenas para pessoas que moravam nos EUA. Me inscrevi! Fui selecionada, porém a organização apontou que não seria possível fornecer apoio financeiro para o deslocamento. Conversei com o meu marido, e decidimos que eu iria mesmo assim, pois acreditamos que o evento seria muito enriquecedor para a minha carreira.
+
+-   Em resumo: eu queria muito ir para conectar com pessoas que estão na mesma área que eu, e para aprender mais sobre o que está sendo feito na área de *Environmental Data Science*!
+
+## Formato do evento
+
+O evento foi presencial, e contou com 4 apresentações principais (*keynotes*), atividades em grupo, e tempo para socialização e conexão entre os participantes.
+
+### Apresentações principais (*Keynotes*)
+
+#### Scott St. George
+
+...
+
+#### Somayeh Dodge
+
+...
+
+#### Clinton Johnson
+
+...
+
+#### Jamal Watkins
+
+...
+
+## Próximas edições do evento
+
+-   A primeira edição ocorreu em 2023, e teve como tema central "Explorando a diversidade na ciência de dados ambientais".
+
+-   Essa foi a segunda edição do evento (em 2024), tendo como tema central "Comunicar e traduzir dados ambientais".
+
+-   A terceira edição já está sendo planejada para **2025**.
+
+## Links úteis
+
+-   [Site oficial do evento](https://eds-summit.github.io/)
+
+-   [Página do evento no site do NCEAS](https://www.nceas.ucsb.edu/environmental-data-science-summit)
