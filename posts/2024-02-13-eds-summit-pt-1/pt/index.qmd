@@ -4,7 +4,7 @@ subtitle: "Série: Relato da participação no evento *Environmental Data Scienc
 author: "Beatriz Milz"
 date: "2024-02-13"
 categories: ["Events", "Environmental Data Science", "Ciências Ambientais", "Ciência de Dados Ambientais"]
-image: "lugar-evento.jpeg"
+image: "images/lugar-evento.jpeg"
 toc: true
 draft: false
 ---
@@ -42,9 +42,6 @@ Eu também gosto bastante de aprender em comunidade: aprender com outras pessoas
 ::: {.callout-tip title="Mais importante!"}
 Eu queria muito ir para me **conectar com pessoas que estão na mesma área que eu**, **conhecer pessoas inspiradoras**, e para **aprender mais sobre o que está sendo feito na área de *Environmental Data Science***!
 :::
-
-
-
 
 Mas para fazer sentido o motivo de ser tão importante pra mim participar deste evento, é importante **contextualizar as minhas experiências nos últimos anos**.
 
