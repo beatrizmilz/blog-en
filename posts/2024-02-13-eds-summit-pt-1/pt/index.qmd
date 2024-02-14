@@ -1,5 +1,5 @@
 ---
-title: "Por que era importante para mim participar de um evento sobre Ciência de Dados Ambientais?"
+title: "🇧🇷 Por que era importante para mim participar de um evento sobre Ciência de Dados Ambientais?"
 subtitle: "Série: Relato da participação no evento *Environmental Data Science Summit* - Parte 1"
 author: "Beatriz Milz"
 date: "2024-02-13"
@@ -79,7 +79,7 @@ Certo tempo depois, vi que a edição de **2024** estava com inscrições aberta
 
 ![O tão esperado email com o retorno da submissão! Uhul! 🎉🎉](images/email.png){fig-align="center" fig-alt="Captura de tela do email que recebi, com o retorno da submissão da minha inscrição para o evento"}
 
-A organização apontou que não seria possível fornecer apoio financeiro para o deslocamento. Conversei com o meu marido, e decidimos que eu iria mesmo assim, pois acreditamos que o evento seria muito enriquecedor para a minha carreira. E acredito que foi uma decisão muito boa!
+A organização apontou que não seria possível fornecer apoio financeiro para o deslocamento de participantes internacionais, mas que arcariam com a taxa de inscrição do evento, ofereceriam alimentação e pagariam pelas despesas do hotel durante os dias do evento. Conversei com o meu marido, e decidimos que eu iria mesmo assim, pois acreditamos que o evento seria muito enriquecedor para a minha carreira. **E acredito que foi uma decisão muito boa!**
 
 ## Conclusão
 

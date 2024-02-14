@@ -1,0 +1,118 @@
+---
+title: "🇺🇸 Why was so important for me to participate in an event about Environmental Data Science?"
+subtitle: "Series: Summary of my participation in the *Environmental Data Science Summit* - Part 1"
+author: "Beatriz Milz"
+date: "2024-02-13"
+categories: ["Events", "Environmental Data Science", "Ciências Ambientais", "Ciência de Dados Ambientais"]
+image: "images/lugar-evento.jpeg"
+toc: true
+draft: false
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+
+## Introduction
+
+Between February 6th and 7th, 2024, I participated in the [*Environmental Data Science Summit*](https://eds-summit.github.io/), in Santa Barbara - California.
+
+The event was organized by the [National Center for Ecological Analysis and Synthesis](https://www.nceas.ucsb.edu/) (NCEAS), a independent research affiliate of the [University of California, Santa Barbara (UCSB)](https://www.ucsb.edu/).
+
+The goal of the event is to build community and foster collaboration within the **Environmental Data Science community**.
+
+Since it's a term I don't often see used in Portuguese, I bring the definition presented by the [event organization](https://eds-summit.github.io/):
+
+
+> **Environmental Data Science** (EDS) is a growing field of interdisciplinary approaches to investigating and answering environmental questions with modern data science tools. The field is broad, diverse, and expanding.
+
+![Photo I took of the event venue!](images/lugar-evento.jpeg){fig-alt="Photo of the event space entrance" fig-align="center" width="80%"}
+
+
+To share my impressions of this experience, I began writing this post and it was **becoming so large that I decided to split it into a series**. In this first post, I'll talk about my interest in participating in the event!
+
+## Who am I?
+
+If you don't know me yet, I'm Beatriz Milz, nice to meet you!
+
+I am currently a PhD candidate in Environmental Sciences at the [Institute of Energy and Environment - University of São Paulo (PROCAM/IEE/USP)](http://www.iee.usp.br/?q=en/graduate-program-in-environmental-science), with the privilege of being advised by [Prof. Dr. Pedro R. Jacobi](https://scholar.google.com.br/citations?user=LavkF8cAAAAJ&hl=en), and co-advised by [Prof. Dr. Sandra Momm](https://scholar.google.com.br/citations?hl=en&user=c6tyJTkAAAAJ), two amazing people!
+
+Since **2018**, I began studying programming for data analysis to use in my research. I currently also work part-time as a teacher and consultant at [Curso-R](https://curso-r.com/), a consulting and training company in the field of statistics and data science.
+
+I also really enjoy learning in community: learning with other people, and sharing things I already know! I'm part of the organizing team of [R-Ladies São Paulo](https://rladies-sp.org/), and there are also various [content made my me available here](https://beamilz.com/talks/) (there's content since 2018!).
+
+[![This is me presenting at RStudio Conf 2022!](images/bia-palestrinha.png){fig-alt="Beatriz, a white woman with blonde hair, wearing glasses, speaking into a microphone. Wearing orange clothing. She has tattoos on her arms." fig-align="center" width="70%"}](https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/)
+
+
+## Why was participating in this event important to me?
+
+::: {.callout-tip title="Most importantly!"}
+I really wanted to go to **connect with people who are in the same field as me**, **meet inspiring people**, and to **learn more about what's being done in the field of *Environmental Data Science***!
+:::
+
+But to make sense of why it was so important for me to participate in this event, it's important to **contextualize my experiences over the last few years**.
+
+My university education began in **2012**, when I started my Bachelor in Environmental Management at the School of Arts, Sciences, and Humanities of the University of São Paulo (EACH/USP).
+
+![Photo of EACH-USP, where I completed my degree in Environmental Management!](images/each-usp.png){fig-align="center" width="50%"}
+
+Between **2014 and 2015**, I did an internship at the Technical Center for Environmental Management, of the Municipal Secretariat of Urban Security, of the São Paulo City Hall (NTGA/SMSU/PMSP). At NTGA, I worked on a project related to the rescue of victimized wildlife in the city of São Paulo.
+
+![Wildlife Rescue Service Vehicle](images/viatura-resgate.png){fig-align="center" width="50%" fig-alt="Photo of a Wildlife Rescue Service vehicle, from the Environmental Civil Guard"}
+
+In this project, I actively participated in **creating reports and maps, from the data of incidents** attended by the Environmental Civil Guard.
+
+[![Map we created in the project, showing incidents involving wildlife](images/mapa-resgate.png){fig-align="center" width="50%" fig-alt="Image of a map of the city of São Paulo, showing points indicating incidents involving wildlife."}](http://www.anggulo.com.br/p+l/2017/palestras/Coronel%20Jose%20roberto.pdf)
+
+At that time, I took courses and learned a lot in practice about Geographic Information Systems (GIS), Geoprocessing, Excel, and how to use QGIS.
+
+[![QGIS logo, an open-source software for working with GIS](images/QGIS.png){fig-align="center" width="40%" fig-alt="Logo of QGIS software"}](https://qgis.org/en/site/)
+
+When I started learning R in **2018**, already with my master's completed, I was amazed by RMarkdown and the possibility of creating reproducible reports. For me, it became clear that using programming languages to conduct my research was a much faster and more efficient way than what I was used to. This encouraged me to study and learn more about R.
+
+
+[![Illustration made by Allison Horst, showing how magical RMarkdown was for me!](images/rmarkdown-allison.png){fig-align="center" fig-alt='Two fuzzy round monsters dressed as wizards, working together to brew different things together from a pantry (code, text, figures, etc.) in a cauldron labeled “R Markdown”. The monster wizard at the cauldron is reading a recipe that includes steps “1. Add text. 2. Add code. 3. Knit. 4. (magic) 5. Celebrate perceived wizardry.” The R Markdown potion then travels through a tube, and is converted to markdown by a monster on a broom with a magic wand, and eventually converted to an output by pandoc. Stylized text (in a font similar to Harry Potter) reads “R Markdown. Text. Code. Output. Get it together, people.”'}](https://allisonhorst.com/r-packages-functions)
+
+During my PhD, the path of being an environmental scientist who used R for data analysis was a bit lonely: I didn't find people within PROCAM (the program that I'm enrolled) with similar interests, nor courses that could help me deepen this path. That's why I started looking for courses and events in other institutes/departments that could help me deepen this journey. I'm grateful to Professor [Jonathan Phillips](https://jonnyphillips.github.io/Website/) for accepting me as a special student in his course "[Data Analysis for Social Scientists](https://jonnyphillips.github.io/Ciencia_de_Dados/)" at the Faculty of Philosophy, Languages and Human Sciences of the University of São Paulo (FFLCH/USP) in **2020**!
+
+In **2021**, I participated in the [Summer Institute in Computational Social Sciences (SICSS)](https://sicss.io/2024/fgv-ecmi-brazil/) (online due to the pandemic). It was an amazing experience over two weeks that helped me understand better how data science could be applied in other areas, and how collaboration between fields could be very enriching. I was warmly welcomed, and I learned a lot from the other course participants.
+
+While reading the recommended texts in SICSS, I began to wonder: "Is there something similar to this, but focused on the environmental field?". That's when I discovered the term *Environmental Data Science*. Since then, I've been looking for content about it, and compiling the links I find in a [GitHub repository](https://github.com/beatrizmilz/Environmental-Data-Science).
+
+[![Screenshot of the repository](images/github-repo.png)](https://github.com/beatrizmilz/Environmental-Data-Science){fig-alt="Screenshot of the GitHub repository, showing the list of links I found on Environmental Data Science"}
+
+One of the links I found was about the event *"Environmental Data Science Summit"*. I was immediately interested, but when I went to register (this time for the first edition, that would happen in 2023), I saw that financial support for attending the event was only for people the lived in the USA. I could not afford to go on my own, so I didn't apply.
+
+Later, I saw that the **2024** edition was open for registrations. This time, there was no mention on the website about it being only for people residing in the USA. I applied and was selected!!
+
+![The long-awaited email with the return of my submission! Yay! 🎉🎉](images/email.png){fig-align="center" fig-alt="Screenshot of the email I received, with the return of my submission for the event"}
+
+The organization indicated that it would not be possible to provide financial support for the travel for international participants, but they would waive the submission fee, offer food during the event, and pay for the hotel expenses during the conference. I discussed it with my husband, and we decided that I should go, as we believed that the event would be very enriching for my career. **And I believe it was a very good decision!**
+
+
+## Conclusion
+
+You can see how anxious I was to participate in this event, right?
+
+In the next posts, I'll share more about the event itself!
+
+See you soon!
+
+## Links
+
+-   [Official event website](https://eds-summit.github.io/)
+
+-   [Event page on the NCEAS website](https://www.nceas.ucsb.edu/environmental-data-science-summit)
+
+-   [GitHub repository with links on Environmental Data Science](https://github.com/beatrizmilz/Environmental-Data-Science)
+
+-   2021 Presentation: [How learning R has been important in my journey as an Environmental Manager](https://beamilz.com/talks/en/2021-ufv-r/)
+
+
+## Artificial Intelligence Disclaimer
+
+I originally wrote this text in Portuguese (my native language), and asked for ChatGPT to translate it to English. I made some adjustments to the translation, but I'm not a native English speaker, so there might be some mistakes. If you find any, please let me know! 😊
