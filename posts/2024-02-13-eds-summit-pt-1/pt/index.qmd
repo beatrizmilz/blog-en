@@ -1,9 +1,9 @@
 ---
-title: "Porque era importante para mim participar de um evento sobre Ciência de Dados Ambientais?"
+title: "Por que era importante para mim participar de um evento sobre Ciência de Dados Ambientais?"
 subtitle: "Série: Relato da participação no evento *Environmental Data Science Summit* - Parte 1"
 author: "Beatriz Milz"
 date: "2024-02-13"
-categories: ["Events", "Environmental Data Science", "Ciências Ambientais", "Ciência de dados ambientais"]
+categories: ["Events", "Environmental Data Science", "Ciências Ambientais", "Ciência de Dados Ambientais"]
 image: "lugar-evento.jpeg"
 toc: true
 draft: false
@@ -27,11 +27,11 @@ Para compartilhar as minhas impressões sobre essa experiência, comecei a escre
 
 ## Quem sou eu?
 
-Se você não me conhece ainda, eu sou a Beatriz Milz, muito prazer!
+Se você não me conhece ainda, sou a Beatriz Milz, muito prazer!
 
-Atualmente doutoranda em Ciências Ambientais no [Instituto de Energia e Ambiente - Universidade de São Paulo (PROCAM/IEE/USP)](http://www.iee.usp.br/?q=pt-br/programa-de-p%C3%B3s-gradua%C3%A7%C3%A3o-em-ci%C3%AAncia-ambiental), com o privilégio de ser orientada pelo [Prof. Dr. Pedro R. Jacobi](https://scholar.google.com.br/citations?user=LavkF8cAAAAJ&hl=pt-BR), e co-orientada pela [Profa. Dra. Sandra Momm](https://scholar.google.com.br/citations?hl=pt-BR&user=c6tyJTkAAAAJ), duas pessoas incríveis!
+Atualmente sou doutoranda em Ciências Ambientais no [Instituto de Energia e Ambiente - Universidade de São Paulo (PROCAM/IEE/USP)](http://www.iee.usp.br/?q=pt-br/programa-de-p%C3%B3s-gradua%C3%A7%C3%A3o-em-ci%C3%AAncia-ambiental), com o privilégio de ser orientada pelo [Prof. Dr. Pedro R. Jacobi](https://scholar.google.com.br/citations?user=LavkF8cAAAAJ&hl=pt-BR), e co-orientada pela [Profa. Dra. Sandra Momm](https://scholar.google.com.br/citations?hl=pt-BR&user=c6tyJTkAAAAJ), duas pessoas incríveis!
 
-Desde **2018**, comecei a estudar programação para análise de dados, para utilizar na minha pesquisa. Atualmente também trabalho como cientista de dados na [R6](http://www.rseis.com.br/), uma empresa de consultoria e treinamentos na área de estatística e ciência de dados.
+Desde **2018**, comecei a estudar programação para análise de dados para utilizar na minha pesquisa. Atualmente também trabalho como cientista de dados na [R6](http://www.rseis.com.br/), uma empresa de consultoria e treinamentos na área de estatística e ciência de dados.
 
 Eu também gosto bastante de aprender em comunidade: aprender com outras pessoas, e compartilhar coisas que eu já sei! Faço parte da equipe organização da [R-Ladies em São Paulo](https://rladies-sp.org/), e também tem várias [aulas e palestras disponíveis por aqui](https://beamilz.com/talks/) (tem coisa desde 2018!).
 
