@@ -9,6 +9,16 @@ toc: true
 draft: false
 ---
 
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+
+
 ## Introdução
 
 Entre os dias 6 e 7 de fevereiro de 2024, participei do evento [*Environmental Data Science Summit*](https://eds-summit.github.io/), em Santa Bárbara - Califórnia.
