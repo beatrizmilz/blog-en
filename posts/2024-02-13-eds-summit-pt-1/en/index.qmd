@@ -16,7 +16,6 @@ source(here::here("R/multilang.R"))
 multilang()
 ```
 
-
 ## Introduction
 
 Between February 6th and 7th, 2024, I participated in the [*Environmental Data Science Summit*](https://eds-summit.github.io/), in Santa Barbara - California.
@@ -27,13 +26,24 @@ The goal of the event is to build community and foster collaboration within the 
 
 Since it's a term I don't often see used in Portuguese, I bring the definition presented by the [event organization](https://eds-summit.github.io/):
 
-
 > **Environmental Data Science** (EDS) is a growing field of interdisciplinary approaches to investigating and answering environmental questions with modern data science tools. The field is broad, diverse, and expanding.
 
 ![Photo I took of the event venue!](images/lugar-evento.jpeg){fig-alt="Photo of the event space entrance" fig-align="center" width="80%"}
 
+To share my impressions of this experience, I began writing this post and it was **becoming so large that I decided to split it into a series**. Here is what you can expect to find in each part:
 
-To share my impressions of this experience, I began writing this post and it was **becoming so large that I decided to split it into a series**. In this first post, I'll talk about my interest in participating in the event!
+- Post 1: Why it was important for me to participate in an event about Environmental Data Science? (this post!)
+
+- Post 2: Keynote presentations at the EDS Summit 2024 (coming soon!)
+
+- Post 3: Group activity (unconference format) at the EDS Summit 2024 (coming soon!)
+
+- Post 4: Networking moments at the EDS Summit 2024 (coming soon!)
+
+- Post 5: Tips for those who want to participate in the EDS Summit 2025 (coming soon!)
+
+- Post 6: Final reflections on my participation in the EDS Summit 2024 (coming soon!)
+
 
 ## Who am I?
 

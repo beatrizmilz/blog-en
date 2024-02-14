@@ -33,7 +33,19 @@ Como é um termo que não vejo ser usado frequentemente em português, trago a d
 
 ![Foto que eu tirei do lugar onde o evento aconteceu!](images/lugar-evento.jpeg){fig-alt="Foto da entrada do espaço do evento" fig-align="center" width="80%"}
 
-Para compartilhar as minhas impressões sobre essa experiência, comecei a escrever um texto e ele estava **ficando tão grande que decidi dividir em partes**. Neste primeiro texto, vou falar sobre o meu interesse em participar no evento!
+Para compartilhar as minhas impressões sobre essa experiência, comecei a escrever um texto e ele estava **ficando tão grande que decidi dividir em partes**. Segue abaixo o que você pode esperar encontrar em cada parte:
+
+- Texto 1: Por que era importante para mim participar de um evento sobre Ciência de Dados Ambientais? (esse post!)
+
+- Texto 2: Apresentações principais (Keynotes) no EDS Summit 2024 (em breve!)
+
+- Texto 3: Atividade em grupo (formato *unconference*) no EDS Summit 2024 (em breve!)
+
+- Texto 4: Momentos de conexão no EDS Summit 2024 (em breve!)
+
+- Texto 5: Dicas para quem quer participar do EDS Summit 2025 (em breve!)
+
+- Texto 6: Reflexões finais sobre minha participação no EDS Summit 2024 (em breve!)
 
 ## Quem sou eu?
 
