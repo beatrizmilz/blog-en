@@ -37,7 +37,7 @@ Eu também gosto bastante de aprender em comunidade: aprender com outras pessoas
 
 [![Essa sou eu palestrando na RStudio Conf 2022!](images/bia-palestrinha.png){fig-alt="Beatriz, uma mulher branca e de cabelos loiros, usando óculos, falando no microfone. Usando roupa laranja. Tem tatuagens nos braços." fig-align="center" width="70%"}](https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/)
 
-## Porque participar deste evento era importante pra mim?
+## Por que participar deste evento era importante pra mim?
 
 ::: {.callout-tip title="Mais importante!"}
 Eu queria muito ir para me **conectar com pessoas que estão na mesma área que eu**, **conhecer pessoas inspiradoras**, e para **aprender mais sobre o que está sendo feito na área de *Environmental Data Science***!
