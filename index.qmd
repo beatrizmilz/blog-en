@@ -30,8 +30,8 @@ listing:
     page-size: 3
   - id: posts
     contents: posts/**/*/index.qmd
-    type: grid
-    fields: [image, date, title]
+    type: default
+    fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
     #categories: cloud
     sort-ui: false
@@ -74,24 +74,20 @@ about:
       href: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888      
 ---
 
-::: {#hero-heading}
+<!-- ::: {#hero-heading} -->
+<!-- **Português:** Boas vindas à minha página pessoal! Aqui você pode encontrar meus textos do blog, palestras e outros projetos em que estou trabalhando. -->
 
-**Português:** Boas vindas à minha página pessoal! Aqui você pode encontrar meus textos do blog, palestras e outros projetos em que estou trabalhando.
+<!-- **English:** Welcome to my website! You can find here my blog posts, talks, and other projects I'm working on. -->
+<!-- ::: -->
 
-**English:** Welcome to my website! You can find here my blog posts, talks, and other projects I'm working on.
+<!-- ------------------------------------------------------------------------ -->
 
+::: {#posts}
 :::
 
-------------------------------------------------------------------------
-
-## Apresentações recentes / Recent talks
+## Apresentações/Presentations
 
 [Veja todas as apresentações aqui! / See all talks here!](/talks/index.html)
 
 ::: {#talks}
-:::
-
-## Textos recentes / Recent posts
-
-::: {#posts}
 :::
