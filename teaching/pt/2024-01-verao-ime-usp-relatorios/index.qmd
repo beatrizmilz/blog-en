@@ -7,10 +7,10 @@ date: '2024-01-23'
 event: Programa de Verão IME-USP
 event_url: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php
 links:
-- icon: images
-  icon_pack: far
-  name: Materiais
-  url: https://beatrizmilz.github.io/2024-curso-de-verao-ime-usp-relatorios/
+- icon: github
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/beatrizmilz/2024-curso-de-verao-ime-usp-relatorios
 - icon: images
   icon_pack: far
   name: Slides
