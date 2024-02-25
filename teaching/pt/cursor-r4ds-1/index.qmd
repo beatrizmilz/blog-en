@@ -1,0 +1,46 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Curso-R
+categories: Curso
+date: '2024-01-25'
+event: Curso-R
+event_url: https://loja.curso-r.com/r-para-ciencia-de-dados-i.html
+links:
+- icon: images
+  icon_pack: far
+  name: GitHub
+  url: https://github.com/curso-r/202401-r4ds-1
+- icon: images
+  icon_pack: far
+  name: Materiais
+  url: https://curso-r.github.io/202401-r4ds-1/
+location: Online
+title: R para Ciência de Dados I
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+------------------------------------------------------------------------
+
+**Turmas que participei como professora ou monitora:**
+
+-   <https://curso-r.github.io/202401-r4ds-1>
+
+-   <https://curso-r.github.io/202311-r4ds-1>
+
+-   <https://curso-r.github.io/202307-r4ds-1>
+
+-   <https://curso-r.github.io/202301-r4ds-1>
+
+-   <https://curso-r.github.io/202209-r4ds-1>
+
+-   <https://curso-r.github.io/202206-r4ds-1>
+
+-   <https://curso-r.github.io/202203-r4ds-1>

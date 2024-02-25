@@ -41,16 +41,10 @@ website:
             href: posts/pt.qmd
           - text: Español
             href: posts/es.qmd
+      - text: Teaching
+        href: teaching/index.qmd
       - text: Talks
-        menu:
-          - text: All/Todas
-            href: talks/index.qmd
-          - text: English
-            href: talks/en/index.qmd
-          - text: Português
-            href: talks/pt/index.qmd
-          - text: Español
-            href: talks/es/index.qmd
+        href: talks/index.qmd
       # - text: Research
       #   menu:
       #     - text: Português

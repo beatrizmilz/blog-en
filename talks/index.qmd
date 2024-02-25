@@ -1,5 +1,5 @@
 ---
-title: "Bea Milz"
+title: "Palestras/talks"
 listing:
   - id: talks
     contents: "{pt,es,en}/*/index.qmd"
@@ -16,27 +16,7 @@ comments: false
 toc: true
 ---
 
-## Próximas atividades/Next activities
-
-- Cursos na [Curso-R](https://curso-r.com/):
-
-  - [R para Ciência de Dados I - Curso-R](https://loja.curso-r.com/r-para-ciencia-de-dados-i.html)
-    
-  - [R para Ciência de Dados II - Curso-R](https://loja.curso-r.com/r-para-ciencia-de-dados-ii.html)
-
-  - [Relatórios e apresentações - Curso-R](https://loja.curso-r.com/relatorios-e-apresentacoes-automaticas.html)
-
-
-
-- Cursos no [CEBRAP.lab](https://cebrap.org.br/cebrap-lab/):
-
-  - Introdução a linguagem de programação R
-
-  - Visualização de dados no R
-  
-  - Raspagem de dados com R
-
-  - Análise quantitativa de texto
+<!-- ## Próximas atividades/Next activities -->
 
 
 

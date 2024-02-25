@@ -1,27 +1,23 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Beatriz Milz
+author: IME-USP
 categories: Curso
-date: '2022-02-02'
+date: '2023-01-23'
 event: Programa de Verão IME-USP
 event_url: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php
 links:
 - icon: images
   icon_pack: far
   name: Materiais
-  url: https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/
+  url: https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/
 - icon: images
   icon_pack: far
   name: Slides
-  url: https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/
-- icon: chalkboard-teacher
-  icon_pack: fas
-  name: Plataforma USP
-  url: https://cursosextensao.usp.br/enrol/index.php?id=2991
+  url: https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/slides.html
 location: Online
 title: Relatórios reprodutíveis com R
-image: featured.jpg
+image: featured.png
 ---
 
 ```{r}

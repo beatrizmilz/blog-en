@@ -1,0 +1,42 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Curso-R
+categories: Curso
+date: '2023-11-01'
+event: Curso-R
+event_url: https://loja.curso-r.com/
+links:
+- icon: images
+  icon_pack: far
+  name: GitHub
+  url: https://github.com/curso-r/202311-relatorios
+- icon: images
+  icon_pack: far
+  name: Materiais
+  url: https://curso-r.github.io/202311-relatorios/
+location: Online
+title: Relatórios e apresentações
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+------------------------------------------------------------------------
+
+**Turmas que participei como professora ou monitora:**
+
+-   <https://curso-r.github.io/202311-relatorios>
+
+-   <https://curso-r.github.io/202304-relatorios>
+
+-   <https://curso-r.github.io/202210-relatorios>
+
+-   <https://curso-r.github.io/202208-relatorios>
+
+-   <https://curso-r.github.io/202205-relatorios>

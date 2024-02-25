@@ -1,0 +1,58 @@
+---
+title: "Ensino"
+listing:
+  - id: teaching
+    contents: "{pt}/*/index.qmd"
+    type: grid
+    fields: [image, author, date, title, subtitle]
+    sort: "date desc"
+    categories: false
+    sort-ui: true
+    filter-ui: true
+    page-size: 36     
+page-layout: full
+title-block-banner: false
+comments: false
+toc: true
+---
+
+## Próximos cursos
+
+
+-   Cursos na [Curso-R](https://curso-r.com/):
+
+    -   [R para Ciência de Dados II - Curso-R](https://loja.curso-r.com/r-para-ciencia-de-dados-ii.html)
+
+    -   [Relatórios e apresentações - Curso-R](https://loja.curso-r.com/relatorios-e-apresentacoes-automaticas.html)
+
+-   Cursos no [CEBRAP.lab](https://cebrap.org.br/cebrap-lab/):
+
+    -   Introdução a linguagem de programação R
+
+    -   Visualização de dados no R
+
+    -   Raspagem de dados com R
+
+    -   Análise quantitativa de texto
+
+
+<!-- Falta adicionar: -->
+<!-- https://curso-r.github.io/202202-intro-programacao -->
+
+<!-- https://curso-r.github.io/202403-r4ds-2 -->
+<!-- https://curso-r.github.io/202204-r4ds-2 -->
+<!-- https://curso-r.github.io/202205-pacotes -->
+<!-- https://curso-r.github.io/202210-visualizacao -->
+<!-- https://curso-r.github.io/202303-visualizacao -->
+<!-- https://curso-r.github.io/202308-visualizacao -->
+
+
+
+
+
+## Cursos passados
+
+Para os cursos da Curso-R, apenas a turma mais recente de cada curso está listada abaixo.
+
+::: {#teaching}
+:::

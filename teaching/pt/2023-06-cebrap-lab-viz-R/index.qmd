@@ -1,7 +1,7 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Beatriz Milz
+author: CEBRAP
 categories: Curso
 date: '2023-08-28'
 event: cebrap.lab online
