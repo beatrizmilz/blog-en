@@ -18,7 +18,7 @@
     "href": "teaching/index.html#cursos-passados",
     "title": "Ensino",
     "section": "Cursos passados",
-    "text": "Cursos passados\nPara os cursos da Curso-R, apenas a turma mais recente de cada curso está listada abaixo.\n\n\n   \n     \n     \n       Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nR para Ciência de Dados I\n\n\n\nCurso-R\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nIME-USP\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\nCEBRAP\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios e apresentações\n\n\n\nCurso-R\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\nCEBRAP\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\nCEBRAP\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nIME-USP\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\nCEBRAP\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nIME-USP\n\n\n2 de fev. de 2022\n\n\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Cursos passados\nPara os cursos da Curso-R, apenas a turma mais recente de cada curso está listada abaixo.\n\n\n   \n     \n     \n       Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nR para Ciência de Dados I\n\n\n\nCurso-R\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nIME-USP\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\nCEBRAP\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios e apresentações\n\n\n\nCurso-R\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\nCEBRAP\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados\n\n\n\nCurso-R\n\n\n1 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\nCEBRAP\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nIME-USP\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R\n\n\n\nCurso-R\n\n\n1 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\nCEBRAP\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\nIME-USP\n\n\n2 de fev. de 2022\n\n\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "teaching/pt/2023-11-cebrap-lab-text-as-data/index.html",
@@ -28,25 +28,32 @@
     "text": "Evento: cebrap.lab onlineLink do evento: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\nO curso “Análise Quantitativa de Textos com R” abordará conceitos como: o que é análise quantitativa de textos; como estruturar textos capturados de pdfs, html simples e word em uma base de dados; como realizar o pré-processamento destes dados (por exemplo: remoção de caracteres que não são relevantes para a análise, remoção de “stop words”, utilização de expressões regulares para identificar palavras relevantes, entre outros); como realizar contagens de palavras ou n-grams mais frequentes; como visualizar estas contagens (como uma nuvem de palavras ou gráficos de barras); e por fim será abordado de forma introdutória a modelagem de tópicos, um método não supervisionado para criar grupos de documentos (similar ao cluster utilizado com dados numéricos). Serão apresentados também alguns exemplos destes tipos de análises. Todas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, o RStudio, e os pacotes stringr, ggplot2, dplyr, tidytext, entre outros. O curso tem como público alvo pessoas que tenham conhecimento intermediário em R e tenham interesse em analisar textos com métodos quantitativos utilizando R."
   },
   {
-    "objectID": "teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
-    "href": "teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
-    "title": "Introdução ao R",
+    "objectID": "teaching/pt/cursor-visualizacao/index.html",
+    "href": "teaching/pt/cursor-visualizacao/index.html",
+    "title": "Visualização de dados",
     "section": "",
-    "text": "Evento: cebrap.lab onlineLink do evento: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
+    "text": "Evento: Curso-RLink do evento: https://loja.curso-r.com/Lugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202308-visualizacao\nhttps://curso-r.github.io/202303-visualizacao\nhttps://curso-r.github.io/202210-visualizacao"
   },
   {
-    "objectID": "teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
-    "href": "teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
+    "objectID": "teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
+    "href": "teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
     "title": "Relatórios reprodutíveis com R",
     "section": "",
     "text": "Evento: Programa de Verão IME-USPLink do evento: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n Materiais  Slides"
+  },
+  {
+    "objectID": "teaching/pt/cursor-r4ds-1/index.html",
+    "href": "teaching/pt/cursor-r4ds-1/index.html",
+    "title": "R para Ciência de Dados I",
+    "section": "",
+    "text": "Evento: Curso-RLink do evento: https://loja.curso-r.com/r-para-ciencia-de-dados-i.htmlLugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202401-r4ds-1\nhttps://curso-r.github.io/202311-r4ds-1\nhttps://curso-r.github.io/202307-r4ds-1\nhttps://curso-r.github.io/202301-r4ds-1\nhttps://curso-r.github.io/202209-r4ds-1\nhttps://curso-r.github.io/202206-r4ds-1\nhttps://curso-r.github.io/202203-r4ds-1"
   },
   {
     "objectID": "teaching/pt/index.html",
     "href": "teaching/pt/index.html",
     "title": "Apresentações em português",
     "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nR para Ciência de Dados I\n\n\n\n\n\n\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n\n\n\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios e apresentações\n\n\n\n\n\n\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n\n\n\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n2 de fev. de 2022\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nR para Ciência de Dados I\n\n\n\n\n\n\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n\n\n\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios e apresentações\n\n\n\n\n\n\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n\n\n\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados\n\n\n\n\n\n\n\n\n1 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R\n\n\n\n\n\n\n\n\n1 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n2 de fev. de 2022\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "teaching/pt/2022-01-verao-ime-usp-relatorios/index.html",
@@ -2436,18 +2443,25 @@
     "text": "Evento: cebrap.lab onlineLink do evento: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
   },
   {
-    "objectID": "teaching/pt/cursor-r4ds-1/index.html",
-    "href": "teaching/pt/cursor-r4ds-1/index.html",
-    "title": "R para Ciência de Dados I",
+    "objectID": "teaching/pt/cursor-pacotes/index.html",
+    "href": "teaching/pt/cursor-pacotes/index.html",
+    "title": "Pacotes em R",
     "section": "",
-    "text": "Evento: Curso-RLink do evento: https://loja.curso-r.com/r-para-ciencia-de-dados-i.htmlLugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202401-r4ds-1\nhttps://curso-r.github.io/202311-r4ds-1\nhttps://curso-r.github.io/202307-r4ds-1\nhttps://curso-r.github.io/202301-r4ds-1\nhttps://curso-r.github.io/202209-r4ds-1\nhttps://curso-r.github.io/202206-r4ds-1\nhttps://curso-r.github.io/202203-r4ds-1"
+    "text": "Evento: Curso-RLink do evento: https://loja.curso-r.com/Lugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202211-pacotes\nhttps://curso-r.github.io/202208-pacotes\nhttps://curso-r.github.io/202205-pacotes"
   },
   {
-    "objectID": "teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
-    "href": "teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
+    "objectID": "teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
+    "href": "teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
     "title": "Relatórios reprodutíveis com R",
     "section": "",
     "text": "Evento: Programa de Verão IME-USPLink do evento: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n Materiais  Slides"
+  },
+  {
+    "objectID": "teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
+    "href": "teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
+    "title": "Introdução ao R",
+    "section": "",
+    "text": "Evento: cebrap.lab onlineLink do evento: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
   },
   {
     "objectID": "teaching/pt/2023-06-cebrap-lab-viz-R/index.html",
