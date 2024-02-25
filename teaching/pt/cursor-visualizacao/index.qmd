@@ -1,0 +1,38 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Curso-R
+categories: Curso
+date: '2023-08-01'
+event: Curso-R
+event_url: https://loja.curso-r.com/
+links:
+- icon: images
+  icon_pack: far
+  name: GitHub
+  url: https://github.com/curso-r/202308-visualizacao
+- icon: images
+  icon_pack: far
+  name: Materiais
+  url: https://curso-r.github.io/202308-visualizacao
+location: Online
+title: Visualização de dados
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+------------------------------------------------------------------------
+
+**Turmas que participei como professora ou monitora:**
+
+-   <https://curso-r.github.io/202308-visualizacao>
+
+-   <https://curso-r.github.io/202303-visualizacao>
+
+-   <https://curso-r.github.io/202210-visualizacao>
