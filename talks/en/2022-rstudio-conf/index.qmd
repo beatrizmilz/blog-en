@@ -4,7 +4,7 @@ subtitle: "rstudio::conf(2022)"
 author: 
   - "Beatriz Milz"
 date: "2022-07-28"
-categories: [Talks, GitHub Actions, GitHub]
+categories: [Talks, GitHub Actions, GitHub, "English"]
 image: "featured.png"
 toc: true
 ---
@@ -12,7 +12,6 @@ toc: true
 -   Event: [rstudio::conf(2022)](https://www.rstudio.com/conference/2022/schedule/)
 
 -   [Talk video](https://www.rstudio.com/conference/2022/talks/making-awesome-automations-github-actions/)
-
 
 -   [Slides](https://beatrizmilz.github.io/rstudioconf2022/)
 

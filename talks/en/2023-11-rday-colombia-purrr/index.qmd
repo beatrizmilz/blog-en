@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: [Purrr, Functional Programming]
+categories: [Purrr, Functional Programming, "English"]
 date: '2023-11-24'
 event: "R Day - Segundo encuentro nacional de usuarios de R"
 event_url: https://rday-colombia.github.io/2023/
@@ -35,6 +35,8 @@ read_yaml_talks_pt()
 
 <center>
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Oj9cwnXs_oo?si=2zrn_ihxwgnnDP6J&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Oj9cwnXs_oo?si=2zrn_ihxwgnnDP6J&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 </center>

@@ -5,16 +5,14 @@ author:
   - "Beatriz Milz"
   - "Bruna Wundervald"
 date: "2019-07-11"
-categories: [Talks, R-Ladies, Communities]
+categories: [Talks, R-Ladies, Communities, "English"]
 image: "featured.png"
 ---
 
 -   Event: [useR! 2019](https://user2019.r-project.org/)
 
-
 -   [Talk](https://youtu.be/2HK6hjwhdRk?t=880)
 
 -   [Slides](https://beatrizmilz.github.io/useR2019/):
-
 
 [![](featured.png){fig-align="center"}](https://beatrizmilz.github.io/useR2019/)

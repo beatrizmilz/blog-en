@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: [GitHub, GitHub Actions]
+categories: [GitHub, GitHub Actions, "English"]
 date: '2022-10-29'
 event: "R-Ladies Abuja, Nigeria"
 event_url: https://www.meetup.com/rladies-abuja/events/288082908/
@@ -34,5 +34,9 @@ read_yaml_talks_pt()
 <br>
 
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZANp3oqcH_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZANp3oqcH_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+</center>

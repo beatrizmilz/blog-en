@@ -4,7 +4,7 @@ subtitle: "CODATA-RDA School of Research Data Science"
 author: 
   - "Beatriz Milz"
 date: "2018-12-05"
-categories: [R Markdown, knitr, Teaching]
+categories: [R Markdown, knitr, Teaching, "English"]
 image: "featured.png"
 ---
 
@@ -12,8 +12,6 @@ This presentation was not recorded.
 
 -   Event: [CODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESP](https://www.ictp-saifr.org/2018-codata-rda-school-of-research-data-science/)
 
-
 -   [Slides](https://beatrizmilz.github.io/CODATASP18_knitr/):
-
 
 [![](featured.png){fig-align="center"}](https://beatrizmilz.github.io/CODATASP18_knitr/)

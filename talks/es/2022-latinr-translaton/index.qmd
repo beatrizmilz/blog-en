@@ -12,7 +12,6 @@ author:
   - "Yanina Bellini"
   - "Latin-R Organizers"
   - "R Contributors"
-categories: Tutorial
 date: '2022-10-15'
 event: 'Latin-R 2022'
 event_url: https://latin-r.com/
@@ -32,6 +31,7 @@ links:
 location: Online
 title: "R translatón/Hackaton de tradução do R"
 image: featured.png
+categories: ["Latin-R", "R-Ladies", "Translation", Communities, "Español"]
 ---
 
 ```{r}

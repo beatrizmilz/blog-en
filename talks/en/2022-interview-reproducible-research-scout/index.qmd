@@ -4,7 +4,7 @@ author:
   - "Beatriz Milz"
   - "Raniere Silva"
 date: "2022-06-20"
-categories: [Communities, Reproducible Research]
+categories: [Communities, Reproducible Research, "English"]
 image: "featured.png"
 ---
 
@@ -23,5 +23,3 @@ image: "featured.png"
 -   [06:14](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=374s) Tips to start with R
 
 -   [10:19](https://www.youtube.com/watch?v=CSCcYsIWcSg&t=619s) Other projects to follow
-
-

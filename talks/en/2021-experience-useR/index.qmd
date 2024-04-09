@@ -4,7 +4,7 @@ subtitle: "Meetup R-Ladies and useR 2021"
 author: 
   - "Beatriz Milz"
 date: "2021-04-28"
-categories: [Communities, R-Ladies]
+categories: [Communities, R-Ladies, "English"]
 image: "featured.png"
 ---
 

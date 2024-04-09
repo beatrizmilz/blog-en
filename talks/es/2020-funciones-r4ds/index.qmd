@@ -3,13 +3,12 @@ title: Funciones - R para Ciencia de Datos
 subtitle: Grupo de Estudios para la Certificación de RStudio
 author: 
   - "Beatriz Milz"
-categories: [Study, R-Ladies, Communities]
+categories: [Study, R-Ladies, Communities, "Español"]
 date: "2020-05-04"
 image: "featured.png"
 ---
 
-Estas diapositivas fueron hechas para presentarlas en el Grupo de Estudios para la Certificación de RStudio.
-Están basados en el libro [R for Data Science](https://r4ds.hadley.nz/).
+Estas diapositivas fueron hechas para presentarlas en el Grupo de Estudios para la Certificación de RStudio. Están basados en el libro [R for Data Science](https://r4ds.hadley.nz/).
 
 -   [Slides](https://beatrizmilz.github.io/2020-R4DS-Functions/):
 

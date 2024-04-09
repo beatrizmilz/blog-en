@@ -4,7 +4,7 @@ subtitle: "Teaching exam - RStudio"
 author: 
   - "Beatriz Milz"
 date: "2020-09-23"
-categories: [Teaching]
+categories: [Teaching, "English"]
 image: "featured.png"
 ---
 
