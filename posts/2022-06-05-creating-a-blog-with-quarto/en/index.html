@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.553">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Beatriz Milz - Creating a blog with Quarto in 10 steps</title>
@@ -290,7 +290,10 @@ Tip
 <section id="open-new-tabs" class="level2"><h2 class="anchored" data-anchor-id="open-new-tabs">1 - Open new tabs!</h2>
 <p>First of all: the Quarto team made a huge effort writing <a href="https://quarto.org/docs/websites/website-blog.html">the documentation</a>. I suggest that you open it in another tab, and use the Search button in the top-right of the docs page (believe me, the search feature used in Quarto is awesome!).</p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="https://quarto.org/docs/websites/website-blog.html"><img src="img/search.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Print screen of the Quarto Documentation about blogs."></a></p>
+</figure>
+</div>
 <figcaption>Print screen of the Quarto Documentation about blogs.</figcaption></figure>
 </div>
 <p>Second: I think it is nice to look at other blogs made with Quarto to see what you can do. I have not found a lot of blogs made with Quarto, and I think because it is a new software. So, take a look at these blogs:</p>
@@ -301,7 +304,10 @@ Tip
 <p>I have been using Quarto for more than half a year now, so I had already installed Quarto.</p>
 <p>But one thing that I do frequently is to <a href="https://quarto.org/docs/get-started/">update quarto</a>. I recommend you do the same because if you use an older version, you might get a bug that has already been fixed.</p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="https://quarto.org/docs/get-started/"><img src="img/install-quarto.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Print screen of the Quarto ‘Get Started’ page."></a></p>
+</figure>
+</div>
 <figcaption>Print screen of the Quarto ‘Get Started’ page.</figcaption></figure>
 </div>
 </section><section id="create-a-project-for-the-blog" class="level2"><h2 class="anchored" data-anchor-id="create-a-project-for-the-blog">3 - Create a project for the blog</h2>
@@ -739,6 +745,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -780,7 +791,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

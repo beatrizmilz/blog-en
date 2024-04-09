@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -194,10 +194,6 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <i class="bi bi-envelope"></i>
      <span class="about-link-text">Email</span>
   </a>
-  <a href="https://beatrizmilz.github.io/resume/index.pdf" class="about-link" rel="" target="">
-    <i class="bi bi-file-pdf"></i>
-     <span class="about-link-text">Resume</span>
-  </a>
   <a href="https://github.com/beatrizmilz" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">GitHub</span>
@@ -205,6 +201,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <a href="https://www.linkedin.com/in/beatrizmilz/" class="about-link" rel="" target="">
     <i class="bi bi-linkedin"></i>
      <span class="about-link-text">LinkedIn</span>
+  </a>
+  <a href="https://www.instagram.com/dadoseambiente/" class="about-link" rel="" target="">
+    <i class="bi bi-instagram"></i>
+     <span class="about-link-text">Instagram</span>
   </a>
 </div>
   </div>
@@ -215,11 +215,12 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </div>
 </center>
 <div id="hero-heading">
-<p>¡Hola! Mi nombre es Beatriz y soy una R-Lady de Brasil 🇧🇷 💜.</p>
-<p>Soy <a href="https://education.rstudio.com/trainers/people/milz+beatriz/">instructora de tidyverse certificada por RStudio</a> y enseño R en <a href="https://curso-r.com/">Curso-R</a>.</p>
-<p>Empecé a escribir textos sobre R en 2019.</p>
-<p>Soy activa en la comunidad R en Brasil, participando en la coorganización de comunidades y eventos, como: <a href="https://rladies-sp.org/">R-Ladies São Paulo</a>, <a href="https://latin-r.com/">Latin-R</a>, y <a href="https://saopaulo2019.satrdays.org/">satRday São Paulo</a>.</p>
-<p>Estoy haciendo un doctorado en la <a href="http://www.iee.usp.br/">Universidad de São Paulo</a>, en Ciencias Ambientales. Mi investigación trata sobre la <strong>transparencia de la información</strong> en la <strong>gestión de los recursos hídricos</strong> utilizados para el abastecimiento público en la Macrometrópolis de São Paulo.</p>
+<p>Beatriz Milz tiene un doctorado en Ciencia Ambiental. Es una investigadora interesada en temas como: gestión de recursos hídricos, transparencia y datos abiertos, ciencia de datos ambientales, y género y medio ambiente.</p>
+<p>Ella apoya los Datos Abiertos, la Ciencia Abierta y el Software de Código Abierto.</p>
+<p>Desde 2018, forma parte del equipo técnico de la revista <a href="https://www.scielo.br/j/asoc/">Ambiente &amp; Sociedade</a>.</p>
+<p>Desde 2018, es <a href="https://rladies-sp.org/">co-organizadora de R-Ladies São Paulo</a>.</p>
+<p>Es una <a href="https://education.rstudio.com/trainers/people/milz+beatriz/">instructora de tidyverse certificada por RStudio</a>. Enseña R en cursos en <a href="https://curso-r.com/">Curso-R</a>, en <a href="https://cebrap.org.br/cebrap-lab/">cebrap.lab</a>, y en el <a href="https://www.ime.usp.br/verao/">programa de Verano en el Instituto de Matemáticas y Estadística (IME) – Universidad de São Paulo (USP)</a>.</p>
+<p>También es una <a href="https://stars.github.com/profiles/beatrizmilz/">GitHub Star</a>, un reconocimiento de GitHub para personas que son expertas y líderes técnicos que comparten su conocimiento con la comunidad. El 09/04/2024, había solo <a href="https://stars.github.com/profiles/">73 GitHub Stars en el mundo</a>, y <a href="https://stars.github.com/profiles/?country=Brazil">solo 8 de ellos en Brasil</a>.</p>
 </div>
 
 
@@ -309,6 +310,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -350,7 +356,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

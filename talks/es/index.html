@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -255,7 +255,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Communities">Communities <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R-Ladies">R-Ladies <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Study">Study <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tutorial">Tutorial <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Communities">Communities <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Español">Español <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Latin-R">Latin-R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R-Ladies">R-Ladies <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Study">Study <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Translation">Translation <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -291,7 +291,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Tutorial" data-listing-date-sort="1665792000000" data-listing-file-modified-sort="1708888850663" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="quarto-post image-right" data-index="0" data-categories="Latin-R,R-Ladies,Translation,Communities,Español" data-listing-date-sort="1665792000000" data-listing-file-modified-sort="1712671304507" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
 <div class="thumbnail">
 <p><a href="../../talks/es/2022-latinr-translaton/index.html" class="no-external"></a></p><a href="../../talks/es/2022-latinr-translaton/index.html" class="no-external">
 <p><img src="../../talks/es/2022-latinr-translaton/featured.png" class="thumbnail-image"></p>
@@ -313,7 +313,7 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Study,R-Ladies,Communities" data-listing-date-sort="1588550400000" data-listing-file-modified-sort="1708888850663" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="quarto-post image-right" data-index="1" data-categories="Study,R-Ladies,Communities,Español" data-listing-date-sort="1588550400000" data-listing-file-modified-sort="1712671304507" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="29">
 <div class="thumbnail">
 <p><a href="../../talks/es/2020-funciones-r4ds/index.html" class="no-external"></a></p><a href="../../talks/es/2020-funciones-r4ds/index.html" class="no-external">
 <p><img src="../../talks/es/2020-funciones-r4ds/featured.png" class="thumbnail-image"></p>
@@ -430,6 +430,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -471,7 +476,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
