@@ -8,15 +8,19 @@ about:
     - icon: envelope
       text: Email
       href: mailto:milz.bea@gmail.com
-    - icon: file-pdf
-      text: Resume
-      href: https://beatrizmilz.github.io/resume/index.pdf  
+    # - icon: file-pdf
+    #   text: Resume
+    #   href: https://beatrizmilz.github.io/resume/index.pdf  
     - icon: github
       text: GitHub
       href: https://github.com/beatrizmilz
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/beatrizmilz/  
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/dadoseambiente/   
+      
 ---
 
 <center>
@@ -28,11 +32,17 @@ about:
 </center>
 
 ::: {#hero-heading}
-Hi! My name is Beatriz, and I am a R-Lady from Brazil 🇧🇷 💜.
 
-I'm a [tidyverse instructor certified by RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/), and I teach R at [Curso-R](https://curso-r.com/).
+Beatriz Milz has a PhD in Environmental Science. She is a researcher interested in topics such as: water resources management, transparency and open data, environmental data science, and gender and the environment.
 
-I have been writing about R in my blog since 2019. I'm mostly active in the Brazilian R community, co-organizing communities and events, such as: [R-Ladies São Paulo](https://rladies-sp.org/), [Latin-R](https://latin-r.com/), and [satRday São Paulo](https://saopaulo2019.satrdays.org/).
+She advocates for Open Data, Open Science, and Open Source Software. 
 
-I'm a PhD Candidate at the [University of São Paulo](http://www.iee.usp.br/), in Environmental Sciences. My research is about **transparency of information** in the **management of water resources** that are used to supply the Macrometropolis of Sao Paulo.
+Since 2018, she has been part of the technical team of the journal [Ambiente & Sociedade](https://www.scielo.br/j/asoc/).
+
+Since 2018, she has been an [R-Ladies co-organizer of the São Paulo chapter in Brazil](https://rladies-sp.org/).
+
+She is a [tidyverse instructor certified by RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). She teaches R in short courses at [Curso-R](https://curso-r.com/), [cebrap.lab](https://cebrap.org.br/cebrap-lab/im), and the [Summer program at the Institute of Mathematics and Statistics (IME) – University of São Paulo (USP)](https://www.ime.usp.br/verao/).
+
+She is also a [GitHub Star](https://stars.github.com/profiles/beatrizmilz/), a recognition from GitHub for people who are experts and technical leaders who share their knowledge with the community. On 09/04/2024, there were only [73 GitHub Stars in the world](https://stars.github.com/profiles/),  and [only 8 of them were located in Brazil](https://stars.github.com/profiles/?country=Brazil).
+
 :::

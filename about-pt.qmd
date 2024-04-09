@@ -8,15 +8,18 @@ about:
     - icon: envelope
       text: Email
       href: mailto:milz.bea@gmail.com
-    - icon: file-pdf
-      text: Resume
-      href: https://beatrizmilz.github.io/resume/index.pdf  
+    # - icon: file-pdf
+    #   text: Resume
+    #   href: https://beatrizmilz.github.io/resume/index.pdf  
     - icon: github
       text: GitHub
       href: https://github.com/beatrizmilz
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/beatrizmilz/     
+      href: https://www.linkedin.com/in/beatrizmilz/  
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/dadoseambiente/   
 ---
 
 <center>
@@ -28,15 +31,18 @@ about:
 </center>
 
 ::: {#hero-heading}
-Olá!
-Meu nome é Beatriz, e eu sou uma R-Lady do Brazil 🇧🇷 💜.
+Beatriz Milz tem um PhD em Ciência Ambiental. Ela é uma pesquisadora interessada em temas como: gestão de recursos hídricos, transparência e dados abertos, ciência de dados ambientais, e gênero e o meio ambiente.
 
-Eu sou uma [instrutora de tidyverse certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/), e eu ensino R na [Curso-R](https://curso-r.com/).
+Ela apoia os Dados Abertos, Ciência Aberta e Software de Código Aberto.
 
-Eu comecei a escrever textos sobre R em 2019.
+Desde 2018, ela faz parte da equipe técnica do periódico [Ambiente & Sociedade](https://www.scielo.br/j/asoc/).
 
-Eu sou ativa na comunidade de R no Brasil, participando da co-organização de comunidades e eventos, como: [R-Ladies São Paulo](https://rladies-sp.org/), [Latin-R](https://latin-r.com/), e [satRday São Paulo](https://saopaulo2019.satrdays.org/).
+Desde 2018, ela é [co-organizadora do R-Ladies São Paulo](https://rladies-sp.org/).
 
-Eu faço doutorado na [Universidade de São Paulo](http://www.iee.usp.br/), em Ciências Ambientais.
-Minha pesquisa é sobre **transparência de informações** na **gestão de recursos hídricos** usados para abastecimento público na Macrometrópole Paulista.
+Ela é uma [instrutora do tidyverse certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). Ela ensina R em cursos na [Curso-R](https://curso-r.com/), no [cebrap.lab](https://cebrap.org.br/cebrap-lab/im), e no [programa de Verão no Instituto de Matemática e Estatística (IME) – Universidade de São Paulo (USP)](https://www.ime.usp.br/verao/).
+
+Ela também é uma [GitHub Star](https://stars.github.com/profiles/beatrizmilz/), um reconhecimento do GitHub para pessoas que são especialistas e líderes técnicos que compartilham seu conhecimento com a comunidade. Em 09/04/2024, havia apenas [73 GitHub Stars no mundo](https://stars.github.com/profiles/), e [apenas 8 delas no Brasil](https://stars.github.com/profiles/?country=Brazil).
+
+
+
 :::

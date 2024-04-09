@@ -8,15 +8,18 @@ about:
     - icon: envelope
       text: Email
       href: mailto:milz.bea@gmail.com
-    - icon: file-pdf
-      text: Resume
-      href: https://beatrizmilz.github.io/resume/index.pdf  
+    # - icon: file-pdf
+    #   text: Resume
+    #   href: https://beatrizmilz.github.io/resume/index.pdf  
     - icon: github
       text: GitHub
       href: https://github.com/beatrizmilz
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/beatrizmilz/  
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/dadoseambiente/   
 ---
 
 <center>
@@ -28,17 +31,15 @@ about:
 </center>
 
 ::: {#hero-heading}
+Beatriz Milz tiene un doctorado en Ciencia Ambiental. Es una investigadora interesada en temas como: gestión de recursos hídricos, transparencia y datos abiertos, ciencia de datos ambientales, y género y medio ambiente.
 
-¡Hola!
-Mi nombre es Beatriz y soy una R-Lady de Brasil 🇧🇷 💜.
+Ella apoya los Datos Abiertos, la Ciencia Abierta y el Software de Código Abierto.
 
-Soy [instructora de tidyverse certificada por RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/) y enseño R en [Curso-R](https://curso-r.com/).
+Desde 2018, forma parte del equipo técnico de la revista [Ambiente & Sociedade](https://www.scielo.br/j/asoc/).
 
-Empecé a escribir textos sobre R en 2019.
+Desde 2018, es [co-organizadora de R-Ladies São Paulo](https://rladies-sp.org/).
 
-Soy activa en la comunidad R en Brasil, participando en la coorganización de comunidades y eventos, como: [R-Ladies São Paulo](https://rladies-sp.org/), [Latin-R](https://latin-r.com/), y [satRday São Paulo](https://saopaulo2019.satrdays.org/).
+Es una [instructora de tidyverse certificada por RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). Enseña R en cursos en [Curso-R](https://curso-r.com/), en [cebrap.lab](https://cebrap.org.br/cebrap-lab/im), y en el [programa de Verano en el Instituto de Matemáticas y Estadística (IME) – Universidad de São Paulo (USP)](https://www.ime.usp.br/verao/).
 
-Estoy haciendo un doctorado en la [Universidad de São Paulo](http://www.iee.usp.br/), en Ciencias Ambientales.
-Mi investigación trata sobre la **transparencia de la información** en la **gestión de los recursos hídricos** utilizados para el abastecimiento público en la Macrometrópolis de São Paulo.
-
+También es una [GitHub Star](https://stars.github.com/profiles/beatrizmilz/), un reconocimiento de GitHub para personas que son expertas y líderes técnicos que comparten su conocimiento con la comunidad. El 09/04/2024, había solo [73 GitHub Stars en el mundo](https://stars.github.com/profiles/), y [solo 8 de ellos en Brasil](https://stars.github.com/profiles/?country=Brazil).
 :::
