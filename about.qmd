@@ -41,7 +41,7 @@ Since 2018, she has been part of the technical team of the journal [Ambiente & S
 
 Since 2018, she has been an [R-Ladies co-organizer of the São Paulo chapter in Brazil](https://rladies-sp.org/).
 
-She is a [tidyverse instructor certified by RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). She teaches R in short courses at [Curso-R](https://curso-r.com/), [cebrap.lab](https://cebrap.org.br/cebrap-lab/im), and the [Summer program at the Institute of Mathematics and Statistics (IME) – University of São Paulo (USP)](https://www.ime.usp.br/verao/).
+She is a [tidyverse instructor certified by RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). She teaches R in short courses at [Curso-R](https://curso-r.com/), [cebrap.lab](https://cebrap.org.br/cebrap-lab/), and the [Summer program at the Institute of Mathematics and Statistics (IME) – University of São Paulo (USP)](https://www.ime.usp.br/verao/).
 
 She is also a [GitHub Star](https://stars.github.com/profiles/beatrizmilz/), a recognition from GitHub for people who are experts and technical leaders who share their knowledge with the community. On 09/04/2024, there were only [73 GitHub Stars in the world](https://stars.github.com/profiles/),  and [only 8 of them were located in Brazil](https://stars.github.com/profiles/?country=Brazil).
 

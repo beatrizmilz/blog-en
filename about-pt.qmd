@@ -39,7 +39,7 @@ Desde 2018, ela faz parte da equipe técnica do periódico [Ambiente & Sociedade
 
 Desde 2018, ela é [co-organizadora do R-Ladies São Paulo](https://rladies-sp.org/).
 
-Ela é uma [instrutora do tidyverse certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). Ela ensina R em cursos na [Curso-R](https://curso-r.com/), no [cebrap.lab](https://cebrap.org.br/cebrap-lab/im), e no [programa de Verão no Instituto de Matemática e Estatística (IME) – Universidade de São Paulo (USP)](https://www.ime.usp.br/verao/).
+Ela é uma [instrutora do tidyverse certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). Ela ensina R em cursos na [Curso-R](https://curso-r.com/), no [cebrap.lab](https://cebrap.org.br/cebrap-lab/), e no [programa de Verão no Instituto de Matemática e Estatística (IME) – Universidade de São Paulo (USP)](https://www.ime.usp.br/verao/).
 
 Ela também é uma [GitHub Star](https://stars.github.com/profiles/beatrizmilz/), um reconhecimento do GitHub para pessoas que são especialistas e líderes técnicos que compartilham seu conhecimento com a comunidade. Em 09/04/2024, havia apenas [73 GitHub Stars no mundo](https://stars.github.com/profiles/), e [apenas 8 delas no Brasil](https://stars.github.com/profiles/?country=Brazil).
 
