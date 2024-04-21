@@ -20,7 +20,7 @@ listing:
 #     filter-ui: false
 #     page-size: 3   
   - id: talks
-    contents: talks/{pt,es,en}/*/index.qmd
+    contents: "{talks,teaching}/{pt,es,en}/*/index.qmd"
     type: grid
     fields: [image, date, title, subtitle]
     sort: "date desc"
@@ -30,7 +30,7 @@ listing:
     page-size: 3
   - id: posts
     contents: posts/**/*/index.qmd
-    type: default
+    type: grid
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
     #categories: cloud
@@ -75,12 +75,16 @@ about:
 ---
 
 <!-- ::: {#hero-heading} -->
+
 <!-- **Português:** Boas vindas à minha página pessoal! Aqui você pode encontrar meus textos do blog, palestras e outros projetos em que estou trabalhando. -->
 
 <!-- **English:** Welcome to my website! You can find here my blog posts, talks, and other projects I'm working on. -->
+
 <!-- ::: -->
 
 <!-- ------------------------------------------------------------------------ -->
+
+## Textos/Posts
 
 ::: {#posts}
 :::
