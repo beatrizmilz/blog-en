@@ -62,3 +62,8 @@ div.quarto-post .listing-categories .listing-category {
     border: solid 1px var(--bs-gray-400);
     font-size: .8em;
 }
+
+
+p pre code:not(.sourceCode), li pre code:not(.sourceCode), pre code:not(.sourceCode) {
+  background-color: #f0efff;
+}
