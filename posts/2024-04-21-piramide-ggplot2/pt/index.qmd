@@ -33,7 +33,7 @@ Para iniciar, vamos carregar o pacote `ggplot2`:
 library(ggplot2)
 ```
 
-Obs 1: o meu código é cheio do operador `::`. Caso você não conheça, ele serve para indicar em qual pacote uma função está, por exemplo: `pacote::funcao()`. 
+Obs 1: o meu código é cheio do operador `::`. Caso você não conheça, ele serve para indicar em qual pacote uma função está, por exemplo: `pacote::funcao()`.
 
 Obs 2: Neste post, você pode clicar no nome das funções nos códigos, e a página da documentação da função será aberta.
 
@@ -43,18 +43,17 @@ Caso você não lembre por nome, acredito que você já tenha visto um gráfico 
 
 **Uma pirâmide etária é uma representação gráfica da distribuição da população por faixa etária e sexo.**
 
-Por exemplo: a seguir, temos uma pirâmide etária da população brasileira, elaborado pelo [IBGE](https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18318-piramide-etaria.html): 
+Por exemplo: a seguir, temos uma pirâmide etária da população brasileira, elaborado pelo [IBGE](https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18318-piramide-etaria.html):
 
 [![IBGE: Pirâmide etária do Brasil](images/piramide_etaria_ibge.png){fig-align="center" width="60%"}](https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18318-piramide-etaria.html)
 
 Outra pirâmide etária que encontrei ao elaborar esse post foi essa publicada no [Nexo](https://www.nexojornal.com.br/grafico/2023/10/27/a-piramide-etaria-do-brasil-segundo-o-censo-do-ibge):
 
-
 [![Nexo: Pirâmide etária do Brasil](images/piramide-etaria-nexo.png){fig-align="center" width="60%"}](https://www.nexojornal.com.br/grafico/2023/10/27/a-piramide-etaria-do-brasil-segundo-o-censo-do-ibge)
 
 ## Dados
 
-Agora que está claro o que é uma pirâmide etária, podemos buscar os dados. 
+Agora que está claro o que é uma pirâmide etária, podemos buscar os dados.
 
 Como dito no título do texto, o objetivo é criar uma pirâmide etária utilizando os dados do Censo 2022.
 
@@ -64,11 +63,9 @@ Primeiro, pesquisamos na página o município ou UF, e clicamos no botão de dow
 
 [![Panorama Censo 2022 - Pesquisa por município ou UF, e botão de download](images/panorama.png){fig-align="center"}](https://censo2022.ibge.gov.br/panorama/)
 
-
 Para fazer esse post, vou fazer o download dos dados para dois municípios do estado de São Paulo: Diadema (o município onde eu nasci) e Osasco (o município onde eu moro atualmente).
 
 Os arquivos estão em um `.zip`, que é uma pasta compactada. Precisamos extrair os dados do `.zip`. Como foram apenas 2 arquivos, realizei isso manualmente, mas caso você precise fazer isso para muitos arquivos, recomendo checar a função `utils::unzip()`. Salvei os arquivos na pasta `dados`:
-
 
 ```{r}
 fs::dir_ls("dados")
@@ -76,7 +73,7 @@ fs::dir_ls("dados")
 
 ## Leitura dos dados
 
-Percebemos que no  `.zip` temos mais tabelas do que necessário! Vamos utilizar apenas as tabelas de pirâmide etária.
+Percebemos que no `.zip` temos mais tabelas do que necessário! Vamos utilizar apenas as tabelas de pirâmide etária.
 
 Para ler os arquivos (no nosso caso, 2 arquivos, mas funcionaria com mais), precisamos de um vetor com os caminhos (um texto que indica ao computador onde os arquivos estão guardados) e também uma função para ler esses arquivos.
 
@@ -88,7 +85,6 @@ arquivos_piramide
 ```
 
 Para ler os arquivos, podemos usar a função `readr::read_csv2()`, que permite ler arquivos CSV cujo separador seja o ponto-e-vírgula.
-
 
 Sabendo como importar um arquivos, podemos usar a função `purrr::map()` para aplicar a função `readr::read_csv2()` em todos os arquivos do vetor que criamos anteriormente (que chamamos de `arquivos_piramide`). Vamos empilhar os dados em uma única tabela utilizando a função `purrr::list_rbind()`.
 
@@ -106,14 +102,6 @@ Espiando os dados importados, para descobrir quais variáveis temos:
 dplyr::glimpse(dados_brutos)
 ```
 
-Será que deu certo e temos dados dos dois municípios? Podemos conferir:
-
-```{r}
-dplyr::count(dados_brutos, `Município`) |> 
-  knitr::kable()
-```
-Sim! Temos dados para Diadema e Osasco.
-
 ## Arrumando os dados
 
 A primeira coisa que eu costumo fazer quando importo uma nova base de dados é padronizar os nomes. Para isso, eu gosto muito da função `janitor::clean_names()`. Isso facilita muito para escrever o nome das variáveis ao longo do código e evita erros de encoding:
@@ -122,12 +110,20 @@ A primeira coisa que eu costumo fazer quando importo uma nova base de dados é p
 dados_nomes_limpos <- janitor::clean_names(dados_brutos)
 ```
 
-
 ```{r}
 dplyr::glimpse(dados_nomes_limpos)
 ```
 
 Boa!!
+
+Será que deu certo e temos dados dos dois municípios? Podemos conferir:
+
+```{r}
+dplyr::count(dados_nomes_limpos, municipio) |> 
+  knitr::kable()
+```
+
+Sim! Temos dados para Diadema e Osasco.
 
 Agora, é necessário realizar um processo de ir pensando na criação do gráfico, para planejar quais são os tratamentos que serão necessários. Esse processo é difícil de descrever em texto, mas acredito que é interessante mostrar esse "vai e volta" entre a criação do gráfico e o tratamento dos dados, pois é assim que normalmente precisamos fazer no dia-a-dia.
 
@@ -137,12 +133,11 @@ Se você está sem paciência de ver o raciocínio da construção do gráfico, 
 
 Quando criamos o ggplot, pensamos nos seguintes elementos:
 
-- Quais são as variáveis que precisamos utilizar?
+-   Quais são as variáveis que precisamos utilizar?
 
-- Em qual atributo estético (`aes()`) vamos mapear cada variável?
+-   Em qual atributo estético (`aes()`) vamos mapear cada variável?
 
-- Qual é a geometria (`geom_*()`) precisamos usar?
-
+-   Qual é a geometria (`geom_*()`) precisamos usar?
 
 ## Imaginando o nosso gráfico
 
@@ -150,30 +145,27 @@ Primeiro vamos pensar nas variáveis necessárias: Grupo de idade, população e
 
 Vamos pensar agora onde cada variável é mapeada:
 
-- Grupo de idade: eixo Y.
+-   Grupo de idade: eixo Y.
 
-- População: eixo X.
+-   População: eixo X.
 
-- Sexo: cor de preenchimento da barra.
+-   Sexo: cor de preenchimento da barra.
 
 E qual é a geometria usada? Nesse caso, é um gráfico de barras. Neste caso, utilizamos o `geom_col()`.
 
 ## Alterando o formato da base: pivoting!
 
-Ao imaginar o gráfico, percebemos que existe um certo problema: precisamos de uma coluna com a população, e outra com o sexo, para utilizar no gráfico. Porém na tabela temos duas colunas separadas, que apresenta uma das variáveis relevantes no nome da coluna: populacao_feminina_pessoas e populacao_masculina_pessoas. 
+Ao imaginar o gráfico, percebemos que existe um certo problema: precisamos de uma coluna com a população, e outra com o sexo, para utilizar no gráfico. Porém na tabela temos duas colunas separadas, que apresenta uma das variáveis relevantes no nome da coluna: populacao_feminina_pessoas e populacao_masculina_pessoas.
 
 Percebe? A informação do sexo está no nome da coluna!
 
 Precisamos alterar isso então, com o que chamamos de "pivotagem". Existem duas funções de pivotagem: `tidyr::pivot_longer()` (o resultado é uma base "mais longa") e `tidyr::pivot_wider()` (o resultado é uma base "mais larga").
 
-
-Nesse caso, temos informações no nome das colunas (`"populacao_feminina_pessoas"` e `"populacao_masculina_pessoas"`), que queremos transformar em uma variável chamada "sexo". 
-
+Nesse caso, temos informações no nome das colunas (`"populacao_feminina_pessoas"` e `"populacao_masculina_pessoas"`), que queremos transformar em uma variável chamada "sexo".
 
 Tentei demonstrar abaixo um exemplo curto:
 
-
-1) Essa é uma linha da tabela original: temos uma linha por combinação de `grupo_de_idade` e `municipio`. A informação sobre o sexo está no nome das colunas.
+1)  Essa é uma linha da tabela original: temos uma linha por combinação de `grupo_de_idade` e `municipio`. A informação sobre o sexo está no nome das colunas.
 
 ```{r}
 #| echo: false
@@ -182,7 +174,8 @@ tabela_1 <- dados_nomes_limpos |>
 
 knitr::kable(tabela_1)
 ```
-2) Esse é o formato que queremos!  Agora temos uma coluna para o sexo, e outra coluna para a população. Veja que agora temos DUAS linhas para cada combinação de `grupo_de_idade` e `municipio`. Por isso, esse tipo de transformação deixa a base "mais longa".
+
+2)  Esse é o formato que queremos! Agora temos uma coluna para o sexo, e outra coluna para a população. Veja que agora temos DUAS linhas para cada combinação de `grupo_de_idade` e `municipio`. Por isso, esse tipo de transformação deixa a base "mais longa".
 
 ```{r}
 #| echo: false
@@ -196,11 +189,7 @@ tabela_2 <- tabela_1 |>
 knitr::kable(tabela_2)
 ```
 
-
-
-
 Usando a função `tidyr::pivot_longer()`, indicamos quais são as colunas que vamos utilizar para a "pivotagem". Depois, eu renomeio as variáveis para ficar fácil de entender o que cada coluna representa.
-
 
 ```{r}
 dados_piramide_longo <- dados_nomes_limpos |>
@@ -216,6 +205,7 @@ Agora temos a coluna de sexo e população separadas, e a tabela também ficou c
 ```{r}
 dplyr::glimpse(dados_piramide_longo)
 ```
+
 ## Primeira tentativa de criar um gráfico
 
 Vamos para a primeira tentativa de criar um gráfico. Já aviso: não vai dar certo, pois a base ainda não está pronta!
@@ -233,34 +223,32 @@ dados_piramide_longo |>
   # Qual é a geometria?
   geom_col()
 ```
+
 Bom, como eu já tinha avisado, deu bem errado.
 
 Um passo importante é parar, respirar, e tentar anotar TODAS as coisas que a gente acha que precisa melhorar nesse gráfico (se você quiser, faça isso antes de continuar a ler).
-
 
 ## Lista do papai noel: o que precisamos melhorar?
 
 Vamos lá criar nossa lista do papai noel de coisas que precisamos arrumar no gráfico que dependem do tratamento de dados:
 
-1) As barras não estão formando uma pirâmide. Elas estão acumulando para o mesmo lado!
+1)  As barras não estão formando uma pirâmide. Elas estão acumulando para o mesmo lado!
 
-2) A variável `grupo_de_idade` está seguindo a ordem alfabética, e não a ordem das faixas etárias!
+2)  A variável `grupo_de_idade` está seguindo a ordem alfabética, e não a ordem das faixas etárias!
 
-3) Os valores da variável `sexo` estão com o texto completo do nome das colunas que elas foram extraídas. Precisamos arrumar.
-
+3)  Os valores da variável `sexo` estão com o texto completo do nome das colunas que elas foram extraídas. Precisamos arrumar.
 
 ## Tratando os dados segundo nossa lista do papai noel
 
-Alguns dos itens acima necessitam ser arrumados no tratamento dos dados, e vamos fazer um por vez, seguindo os pontos acima. 
+Alguns dos itens acima necessitam ser arrumados no tratamento dos dados, e vamos fazer um por vez, seguindo os pontos acima.
 
 ### 1) Formato da pirâmide
 
+1)  "As barras não estão formando uma pirâmide. Elas estão acumulando para o mesmo lado!" - Na pirâmide, o "centro" é o valor 0 no eixo x. Portanto, podemos multiplicar os valores de população de um dos sexos por -1, deixando-os negativo. Fiz com a função `dplyr::case_when()`, e a regra usada para cada linha foi:
 
-1) "As barras não estão formando uma pirâmide. Elas estão acumulando para o mesmo lado!" - Na pirâmide, o "centro" é o valor 0 no eixo x. Portanto, podemos multiplicar os valores de população de um dos sexos por -1, deixando-os negativo. Fiz com a função `dplyr::case_when()`, e a regra usada para cada linha foi: 
+-   Quando o valor da variável `sexo` for igual á `"populacao_masculina_pessoas"`, queremos que o valor da população seja multiplicado por -1;
 
-- Quando o valor da variável `sexo` for igual á  `"populacao_masculina_pessoas"`, queremos que o valor da população seja multiplicado por -1;
-
-- Quando o valor da variável `sexo` for igual á  `"populacao_feminina_pessoas"`, queremos manter o valor original para população.
+-   Quando o valor da variável `sexo` for igual á `"populacao_feminina_pessoas"`, queremos manter o valor original para população.
 
 ```{r}
 dados_piramide_longo_2 <- dados_piramide_longo |>
@@ -285,8 +273,8 @@ dados_piramide_longo_2 |>
   # Qual é a geometria?
   geom_col()
 ```
-Agora já estamos um pouco mais perto!
 
+Agora já estamos um pouco mais perto!
 
 ### 2) Ordem em `grupo_de_idade`
 
@@ -323,7 +311,6 @@ dados_piramide_longo_3 <- dados_piramide_longo_2 |>
   ))
 ```
 
-
 Criando o gráfico com essa versão da tabela:
 
 ```{r grafico-3}
@@ -337,12 +324,12 @@ dados_piramide_longo_3 |>
   # Qual é a geometria?
   geom_col()
 ```
+
 Agora sim, parece o formato mais próximo de uma pirâmide etária (sem aqueles buracos no meio!).
 
 ### 3) Arrumar a variável `sexo`
 
 Os valores da variável `sexo` estão com o texto completo do nome das colunas que elas foram extraídas. Podemos arrumar com a função `dplyr::case_when()`, com um procedimento similar ao que fizemos no ponto 1:
-
 
 ```{r}
 dados_piramide_longo_4 <- dados_piramide_longo_3 |>
@@ -373,12 +360,11 @@ dados_piramide_longo_4 |>
 
 Agora que já arrumamos os dados, podemos trabalhar em melhorar o gráfico. Vamos criar nossa listinha de papai-noel parte 2:
 
-1) A primeira coisa que me chama atenção é: ninguém merece essa paleta de cores "meninas usam rosa, meninos usam azul"!
+1)  A primeira coisa que me chama atenção é: ninguém merece essa paleta de cores "meninas usam rosa, meninos usam azul"!
 
-3) Aparecem valores negativos no eixo X. Mas não faz sentido população negativa, certo?
+2)  Aparecem valores negativos no eixo X. Mas não faz sentido população negativa, certo?
 
-2) Vamos deixar mais bonito? Colocar os textos, mudar o tema, etc...
-
+3)  Vamos deixar mais bonito? Colocar os textos, mudar o tema, etc...
 
 ```{r grafico-5}
 dados_piramide_longo_4 |>
@@ -408,12 +394,12 @@ dados_piramide_longo_4 |>
     caption = "Fonte: Censo demográfico 2022, realizado pelo IBGE. Gráfico elaborado por Beatriz Milz."
   )
 ```
+
 ## Visualizando dados de 2 municípios
 
-Para ver os dados dos dois municípios, podemos usar a função `facet_wrap()` do ggplot2! 
+Para ver os dados dos dois municípios, podemos usar a função `facet_wrap()` do ggplot2!
 
 Porém, como a população desses municípios é bem diferente, para facilitar a visualização da diferença na pirâmide, o melhor é "liberar" as escalas do eixo X (usando o argumento `scales = "free_x"`). Isso é um pouco perigoso, pois os valores do eixo X ficam diferentes, e as pessoas precisam prestar mais atenção quando for comparar. Porém, se a gente não fizer isso, a pirâmide de Diadema fica "esmagada", por ter uma população menor.
-
 
 ```{r grafico-6}
 dados_piramide_longo_4 |>
@@ -445,8 +431,8 @@ dados_piramide_longo_4 |>
     legend.position = "bottom"
   )
 ```
-A discussão sobre possíveis diferenças (ou semelhanças) entre os municípios não está no escopo deste post. Quem sabe em um outro futuro?
 
+A discussão sobre possíveis diferenças (ou semelhanças) entre os municípios não está no escopo deste post. Quem sabe em um outro futuro?
 
 ## Conclusão
 
@@ -456,7 +442,4 @@ Eu espero que o texto tenha ficado compreensível!
 
 Caso alguém tenha alguma sugestão (ou alguma parte não ficou claro), me avisem por favor!!
 
-
 Muito obrigada vocês pela leitura, e novamente, agradeço a [Curso-R](https://curso-r.com/) e as pessoas participantes do curso de Visualização de Dados!
-
-
