@@ -119,8 +119,7 @@ Boa!!
 Será que deu certo e temos dados dos dois municípios? Podemos conferir:
 
 ```{r}
-dplyr::count(dados_nomes_limpos, municipio) |> 
-  knitr::kable()
+unique(dados_nomes_limpos$municipio)
 ```
 
 Sim! Temos dados para Diadema e Osasco.
