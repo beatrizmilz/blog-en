@@ -31,6 +31,7 @@ Para iniciar, vamos carregar o pacote `ggplot2`:
 #| warning: false
 #| message: false
 library(ggplot2)
+library(tidyverse)
 ```
 
 Obs 1: o meu código é cheio do operador `::`. Caso você não conheça, ele serve para indicar em qual pacote uma função está, por exemplo: `pacote::funcao()`.
