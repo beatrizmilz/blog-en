@@ -30,6 +30,7 @@ jobs:
             any::xml2
             any::downlit
             any::here
+            any::janitor
 
 
       - name: Publish to GitHub Pages (and render)
