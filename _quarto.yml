@@ -51,10 +51,10 @@ website:
             href: research/index.qmd
 #      - quarto.qmd
 #      - videos.qmd
-      - text: Resume
-        href: https://beatrizmilz.github.io/resume/index.pdf
-      - icon: newspaper
-        href: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888
+      # - text: Resume
+      #   href: https://beatrizmilz.github.io/resume/index.pdf
+      # - icon: newspaper
+      #   href: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888
       - icon: github
         href: https://github.com/beatrizmilz/blog-en
       - icon: linkedin

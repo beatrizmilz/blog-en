@@ -2,7 +2,7 @@
 title: "Beatriz Milz"
 listing:
   - id: talks
-    contents: "{talks,teaching}/{pt,es,en}/*/index.qmd"
+    contents: "{talks}/{pt,es,en}/*/index.qmd"
     type: grid
     fields: [image, date, title, subtitle]
     sort: "date desc"
@@ -51,9 +51,9 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/beatrizmilz/  
-    - icon: newspaper
-      text: LinkedIn Newsletter
-      href: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888      
+    # - icon: newspaper
+    #   text: LinkedIn Newsletter
+    #   href: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888      
 ---
 
 <!-- ::: {#hero-heading} -->

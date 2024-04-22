@@ -1,0 +1,32 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz
+categories: Meetup
+date: '2024-03-02'
+event: Meetup R-Ladies São Paulo
+event_url: https://www.meetup.com/pt-BR/rladies-sao-paulo/
+links:
+- icon: images
+  icon_pack: far
+  name: Apresentação
+  url: https://r-ladies-sao-paulo.github.io/2024-03-open-data-day/slide-open-data-day.html
+- icon: images
+  icon_pack: far
+  name: Material completo do evento
+  url: https://r-ladies-sao-paulo.github.io/2024-03-open-data-day/cronograma.html
+- icon: github
+  icon_pack: fab
+  name: Códigos
+  url: https://github.com/R-Ladies-Sao-Paulo/2024-03-open-data-day
+location: São Paulo
+title: "O que são dados abertos? O que é o Open Data Day?"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
