@@ -5,7 +5,7 @@ date: "2024-04-21"
 categories: ["Tutorial", "Visualização de dados", "ggplot2", "IBGE"]
 image: "images/piramide-criada.png"
 toc: true
-draft: false
+draft: true
 cache: true
 ---
 
@@ -444,4 +444,3 @@ Eu espero que o texto tenha ficado compreensível!
 Caso alguém tenha alguma sugestão (ou alguma parte não ficou claro), me avisem por favor!!
 
 Muito obrigada vocês pela leitura, e novamente, agradeço a [Curso-R](https://curso-r.com/) e as pessoas participantes do curso de Visualização de Dados!
-
