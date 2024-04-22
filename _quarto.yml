@@ -45,10 +45,10 @@ website:
         href: teaching/index.qmd
       - text: Talks
         href: talks/index.qmd
-      # - text: Research
-      #   menu:
-      #     - text: Português
-      #       href: research/index.qmd
+      - text: Research
+        menu:
+          - text: Português
+            href: research/index.qmd
 #      - quarto.qmd
 #      - videos.qmd
       - text: Resume

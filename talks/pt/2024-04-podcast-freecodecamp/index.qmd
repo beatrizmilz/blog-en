@@ -8,11 +8,11 @@ event: "freeCodeCamp Podcast"
 event_url: https://www.freecodecamp.org/portuguese/news/podcast-ep-27/
 links:
 - icon: youtube
-  icon_pack: far
+  icon_pack: fab
   name: Video
   url: https://www.youtube.com/watch?v=WPUh32rN89w
 - icon: audio
-  icon_pack: far
+  icon_pack: fab
   name: Audio
   url: https://www.freecodecamp.org/portuguese/news/podcast-ep-27/
 location: Online

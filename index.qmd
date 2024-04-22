@@ -1,24 +1,6 @@
 ---
 title: "Beatriz Milz"
 listing:
-#   - id: posts-en
-#     contents: posts/**/en/*.qmd
-#     type: default
-#     fields: [image, date, title, subtitle, categories, author, reading-time]
-#     sort: "date desc"
-#     #categories: cloud
-#     sort-ui: false
-#     filter-ui: false
-#     page-size: 3
-#   - id: posts-ptbr
-#     contents: posts/**/pt/*.qmd
-#     type: default
-#     fields: [image, date, title, subtitle, categories, author, reading-time]
-#     sort: "date desc"
-#     #categories: cloud
-#     sort-ui: false
-#     filter-ui: false
-#     page-size: 3   
   - id: talks
     contents: "{talks,teaching}/{pt,es,en}/*/index.qmd"
     type: grid
@@ -37,15 +19,15 @@ listing:
     sort-ui: false
     filter-ui: false
     page-size: 3
-#   - id: posts-es
-#     contents: posts/**/es/*.qmd
-#     type: default
-#     fields: [image, date, title, subtitle, categories, author, reading-time]
-#     sort: "date desc"
-#     #categories: cloud
-#     sort-ui: false
-#     filter-ui: false
-#     page-size: 3       
+  - id: research
+    contents: "{research}/{pt,es,en}/*/index.qmd"
+    type: grid
+    fields: [image, date, title, subtitle]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: false
+    filter-ui: false
+    page-size: 3    
 page-layout: full
 title-block-banner: false
 comments: false
@@ -94,4 +76,9 @@ about:
 [Veja todas as apresentações aqui! / See all talks here!](/talks/index.html)
 
 ::: {#talks}
+:::
+
+## Pesquisa/Research
+
+::: {#research}
 :::

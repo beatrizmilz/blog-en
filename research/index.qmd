@@ -1,10 +1,20 @@
 ---
 title: "Pesquisa"
+listing:
+  - id: research
+    contents: "**/*/index.qmd"
+    type: grid
+    fields: [image, date, title, subtitle]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: false
+    filter-ui: false
+    page-size: 3  
 ---
 
 ## Formação
 
--   (2019-Atualmente) - Doutorado em Ciências Ambientais, Universidade de São Paulo, Brasil
+-   (2019-2024) - Doutorado em Ciências Ambientais, Universidade de São Paulo, Brasil
 
 -   (2016-2018) - Mestrado em Ciências, no Programa de Pós-graduação em Análise Ambiental Integrada, na UNIFESP - Campus Diadema.
 
@@ -28,6 +38,7 @@ title: "Pesquisa"
 
 -   (2018-2022) - [MacroAmb: Governança Ambiental da Macrometrópole Paulista face à variabilidade climática](https://pesquisa.ufabc.edu.br/macroamb/governanca-de-saneamento-ambiental-e-analises-das-vulnerabilidades-na-macrometropole-paulista/) - Projeto temático FAPESP nº 2015-03804-9
 
-## Publicações selecionadas
+## Materiais
 
-Em breve
+::: {#research}
+:::
