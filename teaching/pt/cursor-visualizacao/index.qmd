@@ -3,18 +3,18 @@
 toc: true
 author: Curso-R
 categories: Curso
-date: '2023-08-01'
+date: '2024-03-14'
 event: Curso-R
 event_url: https://loja.curso-r.com/
 links:
 - icon: images
   icon_pack: far
   name: GitHub
-  url: https://github.com/curso-r/202308-visualizacao
+  url: https://github.com/curso-r/202403-visualizacao
 - icon: images
   icon_pack: far
   name: Materiais
-  url: https://curso-r.github.io/202308-visualizacao
+  url: https://curso-r.github.io/202403-visualizacao
 location: Online
 title: Visualização de dados
 image: featured.png
@@ -30,6 +30,8 @@ read_yaml_talks_pt()
 ------------------------------------------------------------------------
 
 **Turmas que participei como professora ou monitora:**
+
+-   <https://curso-r.github.io/202403-visualizacao>
 
 -   <https://curso-r.github.io/202308-visualizacao>
 
