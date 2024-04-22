@@ -168,6 +168,17 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <a class="nav-link" href="../../../talks/index.html"> 
 <span class="menu-text">Talks</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">
+<li>
+    <a class="dropdown-item" href="../../../research/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+    </ul>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf"> 
 <span class="menu-text">Resume</span></a>
@@ -325,7 +336,7 @@ $ `Data de estreia`        &lt;chr&gt; "15 de Fevereiro de 2007", "15 de Feverei
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-7_74f818fb2181ee440ca48941c192fc46">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tabela</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="co"># limpar os nomes das variáveis</span></span>
-<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu">clean_names</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="co"># adicionando o número da temporada </span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>numero_temporada <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                <span class="co"># transforma a variável `no` em texto</span></span>
@@ -357,7 +368,7 @@ $ numero_temporada      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 <span>    <span class="co"># lê a tabela</span></span>
 <span>    <span class="fu">rvest</span><span class="fu">::</span><span class="fu"><a href="https://rvest.tidyverse.org/reference/html_table.html">html_table</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>    <span class="co"># limpar os nomes das variáveis</span></span>
-<span>    <span class="fu">janitor</span><span class="fu">::</span><span class="fu">clean_names</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>    <span class="co"># adicionando o numero da temporada como uma variavel</span></span>
 <span>    <span class="co"># e padronizando o numero do episodio para texto</span></span>
 <span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">numero_temporada</span>, no <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">no</span><span class="op">)</span><span class="op">)</span></span>

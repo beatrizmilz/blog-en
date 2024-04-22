@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Beatriz Milz">
+<title>Beatriz Milz - Tutorial: Criando uma pirâmide etária com dados do Censo 2022, usando o R e o pacote ggplot2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
+</script><style>html{ scroll-behavior: smooth; }</style>
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Beatriz Milz</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">
+<li>
+    <a class="dropdown-item" href="../../../about.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about-pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about-es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Posts</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
+ <span class="dropdown-text">All posts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/en.html">
+ <span class="dropdown-text">English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/pt.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/es.html">
+ <span class="dropdown-text">Español</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../teaching/index.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../talks/index.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">
+<li>
+    <a class="dropdown-item" href="../../../research/index.html">
+ <span class="dropdown-text">Português</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://beatrizmilz.github.io/resume/index.pdf"> 
+<span class="menu-text">Resume</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888"> <i class="bi bi-newspaper" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/beatrizmilz/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Tutorial: Criando uma pirâmide etária com dados do Censo 2022, usando o R e o pacote ggplot2</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Tutorial</div>
+                <div class="quarto-category">Visualização de dados</div>
+                <div class="quarto-category">ggplot2</div>
+                <div class="quarto-category">IBGE</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autor</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">21 de abril de 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+<li><a href="#o-que-%C3%A9-uma-pir%C3%A2mide-et%C3%A1ria" id="toc-o-que-é-uma-pirâmide-etária" class="nav-link active" data-scroll-target="#o-que-%C3%A9-uma-pir%C3%A2mide-et%C3%A1ria">O que é uma pirâmide etária?</a></li>
+  <li><a href="#dados" id="toc-dados" class="nav-link" data-scroll-target="#dados">Dados</a></li>
+  <li><a href="#leitura-dos-dados" id="toc-leitura-dos-dados" class="nav-link" data-scroll-target="#leitura-dos-dados">Leitura dos dados</a></li>
+  <li><a href="#arrumando-os-dados" id="toc-arrumando-os-dados" class="nav-link" data-scroll-target="#arrumando-os-dados">Arrumando os dados</a></li>
+  <li><a href="#estrutura-de-um-ggplot" id="toc-estrutura-de-um-ggplot" class="nav-link" data-scroll-target="#estrutura-de-um-ggplot">Estrutura de um ggplot</a></li>
+  <li><a href="#imaginando-o-nosso-gr%C3%A1fico" id="toc-imaginando-o-nosso-gráfico" class="nav-link" data-scroll-target="#imaginando-o-nosso-gr%C3%A1fico">Imaginando o nosso gráfico</a></li>
+  <li><a href="#alterando-o-formato-da-base-pivoting" id="toc-alterando-o-formato-da-base-pivoting" class="nav-link" data-scroll-target="#alterando-o-formato-da-base-pivoting">Alterando o formato da base: pivoting!</a></li>
+  <li><a href="#primeira-tentativa-de-criar-um-gr%C3%A1fico" id="toc-primeira-tentativa-de-criar-um-gráfico" class="nav-link" data-scroll-target="#primeira-tentativa-de-criar-um-gr%C3%A1fico">Primeira tentativa de criar um gráfico</a></li>
+  <li><a href="#lista-do-papai-noel-o-que-precisamos-melhorar" id="toc-lista-do-papai-noel-o-que-precisamos-melhorar" class="nav-link" data-scroll-target="#lista-do-papai-noel-o-que-precisamos-melhorar">Lista do papai noel: o que precisamos melhorar?</a></li>
+  <li>
+<a href="#tratando-os-dados-segundo-nossa-lista-do-papai-noel" id="toc-tratando-os-dados-segundo-nossa-lista-do-papai-noel" class="nav-link" data-scroll-target="#tratando-os-dados-segundo-nossa-lista-do-papai-noel">Tratando os dados segundo nossa lista do papai noel</a>
+  <ul class="collapse">
+<li><a href="#formato-da-pir%C3%A2mide" id="toc-formato-da-pirâmide" class="nav-link" data-scroll-target="#formato-da-pir%C3%A2mide">1) Formato da pirâmide</a></li>
+  <li><a href="#ordem-em-grupo_de_idade" id="toc-ordem-em-grupo_de_idade" class="nav-link" data-scroll-target="#ordem-em-grupo_de_idade">2) Ordem em <code>grupo_de_idade</code></a></li>
+  <li><a href="#arrumar-a-vari%C3%A1vel-sexo" id="toc-arrumar-a-variável-sexo" class="nav-link" data-scroll-target="#arrumar-a-vari%C3%A1vel-sexo">3) Arrumar a variável <code>sexo</code></a></li>
+  </ul>
+</li>
+  <li><a href="#visualizando-os-dados" id="toc-visualizando-os-dados" class="nav-link" data-scroll-target="#visualizando-os-dados">Visualizando os dados</a></li>
+  <li><a href="#visualizando-dados-de-2-munic%C3%ADpios" id="toc-visualizando-dados-de-2-municípios" class="nav-link" data-scroll-target="#visualizando-dados-de-2-munic%C3%ADpios">Visualizando dados de 2 municípios</a></li>
+  <li><a href="#conclus%C3%A3o" id="toc-conclusão" class="nav-link" data-scroll-target="#conclus%C3%A3o">Conclusão</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p><a href="../../../posts/2024-04-21-piramide-ggplot2/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
+<p>Alguns dias atrás eu estava ministrando uma aula no curso de Visualização de Dados, da <a href="https://curso-r.com/">Curso-R</a>, e uma aluna (a querida <a href="https://www.linkedin.com/in/aprocha/">Ana Paula Rocha</a>, que também é uma das co-organizadoras da <a href="https://rladies-sp.org/">R-Ladies São Paulo</a>) me perguntou:</p>
+<blockquote class="blockquote">
+<p><strong>Como podemos fazer uma pirâmide etária com ggplot2?</strong></p>
+</blockquote>
+<p>Eu achei o exercício tão divertido, que além de ter mostrado na aula (a Ana ficou feliz!), também trago em formato de tutorial.</p>
+<p>Antes de iniciar, importante agradecer as pessoas da turma, principalmente quem estava na aula e enviou sugestões no chat durante esse exercício!</p>
+<p>Para iniciar, vamos carregar o pacote <code>ggplot2</code>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Obs 1: o meu código é cheio do operador <code>::</code>. Caso você não conheça, ele serve para indicar em qual pacote uma função está, por exemplo: <code>pacote::funcao()</code>.</p>
+<p>Obs 2: Neste post, você pode clicar no nome das funções nos códigos, e a página da documentação da função será aberta.</p>
+<section id="o-que-é-uma-pirâmide-etária" class="level2"><h2 class="anchored" data-anchor-id="o-que-é-uma-pirâmide-etária">O que é uma pirâmide etária?</h2>
+<p>Caso você não lembre por nome, acredito que você já tenha visto um gráfico com pirâmide etária por aí.</p>
+<p><strong>Uma pirâmide etária é uma representação gráfica da distribuição da população por faixa etária e sexo.</strong></p>
+<p>Por exemplo: a seguir, temos uma pirâmide etária da população brasileira, elaborado pelo <a href="https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18318-piramide-etaria.html">IBGE</a>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://educa.ibge.gov.br/jovens/conheca-o-brasil/populacao/18318-piramide-etaria.html"><img src="images/piramide_etaria_ibge.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="IBGE: Pirâmide etária do Brasil"></a></p>
+</figure>
+</div>
+<figcaption>IBGE: Pirâmide etária do Brasil</figcaption></figure>
+</div>
+<p>Outra pirâmide etária que encontrei ao elaborar esse post foi essa publicada no <a href="https://www.nexojornal.com.br/grafico/2023/10/27/a-piramide-etaria-do-brasil-segundo-o-censo-do-ibge">Nexo</a>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://www.nexojornal.com.br/grafico/2023/10/27/a-piramide-etaria-do-brasil-segundo-o-censo-do-ibge"><img src="images/piramide-etaria-nexo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Nexo: Pirâmide etária do Brasil"></a></p>
+</figure>
+</div>
+<figcaption>Nexo: Pirâmide etária do Brasil</figcaption></figure>
+</div>
+</section><section id="dados" class="level2"><h2 class="anchored" data-anchor-id="dados">Dados</h2>
+<p>Agora que está claro o que é uma pirâmide etária, podemos buscar os dados.</p>
+<p>Como dito no título do texto, o objetivo é criar uma pirâmide etária utilizando os dados do Censo 2022.</p>
+<p>Como o IBGE ainda não divulgou os microdados, podemos baixar os dados sumarizados no site <a href="https://censo2022.ibge.gov.br/panorama/">Panorama Censo 2022</a>. Como os dados já vem agregados e disponibilizados por UF ou município, precisamos baixar separadamente cada município ou UF que desejamos visualizar.</p>
+<p>Primeiro, pesquisamos na página o município ou UF, e clicamos no botão de download. O site permite fazer download dos arquivos em CSV (arquivos de planilhas em textos separados por vírgula, ou ponto-e-vírgula) e XLSX (arquivos Excel).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://censo2022.ibge.gov.br/panorama/"><img src="images/panorama.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Panorama Censo 2022 - Pesquisa por município ou UF, e botão de download"></a></p>
+</figure>
+</div>
+<figcaption>Panorama Censo 2022 - Pesquisa por município ou UF, e botão de download</figcaption></figure>
+</div>
+<p>Para fazer esse post, vou fazer o download dos dados para dois municípios do estado de São Paulo: Diadema (o município onde eu nasci) e Osasco (o município onde eu moro atualmente).</p>
+<p>Os arquivos estão em um <code>.zip</code>, que é uma pasta compactada. Precisamos extrair os dados do <code>.zip</code>. Como foram apenas 2 arquivos, realizei isso manualmente, mas caso você precise fazer isso para muitos arquivos, recomendo checar a função <code><a href="https://rdrr.io/r/utils/unzip.html">utils::unzip()</a></code>. Salvei os arquivos na pasta <code>dados</code>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="st">"dados"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>dados/Censo 2022 - Características dos domicílios - Diadema (SP).csv
+dados/Censo 2022 - Características dos domicílios - Osasco (SP).csv
+dados/Censo 2022 - Crescimento Populacional - Diadema (SP).csv
+dados/Censo 2022 - Crescimento Populacional - Osasco (SP).csv
+dados/Censo 2022 - Pirâmide etária - Diadema (SP).csv
+dados/Censo 2022 - Pirâmide etária - Osasco (SP).csv
+dados/Censo 2022 - População por cor ou raça - Diadema (SP).csv
+dados/Censo 2022 - População por cor ou raça - Osasco (SP).csv
+dados/Censo 2022 - População por sexo - Diadema (SP).csv
+dados/Censo 2022 - População por sexo - Osasco (SP).csv
+dados/Censo 2022 - Território - Diadema (SP).csv
+dados/Censo 2022 - Território - Osasco (SP).csv</code></pre>
+</div>
+</div>
+</section><section id="leitura-dos-dados" class="level2"><h2 class="anchored" data-anchor-id="leitura-dos-dados">Leitura dos dados</h2>
+<p>Percebemos que no <code>.zip</code> temos mais tabelas do que necessário! Vamos utilizar apenas as tabelas de pirâmide etária.</p>
+<p>Para ler os arquivos (no nosso caso, 2 arquivos, mas funcionaria com mais), precisamos de um vetor com os caminhos (um texto que indica ao computador onde os arquivos estão guardados) e também uma função para ler esses arquivos.</p>
+<p>Vamos primeiro criar um vetor com os caminhos:</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arquivos_piramide</span> <span class="op">&lt;-</span> <span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="st">"dados"</span>, regexp <span class="op">=</span> <span class="st">"Pirâmide"</span><span class="op">)</span></span>
+<span><span class="va">arquivos_piramide</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>dados/Censo 2022 - Pirâmide etária - Diadema (SP).csv
+dados/Censo 2022 - Pirâmide etária - Osasco (SP).csv</code></pre>
+</div>
+</div>
+<p>Para ler os arquivos, podemos usar a função <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv2()</a></code>, que permite ler arquivos CSV cujo separador seja o ponto-e-vírgula.</p>
+<p>Sabendo como importar um arquivos, podemos usar a função <code><a href="https://purrr.tidyverse.org/reference/map.html">purrr::map()</a></code> para aplicar a função <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv2()</a></code> em todos os arquivos do vetor que criamos anteriormente (que chamamos de <code>arquivos_piramide</code>). Vamos empilhar os dados em uma única tabela utilizando a função <code><a href="https://purrr.tidyverse.org/reference/list_c.html">purrr::list_rbind()</a></code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_brutos</span> <span class="op">&lt;-</span> <span class="va">arquivos_piramide</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu">readr</span><span class="fu">::</span><span class="va"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/list_c.html">list_rbind</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Espiando os dados importados, para descobrir quais variáveis temos:</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_brutos</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 42
+Columns: 6
+$ `Grupo de idade`               &lt;chr&gt; "100 anos ou mais", "95 a 99 anos", "90…
+$ `População feminina(pessoas)`  &lt;dbl&gt; 30, 138, 477, 1136, 2080, 3501, 5876, 8…
+$ `População masculina(pessoas)` &lt;dbl&gt; 6, 52, 193, 536, 1205, 2416, 4261, 6052…
+$ Município                      &lt;chr&gt; "Diadema", "Diadema", "Diadema", "Diade…
+$ `Sigla UF`                     &lt;chr&gt; "SP", "SP", "SP", "SP", "SP", "SP", "SP…
+$ `Código do Município`          &lt;dbl&gt; 3513801, 3513801, 3513801, 3513801, 351…</code></pre>
+</div>
+</div>
+</section><section id="arrumando-os-dados" class="level2"><h2 class="anchored" data-anchor-id="arrumando-os-dados">Arrumando os dados</h2>
+<p>A primeira coisa que eu costumo fazer quando importo uma nova base de dados é padronizar os nomes. Para isso, eu gosto muito da função <code><a href="https://sfirke.github.io/janitor/reference/clean_names.html">janitor::clean_names()</a></code>. Isso facilita muito para escrever o nome das variáveis ao longo do código e evita erros de encoding:</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_nomes_limpos</span> <span class="op">&lt;-</span> <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="va">dados_brutos</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_nomes_limpos</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 42
+Columns: 6
+$ grupo_de_idade              &lt;chr&gt; "100 anos ou mais", "95 a 99 anos", "90 a …
+$ populacao_feminina_pessoas  &lt;dbl&gt; 30, 138, 477, 1136, 2080, 3501, 5876, 8039…
+$ populacao_masculina_pessoas &lt;dbl&gt; 6, 52, 193, 536, 1205, 2416, 4261, 6052, 8…
+$ municipio                   &lt;chr&gt; "Diadema", "Diadema", "Diadema", "Diadema"…
+$ sigla_uf                    &lt;chr&gt; "SP", "SP", "SP", "SP", "SP", "SP", "SP", …
+$ codigo_do_municipio         &lt;dbl&gt; 3513801, 3513801, 3513801, 3513801, 351380…</code></pre>
+</div>
+</div>
+<p>Boa!!</p>
+<p>Será que deu certo e temos dados dos dois municípios? Podemos conferir:</p>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">dados_nomes_limpos</span><span class="op">$</span><span class="va">municipio</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Diadema" "Osasco" </code></pre>
+</div>
+</div>
+<p>Sim! Temos dados para Diadema e Osasco.</p>
+<p>Agora, é necessário realizar um processo de ir pensando na criação do gráfico, para planejar quais são os tratamentos que serão necessários. Esse processo é difícil de descrever em texto, mas acredito que é interessante mostrar esse “vai e volta” entre a criação do gráfico e o tratamento dos dados, pois é assim que normalmente precisamos fazer no dia-a-dia.</p>
+<p>Se você está sem paciência de ver o raciocínio da construção do gráfico, recomendo pular para o final do texto e ver o resultado! Também é possível acessar um código similar <a href="https://gist.github.com/beatrizmilz/878851ec806ad36f20e2a75ad3892b85">nesse Gist</a>.</p>
+</section><section id="estrutura-de-um-ggplot" class="level2"><h2 class="anchored" data-anchor-id="estrutura-de-um-ggplot">Estrutura de um ggplot</h2>
+<p>Quando criamos o ggplot, pensamos nos seguintes elementos:</p>
+<ul>
+<li><p>Quais são as variáveis que precisamos utilizar?</p></li>
+<li><p>Em qual atributo estético (<code><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes()</a></code>) vamos mapear cada variável?</p></li>
+<li><p>Qual é a geometria (<code>geom_*()</code>) precisamos usar?</p></li>
+</ul></section><section id="imaginando-o-nosso-gráfico" class="level2"><h2 class="anchored" data-anchor-id="imaginando-o-nosso-gráfico">Imaginando o nosso gráfico</h2>
+<p>Primeiro vamos pensar nas variáveis necessárias: Grupo de idade, população e sexo.</p>
+<p>Vamos pensar agora onde cada variável é mapeada:</p>
+<ul>
+<li><p>Grupo de idade: eixo Y.</p></li>
+<li><p>População: eixo X.</p></li>
+<li><p>Sexo: cor de preenchimento da barra.</p></li>
+</ul>
+<p>E qual é a geometria usada? Nesse caso, é um gráfico de barras. Neste caso, utilizamos o <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code>.</p>
+</section><section id="alterando-o-formato-da-base-pivoting" class="level2"><h2 class="anchored" data-anchor-id="alterando-o-formato-da-base-pivoting">Alterando o formato da base: pivoting!</h2>
+<p>Ao imaginar o gráfico, percebemos que existe um certo problema: precisamos de uma coluna com a população, e outra com o sexo, para utilizar no gráfico. Porém na tabela temos duas colunas separadas, que apresenta uma das variáveis relevantes no nome da coluna: populacao_feminina_pessoas e populacao_masculina_pessoas.</p>
+<p>Percebe? A informação do sexo está no nome da coluna!</p>
+<p>Precisamos alterar isso então, com o que chamamos de “pivotagem”. Existem duas funções de pivotagem: <code><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">tidyr::pivot_longer()</a></code> (o resultado é uma base “mais longa”) e <code><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">tidyr::pivot_wider()</a></code> (o resultado é uma base “mais larga”).</p>
+<p>Nesse caso, temos informações no nome das colunas (<code>"populacao_feminina_pessoas"</code> e <code>"populacao_masculina_pessoas"</code>), que queremos transformar em uma variável chamada “sexo”.</p>
+<p>Tentei demonstrar abaixo um exemplo curto:</p>
+<ol type="1">
+<li>Essa é uma linha da tabela original: temos uma linha por combinação de <code>grupo_de_idade</code> e <code>municipio</code>. A informação sobre o sexo está no nome das colunas.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 24%">
+<col style="width: 25%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 18%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">grupo_de_idade</th>
+<th style="text-align: right;">populacao_feminina_pessoas</th>
+<th style="text-align: right;">populacao_masculina_pessoas</th>
+<th style="text-align: left;">municipio</th>
+<th style="text-align: left;">sigla_uf</th>
+<th style="text-align: right;">codigo_do_municipio</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: left;">100 anos ou mais</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Diadema</td>
+<td style="text-align: left;">SP</td>
+<td style="text-align: right;">3513801</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Esse é o formato que queremos! Agora temos uma coluna para o sexo, e outra coluna para a população. Veja que agora temos DUAS linhas para cada combinação de <code>grupo_de_idade</code> e <code>municipio</code>. Por isso, esse tipo de transformação deixa a base “mais longa”.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 21%">
+<col style="width: 29%">
+<col style="width: 10%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">grupo_de_idade</th>
+<th style="text-align: left;">municipio</th>
+<th style="text-align: left;">sigla_uf</th>
+<th style="text-align: right;">codigo_do_municipio</th>
+<th style="text-align: left;">sexo</th>
+<th style="text-align: right;">populacao</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">100 anos ou mais</td>
+<td style="text-align: left;">Diadema</td>
+<td style="text-align: left;">SP</td>
+<td style="text-align: right;">3513801</td>
+<td style="text-align: left;">populacao_feminina_pessoas</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">100 anos ou mais</td>
+<td style="text-align: left;">Diadema</td>
+<td style="text-align: left;">SP</td>
+<td style="text-align: right;">3513801</td>
+<td style="text-align: left;">populacao_masculina_pessoas</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Usando a função <code><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">tidyr::pivot_longer()</a></code>, indicamos quais são as colunas que vamos utilizar para a “pivotagem”. Depois, eu renomeio as variáveis para ficar fácil de entender o que cada coluna representa.</p>
+<div class="cell">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo</span> <span class="op">&lt;-</span> <span class="va">dados_nomes_limpos</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">"populacao_feminina_pessoas"</span>,</span>
+<span>    <span class="st">"populacao_masculina_pessoas"</span></span>
+<span>  <span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>populacao <span class="op">=</span> <span class="va">value</span>, sexo <span class="op">=</span> <span class="va">name</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Agora temos a coluna de sexo e população separadas, e a tabela também ficou com o dobro de linhas!</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_piramide_longo</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 84
+Columns: 6
+$ grupo_de_idade      &lt;chr&gt; "100 anos ou mais", "100 anos ou mais", "95 a 99 a…
+$ municipio           &lt;chr&gt; "Diadema", "Diadema", "Diadema", "Diadema", "Diade…
+$ sigla_uf            &lt;chr&gt; "SP", "SP", "SP", "SP", "SP", "SP", "SP", "SP", "S…
+$ codigo_do_municipio &lt;dbl&gt; 3513801, 3513801, 3513801, 3513801, 3513801, 35138…
+$ sexo                &lt;chr&gt; "populacao_feminina_pessoas", "populacao_masculina…
+$ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 1205, 3…</code></pre>
+</div>
+</div>
+</section><section id="primeira-tentativa-de-criar-um-gráfico" class="level2"><h2 class="anchored" data-anchor-id="primeira-tentativa-de-criar-um-gráfico">Primeira tentativa de criar um gráfico</h2>
+<p>Vamos para a primeira tentativa de criar um gráfico. Já aviso: não vai dar certo, pois a base ainda não está pronta!</p>
+<p>Por enquanto, vamos usar apenas os dados de Osasco:</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># Iniciando o ggplot</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade</span>, x <span class="op">=</span> <span class="va">populacao</span>, fill <span class="op">=</span> <span class="va">sexo</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Qual é a geometria?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/grafico-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Bom, como eu já tinha avisado, deu bem errado.</p>
+<p>Um passo importante é parar, respirar, e tentar anotar TODAS as coisas que a gente acha que precisa melhorar nesse gráfico (se você quiser, faça isso antes de continuar a ler).</p>
+</section><section id="lista-do-papai-noel-o-que-precisamos-melhorar" class="level2"><h2 class="anchored" data-anchor-id="lista-do-papai-noel-o-que-precisamos-melhorar">Lista do papai noel: o que precisamos melhorar?</h2>
+<p>Vamos lá criar nossa lista do papai noel de coisas que precisamos arrumar no gráfico que dependem do tratamento de dados:</p>
+<ol type="1">
+<li><p>As barras não estão formando uma pirâmide. Elas estão acumulando para o mesmo lado!</p></li>
+<li><p>A variável <code>grupo_de_idade</code> está seguindo a ordem alfabética, e não a ordem das faixas etárias!</p></li>
+<li><p>Os valores da variável <code>sexo</code> estão com o texto completo do nome das colunas que elas foram extraídas. Precisamos arrumar.</p></li>
+</ol></section><section id="tratando-os-dados-segundo-nossa-lista-do-papai-noel" class="level2"><h2 class="anchored" data-anchor-id="tratando-os-dados-segundo-nossa-lista-do-papai-noel">Tratando os dados segundo nossa lista do papai noel</h2>
+<p>Alguns dos itens acima necessitam ser arrumados no tratamento dos dados, e vamos fazer um por vez, seguindo os pontos acima.</p>
+<section id="formato-da-pirâmide" class="level3"><h3 class="anchored" data-anchor-id="formato-da-pirâmide">1) Formato da pirâmide</h3>
+<ol type="1">
+<li>“As barras não estão formando uma pirâmide. Elas estão acumulando para o mesmo lado!” - Na pirâmide, o “centro” é o valor 0 no eixo x. Portanto, podemos multiplicar os valores de população de um dos sexos por -1, deixando-os negativo. Fiz com a função <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">dplyr::case_when()</a></code>, e a regra usada para cada linha foi:</li>
+</ol>
+<ul>
+<li><p>Quando o valor da variável <code>sexo</code> for igual á <code>"populacao_masculina_pessoas"</code>, queremos que o valor da população seja multiplicado por -1;</p></li>
+<li><p>Quando o valor da variável <code>sexo</code> for igual á <code>"populacao_feminina_pessoas"</code>, queremos manter o valor original para população.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_2</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    pop <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_masculina_pessoas"</span> <span class="op">~</span> <span class="va">populacao</span> <span class="op">*</span> <span class="op">-</span><span class="fl">1</span>,</span>
+<span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_feminina_pessoas"</span> <span class="op">~</span> <span class="va">populacao</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Criando o gráfico com essa versão da tabela:</p>
+<div class="cell">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_2</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># Iniciando o ggplot</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade</span>, x <span class="op">=</span> <span class="va">pop</span>, fill <span class="op">=</span> <span class="va">sexo</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Qual é a geometria?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/grafico-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Agora já estamos um pouco mais perto!</p>
+</section><section id="ordem-em-grupo_de_idade" class="level3"><h3 class="anchored" data-anchor-id="ordem-em-grupo_de_idade">2) Ordem em <code>grupo_de_idade</code>
+</h3>
+<p>Por padrão, categorias são representadas no ggplot2 em ordem alfabética. Para arrumar isso, precisamos transformar a variável <code>grupo_de_idade</code> em um fator, e declarar a ordem das categorias:</p>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_3</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo_2</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    grupo_de_idade_fct <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span></span>
+<span>    <span class="va">grupo_de_idade</span>,</span>
+<span>    levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>      <span class="st">"0 a 4 anos"</span>,</span>
+<span>      <span class="st">"5 a 9 anos"</span>,</span>
+<span>      <span class="st">"10 a 14 anos"</span>,</span>
+<span>      <span class="st">"15 a 19 anos"</span>,</span>
+<span>      <span class="st">"20 a 24 anos"</span>,</span>
+<span>      <span class="st">"25 a 29 anos"</span>,</span>
+<span>      <span class="st">"30 a 34 anos"</span>,</span>
+<span>      <span class="st">"35 a 39 anos"</span>,</span>
+<span>      <span class="st">"40 a 44 anos"</span>,</span>
+<span>      <span class="st">"45 a 49 anos"</span>,</span>
+<span>      <span class="st">"50 a 54 anos"</span>,</span>
+<span>      <span class="st">"55 a 59 anos"</span>,</span>
+<span>      <span class="st">"60 a 64 anos"</span>,</span>
+<span>      <span class="st">"65 a 69 anos"</span>,</span>
+<span>      <span class="st">"70 a 74 anos"</span>,</span>
+<span>      <span class="st">"75 a 79 anos"</span>,</span>
+<span>      <span class="st">"80 a 84 anos"</span>,</span>
+<span>      <span class="st">"85 a 89 anos"</span>,</span>
+<span>      <span class="st">"90 a 94 anos"</span>,</span>
+<span>      <span class="st">"95 a 99 anos"</span>,</span>
+<span>      <span class="st">"100 anos ou mais"</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Criando o gráfico com essa versão da tabela:</p>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_3</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># Iniciando o ggplot</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade_fct</span>, x <span class="op">=</span> <span class="va">pop</span>, fill <span class="op">=</span> <span class="va">sexo</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Qual é a geometria?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/grafico-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Agora sim, parece o formato mais próximo de uma pirâmide etária (sem aqueles buracos no meio!).</p>
+</section><section id="arrumar-a-variável-sexo" class="level3"><h3 class="anchored" data-anchor-id="arrumar-a-variável-sexo">3) Arrumar a variável <code>sexo</code>
+</h3>
+<p>Os valores da variável <code>sexo</code> estão com o texto completo do nome das colunas que elas foram extraídas. Podemos arrumar com a função <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">dplyr::case_when()</a></code>, com um procedimento similar ao que fizemos no ponto 1:</p>
+<div class="cell">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo_3</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    sexo_renomeado <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_masculina_pessoas"</span> <span class="op">~</span> <span class="st">"Masculino"</span>,</span>
+<span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_feminina_pessoas"</span> <span class="op">~</span> <span class="st">"Feminino"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    sexo_renomeado <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">sexo_renomeado</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Masculino"</span>, <span class="st">"Feminino"</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Criando o gráfico com essa versão da tabela:</p>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># Iniciando o ggplot</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade_fct</span>, x <span class="op">=</span> <span class="va">pop</span>, fill <span class="op">=</span> <span class="va">sexo_renomeado</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Qual é a geometria?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/grafico-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="visualizando-os-dados" class="level2"><h2 class="anchored" data-anchor-id="visualizando-os-dados">Visualizando os dados</h2>
+<p>Agora que já arrumamos os dados, podemos trabalhar em melhorar o gráfico. Vamos criar nossa listinha de papai-noel parte 2:</p>
+<ol type="1">
+<li><p>A primeira coisa que me chama atenção é: ninguém merece essa paleta de cores “meninas usam rosa, meninos usam azul”!</p></li>
+<li><p>Aparecem valores negativos no eixo X. Mas não faz sentido população negativa, certo?</p></li>
+<li><p>Vamos deixar mais bonito? Colocar os textos, mudar o tema, etc…</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># Iniciando o ggplot</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade_fct</span>, x <span class="op">=</span> <span class="va">pop</span>, fill <span class="op">=</span> <span class="va">sexo_renomeado</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Qual é a geometria?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Alterando as cores de preenchimento usadas</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#ed9400"</span>, <span class="st">"#049899"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Queremos que os valores do eixo X sejam sempre </span></span>
+<span>  <span class="co"># positivos. Portanto, podemos usar a função abs()</span></span>
+<span>  <span class="co"># nos labels (essa função transforma qualquer número)</span></span>
+<span>  <span class="co"># em positivo.</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="va">abs</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Alterando o tema</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Alterando os textos</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"População"</span>, </span>
+<span>    y <span class="op">=</span> <span class="st">"Faixa etária"</span>,</span>
+<span>    fill <span class="op">=</span> <span class="st">"Sexo"</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"Pirâmide etária - Osasco - 2022"</span>,</span>
+<span>    caption <span class="op">=</span> <span class="st">"Fonte: Censo demográfico 2022, realizado pelo IBGE. Gráfico elaborado por Beatriz Milz."</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/grafico-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="visualizando-dados-de-2-municípios" class="level2"><h2 class="anchored" data-anchor-id="visualizando-dados-de-2-municípios">Visualizando dados de 2 municípios</h2>
+<p>Para ver os dados dos dois municípios, podemos usar a função <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code> do ggplot2!</p>
+<p>Porém, como a população desses municípios é bem diferente, para facilitar a visualização da diferença na pirâmide, o melhor é “liberar” as escalas do eixo X (usando o argumento <code>scales = "free_x"</code>). Isso é um pouco perigoso, pois os valores do eixo X ficam diferentes, e as pessoas precisam prestar mais atenção quando for comparar. Porém, se a gente não fizer isso, a pirâmide de Diadema fica “esmagada”, por ter uma população menor.</p>
+<div class="cell">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">|&gt;</span></span>
+<span>  <span class="co"># Iniciando o ggplot</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade_fct</span>, x <span class="op">=</span> <span class="va">pop</span>, fill <span class="op">=</span> <span class="va">sexo_renomeado</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Qual é a geometria?</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">municipio</span>, scales <span class="op">=</span> <span class="st">"free_x"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="co"># Alterando as cores de preenchimento usadas</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#ed9400"</span>, <span class="st">"#049899"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Queremos que os valores do eixo X sejam sempre </span></span>
+<span>  <span class="co"># positivos. Portanto, podemos usar a função abs()</span></span>
+<span>  <span class="co"># nos labels (essa função transforma qualquer número)</span></span>
+<span>  <span class="co"># em positivo.</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="va">abs</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Alterando o tema</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># Alterando os textos</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"População"</span>, </span>
+<span>    y <span class="op">=</span> <span class="st">"Faixa etária"</span>,</span>
+<span>    fill <span class="op">=</span> <span class="st">"Sexo"</span>,</span>
+<span>    title <span class="op">=</span> <span class="st">"Pirâmide etária - 2022"</span>,</span>
+<span>    caption <span class="op">=</span> <span class="st">"Fonte: Censo demográfico 2022, realizado pelo IBGE. Gráfico elaborado por Beatriz Milz."</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>    legend.position <span class="op">=</span> <span class="st">"bottom"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/grafico-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A discussão sobre possíveis diferenças (ou semelhanças) entre os municípios não está no escopo deste post. Quem sabe em um outro futuro?</p>
+</section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>Neste tutorial, vimos um pouco sobre como é possível criar uma pirâmide etária com ggplot2.</p>
+<p>Eu espero que o texto tenha ficado compreensível!</p>
+<p>Caso alguém tenha alguma sugestão (ou alguma parte não ficou claro), me avisem por favor!!</p>
+<p>Muito obrigada vocês pela leitura, e novamente, agradeço a <a href="https://curso-r.com/">Curso-R</a> e as pessoas participantes do curso de Visualização de Dados!</p>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.beamilz\.com\/**");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><input type="hidden" id="giscus-base-theme" value="light"><input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Website made with <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/dadoseambiente/">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/beatrizmilz/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888">
+      <i class="bi bi-newspaper" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+</div>
+  </div>
+</footer>
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
