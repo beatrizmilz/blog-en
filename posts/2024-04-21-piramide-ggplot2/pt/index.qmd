@@ -5,7 +5,7 @@ date: "2024-04-21"
 categories: ["Tutorial", "Visualização de dados", "ggplot2", "IBGE"]
 image: "images/piramide-criada.png"
 toc: true
-draft: true
+draft: false
 cache: true
 ---
 
