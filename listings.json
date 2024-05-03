@@ -62,12 +62,12 @@
   {
     "listing": "/talks/index.html",
     "items": [
+      "/talks/en/2024-05-rladies-melbourne/index.html",
       "/talks/pt/2024-04-podcast-freecodecamp/index.html",
       "/talks/pt/2024-03-open-data-day/index.html",
       "/talks/pt/2024-01-github-projects/index.html",
       "/talks/pt/2023-12-dados-espaciais/index.html",
       "/talks/en/2023-11-rday-colombia-purrr/index.html",
-      "/talks/en/2024-05-rladies-melbourne/index.html",
       "/talks/pt/2023-11-pacotes-br-geobr/index.html",
       "/talks/pt/2023-11-pacotes-br-r/index.html",
       "/talks/pt/2023-10-apresentar-resultados-linda/index.html",
@@ -134,8 +134,8 @@
   {
     "listing": "/talks/en/index.html",
     "items": [
-      "/talks/en/2023-11-rday-colombia-purrr/index.html",
       "/talks/en/2024-05-rladies-melbourne/index.html",
+      "/talks/en/2023-11-rday-colombia-purrr/index.html",
       "/talks/en/2022-gha-rladies-abuja/index.html",
       "/talks/en/2022-rstudio-conf/index.html",
       "/talks/en/2022-interview-reproducible-research-scout/index.html",
@@ -249,12 +249,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/talks/en/2024-05-rladies-melbourne/index.html",
       "/talks/pt/2024-04-podcast-freecodecamp/index.html",
       "/talks/pt/2024-03-open-data-day/index.html",
       "/talks/pt/2024-01-github-projects/index.html",
       "/talks/pt/2023-12-dados-espaciais/index.html",
       "/talks/en/2023-11-rday-colombia-purrr/index.html",
-      "/talks/en/2024-05-rladies-melbourne/index.html",
       "/talks/pt/2023-11-pacotes-br-geobr/index.html",
       "/talks/pt/2023-11-pacotes-br-r/index.html",
       "/talks/pt/2023-10-apresentar-resultados-linda/index.html",
