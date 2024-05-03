@@ -2,7 +2,7 @@
 toc: true
 author: Beatriz Milz
 categories: ["R-Ladies", "Diversity", "English"]
-date: '2023-11-24'
+date: '2024-05-02'
 event: "R-Ladies Melbourne"
 event_url: https://www.meetup.com/rladies-melbourne/events/300561897/
 links:
