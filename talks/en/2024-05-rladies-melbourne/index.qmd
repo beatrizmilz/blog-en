@@ -1,0 +1,34 @@
+---
+toc: true
+author: Beatriz Milz
+categories: ["R-Ladies", "Diversity", "English"]
+date: '2023-11-24'
+event: "R-Ladies Melbourne"
+event_url: https://www.meetup.com/rladies-melbourne/events/300561897/
+links:
+- icon: images
+  icon_pack: far
+  name: GitHub Repo
+  url: https://github.com/R-LadiesMelbourne/02-05-24-Actions-to-increase-diversity-in-the-R-Ladies-community-Sao-Paulo
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-05-rladies-melbourne/slides.pdf
+# - icon: youtube
+#   icon_pack: fab
+#   name: Youtube
+#   url: 
+location: Melbourne, Victoria, Australia
+title: "Actions to increase diversity in the R-Ladies community - São Paulo"
+image: featured.webp
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+<br>
