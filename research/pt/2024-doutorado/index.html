@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Beatriz Milz">
-<meta name="author" content="Julio Trecenti">
-
-<title>Beatriz Milz - Acessando APIs com R: Exemplos com a PokéAPI!</title>
+<title>Beatriz Milz - Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,42 +18,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
-
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
@@ -74,8 +35,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -101,27 +61,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-
-
+</script><style>html{ scroll-behavior: smooth; }</style>
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
@@ -133,12 +84,12 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item dropdown ">
+<li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">About</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">
+<li>
     <a class="dropdown-item" href="../../../about.html">
  <span class="dropdown-text">English</span></a>
   </li>  
@@ -151,13 +102,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Posts</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
     <a class="dropdown-item" href="../../../posts/index.html">
  <span class="dropdown-text">All posts</span></a>
   </li>  
@@ -174,7 +125,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="../../../teaching/index.html"> 
 <span class="menu-text">Teaching</span></a>
@@ -187,13 +138,13 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Research</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-research">
+<li>
     <a class="dropdown-item" href="../../../research/index.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"> <i class="bi bi-github" role="img">
 </i> 
@@ -205,187 +156,70 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Acessando APIs com R: Exemplos com a PokéAPI!</h1>
-            <p class="subtitle lead">Primeiro post sobre acesso à APIs usando R.</p>
-                                <div class="quarto-categories">
-                <div class="quarto-category">API</div>
-                <div class="quarto-category">purrr</div>
-                <div class="quarto-category">httr</div>
-                <div class="quarto-category">Web Scraping</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Autores</div>
-      <div class="quarto-title-meta-contents">
-               <p>Beatriz Milz </p>
-               <p>Julio Trecenti </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Data de Publicação</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">29 de novembro de 2021</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Nesta página</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
-  <li><a href="#o-que-é-uma-api" id="toc-o-que-é-uma-api" class="nav-link" data-scroll-target="#o-que-é-uma-api">O que é uma API?</a></li>
-  <li><a href="#pokéapi" id="toc-pokéapi" class="nav-link" data-scroll-target="#pokéapi">PokéAPI</a></li>
-  <li><a href="#você-pode-se-interessar-também-por" id="toc-você-pode-se-interessar-também-por" class="nav-link" data-scroll-target="#você-pode-se-interessar-também-por">Você pode se interessar também por…</a></li>
-  </ul>
-</nav>
+<li><a href="#portugu%C3%AAs" id="toc-português" class="nav-link active" data-scroll-target="#portugu%C3%AAs">Português</a></li>
+  <li><a href="#english" id="toc-english" class="nav-link" data-scroll-target="#english">English</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Tese</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Beatriz Milz </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">22 de março de 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Dica
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Esse post foi origalmente publicado no <a href="https://blog.curso-r.com/posts/2021-11-29-api-pokemon/">blog da Curso-R</a>.</p>
-</div>
-</div>
-<section id="introdução" class="level2">
-<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
-<p>Olá!</p>
-<p>Recentemente eu (Bea) andei explorando algumas APIs, com ajuda do Julio, que ficou respondendo as dúvidas! No processo aprendemos muitas coisas legais e resolvemos compartilhar com vocês através de alguns posts.</p>
-<p>O tema dá muito pano pra manga, pois <strong>usamos código em R</strong> para automatizar quase tudo! Nas últimas semanas, aprendemos a trabalhar com o GitHub (Ex: criar e configurar repositórios), Zoom (criar chamadas), Google Drive e Sheets (estruturar e editar arquivos), e Google Classroom (criar e configurar salas de aula).</p>
-<p>Tudo isso usando muito <code>tidyverse</code>!</p>
-<p><img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy-downsized-large.gif" width="50%" style="display: block; margin: auto;"></p>
-<p>Mas calma!! Vamos começar do começo. Neste primeiro post, vamos falar sobre o que é uma API e mostrar um exemplo básico.</p>
-</section>
-<section id="o-que-é-uma-api" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-é-uma-api">O que é uma API?</h2>
-<p>API é uma sigla para <em>Application Programming Interface</em>, ou seja, uma interface de computação. Sem usar palavras complicadas, uma explicação que está nos <a href="https://curso-r.github.io/main-deploy/docs/index.html#12">slides do curso de Deploy!</a> é:</p>
-<blockquote class="blockquote">
-<p>Uma API não deixa de ser um “link” que aceita parâmetros e retorna dados. As APIs também são abordadas no <a href="https://curso-r.github.io/main-web-scraping/slides/02-introducao-ao-ws.html#8">curso de Web Scraping</a>!</p>
-</blockquote>
-</section>
-<section id="pokéapi" class="level2">
-<h2 class="anchored" data-anchor-id="pokéapi">PokéAPI</h2>
-<p>Um exemplo de acesso à API é buscando na <a href="https://pokeapi.co/">PokéAPI</a>, uma API para buscar Pokémons! E com tantas possibilidades interessantes, porque buscar justamente Pokémons? Essa API tem fins educacionais, portanto é um ótimo lugar para começar a praticar o tema.</p>
-<p><img src="https://media.giphy.com/media/giEBaPNKEtjZtK43oX/giphy.gif" width="30%" style="display: block; margin: auto;"></p>
-<p>O primeiro passo para acessar qualquer API é procurar uma documentação.</p>
-<p><a href="https://pokeapi.co/docs/v2">Na documentação do PokéAPI</a>, é mostrado que devemos usar o seguinte padrão:</p>
-<pre><code>GET https://pokeapi.co/api/v2/{endpoint}/</code></pre>
-<p>Isso significa que devemos fazer uma requisição <code>GET</code> (apenas para consultar dados), começar com a <em>url base</em> (é a parte que não muda: <code>https://pokeapi.co/api/v2/</code>) e complementar com os parâmetros da busca (que chamamos de <em>endpoint</em>).</p>
-<p>O pacote <a href="https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html"><code>httr</code></a> é muito usado para acessar APIs através do R, e disponibiliza uma função chamada <code>httr::GET()</code> para fazer esse tipo de acesso!</p>
-<p>Por exemplo:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># url_base - nunca muda na mesma API</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url_base <span class="ot">&lt;-</span> <span class="st">"https://pokeapi.co/api/v2"</span>      </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># endpoint - é o que muda o resultado</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>endpoint <span class="ot">&lt;-</span> <span class="st">"/pokemon/ditto"</span>                 </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># precisamos colar os textos para criar o link</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>u_pokemon <span class="ot">&lt;-</span> <span class="fu">paste0</span>(url_base, endpoint) </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># ver como o texto ficou colado</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># u_pokemon </span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># &gt; "https://pokeapi.co/api/v2/pokemon/ditto"</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># fazer a requisição do tipo GET</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>r_pokemon <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(u_pokemon) </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>r_pokemon</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>Response [https://pokeapi.co/api/v2/pokemon/ditto]
-  Date: 2021-12-06 13:16
-  Status: 200
-  Content-Type: application/json; charset=utf-8
-  Size: 22.3 kB</code></pre>
-<p>Esse resultado é um pouco diferente do que estamos acostumados! O que é mais importante de reparar é o status, pois indica se a requisição foi bem sucedida. <code>Status: 200</code> significa que deu certo! :)</p>
-<p>As APIs costumam retornar arquivos <code>JSON</code>, e para acessar o conteúdo que foi obtido podemos usar a função <code>httr::content()</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>c_pokemon <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(r_pokemon)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ao salvar o resultado da função em um objeto, podemos ver que agora a classe dele é uma lista:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(c_pokemon)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>[1] "list"</code></pre>
-<p>Podemos manipular essa lista com funções do <code>tidyverse</code> para obter uma tabela, assim fica mais fácil de trabalhar. Mas atenção, da seguinte forma ela ainda não está no formato <code>tidy</code>! <a href="https://curso-r.github.io/main-faxina/slides/02-introducao-faxina.html#1">Saiba mais o que são dados tidy no material do curso de Faxina de Dados</a>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dados_ditto <span class="ot">&lt;-</span> c_pokemon <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map</span>(unlist, <span class="at">recursive =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map</span>(tibble<span class="sc">::</span>enframe) <span class="sc">%&gt;%</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map_dfr</span>(</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>dplyr<span class="sc">::</span><span class="fu">mutate</span>(.x, dplyr<span class="sc">::</span><span class="fu">across</span>(<span class="at">.fns =</span> as.character)), </span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">.id =</span> <span class="st">"id"</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(dados_ditto)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>Rows: 396
-Columns: 3
-$ id    &lt;chr&gt; "abilities", "abilities", "abilities", "abilities", "abilities",…
-$ name  &lt;chr&gt; "ability.name", "ability.url", "is_hidden", "slot", "ability.nam…
-$ value &lt;chr&gt; "limber", "https://pokeapi.co/api/v2/ability/7/", "FALSE", "1", …</code></pre>
-<p><img src="https://media.giphy.com/media/pbGSpeX860JxK/giphy.gif" width="50%" style="display: block; margin: auto;"></p>
-<p>Agora você pode usar o que aprendemos para pesquisar outros Pokémons! Quem sabe explorar a teoria de que o Ditto é um clone falho do Mew?</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dados_mew <span class="ot">&lt;-</span> <span class="st">"https://pokeapi.co/api/v2/pokemon/mew"</span> <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  httr<span class="sc">::</span><span class="fu">GET</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  httr<span class="sc">::</span><span class="fu">content</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map</span>(unlist, <span class="at">recursive =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map</span>(tibble<span class="sc">::</span>enframe) <span class="sc">%&gt;%</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map_dfr</span>(</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>dplyr<span class="sc">::</span><span class="fu">mutate</span>(.x, dplyr<span class="sc">::</span><span class="fu">across</span>(<span class="at">.fns =</span> as.character)), </span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">.id =</span> <span class="st">"id"</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(dados_mew)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>Rows: 10,083
-Columns: 3
-$ id    &lt;chr&gt; "abilities", "abilities", "abilities", "abilities", "base_experi…
-$ name  &lt;chr&gt; "ability.name", "ability.url", "is_hidden", "slot", "1", "name",…
-$ value &lt;chr&gt; "synchronize", "https://pokeapi.co/api/v2/ability/28/", "FALSE",…</code></pre>
-<p>Saiba mais sobre a teoria aqui:</p>
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UQbCZ2cGj4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
+</header><script src="https://kit.fontawesome.com/1bb720cc6f.js" crossorigin="anonymous"></script><b>Evento: </b>Tese de doutorado em Ciência Ambiental<br><b>Link do evento:</b> <a href="https://doi.org/10.11606/T.106.2024.tde-27052024-115400">https://doi.org/10.11606/T.106.2024.tde-27052024-115400</a><br><b>Lugar: </b>São Paulo<br><h2 class="anchored">
+Materiais
+</h2>
+<br><center>
+<a href="https://doi.org/10.11606/T.106.2024.tde-27052024-115400" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-academicons fa-doi"></i> DOI</button></a> <br><br><img src="featured.jpeg" class="img-fluid quarto-figure-center" style="max-width:80%"><br>
 </center>
-<p>É isso! Dúvidas, sugestões e críticas, mande aqui nos comentários. <strong>Comentem também quais exemplos, dentre os que foram listados, vocês gostariam de saber mais!!</strong></p>
-<p>Até a próxima!</p>
-</section>
-<section id="você-pode-se-interessar-também-por" class="level2">
-<h2 class="anchored" data-anchor-id="você-pode-se-interessar-também-por">Você pode se interessar também por…</h2>
-<ul>
-<li><p><a href="https://curso-r.github.io/main-deploy/docs/index.html#12">Slides do curso de Deploy</a></p></li>
-<li><p><a href="https://curso-r.github.io/main-web-scraping/slides/02-introducao-ao-ws.html#8">Slides do curso de Web Scraping sobre APIs</a></p></li>
-<li><p><a href="https://curso-r.github.io/main-faxina/slides/02-introducao-faxina.html#1">Slides do curso de Faxina sobre tidy data</a></p></li>
-<li><p>Pacote <a href="https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html"><code>httr</code></a></p></li>
-</ul>
+<section id="português" class="level2"><h2 class="anchored" data-anchor-id="português">Português</h2>
+<p><strong>Resumo</strong></p>
+<p>A Macrometrópole Paulista (MMP) é considerada a maior aglomeração urbana do Brasil, com mais de 35 milhões de habitantes. Essa região apresenta crescentes riscos de enfrentamento de problemas de escassez de água, que são intensificados em um cenário de emergência climática. Nesse contexto, mecanismos de transparência são de grande importância para a sociedade. Esta pesquisa desenvolveu o Índice Paulista de Transparência em Gestão de Recursos Hídricos (IPTGRH), que avalia a transparência ativa em órgãos gestores de recursos hídricos na MMP e no estado de São Paulo. O índice é calculado a partir do Portal do Sistema Integrado de Gerenciamento de Recursos Hídricos do Estado de São Paulo (SigRH), que foi identificado como a principal fonte de informação na pesquisa de opinião aplicada a representantes de quatro Comitês de Bacias Hidrográficas (CBHs). O IPT-GRH, baseado nos Princípios de Dados Abertos, revelou necessidades de melhorias nas informações disponibilizadas, principalmente relacionadas aos princípios de Tempestividade e Completude. Os resultados indicam a importância de atualizações regulares e fornecimento de informações completas pelos órgãos responsáveis. A pesquisa ainda sugere formas de aplicar o índice em outros órgãos e regiões, contribuindo para promover a transparência na gestão dos recursos hídricos, essencial para o controle social.</p>
+<p><strong>Palavras-chave:</strong> Represa Billings, Crise Hídrica, Região Metropolitana de São Paulo, Gestão de Recursos Hídricos</p>
+</section><section id="english" class="level2"><h2 class="anchored" data-anchor-id="english">English</h2>
+<p><strong>Title:</strong> Active transparency in Water Resource Management in the São Paulo Macrometropolis</p>
+<p><strong>Abstract</strong>:</p>
+<p>The São Paulo Macrometropolis (MMP) is considered the largest urban agglomeration in Brazil, with over 35 million inhabitants. This region faces increasing risks of water scarcity problems, which are intensified in a scenario of climate emergency. In this context, transparency mechanisms are of great importance for society. This research developed the São Paulo Index of Transparency in Water Resource Management (IPT-GRH), which assesses active transparency in water resource management bodies in the MMP and the state of São Paulo. The index is calculated from the Integrated Water Resource Management System of the State of São Paulo (SigRH), identified as the main source of information in the survey applied to representatives of four River Basin Committees (CBHs). The IPT-GRH, based on the Principles of Open Data, revealed needs for improvements in the information provided, especially related to the principles Timely and Complete. The results indicate the importance of regular updates and the provision of complete information by responsible bodies. The research also suggests ways to apply the index in other bodies and regions, contributing to promoting transparency in water resource management, essential for social control.</p>
+<p><strong>Keywords:</strong> Access to Information Law, Open Data, River Basin Committees, Transparency Index, Water Crisis.</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -798,14 +632,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
-</script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="dark">
+</script><script src="https://giscus.app/client.js" data-repo="beatrizmilz/blog-en" data-repo-id="R_kgDOHc0DoQ" data-category="General" data-category-id="DIC_kwDOHc0Doc4CPeUR" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><input type="hidden" id="giscus-base-theme" value="light"><input type="hidden" id="giscus-alt-theme" value="dark">
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>Website made with <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</p>
 </div>   
@@ -814,7 +644,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/">
       <i class="bi bi-github" role="img">
 </i> 
@@ -845,11 +675,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
