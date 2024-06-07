@@ -38,7 +38,9 @@ listing:
 
 -   (2018-2022) - [MacroAmb: Governança Ambiental da Macrometrópole Paulista face à variabilidade climática](https://pesquisa.ufabc.edu.br/macroamb/governanca-de-saneamento-ambiental-e-analises-das-vulnerabilidades-na-macrometropole-paulista/) - Projeto temático FAPESP nº 2015-03804-9
 
-## Materiais
+## Pesquisas selecionadas
+
+- Em construção!
 
 ::: {#research}
 :::

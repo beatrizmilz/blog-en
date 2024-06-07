@@ -1,0 +1,43 @@
+---
+toc: true
+author: 
+  - Beatriz Milz
+categories: Tese
+date: '2024-03-22'
+event: "Tese de doutorado em Ciência Ambiental"
+event_url: https://doi.org/10.11606/T.106.2024.tde-27052024-115400
+links:
+- icon: doi
+  icon_pack: academicons
+  name: DOI
+  url: https://doi.org/10.11606/T.106.2024.tde-27052024-115400
+location: São Paulo
+title: "Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista"
+image: featured.jpeg
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+## Português
+
+**Resumo**
+
+A Macrometrópole Paulista (MMP) é considerada a maior aglomeração urbana do Brasil, com mais de 35 milhões de habitantes. Essa região apresenta crescentes riscos de enfrentamento de problemas de escassez de água, que são intensificados em um cenário de emergência climática. Nesse contexto, mecanismos de transparência são de grande importância para a sociedade. Esta pesquisa desenvolveu o Índice Paulista de Transparência em Gestão de Recursos Hídricos (IPTGRH), que avalia a transparência ativa em órgãos gestores de recursos hídricos na MMP e no estado de São Paulo. O índice é calculado a partir do Portal do Sistema Integrado de Gerenciamento de Recursos Hídricos do Estado de São Paulo (SigRH), que foi identificado como a principal fonte de informação na pesquisa de opinião aplicada a representantes de quatro Comitês de Bacias Hidrográficas (CBHs). O IPT-GRH, baseado nos Princípios de Dados Abertos, revelou necessidades de melhorias nas informações disponibilizadas, principalmente relacionadas aos princípios de Tempestividade e Completude. Os resultados indicam a importância de atualizações regulares e fornecimento de informações completas pelos órgãos responsáveis. A pesquisa ainda sugere formas de aplicar o índice em outros órgãos e regiões, contribuindo para promover a transparência na gestão dos recursos hídricos, essencial para o controle social.
+
+**Palavras-chave:** Represa Billings, Crise Hídrica, Região Metropolitana de São Paulo, Gestão de Recursos Hídricos
+
+
+## English
+
+**Title:** Active transparency in Water Resource Management in the São Paulo Macrometropolis
+
+**Abstract**:
+
+The São Paulo Macrometropolis (MMP) is considered the largest urban agglomeration in Brazil, with over 35 million inhabitants. This region faces increasing risks of water scarcity problems, which are intensified in a scenario of climate emergency. In this context, transparency mechanisms are of great importance for society. This research developed the São Paulo Index of Transparency in Water Resource Management (IPT-GRH), which assesses active transparency in water resource management bodies in the MMP and the state of São Paulo. The index is calculated from the Integrated Water Resource Management System of the State of São Paulo (SigRH), identified as the main source of information in the survey applied to representatives of four River Basin Committees (CBHs). The IPT-GRH, based on the Principles of Open Data, revealed needs for improvements in the information provided, especially related to the principles Timely and Complete. The results indicate the importance of regular updates and the provision of complete information by responsible bodies. The research also suggests ways to apply the index in other bodies and regions, contributing to promoting transparency in water resource management, essential for social control.
+
+**Keywords:**  Access to Information Law, Open Data, River Basin Committees, Transparency Index, Water Crisis.
