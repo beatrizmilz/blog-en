@@ -1,0 +1,325 @@
+---
+title: "Minhas leituras do primeiro semestre de 2024"
+subtitle: "Uma análise exploratória de dados"
+author: "Beatriz Milz"
+date: "2024-07-25"
+categories: ["EDA", "Visualização de dados", "ggplot2"]
+image: "images/kindle.jpeg"
+toc: true
+draft: false
+cache: true
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+#| message: false
+#| warning: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+Hoje, 25 de julho, é o **dia do escritor**!
+
+Para comemorar, pensei em juntar duas coisas que gosto bastante (ler + análise de dados) e explorar com vocês as minhas leituras do primeiro semestre de 2024. Isso aparentemente é um estilo de vídeo comum no YouTube, eu pessoalmente adorei o vídeo do canal [Seleção Literária](https://youtu.be/x617jWB7Z9c?si=lwCeXr5OLv_hUAvS), e me inspirei um pouco nele para fazer esse post.
+
+## Dados de leituras
+
+Eu tive o privilégio de ter sido incentivada a ler desde criança. Nos últimos anos, principalmente durante o doutorado, eu não conseguia ler muito além de fantasia (para desconectar um pouco!). Mas, neste ano, tenho lido mais, e buscado ter uma rotina de leitura diária.
+
+Eu comecei a registrar os livros que estava lendo no ano no [Skoob](https://www.skoob.com.br/usuario/10490743), uma rede social **brasileira** onde as pessoas podem registrar suas leituras e suas impressões.
+
+[![Captura de tela - Skoob](images/skoob.png){fig-align="center" width="70%"}](https://www.skoob.com.br/usuario/10490743)
+
+Infelizmente, não encontrei nenhuma forma no Skoob de exportar os dados das minhas leituras. Então, eu comecei a registrar manualmente em uma [planilha no Google Sheets](https://docs.google.com/spreadsheets/d/1D8rh2frRvQ_YSLDrljpiqDCcTJdCjoyMb3rfoEwjPjE/edit?usp=sharing). Eu deixei ela aberta para leitura, caso alguém queira ver como organizei os dados. Mas atenção: só tem leituras a partir do ano de 2024, ok?
+
+[![Captura de tela - Planilha do Google Sheets](images/googlesheets.png){fig-align="center" width="70%"}](https://docs.google.com/spreadsheets/d/1D8rh2frRvQ_YSLDrljpiqDCcTJdCjoyMb3rfoEwjPjE/edit?usp=sharing)
+
+Esse post vai ser uma análise exploratória dos dados que eu registrei. Vamos lá!
+
+## Carregando os dados
+
+Primeiro, vamos carregar os pacotes necessários:
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(googlesheets4)
+library(knitr) 
+```
+
+Agora, vamos carregar os dados da planilha. [Em um post passado, eu expliquei como fazer isso](https://beamilz.com/posts/2022-03-08-googlesheets4/pt/index.html).
+
+```{r}
+#| message: false
+#| warning: false
+tabela_leituras <- read_sheet("https://docs.google.com/spreadsheets/d/1D8rh2frRvQ_YSLDrljpiqDCcTJdCjoyMb3rfoEwjPjE/edit?usp=sharing")
+```
+
+Vamos dar uma olhada nos dados:
+
+```{r}
+glimpse(tabela_leituras)
+```
+
+Nessa tabela, tem algumas informações sobre os livros que eu li. Vamos filtrar para obter os dados das leituras do primeiro semestre de 2024.
+
+```{r}
+dados <- tabela_leituras |>
+  filter(ano_leitura == 2024, semestre_leitura == 1) 
+```
+
+## Análise exploratória
+
+```{r}
+tabela_resumo <- dados |> 
+  summarise(
+    quantidade_livros = n(),
+    soma_paginas = sum(n_paginas),
+    media_paginas_por_dia = round(soma_paginas / (365.25/2))
+  ) 
+
+tabela_resumo |> 
+  kable()
+```
+
+-   No primeiro semestre de 2024, eu li **`r tabela_resumo$quantidade_livros` livros**, que somados tem um total de **`r tabela_resumo$soma_paginas` páginas!**
+
+-   Isso dá, em média, aproximadamente **`r tabela_resumo$media_paginas_por_dia` páginas por dia**.
+
+Vamos agora responder algumas perguntas?
+
+### Formato de leitura: livro físico ou ebook?
+
+É comum para mim ler um livro físico e um ebook ao mesmo tempo. Gosto muito de ler livros no Kindle, pois me ajuda a dormir (e também nos momentos de insônia!). Não a categoria de audiolivro, pois eu ainda não consegui me adaptar a essa forma de leitura: eu perco a concentração muito fácil.
+
+![Foto do meu querido Kindle, enquanto eu lia durante uma viagem de trem.](images/kindle.jpeg){fig-align="center" width="50%"}
+
+Vamos ver como foi a distribuição das minhas leituras por formato:
+
+```{r}
+#| label: plot-tipo-quantidade
+#| fig-height: 3
+livros_por_formato <- dados |> 
+  group_by(tipo) |> 
+  summarise(
+    quantidade_livros = n(),
+    soma_paginas = sum(n_paginas),
+  )
+
+livros_por_formato |> 
+  ggplot() +
+  aes(y = tipo, x = quantidade_livros) +
+  geom_col(aes(fill = tipo)) +
+  labs(
+    title = "Quantidade de livros lidos, por formato",
+    x = "Quantidade de livros",
+    y = "Formato"
+  ) +
+  theme_minimal() +
+  scale_fill_manual(values = c("#bf8464", "#d2dce5")) +
+  theme(legend.position = "none")
+```
+
+Considerando a quantidade de livros, ficou bem equilibrado a leitura entre formato físico e ebook!
+
+E se considerar o número de páginas?
+
+```{r}
+#| label: plot-tipo-quantidade-paginas
+#| fig-height: 3
+livros_por_formato |> 
+  ggplot() +
+  aes(y = tipo, x = soma_paginas) +
+  geom_col(aes(fill = tipo)) +
+  labs(
+    title = "Número de páginas lidas, por formato",
+    x = "Número de páginas",
+    y = "Formato"
+  ) +
+  theme_minimal() +
+  scale_fill_manual(values = c("#bf8464", "#d2dce5")) +
+  theme(legend.position = "none")
+```
+
+Nesse caso, o número de páginas lidas em livros ebook foi mais que o dobro de páginas lidas em livros físicos!
+
+**Spoiler:** isso aconteceu pois eu li uma série de livros inteira no Kindle! Mas logo falo mais sobre isso.
+
+### Qual foi a editora que mais publicou livros que eu li?
+
+Ao explorar os dados, eu percebi que eu li livros de várias editoras diferentes, mas uma editora se destacou: a [Aleph](https://editoraaleph.com.br/). Eu adoro essa editora pois ela tem um catálogo INCRÍVEL de livros de ficção científica! E esse é um gênero que eu adoro ler.
+
+```{r}
+dados |> 
+  count(editora, sort = TRUE) |> 
+  kable(col.names = c("Editora", "Quantidade de livros"))
+```
+
+### Quem escreveu esses livros?
+
+Vamos ver agora quem foram as pessoas autoras que mais apareceram nas minhas leituras?
+
+```{r}
+dados |> 
+  count(autoria_nome, sort = TRUE) |> 
+  kable(col.names = c("Autor", "Quantidade de livros"))
+```
+
+Bom, com essa tabela já deu para imaginar qual é a série de livros que eu li em ebook! Neste semestre, li os seis livros da série "Duna", do autor [Frank Herbert](https://editoraaleph.com.br/pages/frank-herbert). Esses livros foram publicados pela Aleph aqui no Brasil.
+
+Outro autor que eu li mais que um livro neste primeiro semestre foi Machado de Assis. Por incrível que pareça, eu não havia lido Machado antes! E por incrível que pareça também, não foi pela repercussão da ["Tiktoker americana"](https://nucleo.jor.br/garimpo/tiktok-machado-de-assis/). Eu havia comprado alguns livros que estão na lista atual da FUVEST, e um deles foi "Quincas Borba". Que livro legal! Quanta gente interesseira! 😂
+
+Depois me falaram que, se eu gostei de "Quincas Borba", eu deveria ler "Dom Casmurro". E eu li e adorei! E se alguém me perguntar "traiu ou não traiu?", a minha opinião é de que o Bentinho viajava na maionese e tinha um ciúmes obssessivo pela Capitu desde muito cedo. Não acho que rolou traição. Mas o que achei mais incrível é que, ao ler esse livro, a interpretação pode ser totalmente diferente dependendo de quem está lendo. Enfim, o próximo livro do Machado na minha lista é o "Memórias Póstumas de Brás Cubas", o livro que a Tiktoker tanto falou bem.
+
+#### País de origem
+
+Algo que é interessante é ver a diversidade da autoria dos livros que eu li. Vamos ver a quantidade de livros lidos por país de origem dos autores:
+
+```{r}
+#| label: plot-autoria-pais
+autoria_por_pais <- dados |> 
+  group_by(autoria_pais) |> 
+  summarise(
+    quantidade_livros = n()
+  ) |> 
+  mutate(autoria_pais = fct_reorder(autoria_pais, quantidade_livros))
+
+autoria_por_pais |> 
+  ggplot() +
+  aes(y = autoria_pais, x = quantidade_livros) +
+  geom_col(fill = "#7c685f") +
+  labs(
+    title = "Quantidade de livros lidos, por país de origem do autor",
+    x = "Quantidade de livros",
+    y = "País de origem do autor"
+  )  +
+  theme_minimal()
+```
+
+#### Gênero dos autores
+
+Algo um pouco triste na minha lista é tentar visualizar a diversidade de gênero dos autores. Quase todos os livros que eu li foram escritos por homens, e apenas um por uma mulher! Isso é algo que eu gostaria de mudar nas minhas leituras futuras: ler mais livros de autoras mulheres.
+
+```{r}
+#| label: plot-autoria-genero
+#| fig-height: 3
+autoria_por_genero <- dados |> 
+  group_by(autoria_genero) |> 
+  summarise(
+    quantidade_livros = n()
+  )
+
+autoria_por_genero |> 
+  ggplot() +
+  aes(y = autoria_genero, x = quantidade_livros) +
+  geom_col(aes(fill = autoria_genero)) +
+  labs(
+    title = "Quantidade de livros lidos, por gênero do autor",
+    x = "Quantidade de livros",
+    y = "Gênero do autor"
+  ) +
+  theme_minimal() +
+  scale_fill_manual(values = c("#bf8464", "#d2dce5")) +
+  theme(legend.position = "none")
+```
+
+#### Cor/Raça dos autores
+
+Essa questão é um pouco complicada, pois não tem em um lugar específico a cor/raça dos autores. Eu busquei categorizar baseando em informações que eu encontrei na internet, mas é algo subjetivo.
+
+```{r}
+#| label: plot-autoria-raca
+#| fig-height: 4
+autoria_por_raca <- dados |> 
+  group_by(autoria_raca) |> 
+  summarise(
+    quantidade_livros = n()
+  )|> 
+  mutate(autoria_raca = fct_reorder(autoria_raca, quantidade_livros))
+
+autoria_por_raca |> 
+  ggplot() +
+  aes(y = autoria_raca, x = quantidade_livros) +
+  geom_col(fill = "#bf8464") +
+  labs(
+    title = "Quantidade de livros lidos, por raça do autor",
+    x = "Quantidade de livros",
+    y = "Raça do autor"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+## O que gostei mais?
+
+Falar das leituras favoritas é muito pessoal, pois depende de vários fatores: o livro em si, como eu estava na época, se eu engajei na leitura, etc. Mas, dos livros que eu li, os que eu mais gostei foram:
+
+
+-   [Duna, Frank Herbert](https://www.skoob.com.br/duna-2278ed673523.html) ⭐⭐⭐⭐⭐
+
+-   [Dom Casmurro, Machado de Assis](https://www.skoob.com.br/dom-casmurro-180ed11923771.html) ⭐⭐⭐⭐⭐
+
+
+
+-   [Imperador Deus de Duna, Frank Herbert (Livro 4)](https://www.skoob.com.br/imperador-deus-de-duna-6727ed122233701.html) ⭐⭐⭐⭐⭐
+
+
+
+
+## Notas dos livros, segundo outras pessoas que usam o Skoob
+
+Muitas vezes, usamos a nota dos livros para escolher as próximas leituras. Eu pessoalmente acho que não necessariamente a nota de um livro reflete se eu vou gostar ou não dele, pois a nota depende de fatores como: quantas avaliações ele recebeu (um livro com poucas avaliações pode ter uma nota mais alta facilmente), o gosto das pessoas que avaliaram, etc.
+
+Mas vamos lá!
+
+```{r}
+#| label: plot-nota-skoob
+dados |> 
+  mutate(nome = fct_reorder(nome, nota_skoob)) |> 
+  ggplot() +
+  geom_point(aes(x = nota_skoob, y = nome), shape = 8) +
+  scale_x_continuous(limits = c(0, 5)) +
+  labs(
+    title = "Nota dos livros no Skoob",
+    x = "Nota Skoob",
+    y = "Livro"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+Bom, como eu disse, a nota de um livro não necessariamente reflete se eu vou gostar ou não dele. Eu gostei bastante das leituras que atualmente estão com a nota mais baixa dentre os livros lidos neste semestre: 3.8! São esses: "[Quincas Borba](https://www.skoob.com.br/quincas-borba-1010316ed1012277.html)" (Machado de Assis), "[Nós matamos o cão tinhoso!](https://www.skoob.com.br/quincas-borba-1010316ed1012277.html)" (Luís Bernardo Honwana), e "[23 minutos](https://www.skoob.com.br/23-minutos-122396276ed122397526.html)" (Waldson Souza). Minha hipótese é que os dois primeiros citados recebem notas menores por serem livros que estão na lista do vestibular, e muitas vezes as pessoas leem por obrigação e isso reflete na nota do livro. No caso do livro "[23 minutos](https://www.skoob.com.br/23-minutos-122396276ed122397526.html)", é um livro juvenil que está em pré-lançamento, e por enquanto foi lido pelos assinantes da [TAG Inéditos](https://site.taglivros.com/ineditos/), um público que provavelmente é mais adulto, e isso também reflete na nota.
+
+
+
+Por outro lado, o livro ["O andar do bêbado"](https://www.skoob.com.br/o-andar-do-bebado-37134ed40631.html) foi a leitura que eu menos gostei do semestre, e está com a nota 4.1 no Skoob.
+
+## Conclusão
+
+-   Neste primeiro semestre, li mais do que nos últimos anos. O melhor foi ter consolidado o hábito de ler todos os dias (nem que seja um pouco antes de dormir!).
+
+-   A leitura da série Duna foi o que mais "ocupou" minhas leituras do semestre. Eu adorei a série, e fiquei muito feliz de ter lido!
+
+-   Em termos de diversidade, as minhas leituras deixaram a desejar. Isso é algo que eu gostaria de mudar nas minhas leituras futuras.
+
+-   Algo que não comentei anteriormente: [eu assinei a TAG](https://site.taglivros.com/), e desde Junho estou recebendo livros surpresa em casa todo mês. Tem sido bem legal, e duas das leituras da lista foram livros que eu recebi da TAG.
+
+-   Se quiser saber mais sobre as minhas leituras, eu uso o Skoob (como falei anteriormente) e também tenho postado no Instagram sobre a rotina de leitura: <https://www.instagram.com/estante_da_milz>.
+
+- Espero que tenham gostado! Eu me diverti escrevendo este post.
+
+## Lista de leituras
+
+Segue abaixo a lista completa, ordenada pelo ano de publicação original do livro:
+
+```{r}
+dados |>
+  mutate(link = str_glue("[{nome}]({link_skoob})")) |> 
+  arrange(ano_publicacao_original) |>
+  select(link, autoria_nome) |>
+  kable(col.names = c("Livro", "Autoria"))
+```
+
+Feliz dia do escritor! 📚✨
