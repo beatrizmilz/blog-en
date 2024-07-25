@@ -54,8 +54,24 @@ Agora, vamos carregar os dados da planilha. [Em um post passado, eu expliquei co
 ```{r}
 #| message: false
 #| warning: false
+#| eval: false
+#| echo: true
 tabela_leituras <- read_sheet("https://docs.google.com/spreadsheets/d/1D8rh2frRvQ_YSLDrljpiqDCcTJdCjoyMb3rfoEwjPjE/edit?usp=sharing")
 ```
+
+```{r}
+#| eval: false
+#| echo: false
+tabela_leituras |> 
+  writexl::write_xlsx("dados/tabela_leituras.xlsx")
+```
+
+```{r}
+#| eval: true
+#| echo: false
+tabela_leituras <- readxl::read_xlsx("dados/tabela_leituras.xlsx")
+```
+
 
 Vamos dar uma olhada nos dados:
 
