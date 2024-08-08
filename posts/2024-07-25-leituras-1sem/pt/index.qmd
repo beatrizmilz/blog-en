@@ -4,7 +4,7 @@ subtitle: "Uma análise exploratória de dados"
 author: "Beatriz Milz"
 date: "2024-07-25"
 categories: ["EDA", "Visualização de dados", "ggplot2"]
-image: "images/kindle.jpeg"
+image: "images/mosaico_capas.png"
 toc: true
 draft: false
 cache: true
@@ -56,7 +56,15 @@ Agora, vamos carregar os dados da planilha. [Em um post passado, eu expliquei co
 #| warning: false
 #| eval: false
 #| echo: true
-tabela_leituras <- read_sheet("https://docs.google.com/spreadsheets/d/1D8rh2frRvQ_YSLDrljpiqDCcTJdCjoyMb3rfoEwjPjE/edit?usp=sharing")
+
+# Criando um vetor com o link da tabela no Google Sheets
+link_google_sheets <- "https://docs.google.com/spreadsheets/d/1D8rh2frRvQ_YSLDrljpiqDCcTJdCjoyMb3rfoEwjPjE/edit?usp=sharing"
+
+# Tabela de leituras
+tabela_leituras <- read_sheet(link_google_sheets, sheet = "leituras")
+
+# Tabela de autoria
+tabela_autoria <-  read_sheet(link_google_sheets, sheet = "autoria")
 ```
 
 ```{r}
@@ -64,26 +72,45 @@ tabela_leituras <- read_sheet("https://docs.google.com/spreadsheets/d/1D8rh2frRv
 #| echo: false
 tabela_leituras |> 
   writexl::write_xlsx("dados/tabela_leituras.xlsx")
+
+tabela_autoria |> 
+  writexl::write_xlsx("dados/tabela_autoria.xlsx")
 ```
 
 ```{r}
 #| eval: true
 #| echo: false
 tabela_leituras <- readxl::read_xlsx("dados/tabela_leituras.xlsx")
+tabela_autoria <- readxl::read_xlsx("dados/tabela_autoria.xlsx")
 ```
-
 
 Vamos dar uma olhada nos dados:
 
 ```{r}
 glimpse(tabela_leituras)
+glimpse(tabela_autoria)
 ```
 
-Nessa tabela, tem algumas informações sobre os livros que eu li. Vamos filtrar para obter os dados das leituras do primeiro semestre de 2024.
+Na tabela `leituras`, tem algumas informações sobre os livros que eu li. Vamos filtrar para obter os dados das leituras do primeiro semestre de 2024.
 
 ```{r}
-dados <- tabela_leituras |>
-  filter(ano_leitura == 2024, semestre_leitura == 1) 
+leituras_filtradas <- tabela_leituras |>
+  filter(ano_leitura == 2024,
+         semestre_leitura == 1,
+         status_leitura == "completo") 
+```
+
+Podemos usar a função `left_join()` do pacote `{dplyr}` para unir as duas tabelas (de leituras e autoria):
+
+```{r}
+dados <- leituras_filtradas |> 
+  left_join(tabela_autoria, by = "autoria_nome")
+```
+
+Agora, podemos ver a estrutura da tabela criada:
+
+```{r}
+glimpse(dados)
 ```
 
 ## Análise exploratória
@@ -214,6 +241,8 @@ autoria_por_pais |>
   theme_minimal()
 ```
 
+As minhas leituras foram principalmente de autores dos Estados Unidos e do Brasil. Futuramente, eu gostaria muito de ler mais livros de autoras e autores brasileiros!
+
 #### Gênero dos autores
 
 Algo um pouco triste na minha lista é tentar visualizar a diversidade de gênero dos autores. Quase todos os livros que eu li foram escritos por homens, e apenas um por uma mulher! Isso é algo que eu gostaria de mudar nas minhas leituras futuras: ler mais livros de autoras mulheres.
@@ -272,17 +301,11 @@ autoria_por_raca |>
 
 Falar das leituras favoritas é muito pessoal, pois depende de vários fatores: o livro em si, como eu estava na época, se eu engajei na leitura, etc. Mas, dos livros que eu li, os que eu mais gostei foram:
 
-
 -   [Duna, Frank Herbert](https://www.skoob.com.br/duna-2278ed673523.html) ⭐⭐⭐⭐⭐
 
 -   [Dom Casmurro, Machado de Assis](https://www.skoob.com.br/dom-casmurro-180ed11923771.html) ⭐⭐⭐⭐⭐
 
-
-
 -   [Imperador Deus de Duna, Frank Herbert (Livro 4)](https://www.skoob.com.br/imperador-deus-de-duna-6727ed122233701.html) ⭐⭐⭐⭐⭐
-
-
-
 
 ## Notas dos livros, segundo outras pessoas que usam o Skoob
 
@@ -308,8 +331,6 @@ dados |>
 
 Bom, como eu disse, a nota de um livro não necessariamente reflete se eu vou gostar ou não dele. Eu gostei bastante das leituras que atualmente estão com a nota mais baixa dentre os livros lidos neste semestre: 3.8! São esses: "[Quincas Borba](https://www.skoob.com.br/quincas-borba-1010316ed1012277.html)" (Machado de Assis), "[Nós matamos o cão tinhoso!](https://www.skoob.com.br/quincas-borba-1010316ed1012277.html)" (Luís Bernardo Honwana), e "[23 minutos](https://www.skoob.com.br/23-minutos-122396276ed122397526.html)" (Waldson Souza). Minha hipótese é que os dois primeiros citados recebem notas menores por serem livros que estão na lista do vestibular, e muitas vezes as pessoas leem por obrigação e isso reflete na nota do livro. No caso do livro "[23 minutos](https://www.skoob.com.br/23-minutos-122396276ed122397526.html)", é um livro juvenil que está em pré-lançamento, e por enquanto foi lido pelos assinantes da [TAG Inéditos](https://site.taglivros.com/ineditos/), um público que provavelmente é mais adulto, e isso também reflete na nota.
 
-
-
 Por outro lado, o livro ["O andar do bêbado"](https://www.skoob.com.br/o-andar-do-bebado-37134ed40631.html) foi a leitura que eu menos gostei do semestre, e está com a nota 4.1 no Skoob.
 
 ## Conclusão
@@ -322,11 +343,15 @@ Por outro lado, o livro ["O andar do bêbado"](https://www.skoob.com.br/o-andar-
 
 -   Algo que não comentei anteriormente: [eu assinei a TAG](https://site.taglivros.com/), e desde Junho estou recebendo livros surpresa em casa todo mês. Tem sido bem legal, e duas das leituras da lista foram livros que eu recebi da TAG.
 
--   Se quiser saber mais sobre as minhas leituras, eu uso o Skoob (como falei anteriormente) e também tenho postado no Instagram sobre a rotina de leitura: <https://www.instagram.com/estante_da_milz>.
+-   Se quiser saber mais sobre as minhas leituras, eu uso o Skoob (como falei anteriormente) e também tenho postado no Instagram sobre a rotina de leitura: <https://www.instagram.com/dadoseambiente/>.
 
-- Espero que tenham gostado! Eu me diverti escrevendo este post.
+-   Espero que tenham gostado! Eu me diverti escrevendo este post.
 
 ## Lista de leituras
+
+![](images/mosaico_capas.png){fig-align="center"}
+
+
 
 Segue abaixo a lista completa, ordenada pelo ano de publicação original do livro:
 
@@ -339,3 +364,36 @@ dados |>
 ```
 
 Feliz dia do escritor! 📚✨
+
+## Extra - Mosaico das capas dos livros com o pacote `{magick}`
+
+O mosaico das capas do livro foi feito usando o pacote `{magick}`, e o código está a seguir:
+
+```{r}
+#| eval: false
+#| code-fold: true
+capas <- dados |>
+  mutate(
+    formato_arquivo = tools::file_ext(url_capa),
+    nome_arquivo = str_glue(
+      "images/capas/{ano_publicacao_original}-{janitor::make_clean_names(autoria_nome)}-{janitor::make_clean_names(nome)}.{formato_arquivo}"
+    )
+  ) |>
+  select(url_capa, nome_arquivo) |>
+  tidyr::drop_na(url_capa)
+
+# Fazer download das capas
+capas |>
+  group_split(nome_arquivo) |>
+  purrr::walk( ~ download.file(url = .x$url_capa, destfile = .x$nome_arquivo))
+
+# Compor uma imagem com todas as capas
+imagem_capas <- fs::dir_ls("images/capas/") |>
+  magick::image_read() |>
+  magick::image_montage(tile = "4x4",
+                        geometry = 'x200+5+5',
+                        gravity = "center")
+
+# Salvar a composição
+magick::image_write(imagem_capas, path = "images/mosaico_capas.jpg")
+```
