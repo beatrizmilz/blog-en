@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.56">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Minhas leituras do primeiro semestre de 2024 – Beatriz Milz</title>
@@ -248,6 +248,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <li><a href="#notas-dos-livros-segundo-outras-pessoas-que-usam-o-skoob" id="toc-notas-dos-livros-segundo-outras-pessoas-que-usam-o-skoob" class="nav-link" data-scroll-target="#notas-dos-livros-segundo-outras-pessoas-que-usam-o-skoob">Notas dos livros, segundo outras pessoas que usam o Skoob</a></li>
   <li><a href="#conclus%C3%A3o" id="toc-conclusão" class="nav-link" data-scroll-target="#conclus%C3%A3o">Conclusão</a></li>
   <li><a href="#lista-de-leituras" id="toc-lista-de-leituras" class="nav-link" data-scroll-target="#lista-de-leituras">Lista de leituras</a></li>
+  <li><a href="#extra---mosaico-das-capas-dos-livros-com-o-pacote-magick" id="toc-extra---mosaico-das-capas-dos-livros-com-o-pacote-magick" class="nav-link" data-scroll-target="#extra---mosaico-das-capas-dos-livros-com-o-pacote-magick">Extra - Mosaico das capas dos livros com o pacote <code>{magick}</code></a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -282,17 +283,27 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </div>
 <p>Agora, vamos carregar os dados da planilha. <a href="https://beamilz.com/posts/2022-03-08-googlesheets4/pt/index.html">Em um post passado, eu expliquei como fazer isso</a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tabela_leituras</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1D8rh2frRvQ_YSLDrljpiqDCcTJdCjoyMb3rfoEwjPjE/edit?usp=sharing"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Criando um vetor com o link da tabela no Google Sheets</span></span>
+<span><span class="va">link_google_sheets</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1D8rh2frRvQ_YSLDrljpiqDCcTJdCjoyMb3rfoEwjPjE/edit?usp=sharing"</span></span>
+<span></span>
+<span><span class="co"># Tabela de leituras</span></span>
+<span><span class="va">tabela_leituras</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">link_google_sheets</span>, sheet <span class="op">=</span> <span class="st">"leituras"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Tabela de autoria</span></span>
+<span><span class="va">tabela_autoria</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">link_google_sheets</span>, sheet <span class="op">=</span> <span class="st">"autoria"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Vamos dar uma olhada nos dados:</p>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">tabela_leituras</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 19
+<pre><code>Rows: 28
 Columns: 19
 $ ano_leitura             &lt;dbl&gt; 2024, 2024, 2024, 2024, 2024, 2024, 2024, 2024…
 $ semestre_leitura        &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2…
 $ status_leitura          &lt;chr&gt; "completo", "completo", "completo", "completo"…
+$ mes_leitura_inicio      &lt;chr&gt; "Janeiro", "Janeiro", "Fevereiro", "Março", "M…
+$ mes_leitura_fim         &lt;chr&gt; "Janeiro", "Fevereiro", "Fevereiro", "Março", …
+$ ordem                   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,…
 $ nome                    &lt;chr&gt; "Lifelong Leaners - O poder do aprendizado con…
 $ ano_publicacao_original &lt;dbl&gt; 2021, 2009, 1977, 2020, 1965, 1969, 1976, 1981…
 $ editora                 &lt;chr&gt; "Gente", "Zahar", "Perspectiva", "Companhia da…
@@ -301,24 +312,67 @@ $ idioma_leitura          &lt;chr&gt; "português", "português", "português", 
 $ tipo                    &lt;chr&gt; "físico", "ebook", "físico", "físico", "ebook"…
 $ genero                  &lt;chr&gt; "Desenvolvimento Profissional", "Divulgação ci…
 $ autoria_nome            &lt;chr&gt; "Conrado Schlochauer", "Leonard Mlodinow", "Um…
-$ autoria_genero          &lt;chr&gt; "masculino", "masculino", "masculino", "mascul…
-$ autoria_raca            &lt;chr&gt; "branca", "branca", "branca", "indígena", "bra…
-$ autoria_pais            &lt;chr&gt; "Brasil", "Estados Unidos", "Itália", "Brasil"…
 $ extra_tags              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "vesti…
 $ nota_skoob              &lt;dbl&gt; 4.2, 4.1, 4.2, 4.4, 4.5, 4.1, 4.1, 4.1, 4.1, 4…
 $ n_avaliacoes_skoob      &lt;dbl&gt; 197, 3363, 49, 3833, 21847, 240, 59, 1515, 100…
 $ atualizacao_nota_skoob  &lt;dttm&gt; 2024-07-25, 2024-07-25, 2024-07-25, 2024-07-2…
 $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learners-11…</code></pre>
 </div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">tabela_autoria</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 19
+Columns: 4
+$ autoria_nome   &lt;chr&gt; "Ailton Krenak", "Amélie Nothomb", "Art Spiegelman", "B…
+$ autoria_genero &lt;chr&gt; "masculino", "feminino", "masculino", "masculino", "mas…
+$ autoria_raca   &lt;chr&gt; "indígena", "branca", "branca", "branca", "branca", "br…
+$ autoria_pais   &lt;chr&gt; "Brasil", "Bélgica", "Estados Unidos", "Estados Unidos"…</code></pre>
 </div>
-<p>Nessa tabela, tem algumas informações sobre os livros que eu li. Vamos filtrar para obter os dados das leituras do primeiro semestre de 2024.</p>
+</div>
+<p>Na tabela <code>leituras</code>, tem algumas informações sobre os livros que eu li. Vamos filtrar para obter os dados das leituras do primeiro semestre de 2024.</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">&lt;-</span> <span class="va">tabela_leituras</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">ano_leitura</span> <span class="op">==</span> <span class="fl">2024</span>, <span class="va">semestre_leitura</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">leituras_filtradas</span> <span class="op">&lt;-</span> <span class="va">tabela_leituras</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">ano_leitura</span> <span class="op">==</span> <span class="fl">2024</span>,</span>
+<span>         <span class="va">semestre_leitura</span> <span class="op">==</span> <span class="fl">1</span>,</span>
+<span>         <span class="va">status_leitura</span> <span class="op">==</span> <span class="st">"completo"</span><span class="op">)</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Podemos usar a função <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join()</a></code> do pacote <a href="https://dplyr.tidyverse.org">dplyr</a> para unir as duas tabelas (de leituras e autoria):</p>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">&lt;-</span> <span class="va">leituras_filtradas</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">tabela_autoria</span>, by <span class="op">=</span> <span class="st">"autoria_nome"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Agora, podemos ver a estrutura da tabela criada:</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 15
+Columns: 22
+$ ano_leitura             &lt;dbl&gt; 2024, 2024, 2024, 2024, 2024, 2024, 2024, 2024…
+$ semestre_leitura        &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+$ status_leitura          &lt;chr&gt; "completo", "completo", "completo", "completo"…
+$ mes_leitura_inicio      &lt;chr&gt; "Janeiro", "Janeiro", "Fevereiro", "Março", "M…
+$ mes_leitura_fim         &lt;chr&gt; "Janeiro", "Fevereiro", "Fevereiro", "Março", …
+$ ordem                   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,…
+$ nome                    &lt;chr&gt; "Lifelong Leaners - O poder do aprendizado con…
+$ ano_publicacao_original &lt;dbl&gt; 2021, 2009, 1977, 2020, 1965, 1969, 1976, 1981…
+$ editora                 &lt;chr&gt; "Gente", "Zahar", "Perspectiva", "Companhia da…
+$ n_paginas               &lt;dbl&gt; 256, 264, 224, 128, 680, 272, 528, 512, 568, 5…
+$ idioma_leitura          &lt;chr&gt; "português", "português", "português", "portug…
+$ tipo                    &lt;chr&gt; "físico", "ebook", "físico", "físico", "ebook"…
+$ genero                  &lt;chr&gt; "Desenvolvimento Profissional", "Divulgação ci…
+$ autoria_nome            &lt;chr&gt; "Conrado Schlochauer", "Leonard Mlodinow", "Um…
+$ extra_tags              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, "vesti…
+$ nota_skoob              &lt;dbl&gt; 4.2, 4.1, 4.2, 4.4, 4.5, 4.1, 4.1, 4.1, 4.1, 4…
+$ n_avaliacoes_skoob      &lt;dbl&gt; 197, 3363, 49, 3833, 21847, 240, 59, 1515, 100…
+$ atualizacao_nota_skoob  &lt;dttm&gt; 2024-07-25, 2024-07-25, 2024-07-25, 2024-07-25…
+$ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learners-1…
+$ autoria_genero          &lt;chr&gt; "masculino", "masculino", "masculino", "mascul…
+$ autoria_raca            &lt;chr&gt; "branca", "branca", "branca", "indígena", "bra…
+$ autoria_pais            &lt;chr&gt; "Brasil", "Estados Unidos", "Itália", "Brasil"…</code></pre>
+</div>
 </div>
 </section><section id="análise-exploratória" class="level2"><h2 class="anchored" data-anchor-id="análise-exploratória">Análise exploratória</h2>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tabela_resumo</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tabela_resumo</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span></span>
 <span>    quantidade_livros <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>    soma_paginas <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n_paginas</span><span class="op">)</span>,</span>
@@ -355,7 +409,7 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 </div>
 <p>Vamos ver como foi a distribuição das minhas leituras por formato:</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">livros_por_formato</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">livros_por_formato</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">tipo</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span></span>
 <span>    quantidade_livros <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
@@ -384,7 +438,7 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 <p>Considerando a quantidade de livros, ficou bem equilibrado a leitura entre formato físico e ebook!</p>
 <p>E se considerar o número de páginas?</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">livros_por_formato</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">livros_por_formato</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">tipo</span>, x <span class="op">=</span> <span class="va">soma_paginas</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">tipo</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -408,7 +462,7 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 </section><section id="qual-foi-a-editora-que-mais-publicou-livros-que-eu-li" class="level3"><h3 class="anchored" data-anchor-id="qual-foi-a-editora-que-mais-publicou-livros-que-eu-li">Qual foi a editora que mais publicou livros que eu li?</h3>
 <p>Ao explorar os dados, eu percebi que eu li livros de várias editoras diferentes, mas uma editora se destacou: a <a href="https://editoraaleph.com.br/">Aleph</a>. Eu adoro essa editora pois ela tem um catálogo INCRÍVEL de livros de ficção científica! E esse é um gênero que eu adoro ler.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">editora</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Editora"</span>, <span class="st">"Quantidade de livros"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -465,7 +519,7 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 </section><section id="quem-escreveu-esses-livros" class="level3"><h3 class="anchored" data-anchor-id="quem-escreveu-esses-livros">Quem escreveu esses livros?</h3>
 <p>Vamos ver agora quem foram as pessoas autoras que mais apareceram nas minhas leituras?</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">autoria_nome</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Autor"</span>, <span class="st">"Quantidade de livros"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -521,7 +575,7 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 <section id="país-de-origem" class="level4"><h4 class="anchored" data-anchor-id="país-de-origem">País de origem</h4>
 <p>Algo que é interessante é ver a diversidade da autoria dos livros que eu li. Vamos ver a quantidade de livros lidos por país de origem dos autores:</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">autoria_por_pais</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">autoria_por_pais</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">autoria_pais</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span></span>
 <span>    quantidade_livros <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -545,10 +599,11 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 </div>
 </div>
 </div>
+<p>As minhas leituras foram principalmente de autores dos Estados Unidos e do Brasil. Futuramente, eu gostaria muito de ler mais livros de autoras e autores brasileiros!</p>
 </section><section id="gênero-dos-autores" class="level4"><h4 class="anchored" data-anchor-id="gênero-dos-autores">Gênero dos autores</h4>
 <p>Algo um pouco triste na minha lista é tentar visualizar a diversidade de gênero dos autores. Quase todos os livros que eu li foram escritos por homens, e apenas um por uma mulher! Isso é algo que eu gostaria de mudar nas minhas leituras futuras: ler mais livros de autoras mulheres.</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">autoria_por_genero</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">autoria_por_genero</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">autoria_genero</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span></span>
 <span>    quantidade_livros <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -576,7 +631,7 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 </section><section id="corraça-dos-autores" class="level4"><h4 class="anchored" data-anchor-id="corraça-dos-autores">Cor/Raça dos autores</h4>
 <p>Essa questão é um pouco complicada, pois não tem em um lugar específico a cor/raça dos autores. Eu busquei categorizar baseando em informações que eu encontrei na internet, mas é algo subjetivo.</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">autoria_por_raca</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">autoria_por_raca</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">autoria_raca</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span></span>
 <span>    quantidade_livros <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -611,7 +666,7 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 <p>Muitas vezes, usamos a nota dos livros para escolher as próximas leituras. Eu pessoalmente acho que não necessariamente a nota de um livro reflete se eu vou gostar ou não dele, pois a nota depende de fatores como: quantas avaliações ele recebeu (um livro com poucas avaliações pode ter uma nota mais alta facilmente), o gosto das pessoas que avaliaram, etc.</p>
 <p>Mas vamos lá!</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>nome <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_reorder.html">fct_reorder</a></span><span class="op">(</span><span class="va">nome</span>, <span class="va">nota_skoob</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">nota_skoob</span>, y <span class="op">=</span> <span class="va">nome</span><span class="op">)</span>, shape <span class="op">=</span> <span class="fl">8</span><span class="op">)</span> <span class="op">+</span></span>
@@ -638,12 +693,16 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 <li><p>A leitura da série Duna foi o que mais “ocupou” minhas leituras do semestre. Eu adorei a série, e fiquei muito feliz de ter lido!</p></li>
 <li><p>Em termos de diversidade, as minhas leituras deixaram a desejar. Isso é algo que eu gostaria de mudar nas minhas leituras futuras.</p></li>
 <li><p>Algo que não comentei anteriormente: <a href="https://site.taglivros.com/">eu assinei a TAG</a>, e desde Junho estou recebendo livros surpresa em casa todo mês. Tem sido bem legal, e duas das leituras da lista foram livros que eu recebi da TAG.</p></li>
-<li><p>Se quiser saber mais sobre as minhas leituras, eu uso o Skoob (como falei anteriormente) e também tenho postado no Instagram sobre a rotina de leitura: <a href="https://www.instagram.com/estante_da_milz" class="uri">https://www.instagram.com/estante_da_milz</a>.</p></li>
+<li><p>Se quiser saber mais sobre as minhas leituras, eu uso o Skoob (como falei anteriormente) e também tenho postado no Instagram sobre a rotina de leitura: <a href="https://www.instagram.com/dadoseambiente/" class="uri">https://www.instagram.com/dadoseambiente/</a>.</p></li>
 <li><p>Espero que tenham gostado! Eu me diverti escrevendo este post.</p></li>
 </ul></section><section id="lista-de-leituras" class="level2"><h2 class="anchored" data-anchor-id="lista-de-leituras">Lista de leituras</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/mosaico_capas.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 <p>Segue abaixo a lista completa, ordenada pelo ano de publicação original do livro:</p>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>link <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span><span class="st">"[{nome}]({link_skoob})"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">ano_publicacao_original</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">link</span>, <span class="va">autoria_nome</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -720,6 +779,36 @@ $ link_skoob              &lt;chr&gt; "https://www.skoob.com.br/lifelong-learner
 </div>
 </div>
 <p>Feliz dia do escritor! 📚✨</p>
+</section><section id="extra---mosaico-das-capas-dos-livros-com-o-pacote-magick" class="level2"><h2 class="anchored" data-anchor-id="extra---mosaico-das-capas-dos-livros-com-o-pacote-magick">Extra - Mosaico das capas dos livros com o pacote <code>{magick}</code>
+</h2>
+<p>O mosaico das capas do livro foi feito usando o pacote <a href="https://docs.ropensci.org/magick/">magick</a>, e o código está a seguir:</p>
+<div class="cell">
+<details class="code-fold"><summary>Código</summary><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">capas</span> <span class="op">&lt;-</span> <span class="va">dados</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    formato_arquivo <span class="op">=</span> <span class="fu">tools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/tools/fileutils.html">file_ext</a></span><span class="op">(</span><span class="va">url_capa</span><span class="op">)</span>,</span>
+<span>    nome_arquivo <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_glue.html">str_glue</a></span><span class="op">(</span></span>
+<span>      <span class="st">"images/capas/{ano_publicacao_original}-{janitor::make_clean_names(autoria_nome)}-{janitor::make_clean_names(nome)}.{formato_arquivo}"</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">url_capa</span>, <span class="va">nome_arquivo</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">url_capa</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Fazer download das capas</span></span>
+<span><span class="va">capas</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_split.html">group_split</a></span><span class="op">(</span><span class="va">nome_arquivo</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">walk</a></span><span class="op">(</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/utils/download.file.html">download.file</a></span><span class="op">(</span>url <span class="op">=</span> <span class="va">.x</span><span class="op">$</span><span class="va">url_capa</span>, destfile <span class="op">=</span> <span class="va">.x</span><span class="op">$</span><span class="va">nome_arquivo</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Compor uma imagem com todas as capas</span></span>
+<span><span class="va">imagem_capas</span> <span class="op">&lt;-</span> <span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="st">"images/capas/"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">magick</span><span class="fu">::</span><span class="fu">image_read</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">magick</span><span class="fu">::</span><span class="fu">image_montage</span><span class="op">(</span>tile <span class="op">=</span> <span class="st">"4x4"</span>,</span>
+<span>                        geometry <span class="op">=</span> <span class="st">'x200+5+5'</span>,</span>
+<span>                        gravity <span class="op">=</span> <span class="st">"center"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Salvar a composição</span></span>
+<span><span class="fu">magick</span><span class="fu">::</span><span class="fu">image_write</span><span class="op">(</span><span class="va">imagem_capas</span>, path <span class="op">=</span> <span class="st">"images/mosaico_capas.jpg"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
