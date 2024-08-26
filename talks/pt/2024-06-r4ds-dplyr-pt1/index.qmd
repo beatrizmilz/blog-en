@@ -1,0 +1,36 @@
+---
+toc: true
+author: Beatriz Milz
+categories: "Clube do Livro"
+date: '2024-06-24'
+event: "Clube do Livro: R for Data Science - R-Ladies São Paulo"
+links:
+- icon: images
+  icon_pack: far
+  name: Slide
+  url: https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds/blob/main/encontro_5/slide-encontro-5.pdf
+- icon: github
+  icon_pack: fab
+  name: Códigos
+  url: https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds/blob/main/encontro_5/01-encontro-24-06.R
+- icon: youtube
+  icon_pack: fab
+  name: "Gravação"
+  url: "https://www.youtube.com/live/9sZuZ6Te7oo?si=UR9dDO88KXT3RnhI"
+- icon: google-drive
+  icon_pack: fab
+  name: "Arquivo compartilhado"
+  url: "https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing"
+  
+location: Online
+title: "Transformação de dados (dplyr) - Parte 1"
+subtitle: "Funções: `filter()`, `arrange()`, `distinct()`, `count()`"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
