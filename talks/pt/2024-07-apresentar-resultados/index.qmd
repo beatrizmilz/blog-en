@@ -1,0 +1,35 @@
+---
+toc: true
+author: Beatriz Milz
+categories: Workshop
+date: '2024-07-30'
+event: "Workshop. Programa de Pós-Graduação de Mestrado Profissional em Inovação Tecnológica. Universidade Federal de São Paulo - Campus São José dos Campos"
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/2024-07-unifesp-apresentacao/#/title-slide
+- icon: github
+  icon_pack: fab
+  name: Códigos
+  url: https://github.com/beatrizmilz/2024-07-unifesp-apresentacao
+- icon: youtube
+  icon_pack: fab
+  name: "Gravação"
+  url: "https://www.youtube.com/live/-wCPQ2XSGV4?si=TrOhT-ZiBeyMz0Z_"
+- icon: instagram
+  icon_pack: fab
+  name: "Divulga +Estatística"
+  url: "https://www.instagram.com/p/C87VeQkuF-c/"
+  
+location: Online
+title: "Apresentação de resultados no R"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
