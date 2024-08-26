@@ -16,26 +16,6 @@ comments: false
 toc: true
 ---
 
-## Próximos cursos
-
-
--   Cursos na [Curso-R](https://curso-r.com/):
-
-    -   [R para Ciência de Dados II - Curso-R](https://loja.curso-r.com/r-para-ciencia-de-dados-ii.html)
-
-    -   [Relatórios e apresentações - Curso-R](https://loja.curso-r.com/relatorios-e-apresentacoes-automaticas.html)
-
--   Cursos no [CEBRAP.lab](https://cebrap.org.br/cebrap-lab/):
-
-    -   Introdução a linguagem de programação R
-
-    -   Visualização de dados no R
-
-    -   Raspagem de dados com R
-
-    -   Análise quantitativa de texto
-
-
 ## Cursos passados
 
 Para os cursos da Curso-R, apenas a turma mais recente de cada curso está listada abaixo.

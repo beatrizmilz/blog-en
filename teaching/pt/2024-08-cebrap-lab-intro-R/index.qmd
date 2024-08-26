@@ -1,0 +1,36 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: CEBRAP
+categories: Curso
+date: '2024-08-01'
+event: cebrap.lab online
+event_url: https://cebrap.org.br/cebrap-lab/
+links:
+- icon: chalkboard-teacher
+  icon_pack: fas
+  name: Inscrições
+  url: https://cursos.cebrap.org.br/categoria-cursos/cursos/
+- icon: book
+  icon_pack: fas
+  name: Material
+  url: https://github.com/beatrizmilz/2024-08-cebrap-lab-intro-R/archive/refs/heads/main.zip
+- icon: github
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/beatrizmilz/2024-08-cebrap-lab-intro-R
+location: Online
+title: Introdução ao R
+image: featured.jpeg
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+------------------------------------------------------------------------
+
+A linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas.
