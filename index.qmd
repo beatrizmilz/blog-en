@@ -19,15 +19,15 @@ listing:
     sort-ui: false
     filter-ui: false
     page-size: 3
-  - id: research
-    contents: "{research}/{pt,es,en}/*/index.qmd"
-    type: grid
-    fields: [image, date, title, subtitle]
-    sort: "date desc"
-    #categories: cloud
-    sort-ui: false
-    filter-ui: false
-    page-size: 3    
+  # - id: research
+  #   contents: "{research}/{pt,es,en}/*/index.qmd"
+  #   type: grid
+  #   fields: [image, date, title, subtitle]
+  #   sort: "date desc"
+  #   #categories: cloud
+  #   sort-ui: false
+  #   filter-ui: false
+  #   page-size: 3    
 page-layout: full
 title-block-banner: false
 comments: false
@@ -35,25 +35,25 @@ toc: false
 about:
   template: marquee
 #  image: bea.jpg
-  links:
-    - icon: envelope
-      text: Email
-      href: mailto:milz.bea@gmail.com
-    # - icon: file-pdf
-    #   text: Resume
-    #   href: https://beatrizmilz.github.io/resume/index.pdf  
-    - icon: github
-      text: GitHub
-      href: https://github.com/beatrizmilz
-    - icon: instagram
-      text: Instagram
-      href: https://instagram.com/dadoseambiente
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/beatrizmilz/  
-    # - icon: newspaper
-    #   text: LinkedIn Newsletter
-    #   href: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888      
+  # links:
+  #  - icon: envelope
+  #    href: mailto:milz.bea@gmail.com
+  #  - icon: github
+  #    href: https://github.com/beatrizmilz
+  #  - icon: linkedin
+  #    href: https://www.linkedin.com/in/beatrizmilz/
+  #  - text: "{{< ai researchgate >}}"
+  #    href: https://www.researchgate.net/profile/Beatriz-Milz
+  #  - text: "{{< ai lattes >}}"
+  #    href: http://lattes.cnpq.br/5150665880581477
+  #  - text: "{{< ai orcid >}}"
+  #    href: https://orcid.org/0000-0002-3064-4486
+  #  - icon: instagram
+  #    href: https://www.instagram.com/dadoseambiente/
+  #  - icon: bookmark-heart
+  #    href: https://www.skoob.com.br/share/user/beatrizmilz
+  #  - text: "{{< fa brands goodreads >}}"
+  #    href: https://www.goodreads.com/user/show/180775178      
 ---
 
 <!-- ::: {#hero-heading} -->
@@ -78,7 +78,7 @@ about:
 ::: {#talks}
 :::
 
-## Pesquisa/Research
+<!-- ## Pesquisa/Research -->
 
-::: {#research}
-:::
+<!-- ::: {#research} -->
+<!-- ::: -->

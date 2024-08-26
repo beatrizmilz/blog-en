@@ -10,7 +10,7 @@ I like Quarto - a lot! Here is some of the content that I made using Quarto.
 
 -   R-Ladies Sao Paulo blog: <https://rladies-sp.org/>
 
-- [My fianceé](https://twitter.com/jtrecenti/) and I made our wedding website with Quarto: <https://beaeju.com.br/>
+-   [My husband](https://jtrecenti.com/) and I made our wedding website with Quarto: <https://beaeju.com.br/>
 
 ## Presentations
 

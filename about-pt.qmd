@@ -39,15 +39,11 @@ about:
 </center>
 
 ::: {#hero-heading}
+-   **Formação acadêmica:** Beatriz Milz tem um Doutorado em Ciência Ambiental. Ela é uma pesquisadora interessada em temas como: gestão de recursos hídricos, transparência e dados abertos, ciência de dados ambientais, e gênero e o meio ambiente. Atualmente está realizando estágio pós-doutoral na Universidade Federal do ABC (UFABC).
 
-- **Formação acadêmica:** Beatriz Milz tem um PhD em Ciência Ambiental. Ela é uma pesquisadora interessada em temas como: gestão de recursos hídricos, transparência e dados abertos, ciência de dados ambientais, e gênero e o meio ambiente. Atualmente está realizando estágio pós-doutoral na Universidade Federal do ABC (UFABC).
+-   **Revistas científicas:** Desde 2018, ela faz parte da equipe executiva do periódico [Ambiente & Sociedade](https://www.scielo.br/j/asoc/). Desde 2024, ela é **Software peer review editor** na [rOpenSci](https://ropensci.org/), e faz parte da equipe executiva da [Revista Diálogos Socioambientais](https://periodicos.ufabc.edu.br/index.php/dialogossocioambientais/index).
 
-- **Revistas científicas: ** Desde 2018, ela faz parte da equipe executiva do periódico [Ambiente & Sociedade](https://www.scielo.br/j/asoc/). Desde 2024, ela é **Software peer review editor** na [rOpenSci](https://ropensci.org/), e faz parte da equipe executiva da [Revista Diálogos Socioambientais](https://periodicos.ufabc.edu.br/index.php/dialogossocioambientais/index).
+-   **Ensino:** Ela é uma [instrutora do tidyverse certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). Ela tem experiência com ensino de R em cursos na [Curso-R](https://curso-r.com/), no [cebrap.lab](https://cebrap.org.br/cebrap-lab/), e no [programa de Verão no Instituto de Matemática e Estatística (IME) – Universidade de São Paulo (USP)](https://www.ime.usp.br/verao/).
 
-
-
-- **Ensino:** Ela é uma [instrutora do tidyverse certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). Ela tem experiência com ensino de R em cursos na [Curso-R](https://curso-r.com/), no [cebrap.lab](https://cebrap.org.br/cebrap-lab/), e no [programa de Verão no Instituto de Matemática e Estatística (IME) – Universidade de São Paulo (USP)](https://www.ime.usp.br/verao/).
-
-- **Comunidades:** Desde 2018, ela é [co-organizadora do R-Ladies São Paulo](https://rladies-sp.org/). Ela também é uma [GitHub Star](https://stars.github.com/profiles/beatrizmilz/), um reconhecimento do GitHub para pessoas que são especialistas e líderes técnicos que compartilham seu conhecimento com a comunidade. Em 09/04/2024, havia apenas [73 GitHub Stars no mundo](https://stars.github.com/profiles/), e [apenas 8 delas no Brasil](https://stars.github.com/profiles/?country=Brazil).
+-   **Comunidades:** Desde 2018, ela é [co-organizadora do R-Ladies São Paulo](https://rladies-sp.org/). Ela também é uma [GitHub Star](https://stars.github.com/profiles/beatrizmilz/), um reconhecimento do GitHub para pessoas que são especialistas e líderes técnicos que compartilham seu conhecimento com a comunidade. Em 09/04/2024, havia apenas [73 GitHub Stars no mundo](https://stars.github.com/profiles/), e [apenas 8 delas no Brasil](https://stars.github.com/profiles/?country=Brazil).
 :::
-

@@ -2,6 +2,11 @@
 title: "Videos"
 comments: false
 ---
-<center>
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?si=1yjOBHfoirP-wrLv&amp;list=PLR44bTVMOm7P7SY8dkGudwXXabhEjYTT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</center>
+
+**Português:** Essa [playlist no YouTube](https://youtube.com/playlist?list=PLR44bTVMOm7P7SY8dkGudwXXabhEjYTT4&si=4Wk8K0O4uyS1oXv0) reúne mais de 50 vídeos nos quais participei, abordando temas como R, Git, GitHub, entre outros.
+
+**English:** This  [YouTube playlist](https://youtube.com/playlist?list=PLR44bTVMOm7P7SY8dkGudwXXabhEjYTT4&si=4Wk8K0O4uyS1oXv0) gathers over 50 videos in which I participated, covering topics such as R, Git, GitHub, among others.
+
+**Español:** Esta [playlist en YouTube](https://youtube.com/playlist?list=PLR44bTVMOm7P7SY8dkGudwXXabhEjYTT4&si=4Wk8K0O4uyS1oXv0) a continuación reúne más de 50 videos en los que participé, abordando temas como R, Git, GitHub, entre otros.
+
+[![](videos.png){fig-align="center"}](https://youtube.com/playlist?list=PLR44bTVMOm7P7SY8dkGudwXXabhEjYTT4&si=4Wk8K0O4uyS1oXv0)
