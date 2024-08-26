@@ -11,16 +11,26 @@ website:
   page-footer:
     left: "Website made with [Quarto](https://quarto.org/), by Beatriz Milz. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
     right:
-      - icon: github
-        href: https://github.com/beatrizmilz/
-      - icon: instagram
-        href: https://www.instagram.com/dadoseambiente/
-      - icon: linkedin
-        href: https://www.linkedin.com/in/beatrizmilz/
       - icon: envelope
         href: mailto:milz.bea@gmail.com
-      - icon: newspaper
-        href: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7129591797797797888
+      - icon: github
+        href: https://github.com/beatrizmilz
+      - icon: linkedin
+        href: https://www.linkedin.com/in/beatrizmilz/
+      - text: "{{< ai researchgate >}}"
+        href: https://www.researchgate.net/profile/Beatriz-Milz
+      - text: "{{< ai lattes >}}"
+        href: http://lattes.cnpq.br/5150665880581477
+      - text: "{{< ai orcid >}}"
+        href: https://orcid.org/0000-0002-3064-4486
+      - icon: instagram
+        href: https://www.instagram.com/dadoseambiente/
+      - icon: bookmark-heart
+        href: https://www.skoob.com.br/share/user/beatrizmilz
+      - text: "{{< fa brands goodreads >}}"
+        href: https://www.goodreads.com/user/show/180775178
+
+
   navbar:
     right:
       - text: About
@@ -50,7 +60,7 @@ website:
           - text: Português
             href: research/index.qmd
 #      - quarto.qmd
-#      - videos.qmd
+      - videos.qmd
       # - text: Resume
       #   href: https://beatrizmilz.github.io/resume/index.pdf
       # - icon: newspaper
