@@ -8,19 +8,26 @@ about:
     - icon: envelope
       text: Email
       href: mailto:milz.bea@gmail.com
-    # - icon: file-pdf
-    #   text: Resume
-    #   href: https://beatrizmilz.github.io/resume/index.pdf  
     - icon: github
       text: GitHub
       href: https://github.com/beatrizmilz
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/beatrizmilz/  
+    - text: "{{< ai researchgate >}} Research Gate"
+      href: https://www.researchgate.net/profile/Beatriz-Milz
+    - text: "{{< ai lattes >}} Lattes"
+      href: http://lattes.cnpq.br/5150665880581477
+    - text: "{{< ai orcid >}} ORCID"
+      href: https://orcid.org/0000-0002-3064-4486
     - icon: instagram
       text: Instagram
       href: https://www.instagram.com/dadoseambiente/   
-      
+    - icon: bookmark-heart
+      text: Skoob
+      href: https://www.skoob.com.br/share/user/beatrizmilz  
+    - text: "{{< fa brands goodreads >}} Goodreads"
+      href: https://www.goodreads.com/user/show/180775178 
 ---
 
 <center>
@@ -33,16 +40,11 @@ about:
 
 ::: {#hero-heading}
 
-Beatriz Milz has a PhD in Environmental Science. She is a researcher interested in topics such as: water resources management, transparency and open data, environmental data science, and gender and the environment.
+- **Academic background:** Beatriz Milz holds a PhD in Environmental Science. She is a researcher interested in topics such as water resources management, transparency and open data, environmental data science, and gender and the environment. She is currently conducting postdoctoral research at the Federal University of ABC (UFABC).
 
-She advocates for Open Data, Open Science, and Open Source Software. 
+- **Scientific journals:** Since 2018, she has been part of the executive team of the journal [Ambiente & Sociedade](https://www.scielo.br/j/asoc/). Since 2024, she has been a **Software peer review editor** at [rOpenSci](https://ropensci.org/), and she is also part of the executive team of the [Revista Diálogos Socioambientais](https://periodicos.ufabc.edu.br/index.php/dialogossocioambientais/index).
 
-Since 2018, she has been part of the technical team of the journal [Ambiente & Sociedade](https://www.scielo.br/j/asoc/).
+- **Teaching:** She is a [certified tidyverse instructor by RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). She has experience teaching R in courses at [Curso-R](https://curso-r.com/), at [cebrap.lab](https://cebrap.org.br/cebrap-lab/), and in the [Summer Program at the Institute of Mathematics and Statistics (IME) – University of São Paulo (USP)](https://www.ime.usp.br/verao/).
 
-Since 2018, she has been an [R-Ladies co-organizer of the São Paulo chapter in Brazil](https://rladies-sp.org/).
-
-She is a [tidyverse instructor certified by RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). She teaches R in short courses at [Curso-R](https://curso-r.com/), [cebrap.lab](https://cebrap.org.br/cebrap-lab/), and the [Summer program at the Institute of Mathematics and Statistics (IME) – University of São Paulo (USP)](https://www.ime.usp.br/verao/).
-
-She is also a [GitHub Star](https://stars.github.com/profiles/beatrizmilz/), a recognition from GitHub for people who are experts and technical leaders who share their knowledge with the community. On 09/04/2024, there were only [73 GitHub Stars in the world](https://stars.github.com/profiles/),  and [only 8 of them were located in Brazil](https://stars.github.com/profiles/?country=Brazil).
-
+- **Communities:** Since 2018, she has been a [co-organizer of R-Ladies São Paulo](https://rladies-sp.org/). She is also a [GitHub Star](https://stars.github.com/profiles/beatrizmilz/), a recognition by GitHub for individuals who are technical experts and community leaders who share their knowledge. As of 04/09/2024, there were only [73 GitHub Stars worldwide](https://stars.github.com/profiles/), and [only 8 of them in Brazil](https://stars.github.com/profiles/?country=Brazil).
 :::
