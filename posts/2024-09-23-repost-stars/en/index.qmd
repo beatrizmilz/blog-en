@@ -1,6 +1,6 @@
 ---
 title: "Repost: Brazilian GitHub Stars Share Tips on How to Start a Career in Programming"
-author: "Redação IMasters"
+author: "IMasters"
 date: "2024-09-23"
 categories: ["GitHub", "Carrer", "Tips", "English"]
 image: "images/stars.png"

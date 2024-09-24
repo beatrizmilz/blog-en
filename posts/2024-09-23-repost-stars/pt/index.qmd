@@ -19,7 +19,7 @@ multilang()
 ```
 
 :::{.callout-important} 
-A seguir, trago o **texto publicado no site [iMasters](https://imasters.com.br/noticia/github-stars-brasileiros-dao-dicas-sobre-como-iniciar-uma-carreira-em-programacao)**, com trechos de entrevista realizada comigo e outras pessoas brasileiras que fazem parte do [programa GitHub Stars](https://stars.github.com/nominate/).
+Este **texto foi publicado no site [iMasters](https://imasters.com.br/noticia/github-stars-brasileiros-dao-dicas-sobre-como-iniciar-uma-carreira-em-programacao)**, com trechos de entrevista realizada comigo e outras pessoas brasileiras que fazem parte do [programa GitHub Stars](https://stars.github.com/nominate/).
 
 Adicionei algumas imagens e fotos! As fotos das pessoas entrevistadas foram retiradas de seus perfis do GitHub.
 :::
