@@ -2,7 +2,7 @@
 title: "Beatriz Milz"
 listing:
   - id: talks
-    contents: "{talks}/{pt,es,en}/*/index.qmd"
+    contents: "{talks,teaching}/{pt,es,en}/*/index.qmd"
     type: grid
     fields: [image, date, title, subtitle]
     sort: "date desc"
@@ -81,4 +81,5 @@ about:
 <!-- ## Pesquisa/Research -->
 
 <!-- ::: {#research} -->
+
 <!-- ::: -->
