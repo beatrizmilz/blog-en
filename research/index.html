@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -308,7 +308,7 @@ window.Quarto = {
 </ul>
 <div id="listing-research" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Tese" data-listing-date-sort="1711065600000" data-listing-file-modified-sort="1724636059252" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="425">
+<div class="g-col-1" data-index="0" data-categories="Tese" data-listing-date-sort="1711065600000" data-listing-file-modified-sort="1727187436634" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="425">
 <a href="../research/pt/2024-doutorado/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -327,7 +327,7 @@ Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulist
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Paper" data-listing-date-sort="1655424000000" data-listing-file-modified-sort="1724636059208" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="458">
+<div class="g-col-1" data-index="1" data-categories="Paper" data-listing-date-sort="1655424000000" data-listing-file-modified-sort="1727187436591" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="458">
 <a href="../research/en/2022-ambiagua/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -346,7 +346,7 @@ Spatio-temporal variability of water quality in Billings Reservoir Central Body 
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="TCC" data-listing-date-sort="1448928000000" data-listing-file-modified-sort="1724636059212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="650">
+<div class="g-col-1" data-index="2" data-categories="TCC" data-listing-date-sort="1448928000000" data-listing-file-modified-sort="1727187436597" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="650">
 <a href="../research/pt/2015-tcc/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -468,7 +468,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("^(?:http:|https:)\/\/www\.beamilz\.com\/**");
+      var filterRegex = new RegExp("https:\/\/beamilz\.com\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -487,6 +487,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           if (link.getAttribute("rel") === null) {
             link.setAttribute("rel", "noopener");
           }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
