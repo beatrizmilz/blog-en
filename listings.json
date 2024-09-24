@@ -36,6 +36,7 @@
   {
     "listing": "/posts/es.html",
     "items": [
+      "/posts/2024-09-23-repost-stars/es/index.html",
       "/posts/series-gha/2022-series-gha-1-what-is/es/index.html"
     ]
   },
@@ -125,6 +126,8 @@
       "/talks/pt/2018-introducao-r-ufabc/index.html",
       "/talks/pt/2018-xaringan-rladies-sp/index.html",
       "/talks/pt/2018-r-desafios-macroamb/index.html",
+      "/posts/2024-09-23-repost-stars/en/index.html",
+      "/posts/2024-09-23-repost-stars/es/index.html",
       "/posts/2024-09-23-repost-stars/pt/index.html",
       "/posts/2024-07-25-leituras-1sem/pt/index.html",
       "/posts/2024-04-21-piramide-ggplot2/pt/index.html",
@@ -175,6 +178,7 @@
   {
     "listing": "/posts/en.html",
     "items": [
+      "/posts/2024-09-23-repost-stars/en/index.html",
       "/posts/2024-02-13-eds-summit-pt-1/en/index.html",
       "/posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html",
       "/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
@@ -187,6 +191,8 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/2024-09-23-repost-stars/en/index.html",
+      "/posts/2024-09-23-repost-stars/es/index.html",
       "/posts/2024-09-23-repost-stars/pt/index.html",
       "/posts/2024-07-25-leituras-1sem/pt/index.html",
       "/posts/2024-04-21-piramide-ggplot2/pt/index.html",
