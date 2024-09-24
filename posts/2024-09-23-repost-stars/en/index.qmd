@@ -1,0 +1,92 @@
+---
+title: "Repost: Brazilian GitHub Stars Share Tips on How to Start a Career in Programming"
+author: "Redação IMasters"
+date: "2024-09-23"
+categories: ["GitHub", "Carrer", "Tips", "English"]
+image: "images/stars.png"
+toc: true
+draft: false
+cache: true
+lang: en
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+#| message: false
+#| warning: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+::: callout-important
+**This text was published by [iMasters](https://imasters.com.br/noticia/github-stars-brasileiros-dao-dicas-sobre-como-iniciar-uma-carreira-em-programacao)**, with an interview with me and other Brazilians that are part of the [GitHub Stars program](https://stars.github.com/nominate/).
+
+I’ve added some images and photos! The photos of the people that was interviewed were taken from their GitHub profiles.
+:::
+
+::: callout-warning
+This post was translated from Portuguese to English using **[ChatGPT 4o](https://chatgpt.com)**.
+:::
+
+From favorite mobile games to banking transactions, almost everything today involves a programming professional. Programmers have become indispensable, as they ensure that the software and systems that underpin modern society run smoothly. This year, Programmer's Day was celebrated on September 12th, honoring these professionals who drive innovation and digital transformation.
+
+
+In any profession, including that of a programmer, it is important to have someone to look up to and learn from. With this sense of community, an influencer can impact various niches. That's why the [GitHub Stars program](https://stars.github.com/nominate/) has brought together some of these talents from around the world to give voice to the field of software development, with the mission not only to highlight the profession but also to give back to the community.
+
+
+[![GitHub Stars no Brasil atualmente](images/stars.png)](https://stars.github.com/profiles/?country=Brazil)
+
+To help people who want to start programming or those who have already begun and still want to understand how to improve their journey, three Brazilian GitHub Stars share their top tips for building a solid career as a programmer, aiming to guide those who wish to start a programming career.
+
+### Tip #1 – Join communities
+
+[Beatriz Milz](https://github.com/beatrizmilz), an academic researcher and PhD in Environmental Sciences from Diadema/SP, started to engage more with programming during her master's degree, where she used R to analyze and organize data collected by the academic lab. She soon joined a community called [R-Ladies São Paulo](https://rladies-sp.org/) and began learning programming in 2018 through the group.
+
+[![Beatriz Milz - GitHub profile photo](https://avatars.githubusercontent.com/u/42153618?v=4)](https://github.com/beatrizmilz)
+
+> "My tip for those who want to start programming is to join a community. These are spaces for interaction, to ask questions, find good free materials, references, and share experiences," says Beatriz.
+
+She was soon invited to give talks in other countries, taught others how to use GitHub, and today is a GitHub Star, highlighting the importance of having female role models in the field.
+
+> "As an academic, it’s a great way to collaborate with the community and a nice form of recognition. GitHub makes work much easier and can be integrated into various areas, such as academic research, for example, which isn’t necessarily focused on software development."
+
+### Tip #2 – Attend events and stay up-to-date
+
+Joining communities is also linked to building a strong network. Additionally, it's important to connect with professionals in the field, learn from inspiring journeys, stay updated on market trends, and share valuable knowledge. This is the belief of [Julio Arruda](https://github.com/julioarruda), a software developer from São José dos Campos. He is also a LinkedIn Learning instructor, YouTuber, speaker, works as an AI Impact Lead, and holds the titles of GitHub Star and MVP (Microsoft Most Valuable Professional).
+
+[![Julio Arruda - GitHub profile photo](https://avatars.githubusercontent.com/u/5204009?v=4)](https://github.com/julioarruda)
+
+His first job was in a supermarket, where he was soon promoted to a tech-focused role, leading him to start studying C# and .NET. Later, he transitioned to DevOps and created a blog to share tutorials. In 2012, he expanded his reach by creating a [YouTube channel](https://www.youtube.com/c/julioarruda), which now has over 26,000 subscribers.
+
+He emphasizes the importance of helping others.
+
+> "Sharing knowledge not only strengthens your understanding but also serves as a valuable reference for those in need. The collaborative spirit of the open-source community thrives on sharing ideas, and although some people may withhold information to avoid being replaced, real progress comes from helping others and growing together."
+
+For him, it's important to be cautious of "dream sellers" who promise high salaries early on but don't reflect the reality of the profession.
+
+> "Being a programmer requires study, a lot of persistence, and adaptability. In the real world, we encounter many complex problems that demand experience and practical knowledge. Additionally, AI is a great tool for learning and advancing knowledge, and investing in it is crucial for performing well in job interviews," reinforces the GitHub Star.
+
+### Tip #3 – Create projects and have hands-on experience
+
+In addition to more technical courses and training, having hands-on experience is a fundamental part of gaining practical knowledge as a programmer. This is what [Erika Heidi](https://github.com/erikaheidi), a creative developer and technical writer from João Pessoa, who is passionate about open source, Linux, and PHP, affirms. She is also a published author, conference speaker, and has been a GitHub Star since 2019.
+
+[![Erika Heidi - GitHub profile photo](https://avatars.githubusercontent.com/u/293241?v=4)](https://github.com/erikaheidi)
+
+From HTML on blogging platforms, creating free layouts, to C, PHP, and Ruby on Rails, Erika has extensive experience in the field and adds that:
+
+> "Using GitHub, creating your project, and learning how to use it is extremely important for visibility as it is the reference in open source. Start by creating repositories and commits, familiarize yourself with the platform, try to work on projects that are connected to your hobbies, find ideas and try to replicate them, for example."
+
+She also talks about the challenges of being a woman and a mother in the tech industry.
+
+> "I was the only woman in tech support in the entire city of João Pessoa and didn’t know any female programmers when I started. Today, there are more women in technical and development roles, though still few in leadership positions. However, women can now see these paths as a possible career option," says Erika.
+
+### GitHub Stars Program
+
+In Brazil, there are 4.3 million developers on GitHub, making it the fourth-largest community in the world, behind only the United States, India, and China – among them, 8 are Brazilian GitHub Stars who are helping to inspire, educate, and nurture the community in the country.
+
+Their journeys are essential in encouraging the production of technology and retaining talent in the country. To nominate a Brazilian programmer for GitHub Stars, those interested can visit <https://stars.github.com/nominate/>.
+
+[![Nominate people for the GitHub Stars program](images/nominate.png)](https://stars.github.com/nominate/)
+
+
