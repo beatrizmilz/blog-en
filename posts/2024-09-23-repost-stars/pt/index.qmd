@@ -1,0 +1,90 @@
+---
+title: "Repost: GitHub Stars brasileiros dão dicas sobre como iniciar uma carreira em programação"
+author: "Redação IMasters"
+date: "2024-09-23"
+categories: ["GitHub", "Carreira", "Dicas"]
+image: "images/stars.png"
+toc: true
+draft: false
+cache: true
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+#| message: false
+#| warning: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+:::{.callout-important} 
+A seguir, trago o **texto publicado no site [iMasters](https://imasters.com.br/noticia/github-stars-brasileiros-dao-dicas-sobre-como-iniciar-uma-carreira-em-programacao)**, com trechos de entrevista realizada comigo e outras pessoas brasileiras que fazem parte do [programa GitHub Stars](https://stars.github.com/nominate/).
+
+Adicionei algumas imagens e fotos! As fotos das pessoas entrevistadas foram retiradas de seus perfis do GitHub.
+:::
+
+
+Dos jogos favoritos para celulares às transações bancárias, quase tudo envolve um profissional de programação nos dias de hoje. Os programadores se tornaram indispensáveis, pois são eles que garantem que os softwares e sistemas que sustentam a sociedade moderna funcionem sem problemas. Este ano, o Dia do Programador foi celebrado no dia 12 de setembro e homenageia esses profissionais que impulsionam a inovação e a transformação digital.
+
+Em qualquer profissão, incluindo a de programador, é importante ter alguém em quem se inspirar e adquirir aprendizados. Com esse senso de coletividade, um influenciador é capaz de movimentar os mais diversos nichos. Por isso, o [programa GitHub Stars](https://stars.github.com/nominate/) reuniu alguns desses talentos ao redor do mundo para dar voz ao campo do desenvolvimento de software, com a missão não só de destacar a profissão, mas também de retribuir à comunidade.
+
+[![GitHub Stars no Brasil atualmente](images/stars.png)](https://stars.github.com/profiles/?country=Brazil)
+
+
+Para ajudar pessoas que querem começar a programar ou aquelas que já começaram e ainda querem entender como melhorar sua jornada, três GitHub Stars brasileiros compartilham suas principais dicas para uma carreira consolidada como programador, pensando em orientar pessoas que querem iniciar uma carreira em programação.
+
+### Dica #1 – Participar de comunidades
+
+
+
+[Beatriz Milz](https://github.com/beatrizmilz), pesquisadora acadêmica e PhD em Ciências Ambientais de Diadema, começou a ter mais contato com programação durante seu mestrado, no qual utilizou R para analisar e organizar os dados coletados pelo laboratório acadêmico. Ela logo se juntou a uma comunidade chamada [R-Ladies São Paulo](https://rladies-sp.org/) e começou a aprender programação em 2018 por meio do grupo.
+
+[![Beatriz Milz - Foto do perfil do GitHub](https://avatars.githubusercontent.com/u/42153618?v=4)](https://github.com/beatrizmilz)
+
+> "Minha dica para quem quer começar a programar é se juntar a uma comunidade. Esses são espaços de interação, para tirar dúvidas, encontrar bons materiais gratuitos, referências e compartilhar experiências", diz Beatriz.
+
+Ela logo foi convidada para fazer palestras em outros países, ensinou outras pessoas a usar o GitHub e, hoje, é uma GitHub Star, afirmando a importância de ter referências femininas na área.
+
+> "Como acadêmica, é uma ótima maneira de colaborar com a comunidade e uma forma bacana de reconhecimento. O GitHub facilita muito o trabalho e pode ser integrado em várias áreas diferentes, como a pesquisa acadêmica, por exemplo, algo que não é necessariamente focado em desenvolvimento de software."
+
+### Dica #2 – Participar de eventos e se manter atualizado
+
+
+Participar de comunidades também está ligado à construção de uma boa rede de contatos. Além disso, é importante se conectar com profissionais da área, aprender com jornadas inspiradoras, se manter atualizado sobre as tendências do mercado e compartilhar conhecimentos valiosos. É o que acredita [Julio Arruda](https://github.com/julioarruda), desenvolvedor de software de São José dos Campos. Ele também é instrutor do LinkedIn Learning, Youtuber, palestrante, trabalha como AI Impact Lead e tem os reconhecimentos GitHub Star e MVP (Microsoft Most Valuable Professional).
+
+
+[![Julio Arruda - Foto do perfil do GitHub](https://avatars.githubusercontent.com/u/5204009?v=4)](https://github.com/julioarruda)
+
+
+Seu primeiro emprego foi em um supermercado e logo foi promovido a uma função focada em TI, o que o levou a começar a estudar C# e .NET. Depois, migrou para a área de DevOps e criou um blog para compartilhar tutoriais. Em 2012, ampliou seu alcance criando um [canal no YouTube](https://www.youtube.com/c/julioarruda), que hoje tem mais de 26 mil inscritos.
+
+Ele destaca a importância de ajudar os outros.
+
+> "Compartilhar conhecimento não só reforça seu entendimento, mas também serve como uma referência valiosa para quem precisa. O espírito colaborativo da comunidade open source prospera no compartilhamento de ideias, e embora algumas pessoas possam reter informações para evitar serem substituídas, o verdadeiro progresso vem de ajudar os outros e crescer juntos."
+
+Para ele, é importante ter cuidado com os “vendedores de sonhos” que prometem altos salários logo no início, mas que não refletem a realidade da profissão.
+
+> "Ser programador exige estudo, muita persistência e adaptabilidade. No mundo real, encontramos muitos problemas complexos que demandam experiência e conhecimento prático. Além disso, a IA é uma ótima ferramenta para aprender e avançar em conhecimento, e investir nisso é crucial para se sair bem em entrevistas de emprego", reforça o GitHub Star.
+
+### Dica #3 – Criar projetos e colocar a mão na massa
+
+Além dos cursos e treinamentos mais técnicos, colocar a mão na massa é uma parte fundamental para ganhar experiência prática como programador. É o que afirma [Erika Heidi](https://github.com/erikaheidi), creative developer e technical writer de João Pessoa, apaixonada por open source, Linux e PHP, que também é autora publicada, palestrante em conferências e GitHub Star desde 2019.
+
+[![Erika Heidi - Foto do perfil do GitHub](https://avatars.githubusercontent.com/u/293241?v=4)](https://github.com/erikaheidi)
+
+Desde HTML em plataformas de blogs, criando layouts gratuitos, até C, PHP e Ruby on Rails, Erika tem uma longa e sólida experiência no setor e acrescenta que:
+
+> "Usar o GitHub, criar seu projeto e aprender a utilizá-lo é extremamente importante para visibilidade pois é a referência em open source. Comece criando repositórios e commits, vá se familiarizando com a plataforma, tente fazer projetos que estejam conectados com seus hobbies, encontre ideias e tente reproduzi-las, por exemplo."
+
+Ela também fala sobre os desafios de ser mulher e mãe no setor de TI.
+
+> "Eu era a única mulher no suporte técnico em toda a cidade de João Pessoa e não conhecia nenhuma programadora quando comecei. Hoje, há mais mulheres em cargos técnicos e de desenvolvimento, embora ainda poucas em posições de liderança. No entanto, as mulheres já podem enxergar esses caminhos como uma opção de carreira possível", diz Erika.
+
+### Programa GitHub Stars
+
+No Brasil, há 4,3 milhões de desenvolvedores no GitHub, tornando o país a quarta maior comunidade do mundo, atrás apenas dos Estados Unidos, Índia e China – entre eles, 8 são GitHub Stars brasileiros, que estão ajudando a inspirar, educar e cultivar a comunidade no país.
+
+As jornadas deles são essenciais para incentivar a produção de tecnologia e a retenção de talentos no país. Para indicar um programador brasileiro para o GitHub Stars, os interessados podem visitar <https://stars.github.com/nominate/>.
+
+[![Nomear pessoas para o programa GitHub Stars](images/nominate.png)](https://stars.github.com/nominate/)
