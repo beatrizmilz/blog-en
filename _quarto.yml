@@ -72,13 +72,12 @@ lang: pt
 
 format:
   html:
+    link-external-icon: true
+    link-external-newwindow: true
     smooth-scroll: true
     theme:
       - pulse
       - custom.scss
-    link-external-icon: false
-    link-external-newwindow: true
-    link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/**'
     citations-hover: true
     footnotes-hover: true
     toc: true
