@@ -1,0 +1,29 @@
+---
+toc: true
+author: Beatriz Milz e Tereza Lacerda
+categories: Mini-curso
+date: '2024-09-30'
+event: aMostra de Estatística IME USP
+event_url: https://www.ime.usp.br/~amostra/#home
+links:
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/beatrizmilz/2024-09-amostra-geobr
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/2024-09-amostra-geobr/
+location: IME-USP / São Paulo
+title: "Conhecendo o pacote geobr"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+------------------------------------------------------------------------
