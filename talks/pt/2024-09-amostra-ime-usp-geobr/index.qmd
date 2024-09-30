@@ -14,6 +14,10 @@ links:
   icon_pack: far
   name: Slides
   url: https://beatrizmilz.github.io/2024-09-amostra-geobr/
+- icon: cloud
+  icon_pack: far
+  name: Posit Cloud
+  url: https://posit.cloud/content/8878692   
 location: IME-USP / São Paulo
 title: "Conhecendo o pacote geobr"
 image: featured.png
