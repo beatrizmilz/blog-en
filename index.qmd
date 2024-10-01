@@ -9,7 +9,7 @@ listing:
     #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 3
+    page-size: 6
   - id: posts
     contents: "posts/*/pt/index.qmd"
     type: grid
@@ -18,7 +18,7 @@ listing:
     #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 3
+    page-size: 6
   # - id: research
   #   contents: "{research}/{pt,es,en}/*/index.qmd"
   #   type: grid
@@ -68,12 +68,14 @@ about:
 
 ## Textos/Posts
 
+[Veja todos os textos aqui! / See all posts here!](posts/index.qmd)
+
 ::: {#posts}
 :::
 
 ## Apresentações/Presentations
 
-[Veja todas as apresentações aqui! / See all talks here!](/talks/index.html)
+[Veja todas as apresentações aqui! / See all talks here!](content.qmd)
 
 ::: {#talks}
 :::

@@ -51,10 +51,8 @@ website:
             href: posts/pt.qmd
           - text: Español
             href: posts/es.qmd
-      - text: Teaching
-        href: teaching/index.qmd
-      - text: Talks
-        href: talks/index.qmd
+      - text: Talks and teaching
+        href: content.qmd
       - text: Other
         menu:
           # - text: Research (PT-BR)

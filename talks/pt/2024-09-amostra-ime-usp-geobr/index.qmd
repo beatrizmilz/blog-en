@@ -1,6 +1,6 @@
 ---
 toc: true
-author: Beatriz Milz e Tereza Lacerda
+author: Beatriz Milz
 categories: Mini-curso
 date: '2024-09-30'
 event: aMostra de Estatística IME USP
@@ -17,7 +17,16 @@ links:
 - icon: cloud
   icon_pack: far
   name: Posit Cloud
-  url: https://posit.cloud/content/8878692   
+  url: https://posit.cloud/content/8878692 
+- icon: file
+  icon_pack: far
+  name: Scripts
+  url: https://github.com/beatrizmilz/2024-09-amostra-geobr/blob/main/script.R
+- icon: youtube
+  icon_pack: fab
+  name: Transmissão no Youtube
+  url: https://www.youtube.com/watch?v=RdvOecpiSy8   
+  
 location: IME-USP / São Paulo
 title: "Conhecendo o pacote geobr"
 image: featured.png

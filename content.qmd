@@ -1,0 +1,25 @@
+---
+title: "Content"
+listing:
+  - id: content
+    contents: "{talks,teaching}/{pt,es,en}/*/index.qmd"
+    type: grid
+    fields: [image, date, title, subtitle]
+    sort: "date desc"
+    categories: false
+    sort-ui: true
+    filter-ui: true
+    page-size: 100     
+
+page-layout: full
+title-block-banner: false
+comments: false
+toc: false
+---
+
+Presentations, workshops, and other content.
+
+For invitations, please email me at: milz.bea@gmail.com
+
+::: {#content}
+:::
