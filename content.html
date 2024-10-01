@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Beatriz Milz</title>
+<title>Content – Beatriz Milz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,6 +35,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -74,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks .list');
+    const listingTargetEl = window.document.querySelector('#listing-content .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -82,42 +83,12 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 6,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks'] = new List('listing-talks', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 6,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts'] = new List('listing-posts', options);
+    window['quarto-listings']['listing-content'] = new List('listing-content', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -233,7 +204,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./content.html"> 
+    <a class="nav-link active" href="./content.html" aria-current="page"> 
 <span class="menu-text">Talks and teaching</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -269,1121 +240,52 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-marquee column-page">
-  <div class="about-image-container">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Beatriz Milz</h1>
+<h1 class="title">Content</h1>
 </div>
+
+
+
 <div class="quarto-title-meta column-page">
+
+    
+  
+    
   </div>
-</header> <main class="content column-page" id="quarto-document-content">
-<!-- ::: {#hero-heading} -->
-<!-- **Português:** Boas vindas à minha página pessoal! Aqui você pode encontrar meus textos do blog, palestras e outros projetos em que estou trabalhando. -->
-<!-- **English:** Welcome to my website! You can find here my blog posts, talks, and other projects I'm working on. -->
-<!-- ::: -->
-<!-- ------------------------------------------------------------------------ -->
-<section id="textosposts" class="level2">
-<h2 data-anchor-id="textosposts">Textos/Posts</h2>
-<p><a href="./posts/index.html">Veja todos os textos aqui! / See all posts here!</a></p>
-<div id="listing-posts" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="GitHub,Carreira,Dicas" data-listing-date-sort="1727049600000" data-listing-file-modified-sort="1727781196002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1002">
-<a href="./posts/2024-09-23-repost-stars/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2024-09-23-repost-stars/pt/images/stars.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Repost: GitHub Stars brasileiros dão dicas sobre como iniciar uma carreira em programação
-</h5>
-<div class="listing-reading-time card-text text-muted">
-6 minutos
+  
+
+
+</header>
+
+
+<p>Presentations, workshops, and other content.</p>
+<p>For invitations, please email me at: milz.bea@gmail.com</p>
+<div id="listing-content" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-content-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-content'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Ordenar por</option>
+       <option value="index" data-direction="asc">Pré-selecionado</option>
+         <option value="listing-title" data-direction="asc">
+          Título
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Data - Mais velho
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Data - O mais novo
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filtro">
+    </div>
 </div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
-GitHub
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Carreira'); return false;">
-Carreira
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Dicas'); return false;">
-Dicas
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Redação IMasters
-</div>
-<div class="listing-date">
-23 de set. de 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="EDA,Visualização de dados,ggplot2" data-listing-date-sort="1721865600000" data-listing-file-modified-sort="1727781195988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2197">
-<a href="./posts/2024-07-25-leituras-1sem/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2024-07-25-leituras-1sem/pt/images/mosaico_capas.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Minhas leituras do primeiro semestre de 2024
-</h5>
-<div class="card-subtitle listing-subtitle">
-Uma análise exploratória de dados
-</div>
-<div class="listing-reading-time card-text text-muted">
-11 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('EDA'); return false;">
-EDA
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Visualização de dados'); return false;">
-Visualização de dados
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-25 de jul. de 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Tutorial,Visualização de dados,ggplot2,IBGE" data-listing-date-sort="1713657600000" data-listing-file-modified-sort="1727781195974" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2602">
-<a href="./posts/2024-04-21-piramide-ggplot2/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2024-04-21-piramide-ggplot2/pt/images/piramide-criada.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Tutorial: Criando uma pirâmide etária com dados do Censo 2022, usando o R e o pacote ggplot2
-</h5>
-<div class="listing-reading-time card-text text-muted">
-14 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
-Tutorial
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Visualização de dados'); return false;">
-Visualização de dados
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('IBGE'); return false;">
-IBGE
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-21 de abr. de 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Events,Environmental Data Science,Ciências Ambientais,Ciência de Dados Ambientais" data-listing-date-sort="1707782400000" data-listing-file-modified-sort="1727781195967" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1315">
-<a href="./posts/2024-02-13-eds-summit-pt-1/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2024-02-13-eds-summit-pt-1/pt/images/lugar-evento.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-🇧🇷 Por que era importante para mim participar de um evento sobre Ciência de Dados Ambientais?
-</h5>
-<div class="card-subtitle listing-subtitle">
-Série: Relato da participação no evento <em>Environmental Data Science Summit</em> - Parte 1
-</div>
-<div class="listing-reading-time card-text text-muted">
-7 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
-Events
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Environmental Data Science'); return false;">
-Environmental Data Science
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ciências Ambientais'); return false;">
-Ciências Ambientais
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Ciência de Dados Ambientais'); return false;">
-Ciência de Dados Ambientais
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-13 de fev. de 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Tutorial" data-listing-date-sort="1663027200000" data-listing-file-modified-sort="1727781195913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2102">
-<a href="./posts/2022-09-13-nao-guarde-senhas-no-script/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2022-09-13-nao-guarde-senhas-no-script/pt/logo-featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Como usar senhas sem escreve-las nos scripts
-</h5>
-<div class="card-subtitle listing-subtitle">
-Usando senhas, tokens e keys no código em R de forma segura.
-</div>
-<div class="listing-reading-time card-text text-muted">
-11 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
-Tutorial
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-13 de set. de 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="Community,RStudio,Events" data-listing-date-sort="1660262400000" data-listing-file-modified-sort="1727781195912" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2990">
-<a href="./posts/2022-08-12-rstudio-conf/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2022-08-12-rstudio-conf/pt/img/lunch-with-hadley.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Impressões pessoais da rstudio::conf(2022)
-</h5>
-<div class="card-subtitle listing-subtitle">
-Nesse post, apresentamos nossas impressões pessoais sobre o evento que aconteceu em Washington DC!
-</div>
-<div class="listing-reading-time card-text text-muted">
-15 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Community'); return false;">
-Community
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
-RStudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
-Events
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Julio Trecenti, Flavia E. Rius, Beatriz Milz
-</div>
-<div class="listing-date">
-12 de ago. de 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="Tutorial,Teaching,Datasets,Data import" data-listing-date-sort="1654905600000" data-listing-file-modified-sort="1727781195904" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="582">
-<a href="./posts/2022-06-11-bases-de-dados/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2022-06-11-bases-de-dados/pt/welcome_to_rstats.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Bases de dados: para praticar e ensinar
-</h5>
-<div class="card-subtitle listing-subtitle">
-Quer saber como acessar várias bases de dados com R? Imagem: por Allison Horst.
-</div>
-<div class="listing-reading-time card-text text-muted">
-3 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
-Tutorial
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
-Teaching
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Datasets'); return false;">
-Datasets
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data import'); return false;">
-Data import
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz, Tereza Lacerda
-</div>
-<div class="listing-date">
-11 de jun. de 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="Tutorial,Teaching,Datasets,Data import,R Packages" data-listing-date-sort="1649203200000" data-listing-file-modified-sort="1727781195882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="665">
-<a href="./posts/2022-04-06-pacote-dados/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2022-04-06-pacote-dados/pt/dados-hex-featured.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Pacote dados: bases em português para praticar e ensinar
-</h5>
-<div class="card-subtitle listing-subtitle">
-Quer saber como acessar várias bases de dados em Português com R? Post publicado no blog da Curso-R.
-</div>
-<div class="listing-reading-time card-text text-muted">
-4 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
-Tutorial
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
-Teaching
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Datasets'); return false;">
-Datasets
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data import'); return false;">
-Data import
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R Packages'); return false;">
-R Packages
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-6 de abr. de 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="API,One Drive,Data import,Excel,Microsoft,Azure,Microsoft365R" data-listing-date-sort="1647561600000" data-listing-file-modified-sort="1727781195882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1226">
-<a href="./posts/2022-03-18-onedrive/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2022-03-18-onedrive/pt/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Acessando dados do seu One Drive com R
-</h5>
-<div class="card-subtitle listing-subtitle">
-Post publicado no blog da Curso-R.
-</div>
-<div class="listing-reading-time card-text text-muted">
-7 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('API'); return false;">
-API
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('One Drive'); return false;">
-One Drive
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data import'); return false;">
-Data import
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Excel'); return false;">
-Excel
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Microsoft'); return false;">
-Microsoft
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Azure'); return false;">
-Azure
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Microsoft365R'); return false;">
-Microsoft365R
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-18 de mar. de 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="API,Google,Data import,Google Sheets" data-listing-date-sort="1646697600000" data-listing-file-modified-sort="1727781195876" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1527">
-<a href="./posts/2022-03-08-googlesheets4/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2022-03-08-googlesheets4/pt/featured-hex.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Acessando dados do Google Sheets com R
-</h5>
-<div class="card-subtitle listing-subtitle">
-Post publicado no blog da Curso-R.
-</div>
-<div class="listing-reading-time card-text text-muted">
-8 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('API'); return false;">
-API
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Google'); return false;">
-Google
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data import'); return false;">
-Data import
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Google Sheets'); return false;">
-Google Sheets
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-8 de mar. de 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="API,purrr,httr,Web Scraping,Git,GitHub" data-listing-date-sort="1645228800000" data-listing-file-modified-sort="1727781195861" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1132">
-<a href="./posts/2022-02-19-api-github-1/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2022-02-19-api-github-1/pt/octocat-featured.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Acessando APIs com R: GitHub - Parte 1
-</h5>
-<div class="card-subtitle listing-subtitle">
-Segundo post sobre acesso à APIs.
-</div>
-<div class="listing-reading-time card-text text-muted">
-6 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('API'); return false;">
-API
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('purrr'); return false;">
-purrr
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('httr'); return false;">
-httr
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Web Scraping'); return false;">
-Web Scraping
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Git'); return false;">
-Git
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
-GitHub
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-19 de fev. de 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="API,purrr,httr,Web Scraping" data-listing-date-sort="1638144000000" data-listing-file-modified-sort="1727781195861" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="799">
-<a href="./posts/2021-11-29-api-pokemon/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2021-11-29-api-pokemon/pt/API-drake-featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Acessando APIs com R: Exemplos com a PokéAPI!
-</h5>
-<div class="card-subtitle listing-subtitle">
-Primeiro post sobre acesso à APIs usando R.
-</div>
-<div class="listing-reading-time card-text text-muted">
-4 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('API'); return false;">
-API
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('purrr'); return false;">
-purrr
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('httr'); return false;">
-httr
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Web Scraping'); return false;">
-Web Scraping
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz, Julio Trecenti
-</div>
-<div class="listing-date">
-29 de nov. de 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="R" data-listing-date-sort="1625270400000" data-listing-file-modified-sort="1727781195856" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3190">
-<a href="./posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html" class="quarto-grid-link">
-</a><div class="quarto-grid-item card h-100 card-left"><a href="./posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html" class="quarto-grid-link">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2021-07-01-pixar-uma-historia-de-dados/pt/hex-featured.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-</a><div class="card-body post-contents"><a href="./posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html" class="quarto-grid-link">
-<h5 class="no-anchor card-title listing-title">
-Pixar: Uma História de dados
-</h5>
-</a><div class="card-subtitle listing-subtitle"><a href="./posts/2021-07-01-pixar-uma-historia-de-dados/pt/index.html" class="quarto-grid-link">
-Post publicado no blog da </a><a href="https://escoladedados.org/2021/07/pixar-uma-historia-de-dados/">Escola de Dados</a>
-</div>
-<div class="listing-reading-time card-text text-muted">
-16 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Fernando Barbalho, Emmanuelle Nunes, Beatriz Milz
-</div>
-<div class="listing-date">
-3 de jul. de 2021
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="g-col-1" data-index="13" data-categories="Tutorial,Web Scraping,Data cleaning,purrr,rvest" data-listing-date-sort="1621814400000" data-listing-file-modified-sort="1727781195852" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2174">
-<a href="./posts/2021-05-24-naruto/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2021-05-24-naruto/pt/featured-photo.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Buscando informações na Wikipédia: Lista de episódios de Naruto Shippuden
-</h5>
-<div class="card-subtitle listing-subtitle">
-Post publicado no blog da Curso-R.
-</div>
-<div class="listing-reading-time card-text text-muted">
-11 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Tutorial'); return false;">
-Tutorial
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Web Scraping'); return false;">
-Web Scraping
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data cleaning'); return false;">
-Data cleaning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('purrr'); return false;">
-purrr
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('rvest'); return false;">
-rvest
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-24 de mai. de 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="14" data-categories="RStudio,R,Pipe" data-listing-date-sort="1621296000000" data-listing-file-modified-sort="1727781195852" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="800">
-<a href="./posts/2021-05-18-experimentando-o-r-410/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2021-05-18-experimentando-o-r-410/pt/featured-photo.svg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Experimentando o R 4.1.0
-</h5>
-<div class="card-subtitle listing-subtitle">
-Primeiras impressões ao usar o nova versão do R
-</div>
-<div class="listing-reading-time card-text text-muted">
-4 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
-RStudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Pipe'); return false;">
-Pipe
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-18 de mai. de 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="15" data-categories="R,Debug" data-listing-date-sort="1616976000000" data-listing-file-modified-sort="1727781195851" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1664">
-<a href="./posts/2021-03-29-desvendando-erros/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2021-03-29-desvendando-erros/pt/featured-photo.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Desvendando erros: Entendendo mensagens de erro comuns em R
-</h5>
-<div class="card-subtitle listing-subtitle">
-Post publicado no blog da Curso-R. Esse post tem como objetivo listar alguns erros comuns quando programamos em R, e dicas de como resolvê-los!
-</div>
-<div class="listing-reading-time card-text text-muted">
-9 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Debug'); return false;">
-Debug
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz e Fernando Corrêa
-</div>
-<div class="listing-date">
-29 de mar. de 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="16" data-listing-date-sort="1615766400000" data-listing-file-modified-sort="1727781195851" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="980">
-<a href="./posts/2021-03-15-dicas-03-relatorio/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2021-03-15-dicas-03-relatorio/pt/featured-photo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dicas para elaborar relatórios em R
-</h5>
-<div class="card-subtitle listing-subtitle">
-No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de relatórios em R.
-</div>
-<div class="listing-reading-time card-text text-muted">
-5 minutos
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-</div>
-<div class="listing-date">
-15 de mar. de 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="17" data-categories="Studying,Research" data-listing-date-sort="1615075200000" data-listing-file-modified-sort="1727781195844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1755">
-<a href="./posts/2021-03-07-estudando-bibliometrix/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2021-03-07-estudando-bibliometrix/pt/featured-photo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Conhecendo o pacote bibliometrix
-</h5>
-<div class="card-subtitle listing-subtitle">
-Primeiras impressões utilizando o pacote <code>{bibliometrix}</code>
-</div>
-<div class="listing-reading-time card-text text-muted">
-9 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Studying'); return false;">
-Studying
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
-Research
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-7 de mar. de 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="18" data-categories="Teaching,RStudio,Communities" data-listing-date-sort="1614643200000" data-listing-file-modified-sort="1727781195730" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1738">
-<a href="./posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2021-03-02-rstudio-tidyverse-instructor-certification/pt/featured-photo.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Treinamento de instrutora e certificação da RStudio
-</h5>
-<div class="card-subtitle listing-subtitle">
-Este post relata como foi o processo pra mim de realizar a certificação da RStudio: RStudio Instructor Training and Certification.
-</div>
-<div class="listing-reading-time card-text text-muted">
-9 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
-Teaching
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
-RStudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-2 de mar. de 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="19" data-categories="Tips,ggplot2,tidyverse" data-listing-date-sort="1608163200000" data-listing-file-modified-sort="1727781195727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1090">
-<a href="./posts/2020-12-17-dicas-02-graficos/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2020-12-17-dicas-02-graficos/pt/featured-photo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dicas para elaborar gráficos em R
-</h5>
-<div class="card-subtitle listing-subtitle">
-No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de gráficos em relatórios.
-</div>
-<div class="listing-reading-time card-text text-muted">
-6 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Tips'); return false;">
-Tips
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('tidyverse'); return false;">
-tidyverse
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-</div>
-<div class="listing-date">
-17 de dez. de 2020
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="20" data-categories="Tips,Tables" data-listing-date-sort="1606953600000" data-listing-file-modified-sort="1727781195698" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="837">
-<a href="./posts/2020-12-03-dicas-01-tabelas/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2020-12-03-dicas-01-tabelas/pt/featured-photo.gif" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dicas para elaborar tabelas em R
-</h5>
-<div class="card-subtitle listing-subtitle">
-No blog da Curso-R, colaborei com três posts que apresentam dicas para fazer tabelas, gráficos e relatórios em R. Neste post, comentamos algumas dicas sobre elaboração de tabelas em relatórios.
-</div>
-<div class="listing-reading-time card-text text-muted">
-5 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Tips'); return false;">
-Tips
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Tables'); return false;">
-Tables
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-</div>
-<div class="listing-date">
-3 de dez. de 2020
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="21" data-categories="Reproducibility,Maps" data-listing-date-sort="1595808000000" data-listing-file-modified-sort="1727781195692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3303">
-<a href="./posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2020-07-27-criando-mapas-com-os-pacotes-tidyverse-e-geobr/pt/featured.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Criando mapas com os pacotes tidyverse e geobr
-</h5>
-<div class="card-subtitle listing-subtitle">
-Utilizando dados sobre coleta e tratamento de esgoto no Estado De São Paulo
-</div>
-<div class="listing-reading-time card-text text-muted">
-17 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Reproducibility'); return false;">
-Reproducibility
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Maps'); return false;">
-Maps
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-27 de jul. de 2020
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="22" data-categories="Teaching,Communities,The Carpentries" data-listing-date-sort="1582329600000" data-listing-file-modified-sort="1727781195687" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1609">
-<a href="./posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2020-02-22-the-carpentries-como-fazer-o-treinamento-de-instrutora/pt/mapa.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-The Carpentries: Como fazer o treinamento de instrutora?
-</h5>
-<div class="listing-reading-time card-text text-muted">
-9 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Teaching'); return false;">
-Teaching
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('The Carpentries'); return false;">
-The Carpentries
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-22 de fev. de 2020
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="23" data-categories="R-Ladies,Communities" data-listing-date-sort="1567209600000" data-listing-file-modified-sort="1727781195686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1152">
-<a href="./posts/2019-08-31-um-ano-aprendendo-r/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2019-08-31-um-ano-aprendendo-r/pt/featured-photo.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Um ano aprendendo R!
-</h5>
-<div class="card-subtitle listing-subtitle">
-Um relato deste um ano aprendendo R!
-</div>
-<div class="listing-reading-time card-text text-muted">
-6 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
-R-Ladies
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-31 de ago. de 2019
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="24" data-categories="Shiny" data-listing-date-sort="1566345600000" data-listing-file-modified-sort="1727781195685" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="677">
-<a href="./posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2019-08-21-desenvolvendo-meu-primeiro-shiny-app/pt/featured-photo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Desenvolvendo meu primeiro Shiny App
-</h5>
-<div class="card-subtitle listing-subtitle">
-O objetivo deste post é compartilhar um pouco sobre a minha experiência no desenvolvimento do meu primeiro Shiny App.
-</div>
-<div class="listing-reading-time card-text text-muted">
-4 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Shiny'); return false;">
-Shiny
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-21 de ago. de 2019
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="25" data-categories="Events,Communities,tidyverse,RStudio,R Packages" data-listing-date-sort="1565568000000" data-listing-file-modified-sort="1727781195685" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1101">
-<a href="./posts/2019-08-12-tidydevday/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Tidyverse developer day 2019 (tidy-dev-day)
-</h5>
-<div class="card-subtitle listing-subtitle">
-Este post tem como objetivo relatar a experiência de participar do Tidyverse Developer Day 2019.
-</div>
-<div class="listing-reading-time card-text text-muted">
-6 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Events'); return false;">
-Events
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('tidyverse'); return false;">
-tidyverse
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
-RStudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R Packages'); return false;">
-R Packages
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz, Angélica Custódio
-</div>
-<div class="listing-date">
-12 de ago. de 2019
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="26" data-categories="R-Ladies,RMarkdown" data-listing-date-sort="1561334400000" data-listing-file-modified-sort="1727781195684" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
-<a href="./posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2019-06-24-compartilhando-contedo-utilizando-r/pt/featured-photo.gif" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Compartilhando conteúdo
-</h5>
-<div class="card-subtitle listing-subtitle">
-Como compartilhar conteúdo sobre R, utilizando R?
-</div>
-<div class="listing-reading-time card-text text-muted">
-3 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
-R-Ladies
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RMarkdown'); return false;">
-RMarkdown
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-24 de jun. de 2019
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="27" data-categories="Communities,R-Ladies" data-listing-date-sort="1548720000000" data-listing-file-modified-sort="1727781195684" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="825">
-<a href="./posts/2019-01-29-meio-ano-r/pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" data-src="./posts/2019-01-29-meio-ano-r/pt/featured-photo.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Meio ano de aprendizagem de R!
-</h5>
-<div class="card-subtitle listing-subtitle">
-Neste texto, gostaria de compartilhar um pouco sobre os primeiros seis meses de aprendizagem em programação, principalmente na linguagem R.
-</div>
-<div class="listing-reading-time card-text text-muted">
-5 minutos
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Communities'); return false;">
-Communities
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R-Ladies'); return false;">
-R-Ladies
-</div>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-date">
-29 de jan. de 2019
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-Nenhum item correspondente
-</div>
-<nav id="posts-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
-</div>
-</section>
-<section id="apresentaçõespresentations" class="level2">
-<h2 data-anchor-id="apresentaçõespresentations">Apresentações/Presentations</h2>
-<p><a href="./content.html">Veja todas as apresentações aqui! / See all talks here!</a></p>
-<div id="listing-talks" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-categories="Mini-curso" data-listing-date-sort="1727654400000" data-listing-file-modified-sort="1727781196369" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
 <a href="./talks/pt/2024-09-amostra-ime-usp-geobr/index.html" class="quarto-grid-link">
@@ -1512,7 +414,7 @@ Funções: <code>filter()</code>, <code>arrange()</code>, <code>distinct()</code
 <a href="./talks/en/2024-05-rladies-melbourne/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2024-05-rladies-melbourne/featured.webp" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2024-05-rladies-melbourne/featured.webp" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1531,7 +433,7 @@ Actions to increase diversity in the R-Ladies community - São Paulo
 <a href="./talks/pt/2024-04-podcast-freecodecamp/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2024-04-podcast-freecodecamp/featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2024-04-podcast-freecodecamp/featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1550,7 +452,7 @@ Linguagem R e Ciência Aberta
 <a href="./teaching/pt/cursor-visualizacao/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/cursor-visualizacao/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/cursor-visualizacao/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1569,7 +471,7 @@ Visualização de dados
 <a href="./talks/pt/2024-03-open-data-day/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2024-03-open-data-day/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2024-03-open-data-day/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1588,7 +490,7 @@ O que são dados abertos? O que é o Open Data Day?
 <a href="./teaching/pt/cursor-r4ds-1/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/cursor-r4ds-1/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/cursor-r4ds-1/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1607,7 +509,7 @@ R para Ciência de Dados I
 <a href="./teaching/pt/2024-01-verao-ime-usp-relatorios/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/2024-01-verao-ime-usp-relatorios/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/2024-01-verao-ime-usp-relatorios/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1626,7 +528,7 @@ Relatórios reprodutíveis com R
 <a href="./talks/pt/2024-01-github-projects/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2024-01-github-projects/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2024-01-github-projects/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1645,7 +547,7 @@ Conhecendo o GitHub Projects
 <a href="./talks/pt/2023-12-dados-espaciais/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2023-12-dados-espaciais/featured-sf.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2023-12-dados-espaciais/featured-sf.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1664,7 +566,7 @@ Trabalhando com dados espaciais no R
 <a href="./teaching/pt/2023-11-cebrap-lab-text-as-data/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/2023-11-cebrap-lab-text-as-data/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/2023-11-cebrap-lab-text-as-data/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1683,7 +585,7 @@ Análise quantitativa de texto
 <a href="./talks/en/2023-11-rday-colombia-purrr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2023-11-rday-colombia-purrr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2023-11-rday-colombia-purrr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1702,7 +604,7 @@ Purrr-fecting your R workflow - An introduction to functional programming
 <a href="./talks/pt/2023-11-pacotes-br-geobr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2023-11-pacotes-br-geobr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2023-11-pacotes-br-geobr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1721,7 +623,7 @@ Conhecendo o pacote geobr
 <a href="./talks/pt/2023-11-pacotes-br-r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2023-11-pacotes-br-r/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2023-11-pacotes-br-r/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1740,7 +642,7 @@ Pacotes em R de dados brasileiros
 <a href="./teaching/pt/cursor-relatorios/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/cursor-relatorios/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/cursor-relatorios/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1759,7 +661,7 @@ Relatórios e apresentações
 <a href="./talks/pt/2023-10-apresentar-resultados-linda/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2023-10-apresentar-resultados-linda/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2023-10-apresentar-resultados-linda/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1778,7 +680,7 @@ Apresentando os resultados com R
 <a href="./talks/pt/2023-09-amostra-ime-usp-organizacao/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2023-09-amostra-ime-usp-organizacao/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2023-09-amostra-ime-usp-organizacao/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1797,7 +699,7 @@ Indo além na organização de dados usando o R com tidyverse
 <a href="./teaching/pt/2023-06-cebrap-lab-viz-R/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/2023-06-cebrap-lab-viz-R/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/2023-06-cebrap-lab-viz-R/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1816,7 +718,7 @@ Visualização de dados no R
 <a href="./teaching/pt/2023-06-cebrap-lab-intro-R/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/2023-06-cebrap-lab-intro-R/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/2023-06-cebrap-lab-intro-R/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1835,7 +737,7 @@ Introdução ao R
 <a href="./talks/pt/2023-05-apresentar-resultados/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2023-05-apresentar-resultados/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2023-05-apresentar-resultados/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1854,7 +756,7 @@ Apresentação de resultados no R
 <a href="./talks/pt/2023-04-rladies-gyn-purrr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2023-04-rladies-gyn-purrr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2023-04-rladies-gyn-purrr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1873,7 +775,7 @@ Introdução ao pacote purrr
 <a href="./talks/pt/2023-04-cervejacomdados-fortaleza/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2023-04-cervejacomdados-fortaleza/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2023-04-cervejacomdados-fortaleza/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1895,7 +797,7 @@ Um exemplo com dados de barragens de mineração
 <a href="./teaching/pt/2023-01-verao-ime-usp-relatorios/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/2023-01-verao-ime-usp-relatorios/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/2023-01-verao-ime-usp-relatorios/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1914,7 +816,7 @@ Relatórios reprodutíveis com R
 <a href="./talks/pt/2022-amostra-ime-usp-quarto/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2022-amostra-ime-usp-quarto/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2022-amostra-ime-usp-quarto/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1933,7 +835,7 @@ Conhecendo o Quarto: a nova geração do RMarkdown
 <a href="./teaching/pt/cursor-pacotes/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/cursor-pacotes/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/cursor-pacotes/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1952,7 +854,7 @@ Pacotes em R
 <a href="./talks/en/2022-gha-rladies-abuja/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2022-gha-rladies-abuja/featured.webp" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2022-gha-rladies-abuja/featured.webp" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1971,7 +873,7 @@ Running code while we’re sleeping - Introduction to GitHub Actions for R users
 <a href="./talks/pt/2022-cblimnologia/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2022-cblimnologia/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2022-cblimnologia/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1990,7 +892,7 @@ Indo além na organização de dados usando o R com tidyverse
 <a href="./talks/es/2022-latinr-translaton/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/es/2022-latinr-translaton/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/es/2022-latinr-translaton/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2009,7 +911,7 @@ R translatón/Hackaton de tradução do R
 <a href="./talks/pt/2022-latinr-quarto-tutorial/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2022-latinr-quarto-tutorial/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2022-latinr-quarto-tutorial/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2028,7 +930,7 @@ Comunicando seus resultados: Criando apresentações com Quarto
 <a href="./talks/en/2022-rstudio-conf/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2022-rstudio-conf/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2022-rstudio-conf/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2050,7 +952,7 @@ rstudio::conf(2022)
 <a href="./talks/en/2022-interview-reproducible-research-scout/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2022-interview-reproducible-research-scout/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2022-interview-reproducible-research-scout/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2069,7 +971,7 @@ Interview for the Reproducible Research Scout Youtube Channel
 <a href="./talks/pt/2022-ser-uff/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2022-ser-uff/rstudio-quarto-project-created-featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2022-ser-uff/rstudio-quarto-project-created-featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2088,7 +990,7 @@ Quarto - Conhecendo a evolução do R Markdown
 <a href="./talks/pt/2022-rmarkdown-bost/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2022-rmarkdown-bost/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2022-rmarkdown-bost/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2107,7 +1009,7 @@ Documentos dinâmicos em RMarkdown
 <a href="./talks/pt/2022-texto-e-codigo-geeq/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2022-texto-e-codigo-geeq/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2022-texto-e-codigo-geeq/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2126,7 +1028,7 @@ Texto e código - Escrevendo documentos Científicos com R
 <a href="./teaching/pt/2022-05-cebrap-lab-intro-R/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/2022-05-cebrap-lab-intro-R/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/2022-05-cebrap-lab-intro-R/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2145,7 +1047,7 @@ Introdução ao R
 <a href="./teaching/pt/2022-01-verao-ime-usp-relatorios/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./teaching/pt/2022-01-verao-ime-usp-relatorios/featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./teaching/pt/2022-01-verao-ime-usp-relatorios/featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2164,7 +1066,7 @@ Relatórios reprodutíveis com R
 <a href="./talks/pt/2021-git-github-ence/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-git-github-ence/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-git-github-ence/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2183,7 +1085,7 @@ Introdução à utilização do Git e GitHub no RStudio
 <a href="./talks/en/2021-learnr-latinr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2021-learnr-latinr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2021-learnr-latinr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2205,7 +1107,7 @@ LatinR 2021
 <a href="./talks/pt/2021-learnr-latinr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-learnr-latinr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-learnr-latinr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2224,7 +1126,7 @@ Scaling feedback using learnr and gradethis in a introductory R course
 <a href="./talks/pt/2021-intro-R-senacamb/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-intro-R-senacamb/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-intro-R-senacamb/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2243,7 +1145,7 @@ Linguagem R para Cientistas Ambientais
 <a href="./talks/pt/2021-rmarkdown-ai-inclusive/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-rmarkdown-ai-inclusive/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-rmarkdown-ai-inclusive/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2265,7 +1167,7 @@ Conhecendo o R Markdown
 <a href="./talks/pt/2021-colaborando-com-a-comunidade-hacktoberfest-curso-r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-colaborando-com-a-comunidade-hacktoberfest-curso-r/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-colaborando-com-a-comunidade-hacktoberfest-curso-r/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2284,7 +1186,7 @@ Colaborando com a Comunidade - Especial Hacktoberfest
 <a href="./talks/pt/2021-python-brasil/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-python-brasil/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-python-brasil/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2306,7 +1208,7 @@ Introdução ao uso de Python e R no RStudio com o pacote reticulate
 <a href="./talks/pt/2021-ufv-R/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-ufv-R/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-ufv-R/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2325,7 +1227,7 @@ Como aprender R tem sido importante na minha trajetória como Gestora Ambiental
 <a href="./talks/pt/2021-github-actions-gyn/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-github-actions-gyn/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-github-actions-gyn/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2344,7 +1246,7 @@ Introdução ao GitHub Actions
 <a href="./talks/pt/2021-git-e-github-gyn/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-git-e-github-gyn/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-git-e-github-gyn/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2363,7 +1265,7 @@ Introdução à utilização do Git e GitHub no RStudio
 <a href="./talks/pt/2021-3rday-xaringan/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-3rday-xaringan/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-3rday-xaringan/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2385,7 +1287,7 @@ Conhecendo o pacote xaringan
 <a href="./talks/pt/2021-jornalismo-com-r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-jornalismo-com-r/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-jornalismo-com-r/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2404,7 +1306,7 @@ Jornalismo com R
 <a href="./talks/pt/2021-learnr-pet-ufpr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-learnr-pet-ufpr/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-learnr-pet-ufpr/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2426,7 +1328,7 @@ Conhecendo o pacote learnr
 <a href="./talks/pt/2021-blogdown-apero/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-blogdown-apero/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-blogdown-apero/featured.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2448,7 +1350,7 @@ Fazendo blogs com blogdown e R
 <a href="./talks/pt/2021-workflow-r4ds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-workflow-r4ds/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-workflow-r4ds/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2470,7 +1372,7 @@ Grupo de estudos - R-Ladies São Paulo
 <a href="./talks/pt/2021-ser-uff/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-ser-uff/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-ser-uff/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2492,7 +1394,7 @@ Exemplos com o Pacote Mananciais
 <a href="./talks/en/2021-experience-useR/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2021-experience-useR/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2021-experience-useR/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2514,7 +1416,7 @@ Meetup R-Ladies and useR 2021
 <a href="./talks/pt/2021-experiencia-useR/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2021-experiencia-useR/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2021-experiencia-useR/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2536,7 +1438,7 @@ Apresentado em Inglês
 <a href="./talks/pt/2020-python-brasil/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-python-brasil/featured_python_brasil.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-python-brasil/featured_python_brasil.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2555,7 +1457,7 @@ Ensino de programação - Como fazer parte da comunidade global The Carpentries?
 <a href="./talks/pt/2020-dplyr-joins-curso-r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-dplyr-joins-curso-r/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-dplyr-joins-curso-r/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2574,7 +1476,7 @@ dplyr joins - Juntando bases de dados
 <a href="./talks/pt/2020-xaringan-latinr/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-xaringan-latinr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-xaringan-latinr/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2596,7 +1498,7 @@ Aprenda a criar apresentações reprodutíveis
 <a href="./talks/pt/2020-hacktoberfest/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-hacktoberfest/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-hacktoberfest/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2618,7 +1520,7 @@ R-Ladies SP na Hacktoberfest
 <a href="./talks/pt/2020-rmarkdown-geocast/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-rmarkdown-geocast/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-rmarkdown-geocast/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2640,7 +1542,7 @@ Usando o R para comunicar seus resultados
 <a href="./talks/en/2020-RStudio-certification/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2020-RStudio-certification/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2020-RStudio-certification/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2662,7 +1564,7 @@ Teaching exam - RStudio
 <a href="./talks/pt/2020-RStudio-certification/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-RStudio-certification/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-RStudio-certification/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2684,7 +1586,7 @@ Apresentado em Inglês
 <a href="./talks/pt/2020-colaborando-com-a-comunidade-curso-r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-colaborando-com-a-comunidade-curso-r/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-colaborando-com-a-comunidade-curso-r/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2703,7 +1605,7 @@ Colaborando com a Comunidade
 <a href="./talks/pt/2020-git-e-github-gyn/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-git-e-github-gyn/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-git-e-github-gyn/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2722,7 +1624,7 @@ Git e GitHub no RStudio
 <a href="./talks/pt/2020-intro-R-Curitiba/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-intro-R-Curitiba/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-intro-R-Curitiba/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2741,7 +1643,7 @@ Introdução a Linguagem R
 <a href="./talks/pt/2020-user-latin-america/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-user-latin-america/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-user-latin-america/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2763,7 +1665,7 @@ R and Friends
 <a href="./talks/es/2020-funciones-r4ds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/es/2020-funciones-r4ds/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/es/2020-funciones-r4ds/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2785,7 +1687,7 @@ Grupo de Estudios para la Certificación de RStudio
 <a href="./talks/pt/2020-funciones-r4ds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-funciones-r4ds/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-funciones-r4ds/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2807,7 +1709,7 @@ Grupo de estudos para a RStudio Certification
 <a href="./talks/pt/2019-carpentries-satrday/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2019-carpentries-satrday/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2019-carpentries-satrday/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2826,7 +1728,7 @@ The Carpentries
 <a href="./talks/pt/2020-xaringan-ime-usp-amostra/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-xaringan-ime-usp-amostra/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-xaringan-ime-usp-amostra/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2845,7 +1747,7 @@ Apresentações no R ⚔ com xaringan
 <a href="./talks/pt/2019-git-github-saopaulo/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2019-git-github-saopaulo/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2019-git-github-saopaulo/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2864,7 +1766,7 @@ Primeiros passos utilizando o Git e GitHub no RStudio
 <a href="./talks/pt/2020-xaringan-ime-usp/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2020-xaringan-ime-usp/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2020-xaringan-ime-usp/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2883,7 +1785,7 @@ Introdução ao pacote xaringan - Criando apresentações com R
 <a href="./talks/pt/2019-vis-nerdzao/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2019-vis-nerdzao/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2019-vis-nerdzao/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2902,7 +1804,7 @@ Dashboards, gráficos, mapas - Possibilidades de visualização de dados com R
 <a href="./talks/en/2019-user-rladies-sp/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2019-user-rladies-sp/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2019-user-rladies-sp/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2924,7 +1826,7 @@ useR 2019
 <a href="./talks/pt/2019-user-rladies-sp/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2019-user-rladies-sp/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2019-user-rladies-sp/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2946,7 +1848,7 @@ Lightning Talk - Education &amp; community
 <a href="./talks/pt/2019-xaringan-ser-uff/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2019-xaringan-ser-uff/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2019-xaringan-ser-uff/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2965,7 +1867,7 @@ Comunicando seus resultados - criando apresentações com R
 <a href="./talks/en/2018-knitr-codata/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/en/2018-knitr-codata/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/en/2018-knitr-codata/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -2987,7 +1889,7 @@ CODATA-RDA School of Research Data Science
 <a href="./talks/pt/2018-knitr-codata/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2018-knitr-codata/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2018-knitr-codata/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -3006,7 +1908,7 @@ Producing Reports with knitr and R
 <a href="./talks/pt/2018-introducao-r-ufabc/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2018-introducao-r-ufabc/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2018-introducao-r-ufabc/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -3025,7 +1927,7 @@ Oficina de Introdução ao R
 <a href="./talks/pt/2018-xaringan-rladies-sp/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2018-xaringan-rladies-sp/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2018-xaringan-rladies-sp/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -3044,7 +1946,7 @@ Comunicando seus resultados - criando apresentações com R
 <a href="./talks/pt/2018-r-desafios-macroamb/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" data-src="./talks/pt/2018-r-desafios-macroamb/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./talks/pt/2018-r-desafios-macroamb/featured.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -3063,20 +1965,12 @@ R e Desafios no Projeto Temático - Oficina de Introdução ao R
 <div class="listing-no-matching d-none">
 Nenhum item correspondente
 </div>
-<nav id="talks-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
 </div>
-<!-- ## Pesquisa/Research -->
-<!-- ::: {#research} -->
-<!-- ::: -->
 
 
-</section>
-</main> 
-  </div>
-</div>
- <!-- /main -->
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -3097,6 +1991,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
