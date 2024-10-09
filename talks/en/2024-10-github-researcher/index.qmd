@@ -1,0 +1,26 @@
+---
+toc: true
+author: Beatriz Milz
+categories: ["GitHub", "Research", "English"]
+date: '2024-10-09'
+event: "Star2Star Presentations - GitHub Stars"
+event_url: https://stars.github.com/profiles/beatrizmilz/
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-10-github-researcher/slides.pdf
+location: Online
+title: "Using GitHub as a Researcher"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+<br>
