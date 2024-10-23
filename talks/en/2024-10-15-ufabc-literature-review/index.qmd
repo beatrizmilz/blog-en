@@ -1,0 +1,26 @@
+---
+toc: true
+author: Beatriz Milz
+categories: ["Methods","Metodology",  "English", "UFABC", "lesson"]
+date: '2024-10-09'
+event: "Methods and techniques in Territorial Planning and Management (PGT-605)"
+event_url:  http://propg.ufabc.edu.br/ppgpgt
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-10-15-ufabc-literature-review/slides.pdf
+location: "São Bernardo do Campo, SP, Brazil"
+title: "Literature review"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+<br>
