@@ -1,0 +1,38 @@
+---
+toc: true
+author: 
+  - Yanina Bellini Saibene
+  - Pedro Faria
+  - Beatriz Milz
+  - Francesca Belem Lopes Palmeira
+categories: Community Call
+date: '2024-11-05'
+event: "rOpenSci Community Call"
+event_url: https://ropensci.org/commcalls/translation-portuguese/
+links:
+- icon: file
+  icon_pack: far
+  name: Informações
+  url: https://ropensci.org/commcalls/translation-portuguese/
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/pt/2024-11-05-rOpenSci-traducao-pt/slides.pdf
+location: Online
+title: "A comunidade R fala português"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+A comunidade R está realizando vários esforços de traduções comunitárias para o português de diferentes recursos: livros, pacotes e guias.
+
+Nesta chamada da comunidade, três líderes da comunidade de língua portuguesa apresentarão suas experiências liderando e fazendo parte desses projetos e compartilharão como podemos participar desses esforços.
+
+Essa chamada da comunidade será seguida por uma reunião de tradução na LatinR, a conferência latino-americana de R para pesquisa e desenvolvimento, para aqueles que quiserem começar a participar.
+
