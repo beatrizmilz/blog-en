@@ -1,0 +1,36 @@
+---
+toc: true
+author: 
+  - Heather Turner 
+  - Beatriz Milz
+  - Pao Corrales
+  - gwynn gebeyhu
+  - Macarena Quiroga
+  - Patricia Loto
+  - Andrea Gomez Vargas
+  - Luis Darcy Verde Arregoitia
+  - Ricardo Villalba
+categories: ["R base", "Workshop", "Tradução", "ES", "PT", "EN"]
+date: '2024-11-18'
+event: "LatinR 2024"
+event_url: https://latinr.org/pt/cronograma/r-dev-day/rdevday-pt.html
+links:
+- icon: user-plus
+  icon_pack: fa
+  name: Inscrições
+  url: https://pretix.eu/r-contributors/r-dev-day-latinr2024/
+- icon: cicle-info
+  icon_pack: fa
+  name: Informações
+  url: https://latinr.org/pt/cronograma/r-dev-day/rdevday-pt.html
+location: Online
+title: "R Dev Day @ LatinR 2024"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```

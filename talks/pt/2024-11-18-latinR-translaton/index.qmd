@@ -1,0 +1,31 @@
+---
+toc: true
+author: 
+  - Yanina Bellini Saibene
+  - Beatriz Milz
+  - Pedro Faria
+  - Francesca Palmeira
+categories: ["Workshop", "Tradução", "PT", "rOpenSci"]
+date: '2024-11-18'
+event: "LatinR 2024"
+event_url: https://latinr.org/pt/cronograma/translaton/translaton-pt.html
+links:
+- icon: user-plus
+  icon_pack: fa
+  name: Inscrições
+  url: https://www.eventbrite.cl/e/traducao-hackathon-traslaton-ropensci-tickets-1045507530167
+- icon: cicle-info
+  icon_pack: fa
+  name: Informações
+  url: https://latinr.org/pt/cronograma/translaton/translaton-pt.html
+location: Online
+title: "Tradução + Hackathon = Traslaton rOpenSci"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
