@@ -13,6 +13,8 @@ website:
     right:
       - icon: envelope
         href: mailto:milz.bea@gmail.com
+      - text: "{{< iconify simple-icons bluesky >}}"
+        href: https://bsky.app/profile/beatrizmilz.bsky.social
       - icon: github
         href: https://github.com/beatrizmilz
       - icon: linkedin

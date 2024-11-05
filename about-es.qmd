@@ -11,6 +11,8 @@ about:
     - icon: github
       text: GitHub
       href: https://github.com/beatrizmilz
+    - text: "{{< iconify simple-icons bluesky >}} Bluesky"
+      href: https://bsky.app/profile/beatrizmilz.bsky.social      
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/beatrizmilz/  
