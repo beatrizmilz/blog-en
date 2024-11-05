@@ -9,7 +9,7 @@ listing:
     #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 6
+    page-size: 3
   - id: posts
     contents: "posts/*/pt/index.qmd"
     type: grid
