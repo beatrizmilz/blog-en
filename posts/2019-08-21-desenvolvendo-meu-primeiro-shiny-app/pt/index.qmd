@@ -39,7 +39,7 @@ Recomendo muito o curso, os professores são muito bons.
 ## Desenvolvimento
 
 Esse post é uma continuação do post [Ferramenta para Pesquisa de Periódicos](https://beatrizmilz.com/2019/07/04/pesquisa-periodicos/), onde descrevi o Shiny App que criei, mas agora o foco é relatar um pouco o processo de desenvolvimento.
-Todos os códigos estão disponíveis [neste repositório no Github](https://github.com/beatrizmilz/QualisCAPES).
+Todos os códigos estão disponíveis [neste repositório no GitHub](https://github.com/beatrizmilz/QualisCAPES).
 
 ```{r out.width="100%"}
 knitr::include_graphics("https://beatrizmilz.com/img/periodicos_exemplo.gif")

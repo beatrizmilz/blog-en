@@ -25,7 +25,7 @@ links:
 #   name: Slides
 #   url: 
 location: Online
-title: "Introducción a Github para Investigador(a|e)s"
+title: "Introducción a GitHub para Investigador(a|e)s"
 image: featured.jpg
 ---
 

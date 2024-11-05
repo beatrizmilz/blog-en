@@ -46,7 +46,7 @@ O evento aconteceu no mesmo espaço da [useR!2019](https://user2019.r-project.or
 
 Como o objetivo do evento é proporcionar um aprendizado sobre como contribuir com desenvolvimento e manutenção do tidyverse, estavam presentes diversos desenvolvedores e mantenedores do tidyverse, e também um time para ajudar os participantes, tirar dúvidas, etc.
 
-O material utilizado (instruções, apresentações, sugestões de material, etc) está disponível [neste repositório no Github](https://github.com/tidyverse/dev-day-2019).
+O material utilizado (instruções, apresentações, sugestões de material, etc) está disponível [neste repositório no GitHub](https://github.com/tidyverse/dev-day-2019).
 
 Em uma parede no fundo da sala, haviam diversos post-its que indicavam issues a serem trabalhadas, e estavam separadas por pacotes, e também por cor, onde a cor indicava o tipo de issue (documentação, bug, feature). Os participantes escolhiam uma issue para trabalhar durante o evento, até a realização de um pull request. Em outra parede, os post-its estavam separados em: post-its de pull requests para serem avaliados pelo [Hadley Wickham](http://hadley.nz/) e outros contribuidores, e os post-its que já tinham sido avaliados e aceitos!
 

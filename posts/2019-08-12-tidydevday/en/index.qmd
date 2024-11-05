@@ -58,7 +58,7 @@ The event had a [code of conduct](https://github.com/tidyverse/dev-day-%202019/b
 
 In the event, participants had the opportunity to learn how to contribute to the tidyverse. Several developers and maintainers of the tidyverse were present and with a team of helpers. They helped participants, answered questions, reviewed the contributions, and so on.
 
-The material used (instructions, presentations, suggested materials, etc.) is available [in this Github repository](https://github.com/tidyverse/dev-day-2019).
+The material used (instructions, presentations, suggested materials, etc.) is available [in this GitHub repository](https://github.com/tidyverse/dev-day-2019).
 
 On a wall of the room, several post-its indicated issues to be worked on, separated by packages and color. The color stated the type of issue (documentation, bug, feature).
 
