@@ -10,9 +10,9 @@ date: '2024-11-05'
 event: "rOpenSci Community Call"
 event_url: https://ropensci.org/commcalls/translation-portuguese/
 links:
-- icon: file
-  icon_pack: far
-  name: Informações
+- icon: user-plus
+  icon_pack: fa
+  name: Informações + Participe
   url: https://ropensci.org/commcalls/translation-portuguese/
 - icon: images
   icon_pack: far

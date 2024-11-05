@@ -95,7 +95,7 @@ read_yaml_talks_pt <- function(){
   }
 
   if(!is.null(yaml_atual$event_url)){
-    cat(paste0("<b>Link do evento:</b> <a href='", yaml_atual$event_url, "'>", yaml_atual$event_url, "</a><br>"))
+    cat(paste0("<b>Link:</b> <a href='", yaml_atual$event_url, "'>", yaml_atual$event_url, "</a><br>"))
   }
 
   if(!is.null(yaml_atual$location)){
