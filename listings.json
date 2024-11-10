@@ -133,11 +133,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/talks/en/2024-11-latinR-gugudadados/index.html",
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
       "/teaching/es/2024-11-18-latinR-GitHub/index.html",
-      "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
+      "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
       "/talks/pt/2024-10-sicam-intro-r/index.html",
       "/teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
@@ -270,19 +271,12 @@
     ]
   },
   {
-    "listing": "/talks/es/index.html",
-    "items": [
-      "/talks/es/2022-latinr-translaton/index.html",
-      "/talks/es/2020-funciones-r4ds/index.html"
-    ]
-  },
-  {
     "listing": "/talks/pt/index.html",
     "items": [
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
-      "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
+      "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/pt/2024-10-sicam-intro-r/index.html",
       "/talks/pt/2024-09-amostra-ime-usp-geobr/index.html",
       "/talks/pt/2024-07-apresentar-resultados/index.html",
@@ -347,8 +341,16 @@
     ]
   },
   {
+    "listing": "/talks/es/index.html",
+    "items": [
+      "/talks/es/2022-latinr-translaton/index.html",
+      "/talks/es/2020-funciones-r4ds/index.html"
+    ]
+  },
+  {
     "listing": "/talks/en/index.html",
     "items": [
+      "/talks/en/2024-11-latinR-gugudadados/index.html",
       "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
       "/talks/en/2024-10-15-ufabc-literature-review/index.html",
       "/talks/en/2024-10-github-researcher/index.html",
@@ -367,10 +369,11 @@
   {
     "listing": "/talks/index.html",
     "items": [
+      "/talks/en/2024-11-latinR-gugudadados/index.html",
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
-      "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
+      "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
       "/talks/pt/2024-10-sicam-intro-r/index.html",
       "/talks/en/2024-10-15-ufabc-literature-review/index.html",
@@ -452,11 +455,12 @@
   {
     "listing": "/content.html",
     "items": [
+      "/talks/en/2024-11-latinR-gugudadados/index.html",
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
       "/teaching/es/2024-11-18-latinR-GitHub/index.html",
-      "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
+      "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
       "/talks/pt/2024-10-sicam-intro-r/index.html",
       "/teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
