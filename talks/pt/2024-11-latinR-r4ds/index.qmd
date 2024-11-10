@@ -1,0 +1,51 @@
+---
+toc: true
+author: 
+  - Cesar A. Galvao
+  - Beatriz Milz
+  - Riva Quiroga
+  - Ariana Cabral
+  - Alberson da Silva Miranda
+  - Marcus Antonio Cardoso Ramalho
+  - Maximilian Canez Fernandes
+  - José Carlos Barbosa
+  - Bruno Mioto
+  - Halian Vilela
+  - Eric Scopinho
+  - Ana Carolina Moreno
+  - Luana Antunes Alexandre
+  - Magno Tairone
+  - Debora Silva
+  - Arthur de Carvalho e Silva
+  - Ían Muliterno
+  - Carolina Musso
+  - Jeanne Franco
+categories: ["Ensino", "PT", "Livros", "tidyverse"]
+date: '2024-11-19'
+event: "LatinR 2024"
+event_url: https://latinr.org/pt/
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-11-latinR-r4ds/slides.pdf
+- icon: file
+  icon_pack: far
+  name: Submissão
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-11-latinR-r4ds/submission.pdf
+- icon: book
+  icon_pack: far
+  name: Livro R para Ciência de Dados (2ed)
+  url: https://cienciadedatos.github.io/pt-r4ds/
+  
+location: Online
+title: "Democratizando a Ciência de Dados em Português: Uma tradução de 'R for Data Science' (2ª edição) liderada pela comunidade"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
