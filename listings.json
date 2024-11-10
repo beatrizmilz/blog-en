@@ -134,6 +134,7 @@
     "listing": "/index.html",
     "items": [
       "/talks/en/2024-11-latinR-gugudadados/index.html",
+      "/talks/pt/2024-11-latinR-r4ds/index.html",
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
       "/teaching/es/2024-11-18-latinR-GitHub/index.html",
@@ -273,6 +274,7 @@
   {
     "listing": "/talks/pt/index.html",
     "items": [
+      "/talks/pt/2024-11-latinR-r4ds/index.html",
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
       "/talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
@@ -370,6 +372,7 @@
     "listing": "/talks/index.html",
     "items": [
       "/talks/en/2024-11-latinR-gugudadados/index.html",
+      "/talks/pt/2024-11-latinR-r4ds/index.html",
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
       "/talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
@@ -456,6 +459,7 @@
     "listing": "/content.html",
     "items": [
       "/talks/en/2024-11-latinR-gugudadados/index.html",
+      "/talks/pt/2024-11-latinR-r4ds/index.html",
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
       "/teaching/es/2024-11-18-latinR-GitHub/index.html",
