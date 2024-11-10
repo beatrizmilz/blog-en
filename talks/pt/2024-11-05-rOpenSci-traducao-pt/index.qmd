@@ -6,7 +6,7 @@ author:
   - Beatriz Milz
   - Francesca Belem Lopes Palmeira
 categories: Community Call
-date: '2024-11-05'
+date: '2024-11-06'
 event: "rOpenSci Community Call"
 event_url: https://ropensci.org/commcalls/translation-portuguese/
 links:
@@ -35,4 +35,3 @@ A comunidade R está realizando vários esforços de traduções comunitárias p
 Nesta chamada da comunidade, três líderes da comunidade de língua portuguesa apresentarão suas experiências liderando e fazendo parte desses projetos e compartilharão como podemos participar desses esforços.
 
 Essa chamada da comunidade será seguida por uma reunião de tradução na LatinR, a conferência latino-americana de R para pesquisa e desenvolvimento, para aqueles que quiserem começar a participar.
-

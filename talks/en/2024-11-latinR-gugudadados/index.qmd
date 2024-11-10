@@ -1,0 +1,44 @@
+---
+toc: true
+author: 
+  - Haydee Svab
+  - Beatriz Milz
+  - Tatyane Paz Dominguez
+  - Ana Carolina Moreno
+categories: ["R-Ladies", "Diversity", "EN", "Community"]
+date: '2024-11-19'
+event: "LatinR 2024"
+event_url: https://latinr.org/pt/
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-11-latinR-gugudadados/slides.pdf
+- icon: file
+  icon_pack: far
+  name: Submission
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-11-latinR-gugudadados/submission.pdf  
+  
+location: Online
+title: "GuguDaDados: A space for children and babies in events"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+<br>
+
+Abstract: We present GuGuDaDados, a space created in 2022 by R-Ladies São Paulo to support parents and caregivers by providing a safe and engaging environment for their children during community events.
+
+## Links
+
+- [Actions to increase diversity in the R-Ladies São Paulo community](https://rladies.org/blog/2023-06-05-increasing-diversity-sao-paulo/) - blog post on R-Ladies Global blog
+
+- [Ações para ampliar a diversidade na comunidade R-Ladies São Paulo](https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/) - blog post no blog da R-Ladies São Paulo
+
+- [GitHub Repository](https://github.com/R-Ladies-Sao-Paulo/gugudadados/tree/main)
