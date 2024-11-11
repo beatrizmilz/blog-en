@@ -38,13 +38,19 @@ conteudo_passado <- yaml::read_yaml("content_data_passado.yaml") |>
   length()
 ```
 
+For invitations, please email me at: [milz.bea\@gmail.com](mailto:milz.bea@gmail.com){.email}
 
-For invitations, please email me at: <milz.bea@gmail.com>
+## Future content 
 
-## Future content (`r conteudo_futuro`)
+Here you can find links, slides and materials for **`r conteudo_futuro` future activities** that I will be participating in!
+
 ::: {#content-future}
 :::
 
-## Past content (`r conteudo_passado`)
+## Past content
+
+Here you can find links, slides and materials for **`r conteudo_passado` past activities** that I have participated in **since 2018**!
+
+
 ::: {#content-past}
 :::
