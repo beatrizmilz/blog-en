@@ -1,25 +1,40 @@
 ---
 title: "Content"
 listing:
-  - id: content
-    contents: "{talks,teaching}/{pt,es,en}/*/index.qmd"
+  - id: content-future
+    contents:
+      - content_data_futura.yaml
     type: grid
     fields: [image, date, title, subtitle]
     sort: "date desc"
     categories: false
     sort-ui: true
     filter-ui: true
-    page-size: 100     
-
+    page-size: 100   
+  - id: content-past
+    contents: 
+      - content_data_passado.yaml
+    type: grid
+    fields: [image, date, title, subtitle]
+    sort: "date desc"
+    categories: false
+    sort-ui: true
+    filter-ui: true
+    page-size: 100           
 page-layout: full
 title-block-banner: false
 comments: false
-toc: false
+toc: true
 ---
 
 Presentations, workshops, and other content.
 
-For invitations, please email me at: milz.bea@gmail.com
+For invitations, please email me at: <milz.bea@gmail.com>
 
-::: {#content}
+## Future content
+::: {#content-future}
+:::
+
+## Past content
+::: {#content-past}
 :::

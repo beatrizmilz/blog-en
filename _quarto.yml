@@ -1,5 +1,6 @@
 project:
   type: website
+  pre-render: pre-render-listing-content.R
   preview:
     port: 4200
 

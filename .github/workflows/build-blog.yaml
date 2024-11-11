@@ -31,6 +31,8 @@ jobs:
             any::downlit
             any::here
             any::janitor
+            any::fs
+            any::yaml
 
 
       - name: Publish to GitHub Pages (and render)
