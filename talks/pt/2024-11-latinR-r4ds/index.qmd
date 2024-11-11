@@ -28,11 +28,11 @@ links:
 - icon: images
   icon_pack: far
   name: Slides
-  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-11-latinR-r4ds/slides.pdf
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/pt/2024-11-latinR-r4ds/slides.pdf
 - icon: file
   icon_pack: far
   name: Submissão
-  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-11-latinR-r4ds/submission.pdf
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/pt/2024-11-latinR-r4ds/submission.pdf
 - icon: book
   icon_pack: far
   name: Livro R para Ciência de Dados (2ed)
