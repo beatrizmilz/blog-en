@@ -27,14 +27,24 @@ comments: false
 toc: true
 ---
 
-Presentations, workshops, and other content.
+Presentations, workshops, and other content that I have created or participated in.
+
+```{r}
+#| echo: false
+conteudo_futuro <- yaml::read_yaml("content_data_futura.yaml") |> 
+  length()
+
+conteudo_passado <- yaml::read_yaml("content_data_passado.yaml") |>
+  length()
+```
+
 
 For invitations, please email me at: <milz.bea@gmail.com>
 
-## Future content
+## Future content (`r conteudo_futuro`)
 ::: {#content-future}
 :::
 
-## Past content
+## Past content (`r conteudo_passado`)
 ::: {#content-past}
 :::
