@@ -139,6 +139,7 @@
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
       "/teaching/es/2024-11-18-latinR-GitHub/index.html",
+      "/talks/en/2024-11-ufabc-intro-r/index.html",
       "/talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
       "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
@@ -277,6 +278,7 @@
     "items": [
       "/talks/en/2024-11-latinR-bookclub/index.html",
       "/talks/en/2024-11-latinR-gugudadados/index.html",
+      "/talks/en/2024-11-ufabc-intro-r/index.html",
       "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
       "/talks/en/2024-10-15-ufabc-literature-review/index.html",
       "/talks/en/2024-10-github-researcher/index.html",
@@ -290,13 +292,6 @@
       "/talks/en/2020-RStudio-certification/index.html",
       "/talks/en/2019-user-rladies-sp/index.html",
       "/talks/en/2018-knitr-codata/index.html"
-    ]
-  },
-  {
-    "listing": "/talks/es/index.html",
-    "items": [
-      "/talks/es/2022-latinr-translaton/index.html",
-      "/talks/es/2020-funciones-r4ds/index.html"
     ]
   },
   {
@@ -371,6 +366,13 @@
     ]
   },
   {
+    "listing": "/talks/es/index.html",
+    "items": [
+      "/talks/es/2022-latinr-translaton/index.html",
+      "/talks/es/2020-funciones-r4ds/index.html"
+    ]
+  },
+  {
     "listing": "/talks/index.html",
     "items": [
       "/talks/en/2024-11-latinR-bookclub/index.html",
@@ -378,6 +380,7 @@
       "/talks/pt/2024-11-latinR-r4ds/index.html",
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
+      "/talks/en/2024-11-ufabc-intro-r/index.html",
       "/talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
       "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
@@ -467,6 +470,7 @@
       "/talks/pt/2024-11-18-latinR-rdevday/index.html",
       "/talks/pt/2024-11-18-latinR-translaton/index.html",
       "/teaching/es/2024-11-18-latinR-GitHub/index.html",
+      "/talks/en/2024-11-ufabc-intro-r/index.html",
       "/talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
       "/talks/pt/2024-11-06-github-universe/index.html",
       "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
