@@ -6,7 +6,7 @@ author:
   - Tatyane Paz Dominguez
   - Ana Carolina Moreno
 categories: ["R-Ladies", "Diversity", "EN", "Community"]
-date: '2024-11-19'
+date: '2024-11-22'
 event: "LatinR 2024"
 event_url: https://latinr.org/pt/
 links:
@@ -18,7 +18,10 @@ links:
   icon_pack: far
   name: Submission
   url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-11-latinR-gugudadados/submission.pdf  
-  
+- icon: youtube
+  icon_pack: fab
+  name: "YouTube Streaming"
+  url: "https://www.youtube.com/watch?v=s6FaP7htaLg"
 location: Online
 title: "GuguDaDados: A space for children and babies in events"
 image: featured.png
@@ -37,8 +40,8 @@ Abstract: We present GuGuDaDados, a space created in 2022 by R-Ladies São Paulo
 
 ## Links
 
-- [Actions to increase diversity in the R-Ladies São Paulo community](https://rladies.org/blog/2023-06-05-increasing-diversity-sao-paulo/) - blog post on R-Ladies Global blog
+-   [Actions to increase diversity in the R-Ladies São Paulo community](https://rladies.org/blog/2023-06-05-increasing-diversity-sao-paulo/) - blog post on R-Ladies Global blog
 
-- [Ações para ampliar a diversidade na comunidade R-Ladies São Paulo](https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/) - blog post no blog da R-Ladies São Paulo
+-   [Ações para ampliar a diversidade na comunidade R-Ladies São Paulo](https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/) - blog post no blog da R-Ladies São Paulo
 
-- [GitHub Repository](https://github.com/R-Ladies-Sao-Paulo/gugudadados/tree/main)
+-   [GitHub Repository](https://github.com/R-Ladies-Sao-Paulo/gugudadados/tree/main)

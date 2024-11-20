@@ -4,7 +4,7 @@ author:
   - Luana Antunes Alexandre
   - Beatriz Milz
 categories: ["R-Ladies", "Diversity", "EN", "Community", "Bookclub"]
-date: '2024-11-19'
+date: '2024-11-22'
 event: "LatinR 2024"
 event_url: https://latinr.org/pt/
 links:
@@ -16,7 +16,10 @@ links:
   icon_pack: far
   name: Submission
   url: https://github.com/beatrizmilz/blog-en/blob/main/talks/en/2024-11-latinR-bookclub/submission.pdf  
-  
+- icon: youtube
+  icon_pack: fab
+  name: "YouTube Streaming"
+  url: "https://www.youtube.com/watch?v=s6FaP7htaLg"  
 location: Online
 title: "Structuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo"
 image: featured.png
@@ -33,6 +36,6 @@ read_yaml_talks_pt()
 
 ## Links
 
-- [Book - R for Data Science 2ed](https://cienciadedatos.github.io/pt-r4ds/)
+-   [Book - R for Data Science 2ed](https://cienciadedatos.github.io/pt-r4ds/)
 
 -   [Bookclub - GitHub Repository](https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds)

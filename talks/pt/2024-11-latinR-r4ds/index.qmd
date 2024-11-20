@@ -21,7 +21,7 @@ author:
   - Carolina Musso
   - Jeanne Franco
 categories: ["Ensino", "PT", "Livros", "tidyverse"]
-date: '2024-11-19'
+date: '2024-11-22'
 event: "LatinR 2024"
 event_url: https://latinr.org/pt/
 links:
@@ -37,7 +37,10 @@ links:
   icon_pack: far
   name: Livro R para Ciência de Dados (2ed)
   url: https://cienciadedatos.github.io/pt-r4ds/
-  
+- icon: youtube
+  icon_pack: fab
+  name: "Transmissão no YouTube"
+  url: "https://www.youtube.com/watch?v=s6FaP7htaLg"
 location: Online
 title: "Democratizando a Ciência de Dados em Português: Uma tradução de 'R for Data Science' (2ª edição) liderada pela comunidade"
 image: featured.png
