@@ -19,7 +19,7 @@ links:
 - icon: book
   icon_pack: fas
   name: "Materials"
-  url: https://git4researchers.github.io/LatinR2024Workshop/
+  url: https://git4researchers-latinr2024.netlify.app/
 # - icon: images
 #   icon_pack: far
 #   name: Slides
