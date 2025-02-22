@@ -36,11 +36,11 @@ links:
 - icon: book
   icon_pack: far
   name: Livro R para Ciência de Dados (2ed)
-  url: https://cienciadedatos.github.io/pt-r4ds/
+  url: https://pt.r4ds.hadley.nz/
 - icon: youtube
   icon_pack: fab
   name: "Transmissão no YouTube"
-  url: "https://www.youtube.com/watch?v=s6FaP7htaLg"
+  url: "https://www.youtube.com/live/s6FaP7htaLg?feature=shared&t=88"
 location: Online
 title: "Democratizando a Ciência de Dados em Português: Uma tradução de 'R for Data Science' (2ª edição) liderada pela comunidade"
 image: featured.png
