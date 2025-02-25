@@ -1,0 +1,171 @@
+---
+title: "Como começar a utilizar o GitHub Copilot?"
+subtitle: "Aprenda a utilizar uma ferramenta de inteligência artificial que auxilia na escrita de código, e que agora está disponível gratuitamente para todos os usuários do GitHub!"
+author: "Beatriz Milz"
+date: "2025-02-25"
+categories: ["GitHub", "RStudio", "IA", "VS Code", "Visual Studio Code", "GitHub Copilot"]
+image: "images/vs-code-copilot-extension.png"
+toc: true
+draft: false
+cache: true
+lightbox: true
+---
+
+# Introdução
+
+O [GitHub Copilot](https://github.com/features/copilot) é uma ferramenta de inteligência artificial que auxilia na escrita de código. Ele foi [disponibilizado em junho de 2021](https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/) e, inicialmente, era um serviço pago. **Porém recentemente a GitHub disponibilizou o Copilot de graça**[^1] para todas as contas!
+
+[^1]: **A conta graduita tem algumas limitações, como o número de linhas de código geradas por mês. É possível consultar mais informações na [página de planos do Copilot](https://github.com/features/copilot/plans).**
+
+Existem duas funcionalidades principais do Copilot:
+
+-   **Code completions**: o Copilot sugere completar o código que você está escrevendo.
+
+-   **Chat com o Copilot:** você pode conversar com o Copilot, pedindo para ele escrever um código específico, ou perguntando sobre como fazer algo. Se você já usou o ChatGPT, o Copilot é bem similar, mas focado em código e com acesso direto à API do GitHub (o que permite que ele acesse o seu repositório e entenda melhor o contexto do seu código).
+
+
+O logo do GitHub Copilot é um astronauta (@fig-logo-copilot), e a ideia é que ele seja o "co-piloto": ele te ajuda a escrever o código, mas você ainda é o responsável por revisar e entender o que está sendo feito.
+
+<br>
+
+![Logo do GitHub Copilot](images/GitHub_Copilot_logo.png){fig-align="center" width="50%" #fig-logo-copilot}
+
+Neste post, vamos discutir como começar a utilizar o GitHub Copilot, e como ele pode ser utilizado em diferentes interfaces, como a interface web do GitHub, no Visual Studio Code (VS Code) e no RStudio.
+
+
+# Como usar o GitHub Copilot na interface web do GitHub?
+
+O GitHub Copilot pode ser acessado pela [interface web (ou seja, no site) do GitHub](https://github.com/copilot), utilizando o botão do Copilot no menu superior do GitHub:
+
+![GitHub Copilot](images/copilot-web.png)
+
+Neste botão, podemos acessar as configurações do Copilot (*Settings*), consultar como abrir o Copilot em diferentes interfaces (*Open with*), e também abrir um Chat com o Copilot (*Immersive*).
+
+Ao abrir a opção *Immersive*, o Copilot é aberto em uma nova aba, onde podemos acessar um [chat com o Copilot](https://github.com/copilot). Se você tem costume de utilizar o ChatGPT, o Copilot na interface web é bem similar!
+
+[![GitHub Copilot](images/copilot-immersive.png)](https://github.com/copilot)
+
+Nesta página, temos:
+
+-   No menu lateral: é possível acessar conversas recentes e a opção de criar uma nova conversa.
+
+-   No corpo da página:
+
+    -   Um botão para mudar o modelo a ser utilizado ([@fig-modelos]).
+
+    -   Alguns exemplos de prompts para nos inspirar.
+
+    -   Um campo de texto onde podemos digitar um prompt para o Copilot.
+
+![Modelos disponíveis](images/copilot-models.png){#fig-modelos fig-align="center" width="50%"}
+
+Atualmente, os modelos disponíveis são:
+
+-   GPT-4o (Open AI)
+
+-   o1 (Open AI)
+
+-   o3-mini (Open AI)
+
+-   Claude 3.5 Sonnet (Anthropic)
+
+-   Gemini 2.0 Flash (Google)
+
+E a cereja do bolo: no canto superior direito, ao clicar no botão `...`, e em instruções personalizadas (*Personal Instructions*), podemos adicionar instruções sobre nossas preferências:
+
+![Instruções personalizadas](images/copilot-personal-instrucitons-1.png){fig-align="center" width="50%"}
+
+![Escrever as instruções](images/copilot-personal-instrucitons-2.png){fig-align="center" width="50%"}
+
+# Como utilizar o GitHub Copilot no VS Code?
+
+Na minha experiência, a IDE VS Code oferece a experiência mais completa de integração com o GitHub Copilot.
+
+Para quem usa o Visual Studio Code, você precisa instalar a extensão do Copilot:
+
+![Extensão do GitHub Copilot no VS Code](images/vs-code-copilot-extension.png)
+
+Depois de instalar a extensão, o botão do Copilot ficará disponível ao lado da barra de pesquisa (no menu superior da tela):
+
+![Botão do Copilot no VS Code](images/vs-code-copilot-button.png) 
+
+Com este botão, é possível acessar o Chat do Copilot no VS Code:
+
+![Copilot Chat no VS Code](images/vs-code-chat.png)
+
+Essa é a minha ferramenta favorita no VS Code, pois podemos fazer referência a arquivos do nosso projeto. No exemplo abaixo, eu abri o arquivo em que estou escrevendo este post, e pedi feedbacks para o Copilot sobre o andamento do texto:
+
+
+![Exemplo do Copilot Chat no VS Code](images/vs-code-chat-2.png)
+
+Perceba que o Copilot inclusive gera sugestões de blocos de códigos que podemos utilizar (neste caso, como estou escrevendo um texto com Markdown, a sugestão é em Markdown):
+
+![Exemplo do Copilot Chat no VS Code - Parte 2](images/vs-code-chat-3.png)
+
+
+O Copilot no VS Code também faz sugestões de código. No exemplo abaixo, eu utilizei o atalho `Command + I` para abrir o Copilot, e escrever um prompt:
+
+
+![Exemplo do Copilot no VS Code](images/exemplo-python.gif)
+
+
+# Como utilizar o GitHub Copilot no RStudio?
+
+O RStudio é a IDE mais utilizada pela comunidade R, e também é possível utilizar o GitHub Copilot no RStudio!
+
+Porém no RStudio não temos o Copilot Chat, apenas o Code Completions (ou seja, o Copilot faz sugestões para completar o código que estamos escrevendo). Para utilizar o Copilot no RStudio, você precisa estar com o RStudio atualizado. 
+
+Para ativar o Copilot no RStudio, você precisa acessar o menu `Tools` > `Global Options` > `Copilot` e selecionar a opção `Enable GitHub Copilot`. Será necessário fazer a autentição com a sua conta do GitHub.
+
+::: {layout-ncol=2}
+![Ativar o Copilot no RStudio](images/rstudio-copilot-enable.png)
+
+![Copilot ativado no RStudio](images/rstudio-copilot-enabled.png)
+:::
+
+
+Depois de ativar o Copilot, você verá as sugestões enquanto escreve o código no RStudio. Para utilizar uma sugestão, basta pressionar `Tab` para aceitar a sugestão. 
+
+
+No exemplo abaixo, comecei carregando dois pacotes e com o nome de um dataset (`dados::pinguins`), e o Copilot sugeriu o código para criar um gráfico. Porém ao executar o código, um erro foi gerado pois o Copilot errou o nome da variável. Depois de corrigir o nome da variável, o gráfico foi gerado corretamente: 
+
+![Exemplo de uso do Copilot no RStudio](images/pinguins.gif)
+
+Algo que eu costumo fazer é colocar o resultado da função `dplyr::glimpse()` como comentário no Script. Assim, o Copilot terá o contexto de quais são as variáveis do dataset, e poderá fazer sugestões com menos erros:
+
+![Exemplo de uso do Copilot no RStudio - Com glimpse](images/pinguins2.gif)
+
+
+Observe que ainda assim não é perfeito: eu costumo utilizar o pipe nativo (`|>`) e as sugestões feitas foram com o pipe do pacote `magrittr` (`%>%`). Em scripts onde eu já tenha escrito mais código, o Copilot tende a acertar mais sugestões e utilizar o pipe que eu costumo utilizar, pois ele utiliza o meu código como contexto.
+
+::: {.callout-note}
+[Confira a documentação do Copilot no RStudio](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) (em inglês).
+:::
+
+
+# Conclusão
+
+O Copilot é uma ferramenta que pode ser muito útil, mas ele não substitui o conhecimento e a experiência de quem está escrevendo o código. Ele é uma ferramenta para auxiliar, e não para substituir! Portanto, é importante sempre revisar o código gerado pelo Copilot, e entender o que está sendo feito.
+
+Se você ainda não experimentou o GitHub Copilot, recomendo que você teste! Ele pode ser uma ferramenta muito útil para aumentar a sua produtividade, e também para aprender novas técnicas e formas de escrever código.
+
+Se você gostou deste post, compartilha com outras pessoas que possam se interessar! E se você tiver alguma dúvida ou sugestão, deixe um comentário abaixo. :)
+
+
+# Sobre a autora
+
+![](images/bea.png){fig-align="center" width="30%"}
+
+Olá! Meu nome é Beatriz Milz, e programo em R desde 2018. Também faço parte do [programa de GitHub Stars desde 2024](https://stars.github.com/profiles/beatrizmilz/)! 
+
+Se você gostou deste post, você pode me acompanhar nas seguintes plataformas:
+
+  - [Neste blog, principalmente na aba "talks and teaching"](https://beamilz.com/content)
+
+  - [Youtube](https://www.youtube.com/@beamilz/featured) (atualmente não tem muita coisa por lá, mas pretendo começar a postar vídeos em breve!)
+
+  - [GitHub](https://github.com/beatrizmilz)
+  
+  - [BlueSky](https://bsky.app/profile/beamilz.com)
+  
+  - [Instagram](https://www.instagram.com/dadoseambiente/)
