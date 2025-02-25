@@ -273,7 +273,7 @@ Figura&nbsp;1: Logo do GitHub Copilot
 </figure>
 </div>
 <p>Neste botão, podemos acessar as configurações do Copilot (<em>Settings</em>), consultar como abrir o Copilot em diferentes interfaces (<em>Open with</em>), e também abrir um Chat com o Copilot (<em>Immersive</em>).</p>
-<p>Ao abrir a opção <em>Immersive</em>, o Copilot é aberto em uma nova aba, onde podemos acessar um <a href="https://github.com/copilot">chat com o Copilot</a>. Se você tem costume de utilizar o ChatGPT, o Copilot na interface web é bem similar!</p>
+<p>Ao abrir a opção <em>Immersive</em>, o Copilot é aberto em uma nova aba, onde podemos acessar um <a href="https://github.com/copilot">chat com o Copilot</a>. Se você tem costume de utilizar o ChatGPT, o Copilot na interface web é similar!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/copilot-immersive.png" class="img-fluid figure-img"></p>
@@ -333,7 +333,7 @@ Figura&nbsp;2: Modelos disponíveis
 <section id="como-utilizar-o-github-copilot-no-vs-code" class="level1">
 <h1>Como utilizar o GitHub Copilot no VS Code?</h1>
 <p>Na minha experiência, a IDE VS Code oferece a experiência mais completa de integração com o GitHub Copilot.</p>
-<p>Para quem usa o Visual Studio Code, você precisa instalar a extensão do Copilot:</p>
+<p>Para quem usa o VS Code, você precisa instalar a extensão do Copilot:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="images/vs-code-copilot-extension.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Extensão do GitHub Copilot no VS Code"><img src="images/vs-code-copilot-extension.png" class="img-fluid figure-img" alt="Extensão do GitHub Copilot no VS Code"></a></p>
@@ -419,7 +419,9 @@ Figura&nbsp;2: Modelos disponíveis
 <figcaption>Exemplo de uso do Copilot no RStudio - Com glimpse</figcaption>
 </figure>
 </div>
-<p>Observe que ainda assim não é perfeito: eu costumo utilizar o pipe nativo (<code>|&gt;</code>) e as sugestões feitas foram com o pipe do pacote <code>magrittr</code> (<code>%&gt;%</code>). Em scripts onde eu já tenha escrito mais código, o Copilot tende a acertar mais sugestões e utilizar o pipe que eu costumo utilizar, pois ele utiliza o meu código como contexto.</p>
+<p>Observe que ainda assim não é perfeito: eu costumo utilizar o pipe nativo (<code>|&gt;</code>) e as sugestões feitas foram com o pipe do pacote <code>magrittr</code> (<code>%&gt;%</code>).</p>
+<p>Isso acontece pois o pipe nativo surgiu em uma versão mais recente do R (em 2021), e muita gente ainda usa o pipe do <code>magrittr</code>. Assim, o Copilot tende a sugerir o pipe do <code>magrittr</code>, pois os códigos que ele utilizou para treinamento tem mais exemplos com o pipe do <code>magrittr</code> do que com o pipe nativo.</p>
+<p>Em scripts onde eu já tenha escrito mais código, o Copilot tende a acertar mais sugestões e utilizar o pipe que eu costumo utilizar, pois ele utiliza o meu código como contexto.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -464,7 +466,7 @@ Nota
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
 
 <ol>
-<li id="fn1"><p><strong>A conta graduita tem algumas limitações, como o número de linhas de código geradas por mês. É possível consultar mais informações na <a href="https://github.com/features/copilot/plans">página de planos do Copilot</a>.</strong><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>O acesso gratuito tem algumas limitações, como o número de linhas de código geradas por mês. É possível consultar mais informações na <a href="https://github.com/features/copilot/plans">página de planos do Copilot</a>. No momento da escrita deste post, o acesso gratuito inclui 2.000 sugestões de completar o código, e 50 chamadas no chat por mês.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
