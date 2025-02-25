@@ -15,7 +15,8 @@ lightbox: true
 
 O [GitHub Copilot](https://github.com/features/copilot) é uma ferramenta de inteligência artificial que auxilia na escrita de código. Ele foi [disponibilizado em junho de 2021](https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/) e, inicialmente, era um serviço pago. **Porém recentemente a GitHub disponibilizou o Copilot de graça**[^1] para todas as contas!
 
-[^1]: **A conta graduita tem algumas limitações, como o número de linhas de código geradas por mês. É possível consultar mais informações na [página de planos do Copilot](https://github.com/features/copilot/plans).**
+[^1]: O acesso gratuito tem algumas limitações, como o número de linhas de código geradas por mês. É possível consultar mais informações na [página de planos do Copilot](https://github.com/features/copilot/plans). No momento da escrita deste post, o acesso gratuito inclui 2.000 sugestões de completar o código, e 50 chamadas no chat por mês.
+
 
 Existem duas funcionalidades principais do Copilot:
 
@@ -41,7 +42,7 @@ O GitHub Copilot pode ser acessado pela [interface web (ou seja, no site) do Git
 
 Neste botão, podemos acessar as configurações do Copilot (*Settings*), consultar como abrir o Copilot em diferentes interfaces (*Open with*), e também abrir um Chat com o Copilot (*Immersive*).
 
-Ao abrir a opção *Immersive*, o Copilot é aberto em uma nova aba, onde podemos acessar um [chat com o Copilot](https://github.com/copilot). Se você tem costume de utilizar o ChatGPT, o Copilot na interface web é bem similar!
+Ao abrir a opção *Immersive*, o Copilot é aberto em uma nova aba, onde podemos acessar um [chat com o Copilot](https://github.com/copilot). Se você tem costume de utilizar o ChatGPT, o Copilot na interface web é similar!
 
 [![GitHub Copilot](images/copilot-immersive.png)](https://github.com/copilot)
 
@@ -81,7 +82,7 @@ E a cereja do bolo: no canto superior direito, ao clicar no botão `...`, e em i
 
 Na minha experiência, a IDE VS Code oferece a experiência mais completa de integração com o GitHub Copilot.
 
-Para quem usa o Visual Studio Code, você precisa instalar a extensão do Copilot:
+Para quem usa o VS Code, você precisa instalar a extensão do Copilot:
 
 ![Extensão do GitHub Copilot no VS Code](images/vs-code-copilot-extension.png)
 
@@ -136,7 +137,12 @@ Algo que eu costumo fazer é colocar o resultado da função `dplyr::glimpse()` 
 ![Exemplo de uso do Copilot no RStudio - Com glimpse](images/pinguins2.gif)
 
 
-Observe que ainda assim não é perfeito: eu costumo utilizar o pipe nativo (`|>`) e as sugestões feitas foram com o pipe do pacote `magrittr` (`%>%`). Em scripts onde eu já tenha escrito mais código, o Copilot tende a acertar mais sugestões e utilizar o pipe que eu costumo utilizar, pois ele utiliza o meu código como contexto.
+Observe que ainda assim não é perfeito: eu costumo utilizar o pipe nativo (`|>`) e as sugestões feitas foram com o pipe do pacote `magrittr` (`%>%`). 
+
+Isso acontece pois o pipe nativo surgiu em uma versão mais recente do R (em 2021), e muita gente ainda usa o pipe do `magrittr`. Assim, o Copilot tende a sugerir o pipe do `magrittr`, pois os códigos que ele utilizou para treinamento tem mais exemplos com o pipe do `magrittr` do que com o pipe nativo.
+
+Em scripts onde eu já tenha escrito mais código, o Copilot tende a acertar mais sugestões e utilizar o pipe que eu costumo utilizar, pois ele utiliza o meu código como contexto. 
+
 
 ::: {.callout-note}
 [Confira a documentação do Copilot no RStudio](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) (em inglês).
