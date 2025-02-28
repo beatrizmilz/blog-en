@@ -20,10 +20,10 @@ links:
   icon_pack: fas
   name: "Materials"
   url: https://git4researchers-latinr2024.netlify.app/
-# - icon: images
-#   icon_pack: far
-#   name: Slides
-#   url: 
+- icon: youtube
+  icon_pack: fab
+  name: "Video"
+  url: https://youtu.be/_nU5piBDJwA?feature=shared
 location: Online
 title: "Introducción a GitHub para Investigador(a|e)s"
 image: featured.jpg
