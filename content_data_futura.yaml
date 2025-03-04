@@ -1,0 +1,8 @@
+- title: Oficina de introdução ao R
+  author: Beatriz Milz
+  date: '2025-07-22'
+  path: talks/pt/2025-07-fbcp-intro/index.qmd
+- title: Obtendo dados do SIDRA/IBGE com R utilizando o pacote SIDRAR
+  author: Beatriz Milz
+  date: '2025-08-04'
+  path: talks/pt/2025-08-rbras-sidrar/index.qmd

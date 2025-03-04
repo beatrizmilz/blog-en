@@ -1,0 +1,468 @@
+- title: Producing Reports with knitr and R
+  author: Beatriz Milz
+  date: '2018-12-05'
+  path: talks/en/2018-knitr-codata/index.qmd
+- title: The evolution and importance of the R-Ladies São Paulo chapter in Brazil
+  author:
+  - Beatriz Milz
+  - Bruna Wundervald
+  date: '2019-07-11'
+  path: talks/en/2019-user-rladies-sp/index.qmd
+- title: Adding figures in R Markdown
+  author: Beatriz Milz
+  date: '2020-09-23'
+  path: talks/en/2020-RStudio-certification/index.qmd
+- title: My experience at useR 2019
+  author: Beatriz Milz
+  date: '2021-04-28'
+  path: talks/en/2021-experience-useR/index.qmd
+- title: Scaling feedback using learnr and gradethis in a introductory R course
+  author:
+  - Beatriz Milz
+  - Fernando Correa
+  date: '2021-11-10'
+  path: talks/en/2021-learnr-latinr/index.qmd
+- title: Running code while we’re sleeping - Introduction to GitHub Actions for R
+    users
+  author: Beatriz Milz
+  date: '2022-10-29'
+  path: talks/en/2022-gha-rladies-abuja/index.qmd
+- title: Interview for the Reproducible Research Scout Youtube Channel
+  author:
+  - Beatriz Milz
+  - Raniere Silva
+  date: '2022-06-20'
+  path: talks/en/2022-interview-reproducible-research-scout/index.qmd
+- title: ' Making awesome automations with GitHub Actions '
+  author: Beatriz Milz
+  date: '2022-07-28'
+  path: talks/en/2022-rstudio-conf/index.qmd
+- title: Purrr-fecting your R workflow - An introduction to functional programming
+  author: Beatriz Milz
+  date: '2023-11-24'
+  path: talks/en/2023-11-rday-colombia-purrr/index.qmd
+- title: Actions to increase diversity in the R-Ladies community - São Paulo
+  author: Beatriz Milz
+  date: '2024-05-02'
+  path: talks/en/2024-05-rladies-melbourne/index.qmd
+- title: Literature review
+  author: Beatriz Milz
+  date: '2024-10-15'
+  path: talks/en/2024-10-15-ufabc-literature-review/index.qmd
+- title: 'Qualitative Data Analysis: Coding'
+  author: Beatriz Milz
+  date: '2024-10-22'
+  path: talks/en/2024-10-22-ufabc-coding-qualitative-data/index.qmd
+- title: Using GitHub as a Researcher
+  author: Beatriz Milz
+  date: '2024-10-09'
+  path: talks/en/2024-10-github-researcher/index.qmd
+- title: 'Structuring an Online Book Club: R for Data Science (2ed) by R-Ladies São
+    Paulo'
+  author:
+  - Luana Antunes Alexandre
+  - Beatriz Milz
+  date: '2024-11-22'
+  path: talks/en/2024-11-latinR-bookclub/index.qmd
+- title: 'GuguDaDados: A space for children and babies in events'
+  author:
+  - Haydee Svab
+  - Beatriz Milz
+  - Tatyane Paz Dominguez
+  - Ana Carolina Moreno
+  date: '2024-11-22'
+  path: talks/en/2024-11-latinR-gugudadados/index.qmd
+- title: Introduction to R
+  author: Beatriz Milz
+  date: '2024-11-12'
+  path: talks/en/2024-11-ufabc-intro-r/index.qmd
+- title: Funciones - R para Ciencia de Datos
+  author: Beatriz Milz
+  date: '2020-05-04'
+  path: talks/es/2020-funciones-r4ds/index.qmd
+- title: R translatón/Hackaton de tradução do R
+  author:
+  - Ángela Sanzo
+  - Beatriz Milz
+  - Caio Lente
+  - Heather Turner
+  - Macarena Quiroga
+  - Natalia da Silva
+  - Patricia Loto
+  - Riva Quiroga
+  - Yanina Bellini
+  - Latin-R Organizers
+  - R Contributors
+  date: '2022-10-15'
+  path: talks/es/2022-latinr-translaton/index.qmd
+- title: Oficina de Introdução ao R
+  author: Beatriz Milz
+  date: '2018-11-29'
+  path: talks/pt/2018-introducao-r-ufabc/index.qmd
+- title: Producing Reports with knitr and R
+  author: Beatriz Milz
+  date: '2018-12-05'
+  path: talks/pt/2018-knitr-codata/index.qmd
+- title: R e Desafios no Projeto Temático - Oficina de Introdução ao R
+  author: Beatriz Milz
+  date: '2018-10-17'
+  path: talks/pt/2018-r-desafios-macroamb/index.qmd
+- title: Comunicando seus resultados - criando apresentações com R
+  author: Beatriz Milz
+  date: '2018-11-21'
+  path: talks/pt/2018-xaringan-rladies-sp/index.qmd
+- title: The Carpentries
+  author: Beatriz Milz
+  date: '2019-11-30'
+  path: talks/pt/2019-carpentries-satrday/index.qmd
+- title: Primeiros passos utilizando o Git e GitHub no RStudio
+  author: Beatriz Milz
+  date: '2019-09-12'
+  path: talks/pt/2019-git-github-saopaulo/index.qmd
+- title: The evolution and importance of the R-Ladies São Paulo chapter in Brazil
+  author: Beatriz Milz, Bruna Wundervald
+  date: '2019-07-11'
+  path: talks/pt/2019-user-rladies-sp/index.qmd
+- title: Dashboards, gráficos, mapas - Possibilidades de visualização de dados com
+    R
+  author: Beatriz Milz
+  date: '2019-08-02'
+  path: talks/pt/2019-vis-nerdzao/index.qmd
+- title: Comunicando seus resultados - criando apresentações com R
+  author: Beatriz Milz e Haydee Svab
+  date: '2019-05-20'
+  path: talks/pt/2019-xaringan-ser-uff/index.qmd
+- title: Adding figures in R Markdown
+  author: Beatriz Milz
+  date: '2020-09-23'
+  path: talks/pt/2020-RStudio-certification/index.qmd
+- title: Colaborando com a Comunidade
+  author: Beatriz Milz
+  date: '2020-09-10'
+  path: talks/pt/2020-colaborando-com-a-comunidade-curso-r/index.qmd
+- title: dplyr joins - Juntando bases de dados
+  author: Beatriz Milz
+  date: '2020-11-03'
+  path: talks/pt/2020-dplyr-joins-curso-r/index.qmd
+- title: Funciones - R para Ciencia de Datos
+  author: Beatriz Milz
+  date: '2020-05-04'
+  path: talks/pt/2020-funciones-r4ds/index.qmd
+- title: Git e GitHub no RStudio
+  author: Beatriz Milz
+  date: '2020-08-27'
+  path: talks/pt/2020-git-e-github-gyn/index.qmd
+- title: Aprenda a usar Git e GitHub no RStudio!
+  author: Equipe da R-Ladies São Paulo
+  date: '2020-10-17'
+  path: talks/pt/2020-hacktoberfest/index.qmd
+- title: Introdução a Linguagem R
+  author: Beatriz Milz
+  date: '2020-08-27'
+  path: talks/pt/2020-intro-R-Curitiba/index.qmd
+- title: Ensino de programação - Como fazer parte da comunidade global The Carpentries?
+  author: Beatriz Milz e Mariana Dias Guilardi
+  date: '2020-11-04'
+  path: talks/pt/2020-python-brasil/index.qmd
+- title: R Markdown
+  author: Beatriz Milz
+  date: '2020-09-29'
+  path: talks/pt/2020-rmarkdown-geocast/index.qmd
+- title: Communities of practice in Latin America
+  author: L. Acion et al
+  date: '2020-07-08'
+  path: talks/pt/2020-user-latin-america/index.qmd
+- title: Introdução ao pacote xaringan - Criando apresentações com R
+  author: Beatriz Milz
+  date: '2019-08-27'
+  path: talks/pt/2020-xaringan-ime-usp/index.qmd
+- title: Apresentações no R ⚔ com xaringan
+  author: Beatriz Milz e Mariana Dias Guilardi
+  date: '2019-09-17'
+  path: talks/pt/2020-xaringan-ime-usp-amostra/index.qmd
+- title: Comunicando seus resultados em R
+  author: Beatriz Milz e Haydee Svab
+  date: '2020-10-19'
+  path: talks/pt/2020-xaringan-latinr/index.qmd
+- title: Faça apresentações ninja em R
+  author: Beatriz Milz
+  date: '2021-09-09'
+  path: talks/pt/2021-3rday-xaringan/index.qmd
+- title: Conhecendo o Hugo Apéro
+  author: Beatriz Milz
+  date: '2021-07-30'
+  path: talks/pt/2021-blogdown-apero/index.qmd
+- title: Colaborando com a Comunidade - Especial Hacktoberfest
+  author: Beatriz Milz
+  date: '2021-10-13'
+  path: talks/pt/2021-colaborando-com-a-comunidade-hacktoberfest-curso-r/index.qmd
+- title: Minha experiência na useR! 2019
+  author: Beatriz Milz
+  date: '2021-04-28'
+  path: talks/pt/2021-experiencia-useR/index.qmd
+- title: Introdução à utilização do Git e GitHub no RStudio
+  author: Beatriz Milz
+  date: '2021-09-11'
+  path: talks/pt/2021-git-e-github-gyn/index.qmd
+- title: Introdução à utilização do Git e GitHub no RStudio
+  author: Beatriz Milz
+  date: '2021-11-26'
+  path: talks/pt/2021-git-github-ence/index.qmd
+- title: Introdução ao GitHub Actions
+  author: Beatriz Milz e Julio Trecenti
+  date: '2021-09-18'
+  path: talks/pt/2021-github-actions-gyn/index.qmd
+- title: Linguagem R para Cientistas Ambientais
+  author: Beatriz Milz
+  date: '2021-11-08'
+  path: talks/pt/2021-intro-R-senacamb/index.qmd
+- title: Jornalismo com R
+  author: Cecília do Lago, Gabriela Caesar, Beatriz Milz
+  date: '2021-08-29'
+  path: talks/pt/2021-jornalismo-com-r/index.qmd
+- title: Scaling feedback using learnr and gradethis in a introductory R course
+  author: Beatriz Milz e Fernando Correa
+  date: '2021-11-10'
+  path: talks/pt/2021-learnr-latinr/index.qmd
+- title: Criando tutoriais interativos com R
+  author: Beatriz Milz
+  date: '2021-08-13'
+  path: talks/pt/2021-learnr-pet-ufpr/index.qmd
+- title: Fazendo amizade com a Python reticulada
+  author: Beatriz Milz
+  date: '2021-10-13'
+  path: talks/pt/2021-python-brasil/index.qmd
+- title: Comunicando os resultados de projetos em Ciência de Dados
+  author: Beatriz Milz
+  date: '2021-10-22'
+  path: talks/pt/2021-rmarkdown-ai-inclusive/index.qmd
+- title: Coleta de dados automatizada e integração contínua utilizando GitHub Actions
+  author: Beatriz Milz
+  date: '2021-06-10'
+  path: talks/pt/2021-ser-uff/index.qmd
+- title: Como aprender R tem sido importante na minha trajetória como Gestora Ambiental
+  author: Beatriz Milz
+  date: '2021-09-30'
+  path: talks/pt/2021-ufv-R/index.qmd
+- title: Capítulos de Workflow do livro R for Data Science
+  author: Beatriz Milz
+  date: '2021-07-14'
+  path: talks/pt/2021-workflow-r4ds/index.qmd
+- title: 'Conhecendo o Quarto: a nova geração do RMarkdown'
+  author: Beatriz Milz
+  date: '2022-11-23'
+  path: talks/pt/2022-amostra-ime-usp-quarto/index.qmd
+- title: Indo além na organização de dados usando o R com tidyverse
+  author: Beatriz Milz
+  date: '2022-10-20'
+  path: talks/pt/2022-cblimnologia/index.qmd
+- title: 'Comunicando seus resultados: Criando apresentações com Quarto'
+  author: Beatriz Milz
+  date: '2022-10-10'
+  path: talks/pt/2022-latinr-quarto-tutorial/index.qmd
+- title: Documentos dinâmicos em RMarkdown
+  author: Beatriz Milz
+  date: '2022-05-20'
+  path: talks/pt/2022-rmarkdown-bost/index.qmd
+- title: Quarto - Conhecendo a evolução do R Markdown
+  author: Beatriz Milz
+  date: '2022-05-25'
+  path: talks/pt/2022-ser-uff/index.qmd
+- title: Texto e código - Escrevendo documentos Científicos com R
+  author: Beatriz Milz
+  date: '2022-05-12'
+  path: talks/pt/2022-texto-e-codigo-geeq/index.qmd
+- title: Utilizando GitHub Actions para baixar dados públicos
+  author: Beatriz Milz
+  date: '2023-04-12'
+  path: talks/pt/2023-04-cervejacomdados-fortaleza/index.qmd
+- title: Introdução ao pacote purrr
+  author: Beatriz Milz
+  date: '2023-04-29'
+  path: talks/pt/2023-04-rladies-gyn-purrr/index.qmd
+- title: Apresentação de resultados no R
+  author: Beatriz Milz
+  date: '2023-05-09'
+  path: talks/pt/2023-05-apresentar-resultados/index.qmd
+- title: Indo além na organização de dados usando o R com tidyverse
+  author: Beatriz Milz e Tereza Lacerda
+  date: '2023-09-21'
+  path: talks/pt/2023-09-amostra-ime-usp-organizacao/index.qmd
+- title: Apresentando os resultados com R
+  author: Beatriz Milz
+  date: '2023-10-28'
+  path: talks/pt/2023-10-apresentar-resultados-linda/index.qmd
+- title: Conhecendo o pacote geobr
+  author: Beatriz Milz
+  date: '2023-11-22'
+  path: talks/pt/2023-11-pacotes-br-geobr/index.qmd
+- title: Pacotes em R de dados brasileiros
+  author: Beatriz Milz
+  date: '2023-11-22'
+  path: talks/pt/2023-11-pacotes-br-r/index.qmd
+- title: Trabalhando com dados espaciais no R
+  author: Beatriz Milz e Laís Brasileiro
+  date: '2023-12-12'
+  path: talks/pt/2023-12-dados-espaciais/index.qmd
+- title: Conhecendo o GitHub Projects
+  author: Beatriz Milz
+  date: '2024-01-20'
+  path: talks/pt/2024-01-github-projects/index.qmd
+- title: O que são dados abertos? O que é o Open Data Day?
+  author: Beatriz Milz
+  date: '2024-03-02'
+  path: talks/pt/2024-03-open-data-day/index.qmd
+- title: Linguagem R e Ciência Aberta
+  author: Beatriz Milz
+  date: '2024-04-19'
+  path: talks/pt/2024-04-podcast-freecodecamp/index.qmd
+- title: Transformação de dados (dplyr) - Parte 1
+  author: Beatriz Milz
+  date: '2024-06-24'
+  path: talks/pt/2024-06-r4ds-dplyr-pt1/index.qmd
+- title: Apresentação de resultados no R
+  author: Beatriz Milz
+  date: '2024-07-30'
+  path: talks/pt/2024-07-apresentar-resultados/index.qmd
+- title: Transformação de dados (dplyr) - Parte 2
+  author: Beatriz Milz
+  date: '2024-07-11'
+  path: talks/pt/2024-07-r4ds-dplyr-pt2/index.qmd
+- title: Transformação de dados (dplyr) - Parte 3
+  author: Beatriz Milz
+  date: '2024-07-29'
+  path: talks/pt/2024-07-r4ds-dplyr-pt3/index.qmd
+- title: Conhecendo o pacote geobr
+  author: Beatriz Milz
+  date: '2024-09-30'
+  path: talks/pt/2024-09-amostra-ime-usp-geobr/index.qmd
+- title: Introdução ao R
+  author: Beatriz Milz
+  date: '2024-10-22'
+  path: talks/pt/2024-10-sicam-intro-r/index.qmd
+- title: A comunidade R fala português
+  author:
+  - Yanina Bellini Saibene
+  - Pedro Faria
+  - Beatriz Milz
+  - Francesca Belem Lopes Palmeira
+  date: '2024-11-06'
+  path: talks/pt/2024-11-05-rOpenSci-traducao-pt/index.qmd
+- title: Live no canal da Curso-R sobre a GitHub Universe
+  author:
+  - Beatriz Milz
+  - Julio Trecenti
+  date: '2024-11-06'
+  path: talks/pt/2024-11-06-github-universe/index.qmd
+- title: Tradução + Hackathon = Traslaton rOpenSci
+  author:
+  - Yanina Bellini Saibene
+  - Beatriz Milz
+  - Pedro Faria
+  - Francesca Palmeira
+  date: '2024-11-18'
+  path: talks/pt/2024-11-18-latinR-translaton/index.qmd
+- title: 'Democratizando a Ciência de Dados em Português: Uma tradução de ''R for
+    Data Science'' (2ª edição) liderada pela comunidade'
+  author:
+  - Cesar A. Galvao
+  - Beatriz Milz
+  - Riva Quiroga
+  - Ariana Cabral
+  - Alberson da Silva Miranda
+  - Marcus Antonio Cardoso Ramalho
+  - Maximilian Canez Fernandes
+  - José Carlos Barbosa
+  - Bruno Mioto
+  - Halian Vilela
+  - Eric Scopinho
+  - Ana Carolina Moreno
+  - Luana Antunes Alexandre
+  - Magno Tairone
+  - Debora Silva
+  - Arthur de Carvalho e Silva
+  - Ían Muliterno
+  - Carolina Musso
+  - Jeanne Franco
+  date: '2024-11-22'
+  path: talks/pt/2024-11-latinR-r4ds/index.qmd
+- title: Introducción a GitHub para Investigador(a|e)s
+  author:
+  - Yanina Bellini Saibene
+  - Beatriz Milz
+  date: '2024-11-18'
+  path: teaching/es/2024-11-18-latinR-GitHub/index.qmd
+- title: Relatórios reprodutíveis com R
+  author: IME-USP
+  date: '2022-02-02'
+  path: teaching/pt/2022-01-verao-ime-usp-relatorios/index.qmd
+- title: Introdução ao R
+  author: Beatriz Milz
+  date: '2022-05-09'
+  path: teaching/pt/2022-05-cebrap-lab-intro-R/index.qmd
+- title: Relatórios reprodutíveis com R
+  author: IME-USP
+  date: '2023-01-23'
+  path: teaching/pt/2023-01-verao-ime-usp-relatorios/index.qmd
+- title: Introdução ao R
+  author: Beatriz Milz
+  date: '2023-06-26'
+  path: teaching/pt/2023-06-cebrap-lab-intro-R/index.qmd
+- title: Visualização de dados no R
+  author: Beatriz Milz
+  date: '2023-08-28'
+  path: teaching/pt/2023-06-cebrap-lab-viz-R/index.qmd
+- title: Análise quantitativa de texto
+  author: Beatriz Milz
+  date: '2023-11-27'
+  path: teaching/pt/2023-11-cebrap-lab-text-as-data/index.qmd
+- title: Relatórios reprodutíveis com R
+  author: IME-USP
+  date: '2024-01-23'
+  path: teaching/pt/2024-01-verao-ime-usp-relatorios/index.qmd
+- title: Introdução ao R
+  author: Beatriz Milz
+  date: '2024-08-01'
+  path: teaching/pt/2024-08-cebrap-lab-intro-R/index.qmd
+- title: Visualização de dados no R
+  author: Beatriz Milz
+  date: '2024-09-23'
+  path: teaching/pt/2024-09-cebrap-lab-viz-R/index.qmd
+- title: Raspagem de dados com R
+  author: Beatriz Milz
+  date: '2024-10-21'
+  path: teaching/pt/2024-10-cebrap-lab-web-scraping /index.qmd
+- title: Introdução à análise de dados no R
+  author:
+  - Beatriz Milz
+  - Pedro Cavalcanti Gonçalves Ferreira
+  - Rafael H. M. Pereira
+  date: '2024-10-01'
+  path: teaching/pt/2024-10-ipea-intro-r/index.qmd
+- title: R intermediário e pesquisa reprodutível
+  author:
+  - Beatriz Milz
+  - Pedro Cavalcanti Gonçalves Ferreira
+  - Rafael H. M. Pereira
+  date: '2025-01-20'
+  path: teaching/pt/2025-01-ipea-intermediario-r/index.qmd
+- title: Relatórios reprodutíveis com R
+  author: IME-USP
+  date: '2025-01-14'
+  path: teaching/pt/2025-01-verao-ime-usp-relatorios/index.qmd
+- title: Pacotes em R
+  author: Curso-R
+  date: '2022-11-01'
+  path: teaching/pt/cursor-pacotes/index.qmd
+- title: R para Ciência de Dados I
+  author: Curso-R
+  date: '2024-01-25'
+  path: teaching/pt/cursor-r4ds-1/index.qmd
+- title: Relatórios e apresentações
+  author: Curso-R
+  date: '2023-11-01'
+  path: teaching/pt/cursor-relatorios/index.qmd
+- title: Visualização de dados
+  author: Curso-R
+  date: '2024-03-14'
+  path: teaching/pt/cursor-visualizacao/index.qmd
