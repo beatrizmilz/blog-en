@@ -3,7 +3,7 @@ title: "Repost: Books, Beginners, and Big Ideas: Beatriz Milz on Fostering R-Lad
 description: "Beatriz Milz, a co-organizer of R-Ladies São Paulo, recently spoke with the R Consortium about the vibrant growth of the R community in São Paulo and its commitment to inclusivity and accessible learning."
 author: "R Consortium"
 date: "2024-12-23"
-categories: ["Repost", "Community"]
+categories: ["Repost", "Community", "R-Ladies", "R-Ladies São Paulo"]
 image: "featured.webp"
 toc: true
 draft: false
