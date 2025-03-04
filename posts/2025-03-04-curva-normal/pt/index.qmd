@@ -1,0 +1,99 @@
+---
+title: "Adicionando a curva normal em um gráfico de distribuição"
+author: "Beatriz Milz"
+date: "2025-03-04"
+categories: ["Tutorial", "Visualização de dados", "ggplot2", "IBGE"]
+image: "images/piramide-criada.png"
+toc: true
+draft: true
+cache: true
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+#| message: false
+#| warning: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+Ao trabalhar com análise de dados, um dos gráficos mais comuns que utilizamos é o gráfico de densidade, que nos permite observar a distribuição de uma variável contínua. No entanto, às vezes é útil comparar essa distribuição com uma distribuição normal, para verificar o quão próximo os dados estão dessa curva teórica.
+
+Neste post, vou mostrar como adicionar uma curva normal simulada sobreposta ao gráfico de densidade de uma variável contínua.
+
+## Passo 1: Carregar os pacotes necessários
+
+Antes de qualquer coisa, vamos garantir que os pacotes necessários estão carregados. Neste caso, utilizaremos os pacotes `{ggplot2}` (que faz parte do `{tidyverse}`) e os dados sobre os pinguins de Palmer, que estão disponíveis no pacote `{dados}`.
+
+```{r}
+library(dados)
+library(tidyverse)
+```
+
+## Passo 2: Criar o gráfico de densidade
+
+Agora, vamos plotar a distribuição da massa corporal dos pinguins utilizando a função `geom_density()`, que gera a curva de densidade dos dados.
+
+```{r}
+pinguins |> 
+  ggplot() +
+  aes(x = massa_corporal) +
+  geom_density()
+```
+
+Essa visualização já nos fornece uma visão geral da distribuição dos dados de massa corporal. Agora, vamos para o próximo passo: adicionar a curva normal sobre essa distribuição.
+
+## Passo 3: Calcular os parâmetros da distribuição normal
+
+Para simular uma curva normal, precisamos calcular a média e o desvio padrão da massa corporal dos pinguins. Com esses valores, podemos simular a distribuição normal que melhor se ajustaria a esses dados.
+
+```{r}
+media <- mean(pinguins$massa_corporal, na.rm = TRUE)
+desvio_padrao <- sd(pinguins$massa_corporal, na.rm = TRUE)
+valor_minimo <- min(pinguins$massa_corporal, na.rm = TRUE)
+valor_maximo <- max(pinguins$massa_corporal, na.rm = TRUE)
+intervalo <- valor_minimo:valor_maximo
+```
+
+Aqui, a variável `media` armazena o valor médio da massa corporal, e `desvio_padrao` captura a variação dos dados em torno dessa média. Definimos um `intervalo` que vai do valor mínimo ao valor máximo dos dados, para simular nossa curva normal.
+
+## Passo 4: Simular a curva normal
+
+Agora que já temos a média e o desvio padrão, podemos simular a curva normal usando a função `dnorm()`. Ela calcula a densidade da distribuição normal para cada valor do intervalo que definimos.
+
+```{r}
+densidade_simulada <-
+  dnorm(intervalo, mean = media, sd = desvio_padrao)
+
+df_normal <- tibble(massa = intervalo, density = densidade_simulada)
+```
+
+Aqui, criamos um `dataframe` (`df_normal`) que contém a densidade simulada para cada valor da massa corporal. Esse dataframe será utilizado para adicionar a curva ao nosso gráfico.
+
+```{r}
+df_normal |> 
+  ggplot() + 
+  aes(x = massa, y = density) +
+  geom_line(
+  color = "red", linetype = "dashed"
+  )
+```
+
+## Passo 5: Adicionar a curva normal ao gráfico
+
+Agora que temos o gráfico de densidade dos dados e a curva normal simulada, vamos sobrepor as duas visualizações em um único gráfico. Utilizamos `geom_line()` para adicionar a linha da curva normal e ajustamos a transparência (com `alpha`) e a cor da linha.
+
+```{r}
+pinguins |> 
+  ggplot() +
+  aes(x = massa_corporal) +
+  geom_density() +
+  geom_line(
+    data = df_normal,
+    aes(x = massa, y = density),
+    color = "red", linetype = "dashed"
+  )
+```
+
+Aqui está! Agora temos um gráfico que mostra a distribuição real da massa corporal dos pinguins, comparada a uma curva normal simulada, representada pela linha vermelha tracejada.
