@@ -3,7 +3,7 @@ title: "Adicionando a curva da distribuição normal em um gráfico de distribui
 author: "Beatriz Milz"
 date: "2025-03-04"
 categories: ["Tutorial", "Visualização de dados", "ggplot2"]
-image: "images/piramide-criada.png"
+image: "images/featured.png"
 toc: true
 draft: false
 code-link: true
@@ -22,19 +22,17 @@ multilang()
 
 Ao trabalhar com análise de dados, um dos gráficos mais comuns que utilizamos é o gráfico de densidade, que nos permite observar a distribuição de uma variável contínua. No entanto, às vezes é útil comparar essa distribuição "real" com uma **distribuição normal**[^1], para verificar o quão próximo os dados estão dessa curva teórica.
 
+[^1]: Conhecida também como "curva de sino", "curva normal", "gaussiana".
 
 O objetivo deste post não é fazer uma explicação sobre o que é uma distribuição normal. Caso você não esteja familiarizado com o conceito, [esse material pode ajudar](https://www.inf.ufsc.br/~andre.zibetti/probabilidade/normal.html).
 
-
-[^1]: Conhecida também como "curva de sino", "curva normal", "gaussiana".
-
 Neste post, vou mostrar como adicionar uma curva normal simulada sobreposta ao gráfico de densidade de uma variável contínua.
 
-::: {.callout-note}
+![](images/featured.png){fig-align="center"}
+
+::: callout-note
 Esse post foi escrito a partir de uma dúvida que recebi alguns meses atrás! Na época eu respondi, e a resposta ficou guardada em um script. Decidi transformá-la em um post para compartilhar com outras pessoas também. Espero que seja útil!
 :::
-
-
 
 ### Passo 1: Carregar os pacotes necessários
 
@@ -72,12 +70,9 @@ Essa visualização já nos fornece uma visão geral da distribuição dos dados
 
 ## Modo 1: Com a função `stat_function()`
 
-
-
 ### Passo 3: Adicionar a curva normal ao gráfico
 
 A função `stat_function()` permite adicionar uma função estatística ao gráfico. Neste caso, vamos utilizar a função de densidade da distribuição normal (`dnorm()`) no argumento `fun` (`fun = dnorm`), e ajustar a cor da linha para vermelho.
-
 
 ```{r}
 #| label: pinguins-densidade-stat
@@ -89,7 +84,6 @@ pinguins |>
                 color = "red",
                 linetype = "dashed")
 ```
-
 
 Perceba que a curva que foi criada está "achatada". Ela não está ajustada aos dados, pois não informamos os parâmetros da distribuição normal (média e desvio padrão), e a função `dnorm()` foi executada utilizando os valores padrão (média = 0 e desvio padrão = 1).
 
@@ -116,14 +110,13 @@ pinguins |>
   )
 ```
 
-
 Aqui está! Agora temos um gráfico de densidade da massa corporal dos pinguins com a curva normal sobreposta. Isso nos permite visualizar a distribuição real dos dados e compará-la com a distribuição normal.
 
 ## Modo 2: Simulando a curva normal
 
 Outra forma de adicionar a curva normal ao gráfico é simulando a distribuição normal com base nos dados.
 
-No dia-a-dia, é mais comum utilizarmos a função `stat_function()` para adicionar a curva normal. 
+No dia-a-dia, é mais comum utilizarmos a função `stat_function()` para adicionar a curva normal.
 
 Mas o legal dessa abordagem é que podemos entender o passo a passo de como a curva normal é simulada, e como os parâmetros da distribuição normal são calculados a partir dos dados.
 
@@ -131,8 +124,7 @@ Vamos ver como fazer isso a seguir, continuando a partir do passo 2.
 
 ### Passo 3: Calcular os parâmetros da distribuição normal
 
-Para simular uma curva normal, precisamos calcular a média e o desvio padrão da massa corporal dos pinguins.
-Com esses valores, podemos simular a distribuição normal que melhor se ajustaria a esses dados.
+Para simular uma curva normal, precisamos calcular a média e o desvio padrão da massa corporal dos pinguins. Com esses valores, podemos simular a distribuição normal que melhor se ajustaria a esses dados.
 
 ```{r}
 media <- mean(pinguins$massa_corporal, na.rm = TRUE)
@@ -206,5 +198,3 @@ Se você gostou deste post, você pode me acompanhar nas seguintes plataformas:
 -   [BlueSky](https://bsky.app/profile/beamilz.com)
 
 -   [Instagram](https://www.instagram.com/dadoseambiente/)
-
-

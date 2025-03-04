@@ -33,6 +33,7 @@ jobs:
             any::janitor
             any::fs
             any::yaml
+            any::dados
 
 
       - name: Publish to GitHub Pages (and render)
