@@ -1,0 +1,39 @@
+---
+toc: true
+author: 
+  - Riva Quiroga
+  - Beatriz Milz
+  - Sara Mortara
+  - Andrea Sánchez-Tapia
+  - Alejandra Andrea Tapia Silva
+  - Beatriz Maurer Costa
+  - Jean Prado
+  - Renata Hirota
+  - William Amorim
+  - Emmanuelle Rodrigues Nunes
+  - Eric Scopinho
+categories: 
+  - Pacote em R
+  - Tradução
+  - CRAN
+date: '2020-06-16'
+links:
+- icon: box
+  icon_pack: far
+  name: Website
+  url: https://cienciadedatos.github.io/dados/
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/cienciadedatos/dados/  
+title: "Pacote em R: {dados}"
+subtitle: "Pacote com bases de dados traduzidas para o português"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```

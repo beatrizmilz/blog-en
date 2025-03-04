@@ -1,0 +1,32 @@
+---
+toc: true
+author: 
+  - Haydeé Svab
+  - Beatriz Milz
+  - Diego Rabatone
+  - Rafael H. M. Pereira
+categories: 
+  - Pacote em R
+  - Dados Abertos
+  - CRAN
+date: '2022-01-01'
+links:
+- icon: box
+  icon_pack: far
+  name: Website
+  url: https://hsvab.github.io/odbr/
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/hsvab/odbr
+title: "Pacote em R: {odbr}"
+subtitle: "Pacote com dados de pesquisa Origem Destino (OD) no Brasil"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```

@@ -1,0 +1,38 @@
+---
+toc: true
+author: 
+  - Beatriz Milz
+  - Luana Antunes
+categories: 
+  - Livro
+  - Comunidade
+  - Clube do livro
+date: '2024-01-01'
+links:
+- icon: book
+  icon_pack: far
+  name: Livro
+  url: https://pt.r4ds.hadley.nz/
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds  
+- icon: youtube
+  icon_pack: fab
+  name: Playlist com as gravações
+  url: https://youtube.com/playlist?list=PLufjVrrUAoSdAk_I8l_MJRCwS8P_R-isY&feature=shared
+- icon: file
+  icon_pack: far
+  name: Documento com links
+  url: https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing
+title: "Clube do Livro R-Ladies São Paulo: R for Data Science 2ed"
+subtitle: "Co-organização do clube do livro gratuito."
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```

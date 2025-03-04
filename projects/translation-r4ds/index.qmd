@@ -1,0 +1,47 @@
+---
+toc: true
+author: 
+  - Beatriz Milz
+  - Riva Quiroga
+  - Alberson Miranda
+  - Ariana Cabral
+  - Arthur C. Silva
+  - Beatriz C. Colvara
+  - Bruno Mioto
+  - Carolina Musso
+  - Cesar A. Galvao
+  - Debora Silva
+  - Eric Scopinho
+  - Fernanda Fiel Peres
+  - Halian Vilela
+  - Jeanne Franco
+  - José Carlos Barbosa
+  - Luana Antunes Alexandre
+  - Lígia Louzada
+  - Magno Tairone
+  - Marcus Ramalho
+  - Maximilian Canez Fernandes
+categories: 
+  - Livro
+  - Tradução
+date: '2022-01-01'
+links:
+- icon: book
+  icon_pack: far
+  name: Livro
+  url: https://pt.r4ds.hadley.nz/
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/cienciadedatos/pt-r4ds/tree/traducao-pt-2ed  
+title: "Coordenação da tradução do livro R for Data Science 2ed"
+subtitle: "Participação na coordenação, na tradução e revisão de capítulos do livro escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund."
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```

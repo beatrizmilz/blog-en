@@ -6,11 +6,12 @@ listing:
     type: grid
     fields: [image, date, title, subtitle]
     sort: "date desc"
-    #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 3  
+    page-size: 10 
 ---
+
+Para informações mais atualizadas/detalhadas, consulte o [currículo lattes](http://lattes.cnpq.br/5150665880581477).
 
 ## Formação
 
@@ -22,17 +23,19 @@ listing:
 
 ## Áreas de interesse
 
--   Recursos hídricos
+-   Recursos hídricos / Governança da água
 
 -   Transparência e acesso à informação
-
--   Governança da água
 
 -   Ciência de dados aplicado à ciências ambientais
 
 ## Grupos de pesquisa
 
--   (2019-Atualmente) - [Grupo de Acompanhamento e Estudos em Governança Ambiental](https://sites.usp.br/govamb/pagina-2/)
+-   (2024-Atual) [ICOLMA - The impact of Covid19 on livelihoods, mobility and accessibility of marginalized groups](https://ips.raumplanung.tu-dortmund.de/en/research/projects/icolma/)
+
+<!-- -->
+
+-   (2019-Atual) - [Grupo de Acompanhamento e Estudos em Governança Ambiental](https://sites.usp.br/govamb/pagina-2/)
 
 -   (2019-2021) - [GovernAgua -- Transforming water governance in South America: from reaction to adaptation and anticipation](https://saras-institute.org/governagua-transforming-water-governance-in-south-america-from-reaction-to-adaptation-and-anticipation/) - Agência Financiadora: Inter-American Institute for Global Change Research (IAI)
 
@@ -40,7 +43,7 @@ listing:
 
 ## Pesquisas selecionadas
 
-- Em construção!
+-   Em construção!
 
 ::: {#research}
 :::

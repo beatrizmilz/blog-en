@@ -1,87 +1,34 @@
 ---
 title: "Beatriz Milz"
-listing:
-  - id: talks
-    contents: "{talks,teaching}/{pt,es,en}/*/index.qmd"
-    type: grid
-    fields: [image, date, title, subtitle]
-    sort: "date desc"
-    #categories: cloud
-    sort-ui: false
-    filter-ui: false
-    page-size: 6
-  - id: posts
-    contents: "posts/*/pt/index.qmd"
-    type: grid
-    fields: [image, date, title, subtitle, categories, author, reading-time]  
-    sort: "date desc"
-    #categories: cloud
-    sort-ui: false
-    filter-ui: false
-    page-size: 3
-  # - id: research
-  #   contents: "{research}/{pt,es,en}/*/index.qmd"
-  #   type: grid
-  #   fields: [image, date, title, subtitle]
-  #   sort: "date desc"
-  #   #categories: cloud
-  #   sort-ui: false
-  #   filter-ui: false
-  #   page-size: 3    
+subtitle: "Postdoc at UFABC"
 page-layout: full
 title-block-banner: false
-comments: false
 toc: false
 about:
-  template: marquee
-#  image: bea.jpg
-  # links:
-  #  - icon: envelope
-  #    href: mailto:milz.bea@gmail.com
-  #  - icon: github
-  #    href: https://github.com/beatrizmilz
-  #  - icon: linkedin
-  #    href: https://www.linkedin.com/in/beatrizmilz/
-  #  - text: "{{< ai researchgate >}}"
-  #    href: https://www.researchgate.net/profile/Beatriz-Milz
-  #  - text: "{{< ai lattes >}}"
-  #    href: http://lattes.cnpq.br/5150665880581477
-  #  - text: "{{< ai orcid >}}"
-  #    href: https://orcid.org/0000-0002-3064-4486
-  #  - icon: instagram
-  #    href: https://www.instagram.com/dadoseambiente/
-  #  - icon: bookmark-heart
-  #    href: https://www.skoob.com.br/share/user/beatrizmilz
-  #  - text: "{{< fa brands goodreads >}}"
-  #    href: https://www.goodreads.com/user/show/180775178      
+  template: jolla
+  image: bea.jpg
 ---
 
-<!-- ::: {#hero-heading} -->
+Hi! I'm Bea.  This is my **personal website**. Here you can find a lot of content about R, Git and GitHub, environmental data science and other things I'm interested in.  Feel free to explore my website and [get in touch](mailto: milz.bea@gmail.com) if you have any suggestion! 
 
-<!-- **Português:** Boas vindas à minha página pessoal! Aqui você pode encontrar meus textos do blog, palestras e outros projetos em que estou trabalhando. -->
 
-<!-- **English:** Welcome to my website! You can find here my blog posts, talks, and other projects I'm working on. -->
+👩‍💻 [about](about.qmd)  (en) | [sobre](about-pt.qmd)  (pt-br) | [sobre](about-es.qmd) (es)
 
-<!-- ::: -->
+📑 [blog posts](posts/en.qmd) (en) | [textos](posts/pt.qmd) (pt-br)| [textos](posts/es.qmd) (es)
 
-<!-- ------------------------------------------------------------------------ -->
+👩‍🏫 [talks, workshops, etc](content.qmd) 
 
-## Textos/Posts
+📚 [projects / projetos](projects/index.qmd)
 
-[Veja todos os textos aqui! / See all posts here!](posts/index.qmd)
+🎓 [research / pesquisa](research/index.qmd) (under construction 🚧)
 
-::: {#posts}
+🎥 [videos](videos.qmd) 
+
+
+
+::: {.callout-note}
+
+## In which language is this website?
+
+My native language is Brazilian Portuguese (pt-br), but I have presented/created content also in English and Spanish. This blog has content in those 3 languages, but not everything is translated. If you want to see a specific post translated, please let me know!
 :::
-
-## Apresentações/Presentations
-
-[Veja todas as apresentações aqui! / See all talks here!](content.qmd)
-
-::: {#talks}
-:::
-
-<!-- ## Pesquisa/Research -->
-
-<!-- ::: {#research} -->
-
-<!-- ::: -->

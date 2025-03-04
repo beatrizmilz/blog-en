@@ -3,7 +3,7 @@ title: "Posts"
 listing:
   - id: talks
     contents: "**/*/index.qmd"
-    type: grid
+    type: default
     fields: [image, date, title, subtitle]
     sort: "date desc"
     categories: cloud
