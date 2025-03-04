@@ -1,89 +1,67 @@
 ---
-title: "Porque era importante para mim participar de um evento sobre Ciência de Dados Ambientais?"
-subtitle: "Série: Relato da participação no evento *Environmental Data Science Summit* - Parte 1"
+title: "🇧🇷 Relato da participação no evento *Environmental Data Science Summit* - Parte 2"
 author: "Beatriz Milz"
-date: "2024-02-11"
+date: "2024-08-25"
 categories: ["Events", "Environmental Data Science", "Ciências Ambientais", "Ciência de dados ambientais"]
 image: "eds-nceas.png"
 toc: true
 draft: true
 ---
 
-## Introdução
-
-Entre os dias 6 e 7 de fevereiro de 2024, participei do evento [*Environmental Data Science Summit*](https://eds-summit.github.io/), em Santa Bárbara - Califórnia.
-
-Para compartilhar as minhas impressões sobre essa experiência, comecei a escrever um texto e ele ficou tão grande que decidi dividir em partes. Neste primeiro texto, vou falar sobre o meu interesse em participar no evento!
-
-Se você não me conhece ainda, eu sou a Beatriz Milz. Atualmente doutoranda em Ciências Ambientais no [Instituto de Energia e Ambiente - Universidade de São Paulo (PROCAM/IEE/USP)](http://www.iee.usp.br/?q=pt-br/programa-de-p%C3%B3s-gradua%C3%A7%C3%A3o-em-ci%C3%AAncia-ambiental), com o privilégio de ser orientada pelo [Prof. Dr. Pedro R. Jacobi](https://scholar.google.com.br/citations?user=LavkF8cAAAAJ&hl=pt-BR), e co-orientada pela [Profa. Dra. Sandra Momm](https://scholar.google.com.br/citations?hl=pt-BR&user=c6tyJTkAAAAJ), duas pessoas incríveis! Desde 2018, comecei a estudar programação para análise de dados, para utilizar na minha pesquisa. Atualmente também trabalho como cientista de dados na [R6](http://www.rseis.com.br/), uma empresa de consultoria e treinamentos na área de estatística e ciência de dados.
+Esse texto é uma continuação do post [Por que era importante para mim participar de um evento sobre Ciência de Dados Ambientais?](/posts/2024-02-13-eds-summit-pt-1/pt/).  Esse post está saindo bem **atrasado**, mas antes tarde do que mais tarde ainda!
 
 ## Sobre o evento
 
-O evento "Environmental Data Science Summit" foi organizado pelo [National Center for Ecological Analysis and Synthesis](https://www.nceas.ucsb.edu/) (NCEAS), um centro de pesquisa afiliado à [Universidade da Califórnia em Santa Bárbara (UCSB)](https://www.ucsb.edu/).
+Entre os dias 6 e 7 de fevereiro de 2024, participei do evento [*Environmental Data Science Summit*](https://eds-summit.github.io/), em Santa Bárbara - Califórnia. Nessa edição do evento, o tema central foi **"Comunicar e traduzir dados ambientais"**.
 
-O objetivo do evento é construir e fomentar a colaboração dentro da comunidade de **Ciência de Dados Ambientais**.
+O evento foi organizado pelo [National Center for Ecological Analysis and Synthesis](https://www.nceas.ucsb.edu/) (NCEAS), um centro de pesquisa afiliado à [Universidade da Califórnia em Santa Bárbara (UCSB)](https://www.ucsb.edu/).
 
-Mas, afinal, o que é Ciência de Dados Ambientais? Vamos lá!
+O objetivo do evento é construir e fomentar a colaboração dentro da comunidade de **Ciência de Dados Ambientais**. 
 
-## O que é Ciência de Dados Ambientais?
+A seguir, conto um pouco sobre o evento, e deixo algumas dicas para quem quer participar da edição de 2025!
 
-Segundo o [NCEAS](https://eds-summit.github.io/):
+## Apresentações principais (Keynotes)
 
-> **Ciência de Dados Ambientais** (*Environmental Data Science* - EDS) é um campo em crescimento, que utiliza abordagens interdisciplinares para investigar e responder a questões ambientais com ferramentas modernas de ciência de dados. O campo é amplo, diverso e está em expansão.
+O evento contou com 4 apresentações principais, e todas foram muito interessantes!
 
-## Contextualizando a minha participação no evento
+A primeira apresentação foi do [Scott St. George](https://www.linkedin.com/in/stgeorgescott/), e ele falou da experiência dele trabalhando com ...
 
-Para fazer sentido o motivo de ser tão importante pra mim participar deste evento, é importante contextualizar as minhas experiências nos últimos anos. *(Mas, se você quiser pular essa parte, pode ir direto para a próxima seção)*
+- Somayeh Dodge
 
--   A minha formação universitária começou em **2012**, quando entrei no curso de Gestão Ambiental da EACH/USP.
+- Clinton Johnson
 
--   Entre **2014 e 2015**, fiz um estágio no Núcleo Técnico de Gestão Ambiental, da Secretaria Municipal de Segurança Urbana, da Prefeitura Municipal de São Paulo (NTGA/SMSU/PMSP). No NTGA, eu trabalhei em um projeto relacionado à resgate de animais silvestres vitimados, e nesse projeto eu participava ativamente na **elaboração de relatórios e mapas, a partir dos dados de ocorrências** atendidas pela Guarda Civil Metropolitana Ambiental. Nessa época, fiz cursos e aprendi bastante na prática sobre Sistemas de Informações Geográficas (SIG), Geoprocessamento, Excel, e como usar o QGIS.
+- Jamal Watkins
 
--   Quando comecei a aprender R em 2018, já com o mestrado finalizado, eu me encantei com o RMarkdown e com a possibilidade de criar relatórios reprodutíveis. Para mim, ficou claro que usar programação para realizar minhas pesquisas era uma forma muito mais rápida e eficiente do que eu estava acostumada. Isso me incentivou a estudar e aprender mais sobre o assunto.
 
--   No doutorado, o percurso de cientista ambiental que usava R para análise de dados foi um pouco solitário: não encontrei pessoas no programa com interesses similares, nem disciplinas que me ajudassem a aprofundar nesse caminho. Por isso, eu comecei a buscar disciplinas e eventos, em outros institutos/cursos, que me ajudassem a me aprofundar nesse caminho.
+## Atividade em grupo (formato *unconference*)
 
--   Em 2021, participei do [Curso de Verão em Ciências Sociais Computacionais (*Summer Institute in Computational Social Science - SICSS*)](https://sicss.io/2024/fgv-ecmi-brazil/) (online devido à pandemia). Foi uma experiência incrível, durante 2 semanas, que me ajudou a entender melhor como a ciência de dados pode ser aplicada em outras áreas, e como a colaboração entre áreas pode ser muito enriquecedora. Fui super bem recebida, e aprendi muito com as pessoas que participaram do curso.
+Uma parte importante do EDS Summit foram as atividades em grupo.
+Primeiro, as pessoas eram 
 
--   Enquanto estava lendo os textos recomendados no SICSS, comecei a pensar: "será que tem algo parecido com isso, mas voltado para a área ambiental?". Foi aí que descobri o termo *Environmental Data Science*. Desde então, tenho pesquisado sobre isso, e juntado os links que encontro em um [repositório no GitHub](https://github.com/beatrizmilz/Environmental-Data-Science).
+## Momentos de conexão no EDS Summit 2024
 
-[![Captura de tela do repositório](github-repo.png)](https://github.com/beatrizmilz/Environmental-Data-Science)
 
--   Um dos links que encontrei foi o do evento "Environmental Data Science Summit". Fiquei imediatamente interessada, mas quando fui me inscrever (dessa vez para a primeira edição), vi que o apoio financeiro para participar do evento era apenas para pessoas que moravam nos EUA.
 
--   Certo tempo depois, vi que a segunda edição do evento estava com inscrições abertas. Dessa vez, não dizia nada no site sobre ser apenas para pessoas que moravam nos EUA. Me inscrevi! Fui selecionada, porém a organização apontou que não seria possível fornecer apoio financeiro para o deslocamento. Conversei com o meu marido, e decidimos que eu iria mesmo assim, pois acreditamos que o evento seria muito enriquecedor para a minha carreira.
+## Dicas para quem quer participar do EDS Summit 2025
 
--   Em resumo: eu queria muito ir para conectar com pessoas que estão na mesma área que eu, e para aprender mais sobre o que está sendo feito na área de *Environmental Data Science*!
+- **Datas:** A próxima edição do EDS Summit acontecerá entre 4 e 6 de fevereiro de 2025, em Santa Bárbara - Califórnia - Estados Unidos.
 
-## Formato do evento
+- **Inscrições:** As inscrições estão abertas até dia **04 de outubro de 2024**. O link para inscrição está disponível no [site do evento](https://eds-summit.github.io/).
 
-O evento foi presencial, e contou com 4 apresentações principais (*keynotes*), atividades em grupo, e tempo para socialização e conexão entre os participantes.
+- **Visto:** Caso você precise de visto para entrar nos Estados Unidos, recomendo que comece a pesquisar o quanto antes. Pelo menos para as pessoas do Brasil, esse processo pode demorar bastante!!
 
-### Apresentações principais (*Keynotes*)
+- **Auxílio financeiro:** A organização oferece um auxílio financeiro para uma parte dos participantes. Segundo o site, o auxílio financeiro cobre o transporte, hospedagem durante os dias do evento, e a taxa de inscrição do evento. Mas atenção: na edição de 2024, o auxílio de transporte apenas estava disponível para pessoas que moravam nos Estados Unidos. Caso você viaje de outro país, você provavelmente precisará pagar o próprio transporte, então recomendo considerar isso no seu planejamento financeiro da viagem.
 
-#### Scott St. George
+- **Hospedagem:** Em 2024, o auxílio contemplou a hospedagem nos dias do evento, e a organização fez as reservas com o hotel. Se você for ficar alguns dias extras, recomendo esperar as informações sobre isso e checar com a organização as datas de check-in e check-out. O hotel da edição de 2024 era bem fora do meu orçamento, então fiquei uns dias extras em um hostel chamado ["ITH Santa Barbara"](https://ithhostels.com/ith-santa-barbara-hostel-availability/). Lá era mais acessível, e fiquei em um quarto compartilhado apenas com mulheres (Female Dorm). A equipe era bem amigável! Caso você fique alguns dias extras na cidade, o site [booking](https://www.booking.com/) ajuda a pesquisar opções de acomodação por lá.
 
-...
+- **Viagem:** Para quem for viajar do Brasil: a LATAM tem alguns vôos por semana de Guarulhos (GRU) direto para Los Angeles (LAX). É uma opção bem melhor do que viajar até a costa leste, e depois ter que cruzar os Estados Unidos até a costa Oeste. Porém esse vôo parte em dias específicos, então recomendo pesquisar testando diferentes dias da semana. 
 
-#### Somayeh Dodge
+- **Transporte local:** De Los Angeles para Santa Bárbara tem algumas opções de transporte, como ônibus e trem. Eu usei a opção do ônibus que sai do aeroporto e vai até Santa Bárbara. Porém o ônibus não para no centro da cidade (nem em uma distância caminhável), e foi necessário pedir um uber até a cidade. Cuidado, o Uber nos Estados Unidos é bem caro para nós brasileiros! Na volta eu usei o trem, e ele parte da cidade, então não precisei pagar uber (ufa!).
 
-...
+- **Caminhando por Santa Bárbara:** Em Santa Bárbara, eu fiz quase tudo caminhando. A cidade é linda. Muita coisa é possível fazer caminhando até 30 minutos. A região onde o evento acontece é plana, então é bem tranquilo para caminhar. Eu me senti bem segura na cidade, mesmo andando sozinha. 
 
-#### Clinton Johnson
+Espero que essas dicas sejam úteis para quem for viajar. Se tiver alguma dúvida específica, me pergunte por email: <milz.bea@gmail.com>.
 
-...
-
-#### Jamal Watkins
-
-...
-
-## Próximas edições do evento
-
--   A primeira edição ocorreu em 2023, e teve como tema central "Explorando a diversidade na ciência de dados ambientais".
-
--   Essa foi a segunda edição do evento (em 2024), tendo como tema central "Comunicar e traduzir dados ambientais".
-
--   A terceira edição já está sendo planejada para **2025**.
 
 ## Links úteis
 
