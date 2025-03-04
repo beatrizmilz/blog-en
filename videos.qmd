@@ -1,6 +1,5 @@
 ---
 title: "Videos"
-comments: false
 ---
 
 **Português:** Essa [playlist no YouTube](https://youtube.com/playlist?list=PLR44bTVMOm7P7SY8dkGudwXXabhEjYTT4&si=4Wk8K0O4uyS1oXv0) reúne mais de 50 vídeos nos quais participei, abordando temas como R, Git, GitHub, entre outros.

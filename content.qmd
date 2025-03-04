@@ -23,7 +23,6 @@ listing:
     page-size: 100           
 page-layout: full
 title-block-banner: false
-comments: false
 toc: true
 ---
 

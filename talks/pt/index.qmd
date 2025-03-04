@@ -1,6 +1,5 @@
 ---
 title: "Apresentações em português"
-comments: false
 listing:
   contents: "*/*.qmd"
   sort: "date desc"

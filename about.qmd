@@ -1,6 +1,5 @@
 ---
 title: "Beatriz Milz"
-comments: false
 image: bea.jpg
 about:
   template: trestles

@@ -1,6 +1,5 @@
 ---
 title: "Talks"
-comments: false
 listing:
   contents: "*/*.qmd"
   sort: "date desc"
