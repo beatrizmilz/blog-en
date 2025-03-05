@@ -240,20 +240,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   <ul class="collapse">
 <li><a href="#passo-1-carregar-os-pacotes-necess%C3%A1rios" id="toc-passo-1-carregar-os-pacotes-necessários" class="nav-link" data-scroll-target="#passo-1-carregar-os-pacotes-necess%C3%A1rios">Passo 1: Carregar os pacotes necessários</a></li>
   <li><a href="#passo-2-criar-o-gr%C3%A1fico-de-densidade" id="toc-passo-2-criar-o-gráfico-de-densidade" class="nav-link" data-scroll-target="#passo-2-criar-o-gr%C3%A1fico-de-densidade">Passo 2: Criar o gráfico de densidade</a></li>
-  <li>
-<a href="#modo-1-com-a-fun%C3%A7%C3%A3o-stat_function" id="toc-modo-1-com-a-função-stat_function" class="nav-link" data-scroll-target="#modo-1-com-a-fun%C3%A7%C3%A3o-stat_function">Modo 1: Com a função <code>stat_function()</code></a>
-  <ul class="collapse">
-<li><a href="#passo-3-adicionar-a-curva-normal-ao-gr%C3%A1fico" id="toc-passo-3-adicionar-a-curva-normal-ao-gráfico" class="nav-link" data-scroll-target="#passo-3-adicionar-a-curva-normal-ao-gr%C3%A1fico">Passo 3: Adicionar a curva normal ao gráfico</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#modo-2-simulando-a-curva-normal" id="toc-modo-2-simulando-a-curva-normal" class="nav-link" data-scroll-target="#modo-2-simulando-a-curva-normal">Modo 2: Simulando a curva normal</a>
-  <ul class="collapse">
-<li><a href="#passo-3-calcular-os-par%C3%A2metros-da-distribui%C3%A7%C3%A3o-normal" id="toc-passo-3-calcular-os-parâmetros-da-distribuição-normal" class="nav-link" data-scroll-target="#passo-3-calcular-os-par%C3%A2metros-da-distribui%C3%A7%C3%A3o-normal">Passo 3: Calcular os parâmetros da distribuição normal</a></li>
-  <li><a href="#passo-4-simular-a-curva-normal" id="toc-passo-4-simular-a-curva-normal" class="nav-link" data-scroll-target="#passo-4-simular-a-curva-normal">Passo 4: Simular a curva normal</a></li>
-  <li><a href="#passo-5-adicionar-a-curva-normal-ao-gr%C3%A1fico" id="toc-passo-5-adicionar-a-curva-normal-ao-gráfico" class="nav-link" data-scroll-target="#passo-5-adicionar-a-curva-normal-ao-gr%C3%A1fico">Passo 5: Adicionar a curva normal ao gráfico</a></li>
-  </ul>
-</li>
+  <li><a href="#passo-3-adicionar-a-curva-normal-ao-gr%C3%A1fico" id="toc-passo-3-adicionar-a-curva-normal-ao-gráfico" class="nav-link" data-scroll-target="#passo-3-adicionar-a-curva-normal-ao-gr%C3%A1fico">Passo 3: Adicionar a curva normal ao gráfico</a></li>
   <li><a href="#conclus%C3%A3o" id="toc-conclusão" class="nav-link" data-scroll-target="#conclus%C3%A3o">Conclusão</a></li>
   </ul>
 </li>
@@ -294,12 +281,16 @@ Nota
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cienciadedatos/dados">dados</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_pinguins</span> <span class="op">&lt;-</span> <span class="fu">dados</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/dados/man/pinguins.html">pinguins</a></span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>massa_corporal_kg <span class="op">=</span> <span class="va">massa_corporal</span> <span class="op">/</span> <span class="fl">1000</span><span class="op">)</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section><section id="passo-2-criar-o-gráfico-de-densidade" class="level3"><h3 class="anchored" data-anchor-id="passo-2-criar-o-gráfico-de-densidade">Passo 2: Criar o gráfico de densidade</h3>
 <p>Agora, vamos plotar a distribuição da massa corporal dos pinguins utilizando a função <code><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density()</a></code>, que gera a curva de densidade dos dados.</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_pinguins</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">massa_corporal</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">massa_corporal_kg</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
@@ -313,14 +304,12 @@ Nota
 </div>
 </div>
 <p>Essa visualização já nos fornece uma visão geral da distribuição dos dados de massa corporal. Agora, vamos para o próximo passo: adicionar a curva normal sobre essa distribuição.</p>
-</section><section id="modo-1-com-a-função-stat_function" class="level2"><h2 class="anchored" data-anchor-id="modo-1-com-a-função-stat_function">Modo 1: Com a função <code>stat_function()</code>
-</h2>
-<section id="passo-3-adicionar-a-curva-normal-ao-gráfico" class="level3"><h3 class="anchored" data-anchor-id="passo-3-adicionar-a-curva-normal-ao-gráfico">Passo 3: Adicionar a curva normal ao gráfico</h3>
+</section><section id="passo-3-adicionar-a-curva-normal-ao-gráfico" class="level3"><h3 class="anchored" data-anchor-id="passo-3-adicionar-a-curva-normal-ao-gráfico">Passo 3: Adicionar a curva normal ao gráfico</h3>
 <p>A função <code><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">stat_function()</a></code> permite adicionar uma função estatística ao gráfico. Neste caso, vamos utilizar a função de densidade da distribuição normal (<code><a href="https://rdrr.io/r/stats/Normal.html">dnorm()</a></code>) no argumento <code>fun</code> (<code>fun = dnorm</code>), e ajustar a cor da linha para vermelho.</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_pinguins</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">massa_corporal</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">massa_corporal_kg</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">stat_function</a></span><span class="op">(</span>fun <span class="op">=</span> <span class="va">dnorm</span>,</span>
 <span>                color <span class="op">=</span> <span class="st">"red"</span>,</span>
@@ -336,18 +325,18 @@ Nota
 </div>
 </div>
 </div>
-<p>Perceba que a curva que foi criada está “achatada”. Ela não está ajustada aos dados, pois não informamos os parâmetros da distribuição normal (média e desvio padrão), e a função <code><a href="https://rdrr.io/r/stats/Normal.html">dnorm()</a></code> foi executada utilizando os valores padrão (média = 0 e desvio padrão = 1).</p>
+<p>Perceba que a curva que foi criada está “transladada”. Ela não está ajustada aos dados, pois não informamos os parâmetros da distribuição normal (média e desvio padrão), e a função <code><a href="https://rdrr.io/r/stats/Normal.html">dnorm()</a></code> foi executada utilizando os valores padrão (média = 0 e desvio padrão = 1).</p>
 <p>Portanto, precisamos calcular esses valores a partir dos dados e utilizá-los para simular a curva normal.</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">media</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">media</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">dados_pinguins</span><span class="op">$</span><span class="va">massa_corporal_kg</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">desvio_padrao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">desvio_padrao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">dados_pinguins</span><span class="op">$</span><span class="va">massa_corporal_kg</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Agora, vamos adicionar a curva normal ao gráfico, informando os parâmetros da distribuição normal. O código abaixo pode parecer estranho pois usamos o <code>~</code> para indicar que estamos passando uma função anônima para o argumento <code>fun</code> da <code><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">stat_function()</a></code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_pinguins</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">massa_corporal</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">massa_corporal_kg</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">stat_function</a></span><span class="op">(</span></span>
 <span>    fun <span class="op">=</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">dnorm</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">.x</span>, mean <span class="op">=</span> <span class="va">media</span>, sd <span class="op">=</span> <span class="va">desvio_padrao</span><span class="op">)</span>,</span>
@@ -366,72 +355,7 @@ Nota
 </div>
 </div>
 <p>Aqui está! Agora temos um gráfico de densidade da massa corporal dos pinguins com a curva normal sobreposta. Isso nos permite visualizar a distribuição real dos dados e compará-la com a distribuição normal.</p>
-</section></section><section id="modo-2-simulando-a-curva-normal" class="level2"><h2 class="anchored" data-anchor-id="modo-2-simulando-a-curva-normal">Modo 2: Simulando a curva normal</h2>
-<p>Outra forma de adicionar a curva normal ao gráfico é simulando a distribuição normal com base nos dados.</p>
-<p>No dia-a-dia, é mais comum utilizarmos a função <code><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">stat_function()</a></code> para adicionar a curva normal.</p>
-<p>Mas o legal dessa abordagem é que podemos entender o passo a passo de como a curva normal é simulada, e como os parâmetros da distribuição normal são calculados a partir dos dados.</p>
-<p>Vamos ver como fazer isso a seguir, continuando a partir do passo 2.</p>
-<section id="passo-3-calcular-os-parâmetros-da-distribuição-normal" class="level3"><h3 class="anchored" data-anchor-id="passo-3-calcular-os-parâmetros-da-distribuição-normal">Passo 3: Calcular os parâmetros da distribuição normal</h3>
-<p>Para simular uma curva normal, precisamos calcular a média e o desvio padrão da massa corporal dos pinguins. Com esses valores, podemos simular a distribuição normal que melhor se ajustaria a esses dados.</p>
-<div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">media</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">desvio_padrao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">valor_minimo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">valor_maximo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">pinguins</span><span class="op">$</span><span class="va">massa_corporal</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">intervalo</span> <span class="op">&lt;-</span> <span class="va">valor_minimo</span><span class="op">:</span><span class="va">valor_maximo</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Aqui, a variável <code>media</code> armazena o valor médio da massa corporal, e <code>desvio_padrao</code> captura a variação dos dados em torno dessa média. Definimos um <code>intervalo</code> que vai do valor mínimo ao valor máximo dos dados, para simular nossa curva normal.</p>
-</section><section id="passo-4-simular-a-curva-normal" class="level3"><h3 class="anchored" data-anchor-id="passo-4-simular-a-curva-normal">Passo 4: Simular a curva normal</h3>
-<p>Agora que já temos a média e o desvio padrão, podemos simular a curva normal usando a função <code><a href="https://rdrr.io/r/stats/Normal.html">dnorm()</a></code>. Ela calcula a densidade da distribuição normal para cada valor do intervalo que definimos.</p>
-<div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">densidade_simulada</span> <span class="op">&lt;-</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">dnorm</a></span><span class="op">(</span><span class="va">intervalo</span>, mean <span class="op">=</span> <span class="va">media</span>, sd <span class="op">=</span> <span class="va">desvio_padrao</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">df_normal</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>massa <span class="op">=</span> <span class="va">intervalo</span>, density <span class="op">=</span> <span class="va">densidade_simulada</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Aqui, criamos um <code>dataframe</code> (<code>df_normal</code>) que contém a densidade simulada para cada valor da massa corporal. Esse dataframe será utilizado para adicionar a curva ao nosso gráfico.</p>
-<div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df_normal</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">massa</span>, y <span class="op">=</span> <span class="va">density</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"red"</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="index_files/figure-html/pinguins-densidade-geom-line-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="passo-5-adicionar-a-curva-normal-ao-gráfico" class="level3"><h3 class="anchored" data-anchor-id="passo-5-adicionar-a-curva-normal-ao-gráfico">Passo 5: Adicionar a curva normal ao gráfico</h3>
-<p>Agora que temos o gráfico de densidade dos dados e a curva normal simulada, vamos sobrepor as duas visualizações em um único gráfico. Utilizamos <code><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line()</a></code> para adicionar a linha da curva normal e ajustamos a transparência (com <code>alpha</code>) e a cor da linha.</p>
-<div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pinguins</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">massa_corporal</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span></span>
-<span>    data <span class="op">=</span> <span class="va">df_normal</span>,</span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">massa</span>, y <span class="op">=</span> <span class="va">density</span><span class="op">)</span>,</span>
-<span>    color <span class="op">=</span> <span class="st">"red"</span>,</span>
-<span>    linetype <span class="op">=</span> <span class="st">"dashed"</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
-(`stat_density()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="index_files/figure-html/pinguins-densidade-geom-line-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Agora temos um gráfico que mostra a distribuição real da massa corporal dos pinguins, comparada a uma curva normal simulada, representada pela linha vermelha tracejada!</p>
-</section></section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+</section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
 <p>Neste post, mostrei como adicionar uma curva normal simulada sobreposta a um gráfico de densidade de uma variável contínua. Você conhece outras formas de fazer isso? Compartilhe nos comentários!</p>
 <p>Gostaria de agradecer ao <a href="https://jtrecenti.com">Julio Trecenti</a> por me fazer sugestões para melhorar o post!</p>
 <p>Se você gostou deste post, você pode me acompanhar nas seguintes plataformas:</p>
@@ -446,7 +370,7 @@ Nota
 
 </section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
 <ol>
-<li id="fn1"><p>Conhecida também como “curva de sino”, “curva normal”, “gaussiana”.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Conhecida também como “curva com forma de sino”, “curva normal”, “gaussiana”.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
