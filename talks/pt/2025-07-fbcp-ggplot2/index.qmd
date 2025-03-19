@@ -2,7 +2,7 @@
 toc: true
 author: Beatriz Milz
 categories: Mini-curso
-date: '2025-07-22'
+date: '2025-07-24'
 event: "IX Fórum Brasileiro de Pós-Graduação em Ciência Política, Universidade de São Paulo (USP)"
 event_url: https://www.instagram.com/fbcp_oficial/
 # links:
@@ -24,7 +24,7 @@ event_url: https://www.instagram.com/fbcp_oficial/
 #   url: https://github.com/beatrizmilz/2024-09-amostra-geobr/blob/main/script.R
   
 location: "Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo (FFLCH-USP) - São Paulo"
-title: "Introdução ao R para análise de dados"
+title: "Introdução à elaboração de gráficos com ggplot2 e R"
 subtitle: "IX Fórum Brasileiro de Pós-Graduação em Ciência Política, Universidade de São Paulo (USP)"
 image: featured.png
 ---
@@ -37,4 +37,4 @@ read_yaml_talks_pt()
 ```
 
 
-Nesta oficina, será apresentado o ambiente de programação R e o IDE RStudio. A oficina é voltada para iniciantes e não é necessário conhecimento prévio de programação. Durante a oficina, serão abordadas tarefas básicas como iniciar um projeto, importar tabelas, realizar filtros, criar tabelas de resumo (com estatísticas descritivas), e exportar resultados. Esta oficina faz parte de uma trilha de treinamentos voltada para iniciantes, fornecendo uma base para quem deseja aprender a analisar dados com R.
+Nesta oficina, será apresentado o pacote ggplot2 em R. Este pacote é um dos mais populares para visualização de dados e permite a criação de gráficos de alta qualidade, como histogramas, boxplots, gráficos de dispersão e de barras. A oficina é voltada para iniciantes, porém é necessário ter conhecimento básico de R. 

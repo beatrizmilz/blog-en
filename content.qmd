@@ -6,7 +6,7 @@ listing:
       - content_data_futura.yaml
     type: grid
     fields: [image, date, title, subtitle]
-    sort: "date desc"
+    sort: "date"
     categories: false
     sort-ui: true
     filter-ui: true
@@ -39,7 +39,7 @@ conteudo_passado <- yaml::read_yaml("content_data_passado.yaml") |>
 
 For invitations, please email me at: [milz.bea\@gmail.com](mailto:milz.bea@gmail.com){.email}
 
-## Future content 
+## Future content
 
 Here you can find links, slides and materials for **`r conteudo_futuro` future activities** that I will be participating in!
 
@@ -49,7 +49,6 @@ Here you can find links, slides and materials for **`r conteudo_futuro` future a
 ## Past content
 
 Here you can find links, slides and materials for **`r conteudo_passado` past activities** that I have participated in **since 2018**!
-
 
 ::: {#content-past}
 :::
