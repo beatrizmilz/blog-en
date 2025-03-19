@@ -5,22 +5,26 @@ listing:
     contents:
       - content_data_futura.yaml
     type: grid
-    fields: [image, date, title, subtitle]
+    fields: [image, date, title, event, subtitle]
     sort: "date"
     categories: false
     sort-ui: true
     filter-ui: true
     page-size: 100   
+    field-display-names:
+      event: "Event"    
   - id: content-past
     contents: 
       - content_data_passado.yaml
     type: grid
-    fields: [image, date, title, subtitle]
+    fields: [image, date, title, subtitle, event]
     sort: "date desc"
     categories: false
     sort-ui: true
     filter-ui: true
-    page-size: 100           
+    page-size: 100  
+    field-display-names:
+      event: "Event"                 
 page-layout: full
 title-block-banner: false
 toc: true

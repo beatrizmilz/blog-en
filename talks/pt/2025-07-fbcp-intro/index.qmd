@@ -25,7 +25,6 @@ event_url: https://www.instagram.com/fbcp_oficial/
   
 location: "Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo (FFLCH-USP) - São Paulo"
 title: "Introdução ao R para análise de dados"
-subtitle: "IX Fórum Brasileiro de Pós-Graduação em Ciência Política, Universidade de São Paulo (USP)"
 image: featured.png
 ---
 
