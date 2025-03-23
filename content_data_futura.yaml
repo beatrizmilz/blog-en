@@ -1,4 +1,16 @@
-- title: Oficina de introdução ao R
+- title: 'Arrumação de dados de um *Map-based survey* com R: Desafios e lições aprendidas'
+  author: Beatriz Milz
+  date: '2025-05-26'
+  path: talks/pt/2025-03-pyladies-odd-geobr/index.qmd
+- title: 'Introdução ao geobr: como acessar dados espaciais oficiais do Brasil'
+  author: Beatriz Milz
+  date: '2025-03-29'
+  path: talks/pt/2025-05-ser-uff-map-based-survey/index.qmd
+- title: Introdução à elaboração de gráficos com ggplot2 e R
+  author: Beatriz Milz
+  date: '2025-07-24'
+  path: talks/pt/2025-07-fbcp-ggplot2/index.qmd
+- title: Introdução ao R para análise de dados
   author: Beatriz Milz
   date: '2025-07-22'
   path: talks/pt/2025-07-fbcp-intro/index.qmd

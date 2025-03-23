@@ -1,0 +1,27 @@
+---
+toc: true
+author: Beatriz Milz
+categories: Palestra
+date: '2025-03-29'
+event: "Open Data Day | PyLadies São Paulo 2025"
+event_url: "https://www.sympla.com.br/evento/open-data-day-no-insper-pyladies-sao-paulo-2025/2848606"
+links:
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/beatrizmilz/2025-03-pyladies-odd-geobr
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/2025-03-pyladies-odd-geobr/
+location:  "Insper - São Paulo, SP"
+title: "Introdução ao geobr: como acessar dados espaciais oficiais do Brasil"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
