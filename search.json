@@ -1220,9 +1220,9 @@
   {
     "objectID": "talks/pt/2025-05-ser-uff-map-based-survey/index.html",
     "href": "talks/pt/2025-05-ser-uff-map-based-survey/index.html",
-    "title": "Introdução ao geobr: como acessar dados espaciais oficiais do Brasil",
+    "title": "Arrumação de dados de um Map-based survey com R: Desafios e lições aprendidas",
     "section": "",
-    "text": "Evento: Open Data Day | PyLadies São Paulo 2025Link: https://www.sympla.com.br/evento/open-data-day-no-insper-pyladies-sao-paulo-2025/2848606Lugar: Insper - São Paulo, SP\nMateriais\n\n\n Repositório  Slides"
+    "text": "Evento: IX Seminário Internacional de Estatística com RLink: https://ser.uff.br/Lugar: Universidade Federal Fluminense (UFF), Niterói, RJ"
   },
   {
     "objectID": "talks/pt/2021-jornalismo-com-r/index.html",
@@ -1724,9 +1724,9 @@
   {
     "objectID": "talks/pt/2025-03-pyladies-odd-geobr/index.html",
     "href": "talks/pt/2025-03-pyladies-odd-geobr/index.html",
-    "title": "Arrumação de dados de um Map-based survey com R: Desafios e lições aprendidas",
+    "title": "Introdução ao geobr: como acessar dados espaciais oficiais do Brasil",
     "section": "",
-    "text": "Evento: IX Seminário Internacional de Estatística com RLink: https://ser.uff.br/Lugar: Universidade Federal Fluminense (UFF), Niterói, RJ"
+    "text": "Evento: Open Data Day | PyLadies São Paulo 2025Link: https://www.sympla.com.br/evento/open-data-day-no-insper-pyladies-sao-paulo-2025/2848606Lugar: Insper - São Paulo, SP\nMateriais\n\n\n Repositório  Slides"
   },
   {
     "objectID": "talks/pt/2024-11-05-rOpenSci-traducao-pt/index.html",
