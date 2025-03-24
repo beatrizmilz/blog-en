@@ -15,7 +15,7 @@ links:
   name: Slides
   url: https://beatrizmilz.github.io/2025-03-pyladies-odd-geobr/
 location:  "Insper - São Paulo, SP"
-title: "Introdução ao geobr: como acessar dados espaciais oficiais do Brasil"
+title: "Como acessar dados geoespaciais abertos do Brasil com o geobr"
 image: featured.png
 ---
 
@@ -25,3 +25,5 @@ image: featured.png
 source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
+
+Resumo: O geobr (<https://ipeagit.github.io/geobr/)> é uma biblioteca em Python e um pacote em R elaborado pela equipe do IPEA - Instituto de Pesquisa Econômica Aplicada. O geobr facilita o acesso de dados oficiais geoespaciais do Brasil, como: delimitação dos municípios, estados, país, biomas; localização de escolas, instituições de saúde; entre outros. Os dados são de fontes oficiais, como: IBGE, MMA, CEMADEN, FUNAI, INEP, DataSUS, entre outros. Nesta apresentação, o objetivo é apresentar o geobr e mostrar como acessar esses dados abertos diretamente do Python.
