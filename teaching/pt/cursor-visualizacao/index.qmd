@@ -1,7 +1,15 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Curso-R
+author: 
+  - Curso-R
+  - Athos Damiani
+  - Beatriz Milz  
+  - Caio Lente
+  - Daniel Falbel
+  - Fernando Corrêa
+  - Julio Trecenti
+  - William Amorim
 categories: ["Curso", "Português", "ggplot2", "tidyverse", "Visualização de dados", "geobr"]
 date: '2024-03-14'
 event: Curso-R

@@ -1,0 +1,34 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz
+categories: ["Curso", "Português", "Análise de Texto", "tidytext", "tidyverse", "stringr"]
+date: '2024-11-11'
+event: cebrap.lab online
+event_url: https://cebrap.org.br/cebrap-lab/
+links:
+- icon: chalkboard-teacher
+  icon_pack: fas
+  name: Inscrições
+  url: https://cursos.cebrap.org.br/categoria-cursos/cursos/
+- icon: book
+  icon_pack: fas
+  name: Material
+  url: https://beatrizmilz.github.io/2024-11-cebrap-lab-text-as-data/
+- icon: github
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/beatrizmilz/2024-11-cebrap-lab-text-as-data
+location: Online
+title: "Análise quantitativa de texto"
+image: featured.jpeg
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+O curso “Análise Quantitativa de Textos com R” abordará conceitos como: o que é análise quantitativa de textos; como estruturar textos capturados de pdfs, html simples e word em uma base de dados; como realizar o pré-processamento destes dados (por exemplo: remoção de caracteres que não são relevantes para a análise, remoção de “stop words”, utilização de expressões regulares para identificar palavras relevantes, entre outros); como realizar contagens de palavras ou n-grams mais frequentes; como visualizar estas contagens (como uma nuvem de palavras ou gráficos de barras); e por fim será abordado de forma introdutória a modelagem de tópicos, um método não supervisionado para criar grupos de documentos (similar ao cluster utilizado com dados numéricos). Serão apresentados também alguns exemplos destes tipos de análises. Todas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, o RStudio, e os pacotes stringr, ggplot2, dplyr, tidytext, entre outros. O curso tem como público alvo pessoas que tenham conhecimento intermediário em R e tenham interesse em analisar textos com métodos quantitativos utilizando R.

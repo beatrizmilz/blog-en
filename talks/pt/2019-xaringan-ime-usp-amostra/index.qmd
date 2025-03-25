@@ -1,8 +1,10 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Beatriz Milz e Mariana Dias Guilardi
-categories: Workshop
+author: 
+  - Beatriz Milz
+  - Mariana Dias Guilardi
+categories: ["Workshop",  "Português",  "Reprodutibilidade",  "RMarkdown", "xaringan", "Comunicação"]
 date: '2019-09-17'
 event: 14ª aMostra Estatística 2019 IME/USP
 event_url: https://www.ime.usp.br/~amostra/
@@ -14,7 +16,6 @@ links:
 location: São Paulo
 title: Apresentações no R ⚔ com xaringan
 image: featured.png
-
 ---
 
 ```{r}
@@ -24,5 +25,5 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
+------------------------------------------------------------------------
 
----

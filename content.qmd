@@ -7,7 +7,7 @@ listing:
     type: grid
     fields: [image, date, title, event, subtitle]
     sort: "date"
-    categories: false
+    categories: cloud
     sort-ui: true
     filter-ui: true
     page-size: 100   
@@ -19,7 +19,7 @@ listing:
     type: grid
     fields: [image, date, title, subtitle, event]
     sort: "date desc"
-    categories: false
+    categories: cloud
     sort-ui: true
     filter-ui: true
     page-size: 100  

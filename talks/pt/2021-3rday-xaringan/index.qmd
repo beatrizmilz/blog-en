@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Workshop
+categories: ["Workshop",  "Português",  "Reprodutibilidade",  "RMarkdown", "xaringan", "Comunicação"]
 date: '2021-09-09'
 event: 3º R Day - Encontro Nacional de Usuários do R
 event_url: http://rday.leg.ufpr.br/
@@ -46,8 +46,10 @@ O xaringan é um pacote que tem como objetivo possibilitar a criação de aprese
 
 <!-- -->
 
-    install.packages("knitr")
-    install.packages("rmarkdown")
-    install.packages("xaringan")
-    install.packages("xaringanthemer")
-    install.packages("pagedown")
+```         
+install.packages("knitr")
+install.packages("rmarkdown")
+install.packages("xaringan")
+install.packages("xaringanthemer")
+install.packages("pagedown")
+```

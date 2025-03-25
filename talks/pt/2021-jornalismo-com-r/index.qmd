@@ -1,7 +1,10 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Cecília do Lago, Gabriela Caesar, Beatriz Milz
+author: 
+  - Cecília do Lago
+  - Gabriela Caesar
+  - Beatriz Milz
 coautoria: Cecília do Lago
 coautoria_url: https://twitter.com/ceciliadolago
 coautoria2: Gabriela Caesar

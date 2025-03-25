@@ -1,7 +1,15 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Curso-R
+author: 
+  - Curso-R
+  - Athos Damiani
+  - Beatriz Milz  
+  - Caio Lente
+  - Daniel Falbel
+  - Fernando Corrêa
+  - Julio Trecenti
+  - William Amorim
 categories: ["Curso", "Reprodutibilidade", "RMarkdown", "Quarto", "Português"]
 date: '2023-11-01'
 event: Curso-R

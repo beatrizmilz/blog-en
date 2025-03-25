@@ -1,7 +1,9 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Beatriz Milz e Fernando Correa
+author: 
+  - Beatriz Milz
+  - Fernando Correa
 coautoria: Fernando Correa
 coautoria_url: https://twitter.com/curso_r
 categories: Palestra

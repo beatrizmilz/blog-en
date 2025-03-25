@@ -1,8 +1,9 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Beatriz Milz e Julio Trecenti
-coautoria: Julio Trecenti
+author: 
+  - Beatriz Milz
+  - Julio Trecenti
 coautoria_url: https://linktr.ee/j.trecenti
 categories: Palestra
 date: '2021-09-18'

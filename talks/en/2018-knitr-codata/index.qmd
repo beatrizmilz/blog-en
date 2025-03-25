@@ -1,17 +1,26 @@
 ---
-title: "Producing Reports with knitr and R"
-subtitle: "CODATA-RDA School of Research Data Science"
-author: 
-  - "Beatriz Milz"
-date: "2018-12-05"
-categories: [R Markdown, knitr, Teaching, "English"]
-image: "featured.png"
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz
+categories: ["Workshop",  "English",  "Reproducibility", "knitr", "RMarkdown"]
+date: '2018-12-05'
+event: CODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESP
+event_link: https://www.ictp-saifr.org/2018-codata-rda-school-of-research-data-science/
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/CODATASP18_knitr/
+location: São Paulo
+title: Producing Reports with knitr and R
+image: featured.png
 ---
 
-This presentation was not recorded.
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
 
--   Event: [CODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESP](https://www.ictp-saifr.org/2018-codata-rda-school-of-research-data-science/)
-
--   [Slides](https://beatrizmilz.github.io/CODATASP18_knitr/):
-
-[![](featured.png){fig-align="center"}](https://beatrizmilz.github.io/CODATASP18_knitr/)
+------------------------------------------------------------------------

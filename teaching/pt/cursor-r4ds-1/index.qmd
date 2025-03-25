@@ -1,7 +1,15 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Curso-R
+author: 
+  - Curso-R
+  - Athos Damiani
+  - Beatriz Milz  
+  - Caio Lente
+  - Daniel Falbel
+  - Fernando Corrêa
+  - Julio Trecenti
+  - William Amorim
 categories: ["Curso", "Português", "dplyr", "tidyverse", "Análise de dados"]
 date: '2024-01-25'
 event: Curso-R

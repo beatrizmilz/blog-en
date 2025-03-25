@@ -23,8 +23,13 @@ tabela_talks <- lista_yaml_qmd |>
     idioma <- stringr::str_extract(path, "/(pt|en|es)/") |>
       stringr::str_replace_all("/", "")  # remove as barras
 
+    ano <- stringr::str_extract(path, "20[0-9]{2}") |>
+      as.integer()
+
     tibble(
+      ano = ano,
       title = .x$title %||% NA_character_,
+      author = paste(.x$author, collapse = " ---- "),
       subtitle = .x$subtitle %||% NA_character_,
       categories = paste(.x$categories, collapse = "; "),
       event = .x$event %||% NA_character_,
@@ -38,11 +43,15 @@ tabela_talks <- lista_yaml_qmd |>
 
 
 tabela_talks |>
-  dplyr::filter(idioma == "pt", stringr::str_starts(id, "teaching")) |> View()
+  #dplyr::filter(idioma == "pt", stringr::str_starts(id, "talks")) |>
+  View()
 
 
-tabela_talks |>
-  dplyr::filter(idioma == "pt", stringr::str_starts(id, "teaching")) |>
+freq_categories <- tabela_talks |>
+  dplyr::filter(idioma == "pt") |>
   tidyr::separate_longer_delim(categories, "; ") |>
-  dplyr::count(categories, sort = TRUE)
+  dplyr::count(categories, sort = TRUE) |>
+  tidyr::drop_na() |>
+  dplyr::pull(categories)
 
+freq_categories |> dput()

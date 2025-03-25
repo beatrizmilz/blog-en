@@ -1,7 +1,7 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: IME-USP
+author: Beatriz Milz
 categories: ["Curso", "Reprodutibilidade", "RMarkdown", "Português"]
 date: '2022-02-02'
 event: Programa de Verão IME-USP

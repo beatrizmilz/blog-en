@@ -1,6 +1,8 @@
 ---
 toc: true
-author: Beatriz Milz e Tereza Lacerda
+author:
+  - Beatriz Milz
+  - Tereza Lacerda
 categories: Mini-curso
 date: '2023-09-21'
 event: aMostra de Estatística IME USP

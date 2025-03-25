@@ -1,7 +1,9 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Beatriz Milz e Laís Brasileiro
+author: 
+  - Beatriz Milz
+  - Laís Brasileiro
 categories: Workshop
 date: '2023-12-12'
 event: Meetup R-Ladies São Paulo

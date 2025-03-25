@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Oficina
+categories: ["Oficina", "Português", "tidyverse", "Análise de dados"]
 date: '2018-11-29'
 event: UFABC - Campus São Bernardo do Campo
 links:

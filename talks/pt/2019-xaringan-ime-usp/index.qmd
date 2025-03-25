@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Aula
+categories: ["Aula",  "Português",  "Reprodutibilidade",  "RMarkdown", "xaringan", "Comunicação"]
 date: '2019-08-27'
 event: Disciplina no IME/USP
 links:
@@ -13,7 +13,6 @@ links:
 location: São Paulo
 title: Introdução ao pacote xaringan - Criando apresentações com R
 image: featured.png
-
 ---
 
 ```{r}
@@ -23,5 +22,4 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
+------------------------------------------------------------------------

@@ -1,7 +1,9 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Equipe da R-Ladies São Paulo
+author: 
+  - Beatriz Milz
+  - Equipe da R-Ladies São Paulo
 categories: Meetup
 date: '2020-10-17'
 event: Meetup R-Ladies São Paulo

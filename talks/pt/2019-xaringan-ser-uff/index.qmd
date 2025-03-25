@@ -1,8 +1,10 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Beatriz Milz e Haydee Svab
-categories: Palestras
+author: 
+  - Beatriz Milz
+  - Haydee Svab
+categories: ["Workshop",  "Português",  "Reprodutibilidade",  "RMarkdown", "xaringan", "Comunicação"]
 date: '2019-05-20'
 event: SER UFF 2019
 links:
@@ -13,7 +15,6 @@ links:
 location: São Paulo
 title: Comunicando seus resultados - criando apresentações com R
 image: featured.png
-
 ---
 
 ```{r}
@@ -23,5 +24,4 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
+------------------------------------------------------------------------

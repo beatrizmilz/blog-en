@@ -1,8 +1,10 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: Beatriz Milz e Haydee Svab
-categories: Workshop
+author: 
+  - Beatriz Milz
+  - Haydee Svab
+categories: ["Workshop",  "Português",  "Reprodutibilidade",  "RMarkdown", "xaringan", "Comunicação"]
 date: '2020-10-19'
 event: LatinR 2020
 event_url: https://latin-r.com/
@@ -23,7 +25,6 @@ location: Online
 subtitle: Aprenda a criar apresentações reprodutíveis
 title: Comunicando seus resultados em R
 image: featured.png
-
 ---
 
 ```{r}
@@ -33,5 +34,5 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
+------------------------------------------------------------------------
 
----

@@ -1,7 +1,31 @@
 ---
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
-author: L. Acion et al
+author: 
+  - Laura Acion
+  - Marcela Alfaro
+  - Zullema Bazurto Blacio
+  - Yanina Bellini Saibene
+  - Elio Campitelli
+  - Joselyn Chávez
+  - Ruth Chirinos
+  - Leonardo Collado Torres
+  - Paola Corrales
+  - Florencia D'Andrea
+  - Gabriela de Queiroz
+  - Denisse Fierro Arcos
+  - Agustin Gomez Melendez
+  - Rocío Joo
+  - Mauro Lepore
+  - Paula Andrea Martinez
+  - Beatriz Milz
+  - Marcos Prunello
+  - Riva Quiroga
+  - Paloma Rojas Saunero
+  - Yuriko Sosa Paredes
+  - Frans Van Dunné
+  - Luis D. Verde aRREGOITIA
+  - Roxana Villafañe
 categories: Participação em palestra
 date: '2020-07-08'
 event: useR! 2020

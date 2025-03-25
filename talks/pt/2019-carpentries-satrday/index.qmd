@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Mesa redonda
+categories: ["Mesa redonda", "Comunidades", "Ensino"]
 date: '2019-11-30'
 event: SatRday São Paulo 2019
 event_url: https://saopaulo2019.satrdays.org/
@@ -14,7 +14,6 @@ links:
 location: São Paulo
 title: The Carpentries
 image: featured.png
-
 ---
 
 ```{r}
@@ -24,6 +23,4 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
-
+------------------------------------------------------------------------
