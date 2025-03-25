@@ -1,0 +1,33 @@
+---
+toc: true
+author: Beatriz Milz
+categories: Webinar
+date: '2025-04-16'
+event: "Escola de Dados"
+event_url: "https://escoladedados.org/webinars/"
+# links:
+# - icon: github
+#   icon_pack: fab
+#   name: Repositório
+#   url: https://github.com/beatrizmilz/2025-03-pyladies-odd-geobr
+# - icon: images
+#   icon_pack: far
+#   name: Slides
+#   url: https://beatrizmilz.github.io/2025-03-pyladies-odd-geobr/
+location:  "Online"
+title: "Automatize tarefas com GitHub Actions: Primeiros passos"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+Resumo: Você precisa executar um código com certa frequência (todos os dias, toda segunda-feira, todo mês), e faz isso manualmente?
+Nesta atividade, vamos explorar o GitHub Actions, uma ferramenta que possibilita automatizar a execução de código com o GitHub. A proposta é apresentar uma introdução, focando nos conceitos mais importantes, e mostrar alguns exemplos práticos (com códigos disponibilizados). Não é necessário ter experiência prévia com GitHub Actions, mas é interessante já ter uma conta no GitHub (é possível criar gratuitamente em: https://github.com/) e alguma experiência com programação.
+
+
+Bio: Beatriz Milz é doutora em Ciência Ambiental e atualmente realiza estágio pós-doutoral na Universidade Federal do ABC (UFABC). É editora de revisão por pares de software na rOpenSci. Como instrutora certificada do tidyverse pela RStudio, Beatriz possui experiência no ensino da linguagem R, tendo ministrado cursos na Curso-R, no cebrap.lab e no Programa de Verão do Instituto de Matemática e Estatística (IME) da Universidade de São Paulo (USP). Desde 2018, atua como co-organizadora do R-Ladies São Paulo, promovendo a diversidade de gênero na comunidade de R. Faz parte do programa GitHub Star. É associada da Open Knowledge Brasil (OKBR), e também faz parte da rede de embaixadoras de inovação cívica.
