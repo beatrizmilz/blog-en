@@ -4,7 +4,6 @@ toc: true
 author: 
   - Beatriz Milz
   - Fernando Correa
-coautoria: Fernando Correa
 coautoria_url: https://twitter.com/curso_r
 categories: Palestra
 date: '2021-11-10'
