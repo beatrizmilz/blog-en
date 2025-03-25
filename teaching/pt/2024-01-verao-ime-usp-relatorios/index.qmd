@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: IME-USP
-categories: Curso
+categories: ["Curso", "Reprodutibilidade", "RMarkdown", "Quarto", "Português"]
 date: '2024-01-23'
 event: Programa de Verão IME-USP
 event_url: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php

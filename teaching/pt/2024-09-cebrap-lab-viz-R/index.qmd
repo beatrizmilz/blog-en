@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Curso
+categories: ["Curso", "Português", "ggplot2", "tidyverse", "Visualização de dados", "geobr"]
 date: '2024-09-23'
 event: cebrap.lab online
 event_url: https://cebrap.org.br/cebrap-lab/

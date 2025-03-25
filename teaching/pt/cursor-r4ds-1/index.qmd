@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Curso-R
-categories: Curso
+categories: ["Curso", "Português", "dplyr", "tidyverse", "Análise de dados"]
 date: '2024-01-25'
 event: Curso-R
 event_url: https://loja.curso-r.com/r-para-ciencia-de-dados-i.html

@@ -3,7 +3,7 @@ title: Funciones - R para Ciencia de Datos
 subtitle: Grupo de Estudios para la Certificación de RStudio
 author: 
   - "Beatriz Milz"
-categories: [Study, R-Ladies, Communities, "Español"]
+categories: [Study Group, R-Ladies, Communities, "Español", "R", "Functions"]
 date: "2020-05-04"
 image: "featured.png"
 ---

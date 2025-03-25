@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Curso
+categories: ["Curso", "Raspagem de dados", "Web Scraping", "tidyverse", "rvest", "API", "Português"]
 date: '2024-10-21'
 event: cebrap.lab online
 event_url: https://cebrap.org.br/cebrap-lab/
@@ -33,33 +33,22 @@ read_yaml_talks_pt()
 
 ## Descrição
 
-O curso “Raspagem de dados com R” abordará uma introdução ao uso da
-linguagem de programação R para obter dados da internet através de uma
-técnica chamada raspagem de dados (web scraping).
+O curso “Raspagem de dados com R” abordará uma introdução ao uso da linguagem de programação R para obter dados da internet através de uma técnica chamada raspagem de dados (web scraping).
 
 O curso abordará conceitos como:
 
-- o que é raspagem de dados?;
+-   o que é raspagem de dados?;
 
-- política de uso;
+-   política de uso;
 
-- tipos de problemas de raspagem (APIs (disponíveis e “escondidas”);
+-   tipos de problemas de raspagem (APIs (disponíveis e “escondidas”);
 
-- raspagem de HTML (estático e dinâmico), etc);
+-   raspagem de HTML (estático e dinâmico), etc);
 
-- entre outros.
+-   entre outros.
 
+O curso apresentará exemplos de raspagem de dados em todas as aulas, raspando sites que são interessantes no contexto brasileiro!
 
-O curso apresentará exemplos de raspagem de dados em todas as aulas,
-raspando sites que são interessantes no contexto brasileiro!
+Todas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, o RStudio, e os pacotes tidyverse, httr, rvest, xml2, purrr, entre outros.
 
-Todas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem
-de programação R, o RStudio, e os pacotes tidyverse, httr, rvest, xml2,
-purrr, entre outros.
-
-O curso tem como **público alvo** pessoasque tenham interesse em obter
-dados através da técnica de raspagem de dados na internet utilizando R,
-e que tenham familiaridade fazendo as seguintes tarefas em R: importar
-bases de dados, filtrar linhas, selecionar colunas, agrupar a base,
-criar sumarizações, criar novas colunas (pacotes readr e dplyr do
-tidyverse).
+O curso tem como **público alvo** pessoasque tenham interesse em obter dados através da técnica de raspagem de dados na internet utilizando R, e que tenham familiaridade fazendo as seguintes tarefas em R: importar bases de dados, filtrar linhas, selecionar colunas, agrupar a base, criar sumarizações, criar novas colunas (pacotes readr e dplyr do tidyverse).

@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Curso-R
-categories: Curso
+categories: ["Curso", "Português", "ggplot2", "tidyverse", "Visualização de dados", "geobr"]
 date: '2024-03-14'
 event: Curso-R
 event_url: https://loja.curso-r.com/

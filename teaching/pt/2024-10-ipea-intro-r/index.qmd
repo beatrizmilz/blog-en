@@ -5,7 +5,7 @@ author:
   - Beatriz Milz
   - Pedro Cavalcanti Gonçalves Ferreira
   - Rafael H. M. Pereira 
-categories: Curso
+categories: ["Curso", "Reprodutibilidade", "Quarto", "Análise de dados", "tidyverse", "dplyr", "ggplot2", "tidyr", "Português"]
 date: '2024-10-01'
 event: IpeaDATA-lab
 event_url: https://ipeadata-lab.github.io/curso_r_intro_202409/

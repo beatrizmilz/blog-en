@@ -3,7 +3,7 @@ toc: true
 author: 
   - Yanina Bellini Saibene
   - Beatriz Milz
-categories: ["Tutorial", "Workshop", "GitHub", "ES"]
+categories: ["Tutorial", "Workshop", "GitHub", "Español", "Research", "Open Science"]
 date: '2024-11-18'
 event: "LatinR 2024"
 event_url: https://latinr.org/cronograma/tutoriales/

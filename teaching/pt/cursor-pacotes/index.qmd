@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Curso-R
-categories: Curso
+categories: ["Curso", "Pacotes", "Desenvolvimento", "Funções", "Português"]
 date: '2022-11-01'
 event: Curso-R
 event_url: https://loja.curso-r.com/
@@ -33,6 +33,6 @@ read_yaml_talks_pt()
 
 -   <https://curso-r.github.io/202211-pacotes>
 
-- <https://curso-r.github.io/202208-pacotes>
+-   <https://curso-r.github.io/202208-pacotes>
 
 -   <https://curso-r.github.io/202205-pacotes>

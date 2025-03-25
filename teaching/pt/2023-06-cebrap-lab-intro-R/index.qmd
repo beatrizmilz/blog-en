@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Curso
+categories: ["Curso", "Português", "dplyr", "tidyverse", "Análise de dados"]
 date: '2023-06-26'
 event: cebrap.lab online
 event_url: https://cebrap.org.br/cebrap-lab/
