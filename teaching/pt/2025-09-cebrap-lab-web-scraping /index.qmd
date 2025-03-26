@@ -1,0 +1,34 @@
+---
+# THIS FILE WAS CONVERTED FROM BLOGDOWN!
+toc: true
+author: Beatriz Milz
+categories: ["Curso", "Raspagem de dados", "Web Scraping", "tidyverse", "rvest", "API", "Português"]
+date: '2025-09-29'
+event: cebrap.lab online
+event_url: https://cebrap.org.br/cebrap-lab/
+links:
+- icon: chalkboard-teacher
+  icon_pack: fas
+  name: Inscrições
+  url: https://cursos.cebrap.org.br/categoria-cursos/cursos/
+# - icon: book
+#   icon_pack: fas
+#   name: Material
+#   url: https://github.com/beatrizmilz/2025-09-cebrap-lab-web-scraping/archive/refs/heads/main.zip
+# - icon: github
+#   icon_pack: fab
+#   name: GitHub
+#   url: https://github.com/beatrizmilz/2025-09-cebrap-lab-web-scraping
+location: Online
+title: Raspagem de dados com R
+image: featured.jpeg
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+O laboratório apresenta as principais ferramentas de raspagem de dados na Internet e manipulação de texto utilizando R. Além de ser um software livre voltado para estatística computacional e análise de dados, R é uma linguagem focada na aplicação de funções que, entre outras possibilidades, permite a captura de dados de forma automatizada na internet. A partir de informações disponíveis em portais de notícias, apresentaremos esse processo de raspagem de dados de páginas web (especialmente de tabelas e de páginas construídas em html) e construção de bases de dados com textos de Internet, permitindo introduzir as ferramentas mais básicas de mineração de texto. Faremos um exercício empírico partindo de uma questão de pesquisa que conduzirá a experimentação, de forma a capacitar os participantes com ferramentas e procedimentos que depois poderão ser usadas para a construção de suas próprias bases de dados. Para participação no curso, espera-se conhecimento prévio da linguagem R ou uma preparação de nivelamento por meio de tutoriais indicados antes do início das aulas.
