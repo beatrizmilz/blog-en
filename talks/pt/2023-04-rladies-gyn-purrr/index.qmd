@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Palestra
+categories: ["Palestra", "purrr", "Programação funcional", "tidyverse", "Português"]
 date: '2023-04-29'
 event: Meetup R-Ladies Goiânia
 event_url: https://www.sympla.com.br/evento-online/introducao-ao-pacote-purrr/1871113
@@ -33,4 +33,10 @@ read_yaml_talks_pt()
 
 ## Video
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/7gBDKBZcd7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+<center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7gBDKBZcd7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+
+</center>

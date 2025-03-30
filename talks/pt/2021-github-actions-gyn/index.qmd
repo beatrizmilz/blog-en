@@ -5,7 +5,7 @@ author:
   - Beatriz Milz
   - Julio Trecenti
 coautoria_url: https://linktr.ee/j.trecenti
-categories: Palestra
+categories: ["Palestra", "Git", "GitHub", "Português", "GitHub Actions"]
 date: '2021-09-18'
 event: Meetup R-Ladies Goiânia
 event_url: https://www.sympla.com.br/introducao-a-github-actions__1342598
@@ -25,7 +25,6 @@ links:
 location: Online
 title: Introdução ao GitHub Actions
 image: featured.png
-
 ---
 
 ```{r}
@@ -35,43 +34,35 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
-
-
-
+------------------------------------------------------------------------
 
 Boas vindas!
 
-É muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes.  Por favor, leia o [Código de Conduta da R-Ladies](https://github.com/rladies/.github/blob/master/CODE_OF_CONDUCT.md#portuguese).
+É muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o [Código de Conduta da R-Ladies](https://github.com/rladies/.github/blob/master/CODE_OF_CONDUCT.md#portuguese).
 
 ## Conteúdo
 
+-   [Pré-requisitos](https://curso-r.github.io/rladies-GYN-github-actions/#pre-requisitos)
 
-- [Pré-requisitos](https://curso-r.github.io/rladies-GYN-github-actions/#pre-requisitos)
+-   [Projetos no RStudio (ou `.RProj`)](https://curso-r.github.io/rladies-GYN-github-actions/#projetos-rstudio)
 
-- [Projetos no RStudio (ou `.RProj`)](https://curso-r.github.io/rladies-GYN-github-actions/#projetos-rstudio)
+-   [Estrutura básica de um pacote em R](https://curso-r.github.io/rladies-GYN-github-actions/#basico-pacotes)
 
-- [Estrutura básica de um pacote em R](https://curso-r.github.io/rladies-GYN-github-actions/#basico-pacotes)
+-   [Revisão sobre Git e GitHub](https://curso-r.github.io/rladies-GYN-github-actions/#revisao-github)
 
-- [Revisão sobre Git e GitHub](https://curso-r.github.io/rladies-GYN-github-actions/#revisao-github)
+-   [O que é integração contínua e GitHub Actions?](https://curso-r.github.io/rladies-GYN-github-actions/#gha)
 
-- [O que é integração contínua e GitHub Actions?](https://curso-r.github.io/rladies-GYN-github-actions/#gha)
+-   [Exemplos usando GitHub Actions para:](https://curso-r.github.io/rladies-GYN-github-actions/#exemplos)
 
-- [Exemplos usando GitHub Actions para:](https://curso-r.github.io/rladies-GYN-github-actions/#exemplos)
+    -   [Executar a checagem de um pacote em R](https://curso-r.github.io/rladies-GYN-github-actions/#exemplo-check)
+    -   [Automatizar uma tarefa](https://curso-r.github.io/rladies-GYN-github-actions/#exemplo-automacao)
 
-  - [Executar a checagem de um pacote em R](https://curso-r.github.io/rladies-GYN-github-actions/#exemplo-check)
-  - [Automatizar uma tarefa](https://curso-r.github.io/rladies-GYN-github-actions/#exemplo-automacao) 
-
-- [Referências](https://curso-r.github.io/rladies-GYN-github-actions/#referencias)
-
+-   [Referências](https://curso-r.github.io/rladies-GYN-github-actions/#referencias)
 
 ### Comunidades e locais amigáveis para fazer perguntas :)
 
-- [Eventos e redes sociais das R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)
+-   [Eventos e redes sociais das R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)
 
-- [Fórum Curso-R](https://discourse.curso-r.com/)
+-   [Fórum Curso-R](https://discourse.curso-r.com/)
 
-- [Telegram R-Brasil](https://t.me/rbrasiloficial)
-
-
+-   [Telegram R-Brasil](https://t.me/rbrasiloficial)

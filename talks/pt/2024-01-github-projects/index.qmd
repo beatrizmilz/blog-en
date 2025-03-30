@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Meetup
+categories: ["Palestra", "Git", "GitHub", "Português", "GitHub Projects"]
 date: '2024-01-20'
 event: GitTogether São Paulo
 event_url: https://www.meetup.com/githubbrasil/events/298340241/

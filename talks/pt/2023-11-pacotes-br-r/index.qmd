@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Meetup
+categories: ["Meetup", "Dados abertos", "Pacotes", "Português", "Comunidade"]
 date: '2023-11-22'
 event: Meetup R-Ladies São Paulo
 event_url: https://www.meetup.com/pt-BR/rladies-sao-paulo/

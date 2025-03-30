@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Tutorial
+categories: ["Tutorial", "Quarto", "Comunicação", "Português"]
 date: '2022-10-10'
 event: 'Latin-R 2022'
 event_url: https://latin-r.com/

@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Workshop
+categories: ["Workshop", "Quarto", "Comunicação", "Português"]
 date: '2024-07-30'
 event: "Workshop. Programa de Pós-Graduação de Mestrado Profissional em Inovação Tecnológica. Universidade Federal de São Paulo - Campus São José dos Campos"
 links:

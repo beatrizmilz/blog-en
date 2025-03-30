@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Mini-curso
+categories: ["Mini-curso", "Dados abertos", "Português"]
 date: '2025-08-04'
 event: "69ª Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (RBras)"
 event_url: https://69rbras21seagro.com.br/

@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Mini-curso
+categories: ["Mini-curso", "Português", "tidyverse", "Análise de dados", "dplyr"]
 date: '2024-10-22'
 event: "V Simpósio Interdisciplinar de Ciência Ambiental"
 event_url: https://sicam.com.br/

@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Minicurso
+categories: [Minicurso, "Português", "Análise de dados", "tidyverse"]
 date: '2021-11-08'
 event: SENACAMB - Semana Nacional de Ciências Ambientais
 event_url: https://linktr.ee/senacamb
@@ -22,7 +22,6 @@ links:
 location: Online
 title: Linguagem R para Cientistas Ambientais
 image: featured.png
-
 ---
 
 ```{r}
@@ -32,37 +31,31 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
+------------------------------------------------------------------------
 
 **Mais informações em breve!**
 
+Boas vindas! O público-alvo desta apresentação são pessoas com interesse em começar a utilizar R para análise de dados.
 
-Boas vindas!
-O público-alvo desta apresentação são pessoas com interesse em começar a utilizar R para análise de dados. 
-
-É muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes.  Por favor, leia o [Código de Conduta da R-Ladies](https://github.com/rladies/.github/blob/master/CODE_OF_CONDUCT.md#portuguese).
-
-
+É muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o [Código de Conduta da R-Ladies](https://github.com/rladies/.github/blob/master/CODE_OF_CONDUCT.md#portuguese).
 
 ### Comunidades e locais amigáveis para fazer perguntas :)
 
-- [Eventos e redes sociais das R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)
+-   [Eventos e redes sociais das R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)
 
-- [Fórum Curso-R](https://discourse.curso-r.com/)
+-   [Fórum Curso-R](https://discourse.curso-r.com/)
 
-- [Telegram R-Brasil](https://t.me/rbrasiloficial)
-
+-   [Telegram R-Brasil](https://t.me/rbrasiloficial)
 
 ### Para aprender mais
 
-- Livro R para Ciência de Dados: Gratuito em [Inglês](https://www.curso-r.com/cursos/) e em [Espanhol](https://es.r4ds.hadley.nz/). 
+-   Livro R para Ciência de Dados: Gratuito em [Inglês](https://www.curso-r.com/cursos/) e em [Espanhol](https://es.r4ds.hadley.nz/).
 
-- [Curso-R](https://curso-r.com): 
-  - [Material de estudo](http://material.curso-r.com/)
-  - [Blog](https://www.curso-r.com/blog/)
-  - [Livro - em desenvolvimento](https://livro.curso-r.com/index.html)
-  - [Lives e vídeos no Youtube](https://www.youtube.com/c/CursoR6)
-  - [Cursos](https://www.curso-r.com/cursos/)
-  - [Fórum](https://discourse.curso-r.com/)
+-   [Curso-R](https://curso-r.com):
 
+    -   [Material de estudo](http://material.curso-r.com/)
+    -   [Blog](https://www.curso-r.com/blog/)
+    -   [Livro - em desenvolvimento](https://livro.curso-r.com/index.html)
+    -   [Lives e vídeos no Youtube](https://www.youtube.com/c/CursoR6)
+    -   [Cursos](https://www.curso-r.com/cursos/)
+    -   [Fórum](https://discourse.curso-r.com/)

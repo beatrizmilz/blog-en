@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Lives no Youtube
+categories: ["Youtube", "rmarkdown", "Português"] 
 date: '2020-09-29'
 event: Canal GeoCast Brasil
 event_url: https://www.youtube.com/c/geocastbrasil/featured

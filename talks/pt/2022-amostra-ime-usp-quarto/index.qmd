@@ -1,9 +1,9 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Mini-curso
+categories: ["Mini-curso", "Quarto", "Comunicação", "Português"]
 date: '2022-11-23'
-event: Programa de Verão IME-USP
+event: aMostra IME-USP
 event_url: https://www.ime.usp.br/~amostra/#home
 links:
 - icon: images

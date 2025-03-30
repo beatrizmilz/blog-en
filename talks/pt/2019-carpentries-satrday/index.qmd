@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: ["Mesa redonda", "Comunidades", "Ensino"]
+categories: ["Mesa redonda", "Comunidades", "Ensino", "Português"]
 date: '2019-11-30'
 event: SatRday São Paulo 2019
 event_url: https://saopaulo2019.satrdays.org/

@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Palestra
+categories: ["Palestra", "Quarto", "Comunicação", "Português"]
 date: '2023-10-28'
 event: "1º Seminário Interdisciplinar em Ciência de Dados LInDA - I SINCID LINDA"
 event_url: "https://eventos.faac.unesp.br/sincidlinda2023/"

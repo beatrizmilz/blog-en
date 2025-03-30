@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Treinamento
+categories: ["Treinamento", "rmarkdown", "Português"]
 date: '2022-05-20'
 event: Brazilian Open Science Training (BOST)
 event_url: https://mathpol.github.io/bost/top/programacao/

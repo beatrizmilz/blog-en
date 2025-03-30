@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: minicurso
+categories: ["minicurso", "tidyverse", "Limpeza de dados", "Português", "tidyr"]
 date: '2022-10-20'
 event: "XVIII Congresso Brasileiro de Limnologia"
 event_url: https://ablimno.org.br/cblimno/

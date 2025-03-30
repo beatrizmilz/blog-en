@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: "Clube do Livro"
+categories: ["Clube do Livro", "tidyverse", "dplyr", "Comunidade", "Português"]
 date: '2024-07-11'
 event: "Clube do Livro: R for Data Science - R-Ladies São Paulo"
 links:

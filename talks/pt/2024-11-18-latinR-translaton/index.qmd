@@ -5,7 +5,7 @@ author:
   - Beatriz Milz
   - Pedro Faria
   - Francesca Palmeira
-categories: ["Workshop", "Tradução", "PT", "rOpenSci"]
+categories: ["Workshop", "Tradução", "Português", "rOpenSci", "Comunidade"]
 date: '2024-11-18'
 event: "LatinR 2024"
 event_url: https://latinr.org/pt/cronograma/translaton/translaton-pt.html

@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Palestra relâmpago
+categories: ["Palestra relâmpago", "Git", "GitHub", "Português", "GitHub Actions", "Dados abertos"]
 date: '2023-04-12'
 event: Cerveja com Dados Fortaleza
 links:

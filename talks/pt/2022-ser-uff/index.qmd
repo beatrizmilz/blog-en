@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Palestra
+categories: ["Palestra", "Português", "Quarto", "Comunicação"]
 date: '2022-05-25'
 event: VI International Seminar on Statistics with R
 event_url: http://ser.uff.br/

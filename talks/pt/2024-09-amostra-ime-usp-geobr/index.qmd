@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Mini-curso
+categories: ["Mini-curso", "geobr", "Dados abertos", "Dados espaciais", "Português"]
 date: '2024-09-30'
 event: aMostra de Estatística IME USP
 event_url: https://www.ime.usp.br/~amostra/#home

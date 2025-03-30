@@ -3,7 +3,7 @@ toc: true
 author:
   - Beatriz Milz
   - Tereza Lacerda
-categories: Mini-curso
+categories: ["Mini-curso", "Limpeza de dados", "tidyverse", "tidyr", "Português"]
 date: '2023-09-21'
 event: aMostra de Estatística IME USP
 event_url: https://www.ime.usp.br/~amostra/#home

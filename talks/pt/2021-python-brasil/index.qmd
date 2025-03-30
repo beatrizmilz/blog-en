@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Palestra
+categories: ["Palestra", "reticulate", "Python", "Português", "rmarkdown"]
 date: '2021-10-13'
 event: Python Brasil 2021 - 13 de outubro, quarta-feira, das 15:50 às 16:35
 event_url: https://2021.pythonbrasil.org.br/
@@ -23,7 +23,6 @@ location: Online
 title: Fazendo amizade com a Python reticulada
 subtitle: Introdução ao uso de Python e R no RStudio com o pacote reticulate
 image: featured.png
-
 ---
 
 ```{r}
@@ -33,8 +32,6 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
+------------------------------------------------------------------------
 
 Essa palestra tem como objetivo apresentar um conteúdo introdutório e será mostrada na IDE RStudio, usando arquivos RMarkdown. Será apresentado uma introdução ao pacote reticulate. Depois será apresentado um pacote maravilhoso que funciona bem com reticulate e Python para criar vários produtos que podem ser disponibilizados na internet: o R Markdown.
-

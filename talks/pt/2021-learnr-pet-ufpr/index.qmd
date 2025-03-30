@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Lives no Youtube
+categories: ["Youtube", "rmarkdown", "learnr", "Português"] 
 date: '2021-08-13'
 event: Canal PET-Estatística UFPR
 event_url: https://www.youtube.com/watch?v=fTW5ASpn7TE

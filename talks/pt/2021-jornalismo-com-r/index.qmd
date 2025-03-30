@@ -5,7 +5,7 @@ author:
   - Cecília do Lago
   - Gabriela Caesar
   - Beatriz Milz
-categories: Workshop
+categories: ["Workshop", "Jornalismo de dados", "Português"]
 date: '2021-08-29'
 event: 3º Domingo de Dados
 event_url: https://eventos.congresse.me/ddadosabraji#
@@ -21,7 +21,6 @@ links:
 location: Online
 title: Jornalismo com R
 image: featured.jpeg
-
 ---
 
 ```{r}
@@ -31,5 +30,4 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
+------------------------------------------------------------------------

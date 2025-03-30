@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Podcast
+categories: ["Podcast", "Ciência Aberta", "Português"]
 date: '2024-04-19'
 event: "freeCodeCamp Podcast"
 event_url: https://www.freecodecamp.org/portuguese/news/podcast-ep-27/

@@ -20,7 +20,7 @@ author:
   - Ían Muliterno
   - Carolina Musso
   - Jeanne Franco
-categories: ["Ensino", "PT", "Livros", "tidyverse"]
+categories: ["Ensino", "Português", "Livros", "tidyverse", "Tradução", "Comunidade"]
 date: '2024-11-22'
 event: "LatinR 2024"
 event_url: https://latinr.org/pt/

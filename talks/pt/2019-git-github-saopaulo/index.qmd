@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Palestra
+categories: ["Palestra", "Git", "GitHub", "Português"]
 date: '2019-09-12'
 event: Meetup R-Ladies São Paulo
 links:
@@ -13,7 +13,6 @@ links:
 location: São Paulo
 title: Primeiros passos utilizando o Git e GitHub no RStudio
 image: featured.png
-
 ---
 
 ```{r}
@@ -23,5 +22,4 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
+------------------------------------------------------------------------

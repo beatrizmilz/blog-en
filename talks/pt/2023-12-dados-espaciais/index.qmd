@@ -4,7 +4,7 @@ toc: true
 author: 
   - Beatriz Milz
   - Laís Brasileiro
-categories: Workshop
+categories: ["Workshop", "Dados espaciais", "geobr", "sf", "Português"]
 date: '2023-12-12'
 event: Meetup R-Ladies São Paulo
 event_url: https://www.meetup.com/pt-BR/rladies-sao-paulo/
@@ -37,6 +37,8 @@ read_yaml_talks_pt()
 
 <center>
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/B5VoI9d9Dm8?si=nyJFV9CCd9MDPCj1&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/B5VoI9d9Dm8?si=nyJFV9CCd9MDPCj1&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 </center>

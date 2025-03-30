@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Videos no Youtube
+categories: ["Youtube", "dplyr", "joins", "Português"]
 date: '2020-11-03'
 event: Canal da Curso-R
 event_url: https://www.youtube.com/c/CursoR6/featured

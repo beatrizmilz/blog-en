@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Mini-curso
+categories: ["Mini-curso", "Português", "tidyverse", "Análise de dados", "dplyr"]
 date: '2025-07-22'
 event: "IX Fórum Brasileiro de Pós-Graduação em Ciência Política, Universidade de São Paulo (USP)"
 event_url: https://www.instagram.com/fbcp_oficial/
@@ -34,6 +34,5 @@ image: featured.png
 source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
-
 
 Nesta oficina, será apresentado o ambiente de programação R e o IDE RStudio. A oficina é voltada para iniciantes e não é necessário conhecimento prévio de programação. Durante a oficina, serão abordadas tarefas básicas como iniciar um projeto, importar tabelas, realizar filtros, criar tabelas de resumo (com estatísticas descritivas), e exportar resultados. Esta oficina faz parte de uma trilha de treinamentos voltada para iniciantes, fornecendo uma base para quem deseja aprender a analisar dados com R.

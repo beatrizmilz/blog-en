@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Palestras
+categories: ["Palestras", "Visualização de dados", "Português"]
 date: '2019-08-02'
 event: Meetup Nerdzão
 links:
@@ -13,7 +13,6 @@ links:
 location: São Paulo
 title: Dashboards, gráficos, mapas - Possibilidades de visualização de dados com R
 image: featured.png
-
 ---
 
 ```{r}
@@ -23,5 +22,4 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
+------------------------------------------------------------------------

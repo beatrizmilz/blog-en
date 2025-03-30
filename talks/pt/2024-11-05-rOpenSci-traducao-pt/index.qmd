@@ -5,7 +5,7 @@ author:
   - Pedro Faria
   - Beatriz Milz
   - Francesca Belem Lopes Palmeira
-categories: Community Call
+categories: ["Community Call", "Tradução", "Português", "rOpenSci", "Comunidade"]
 date: '2024-11-06'
 event: "rOpenSci Community Call"
 event_url: https://ropensci.org/commcalls/translation-portuguese/

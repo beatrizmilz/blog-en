@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Palestra
+categories: ["Palestra", "Open Data Day", "Dados abertos", "geobr", "Português"]
 date: '2025-03-29'
 event: "Open Data Day | PyLadies São Paulo 2025"
 event_url: "https://www.sympla.com.br/evento/open-data-day-no-insper-pyladies-sao-paulo-2025/2848606"
@@ -14,6 +14,10 @@ links:
   icon_pack: far
   name: Slides
   url: https://beatrizmilz.github.io/2025-03-pyladies-odd-geobr/
+- icon: youtube
+  icon_pack: fab
+  name: Gravação
+  url: https://youtu.be/CaRFhW9rNXY 
 location:  "Insper - São Paulo, SP"
 title: "Como acessar dados geoespaciais abertos do Brasil com o geobr"
 image: featured.png

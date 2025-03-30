@@ -2,7 +2,7 @@
 # THIS FILE WAS CONVERTED FROM BLOGDOWN!
 toc: true
 author: Beatriz Milz
-categories: Palestra
+categories: ["Palestra", "rmarkdown", "Português"]
 date: '2021-10-22'
 event: AI Inclusive
 event_url: https://www.sympla.com.br/comunicando-os-resultados-de-projetos-em-ciencia-de-dados__1374355
@@ -23,7 +23,6 @@ location: Online
 title: Comunicando os resultados de projetos em Ciência de Dados
 subtitle: Conhecendo o R Markdown
 image: featured.png
-
 ---
 
 ```{r}
@@ -33,23 +32,16 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
-
-
-
+------------------------------------------------------------------------
 
 Boas vindas!
 
-É muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes.  Por favor, leia o [Código de Conduta da AI Inclusive](https://pt.ai-inclusive.org/code-of-conduct/pt/).
-
+É muito importante proporcionar uma experiência livre de assédio para todas as pessoas participantes. Por favor, leia o [Código de Conduta da AI Inclusive](https://pt.ai-inclusive.org/code-of-conduct/pt/).
 
 ### Comunidades e locais amigáveis para fazer perguntas :)
 
-- [Eventos e redes sociais das R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)
+-   [Eventos e redes sociais das R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)
 
-- [Fórum Curso-R](https://discourse.curso-r.com/)
+-   [Fórum Curso-R](https://discourse.curso-r.com/)
 
-- [Telegram R-Brasil](https://t.me/rbrasiloficial)
-
-
+-   [Telegram R-Brasil](https://t.me/rbrasiloficial)

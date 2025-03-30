@@ -24,9 +24,9 @@ author:
   - Paloma Rojas Saunero
   - Yuriko Sosa Paredes
   - Frans Van Dunné
-  - Luis D. Verde aRREGOITIA
+  - Luis D. Verde Arregoitia
   - Roxana Villafañe
-categories: Participação em palestra
+categories: ["Community", "English", "LatinR"]
 date: '2020-07-08'
 event: useR! 2020
 event_url: https://user2020.r-project.org/
@@ -39,7 +39,6 @@ location: Online
 title: Communities of practice in Latin America
 subtitle: R and Friends
 image: featured.png
-
 ---
 
 ```{r}
@@ -49,10 +48,9 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-
----
+------------------------------------------------------------------------
 
 Extras:
 
-- Blog da [RConsortium](https://www.r-consortium.org/): 
-  - [Latin American Communities and Organizations: useR!2020](https://www.r-consortium.org/blog/2020/07/07/latin-american-communities-and-organizations-at-user2020)
+-   Blog da [RConsortium](https://www.r-consortium.org/):
+    -   [Latin American Communities and Organizations: useR!2020](https://www.r-consortium.org/blog/2020/07/07/latin-american-communities-and-organizations-at-user2020)

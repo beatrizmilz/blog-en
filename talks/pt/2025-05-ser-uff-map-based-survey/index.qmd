@@ -1,7 +1,7 @@
 ---
 toc: true
 author: Beatriz Milz
-categories: Palestra
+categories: ["Palestra", "Limpeza de dados", "Português", "tidyr", "tidyverse"]
 date: '2025-05-26'
 event: "IX Seminário Internacional de Estatística com R"
 event_url: "https://ser.uff.br/"

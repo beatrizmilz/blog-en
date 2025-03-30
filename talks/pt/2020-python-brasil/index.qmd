@@ -4,7 +4,7 @@ toc: true
 author: 
   - Beatriz Milz
   - Mariana Dias Guilardi
-categories: ["Palestra", "Comunidades", "Ensino"]
+categories: ["Palestra", "Comunidades", "Ensino", "Português"]
 date: '2020-11-04'
 event: Python Brasil 2020
 links:
