@@ -1,0 +1,36 @@
+---
+toc: true
+author: Beatriz Milz
+categories: ["Clube do Livro", "dplyr", "tidyverse", "Comunidade", "Português"]
+date: '2025-04-08'
+event: "Clube do Livro: R for Data Science - R-Ladies São Paulo"
+links:
+- icon: images
+  icon_pack: far
+  name: Slide
+  url: https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds/blob/main/encontro_14/slide-abertura.pdf
+- icon: github
+  icon_pack: fab
+  name: Scripts
+  url: https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds/blob/main/encontro_14/script.R
+- icon: youtube
+  icon_pack: fab
+  name: "Gravação"
+  url: "https://www.youtube.com/live/o31RGWRJl4s?feature=shared"
+- icon: google-drive
+  icon_pack: fab
+  name: "Arquivo compartilhado"
+  url: "https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing"
+  
+location: Online
+title: "Transformar: Vetores lógicos"
+subtitle: "comparações lógicas, case_when(), if_else(), etc."
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
