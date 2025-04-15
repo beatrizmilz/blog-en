@@ -13,8 +13,8 @@ links:
   url: https://beatrizmilz.github.io/2021-SER/#1
 - icon: github
   icon_pack: fab
-  name: Materiais
-  url: https://github.com/eventoseroficial/Data_and_Code/tree/main/Beatriz%20Milz#readme
+  name: Repositório
+  url: hhttps://github.com/beatrizmilz/2021-SER/tree/master/docs
 - icon: youtube
   icon_pack: fab
   name: Video
