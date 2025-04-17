@@ -377,7 +377,6 @@
   {
     "listing": "/content.html",
     "items": [
-      "/talks/pt/2025-04-escola-de-dados-ghactions/index.html",
       "/talks/pt/2025-05-ser-uff-map-based-survey/index.html",
       "/talks/pt/2025-07-fbcp-intro/index.html",
       "/talks/pt/2025-07-fbcp-ggplot2/index.html",
@@ -386,6 +385,7 @@
       "/teaching/pt/2025-09-cebrap-lab-viz-R/index.html",
       "/teaching/pt/2025-09-cebrap-lab-web-scraping /index.html",
       "/teaching/pt/2025-11-cebrap-lab-text-as-data/index.html",
+      "/talks/pt/2025-04-escola-de-dados-ghactions/index.html",
       "/talks/pt/2025-04-r4ds-vetores-logicos/index.html",
       "/talks/pt/2025-03-pyladies-odd-geobr/index.html",
       "/teaching/pt/2025-01-ipea-intermediario-r/index.html",
