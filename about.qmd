@@ -23,12 +23,7 @@ about:
       href: https://orcid.org/0000-0002-3064-4486
     - icon: instagram
       text: Instagram
-      href: https://www.instagram.com/dadoseambiente/   
-    - icon: bookmark-heart
-      text: Skoob
-      href: https://www.skoob.com.br/share/user/beatrizmilz  
-    - text: "{{< fa brands goodreads >}} Goodreads"
-      href: https://www.goodreads.com/user/show/180775178 
+      href: https://www.instagram.com/bea.milz/   
 ---
 
 <center>
