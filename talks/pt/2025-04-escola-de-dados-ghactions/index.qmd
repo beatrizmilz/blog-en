@@ -5,15 +5,19 @@ categories: ["Webinar", "Git", "GitHub", "Português", "GitHub Actions"]
 date: '2025-04-16'
 event: "Escola de Dados"
 event_url: "https://escoladedados.org/webinars/"
-# links:
-# - icon: github
-#   icon_pack: fab
-#   name: Repositório
-#   url: https://github.com/beatrizmilz/2025-03-pyladies-odd-geobr
-# - icon: images
-#   icon_pack: far
-#   name: Slides
-#   url: https://beatrizmilz.github.io/2025-03-pyladies-odd-geobr/
+links:
+ - icon: github
+   icon_pack: fab
+   name: Repositório
+   url: https://github.com/beatrizmilz/2025-04-github-actions-escola-de-dados/tree/main
+ - icon: images
+   icon_pack: far
+   name: Slides
+   url: https://github.com/beatrizmilz/2025-04-github-actions-escola-de-dados/blob/main/slides.pdf
+ - icon: youtube
+   icon_pack: fab
+   name: Video
+   url: https://www.youtube.com/live/eRN4ecOeTT4?feature=shared
 location:  "Online"
 title: "Automatize tarefas com GitHub Actions: Primeiros passos"
 image: featured.png
