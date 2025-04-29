@@ -55,14 +55,15 @@ website:
             href: posts/es.qmd
       - text: Talks and teaching
         href: content.qmd
+      - text: Videos
+        href: videos/index.qmd
       - text: Projects
         href: projects/index.qmd
       - text: Other
         menu:
-          # - text: Research (PT-BR)
-          #   href: research/index.qmd
+          - text: Research (PT-BR)
+            href: research/index.qmd
           - quarto.qmd
-          - videos.qmd
       # - text: Resume
       #   href: https://beatrizmilz.github.io/resume/index.pdf
       # - icon: newspaper

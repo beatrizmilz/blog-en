@@ -1,0 +1,31 @@
+---
+toc: true
+author: Beatriz Milz
+categories: ["R",  "Português", "video", "IDE", "RStudio Cloud", "Posit Cloud"]
+date: '2025-04-27'
+links:
+- icon: github
+  icon_pack: fab
+  name: Script
+  url: https://github.com/beatrizmilz/youtube/blob/main/2025-04_01_posit-cloud/report.qmd
+- icon: youtube
+  icon_pack: fab
+  name: Video
+  url: https://youtu.be/N-GJowa-V0o
+- icon: cloud
+  icon_pack: far
+  name: Posit Cloud
+  url: https://posit.cloud/
+title: "Como programar em R direto do navegador com o Posit Cloud (Tutorial)"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+<br>

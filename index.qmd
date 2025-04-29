@@ -9,25 +9,21 @@ about:
   image: bea.jpg
 ---
 
-Hi! I'm Bea.  This is my **personal website**. Here you can find a lot of content about R, Git and GitHub, environmental data science and other things I'm interested in.  Feel free to explore my website and [get in touch](mailto: milz.bea@gmail.com) if you have any suggestion! 
+Hi! I'm Bea. This is my **personal website**. Here you can find a lot of content about R, Git and GitHub, environmental data science and other things I'm interested in. Feel free to explore my website and [get in touch](mailto:%20milz.bea@gmail.com) if you have any suggestion!
 
+👩‍💻 [about](about.qmd) (en) \| [sobre](about-pt.qmd) (pt-br) \| [sobre](about-es.qmd) (es)
 
-👩‍💻 [about](about.qmd)  (en) | [sobre](about-pt.qmd)  (pt-br) | [sobre](about-es.qmd) (es)
+📑 [blog posts](posts/en.qmd) (en) \| [textos](posts/pt.qmd) (pt-br)\| [textos](posts/es.qmd) (es)
 
-📑 [blog posts](posts/en.qmd) (en) | [textos](posts/pt.qmd) (pt-br)| [textos](posts/es.qmd) (es)
-
-👩‍🏫 [talks, workshops, etc](content.qmd) 
+👩‍🏫 [talks, workshops, etc](content.qmd)
 
 📚 [projects / projetos](projects/index.qmd)
 
 🎓 [research / pesquisa](research/index.qmd) (under construction 🚧)
 
-🎥 [videos](videos.qmd) 
+🎥 [videos](videos/index.qmd)
 
-
-
-::: {.callout-note}
-
+::: callout-note
 ## In which language is this website?
 
 My native language is Brazilian Portuguese (pt-br), but I have presented/created content also in English and Spanish. This blog has content in those 3 languages, but not everything is translated. If you want to see a specific post translated, please let me know!

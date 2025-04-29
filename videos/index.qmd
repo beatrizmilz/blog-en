@@ -1,0 +1,25 @@
+---
+title: "Videos"
+listing:
+  - id: videos
+    contents: "**/*/index.qmd"
+    type: default
+    fields: [image, date, title, subtitle]
+    sort: "date desc"
+    categories: false
+    sort-ui: true
+    filter-ui: true
+    page-size: 3     
+page-layout: full
+title-block-banner: false
+toc: false
+---
+
+## Recent videos
+
+::: {#videos}
+:::
+
+## YouTube channel
+
+[![](youtube.png){fig-align="center" width="80%"}](https://www.youtube.com/@beamilz)
