@@ -10,10 +10,10 @@ event_url: https://guild.host/events/thasfin-no-cinema-g0om1g
 #   icon_pack: fab
 #   name: Repositório
 #   url: https://github.com/beatrizmilz/2024-09-amostra-geobr
-# - icon: images
-#   icon_pack: far
-#   name: Slides
-#   url: https://beatrizmilz.github.io/2024-09-amostra-geobr/
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/pt/2025-05-open-source-thasfin/slides.pdf
 # - icon: cloud
 #   icon_pack: far
 #   name: Posit Cloud
