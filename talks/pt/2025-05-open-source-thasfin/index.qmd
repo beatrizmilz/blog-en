@@ -5,15 +5,15 @@ categories: ["Palestra", "Open Source", "Português", "Comunidade"]
 date: '2025-05-10'
 event: "Thasfin no Cinema"
 event_url: https://guild.host/events/thasfin-no-cinema-g0om1g
-# links:
+links:
 # - icon: github
 #   icon_pack: fab
 #   name: Repositório
 #   url: https://github.com/beatrizmilz/2024-09-amostra-geobr
-- icon: images
-  icon_pack: far
-  name: Slides
-  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/pt/2025-05-open-source-thasfin/slides.pdf
+  - icon: images
+    icon_pack: far
+    name: Slides
+    url: https://github.com/beatrizmilz/blog-en/blob/main/talks/pt/2025-05-open-source-thasfin/slides.pdf
 # - icon: cloud
 #   icon_pack: far
 #   name: Posit Cloud
@@ -25,7 +25,7 @@ event_url: https://guild.host/events/thasfin-no-cinema-g0om1g
   
 location:  São Paulo, SP
 title: "Toda ajuda conta: diferentes formas de contribuir com Open Source"
-image: featured.jpeg
+image: featured.jpg
 ---
 
 ```{r}
