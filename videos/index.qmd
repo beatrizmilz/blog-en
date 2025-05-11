@@ -4,7 +4,7 @@ listing:
   - id: videos
     contents: "**/*/index.qmd"
     type: default
-    fields: [image, date, title, subtitle]
+    fields: [image, date, title, subtitle, categories]
     sort: "date desc"
     categories: false
     sort-ui: true
