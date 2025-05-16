@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-72dff607faed97ffdfe7ed556b02ffdf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5aa5b0671fb37b194ca1f076163244f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
@@ -295,7 +295,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UiUyQ1BvcnR1Z3UlQzMlQUFzJTJDdmlkZW8lMkNJREUlMkNSU3R1ZGlvJTIwQ2xvdWQlMkNQb3NpdCUyMENsb3Vk" data-listing-date-sort="1745712000000" data-listing-file-modified-sort="1747006185470" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="quarto-post image-right" data-index="0" data-categories="UiUyQ1BvcnR1Z3UlQzMlQUFzJTJDdmlkZW8lMkNJREUlMkNSU3R1ZGlvJTIwQ2xvdWQlMkNQb3NpdCUyMENsb3Vk" data-listing-date-sort="1745712000000" data-listing-file-modified-sort="1747399803725" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
 <div class="thumbnail"><a href="../videos/pt/2025-04-posit-cloud/index.html" class="no-external">
 
 <img loading="lazy" src="../videos/pt/2025-04-posit-cloud/featured.png" class="thumbnail-image">
@@ -307,6 +307,21 @@ window.Quarto = {
 </h3>
 <div class="listing-subtitle">
 <a href="../videos/pt/2025-04-posit-cloud/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UG9ydHVndSVDMyVBQXM='); return false;">Português</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dmlkZW8='); return false;">video</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SURF'); return false;">IDE</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UlN0dWRpbyUyMENsb3Vk'); return false;">RStudio Cloud</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UG9zaXQlMjBDbG91ZA=='); return false;">Posit Cloud</div>
+
 </div>
 </div>
 <div class="metadata">
@@ -748,9 +763,6 @@ window.Quarto = {
     const getTheme = () => {
       let baseTheme = document.getElementById('giscus-base-theme').value;
       let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
       return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
     };
     const script = document.createElement("script");
