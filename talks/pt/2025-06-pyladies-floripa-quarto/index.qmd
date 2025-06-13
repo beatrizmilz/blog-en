@@ -21,6 +21,7 @@ event_url: "https://www.instagram.com/pyladiesfloripa/"
 location:  "Online"
 title: "Conhecendo o Quarto"
 image: featured.jpg
+draft: true
 ---
 
 ```{r}
