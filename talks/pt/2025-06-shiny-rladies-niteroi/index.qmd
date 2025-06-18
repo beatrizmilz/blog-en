@@ -5,19 +5,15 @@ categories: ["Palestra", "R", "Python", "Shiny", "Dashboard",  "Português"]
 date: '2025-06-17'
 event: "R-Ladies Niterói"
 event_url: "https://www.meetup.com/pt-BR/rladies-niteroi/"
-# links:
-# - icon: github
-#   icon_pack: fab
-#   name: Repositório
-#   url: https://github.com/beatrizmilz/2025-03-pyladies-odd-geobr
-# - icon: images
-#   icon_pack: far
-#   name: Slides
-#   url: https://beatrizmilz.github.io/2025-03-pyladies-odd-geobr/
-# - icon: youtube
-#   icon_pack: fab
-#   name: Gravação
-#   url: https://youtu.be/CaRFhW9rNXY 
+links:
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: github.com/beatrizmilz/2025-06-shiny-rladies-niteroi
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/2025-06-shiny-rladies-niteroi/
 location:  "Online"
 title: "Introdução ao Shiny: Construindo Dashboards Interativos com R"
 image: featured.png
