@@ -102,10 +102,6 @@
   {
     "listing": "/teaching/index.html",
     "items": [
-      "/teaching/pt/2025-11-cebrap-lab-text-as-data/index.html",
-      "/teaching/pt/2025-09-cebrap-lab-web-scraping /index.html",
-      "/teaching/pt/2025-09-cebrap-lab-viz-R/index.html",
-      "/teaching/pt/2025-08-cebrap-lab-intro-R/index.html",
       "/teaching/pt/2025-01-ipea-intermediario-r/index.html",
       "/teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
       "/teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
@@ -129,10 +125,6 @@
   {
     "listing": "/teaching/pt/index.html",
     "items": [
-      "/teaching/pt/2025-11-cebrap-lab-text-as-data/index.html",
-      "/teaching/pt/2025-09-cebrap-lab-web-scraping /index.html",
-      "/teaching/pt/2025-09-cebrap-lab-viz-R/index.html",
-      "/teaching/pt/2025-08-cebrap-lab-intro-R/index.html",
       "/teaching/pt/2025-01-ipea-intermediario-r/index.html",
       "/teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
       "/teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
@@ -181,15 +173,11 @@
   {
     "listing": "/content.html",
     "items": [
-      "/talks/pt/2025-06-shiny-rladies-niteroi/index.html",
       "/talks/pt/2025-07-fbcp-intro/index.html",
       "/talks/pt/2025-07-fbcp-ggplot2/index.html",
       "/talks/pt/2025-08-rbras-sidrar/index.html",
-      "/teaching/pt/2025-08-cebrap-lab-intro-R/index.html",
-      "/teaching/pt/2025-09-cebrap-lab-viz-R/index.html",
       "/talks/en/2025-posit-conf/index.html",
-      "/teaching/pt/2025-09-cebrap-lab-web-scraping /index.html",
-      "/teaching/pt/2025-11-cebrap-lab-text-as-data/index.html",
+      "/talks/pt/2025-06-shiny-rladies-niteroi/index.html",
       "/talks/pt/2025-05-ser-uff-map-based-survey/index.html",
       "/talks/pt/2025-05-open-source-thasfin/index.html",
       "/talks/pt/2025-04-escola-de-dados-ghactions/index.html",
