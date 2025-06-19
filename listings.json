@@ -6,6 +6,7 @@
       "/talks/pt/2025-08-rbras-sidrar/index.html",
       "/talks/pt/2025-07-fbcp-ggplot2/index.html",
       "/talks/pt/2025-07-fbcp-intro/index.html",
+      "/talks/pt/2025-06-okbr-github/index.html",
       "/talks/pt/2025-06-shiny-rladies-niteroi/index.html",
       "/talks/pt/2025-05-ser-uff-map-based-survey/index.html",
       "/talks/pt/2025-05-open-source-thasfin/index.html",
@@ -92,87 +93,32 @@
     ]
   },
   {
-    "listing": "/research/index.html",
+    "listing": "/talks/en/index.html",
     "items": [
-      "/research/pt/2024-doutorado/index.html",
-      "/research/en/2022-ambiagua/index.html",
-      "/research/pt/2015-tcc/index.html"
-    ]
-  },
-  {
-    "listing": "/teaching/index.html",
-    "items": [
-      "/teaching/pt/2025-01-ipea-intermediario-r/index.html",
-      "/teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
-      "/teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
-      "/teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
-      "/teaching/pt/2024-10-ipea-intro-r/index.html",
-      "/teaching/pt/2024-09-cebrap-lab-viz-R/index.html",
-      "/teaching/pt/2024-08-cebrap-lab-intro-R/index.html",
-      "/teaching/pt/cursor-visualizacao/index.html",
-      "/teaching/pt/cursor-r4ds-1/index.html",
-      "/teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
-      "/teaching/pt/2023-11-cebrap-lab-text-as-data/index.html",
-      "/teaching/pt/cursor-relatorios/index.html",
-      "/teaching/pt/2023-06-cebrap-lab-viz-R/index.html",
-      "/teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
-      "/teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
-      "/teaching/pt/cursor-pacotes/index.html",
-      "/teaching/pt/2022-05-cebrap-lab-intro-R/index.html",
-      "/teaching/pt/2022-01-verao-ime-usp-relatorios/index.html"
-    ]
-  },
-  {
-    "listing": "/teaching/pt/index.html",
-    "items": [
-      "/teaching/pt/2025-01-ipea-intermediario-r/index.html",
-      "/teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
-      "/teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
-      "/teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
-      "/teaching/pt/2024-10-ipea-intro-r/index.html",
-      "/teaching/pt/2024-09-cebrap-lab-viz-R/index.html",
-      "/teaching/pt/2024-08-cebrap-lab-intro-R/index.html",
-      "/teaching/pt/cursor-visualizacao/index.html",
-      "/teaching/pt/cursor-r4ds-1/index.html",
-      "/teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
-      "/teaching/pt/2023-11-cebrap-lab-text-as-data/index.html",
-      "/teaching/pt/cursor-relatorios/index.html",
-      "/teaching/pt/2023-06-cebrap-lab-viz-R/index.html",
-      "/teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
-      "/teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
-      "/teaching/pt/cursor-pacotes/index.html",
-      "/teaching/pt/2022-05-cebrap-lab-intro-R/index.html",
-      "/teaching/pt/2022-01-verao-ime-usp-relatorios/index.html"
-    ]
-  },
-  {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/rladies-sp-clube-do-livro-r4ds/index.html",
-      "/projects/package-odbr/index.html",
-      "/projects/translation-r4ds/index.html",
-      "/projects/package-dados/index.html"
-    ]
-  },
-  {
-    "listing": "/series-gha.html",
-    "items": [
-      "/posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html",
-      "/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
-      "/posts/series-gha/2022-series-gha-1-what-is/en/index.html",
-      "/posts/series-gha/2022-series-gha-1-what-is/pt/index.html",
-      "/posts/series-gha/2022-series-gha-1-what-is/es/index.html"
-    ]
-  },
-  {
-    "listing": "/videos/index.html",
-    "items": [
-      "/videos/pt/2025-04-posit-cloud/index.html"
+      "/talks/en/2025-posit-conf/index.html",
+      "/talks/en/2024-11-latinR-bookclub/index.html",
+      "/talks/en/2024-11-latinR-gugudadados/index.html",
+      "/talks/en/2024-11-ufabc-intro-r/index.html",
+      "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
+      "/talks/en/2024-10-15-ufabc-literature-review/index.html",
+      "/talks/en/2024-10-github-researcher/index.html",
+      "/talks/en/2024-05-rladies-melbourne/index.html",
+      "/talks/en/2023-11-rday-colombia-purrr/index.html",
+      "/talks/en/2022-gha-rladies-abuja/index.html",
+      "/talks/en/2022-rstudio-conf/index.html",
+      "/talks/en/2022-interview-reproducible-research-scout/index.html",
+      "/talks/en/2021-learnr-latinr/index.html",
+      "/talks/en/2021-experience-useR/index.html",
+      "/talks/en/2020-RStudio-certification/index.html",
+      "/talks/en/2020-user-latin-america/index.html",
+      "/talks/en/2019-user-rladies-sp/index.html",
+      "/talks/en/2018-knitr-codata/index.html"
     ]
   },
   {
     "listing": "/content.html",
     "items": [
+      "/talks/pt/2025-06-okbr-github/index.html",
       "/talks/pt/2025-07-fbcp-intro/index.html",
       "/talks/pt/2025-07-fbcp-ggplot2/index.html",
       "/talks/pt/2025-08-rbras-sidrar/index.html",
@@ -282,26 +228,82 @@
     ]
   },
   {
-    "listing": "/talks/en/index.html",
+    "listing": "/videos/index.html",
     "items": [
-      "/talks/en/2025-posit-conf/index.html",
-      "/talks/en/2024-11-latinR-bookclub/index.html",
-      "/talks/en/2024-11-latinR-gugudadados/index.html",
-      "/talks/en/2024-11-ufabc-intro-r/index.html",
-      "/talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
-      "/talks/en/2024-10-15-ufabc-literature-review/index.html",
-      "/talks/en/2024-10-github-researcher/index.html",
-      "/talks/en/2024-05-rladies-melbourne/index.html",
-      "/talks/en/2023-11-rday-colombia-purrr/index.html",
-      "/talks/en/2022-gha-rladies-abuja/index.html",
-      "/talks/en/2022-rstudio-conf/index.html",
-      "/talks/en/2022-interview-reproducible-research-scout/index.html",
-      "/talks/en/2021-learnr-latinr/index.html",
-      "/talks/en/2021-experience-useR/index.html",
-      "/talks/en/2020-RStudio-certification/index.html",
-      "/talks/en/2020-user-latin-america/index.html",
-      "/talks/en/2019-user-rladies-sp/index.html",
-      "/talks/en/2018-knitr-codata/index.html"
+      "/videos/pt/2025-04-posit-cloud/index.html"
+    ]
+  },
+  {
+    "listing": "/series-gha.html",
+    "items": [
+      "/posts/series-gha/2022-07-28-github-actions-rstudio/en/index.html",
+      "/posts/series-gha/2022-series-gha-2-creating-your-first-action/en/index.html",
+      "/posts/series-gha/2022-series-gha-1-what-is/en/index.html",
+      "/posts/series-gha/2022-series-gha-1-what-is/pt/index.html",
+      "/posts/series-gha/2022-series-gha-1-what-is/es/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/rladies-sp-clube-do-livro-r4ds/index.html",
+      "/projects/package-odbr/index.html",
+      "/projects/translation-r4ds/index.html",
+      "/projects/package-dados/index.html"
+    ]
+  },
+  {
+    "listing": "/teaching/pt/index.html",
+    "items": [
+      "/teaching/pt/2025-01-ipea-intermediario-r/index.html",
+      "/teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
+      "/teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
+      "/teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
+      "/teaching/pt/2024-10-ipea-intro-r/index.html",
+      "/teaching/pt/2024-09-cebrap-lab-viz-R/index.html",
+      "/teaching/pt/2024-08-cebrap-lab-intro-R/index.html",
+      "/teaching/pt/cursor-visualizacao/index.html",
+      "/teaching/pt/cursor-r4ds-1/index.html",
+      "/teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
+      "/teaching/pt/2023-11-cebrap-lab-text-as-data/index.html",
+      "/teaching/pt/cursor-relatorios/index.html",
+      "/teaching/pt/2023-06-cebrap-lab-viz-R/index.html",
+      "/teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
+      "/teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
+      "/teaching/pt/cursor-pacotes/index.html",
+      "/teaching/pt/2022-05-cebrap-lab-intro-R/index.html",
+      "/teaching/pt/2022-01-verao-ime-usp-relatorios/index.html"
+    ]
+  },
+  {
+    "listing": "/teaching/index.html",
+    "items": [
+      "/teaching/pt/2025-01-ipea-intermediario-r/index.html",
+      "/teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
+      "/teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
+      "/teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
+      "/teaching/pt/2024-10-ipea-intro-r/index.html",
+      "/teaching/pt/2024-09-cebrap-lab-viz-R/index.html",
+      "/teaching/pt/2024-08-cebrap-lab-intro-R/index.html",
+      "/teaching/pt/cursor-visualizacao/index.html",
+      "/teaching/pt/cursor-r4ds-1/index.html",
+      "/teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
+      "/teaching/pt/2023-11-cebrap-lab-text-as-data/index.html",
+      "/teaching/pt/cursor-relatorios/index.html",
+      "/teaching/pt/2023-06-cebrap-lab-viz-R/index.html",
+      "/teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
+      "/teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
+      "/teaching/pt/cursor-pacotes/index.html",
+      "/teaching/pt/2022-05-cebrap-lab-intro-R/index.html",
+      "/teaching/pt/2022-01-verao-ime-usp-relatorios/index.html"
+    ]
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/pt/2024-doutorado/index.html",
+      "/research/en/2022-ambiagua/index.html",
+      "/research/pt/2015-tcc/index.html"
     ]
   },
   {
@@ -310,6 +312,7 @@
       "/talks/pt/2025-08-rbras-sidrar/index.html",
       "/talks/pt/2025-07-fbcp-ggplot2/index.html",
       "/talks/pt/2025-07-fbcp-intro/index.html",
+      "/talks/pt/2025-06-okbr-github/index.html",
       "/talks/pt/2025-06-shiny-rladies-niteroi/index.html",
       "/talks/pt/2025-05-ser-uff-map-based-survey/index.html",
       "/talks/pt/2025-05-open-source-thasfin/index.html",

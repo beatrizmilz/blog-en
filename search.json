@@ -893,7 +893,7 @@
     "href": "talks/index.html#slides",
     "title": "Palestras/talks",
     "section": "Slides",
-    "text": "Slides\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTranslating R for Data Science into Portuguese: A Community-Led Initiative\n\n\nSession: It Takes a Village: Building and Sustaining Communities\n\n\n\n18 de set. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nObtendo dados do SIDRA/IBGE com R utilizando o pacote SIDRAR\n\n\n\n4 de ago. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à elaboração de gráficos com ggplot2 e R\n\n\n\n24 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R para análise de dados\n\n\n\n22 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao Shiny: Construindo Dashboards Interativos com R\n\n\n\n17 de jun. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nArrumação de dados de um Map-based survey com R: Desafios e lições aprendidas\n\n\n\n26 de mai. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nToda ajuda conta: diferentes formas de contribuir com Open Source\n\n\n\n10 de mai. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nAutomatize tarefas com GitHub Actions: Primeiros passos\n\n\n\n16 de abr. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTransformar: Vetores lógicos\n\n\ncomparações lógicas, case_when(), if_else(), etc.\n\n\n\n8 de abr. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nComo acessar dados geoespaciais abertos do Brasil com o geobr\n\n\n\n29 de mar. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nStructuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nGuguDaDados: A space for children and babies in events\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nDemocratizando a Ciência de Dados em Português: Uma tradução de ‘R for Data Science’ (2ª edição) liderada pela comunidade\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTradução + Hackathon = Traslaton rOpenSci\n\n\n\n18 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n12 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA comunidade R fala português\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nLive no canal da Curso-R sobre a GitHub Universe\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nQualitative Data Analysis: Coding\n\n\n\n22 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n22 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nLiterature review\n\n\n\n15 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing GitHub as a Researcher\n\n\n\n9 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n30 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n30 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 3\n\n\nFunções: group_by(), summarise(), slice_*()\n\n\n\n29 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 2\n\n\nFunções: mutate(), select(), rename(), relocate()\n\n\n\n11 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 1\n\n\nFunções: filter(), arrange(), distinct(), count()\n\n\n\n24 de jun. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nActions to increase diversity in the R-Ladies community - São Paulo\n\n\n\n2 de mai. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R e Ciência Aberta\n\n\n\n19 de abr. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nO que são dados abertos? O que é o Open Data Day?\n\n\n\n2 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o GitHub Projects\n\n\n\n20 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalhando com dados espaciais no R\n\n\n\n12 de dez. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nPurrr-fecting your R workflow - An introduction to functional programming\n\n\n\n24 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n22 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R de dados brasileiros\n\n\n\n22 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentando os resultados com R\n\n\n\n28 de out. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n21 de set. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n9 de mai. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote purrr\n\n\n\n29 de abr. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nUtilizando GitHub Actions para baixar dados públicos\n\n\nUm exemplo com dados de barragens de mineração\n\n\n\n12 de abr. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Quarto: a nova geração do RMarkdown\n\n\n\n23 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nRunning code while we’re sleeping - Introduction to GitHub Actions for R users\n\n\n\n29 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n20 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nR translatón/Hackaton de tradução do R\n\n\n\n15 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados: Criando apresentações com Quarto\n\n\n\n10 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\n28 de jul. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nInterview for the Reproducible Research Scout Youtube Channel\n\n\n\n20 de jun. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\n25 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\n20 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\n12 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n26 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n10 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R para Cientistas Ambientais\n\n\n\n8 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando os resultados de projetos em Ciência de Dados\n\n\nConhecendo o R Markdown\n\n\n\n22 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade - Especial Hacktoberfest\n\n\n\n13 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nFazendo amizade com a Python reticulada\n\n\nIntrodução ao uso de Python e R no RStudio com o pacote reticulate\n\n\n\n13 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nComo aprender R tem sido importante na minha trajetória como Gestora Ambiental\n\n\n\n30 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions\n\n\n\n18 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n11 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nFaça apresentações ninja em R\n\n\nConhecendo o pacote xaringan\n\n\n\n9 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nJornalismo com R\n\n\n\n29 de ago. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nCriando tutoriais interativos com R\n\n\nConhecendo o pacote learnr\n\n\n\n13 de ago. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\n30 de jul. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nCapítulos de Workflow do livro R for Data Science\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\n14 de jul. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nColeta de dados automatizada e integração contínua utilizando GitHub Actions\n\n\nExemplos com o Pacote Mananciais\n\n\n\n10 de jun. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n28 de abr. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnsino de programação - Como fazer parte da comunidade global The Carpentries?\n\n\n\n4 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr joins - Juntando bases de dados\n\n\n\n3 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados em R\n\n\nAprenda a criar apresentações reprodutíveis\n\n\n\n19 de out. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nAprenda a usar Git e GitHub no RStudio!\n\n\nR-Ladies SP na Hacktoberfest\n\n\n\n17 de out. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nR Markdown\n\n\nUsando o R para comunicar seus resultados\n\n\n\n29 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n23 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade\n\n\n\n10 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub no RStudio\n\n\n\n27 de ago. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução a Linguagem R\n\n\n\n27 de ago. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America\n\n\nR and Friends\n\n\n\n8 de jul. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\n4 de mai. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\n30 de nov. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentações no R ⚔ com xaringan\n\n\n\n17 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiros passos utilizando o Git e GitHub no RStudio\n\n\n\n12 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote xaringan - Criando apresentações com R\n\n\n\n27 de ago. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards, gráficos, mapas - Possibilidades de visualização de dados com R\n\n\n\n2 de ago. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n11 de jul. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n20 de mai. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\n\n5 de dez. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nOficina de Introdução ao R\n\n\n\n29 de nov. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n21 de nov. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nR e Desafios no Projeto Temático - Oficina de Introdução ao R\n\n\n\n17 de out. de 2018\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Slides\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTranslating R for Data Science into Portuguese: A Community-Led Initiative\n\n\nSession: It Takes a Village: Building and Sustaining Communities\n\n\n\n18 de set. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nObtendo dados do SIDRA/IBGE com R utilizando o pacote SIDRAR\n\n\n\n4 de ago. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à elaboração de gráficos com ggplot2 e R\n\n\n\n24 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R para análise de dados\n\n\n\n22 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlantão de dúvidas sobre GitHub\n\n\n\n24 de jun. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao Shiny: Construindo Dashboards Interativos com R\n\n\n\n17 de jun. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nArrumação de dados de um Map-based survey com R: Desafios e lições aprendidas\n\n\n\n26 de mai. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nToda ajuda conta: diferentes formas de contribuir com Open Source\n\n\n\n10 de mai. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nAutomatize tarefas com GitHub Actions: Primeiros passos\n\n\n\n16 de abr. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTransformar: Vetores lógicos\n\n\ncomparações lógicas, case_when(), if_else(), etc.\n\n\n\n8 de abr. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nComo acessar dados geoespaciais abertos do Brasil com o geobr\n\n\n\n29 de mar. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nStructuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nGuguDaDados: A space for children and babies in events\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nDemocratizando a Ciência de Dados em Português: Uma tradução de ‘R for Data Science’ (2ª edição) liderada pela comunidade\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTradução + Hackathon = Traslaton rOpenSci\n\n\n\n18 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n12 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA comunidade R fala português\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nLive no canal da Curso-R sobre a GitHub Universe\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nQualitative Data Analysis: Coding\n\n\n\n22 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n22 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nLiterature review\n\n\n\n15 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing GitHub as a Researcher\n\n\n\n9 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n30 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n30 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 3\n\n\nFunções: group_by(), summarise(), slice_*()\n\n\n\n29 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 2\n\n\nFunções: mutate(), select(), rename(), relocate()\n\n\n\n11 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 1\n\n\nFunções: filter(), arrange(), distinct(), count()\n\n\n\n24 de jun. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nActions to increase diversity in the R-Ladies community - São Paulo\n\n\n\n2 de mai. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R e Ciência Aberta\n\n\n\n19 de abr. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nO que são dados abertos? O que é o Open Data Day?\n\n\n\n2 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o GitHub Projects\n\n\n\n20 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalhando com dados espaciais no R\n\n\n\n12 de dez. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nPurrr-fecting your R workflow - An introduction to functional programming\n\n\n\n24 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n22 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R de dados brasileiros\n\n\n\n22 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentando os resultados com R\n\n\n\n28 de out. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n21 de set. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n9 de mai. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote purrr\n\n\n\n29 de abr. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nUtilizando GitHub Actions para baixar dados públicos\n\n\nUm exemplo com dados de barragens de mineração\n\n\n\n12 de abr. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Quarto: a nova geração do RMarkdown\n\n\n\n23 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nRunning code while we’re sleeping - Introduction to GitHub Actions for R users\n\n\n\n29 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n20 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nR translatón/Hackaton de tradução do R\n\n\n\n15 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados: Criando apresentações com Quarto\n\n\n\n10 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\n28 de jul. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nInterview for the Reproducible Research Scout Youtube Channel\n\n\n\n20 de jun. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\n25 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\n20 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\n12 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n26 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n10 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R para Cientistas Ambientais\n\n\n\n8 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando os resultados de projetos em Ciência de Dados\n\n\nConhecendo o R Markdown\n\n\n\n22 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade - Especial Hacktoberfest\n\n\n\n13 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nFazendo amizade com a Python reticulada\n\n\nIntrodução ao uso de Python e R no RStudio com o pacote reticulate\n\n\n\n13 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nComo aprender R tem sido importante na minha trajetória como Gestora Ambiental\n\n\n\n30 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions\n\n\n\n18 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n11 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nFaça apresentações ninja em R\n\n\nConhecendo o pacote xaringan\n\n\n\n9 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nJornalismo com R\n\n\n\n29 de ago. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nCriando tutoriais interativos com R\n\n\nConhecendo o pacote learnr\n\n\n\n13 de ago. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\n30 de jul. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nCapítulos de Workflow do livro R for Data Science\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\n14 de jul. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nColeta de dados automatizada e integração contínua utilizando GitHub Actions\n\n\nExemplos com o Pacote Mananciais\n\n\n\n10 de jun. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n28 de abr. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnsino de programação - Como fazer parte da comunidade global The Carpentries?\n\n\n\n4 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr joins - Juntando bases de dados\n\n\n\n3 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados em R\n\n\nAprenda a criar apresentações reprodutíveis\n\n\n\n19 de out. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nAprenda a usar Git e GitHub no RStudio!\n\n\nR-Ladies SP na Hacktoberfest\n\n\n\n17 de out. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nR Markdown\n\n\nUsando o R para comunicar seus resultados\n\n\n\n29 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n23 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade\n\n\n\n10 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub no RStudio\n\n\n\n27 de ago. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução a Linguagem R\n\n\n\n27 de ago. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America\n\n\nR and Friends\n\n\n\n8 de jul. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\n4 de mai. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\n30 de nov. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nApresentações no R ⚔ com xaringan\n\n\n\n17 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiros passos utilizando o Git e GitHub no RStudio\n\n\n\n12 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote xaringan - Criando apresentações com R\n\n\n\n27 de ago. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards, gráficos, mapas - Possibilidades de visualização de dados com R\n\n\n\n2 de ago. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n11 de jul. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n20 de mai. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\n\n5 de dez. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nOficina de Introdução ao R\n\n\n\n29 de nov. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n21 de nov. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\nR e Desafios no Projeto Temático - Oficina de Introdução ao R\n\n\n\n17 de out. de 2018\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "talks/es/2020-funciones-r4ds/index.html",
@@ -1176,102 +1176,501 @@
     "text": "Evento: V Simpósio Interdisciplinar de Ciência AmbientalLink: https://sicam.com.br/Lugar: IEE-USP / São Paulo\nMateriais\n\n\n Repositório  Slides  Posit Cloud  Material da atividade"
   },
   {
-    "objectID": "talks/pt/2024-01-github-projects/index.html",
-    "href": "talks/pt/2024-01-github-projects/index.html",
-    "title": "Conhecendo o GitHub Projects",
+    "objectID": "talks/pt/2025-06-okbr-github/index.html",
+    "href": "talks/pt/2025-06-okbr-github/index.html",
+    "title": "Plantão de dúvidas sobre GitHub",
     "section": "",
-    "text": "Evento: GitTogether São PauloLink: https://www.meetup.com/githubbrasil/events/298340241/Lugar: São Paulo, SP\nMateriais\n\n\n Apresentação  Apresentação em PDF"
+    "text": "Evento: Open Knowledge BrasilLink: https://www.instagram.com/p/DLDnhwmPZyN/Lugar: Online\nMateriais\n\n\n Chamada  Google Calendar  Divulgação"
   },
   {
-    "objectID": "talks/en/2021-learnr-latinr/index.html",
-    "href": "talks/en/2021-learnr-latinr/index.html",
-    "title": "Scaling feedback using learnr and gradethis in a introductory R course",
+    "objectID": "talks/pt/2025-04-r4ds-vetores-logicos/index.html",
+    "href": "talks/pt/2025-04-r4ds-vetores-logicos/index.html",
+    "title": "Transformar: Vetores lógicos",
     "section": "",
-    "text": "Event: LatinR 2021\nText submission\nTalk\nQ&A\nSlides:"
+    "text": "Evento: Clube do Livro: R for Data Science - R-Ladies São PauloLugar: Online\nMateriais\n\n\n Slide  Scripts  Gravação  Arquivo compartilhado"
   },
   {
-    "objectID": "talks/en/2020-user-latin-america/index.html",
-    "href": "talks/en/2020-user-latin-america/index.html",
-    "title": "Communities of practice in Latin America",
+    "objectID": "talks/en/index.html",
+    "href": "talks/en/index.html",
+    "title": "Talks",
     "section": "",
-    "text": "Evento: useR! 2020Link: https://user2020.r-project.org/Lugar: Online\nMateriais\n\n\n Video \n\n\nExtras:\n\nBlog da RConsortium:\n\nLatin American Communities and Organizations: useR!2020"
+    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTranslating R for Data Science into Portuguese: A Community-Led Initiative\n\n\nSession: It Takes a Village: Building and Sustaining Communities\n\n\n\n\n\n18 de set. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nStructuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo\n\n\n\n\n\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nGuguDaDados: A space for children and babies in events\n\n\n\n\n\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n12 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nQualitative Data Analysis: Coding\n\n\n\n\n\n\n\n\n22 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLiterature review\n\n\n\n\n\n\n\n\n15 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nUsing GitHub as a Researcher\n\n\n\n\n\n\n\n\n9 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nActions to increase diversity in the R-Ladies community - São Paulo\n\n\n\n\n\n\n\n\n2 de mai. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nPurrr-fecting your R workflow - An introduction to functional programming\n\n\n\n\n\n\n\n\n24 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRunning code while we’re sleeping - Introduction to GitHub Actions for R users\n\n\n\n\n\n\n\n\n29 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\n\n\n28 de jul. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nInterview for the Reproducible Research Scout Youtube Channel\n\n\n\n\n\n\n\n\n20 de jun. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n\n\n10 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n\n\n28 de abr. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n\n\n23 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America\n\n\nR and Friends\n\n\n\n\n\n8 de jul. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n\n\n11 de jul. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\n\n\n\n\n\n\n5 de dez. de 2018\n\n\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "talks/en/2021-experience-useR/index.html",
-    "href": "talks/en/2021-experience-useR/index.html",
-    "title": "My experience at useR 2019",
+    "objectID": "talks/en/2024-10-github-researcher/index.html",
+    "href": "talks/en/2024-10-github-researcher/index.html",
+    "title": "Using GitHub as a Researcher",
     "section": "",
-    "text": "This presentation was not recorded.\n\nSlides:"
+    "text": "Evento: Star2Star Presentations - GitHub StarsLink: https://stars.github.com/profiles/beatrizmilz/Lugar: Online\nMateriais\n\n\n Slides"
   },
   {
-    "objectID": "talks/en/2022-gha-rladies-abuja/index.html",
-    "href": "talks/en/2022-gha-rladies-abuja/index.html",
-    "title": "Running code while we’re sleeping - Introduction to GitHub Actions for R users",
+    "objectID": "talks/en/2024-11-latinR-bookclub/index.html",
+    "href": "talks/en/2024-11-latinR-bookclub/index.html",
+    "title": "Structuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo",
     "section": "",
-    "text": "Evento: R-Ladies Abuja, NigeriaLink: https://www.meetup.com/rladies-abuja/events/288082908/Lugar: Online\nMateriais\n\n\n Website  Slides  Youtube"
+    "text": "Evento:"
   },
   {
-    "objectID": "talks/en/2020-RStudio-certification/index.html",
-    "href": "talks/en/2020-RStudio-certification/index.html",
-    "title": "Adding figures in R Markdown",
+    "objectID": "talks/en/2024-11-latinR-bookclub/index.html#links",
+    "href": "talks/en/2024-11-latinR-bookclub/index.html#links",
+    "title": "Structuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo",
+    "section": "Links",
+    "text": "Links\n\nBook - R for Data Science 2ed\nBookclub - GitHub Repository"
+  },
+  {
+    "objectID": "talks/en/2024-05-rladies-melbourne/index.html",
+    "href": "talks/en/2024-05-rladies-melbourne/index.html",
+    "title": "Actions to increase diversity in the R-Ladies community - São Paulo",
     "section": "",
-    "text": "This presentation was not recorded.\n\nComplete material\nSlides:"
+    "text": "Evento: R-Ladies MelbourneLink: https://www.meetup.com/rladies-melbourne/events/300561897/Lugar: Melbourne, Victoria, Australia\nMateriais\n\n\n GitHub Repo  Slides"
   },
   {
-    "objectID": "talks/en/2024-10-15-ufabc-literature-review/Links.html",
-    "href": "talks/en/2024-10-15-ufabc-literature-review/Links.html",
-    "title": "Beatriz Milz",
-    "section": "",
-    "text": "About peer review: https://libguides.furman.edu/chemistry/peer-review\nhttps://writingcenter.unc.edu/tips-and-tools/literature-reviews/\nhttps://institute-academic-development.ed.ac.uk/study-hub/learning-resources/literature-review\nhttps://libguides.usc.edu/writingguide/literaturereview"
-  },
-  {
-    "objectID": "talks/en/2024-10-15-ufabc-literature-review/Links.html#section",
-    "href": "talks/en/2024-10-15-ufabc-literature-review/Links.html#section",
-    "title": "Beatriz Milz",
-    "section": "",
-    "text": "About peer review: https://libguides.furman.edu/chemistry/peer-review\nhttps://writingcenter.unc.edu/tips-and-tools/literature-reviews/\nhttps://institute-academic-development.ed.ac.uk/study-hub/learning-resources/literature-review\nhttps://libguides.usc.edu/writingguide/literaturereview"
-  },
-  {
-    "objectID": "talks/en/2024-10-15-ufabc-literature-review/Links.html#types-of-literature-review",
-    "href": "talks/en/2024-10-15-ufabc-literature-review/Links.html#types-of-literature-review",
-    "title": "Beatriz Milz",
-    "section": "Types of literature review",
-    "text": "Types of literature review\n\nhttps://www.scielo.br/j/ape/a/z7zZ4Z4GwYV6FR7S9FHTByr/?lang=en\nNarrative review:\n\nhttps://www.sciencedirect.com/topics/psychology/narrative-review\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC9380636/"
-  },
-  {
-    "objectID": "talks/en/2023-11-rday-colombia-purrr/index.html",
-    "href": "talks/en/2023-11-rday-colombia-purrr/index.html",
-    "title": "Purrr-fecting your R workflow - An introduction to functional programming",
-    "section": "",
-    "text": "Evento: R Day - Segundo encuentro nacional de usuarios de RLink: https://rday-colombia.github.io/2023/Lugar: Online\nMateriais\n\n\n GitHub Repo  Slides  Youtube"
-  },
-  {
-    "objectID": "talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
-    "href": "talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
-    "title": "Qualitative Data Analysis: Coding",
+    "objectID": "talks/en/2024-10-15-ufabc-literature-review/index.html",
+    "href": "talks/en/2024-10-15-ufabc-literature-review/index.html",
+    "title": "Literature review",
     "section": "",
     "text": "Evento: Methods and techniques in Territorial Planning and Management (PGT-605)Link: http://propg.ufabc.edu.br/ppgpgtLugar: São Bernardo do Campo, SP, Brazil\nMateriais\n\n\n Slides"
   },
   {
-    "objectID": "talks/en/2022-interview-reproducible-research-scout/index.html",
-    "href": "talks/en/2022-interview-reproducible-research-scout/index.html",
-    "title": "Interview for the Reproducible Research Scout Youtube Channel",
+    "objectID": "talks/en/2025-posit-conf/index.html",
+    "href": "talks/en/2025-posit-conf/index.html",
+    "title": "Translating R for Data Science into Portuguese: A Community-Led Initiative",
     "section": "",
-    "text": "Video:\n\n\n\n\n\n\n\n00:16 Introduction\n01:07 How do you define “reproducible research”?\n02:19 How was your first contact with R?\n04:11 How did the R package mananciais start?\n06:14 Tips to start with R\n10:19 Other projects to follow"
+    "text": "Evento: posit::conf(2025)Link: https://posit.co/conference/Lugar: Atlanta, United States\n\nAbstract: How can open-source collaboration help make data science more accessible and expand Posit’s global impact? The book “R for Data Science” by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund is a key resource for learning R and the tidyverse. In a collaborative effort, volunteers from the R community translated the second edition into Brazilian Portuguese, making it freely available online. This talk explores the translation journey, the challenges of adapting technical content, and key lessons learned to support future translation teams."
   },
   {
-    "objectID": "talks/en/2024-11-ufabc-intro-r/index.html",
-    "href": "talks/en/2024-11-ufabc-intro-r/index.html",
-    "title": "Introduction to R",
+    "objectID": "talks/en/2018-knitr-codata/index.html",
+    "href": "talks/en/2018-knitr-codata/index.html",
+    "title": "Producing Reports with knitr and R",
     "section": "",
-    "text": "Evento: Methods and techniques in Territorial Planning and Management (PGT-605)Link: http://propg.ufabc.edu.br/ppgpgtLugar: São Bernardo do Campo, SP, Brazil\nMateriais\n\n\n Slides  Repository  Posit Cloud"
+    "text": "Evento: CODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESPLugar: São Paulo\nMateriais\n\n\n Slides"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "talks/en/2019-user-rladies-sp/index.html",
+    "href": "talks/en/2019-user-rladies-sp/index.html",
+    "title": "The evolution and importance of the R-Ladies São Paulo chapter in Brazil",
+    "section": "",
+    "text": "Event: useR! 2019\nTalk\nSlides:"
+  },
+  {
+    "objectID": "talks/en/2022-rstudio-conf/index.html",
+    "href": "talks/en/2022-rstudio-conf/index.html",
+    "title": "Making awesome automations with GitHub Actions",
+    "section": "",
+    "text": "Event: rstudio::conf(2022)\nTalk video\nSlides"
+  },
+  {
+    "objectID": "talks/en/2022-rstudio-conf/index.html#complementary-materials",
+    "href": "talks/en/2022-rstudio-conf/index.html#complementary-materials",
+    "title": "Making awesome automations with GitHub Actions",
+    "section": "Complementary materials",
+    "text": "Complementary materials\n\nBlog post: How important is GitHub Actions to RStudio/Posit? Code for a plot in my talk!\nBlog post: Introduction to GitHub Actions to R users\nBlog post: Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users\nGitHub repository: awesome-gha - Awesome GitHub Actions for R\nPublic workflow examples:\n\nsigbm - This repository has a workflow that downloads the excel file with public data related to mining dams in Brazil, every day, and stores it in the repository. There is no R code!\nnoticiasgov - This repository has a workflow that scrapes news from the official government of Sao Paulo page, and stores it in a CSV file."
+  },
+  {
+    "objectID": "talks/en/2022-rstudio-conf/index.html#slides",
+    "href": "talks/en/2022-rstudio-conf/index.html#slides",
+    "title": "Making awesome automations with GitHub Actions",
+    "section": "Slides",
+    "text": "Slides\n\nSlides:"
+  },
+  {
+    "objectID": "talks/en/2024-11-latinR-gugudadados/index.html",
+    "href": "talks/en/2024-11-latinR-gugudadados/index.html",
+    "title": "GuguDaDados: A space for children and babies in events",
+    "section": "",
+    "text": "Evento:\nAbstract: We present GuGuDaDados, a space created in 2022 by R-Ladies São Paulo to support parents and caregivers by providing a safe and engaging environment for their children during community events."
+  },
+  {
+    "objectID": "talks/en/2024-11-latinR-gugudadados/index.html#links",
+    "href": "talks/en/2024-11-latinR-gugudadados/index.html#links",
+    "title": "GuguDaDados: A space for children and babies in events",
+    "section": "Links",
+    "text": "Links\n\nActions to increase diversity in the R-Ladies São Paulo community - blog post on R-Ladies Global blog\nAções para ampliar a diversidade na comunidade R-Ladies São Paulo - blog post no blog da R-Ladies São Paulo\nGitHub Repository"
+  },
+  {
+    "objectID": "content.html",
+    "href": "content.html",
+    "title": "Content",
+    "section": "",
+    "text": "Presentations, workshops, and other content that I have created or participated in.\nFor invitations, please email me at: milz.bea@gmail.com"
+  },
+  {
+    "objectID": "content.html#future-content",
+    "href": "content.html#future-content",
+    "title": "Content",
+    "section": "Future content",
+    "text": "Future content\nHere you can find links, slides and materials for 10 future activities that I will be participating in!\n\n\n   \n    \n    Ordenar por\nPré-selecionado\n\n        Título\n      \n\n        Data - Mais velho\n      \n\n        Data - O mais novo\n      \n\n    \n      \n      \n\n\n\n\n\n\n\n\n\n\nPlantão de dúvidas sobre GitHub\n\n\n\n24 de jun. de 2025\n\n\n\n\nEvent\n\n\nOpen Knowledge Brasil\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R para análise de dados\n\n\n\n22 de jul. de 2025\n\n\n\n\nEvent\n\n\nIX Fórum Brasileiro de Pós-Graduação em Ciência Política, Universidade de São Paulo (USP)\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à elaboração de gráficos com ggplot2 e R\n\n\n\n24 de jul. de 2025\n\n\n\n\nEvent\n\n\nIX Fórum Brasileiro de Pós-Graduação em Ciência Política, Universidade de São Paulo (USP)\n\n\n\n\n\n\n\n\n\n\n\n\nObtendo dados do SIDRA/IBGE com R utilizando o pacote SIDRAR\n\n\n\n4 de ago. de 2025\n\n\n\n\nEvent\n\n\n69ª Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (RBras)\n\n\n\n\n\n\n\n\n\n\n\n\nTranslating R for Data Science into Portuguese: A Community-Led Initiative\n\n\nSession: It Takes a Village: Building and Sustaining Communities\n\n\n\n18 de set. de 2025\n\n\n\n\nEvent\n\n\nposit::conf(2025)\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "content.html#past-content",
+    "href": "content.html#past-content",
+    "title": "Content",
+    "section": "Past content",
+    "text": "Past content\nHere you can find links, slides and materials for 103 past activities that I have participated in since 2018!\n\n\n   \n    \n    Ordenar por\nPré-selecionado\n\n        Título\n      \n\n        Data - Mais velho\n      \n\n        Data - O mais novo\n      \n\n    \n      \n      \n\n\n\n\n\n\n\n\n\n\nIntrodução ao Shiny: Construindo Dashboards Interativos com R\n\n\n\n17 de jun. de 2025\n\n\n\n\nEvent\n\n\nR-Ladies Niterói\n\n\n\n\n\n\n\n\n\n\n\n\nArrumação de dados de um Map-based survey com R: Desafios e lições aprendidas\n\n\n\n26 de mai. de 2025\n\n\n\n\nEvent\n\n\nIX Seminário Internacional de Estatística com R\n\n\n\n\n\n\n\n\n\n\n\n\nToda ajuda conta: diferentes formas de contribuir com Open Source\n\n\n\n10 de mai. de 2025\n\n\n\n\nEvent\n\n\nThasfin no Cinema\n\n\n\n\n\n\n\n\n\n\n\n\nAutomatize tarefas com GitHub Actions: Primeiros passos\n\n\n\n16 de abr. de 2025\n\n\n\n\nEvent\n\n\nEscola de Dados\n\n\n\n\n\n\n\n\n\n\n\n\nTransformar: Vetores lógicos\n\n\ncomparações lógicas, case_when(), if_else(), etc.\n\n\n\n8 de abr. de 2025\n\n\n\n\nEvent\n\n\nClube do Livro: R for Data Science - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nComo acessar dados geoespaciais abertos do Brasil com o geobr\n\n\n\n29 de mar. de 2025\n\n\n\n\nEvent\n\n\nOpen Data Day | PyLadies São Paulo 2025\n\n\n\n\n\n\n\n\n\n\n\n\nR intermediário e pesquisa reprodutível\n\n\n\n20 de jan. de 2025\n\n\n\n\nEvent\n\n\nIpeaDATA-lab\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n14 de jan. de 2025\n\n\n\n\nEvent\n\n\nPrograma de Verão IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nStructuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo\n\n\n\n22 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nGuguDaDados: A space for children and babies in events\n\n\n\n22 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDemocratizando a Ciência de Dados em Português: Uma tradução de ‘R for Data Science’ (2ª edição) liderada pela comunidade\n\n\n\n22 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTradução + Hackathon = Traslaton rOpenSci\n\n\n\n18 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducción a GitHub para Investigador(a|e)s\n\n\n\n18 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n12 de nov. de 2024\n\n\n\n\nEvent\n\n\nMethods and techniques in Territorial Planning and Management (PGT-605)\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n11 de nov. de 2024\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nA comunidade R fala português\n\n\n\n6 de nov. de 2024\n\n\n\n\nEvent\n\n\nrOpenSci Community Call\n\n\n\n\n\n\n\n\n\n\n\n\nLive no canal da Curso-R sobre a GitHub Universe\n\n\n\n6 de nov. de 2024\n\n\n\n\nEvent\n\n\nCanal da Curso-R\n\n\n\n\n\n\n\n\n\n\n\n\nQualitative Data Analysis: Coding\n\n\n\n22 de out. de 2024\n\n\n\n\nEvent\n\n\nMethods and techniques in Territorial Planning and Management (PGT-605)\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n22 de out. de 2024\n\n\n\n\nEvent\n\n\nV Simpósio Interdisciplinar de Ciência Ambiental\n\n\n\n\n\n\n\n\n\n\n\n\nRaspagem de dados com R\n\n\n\n21 de out. de 2024\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nLiterature review\n\n\n\n15 de out. de 2024\n\n\n\n\nEvent\n\n\nMethods and techniques in Territorial Planning and Management (PGT-605)\n\n\n\n\n\n\n\n\n\n\n\n\nUsing GitHub as a Researcher\n\n\n\n9 de out. de 2024\n\n\n\n\nEvent\n\n\nStar2Star Presentations - GitHub Stars\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à análise de dados no R\n\n\n\n1 de out. de 2024\n\n\n\n\nEvent\n\n\nIpeaDATA-lab\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n30 de set. de 2024\n\n\n\n\nEvent\n\n\naMostra de Estatística IME USP\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n23 de set. de 2024\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n1 de ago. de 2024\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n30 de jul. de 2024\n\n\n\n\nEvent\n\n\nWorkshop. Programa de Pós-Graduação de Mestrado Profissional em Inovação Tecnológica. Universidade Federal de São Paulo - Campus São José dos Campos\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 3\n\n\nFunções: group_by(), summarise(), slice_*()\n\n\n\n29 de jul. de 2024\n\n\n\n\nEvent\n\n\nClube do Livro: R for Data Science - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 2\n\n\nFunções: mutate(), select(), rename(), relocate()\n\n\n\n11 de jul. de 2024\n\n\n\n\nEvent\n\n\nClube do Livro: R for Data Science - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 1\n\n\nFunções: filter(), arrange(), distinct(), count()\n\n\n\n24 de jun. de 2024\n\n\n\n\nEvent\n\n\nClube do Livro: R for Data Science - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nActions to increase diversity in the R-Ladies community - São Paulo\n\n\n\n2 de mai. de 2024\n\n\n\n\nEvent\n\n\nR-Ladies Melbourne\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R e Ciência Aberta\n\n\n\n19 de abr. de 2024\n\n\n\n\nEvent\n\n\nfreeCodeCamp Podcast\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados\n\n\n\n14 de mar. de 2024\n\n\n\n\nEvent\n\n\nCurso-R\n\n\n\n\n\n\n\n\n\n\n\n\nO que são dados abertos? O que é o Open Data Day?\n\n\n\n2 de mar. de 2024\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nR para Ciência de Dados I\n\n\n\n25 de jan. de 2024\n\n\n\n\nEvent\n\n\nCurso-R\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n23 de jan. de 2024\n\n\n\n\nEvent\n\n\nPrograma de Verão IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o GitHub Projects\n\n\n\n20 de jan. de 2024\n\n\n\n\nEvent\n\n\nGitTogether São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalhando com dados espaciais no R\n\n\n\n12 de dez. de 2023\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n27 de nov. de 2023\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nPurrr-fecting your R workflow - An introduction to functional programming\n\n\n\n24 de nov. de 2023\n\n\n\n\nEvent\n\n\nR Day - Segundo encuentro nacional de usuarios de R\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n22 de nov. de 2023\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R de dados brasileiros\n\n\n\n22 de nov. de 2023\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios e apresentações\n\n\n\n1 de nov. de 2023\n\n\n\n\nEvent\n\n\nCurso-R\n\n\n\n\n\n\n\n\n\n\n\n\nApresentando os resultados com R\n\n\n\n28 de out. de 2023\n\n\n\n\nEvent\n\n\n1º Seminário Interdisciplinar em Ciência de Dados LInDA - I SINCID LINDA\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n21 de set. de 2023\n\n\n\n\nEvent\n\n\naMostra de Estatística IME USP\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n28 de ago. de 2023\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n26 de jun. de 2023\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n9 de mai. de 2023\n\n\n\n\nEvent\n\n\nDisciplina - Ciência de Dados. Programa de Pós-Graduação de Mestrado Profissional em Inovação Tecnológica. Universidade Federal de São Paulo - Campus São José dos Campos\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote purrr\n\n\n\n29 de abr. de 2023\n\n\n\n\nEvent\n\n\nMeetup R-Ladies Goiânia\n\n\n\n\n\n\n\n\n\n\n\n\nUtilizando GitHub Actions para baixar dados públicos\n\n\nUm exemplo com dados de barragens de mineração\n\n\n\n12 de abr. de 2023\n\n\n\n\nEvent\n\n\nCerveja com Dados Fortaleza\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n23 de jan. de 2023\n\n\n\n\nEvent\n\n\nPrograma de Verão IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Quarto: a nova geração do RMarkdown\n\n\n\n23 de nov. de 2022\n\n\n\n\nEvent\n\n\naMostra IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R\n\n\n\n1 de nov. de 2022\n\n\n\n\nEvent\n\n\nCurso-R\n\n\n\n\n\n\n\n\n\n\n\n\nRunning code while we’re sleeping - Introduction to GitHub Actions for R users\n\n\n\n29 de out. de 2022\n\n\n\n\nEvent\n\n\nR-Ladies Abuja, Nigeria\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n20 de out. de 2022\n\n\n\n\nEvent\n\n\nXVIII Congresso Brasileiro de Limnologia\n\n\n\n\n\n\n\n\n\n\n\n\nR translatón/Hackaton de tradução do R\n\n\n\n15 de out. de 2022\n\n\n\n\nEvent\n\n\nLatin-R 2022\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados: Criando apresentações com Quarto\n\n\n\n10 de out. de 2022\n\n\n\n\nEvent\n\n\nLatin-R 2022\n\n\n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\n28 de jul. de 2022\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nInterview for the Reproducible Research Scout Youtube Channel\n\n\n\n20 de jun. de 2022\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\n25 de mai. de 2022\n\n\n\n\nEvent\n\n\nVI International Seminar on Statistics with R\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\n20 de mai. de 2022\n\n\n\n\nEvent\n\n\nBrazilian Open Science Training (BOST)\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\n12 de mai. de 2022\n\n\n\n\nEvent\n\n\nGrupo de Estudos de Ecologia Quantitativa (GEEQ)\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n9 de mai. de 2022\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n2 de fev. de 2022\n\n\n\n\nEvent\n\n\nPrograma de Verão IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n26 de nov. de 2021\n\n\n\n\nEvent\n\n\n5ª SEMIC - 5ª Semana de Iniciação Científica da ENCE\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n10 de nov. de 2021\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R para Cientistas Ambientais\n\n\n\n8 de nov. de 2021\n\n\n\n\nEvent\n\n\nSENACAMB - Semana Nacional de Ciências Ambientais\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando os resultados de projetos em Ciência de Dados\n\n\nConhecendo o R Markdown\n\n\n\n22 de out. de 2021\n\n\n\n\nEvent\n\n\nAI Inclusive\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade - Especial Hacktoberfest\n\n\n\n13 de out. de 2021\n\n\n\n\nEvent\n\n\nCanal da Curso-R\n\n\n\n\n\n\n\n\n\n\n\n\nFazendo amizade com a Python reticulada\n\n\nIntrodução ao uso de Python e R no RStudio com o pacote reticulate\n\n\n\n13 de out. de 2021\n\n\n\n\nEvent\n\n\nPython Brasil 2021 - 13 de outubro, quarta-feira, das 15:50 às 16:35\n\n\n\n\n\n\n\n\n\n\n\n\nComo aprender R tem sido importante na minha trajetória como Gestora Ambiental\n\n\n\n30 de set. de 2021\n\n\n\n\nEvent\n\n\nDisciplina de análise e visualização de dados com R - UFV\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions\n\n\n\n18 de set. de 2021\n\n\n\n\nEvent\n\n\nMeetup R-Ladies Goiânia\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n11 de set. de 2021\n\n\n\n\nEvent\n\n\nMeetup R-Ladies Goiânia\n\n\n\n\n\n\n\n\n\n\n\n\nFaça apresentações ninja em R\n\n\nConhecendo o pacote xaringan\n\n\n\n9 de set. de 2021\n\n\n\n\nEvent\n\n\n3º R Day - Encontro Nacional de Usuários do R\n\n\n\n\n\n\n\n\n\n\n\n\nJornalismo com R\n\n\n\n29 de ago. de 2021\n\n\n\n\nEvent\n\n\n3º Domingo de Dados\n\n\n\n\n\n\n\n\n\n\n\n\nCriando tutoriais interativos com R\n\n\nConhecendo o pacote learnr\n\n\n\n13 de ago. de 2021\n\n\n\n\nEvent\n\n\nCanal PET-Estatística UFPR\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\n30 de jul. de 2021\n\n\n\n\nEvent\n\n\nCanal GeoCast Brasil\n\n\n\n\n\n\n\n\n\n\n\n\nCapítulos de Workflow do livro R for Data Science\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\n14 de jul. de 2021\n\n\n\n\nEvent\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nColeta de dados automatizada e integração contínua utilizando GitHub Actions\n\n\nExemplos com o Pacote Mananciais\n\n\n\n10 de jun. de 2021\n\n\n\n\nEvent\n\n\nV International Seminar on Statistics with R\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n28 de abr. de 2021\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nEnsino de programação - Como fazer parte da comunidade global The Carpentries?\n\n\n\n4 de nov. de 2020\n\n\n\n\nEvent\n\n\nPython Brasil 2020\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr joins - Juntando bases de dados\n\n\n\n3 de nov. de 2020\n\n\n\n\nEvent\n\n\nCanal da Curso-R\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados em R\n\n\nAprenda a criar apresentações reprodutíveis\n\n\n\n19 de out. de 2020\n\n\n\n\nEvent\n\n\nLatinR 2020\n\n\n\n\n\n\n\n\n\n\n\n\nAprenda a usar Git e GitHub no RStudio!\n\n\nR-Ladies SP na Hacktoberfest\n\n\n\n17 de out. de 2020\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nR Markdown\n\n\nUsando o R para comunicar seus resultados\n\n\n\n29 de set. de 2020\n\n\n\n\nEvent\n\n\nCanal GeoCast Brasil\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n23 de set. de 2020\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade\n\n\n\n10 de set. de 2020\n\n\n\n\nEvent\n\n\nCanal da Curso-R\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub no RStudio\n\n\n\n27 de ago. de 2020\n\n\n\n\nEvent\n\n\nMeetup R-Ladies Goiânia\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução a Linguagem R\n\n\n\n27 de ago. de 2020\n\n\n\n\nEvent\n\n\nR-Ladies Curitiba\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America\n\n\nR and Friends\n\n\n\n8 de jul. de 2020\n\n\n\n\nEvent\n\n\nuseR! 2020\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\n4 de mai. de 2020\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\n30 de nov. de 2019\n\n\n\n\nEvent\n\n\nSatRday São Paulo 2019\n\n\n\n\n\n\n\n\n\n\n\n\nApresentações no R ⚔ com xaringan\n\n\n\n17 de set. de 2019\n\n\n\n\nEvent\n\n\n14ª aMostra Estatística 2019 IME/USP\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiros passos utilizando o Git e GitHub no RStudio\n\n\n\n12 de set. de 2019\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote xaringan - Criando apresentações com R\n\n\n\n27 de ago. de 2019\n\n\n\n\nEvent\n\n\nDisciplina no IME/USP\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards, gráficos, mapas - Possibilidades de visualização de dados com R\n\n\n\n2 de ago. de 2019\n\n\n\n\nEvent\n\n\nMeetup Nerdzão\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n11 de jul. de 2019\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n20 de mai. de 2019\n\n\n\n\nEvent\n\n\nSER UFF 2019\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\n\n5 de dez. de 2018\n\n\n\n\nEvent\n\n\nCODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESP\n\n\n\n\n\n\n\n\n\n\n\n\nOficina de Introdução ao R\n\n\n\n29 de nov. de 2018\n\n\n\n\nEvent\n\n\nUFABC - Campus São Bernardo do Campo\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n21 de nov. de 2018\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nR e Desafios no Projeto Temático - Oficina de Introdução ao R\n\n\n\n17 de out. de 2018\n\n\n\n\nEvent\n\n\nInstituto de Energia e Ambiente - Universidade de São Paulo\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "research/pt/2024-doutorado/index.html",
+    "href": "research/pt/2024-doutorado/index.html",
+    "title": "Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista",
+    "section": "",
+    "text": "Evento:"
+  },
+  {
+    "objectID": "research/pt/2024-doutorado/index.html#português",
+    "href": "research/pt/2024-doutorado/index.html#português",
+    "title": "Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista",
+    "section": "Português",
+    "text": "Português\nResumo\nA Macrometrópole Paulista (MMP) é considerada a maior aglomeração urbana do Brasil, com mais de 35 milhões de habitantes. Essa região apresenta crescentes riscos de enfrentamento de problemas de escassez de água, que são intensificados em um cenário de emergência climática. Nesse contexto, mecanismos de transparência são de grande importância para a sociedade. Esta pesquisa desenvolveu o Índice Paulista de Transparência em Gestão de Recursos Hídricos (IPTGRH), que avalia a transparência ativa em órgãos gestores de recursos hídricos na MMP e no estado de São Paulo. O índice é calculado a partir do Portal do Sistema Integrado de Gerenciamento de Recursos Hídricos do Estado de São Paulo (SigRH), que foi identificado como a principal fonte de informação na pesquisa de opinião aplicada a representantes de quatro Comitês de Bacias Hidrográficas (CBHs). O IPT-GRH, baseado nos Princípios de Dados Abertos, revelou necessidades de melhorias nas informações disponibilizadas, principalmente relacionadas aos princípios de Tempestividade e Completude. Os resultados indicam a importância de atualizações regulares e fornecimento de informações completas pelos órgãos responsáveis. A pesquisa ainda sugere formas de aplicar o índice em outros órgãos e regiões, contribuindo para promover a transparência na gestão dos recursos hídricos, essencial para o controle social.\nPalavras-chave: Represa Billings, Crise Hídrica, Região Metropolitana de São Paulo, Gestão de Recursos Hídricos"
+  },
+  {
+    "objectID": "research/pt/2024-doutorado/index.html#english",
+    "href": "research/pt/2024-doutorado/index.html#english",
+    "title": "Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista",
+    "section": "English",
+    "text": "English\nTitle: Active transparency in Water Resource Management in the São Paulo Macrometropolis\nAbstract:\nThe São Paulo Macrometropolis (MMP) is considered the largest urban agglomeration in Brazil, with over 35 million inhabitants. This region faces increasing risks of water scarcity problems, which are intensified in a scenario of climate emergency. In this context, transparency mechanisms are of great importance for society. This research developed the São Paulo Index of Transparency in Water Resource Management (IPT-GRH), which assesses active transparency in water resource management bodies in the MMP and the state of São Paulo. The index is calculated from the Integrated Water Resource Management System of the State of São Paulo (SigRH), identified as the main source of information in the survey applied to representatives of four River Basin Committees (CBHs). The IPT-GRH, based on the Principles of Open Data, revealed needs for improvements in the information provided, especially related to the principles Timely and Complete. The results indicate the importance of regular updates and the provision of complete information by responsible bodies. The research also suggests ways to apply the index in other bodies and regions, contributing to promoting transparency in water resource management, essential for social control.\nKeywords: Access to Information Law, Open Data, River Basin Committees, Transparency Index, Water Crisis."
+  },
+  {
+    "objectID": "research/en/2022-ambiagua/index.html",
+    "href": "research/en/2022-ambiagua/index.html",
+    "title": "Spatio-temporal variability of water quality in Billings Reservoir Central Body - São Paulo, Brazil",
+    "section": "",
+    "text": "Evento:"
+  },
+  {
+    "objectID": "research/en/2022-ambiagua/index.html#abstract",
+    "href": "research/en/2022-ambiagua/index.html#abstract",
+    "title": "Spatio-temporal variability of water quality in Billings Reservoir Central Body - São Paulo, Brazil",
+    "section": "Abstract",
+    "text": "Abstract\nThe Billings Reservoir is an important water body for public supply of the Metropolitan Region of São Paulo, Brazil, and water captation for public supply is located in the Rio Grande environmental compartment. This article evaluates the water quality of the environmental compartment Central Body I of the Billings Reservoir, which receives the reversed waters from the polluted Pinheiros River, at four sampling points with different contributions from the surroundings, seeking to verify the influence of seasonality on water quality and whether there was a difference in water quality between the sampling points. Water sampling was carried out on the surface at four points, in a longitudinal profile, covering two periods (dry and rainy) distributed in six samplings between 2016 and 2019. Analyzed variables included temperature, dissolved oxygen, pH, electrical conductivity, chlorophyll-a and nutrients (phosphorus and nitrogen). Space-Time Interaction tests revealed that physicochemical variables did not vary due to the interaction between sampling periods and points, but several variables varied significantly during the sampling period. The results of the Trophic State Index show that waters of Central Body I are classified as Hypereutrophic, highlighting the degradation of water quality in this compartment. This research will better inform public managers and assist their efforts to minimize and mitigate the effects of progressive water quality degradation in this reservoir.\nKeywords: eutrophication; Pinheiros river; urban reservoir"
+  },
+  {
+    "objectID": "research/en/2022-ambiagua/index.html#resumo",
+    "href": "research/en/2022-ambiagua/index.html#resumo",
+    "title": "Spatio-temporal variability of water quality in Billings Reservoir Central Body - São Paulo, Brazil",
+    "section": "Resumo",
+    "text": "Resumo\nA represa Billings é um reservatório importante para o abastecimento público da região metropolitana de São Paulo, no Brasil, e a captação de água para abastecimento público está localizada no compartimento ambiental Rio Grande. Este artigo tem como objetivo avaliar a qualidade das águas do compartimento ambiental Corpo Central I da represa Billings, que recebe as águas revertidas do poluído rio Pinheiros, em quatro pontos de coleta com contribuição do entorno diferenciada, buscando verificar a influência da sazonalidade nos resultados obtidos e se houve diferença da qualidade da água entre os pontos de coleta. As coletas de água foram realizadas na superfície em quatro pontos, em um perfil longitudinal, contemplando dois períodos (estiagem e chuvoso) distribuídos em seis coletas, entre os anos de 2016 e 2019. As variáveis analisadas foram temperatura, oxigênio dissolvido, pH, condutividade elétrica, clorofila-a e nutrientes (fósforo e nitrogênio). Os testes de Interação Espaço-Tempo revelaram que as variáveis físico-químicas não variaram devido à interação entre os pontos e períodos de amostragem, mas diversas variáveis variaram significativamente em função do período de amostragem. O resultado do Índice de Estado Trófico evidenciou que as águas do Corpo Central I foram classificadas como Hipereutróficas, destacando a degradação da qualidade das águas neste compartimento. Os resultados desta pesquisa podem subsidiar os gestores públicos na tentativa de minimizar os efeitos da degradação progressiva da qualidade da água deste reservatório.\nPalavras-chave: eutrofização; reservatório urbano; Rio Pinheiros"
+  },
+  {
+    "objectID": "teaching/es/2024-11-18-latinR-GitHub/index.html",
+    "href": "teaching/es/2024-11-18-latinR-GitHub/index.html",
+    "title": "Introducción a GitHub para Investigador(a|e)s",
+    "section": "",
+    "text": "Evento: LatinR 2024Link: https://latinr.org/cronograma/tutoriales/Lugar: Online\nMateriais\n\n\n Inscrições  GitHub Repository  Materials  Video"
+  },
+  {
+    "objectID": "teaching/pt/2024-09-cebrap-lab-viz-R/index.html",
+    "href": "teaching/pt/2024-09-cebrap-lab-viz-R/index.html",
+    "title": "Visualização de dados no R",
+    "section": "",
+    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nO curso “Visualização de dados” abordará o uso da linguagem de programação R para a geração de gráficos, bem como a criação de mapas simples. Serão apresentados alguns conceitos como: quais são as diferenças entre visualizações exploratórias e explicativas, boas práticas ao criar visualizações de dados, como criar gráficos simples (como gráficos de dispersão/pontos, gráfico de barras, gráfico de linhas, histograma, boxplots), como personalizar os gráficos, exportar os gráficos em formatos adequados para publicações acadêmicas, e como criar mapas simples usando a teoria de gráficos em R.\nTodas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, e o RStudio, e os pacotes ggplot2, sf, e geobr. O curso tem como público-alvo pessoas que tenham conhecimento básico em R, e queiram interesse em aprender a criar visualizações de dados."
+  },
+  {
+    "objectID": "teaching/pt/2022-01-verao-ime-usp-relatorios/index.html",
+    "href": "teaching/pt/2022-01-verao-ime-usp-relatorios/index.html",
+    "title": "Relatórios reprodutíveis com R",
+    "section": "",
+    "text": "Evento: Programa de Verão IME-USPLink: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n Materiais  Slides  Plataforma USP"
+  },
+  {
+    "objectID": "teaching/pt/cursor-relatorios/index.html",
+    "href": "teaching/pt/cursor-relatorios/index.html",
+    "title": "Relatórios e apresentações",
+    "section": "",
+    "text": "Evento: Curso-RLink: https://loja.curso-r.com/Lugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202311-relatorios\nhttps://curso-r.github.io/202304-relatorios\nhttps://curso-r.github.io/202210-relatorios\nhttps://curso-r.github.io/202208-relatorios\nhttps://curso-r.github.io/202205-relatorios"
+  },
+  {
+    "objectID": "teaching/pt/2023-11-cebrap-lab-text-as-data/index.html",
+    "href": "teaching/pt/2023-11-cebrap-lab-text-as-data/index.html",
+    "title": "Análise quantitativa de texto",
+    "section": "",
+    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\nO curso “Análise Quantitativa de Textos com R” abordará conceitos como: o que é análise quantitativa de textos; como estruturar textos capturados de pdfs, html simples e word em uma base de dados; como realizar o pré-processamento destes dados (por exemplo: remoção de caracteres que não são relevantes para a análise, remoção de “stop words”, utilização de expressões regulares para identificar palavras relevantes, entre outros); como realizar contagens de palavras ou n-grams mais frequentes; como visualizar estas contagens (como uma nuvem de palavras ou gráficos de barras); e por fim será abordado de forma introdutória a modelagem de tópicos, um método não supervisionado para criar grupos de documentos (similar ao cluster utilizado com dados numéricos). Serão apresentados também alguns exemplos destes tipos de análises. Todas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, o RStudio, e os pacotes stringr, ggplot2, dplyr, tidytext, entre outros. O curso tem como público alvo pessoas que tenham conhecimento intermediário em R e tenham interesse em analisar textos com métodos quantitativos utilizando R."
+  },
+  {
+    "objectID": "teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
+    "href": "teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
+    "title": "Introdução ao R",
+    "section": "",
+    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
+  },
+  {
+    "objectID": "teaching/pt/2022-05-cebrap-lab-intro-R/index.html",
+    "href": "teaching/pt/2022-05-cebrap-lab-intro-R/index.html",
+    "title": "Introdução ao R",
+    "section": "",
+    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
+  },
+  {
+    "objectID": "teaching/pt/2025-01-ipea-intermediario-r/index.html",
+    "href": "teaching/pt/2025-01-ipea-intermediario-r/index.html",
+    "title": "R intermediário e pesquisa reprodutível",
+    "section": "",
+    "text": "Evento: IpeaDATA-labLink: https://ipeadata-lab.github.io/curso_r_intermediario_202501/Lugar: Híbrido\nMateriais\n\n\n Materiais  Scripts"
+  },
+  {
+    "objectID": "teaching/pt/2024-10-ipea-intro-r/index.html",
+    "href": "teaching/pt/2024-10-ipea-intro-r/index.html",
+    "title": "Introdução à análise de dados no R",
+    "section": "",
+    "text": "Evento: IpeaDATA-labLink: https://ipeadata-lab.github.io/curso_r_intro_202409/Lugar: Híbrido\nMateriais\n\n\n Materiais  Scripts"
+  },
+  {
+    "objectID": "teaching/pt/cursor-visualizacao/index.html",
+    "href": "teaching/pt/cursor-visualizacao/index.html",
+    "title": "Visualização de dados",
+    "section": "",
+    "text": "Evento: Curso-RLink: https://loja.curso-r.com/Lugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202403-visualizacao\nhttps://curso-r.github.io/202308-visualizacao\nhttps://curso-r.github.io/202303-visualizacao\nhttps://curso-r.github.io/202210-visualizacao"
+  },
+  {
+    "objectID": "about-pt.html",
+    "href": "about-pt.html",
     "title": "Beatriz Milz",
     "section": "",
-    "text": "Hi! I’m Bea. This is my personal website. Here you can find a lot of content about R, Git and GitHub, environmental data science and other things I’m interested in. Feel free to explore my website and get in touch if you have any suggestion!\n👩‍💻 about (en) | sobre (pt-br) | sobre (es)\n📑 blog posts (en) | textos (pt-br)| textos (es)\n👩‍🏫 talks, workshops, etc\n📚 projects / projetos\n🎓 research / pesquisa (under construction 🚧)\n🎥 videos\n\n\n\n\n\n\nIn which language is this website?\n\n\n\nMy native language is Brazilian Portuguese (pt-br), but I have presented/created content also in English and Spanish. This blog has content in those 3 languages, but not everything is translated. If you want to see a specific post translated, please let me know!"
+    "text": "English  Português Español\n\n\n\n\nFormação acadêmica: Beatriz Milz tem um Doutorado em Ciência Ambiental. Ela é uma pesquisadora interessada em temas como: gestão de recursos hídricos, transparência e dados abertos, ciência de dados ambientais, e gênero e o meio ambiente. Atualmente está realizando estágio pós-doutoral na Universidade Federal do ABC (UFABC).\nRevistas científicas: Desde 2018, ela faz parte da equipe executiva do periódico Ambiente & Sociedade. Desde 2024, ela é Software peer review editor na rOpenSci, e faz parte da equipe executiva da Revista Diálogos Socioambientais.\nEnsino: Ela é uma instrutora do tidyverse certificada pela RStudio. Ela tem experiência com ensino de R em cursos na Curso-R, no cebrap.lab, e no programa de Verão no Instituto de Matemática e Estatística (IME) – Universidade de São Paulo (USP).\nComunidades: Desde 2018, ela é co-organizadora do R-Ladies São Paulo. Ela também é uma GitHub Star, um reconhecimento do GitHub para pessoas que são especialistas e líderes técnicos que compartilham seu conhecimento com a comunidade. Em 09/04/2024, havia apenas 73 GitHub Stars no mundo, e apenas 8 delas no Brasil."
+  },
+  {
+    "objectID": "projects/translation-r4ds/index.html",
+    "href": "projects/translation-r4ds/index.html",
+    "title": "Coordenação da tradução do livro R for Data Science 2ed",
+    "section": "",
+    "text": "Materiais\n\n\n Livro  Repositório"
+  },
+  {
+    "objectID": "projects/package-odbr/index.html",
+    "href": "projects/package-odbr/index.html",
+    "title": "Pacote em R: {odbr}",
+    "section": "",
+    "text": "Materiais\n\n\n Website  Repositório"
+  },
+  {
+    "objectID": "quarto.html",
+    "href": "quarto.html",
+    "title": "Quarto Gallery",
+    "section": "",
+    "text": "I like Quarto - a lot! Here is some of the content that I made using Quarto."
+  },
+  {
+    "objectID": "quarto.html#websites",
+    "href": "quarto.html#websites",
+    "title": "Quarto Gallery",
+    "section": "Websites",
+    "text": "Websites\n\nMy personal blog: https://beamilz.com/\nR-Ladies Sao Paulo blog: https://rladies-sp.org/\nMy husband and I made our wedding website with Quarto: https://beaeju.com.br/"
+  },
+  {
+    "objectID": "quarto.html#presentations",
+    "href": "quarto.html#presentations",
+    "title": "Quarto Gallery",
+    "section": "Presentations",
+    "text": "Presentations\n\nUtilizando GitHub Actions para baixar dados públicos\n\nThere are more presentations made with Quarto in: Talks."
+  },
+  {
+    "objectID": "quarto.html#presentation-templates",
+    "href": "quarto.html#presentation-templates",
+    "title": "Quarto Gallery",
+    "section": "Presentation templates",
+    "text": "Presentation templates\n\nR-Ladies Quarto Theme - a theme for Slides https://github.com/beatrizmilz/quarto-rladies-theme\nSlides Curso-R - https://github.com/curso-r/quarto-cursor-theme"
+  },
+  {
+    "objectID": "videos/index.html",
+    "href": "videos/index.html",
+    "title": "Videos",
+    "section": "",
+    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\nPortuguês\n\nvideo\n\nIDE\n\nRStudio Cloud\n\nPosit Cloud\n\n\n\n\n\n\n27 de abr. de 2025\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "videos/index.html#recent-videos",
+    "href": "videos/index.html#recent-videos",
+    "title": "Videos",
+    "section": "",
+    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\nPortuguês\n\nvideo\n\nIDE\n\nRStudio Cloud\n\nPosit Cloud\n\n\n\n\n\n\n27 de abr. de 2025\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "videos/index.html#youtube-channel",
+    "href": "videos/index.html#youtube-channel",
+    "title": "Videos",
+    "section": "YouTube channel",
+    "text": "YouTube channel"
+  },
+  {
+    "objectID": "about-es.html",
+    "href": "about-es.html",
+    "title": "Beatriz Milz",
+    "section": "",
+    "text": "English  Português  Español\n\n\n\n\nFormación académica: Beatriz Milz tiene un doctorado en Ciencia Ambiental. Es una investigadora interesada en temas como la gestión de recursos hídricos, la transparencia y los datos abiertos, la ciencia de datos ambientales, y el género y el medio ambiente. Actualmente está realizando una investigación postdoctoral en la Universidad Federal del ABC (UFABC).\nRevistas científicas: Desde 2018, forma parte del equipo ejecutivo de la revista Ambiente & Sociedade. Desde 2024, es editora de revisión por pares de software en rOpenSci, y también forma parte del equipo ejecutivo de la Revista Diálogos Socioambientales.\nEnseñanza: Es instructora certificada de tidyverse por RStudio. Tiene experiencia enseñando R en cursos en Curso-R, en cebrap.lab, y en el Programa de Verano del Instituto de Matemática y Estadística (IME) – Universidad de São Paulo (USP).\nComunidades: Desde 2018, es coorganizadora de R-Ladies São Paulo. También es una GitHub Star, un reconocimiento de GitHub para personas que son expertas técnicas y líderes que comparten su conocimiento con la comunidad. Al 09/04/2024, solo había 73 GitHub Stars en el mundo, y solo 8 de ellas en Brasil."
+  },
+  {
+    "objectID": "series-gha.html",
+    "href": "series-gha.html",
+    "title": "GitHub Actions Series: Making awesome automations",
+    "section": "",
+    "text": "Here you can find a series of posts about GitHub Actions, which are complementary material for my lightning talk at the RStudio Conference - rstudio::conf 2022."
+  },
+  {
+    "objectID": "series-gha.html#posts-in-english",
+    "href": "series-gha.html#posts-in-english",
+    "title": "GitHub Actions Series: Making awesome automations",
+    "section": "Posts in English",
+    "text": "Posts in English\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHow important is GitHub Actions to RStudio/Posit?\n\n\nCode for a plot in my talk at rstudio::conf 2022!\n\n\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\nRStudio\n\nPosit\n\n\n\n\n\n\n28 de jul. de 2022\n\n\nBeatriz Milz\n\n20 minutos\n\n\n\n\n\n\n\n\n\n\n\nMonitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users\n\n\nGitHub Actions Series 2 - In this post, I will show how you can create a workflow to monitor repositories from the quarto-dev organization on GitHub!\n\n\n\nGit\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\nRStudio\n\n\n\n\n\n\n10 de jul. de 2022\n\n\nBeatriz Milz\n\n13 minutos\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub Actions to R users\n\n\nGitHub Actions Series 1 - In this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R.\n\n\n\nGit\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\n\n\n\n\n\n30 de jun. de 2022\n\n\nBeatriz Milz\n\n5 minutos\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "series-gha.html#posts-em-português",
+    "href": "series-gha.html#posts-em-português",
+    "title": "GitHub Actions Series: Making awesome automations",
+    "section": "Posts em Português",
+    "text": "Posts em Português\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions para quem programa em R\n\n\nSérie GitHub Actions - 1 - Neste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R.\n\n\n\nGit\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\n\n\n\n\n\n30 de jun. de 2022\n\n\nBeatriz Milz\n\n6 minutos\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "series-gha.html#posts-en-español",
+    "href": "series-gha.html#posts-en-español",
+    "title": "GitHub Actions Series: Making awesome automations",
+    "section": "Posts en Español",
+    "text": "Posts en Español\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroducción a GitHub Actions para usuarias de R\n\n\nSerie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.\n\n\n\nGit\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\n\n\n\n\n\n30 de jun. de 2022\n\n\nBeatriz Milz\n\n6 minutos\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Beatriz Milz",
+    "section": "",
+    "text": "English  Português Español\n\n\n\n\nAcademic background: Beatriz Milz holds a PhD in Environmental Science. She is a researcher interested in topics such as water resources management, transparency and open data, environmental data science, and gender and the environment. She is currently conducting postdoctoral research at the Federal University of ABC (UFABC).\nScientific journals: Since 2018, she has been part of the executive team of the journal Ambiente & Sociedade. Since 2024, she has been a Software peer review editor at rOpenSci, and she is also part of the executive team of the Revista Diálogos Socioambientais.\nTeaching: She is a certified tidyverse instructor by RStudio. She has experience teaching R in courses at Curso-R, at cebrap.lab, and in the Summer Program at the Institute of Mathematics and Statistics (IME) – University of São Paulo (USP).\nCommunities: Since 2018, she has been a co-organizer of R-Ladies São Paulo. She is also a GitHub Star, a recognition by GitHub for individuals who are technical experts and community leaders who share their knowledge. As of 04/09/2024, there were only 73 GitHub Stars worldwide, and only 8 of them in Brazil."
+  },
+  {
+    "objectID": "videos/pt/2025-04-posit-cloud/index.html",
+    "href": "videos/pt/2025-04-posit-cloud/index.html",
+    "title": "Como programar em R direto do navegador com o Posit Cloud (Tutorial)",
+    "section": "",
+    "text": "Materiais\n\n\n Script  Video  Posit Cloud"
+  },
+  {
+    "objectID": "projects/package-dados/index.html",
+    "href": "projects/package-dados/index.html",
+    "title": "Pacote em R: {dados}",
+    "section": "",
+    "text": "Materiais\n\n\n Website  Repositório"
+  },
+  {
+    "objectID": "projects/rladies-sp-clube-do-livro-r4ds/index.html",
+    "href": "projects/rladies-sp-clube-do-livro-r4ds/index.html",
+    "title": "Clube do Livro R-Ladies São Paulo: R for Data Science 2ed",
+    "section": "",
+    "text": "Materiais\n\n\n Livro  Repositório  Playlist com as gravações  Documento com links"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects / Projetos",
+    "section": "",
+    "text": "Clube do Livro R-Ladies São Paulo: R for Data Science 2ed\n\n\nCo-organização do clube do livro gratuito.\n\n\n\nLivro\n\nComunidade\n\nClube do livro\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote em R: {odbr}\n\n\nPacote com dados de pesquisa Origem Destino (OD) no Brasil\n\n\n\nPacote em R\n\nDados Abertos\n\nCRAN\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoordenação da tradução do livro R for Data Science 2ed\n\n\nParticipação na coordenação, na tradução e revisão de capítulos do livro escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund.\n\n\n\nLivro\n\nTradução\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote em R: {dados}\n\n\nPacote com bases de dados traduzidas para o português\n\n\n\nPacote em R\n\nTradução\n\nCRAN\n\n\n\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "teaching/pt/cursor-pacotes/index.html",
+    "href": "teaching/pt/cursor-pacotes/index.html",
+    "title": "Pacotes em R",
+    "section": "",
+    "text": "Evento: Curso-RLink: https://loja.curso-r.com/Lugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202211-pacotes\nhttps://curso-r.github.io/202208-pacotes\nhttps://curso-r.github.io/202205-pacotes"
+  },
+  {
+    "objectID": "teaching/pt/cursor-r4ds-1/index.html",
+    "href": "teaching/pt/cursor-r4ds-1/index.html",
+    "title": "R para Ciência de Dados I",
+    "section": "",
+    "text": "Evento: Curso-RLink: https://loja.curso-r.com/r-para-ciencia-de-dados-i.htmlLugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202401-r4ds-1\nhttps://curso-r.github.io/202311-r4ds-1\nhttps://curso-r.github.io/202307-r4ds-1\nhttps://curso-r.github.io/202301-r4ds-1\nhttps://curso-r.github.io/202209-r4ds-1\nhttps://curso-r.github.io/202206-r4ds-1\nhttps://curso-r.github.io/202203-r4ds-1"
+  },
+  {
+    "objectID": "teaching/pt/2023-06-cebrap-lab-viz-R/index.html",
+    "href": "teaching/pt/2023-06-cebrap-lab-viz-R/index.html",
+    "title": "Visualização de dados no R",
+    "section": "",
+    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nO curso “Visualização de dados” abordará o uso da linguagem de programação R para a geração de gráficos, bem como a criação de mapas simples. Serão apresentados alguns conceitos como: quais são as diferenças entre visualizações exploratórias e explicativas, boas práticas ao criar visualizações de dados, como criar gráficos simples (como gráficos de dispersão/pontos, gráfico de barras, gráfico de linhas, histograma, boxplots), como personalizar os gráficos, exportar os gráficos em formatos adequados para publicações acadêmicas, e como criar mapas simples usando a teoria de gráficos em R.\nTodas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, e o RStudio, e os pacotes ggplot2, sf, e geobr. O curso tem como público-alvo pessoas que tenham conhecimento básico em R, e queiram interesse em aprender a criar visualizações de dados."
+  },
+  {
+    "objectID": "teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
+    "href": "teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
+    "title": "Relatórios reprodutíveis com R",
+    "section": "",
+    "text": "Evento: Programa de Verão IME-USPLink: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n GitHub  Slides"
+  },
+  {
+    "objectID": "teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
+    "href": "teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
+    "title": "Raspagem de dados com R",
+    "section": "",
+    "text": "Evento:"
+  },
+  {
+    "objectID": "teaching/pt/2024-10-cebrap-lab-web-scraping /index.html#descrição",
+    "href": "teaching/pt/2024-10-cebrap-lab-web-scraping /index.html#descrição",
+    "title": "Raspagem de dados com R",
+    "section": "Descrição",
+    "text": "Descrição\nO curso “Raspagem de dados com R” abordará uma introdução ao uso da linguagem de programação R para obter dados da internet através de uma técnica chamada raspagem de dados (web scraping).\nO curso abordará conceitos como:\n\no que é raspagem de dados?;\npolítica de uso;\ntipos de problemas de raspagem (APIs (disponíveis e “escondidas”);\nraspagem de HTML (estático e dinâmico), etc);\nentre outros.\n\nO curso apresentará exemplos de raspagem de dados em todas as aulas, raspando sites que são interessantes no contexto brasileiro!\nTodas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, o RStudio, e os pacotes tidyverse, httr, rvest, xml2, purrr, entre outros.\nO curso tem como público alvo pessoasque tenham interesse em obter dados através da técnica de raspagem de dados na internet utilizando R, e que tenham familiaridade fazendo as seguintes tarefas em R: importar bases de dados, filtrar linhas, selecionar colunas, agrupar a base, criar sumarizações, criar novas colunas (pacotes readr e dplyr do tidyverse)."
+  },
+  {
+    "objectID": "teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
+    "href": "teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
+    "title": "Relatórios reprodutíveis com R",
+    "section": "",
+    "text": "Evento: Programa de Verão IME-USPLink: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n GitHub  Materiais"
+  },
+  {
+    "objectID": "teaching/pt/2024-08-cebrap-lab-intro-R/index.html",
+    "href": "teaching/pt/2024-08-cebrap-lab-intro-R/index.html",
+    "title": "Introdução ao R",
+    "section": "",
+    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
+  },
+  {
+    "objectID": "teaching/pt/index.html",
+    "href": "teaching/pt/index.html",
+    "title": "Apresentações em português",
+    "section": "",
+    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nR intermediário e pesquisa reprodutível\n\n\n\n\n\n\n\n\n20 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n14 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n\n\n\n\n\n11 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nRaspagem de dados com R\n\n\n\n\n\n\n\n\n21 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à análise de dados no R\n\n\n\n\n\n\n\n\n1 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n\n\n\n\n\n23 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n1 de ago. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados\n\n\n\n\n\n\n\n\n14 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nR para Ciência de Dados I\n\n\n\n\n\n\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n\n\n\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios e apresentações\n\n\n\n\n\n\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n\n\n\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R\n\n\n\n\n\n\n\n\n1 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n2 de fev. de 2022\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
+    "href": "teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
+    "title": "Relatórios reprodutíveis com R",
+    "section": "",
+    "text": "Evento: Programa de Verão IME-USPLink: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n Materiais  Slides"
+  },
+  {
+    "objectID": "teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
+    "href": "teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
+    "title": "Análise quantitativa de texto",
+    "section": "",
+    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\nO curso “Análise Quantitativa de Textos com R” abordará conceitos como: o que é análise quantitativa de textos; como estruturar textos capturados de pdfs, html simples e word em uma base de dados; como realizar o pré-processamento destes dados (por exemplo: remoção de caracteres que não são relevantes para a análise, remoção de “stop words”, utilização de expressões regulares para identificar palavras relevantes, entre outros); como realizar contagens de palavras ou n-grams mais frequentes; como visualizar estas contagens (como uma nuvem de palavras ou gráficos de barras); e por fim será abordado de forma introdutória a modelagem de tópicos, um método não supervisionado para criar grupos de documentos (similar ao cluster utilizado com dados numéricos). Serão apresentados também alguns exemplos destes tipos de análises. Todas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, o RStudio, e os pacotes stringr, ggplot2, dplyr, tidytext, entre outros. O curso tem como público alvo pessoas que tenham conhecimento intermediário em R e tenham interesse em analisar textos com métodos quantitativos utilizando R."
+  },
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Ensino",
+    "section": "",
+    "text": "Para os cursos da Curso-R, apenas a turma mais recente de cada curso está listada abaixo.\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira\n\n\n20 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n14 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n11 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n21 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira\n\n\n1 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n1 de ago. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n14 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n1 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n2 de fev. de 2022\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "teaching/index.html#cursos-passados",
+    "href": "teaching/index.html#cursos-passados",
+    "title": "Ensino",
+    "section": "",
+    "text": "Para os cursos da Curso-R, apenas a turma mais recente de cada curso está listada abaixo.\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira\n\n\n20 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n14 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n11 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n21 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira\n\n\n1 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n1 de ago. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n14 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n1 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n2 de fev. de 2022\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "research/pt/2015-tcc/index.html",
+    "href": "research/pt/2015-tcc/index.html",
+    "title": "Utilização da represa Billings para abastecimento público na Região Metropolitana de São Paulo no cenário da atual crise hídrica: a obra de interligação da represa Billings e o Sistema Alto Tietê",
+    "section": "",
+    "text": "Evento:"
+  },
+  {
+    "objectID": "research/pt/2015-tcc/index.html#resumo",
+    "href": "research/pt/2015-tcc/index.html#resumo",
+    "title": "Utilização da represa Billings para abastecimento público na Região Metropolitana de São Paulo no cenário da atual crise hídrica: a obra de interligação da represa Billings e o Sistema Alto Tietê",
+    "section": "Resumo",
+    "text": "Resumo\nOs anos 2014-2015 são marcados, principalmente na Região Metropolitana de São Paulo (RMSP) pela crise hídrica. Nesse contexto, o governo considera que a obra para interligar a represa Billings (Sistema Rio Grande) e Taiaçupeba (Alto Tietê) a mais importante ação emergencial para diminuir os impactos da crise hídrica na Região Metropolitana de São Paulo. No presente trabalho, foi realizada uma análise sobre a utilização da represa Billings, a partir da proposta do governo do Estado de interligação dos sistemas Rio Grande e Alto Tietê, como uma alternativa proposta da Companhia de Saneamento Básico do Estado de São Paulo (Sabesp) para abastecimento público na RMSP. Para realizar a análise, se desenvolveu uma contextualização sobre a crise hídrica e a represa Billings, com base em artigos e livros, e também pelo acompanhamento dos encaminhamentos dados pela Sabesp em relação à utilização da represa Billings para abastecimento. O período de abrangência da pesquisa a partir de informações veiculadas pela imprensa contemplou as notícias entre dezembro de 2013 até o início de novembro de 2015. Elaborou-se uma síntese da situação do abastecimento de água na RMSP no cenário de crise hídrica, além de abordar as estratégias utilizadas para manter o abastecimento público neste cenário, sendo que as obras de interligação entre a Represa Billings e o Alto Tietê se inserem nessas estratégias. Detalharam-se essas obras e foi elaborada uma linha do tempo contendo os principais momentos pertinentes às mesmas, conforme foi divulgado pela imprensa, sendo essa linha um instrumento que evidencia as obras no contexto da crise hídrica. A análise foi realizada a partir desses subsídios, e conclui-se que a utilização das águas da Billings para abastecimento público é importante no cenário atual de crise hídrica, entretanto, esse uso deve ser feito com planejamento adequado e cautela. O caso das obras abordadas neste projeto exemplifica a forma como ocorre atualmente a gestão dos recursos hídricos no Estado.\nPalavras-chave: Represa Billings, Crise Hídrica, Região Metropolitana de São Paulo, Gestão de Recursos Hídricos"
+  },
+  {
+    "objectID": "research/pt/2015-tcc/index.html#abstract",
+    "href": "research/pt/2015-tcc/index.html#abstract",
+    "title": "Utilização da represa Billings para abastecimento público na Região Metropolitana de São Paulo no cenário da atual crise hídrica: a obra de interligação da represa Billings e o Sistema Alto Tietê",
+    "section": "Abstract",
+    "text": "Abstract\nThe years 2014-2015 are marked, especially in the Metropolitan Region of São Paulo (RMSP), by the water crisis. In this context, the government considers that the project to interconnect the Billings reservoir (Rio Grande) and Taiaçupeba (Alto Tiete) is the most important emergency action to reduce the impacts of the water crisis RMSP. In this study, an analysis was conducted on the use of the Billings reservoir, considering the plan of the state government of interconnecting the Rio Grande and Alto Tiete, as an alternative project of the Companhia de Saneamento Básico do Estado de São Paulo (Sabesp) for public supply in the RMSP. To perform the analysis, was produced a contextualization about the water crisis and the Billings reservoir, based on scientific articles and books, and also monitoring the measures given by Sabesp about the use of the Billings reservoir for water supply. The coverage of the research period from press reports included news from December 2013 until the beginning of November 2015. Were developed a synthesis of the water supply situation in RMSP in the water crisis scenario, as well as addressing the strategies used to maintain public supply in this scenario, considering that the interconnection between Billings and the Alto Tiete are inserted in these strategies. Were detailed these interconnection and a timeline was elaborated containing key moments, as was reported by the press, considering that this line an instrument which shows the interconnection in the context of the water crisis. The analysis was conducted based on these subsidies, and concluded that the use of the Billings reservoir for public supply is important in the current scenario of water crisis, however, such use must be done with appropriate planning and caution. The case of the interconnection discussed in this project exemplifies how is currently executed the management of water resources in the State of São Paulo.\nKeywords: Billings Reservoir, Water Crisis, Metropolitan Region of São Paulo (RMSP), Water Management."
   },
   {
     "objectID": "research/index.html",
@@ -1309,494 +1708,102 @@
     "text": "Pesquisas selecionadas\n\nEm construção!\n\n\n\n\n\n\n\n\n\n\n\nTransparência ativa na gestão de recursos hídricos na Macrometrópole Paulista\n\n\n\n22 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpatio-temporal variability of water quality in Billings Reservoir Central Body - São Paulo, Brazil\n\n\n\n17 de jun. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\nUtilização da represa Billings para abastecimento público na Região Metropolitana de São Paulo no cenário da atual crise hídrica: a obra de interligação da represa Billings e o Sistema Alto Tietê\n\n\n\n1 de dez. de 2015\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "research/pt/2015-tcc/index.html",
-    "href": "research/pt/2015-tcc/index.html",
-    "title": "Utilização da represa Billings para abastecimento público na Região Metropolitana de São Paulo no cenário da atual crise hídrica: a obra de interligação da represa Billings e o Sistema Alto Tietê",
-    "section": "",
-    "text": "Evento:"
-  },
-  {
-    "objectID": "research/pt/2015-tcc/index.html#resumo",
-    "href": "research/pt/2015-tcc/index.html#resumo",
-    "title": "Utilização da represa Billings para abastecimento público na Região Metropolitana de São Paulo no cenário da atual crise hídrica: a obra de interligação da represa Billings e o Sistema Alto Tietê",
-    "section": "Resumo",
-    "text": "Resumo\nOs anos 2014-2015 são marcados, principalmente na Região Metropolitana de São Paulo (RMSP) pela crise hídrica. Nesse contexto, o governo considera que a obra para interligar a represa Billings (Sistema Rio Grande) e Taiaçupeba (Alto Tietê) a mais importante ação emergencial para diminuir os impactos da crise hídrica na Região Metropolitana de São Paulo. No presente trabalho, foi realizada uma análise sobre a utilização da represa Billings, a partir da proposta do governo do Estado de interligação dos sistemas Rio Grande e Alto Tietê, como uma alternativa proposta da Companhia de Saneamento Básico do Estado de São Paulo (Sabesp) para abastecimento público na RMSP. Para realizar a análise, se desenvolveu uma contextualização sobre a crise hídrica e a represa Billings, com base em artigos e livros, e também pelo acompanhamento dos encaminhamentos dados pela Sabesp em relação à utilização da represa Billings para abastecimento. O período de abrangência da pesquisa a partir de informações veiculadas pela imprensa contemplou as notícias entre dezembro de 2013 até o início de novembro de 2015. Elaborou-se uma síntese da situação do abastecimento de água na RMSP no cenário de crise hídrica, além de abordar as estratégias utilizadas para manter o abastecimento público neste cenário, sendo que as obras de interligação entre a Represa Billings e o Alto Tietê se inserem nessas estratégias. Detalharam-se essas obras e foi elaborada uma linha do tempo contendo os principais momentos pertinentes às mesmas, conforme foi divulgado pela imprensa, sendo essa linha um instrumento que evidencia as obras no contexto da crise hídrica. A análise foi realizada a partir desses subsídios, e conclui-se que a utilização das águas da Billings para abastecimento público é importante no cenário atual de crise hídrica, entretanto, esse uso deve ser feito com planejamento adequado e cautela. O caso das obras abordadas neste projeto exemplifica a forma como ocorre atualmente a gestão dos recursos hídricos no Estado.\nPalavras-chave: Represa Billings, Crise Hídrica, Região Metropolitana de São Paulo, Gestão de Recursos Hídricos"
-  },
-  {
-    "objectID": "research/pt/2015-tcc/index.html#abstract",
-    "href": "research/pt/2015-tcc/index.html#abstract",
-    "title": "Utilização da represa Billings para abastecimento público na Região Metropolitana de São Paulo no cenário da atual crise hídrica: a obra de interligação da represa Billings e o Sistema Alto Tietê",
-    "section": "Abstract",
-    "text": "Abstract\nThe years 2014-2015 are marked, especially in the Metropolitan Region of São Paulo (RMSP), by the water crisis. In this context, the government considers that the project to interconnect the Billings reservoir (Rio Grande) and Taiaçupeba (Alto Tiete) is the most important emergency action to reduce the impacts of the water crisis RMSP. In this study, an analysis was conducted on the use of the Billings reservoir, considering the plan of the state government of interconnecting the Rio Grande and Alto Tiete, as an alternative project of the Companhia de Saneamento Básico do Estado de São Paulo (Sabesp) for public supply in the RMSP. To perform the analysis, was produced a contextualization about the water crisis and the Billings reservoir, based on scientific articles and books, and also monitoring the measures given by Sabesp about the use of the Billings reservoir for water supply. The coverage of the research period from press reports included news from December 2013 until the beginning of November 2015. Were developed a synthesis of the water supply situation in RMSP in the water crisis scenario, as well as addressing the strategies used to maintain public supply in this scenario, considering that the interconnection between Billings and the Alto Tiete are inserted in these strategies. Were detailed these interconnection and a timeline was elaborated containing key moments, as was reported by the press, considering that this line an instrument which shows the interconnection in the context of the water crisis. The analysis was conducted based on these subsidies, and concluded that the use of the Billings reservoir for public supply is important in the current scenario of water crisis, however, such use must be done with appropriate planning and caution. The case of the interconnection discussed in this project exemplifies how is currently executed the management of water resources in the State of São Paulo.\nKeywords: Billings Reservoir, Water Crisis, Metropolitan Region of São Paulo (RMSP), Water Management."
-  },
-  {
-    "objectID": "teaching/index.html",
-    "href": "teaching/index.html",
-    "title": "Ensino",
-    "section": "",
-    "text": "Para os cursos da Curso-R, apenas a turma mais recente de cada curso está listada abaixo.\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira\n\n\n20 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n14 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n11 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n21 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira\n\n\n1 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n1 de ago. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n14 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n1 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n2 de fev. de 2022\n\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "teaching/index.html#cursos-passados",
-    "href": "teaching/index.html#cursos-passados",
-    "title": "Ensino",
-    "section": "",
-    "text": "Para os cursos da Curso-R, apenas a turma mais recente de cada curso está listada abaixo.\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira\n\n\n20 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n14 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n11 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n21 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira\n\n\n1 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n1 de ago. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n14 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurso-R , Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Corrêa, Julio Trecenti, William Amorim\n\n\n1 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeatriz Milz\n\n\n2 de fev. de 2022\n\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
-    "href": "teaching/pt/2024-11-cebrap-lab-text-as-data/index.html",
-    "title": "Análise quantitativa de texto",
-    "section": "",
-    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\nO curso “Análise Quantitativa de Textos com R” abordará conceitos como: o que é análise quantitativa de textos; como estruturar textos capturados de pdfs, html simples e word em uma base de dados; como realizar o pré-processamento destes dados (por exemplo: remoção de caracteres que não são relevantes para a análise, remoção de “stop words”, utilização de expressões regulares para identificar palavras relevantes, entre outros); como realizar contagens de palavras ou n-grams mais frequentes; como visualizar estas contagens (como uma nuvem de palavras ou gráficos de barras); e por fim será abordado de forma introdutória a modelagem de tópicos, um método não supervisionado para criar grupos de documentos (similar ao cluster utilizado com dados numéricos). Serão apresentados também alguns exemplos destes tipos de análises. Todas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, o RStudio, e os pacotes stringr, ggplot2, dplyr, tidytext, entre outros. O curso tem como público alvo pessoas que tenham conhecimento intermediário em R e tenham interesse em analisar textos com métodos quantitativos utilizando R."
-  },
-  {
-    "objectID": "teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
-    "href": "teaching/pt/2023-01-verao-ime-usp-relatorios/index.html",
-    "title": "Relatórios reprodutíveis com R",
-    "section": "",
-    "text": "Evento: Programa de Verão IME-USPLink: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n Materiais  Slides"
-  },
-  {
-    "objectID": "teaching/pt/index.html",
-    "href": "teaching/pt/index.html",
-    "title": "Apresentações em português",
-    "section": "",
-    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nR intermediário e pesquisa reprodutível\n\n\n\n\n\n\n\n\n20 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n14 de jan. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n\n\n\n\n\n11 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nRaspagem de dados com R\n\n\n\n\n\n\n\n\n21 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à análise de dados no R\n\n\n\n\n\n\n\n\n1 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n\n\n\n\n\n23 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n1 de ago. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados\n\n\n\n\n\n\n\n\n14 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nR para Ciência de Dados I\n\n\n\n\n\n\n\n\n25 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n23 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n\n\n\n\n\n27 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios e apresentações\n\n\n\n\n\n\n\n\n1 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n\n\n\n\n\n28 de ago. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n26 de jun. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n23 de jan. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R\n\n\n\n\n\n\n\n\n1 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n9 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n\n\n\n\n\n2 de fev. de 2022\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "teaching/pt/2024-08-cebrap-lab-intro-R/index.html",
-    "href": "teaching/pt/2024-08-cebrap-lab-intro-R/index.html",
-    "title": "Introdução ao R",
-    "section": "",
-    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
-  },
-  {
-    "objectID": "teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
-    "href": "teaching/pt/2025-01-verao-ime-usp-relatorios/index.html",
-    "title": "Relatórios reprodutíveis com R",
-    "section": "",
-    "text": "Evento: Programa de Verão IME-USPLink: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n GitHub  Materiais"
-  },
-  {
-    "objectID": "teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
-    "href": "teaching/pt/2024-10-cebrap-lab-web-scraping /index.html",
-    "title": "Raspagem de dados com R",
-    "section": "",
-    "text": "Evento:"
-  },
-  {
-    "objectID": "teaching/pt/2024-10-cebrap-lab-web-scraping /index.html#descrição",
-    "href": "teaching/pt/2024-10-cebrap-lab-web-scraping /index.html#descrição",
-    "title": "Raspagem de dados com R",
-    "section": "Descrição",
-    "text": "Descrição\nO curso “Raspagem de dados com R” abordará uma introdução ao uso da linguagem de programação R para obter dados da internet através de uma técnica chamada raspagem de dados (web scraping).\nO curso abordará conceitos como:\n\no que é raspagem de dados?;\npolítica de uso;\ntipos de problemas de raspagem (APIs (disponíveis e “escondidas”);\nraspagem de HTML (estático e dinâmico), etc);\nentre outros.\n\nO curso apresentará exemplos de raspagem de dados em todas as aulas, raspando sites que são interessantes no contexto brasileiro!\nTodas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, o RStudio, e os pacotes tidyverse, httr, rvest, xml2, purrr, entre outros.\nO curso tem como público alvo pessoasque tenham interesse em obter dados através da técnica de raspagem de dados na internet utilizando R, e que tenham familiaridade fazendo as seguintes tarefas em R: importar bases de dados, filtrar linhas, selecionar colunas, agrupar a base, criar sumarizações, criar novas colunas (pacotes readr e dplyr do tidyverse)."
-  },
-  {
-    "objectID": "teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
-    "href": "teaching/pt/2024-01-verao-ime-usp-relatorios/index.html",
-    "title": "Relatórios reprodutíveis com R",
-    "section": "",
-    "text": "Evento: Programa de Verão IME-USPLink: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n GitHub  Slides"
-  },
-  {
-    "objectID": "teaching/pt/2023-06-cebrap-lab-viz-R/index.html",
-    "href": "teaching/pt/2023-06-cebrap-lab-viz-R/index.html",
-    "title": "Visualização de dados no R",
-    "section": "",
-    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nO curso “Visualização de dados” abordará o uso da linguagem de programação R para a geração de gráficos, bem como a criação de mapas simples. Serão apresentados alguns conceitos como: quais são as diferenças entre visualizações exploratórias e explicativas, boas práticas ao criar visualizações de dados, como criar gráficos simples (como gráficos de dispersão/pontos, gráfico de barras, gráfico de linhas, histograma, boxplots), como personalizar os gráficos, exportar os gráficos em formatos adequados para publicações acadêmicas, e como criar mapas simples usando a teoria de gráficos em R.\nTodas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, e o RStudio, e os pacotes ggplot2, sf, e geobr. O curso tem como público-alvo pessoas que tenham conhecimento básico em R, e queiram interesse em aprender a criar visualizações de dados."
-  },
-  {
-    "objectID": "teaching/pt/cursor-r4ds-1/index.html",
-    "href": "teaching/pt/cursor-r4ds-1/index.html",
-    "title": "R para Ciência de Dados I",
-    "section": "",
-    "text": "Evento: Curso-RLink: https://loja.curso-r.com/r-para-ciencia-de-dados-i.htmlLugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202401-r4ds-1\nhttps://curso-r.github.io/202311-r4ds-1\nhttps://curso-r.github.io/202307-r4ds-1\nhttps://curso-r.github.io/202301-r4ds-1\nhttps://curso-r.github.io/202209-r4ds-1\nhttps://curso-r.github.io/202206-r4ds-1\nhttps://curso-r.github.io/202203-r4ds-1"
-  },
-  {
-    "objectID": "teaching/pt/cursor-pacotes/index.html",
-    "href": "teaching/pt/cursor-pacotes/index.html",
-    "title": "Pacotes em R",
-    "section": "",
-    "text": "Evento: Curso-RLink: https://loja.curso-r.com/Lugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202211-pacotes\nhttps://curso-r.github.io/202208-pacotes\nhttps://curso-r.github.io/202205-pacotes"
-  },
-  {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects / Projetos",
-    "section": "",
-    "text": "Clube do Livro R-Ladies São Paulo: R for Data Science 2ed\n\n\nCo-organização do clube do livro gratuito.\n\n\n\nLivro\n\nComunidade\n\nClube do livro\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote em R: {odbr}\n\n\nPacote com dados de pesquisa Origem Destino (OD) no Brasil\n\n\n\nPacote em R\n\nDados Abertos\n\nCRAN\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoordenação da tradução do livro R for Data Science 2ed\n\n\nParticipação na coordenação, na tradução e revisão de capítulos do livro escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund.\n\n\n\nLivro\n\nTradução\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote em R: {dados}\n\n\nPacote com bases de dados traduzidas para o português\n\n\n\nPacote em R\n\nTradução\n\nCRAN\n\n\n\n\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "projects/rladies-sp-clube-do-livro-r4ds/index.html",
-    "href": "projects/rladies-sp-clube-do-livro-r4ds/index.html",
-    "title": "Clube do Livro R-Ladies São Paulo: R for Data Science 2ed",
-    "section": "",
-    "text": "Materiais\n\n\n Livro  Repositório  Playlist com as gravações  Documento com links"
-  },
-  {
-    "objectID": "projects/package-dados/index.html",
-    "href": "projects/package-dados/index.html",
-    "title": "Pacote em R: {dados}",
-    "section": "",
-    "text": "Materiais\n\n\n Website  Repositório"
-  },
-  {
-    "objectID": "videos/pt/2025-04-posit-cloud/index.html",
-    "href": "videos/pt/2025-04-posit-cloud/index.html",
-    "title": "Como programar em R direto do navegador com o Posit Cloud (Tutorial)",
-    "section": "",
-    "text": "Materiais\n\n\n Script  Video  Posit Cloud"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Beatriz Milz",
     "section": "",
-    "text": "English  Português Español\n\n\n\n\nAcademic background: Beatriz Milz holds a PhD in Environmental Science. She is a researcher interested in topics such as water resources management, transparency and open data, environmental data science, and gender and the environment. She is currently conducting postdoctoral research at the Federal University of ABC (UFABC).\nScientific journals: Since 2018, she has been part of the executive team of the journal Ambiente & Sociedade. Since 2024, she has been a Software peer review editor at rOpenSci, and she is also part of the executive team of the Revista Diálogos Socioambientais.\nTeaching: She is a certified tidyverse instructor by RStudio. She has experience teaching R in courses at Curso-R, at cebrap.lab, and in the Summer Program at the Institute of Mathematics and Statistics (IME) – University of São Paulo (USP).\nCommunities: Since 2018, she has been a co-organizer of R-Ladies São Paulo. She is also a GitHub Star, a recognition by GitHub for individuals who are technical experts and community leaders who share their knowledge. As of 04/09/2024, there were only 73 GitHub Stars worldwide, and only 8 of them in Brazil."
+    "text": "Hi! I’m Bea. This is my personal website. Here you can find a lot of content about R, Git and GitHub, environmental data science and other things I’m interested in. Feel free to explore my website and get in touch if you have any suggestion!\n👩‍💻 about (en) | sobre (pt-br) | sobre (es)\n📑 blog posts (en) | textos (pt-br)| textos (es)\n👩‍🏫 talks, workshops, etc\n📚 projects / projetos\n🎓 research / pesquisa (under construction 🚧)\n🎥 videos\n\n\n\n\n\n\nIn which language is this website?\n\n\n\nMy native language is Brazilian Portuguese (pt-br), but I have presented/created content also in English and Spanish. This blog has content in those 3 languages, but not everything is translated. If you want to see a specific post translated, please let me know!"
   },
   {
-    "objectID": "series-gha.html",
-    "href": "series-gha.html",
-    "title": "GitHub Actions Series: Making awesome automations",
+    "objectID": "talks/en/2024-11-ufabc-intro-r/index.html",
+    "href": "talks/en/2024-11-ufabc-intro-r/index.html",
+    "title": "Introduction to R",
     "section": "",
-    "text": "Here you can find a series of posts about GitHub Actions, which are complementary material for my lightning talk at the RStudio Conference - rstudio::conf 2022."
+    "text": "Evento: Methods and techniques in Territorial Planning and Management (PGT-605)Link: http://propg.ufabc.edu.br/ppgpgtLugar: São Bernardo do Campo, SP, Brazil\nMateriais\n\n\n Slides  Repository  Posit Cloud"
   },
   {
-    "objectID": "series-gha.html#posts-in-english",
-    "href": "series-gha.html#posts-in-english",
-    "title": "GitHub Actions Series: Making awesome automations",
-    "section": "Posts in English",
-    "text": "Posts in English\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHow important is GitHub Actions to RStudio/Posit?\n\n\nCode for a plot in my talk at rstudio::conf 2022!\n\n\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\nRStudio\n\nPosit\n\n\n\n\n\n\n28 de jul. de 2022\n\n\nBeatriz Milz\n\n20 minutos\n\n\n\n\n\n\n\n\n\n\n\nMonitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users\n\n\nGitHub Actions Series 2 - In this post, I will show how you can create a workflow to monitor repositories from the quarto-dev organization on GitHub!\n\n\n\nGit\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\nRStudio\n\n\n\n\n\n\n10 de jul. de 2022\n\n\nBeatriz Milz\n\n13 minutos\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub Actions to R users\n\n\nGitHub Actions Series 1 - In this post, I will briefly introduce GitHub Actions and show how you can start using GitHub Actions with R.\n\n\n\nGit\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\n\n\n\n\n\n30 de jun. de 2022\n\n\nBeatriz Milz\n\n5 minutos\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "series-gha.html#posts-em-português",
-    "href": "series-gha.html#posts-em-português",
-    "title": "GitHub Actions Series: Making awesome automations",
-    "section": "Posts em Português",
-    "text": "Posts em Português\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions para quem programa em R\n\n\nSérie GitHub Actions - 1 - Neste post, apresentarei brevemente o GitHub Actions e mostrarei como você pode começar a usar o GitHub Actions com R.\n\n\n\nGit\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\n\n\n\n\n\n30 de jun. de 2022\n\n\nBeatriz Milz\n\n6 minutos\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "series-gha.html#posts-en-español",
-    "href": "series-gha.html#posts-en-español",
-    "title": "GitHub Actions Series: Making awesome automations",
-    "section": "Posts en Español",
-    "text": "Posts en Español\n\n\n   \n    \n    \n      Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n      \n        Autor\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroducción a GitHub Actions para usuarias de R\n\n\nSerie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.\n\n\n\nGit\n\nGitHub\n\nGitHub Actions\n\nAutomations\n\n\n\n\n\n\n30 de jun. de 2022\n\n\nBeatriz Milz\n\n6 minutos\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "about-es.html",
-    "href": "about-es.html",
-    "title": "Beatriz Milz",
+    "objectID": "talks/en/2022-interview-reproducible-research-scout/index.html",
+    "href": "talks/en/2022-interview-reproducible-research-scout/index.html",
+    "title": "Interview for the Reproducible Research Scout Youtube Channel",
     "section": "",
-    "text": "English  Português  Español\n\n\n\n\nFormación académica: Beatriz Milz tiene un doctorado en Ciencia Ambiental. Es una investigadora interesada en temas como la gestión de recursos hídricos, la transparencia y los datos abiertos, la ciencia de datos ambientales, y el género y el medio ambiente. Actualmente está realizando una investigación postdoctoral en la Universidad Federal del ABC (UFABC).\nRevistas científicas: Desde 2018, forma parte del equipo ejecutivo de la revista Ambiente & Sociedade. Desde 2024, es editora de revisión por pares de software en rOpenSci, y también forma parte del equipo ejecutivo de la Revista Diálogos Socioambientales.\nEnseñanza: Es instructora certificada de tidyverse por RStudio. Tiene experiencia enseñando R en cursos en Curso-R, en cebrap.lab, y en el Programa de Verano del Instituto de Matemática y Estadística (IME) – Universidad de São Paulo (USP).\nComunidades: Desde 2018, es coorganizadora de R-Ladies São Paulo. También es una GitHub Star, un reconocimiento de GitHub para personas que son expertas técnicas y líderes que comparten su conocimiento con la comunidad. Al 09/04/2024, solo había 73 GitHub Stars en el mundo, y solo 8 de ellas en Brasil."
+    "text": "Video:\n\n\n\n\n\n\n\n00:16 Introduction\n01:07 How do you define “reproducible research”?\n02:19 How was your first contact with R?\n04:11 How did the R package mananciais start?\n06:14 Tips to start with R\n10:19 Other projects to follow"
   },
   {
-    "objectID": "videos/index.html",
-    "href": "videos/index.html",
-    "title": "Videos",
-    "section": "",
-    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\nPortuguês\n\nvideo\n\nIDE\n\nRStudio Cloud\n\nPosit Cloud\n\n\n\n\n\n\n27 de abr. de 2025\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "videos/index.html#recent-videos",
-    "href": "videos/index.html#recent-videos",
-    "title": "Videos",
-    "section": "",
-    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\nPortuguês\n\nvideo\n\nIDE\n\nRStudio Cloud\n\nPosit Cloud\n\n\n\n\n\n\n27 de abr. de 2025\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "videos/index.html#youtube-channel",
-    "href": "videos/index.html#youtube-channel",
-    "title": "Videos",
-    "section": "YouTube channel",
-    "text": "YouTube channel"
-  },
-  {
-    "objectID": "quarto.html",
-    "href": "quarto.html",
-    "title": "Quarto Gallery",
-    "section": "",
-    "text": "I like Quarto - a lot! Here is some of the content that I made using Quarto."
-  },
-  {
-    "objectID": "quarto.html#websites",
-    "href": "quarto.html#websites",
-    "title": "Quarto Gallery",
-    "section": "Websites",
-    "text": "Websites\n\nMy personal blog: https://beamilz.com/\nR-Ladies Sao Paulo blog: https://rladies-sp.org/\nMy husband and I made our wedding website with Quarto: https://beaeju.com.br/"
-  },
-  {
-    "objectID": "quarto.html#presentations",
-    "href": "quarto.html#presentations",
-    "title": "Quarto Gallery",
-    "section": "Presentations",
-    "text": "Presentations\n\nUtilizando GitHub Actions para baixar dados públicos\n\nThere are more presentations made with Quarto in: Talks."
-  },
-  {
-    "objectID": "quarto.html#presentation-templates",
-    "href": "quarto.html#presentation-templates",
-    "title": "Quarto Gallery",
-    "section": "Presentation templates",
-    "text": "Presentation templates\n\nR-Ladies Quarto Theme - a theme for Slides https://github.com/beatrizmilz/quarto-rladies-theme\nSlides Curso-R - https://github.com/curso-r/quarto-cursor-theme"
-  },
-  {
-    "objectID": "projects/package-odbr/index.html",
-    "href": "projects/package-odbr/index.html",
-    "title": "Pacote em R: {odbr}",
-    "section": "",
-    "text": "Materiais\n\n\n Website  Repositório"
-  },
-  {
-    "objectID": "projects/translation-r4ds/index.html",
-    "href": "projects/translation-r4ds/index.html",
-    "title": "Coordenação da tradução do livro R for Data Science 2ed",
-    "section": "",
-    "text": "Materiais\n\n\n Livro  Repositório"
-  },
-  {
-    "objectID": "about-pt.html",
-    "href": "about-pt.html",
-    "title": "Beatriz Milz",
-    "section": "",
-    "text": "English  Português Español\n\n\n\n\nFormação acadêmica: Beatriz Milz tem um Doutorado em Ciência Ambiental. Ela é uma pesquisadora interessada em temas como: gestão de recursos hídricos, transparência e dados abertos, ciência de dados ambientais, e gênero e o meio ambiente. Atualmente está realizando estágio pós-doutoral na Universidade Federal do ABC (UFABC).\nRevistas científicas: Desde 2018, ela faz parte da equipe executiva do periódico Ambiente & Sociedade. Desde 2024, ela é Software peer review editor na rOpenSci, e faz parte da equipe executiva da Revista Diálogos Socioambientais.\nEnsino: Ela é uma instrutora do tidyverse certificada pela RStudio. Ela tem experiência com ensino de R em cursos na Curso-R, no cebrap.lab, e no programa de Verão no Instituto de Matemática e Estatística (IME) – Universidade de São Paulo (USP).\nComunidades: Desde 2018, ela é co-organizadora do R-Ladies São Paulo. Ela também é uma GitHub Star, um reconhecimento do GitHub para pessoas que são especialistas e líderes técnicos que compartilham seu conhecimento com a comunidade. Em 09/04/2024, havia apenas 73 GitHub Stars no mundo, e apenas 8 delas no Brasil."
-  },
-  {
-    "objectID": "teaching/pt/cursor-visualizacao/index.html",
-    "href": "teaching/pt/cursor-visualizacao/index.html",
-    "title": "Visualização de dados",
-    "section": "",
-    "text": "Evento: Curso-RLink: https://loja.curso-r.com/Lugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202403-visualizacao\nhttps://curso-r.github.io/202308-visualizacao\nhttps://curso-r.github.io/202303-visualizacao\nhttps://curso-r.github.io/202210-visualizacao"
-  },
-  {
-    "objectID": "teaching/pt/2024-10-ipea-intro-r/index.html",
-    "href": "teaching/pt/2024-10-ipea-intro-r/index.html",
-    "title": "Introdução à análise de dados no R",
-    "section": "",
-    "text": "Evento: IpeaDATA-labLink: https://ipeadata-lab.github.io/curso_r_intro_202409/Lugar: Híbrido\nMateriais\n\n\n Materiais  Scripts"
-  },
-  {
-    "objectID": "teaching/pt/2025-01-ipea-intermediario-r/index.html",
-    "href": "teaching/pt/2025-01-ipea-intermediario-r/index.html",
-    "title": "R intermediário e pesquisa reprodutível",
-    "section": "",
-    "text": "Evento: IpeaDATA-labLink: https://ipeadata-lab.github.io/curso_r_intermediario_202501/Lugar: Híbrido\nMateriais\n\n\n Materiais  Scripts"
-  },
-  {
-    "objectID": "teaching/pt/2022-05-cebrap-lab-intro-R/index.html",
-    "href": "teaching/pt/2022-05-cebrap-lab-intro-R/index.html",
-    "title": "Introdução ao R",
-    "section": "",
-    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
-  },
-  {
-    "objectID": "teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
-    "href": "teaching/pt/2023-06-cebrap-lab-intro-R/index.html",
-    "title": "Introdução ao R",
-    "section": "",
-    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, gerar gráficos simples, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
-  },
-  {
-    "objectID": "teaching/pt/2023-11-cebrap-lab-text-as-data/index.html",
-    "href": "teaching/pt/2023-11-cebrap-lab-text-as-data/index.html",
-    "title": "Análise quantitativa de texto",
-    "section": "",
-    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\nO curso “Análise Quantitativa de Textos com R” abordará conceitos como: o que é análise quantitativa de textos; como estruturar textos capturados de pdfs, html simples e word em uma base de dados; como realizar o pré-processamento destes dados (por exemplo: remoção de caracteres que não são relevantes para a análise, remoção de “stop words”, utilização de expressões regulares para identificar palavras relevantes, entre outros); como realizar contagens de palavras ou n-grams mais frequentes; como visualizar estas contagens (como uma nuvem de palavras ou gráficos de barras); e por fim será abordado de forma introdutória a modelagem de tópicos, um método não supervisionado para criar grupos de documentos (similar ao cluster utilizado com dados numéricos). Serão apresentados também alguns exemplos destes tipos de análises. Todas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, o RStudio, e os pacotes stringr, ggplot2, dplyr, tidytext, entre outros. O curso tem como público alvo pessoas que tenham conhecimento intermediário em R e tenham interesse em analisar textos com métodos quantitativos utilizando R."
-  },
-  {
-    "objectID": "teaching/pt/cursor-relatorios/index.html",
-    "href": "teaching/pt/cursor-relatorios/index.html",
-    "title": "Relatórios e apresentações",
-    "section": "",
-    "text": "Evento: Curso-RLink: https://loja.curso-r.com/Lugar: Online\nMateriais\n\n\n GitHub  Materiais \n\n\nTurmas que participei como professora ou monitora:\n\nhttps://curso-r.github.io/202311-relatorios\nhttps://curso-r.github.io/202304-relatorios\nhttps://curso-r.github.io/202210-relatorios\nhttps://curso-r.github.io/202208-relatorios\nhttps://curso-r.github.io/202205-relatorios"
-  },
-  {
-    "objectID": "teaching/pt/2022-01-verao-ime-usp-relatorios/index.html",
-    "href": "teaching/pt/2022-01-verao-ime-usp-relatorios/index.html",
-    "title": "Relatórios reprodutíveis com R",
-    "section": "",
-    "text": "Evento: Programa de Verão IME-USPLink: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.phpLugar: Online\nMateriais\n\n\n Materiais  Slides  Plataforma USP"
-  },
-  {
-    "objectID": "teaching/pt/2024-09-cebrap-lab-viz-R/index.html",
-    "href": "teaching/pt/2024-09-cebrap-lab-viz-R/index.html",
-    "title": "Visualização de dados no R",
-    "section": "",
-    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\n\nO curso “Visualização de dados” abordará o uso da linguagem de programação R para a geração de gráficos, bem como a criação de mapas simples. Serão apresentados alguns conceitos como: quais são as diferenças entre visualizações exploratórias e explicativas, boas práticas ao criar visualizações de dados, como criar gráficos simples (como gráficos de dispersão/pontos, gráfico de barras, gráfico de linhas, histograma, boxplots), como personalizar os gráficos, exportar os gráficos em formatos adequados para publicações acadêmicas, e como criar mapas simples usando a teoria de gráficos em R.\nTodas as ferramentas utilizadas são gratuitas: utilizaremos a linguagem de programação R, e o RStudio, e os pacotes ggplot2, sf, e geobr. O curso tem como público-alvo pessoas que tenham conhecimento básico em R, e queiram interesse em aprender a criar visualizações de dados."
-  },
-  {
-    "objectID": "teaching/es/2024-11-18-latinR-GitHub/index.html",
-    "href": "teaching/es/2024-11-18-latinR-GitHub/index.html",
-    "title": "Introducción a GitHub para Investigador(a|e)s",
-    "section": "",
-    "text": "Evento: LatinR 2024Link: https://latinr.org/cronograma/tutoriales/Lugar: Online\nMateriais\n\n\n Inscrições  GitHub Repository  Materials  Video"
-  },
-  {
-    "objectID": "research/en/2022-ambiagua/index.html",
-    "href": "research/en/2022-ambiagua/index.html",
-    "title": "Spatio-temporal variability of water quality in Billings Reservoir Central Body - São Paulo, Brazil",
-    "section": "",
-    "text": "Evento:"
-  },
-  {
-    "objectID": "research/en/2022-ambiagua/index.html#abstract",
-    "href": "research/en/2022-ambiagua/index.html#abstract",
-    "title": "Spatio-temporal variability of water quality in Billings Reservoir Central Body - São Paulo, Brazil",
-    "section": "Abstract",
-    "text": "Abstract\nThe Billings Reservoir is an important water body for public supply of the Metropolitan Region of São Paulo, Brazil, and water captation for public supply is located in the Rio Grande environmental compartment. This article evaluates the water quality of the environmental compartment Central Body I of the Billings Reservoir, which receives the reversed waters from the polluted Pinheiros River, at four sampling points with different contributions from the surroundings, seeking to verify the influence of seasonality on water quality and whether there was a difference in water quality between the sampling points. Water sampling was carried out on the surface at four points, in a longitudinal profile, covering two periods (dry and rainy) distributed in six samplings between 2016 and 2019. Analyzed variables included temperature, dissolved oxygen, pH, electrical conductivity, chlorophyll-a and nutrients (phosphorus and nitrogen). Space-Time Interaction tests revealed that physicochemical variables did not vary due to the interaction between sampling periods and points, but several variables varied significantly during the sampling period. The results of the Trophic State Index show that waters of Central Body I are classified as Hypereutrophic, highlighting the degradation of water quality in this compartment. This research will better inform public managers and assist their efforts to minimize and mitigate the effects of progressive water quality degradation in this reservoir.\nKeywords: eutrophication; Pinheiros river; urban reservoir"
-  },
-  {
-    "objectID": "research/en/2022-ambiagua/index.html#resumo",
-    "href": "research/en/2022-ambiagua/index.html#resumo",
-    "title": "Spatio-temporal variability of water quality in Billings Reservoir Central Body - São Paulo, Brazil",
-    "section": "Resumo",
-    "text": "Resumo\nA represa Billings é um reservatório importante para o abastecimento público da região metropolitana de São Paulo, no Brasil, e a captação de água para abastecimento público está localizada no compartimento ambiental Rio Grande. Este artigo tem como objetivo avaliar a qualidade das águas do compartimento ambiental Corpo Central I da represa Billings, que recebe as águas revertidas do poluído rio Pinheiros, em quatro pontos de coleta com contribuição do entorno diferenciada, buscando verificar a influência da sazonalidade nos resultados obtidos e se houve diferença da qualidade da água entre os pontos de coleta. As coletas de água foram realizadas na superfície em quatro pontos, em um perfil longitudinal, contemplando dois períodos (estiagem e chuvoso) distribuídos em seis coletas, entre os anos de 2016 e 2019. As variáveis analisadas foram temperatura, oxigênio dissolvido, pH, condutividade elétrica, clorofila-a e nutrientes (fósforo e nitrogênio). Os testes de Interação Espaço-Tempo revelaram que as variáveis físico-químicas não variaram devido à interação entre os pontos e períodos de amostragem, mas diversas variáveis variaram significativamente em função do período de amostragem. O resultado do Índice de Estado Trófico evidenciou que as águas do Corpo Central I foram classificadas como Hipereutróficas, destacando a degradação da qualidade das águas neste compartimento. Os resultados desta pesquisa podem subsidiar os gestores públicos na tentativa de minimizar os efeitos da degradação progressiva da qualidade da água deste reservatório.\nPalavras-chave: eutrofização; reservatório urbano; Rio Pinheiros"
-  },
-  {
-    "objectID": "research/pt/2024-doutorado/index.html",
-    "href": "research/pt/2024-doutorado/index.html",
-    "title": "Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista",
-    "section": "",
-    "text": "Evento:"
-  },
-  {
-    "objectID": "research/pt/2024-doutorado/index.html#português",
-    "href": "research/pt/2024-doutorado/index.html#português",
-    "title": "Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista",
-    "section": "Português",
-    "text": "Português\nResumo\nA Macrometrópole Paulista (MMP) é considerada a maior aglomeração urbana do Brasil, com mais de 35 milhões de habitantes. Essa região apresenta crescentes riscos de enfrentamento de problemas de escassez de água, que são intensificados em um cenário de emergência climática. Nesse contexto, mecanismos de transparência são de grande importância para a sociedade. Esta pesquisa desenvolveu o Índice Paulista de Transparência em Gestão de Recursos Hídricos (IPTGRH), que avalia a transparência ativa em órgãos gestores de recursos hídricos na MMP e no estado de São Paulo. O índice é calculado a partir do Portal do Sistema Integrado de Gerenciamento de Recursos Hídricos do Estado de São Paulo (SigRH), que foi identificado como a principal fonte de informação na pesquisa de opinião aplicada a representantes de quatro Comitês de Bacias Hidrográficas (CBHs). O IPT-GRH, baseado nos Princípios de Dados Abertos, revelou necessidades de melhorias nas informações disponibilizadas, principalmente relacionadas aos princípios de Tempestividade e Completude. Os resultados indicam a importância de atualizações regulares e fornecimento de informações completas pelos órgãos responsáveis. A pesquisa ainda sugere formas de aplicar o índice em outros órgãos e regiões, contribuindo para promover a transparência na gestão dos recursos hídricos, essencial para o controle social.\nPalavras-chave: Represa Billings, Crise Hídrica, Região Metropolitana de São Paulo, Gestão de Recursos Hídricos"
-  },
-  {
-    "objectID": "research/pt/2024-doutorado/index.html#english",
-    "href": "research/pt/2024-doutorado/index.html#english",
-    "title": "Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista",
-    "section": "English",
-    "text": "English\nTitle: Active transparency in Water Resource Management in the São Paulo Macrometropolis\nAbstract:\nThe São Paulo Macrometropolis (MMP) is considered the largest urban agglomeration in Brazil, with over 35 million inhabitants. This region faces increasing risks of water scarcity problems, which are intensified in a scenario of climate emergency. In this context, transparency mechanisms are of great importance for society. This research developed the São Paulo Index of Transparency in Water Resource Management (IPT-GRH), which assesses active transparency in water resource management bodies in the MMP and the state of São Paulo. The index is calculated from the Integrated Water Resource Management System of the State of São Paulo (SigRH), identified as the main source of information in the survey applied to representatives of four River Basin Committees (CBHs). The IPT-GRH, based on the Principles of Open Data, revealed needs for improvements in the information provided, especially related to the principles Timely and Complete. The results indicate the importance of regular updates and the provision of complete information by responsible bodies. The research also suggests ways to apply the index in other bodies and regions, contributing to promoting transparency in water resource management, essential for social control.\nKeywords: Access to Information Law, Open Data, River Basin Committees, Transparency Index, Water Crisis."
-  },
-  {
-    "objectID": "content.html",
-    "href": "content.html",
-    "title": "Content",
-    "section": "",
-    "text": "Presentations, workshops, and other content that I have created or participated in.\nFor invitations, please email me at: milz.bea@gmail.com"
-  },
-  {
-    "objectID": "content.html#future-content",
-    "href": "content.html#future-content",
-    "title": "Content",
-    "section": "Future content",
-    "text": "Future content\nHere you can find links, slides and materials for 9 future activities that I will be participating in!\n\n\n   \n    \n    Ordenar por\nPré-selecionado\n\n        Título\n      \n\n        Data - Mais velho\n      \n\n        Data - O mais novo\n      \n\n    \n      \n      \n\n\n\n\n\n\n\n\n\n\nIntrodução ao R para análise de dados\n\n\n\n22 de jul. de 2025\n\n\n\n\nEvent\n\n\nIX Fórum Brasileiro de Pós-Graduação em Ciência Política, Universidade de São Paulo (USP)\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à elaboração de gráficos com ggplot2 e R\n\n\n\n24 de jul. de 2025\n\n\n\n\nEvent\n\n\nIX Fórum Brasileiro de Pós-Graduação em Ciência Política, Universidade de São Paulo (USP)\n\n\n\n\n\n\n\n\n\n\n\n\nObtendo dados do SIDRA/IBGE com R utilizando o pacote SIDRAR\n\n\n\n4 de ago. de 2025\n\n\n\n\nEvent\n\n\n69ª Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (RBras)\n\n\n\n\n\n\n\n\n\n\n\n\nTranslating R for Data Science into Portuguese: A Community-Led Initiative\n\n\nSession: It Takes a Village: Building and Sustaining Communities\n\n\n\n18 de set. de 2025\n\n\n\n\nEvent\n\n\nposit::conf(2025)\n\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "content.html#past-content",
-    "href": "content.html#past-content",
-    "title": "Content",
-    "section": "Past content",
-    "text": "Past content\nHere you can find links, slides and materials for 103 past activities that I have participated in since 2018!\n\n\n   \n    \n    Ordenar por\nPré-selecionado\n\n        Título\n      \n\n        Data - Mais velho\n      \n\n        Data - O mais novo\n      \n\n    \n      \n      \n\n\n\n\n\n\n\n\n\n\nIntrodução ao Shiny: Construindo Dashboards Interativos com R\n\n\n\n17 de jun. de 2025\n\n\n\n\nEvent\n\n\nR-Ladies Niterói\n\n\n\n\n\n\n\n\n\n\n\n\nArrumação de dados de um Map-based survey com R: Desafios e lições aprendidas\n\n\n\n26 de mai. de 2025\n\n\n\n\nEvent\n\n\nIX Seminário Internacional de Estatística com R\n\n\n\n\n\n\n\n\n\n\n\n\nToda ajuda conta: diferentes formas de contribuir com Open Source\n\n\n\n10 de mai. de 2025\n\n\n\n\nEvent\n\n\nThasfin no Cinema\n\n\n\n\n\n\n\n\n\n\n\n\nAutomatize tarefas com GitHub Actions: Primeiros passos\n\n\n\n16 de abr. de 2025\n\n\n\n\nEvent\n\n\nEscola de Dados\n\n\n\n\n\n\n\n\n\n\n\n\nTransformar: Vetores lógicos\n\n\ncomparações lógicas, case_when(), if_else(), etc.\n\n\n\n8 de abr. de 2025\n\n\n\n\nEvent\n\n\nClube do Livro: R for Data Science - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nComo acessar dados geoespaciais abertos do Brasil com o geobr\n\n\n\n29 de mar. de 2025\n\n\n\n\nEvent\n\n\nOpen Data Day | PyLadies São Paulo 2025\n\n\n\n\n\n\n\n\n\n\n\n\nR intermediário e pesquisa reprodutível\n\n\n\n20 de jan. de 2025\n\n\n\n\nEvent\n\n\nIpeaDATA-lab\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n14 de jan. de 2025\n\n\n\n\nEvent\n\n\nPrograma de Verão IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nStructuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo\n\n\n\n22 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nGuguDaDados: A space for children and babies in events\n\n\n\n22 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDemocratizando a Ciência de Dados em Português: Uma tradução de ‘R for Data Science’ (2ª edição) liderada pela comunidade\n\n\n\n22 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTradução + Hackathon = Traslaton rOpenSci\n\n\n\n18 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducción a GitHub para Investigador(a|e)s\n\n\n\n18 de nov. de 2024\n\n\n\n\nEvent\n\n\nLatinR 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n12 de nov. de 2024\n\n\n\n\nEvent\n\n\nMethods and techniques in Territorial Planning and Management (PGT-605)\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n11 de nov. de 2024\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nA comunidade R fala português\n\n\n\n6 de nov. de 2024\n\n\n\n\nEvent\n\n\nrOpenSci Community Call\n\n\n\n\n\n\n\n\n\n\n\n\nLive no canal da Curso-R sobre a GitHub Universe\n\n\n\n6 de nov. de 2024\n\n\n\n\nEvent\n\n\nCanal da Curso-R\n\n\n\n\n\n\n\n\n\n\n\n\nQualitative Data Analysis: Coding\n\n\n\n22 de out. de 2024\n\n\n\n\nEvent\n\n\nMethods and techniques in Territorial Planning and Management (PGT-605)\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n22 de out. de 2024\n\n\n\n\nEvent\n\n\nV Simpósio Interdisciplinar de Ciência Ambiental\n\n\n\n\n\n\n\n\n\n\n\n\nRaspagem de dados com R\n\n\n\n21 de out. de 2024\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nLiterature review\n\n\n\n15 de out. de 2024\n\n\n\n\nEvent\n\n\nMethods and techniques in Territorial Planning and Management (PGT-605)\n\n\n\n\n\n\n\n\n\n\n\n\nUsing GitHub as a Researcher\n\n\n\n9 de out. de 2024\n\n\n\n\nEvent\n\n\nStar2Star Presentations - GitHub Stars\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à análise de dados no R\n\n\n\n1 de out. de 2024\n\n\n\n\nEvent\n\n\nIpeaDATA-lab\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n30 de set. de 2024\n\n\n\n\nEvent\n\n\naMostra de Estatística IME USP\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n23 de set. de 2024\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n1 de ago. de 2024\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n30 de jul. de 2024\n\n\n\n\nEvent\n\n\nWorkshop. Programa de Pós-Graduação de Mestrado Profissional em Inovação Tecnológica. Universidade Federal de São Paulo - Campus São José dos Campos\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 3\n\n\nFunções: group_by(), summarise(), slice_*()\n\n\n\n29 de jul. de 2024\n\n\n\n\nEvent\n\n\nClube do Livro: R for Data Science - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 2\n\n\nFunções: mutate(), select(), rename(), relocate()\n\n\n\n11 de jul. de 2024\n\n\n\n\nEvent\n\n\nClube do Livro: R for Data Science - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 1\n\n\nFunções: filter(), arrange(), distinct(), count()\n\n\n\n24 de jun. de 2024\n\n\n\n\nEvent\n\n\nClube do Livro: R for Data Science - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nActions to increase diversity in the R-Ladies community - São Paulo\n\n\n\n2 de mai. de 2024\n\n\n\n\nEvent\n\n\nR-Ladies Melbourne\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R e Ciência Aberta\n\n\n\n19 de abr. de 2024\n\n\n\n\nEvent\n\n\nfreeCodeCamp Podcast\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados\n\n\n\n14 de mar. de 2024\n\n\n\n\nEvent\n\n\nCurso-R\n\n\n\n\n\n\n\n\n\n\n\n\nO que são dados abertos? O que é o Open Data Day?\n\n\n\n2 de mar. de 2024\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nR para Ciência de Dados I\n\n\n\n25 de jan. de 2024\n\n\n\n\nEvent\n\n\nCurso-R\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n23 de jan. de 2024\n\n\n\n\nEvent\n\n\nPrograma de Verão IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o GitHub Projects\n\n\n\n20 de jan. de 2024\n\n\n\n\nEvent\n\n\nGitTogether São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalhando com dados espaciais no R\n\n\n\n12 de dez. de 2023\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise quantitativa de texto\n\n\n\n27 de nov. de 2023\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nPurrr-fecting your R workflow - An introduction to functional programming\n\n\n\n24 de nov. de 2023\n\n\n\n\nEvent\n\n\nR Day - Segundo encuentro nacional de usuarios de R\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n22 de nov. de 2023\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R de dados brasileiros\n\n\n\n22 de nov. de 2023\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios e apresentações\n\n\n\n1 de nov. de 2023\n\n\n\n\nEvent\n\n\nCurso-R\n\n\n\n\n\n\n\n\n\n\n\n\nApresentando os resultados com R\n\n\n\n28 de out. de 2023\n\n\n\n\nEvent\n\n\n1º Seminário Interdisciplinar em Ciência de Dados LInDA - I SINCID LINDA\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n21 de set. de 2023\n\n\n\n\nEvent\n\n\naMostra de Estatística IME USP\n\n\n\n\n\n\n\n\n\n\n\n\nVisualização de dados no R\n\n\n\n28 de ago. de 2023\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n26 de jun. de 2023\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n9 de mai. de 2023\n\n\n\n\nEvent\n\n\nDisciplina - Ciência de Dados. Programa de Pós-Graduação de Mestrado Profissional em Inovação Tecnológica. Universidade Federal de São Paulo - Campus São José dos Campos\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote purrr\n\n\n\n29 de abr. de 2023\n\n\n\n\nEvent\n\n\nMeetup R-Ladies Goiânia\n\n\n\n\n\n\n\n\n\n\n\n\nUtilizando GitHub Actions para baixar dados públicos\n\n\nUm exemplo com dados de barragens de mineração\n\n\n\n12 de abr. de 2023\n\n\n\n\nEvent\n\n\nCerveja com Dados Fortaleza\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n23 de jan. de 2023\n\n\n\n\nEvent\n\n\nPrograma de Verão IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Quarto: a nova geração do RMarkdown\n\n\n\n23 de nov. de 2022\n\n\n\n\nEvent\n\n\naMostra IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R\n\n\n\n1 de nov. de 2022\n\n\n\n\nEvent\n\n\nCurso-R\n\n\n\n\n\n\n\n\n\n\n\n\nRunning code while we’re sleeping - Introduction to GitHub Actions for R users\n\n\n\n29 de out. de 2022\n\n\n\n\nEvent\n\n\nR-Ladies Abuja, Nigeria\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n20 de out. de 2022\n\n\n\n\nEvent\n\n\nXVIII Congresso Brasileiro de Limnologia\n\n\n\n\n\n\n\n\n\n\n\n\nR translatón/Hackaton de tradução do R\n\n\n\n15 de out. de 2022\n\n\n\n\nEvent\n\n\nLatin-R 2022\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados: Criando apresentações com Quarto\n\n\n\n10 de out. de 2022\n\n\n\n\nEvent\n\n\nLatin-R 2022\n\n\n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\n28 de jul. de 2022\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nInterview for the Reproducible Research Scout Youtube Channel\n\n\n\n20 de jun. de 2022\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\n25 de mai. de 2022\n\n\n\n\nEvent\n\n\nVI International Seminar on Statistics with R\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\n20 de mai. de 2022\n\n\n\n\nEvent\n\n\nBrazilian Open Science Training (BOST)\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\n12 de mai. de 2022\n\n\n\n\nEvent\n\n\nGrupo de Estudos de Ecologia Quantitativa (GEEQ)\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n9 de mai. de 2022\n\n\n\n\nEvent\n\n\ncebrap.lab online\n\n\n\n\n\n\n\n\n\n\n\n\nRelatórios reprodutíveis com R\n\n\n\n2 de fev. de 2022\n\n\n\n\nEvent\n\n\nPrograma de Verão IME-USP\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n26 de nov. de 2021\n\n\n\n\nEvent\n\n\n5ª SEMIC - 5ª Semana de Iniciação Científica da ENCE\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n10 de nov. de 2021\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R para Cientistas Ambientais\n\n\n\n8 de nov. de 2021\n\n\n\n\nEvent\n\n\nSENACAMB - Semana Nacional de Ciências Ambientais\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando os resultados de projetos em Ciência de Dados\n\n\nConhecendo o R Markdown\n\n\n\n22 de out. de 2021\n\n\n\n\nEvent\n\n\nAI Inclusive\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade - Especial Hacktoberfest\n\n\n\n13 de out. de 2021\n\n\n\n\nEvent\n\n\nCanal da Curso-R\n\n\n\n\n\n\n\n\n\n\n\n\nFazendo amizade com a Python reticulada\n\n\nIntrodução ao uso de Python e R no RStudio com o pacote reticulate\n\n\n\n13 de out. de 2021\n\n\n\n\nEvent\n\n\nPython Brasil 2021 - 13 de outubro, quarta-feira, das 15:50 às 16:35\n\n\n\n\n\n\n\n\n\n\n\n\nComo aprender R tem sido importante na minha trajetória como Gestora Ambiental\n\n\n\n30 de set. de 2021\n\n\n\n\nEvent\n\n\nDisciplina de análise e visualização de dados com R - UFV\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions\n\n\n\n18 de set. de 2021\n\n\n\n\nEvent\n\n\nMeetup R-Ladies Goiânia\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n11 de set. de 2021\n\n\n\n\nEvent\n\n\nMeetup R-Ladies Goiânia\n\n\n\n\n\n\n\n\n\n\n\n\nFaça apresentações ninja em R\n\n\nConhecendo o pacote xaringan\n\n\n\n9 de set. de 2021\n\n\n\n\nEvent\n\n\n3º R Day - Encontro Nacional de Usuários do R\n\n\n\n\n\n\n\n\n\n\n\n\nJornalismo com R\n\n\n\n29 de ago. de 2021\n\n\n\n\nEvent\n\n\n3º Domingo de Dados\n\n\n\n\n\n\n\n\n\n\n\n\nCriando tutoriais interativos com R\n\n\nConhecendo o pacote learnr\n\n\n\n13 de ago. de 2021\n\n\n\n\nEvent\n\n\nCanal PET-Estatística UFPR\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\n30 de jul. de 2021\n\n\n\n\nEvent\n\n\nCanal GeoCast Brasil\n\n\n\n\n\n\n\n\n\n\n\n\nCapítulos de Workflow do livro R for Data Science\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\n14 de jul. de 2021\n\n\n\n\nEvent\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nColeta de dados automatizada e integração contínua utilizando GitHub Actions\n\n\nExemplos com o Pacote Mananciais\n\n\n\n10 de jun. de 2021\n\n\n\n\nEvent\n\n\nV International Seminar on Statistics with R\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n28 de abr. de 2021\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nEnsino de programação - Como fazer parte da comunidade global The Carpentries?\n\n\n\n4 de nov. de 2020\n\n\n\n\nEvent\n\n\nPython Brasil 2020\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr joins - Juntando bases de dados\n\n\n\n3 de nov. de 2020\n\n\n\n\nEvent\n\n\nCanal da Curso-R\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados em R\n\n\nAprenda a criar apresentações reprodutíveis\n\n\n\n19 de out. de 2020\n\n\n\n\nEvent\n\n\nLatinR 2020\n\n\n\n\n\n\n\n\n\n\n\n\nAprenda a usar Git e GitHub no RStudio!\n\n\nR-Ladies SP na Hacktoberfest\n\n\n\n17 de out. de 2020\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nR Markdown\n\n\nUsando o R para comunicar seus resultados\n\n\n\n29 de set. de 2020\n\n\n\n\nEvent\n\n\nCanal GeoCast Brasil\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n23 de set. de 2020\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade\n\n\n\n10 de set. de 2020\n\n\n\n\nEvent\n\n\nCanal da Curso-R\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub no RStudio\n\n\n\n27 de ago. de 2020\n\n\n\n\nEvent\n\n\nMeetup R-Ladies Goiânia\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução a Linguagem R\n\n\n\n27 de ago. de 2020\n\n\n\n\nEvent\n\n\nR-Ladies Curitiba\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America\n\n\nR and Friends\n\n\n\n8 de jul. de 2020\n\n\n\n\nEvent\n\n\nuseR! 2020\n\n\n\n\n\n\n\n\n\n\n\n\nFunciones - R para Ciencia de Datos\n\n\nGrupo de Estudios para la Certificación de RStudio\n\n\n\n4 de mai. de 2020\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\n30 de nov. de 2019\n\n\n\n\nEvent\n\n\nSatRday São Paulo 2019\n\n\n\n\n\n\n\n\n\n\n\n\nApresentações no R ⚔ com xaringan\n\n\n\n17 de set. de 2019\n\n\n\n\nEvent\n\n\n14ª aMostra Estatística 2019 IME/USP\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiros passos utilizando o Git e GitHub no RStudio\n\n\n\n12 de set. de 2019\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote xaringan - Criando apresentações com R\n\n\n\n27 de ago. de 2019\n\n\n\n\nEvent\n\n\nDisciplina no IME/USP\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards, gráficos, mapas - Possibilidades de visualização de dados com R\n\n\n\n2 de ago. de 2019\n\n\n\n\nEvent\n\n\nMeetup Nerdzão\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n11 de jul. de 2019\n\n\n\n\nEvent\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n20 de mai. de 2019\n\n\n\n\nEvent\n\n\nSER UFF 2019\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\n\n5 de dez. de 2018\n\n\n\n\nEvent\n\n\nCODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESP\n\n\n\n\n\n\n\n\n\n\n\n\nOficina de Introdução ao R\n\n\n\n29 de nov. de 2018\n\n\n\n\nEvent\n\n\nUFABC - Campus São Bernardo do Campo\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n21 de nov. de 2018\n\n\n\n\nEvent\n\n\nMeetup R-Ladies São Paulo\n\n\n\n\n\n\n\n\n\n\n\n\nR e Desafios no Projeto Temático - Oficina de Introdução ao R\n\n\n\n17 de out. de 2018\n\n\n\n\nEvent\n\n\nInstituto de Energia e Ambiente - Universidade de São Paulo\n\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "talks/en/2024-11-latinR-gugudadados/index.html",
-    "href": "talks/en/2024-11-latinR-gugudadados/index.html",
-    "title": "GuguDaDados: A space for children and babies in events",
-    "section": "",
-    "text": "Evento:\nAbstract: We present GuGuDaDados, a space created in 2022 by R-Ladies São Paulo to support parents and caregivers by providing a safe and engaging environment for their children during community events."
-  },
-  {
-    "objectID": "talks/en/2024-11-latinR-gugudadados/index.html#links",
-    "href": "talks/en/2024-11-latinR-gugudadados/index.html#links",
-    "title": "GuguDaDados: A space for children and babies in events",
-    "section": "Links",
-    "text": "Links\n\nActions to increase diversity in the R-Ladies São Paulo community - blog post on R-Ladies Global blog\nAções para ampliar a diversidade na comunidade R-Ladies São Paulo - blog post no blog da R-Ladies São Paulo\nGitHub Repository"
-  },
-  {
-    "objectID": "talks/en/2022-rstudio-conf/index.html",
-    "href": "talks/en/2022-rstudio-conf/index.html",
-    "title": "Making awesome automations with GitHub Actions",
-    "section": "",
-    "text": "Event: rstudio::conf(2022)\nTalk video\nSlides"
-  },
-  {
-    "objectID": "talks/en/2022-rstudio-conf/index.html#complementary-materials",
-    "href": "talks/en/2022-rstudio-conf/index.html#complementary-materials",
-    "title": "Making awesome automations with GitHub Actions",
-    "section": "Complementary materials",
-    "text": "Complementary materials\n\nBlog post: How important is GitHub Actions to RStudio/Posit? Code for a plot in my talk!\nBlog post: Introduction to GitHub Actions to R users\nBlog post: Monitoring quarto-dev repositories: Creating a workflow with GitHub Actions for R users\nGitHub repository: awesome-gha - Awesome GitHub Actions for R\nPublic workflow examples:\n\nsigbm - This repository has a workflow that downloads the excel file with public data related to mining dams in Brazil, every day, and stores it in the repository. There is no R code!\nnoticiasgov - This repository has a workflow that scrapes news from the official government of Sao Paulo page, and stores it in a CSV file."
-  },
-  {
-    "objectID": "talks/en/2022-rstudio-conf/index.html#slides",
-    "href": "talks/en/2022-rstudio-conf/index.html#slides",
-    "title": "Making awesome automations with GitHub Actions",
-    "section": "Slides",
-    "text": "Slides\n\nSlides:"
-  },
-  {
-    "objectID": "talks/en/2019-user-rladies-sp/index.html",
-    "href": "talks/en/2019-user-rladies-sp/index.html",
-    "title": "The evolution and importance of the R-Ladies São Paulo chapter in Brazil",
-    "section": "",
-    "text": "Event: useR! 2019\nTalk\nSlides:"
-  },
-  {
-    "objectID": "talks/en/2018-knitr-codata/index.html",
-    "href": "talks/en/2018-knitr-codata/index.html",
-    "title": "Producing Reports with knitr and R",
-    "section": "",
-    "text": "Evento: CODATA-RDA School of Research Data Science/ICTP-SAIFR/NCC-UNESPLugar: São Paulo\nMateriais\n\n\n Slides"
-  },
-  {
-    "objectID": "talks/en/2025-posit-conf/index.html",
-    "href": "talks/en/2025-posit-conf/index.html",
-    "title": "Translating R for Data Science into Portuguese: A Community-Led Initiative",
-    "section": "",
-    "text": "Evento: posit::conf(2025)Link: https://posit.co/conference/Lugar: Atlanta, United States\n\nAbstract: How can open-source collaboration help make data science more accessible and expand Posit’s global impact? The book “R for Data Science” by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund is a key resource for learning R and the tidyverse. In a collaborative effort, volunteers from the R community translated the second edition into Brazilian Portuguese, making it freely available online. This talk explores the translation journey, the challenges of adapting technical content, and key lessons learned to support future translation teams."
-  },
-  {
-    "objectID": "talks/en/2024-10-15-ufabc-literature-review/index.html",
-    "href": "talks/en/2024-10-15-ufabc-literature-review/index.html",
-    "title": "Literature review",
+    "objectID": "talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
+    "href": "talks/en/2024-10-22-ufabc-coding-qualitative-data/index.html",
+    "title": "Qualitative Data Analysis: Coding",
     "section": "",
     "text": "Evento: Methods and techniques in Territorial Planning and Management (PGT-605)Link: http://propg.ufabc.edu.br/ppgpgtLugar: São Bernardo do Campo, SP, Brazil\nMateriais\n\n\n Slides"
   },
   {
-    "objectID": "talks/en/2024-05-rladies-melbourne/index.html",
-    "href": "talks/en/2024-05-rladies-melbourne/index.html",
-    "title": "Actions to increase diversity in the R-Ladies community - São Paulo",
+    "objectID": "talks/en/2023-11-rday-colombia-purrr/index.html",
+    "href": "talks/en/2023-11-rday-colombia-purrr/index.html",
+    "title": "Purrr-fecting your R workflow - An introduction to functional programming",
     "section": "",
-    "text": "Evento: R-Ladies MelbourneLink: https://www.meetup.com/rladies-melbourne/events/300561897/Lugar: Melbourne, Victoria, Australia\nMateriais\n\n\n GitHub Repo  Slides"
+    "text": "Evento: R Day - Segundo encuentro nacional de usuarios de RLink: https://rday-colombia.github.io/2023/Lugar: Online\nMateriais\n\n\n GitHub Repo  Slides  Youtube"
   },
   {
-    "objectID": "talks/en/2024-11-latinR-bookclub/index.html",
-    "href": "talks/en/2024-11-latinR-bookclub/index.html",
-    "title": "Structuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo",
+    "objectID": "talks/en/2024-10-15-ufabc-literature-review/Links.html",
+    "href": "talks/en/2024-10-15-ufabc-literature-review/Links.html",
+    "title": "Beatriz Milz",
     "section": "",
-    "text": "Evento:"
+    "text": "About peer review: https://libguides.furman.edu/chemistry/peer-review\nhttps://writingcenter.unc.edu/tips-and-tools/literature-reviews/\nhttps://institute-academic-development.ed.ac.uk/study-hub/learning-resources/literature-review\nhttps://libguides.usc.edu/writingguide/literaturereview"
   },
   {
-    "objectID": "talks/en/2024-11-latinR-bookclub/index.html#links",
-    "href": "talks/en/2024-11-latinR-bookclub/index.html#links",
-    "title": "Structuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo",
-    "section": "Links",
-    "text": "Links\n\nBook - R for Data Science 2ed\nBookclub - GitHub Repository"
+    "objectID": "talks/en/2024-10-15-ufabc-literature-review/Links.html#section",
+    "href": "talks/en/2024-10-15-ufabc-literature-review/Links.html#section",
+    "title": "Beatriz Milz",
+    "section": "",
+    "text": "About peer review: https://libguides.furman.edu/chemistry/peer-review\nhttps://writingcenter.unc.edu/tips-and-tools/literature-reviews/\nhttps://institute-academic-development.ed.ac.uk/study-hub/learning-resources/literature-review\nhttps://libguides.usc.edu/writingguide/literaturereview"
   },
   {
-    "objectID": "talks/en/2024-10-github-researcher/index.html",
-    "href": "talks/en/2024-10-github-researcher/index.html",
-    "title": "Using GitHub as a Researcher",
-    "section": "",
-    "text": "Evento: Star2Star Presentations - GitHub StarsLink: https://stars.github.com/profiles/beatrizmilz/Lugar: Online\nMateriais\n\n\n Slides"
+    "objectID": "talks/en/2024-10-15-ufabc-literature-review/Links.html#types-of-literature-review",
+    "href": "talks/en/2024-10-15-ufabc-literature-review/Links.html#types-of-literature-review",
+    "title": "Beatriz Milz",
+    "section": "Types of literature review",
+    "text": "Types of literature review\n\nhttps://www.scielo.br/j/ape/a/z7zZ4Z4GwYV6FR7S9FHTByr/?lang=en\nNarrative review:\n\nhttps://www.sciencedirect.com/topics/psychology/narrative-review\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC9380636/"
   },
   {
-    "objectID": "talks/en/index.html",
-    "href": "talks/en/index.html",
-    "title": "Talks",
+    "objectID": "talks/en/2020-RStudio-certification/index.html",
+    "href": "talks/en/2020-RStudio-certification/index.html",
+    "title": "Adding figures in R Markdown",
     "section": "",
-    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTranslating R for Data Science into Portuguese: A Community-Led Initiative\n\n\nSession: It Takes a Village: Building and Sustaining Communities\n\n\n\n\n\n18 de set. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nStructuring an Online Book Club: R for Data Science (2ed) by R-Ladies São Paulo\n\n\n\n\n\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nGuguDaDados: A space for children and babies in events\n\n\n\n\n\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n12 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nQualitative Data Analysis: Coding\n\n\n\n\n\n\n\n\n22 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLiterature review\n\n\n\n\n\n\n\n\n15 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nUsing GitHub as a Researcher\n\n\n\n\n\n\n\n\n9 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nActions to increase diversity in the R-Ladies community - São Paulo\n\n\n\n\n\n\n\n\n2 de mai. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nPurrr-fecting your R workflow - An introduction to functional programming\n\n\n\n\n\n\n\n\n24 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRunning code while we’re sleeping - Introduction to GitHub Actions for R users\n\n\n\n\n\n\n\n\n29 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nMaking awesome automations with GitHub Actions\n\n\nrstudio::conf(2022)\n\n\n\n\n\n28 de jul. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nInterview for the Reproducible Research Scout Youtube Channel\n\n\n\n\n\n\n\n\n20 de jun. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nScaling feedback using learnr and gradethis in a introductory R course\n\n\nLatinR 2021\n\n\n\n\n\n10 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nMy experience at useR 2019\n\n\nMeetup R-Ladies and useR 2021\n\n\n\n\n\n28 de abr. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nAdding figures in R Markdown\n\n\nTeaching exam - RStudio\n\n\n\n\n\n23 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America\n\n\nR and Friends\n\n\n\n\n\n8 de jul. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nThe evolution and importance of the R-Ladies São Paulo chapter in Brazil\n\n\nuseR 2019\n\n\n\n\n\n11 de jul. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nProducing Reports with knitr and R\n\n\n\n\n\n\n\n\n5 de dez. de 2018\n\n\n\n\n\nNenhum item correspondente"
+    "text": "This presentation was not recorded.\n\nComplete material\nSlides:"
   },
   {
-    "objectID": "talks/pt/2025-04-r4ds-vetores-logicos/index.html",
-    "href": "talks/pt/2025-04-r4ds-vetores-logicos/index.html",
-    "title": "Transformar: Vetores lógicos",
+    "objectID": "talks/en/2022-gha-rladies-abuja/index.html",
+    "href": "talks/en/2022-gha-rladies-abuja/index.html",
+    "title": "Running code while we’re sleeping - Introduction to GitHub Actions for R users",
     "section": "",
-    "text": "Evento: Clube do Livro: R for Data Science - R-Ladies São PauloLugar: Online\nMateriais\n\n\n Slide  Scripts  Gravação  Arquivo compartilhado"
+    "text": "Evento: R-Ladies Abuja, NigeriaLink: https://www.meetup.com/rladies-abuja/events/288082908/Lugar: Online\nMateriais\n\n\n Website  Slides  Youtube"
+  },
+  {
+    "objectID": "talks/en/2021-experience-useR/index.html",
+    "href": "talks/en/2021-experience-useR/index.html",
+    "title": "My experience at useR 2019",
+    "section": "",
+    "text": "This presentation was not recorded.\n\nSlides:"
+  },
+  {
+    "objectID": "talks/en/2020-user-latin-america/index.html",
+    "href": "talks/en/2020-user-latin-america/index.html",
+    "title": "Communities of practice in Latin America",
+    "section": "",
+    "text": "Evento: useR! 2020Link: https://user2020.r-project.org/Lugar: Online\nMateriais\n\n\n Video \n\n\nExtras:\n\nBlog da RConsortium:\n\nLatin American Communities and Organizations: useR!2020"
+  },
+  {
+    "objectID": "talks/en/2021-learnr-latinr/index.html",
+    "href": "talks/en/2021-learnr-latinr/index.html",
+    "title": "Scaling feedback using learnr and gradethis in a introductory R course",
+    "section": "",
+    "text": "Event: LatinR 2021\nText submission\nTalk\nQ&A\nSlides:"
+  },
+  {
+    "objectID": "talks/pt/2024-01-github-projects/index.html",
+    "href": "talks/pt/2024-01-github-projects/index.html",
+    "title": "Conhecendo o GitHub Projects",
+    "section": "",
+    "text": "Evento: GitTogether São PauloLink: https://www.meetup.com/githubbrasil/events/298340241/Lugar: São Paulo, SP\nMateriais\n\n\n Apresentação  Apresentação em PDF"
   },
   {
     "objectID": "talks/pt/2023-04-rladies-gyn-purrr/index.html",
@@ -2034,7 +2041,7 @@
     "href": "talks/pt/index.html",
     "title": "Apresentações em português",
     "section": "",
-    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nObtendo dados do SIDRA/IBGE com R utilizando o pacote SIDRAR\n\n\n\n\n\n\n\n\n4 de ago. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à elaboração de gráficos com ggplot2 e R\n\n\n\n\n\n\n\n\n24 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R para análise de dados\n\n\n\n\n\n\n\n\n22 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao Shiny: Construindo Dashboards Interativos com R\n\n\n\n\n\n\n\n\n17 de jun. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nArrumação de dados de um Map-based survey com R: Desafios e lições aprendidas\n\n\n\n\n\n\n\n\n26 de mai. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nToda ajuda conta: diferentes formas de contribuir com Open Source\n\n\n\n\n\n\n\n\n10 de mai. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nAutomatize tarefas com GitHub Actions: Primeiros passos\n\n\n\n\n\n\n\n\n16 de abr. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nTransformar: Vetores lógicos\n\n\ncomparações lógicas, case_when(), if_else(), etc.\n\n\n\n\n\n8 de abr. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nComo acessar dados geoespaciais abertos do Brasil com o geobr\n\n\n\n\n\n\n\n\n29 de mar. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDemocratizando a Ciência de Dados em Português: Uma tradução de ‘R for Data Science’ (2ª edição) liderada pela comunidade\n\n\n\n\n\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTradução + Hackathon = Traslaton rOpenSci\n\n\n\n\n\n\n\n\n18 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nA comunidade R fala português\n\n\n\n\n\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLive no canal da Curso-R sobre a GitHub Universe\n\n\n\n\n\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n22 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n\n\n\n\n\n30 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n\n\n\n\n\n30 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 3\n\n\nFunções: group_by(), summarise(), slice_*()\n\n\n\n\n\n29 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 2\n\n\nFunções: mutate(), select(), rename(), relocate()\n\n\n\n\n\n11 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 1\n\n\nFunções: filter(), arrange(), distinct(), count()\n\n\n\n\n\n24 de jun. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R e Ciência Aberta\n\n\n\n\n\n\n\n\n19 de abr. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nO que são dados abertos? O que é o Open Data Day?\n\n\n\n\n\n\n\n\n2 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o GitHub Projects\n\n\n\n\n\n\n\n\n20 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalhando com dados espaciais no R\n\n\n\n\n\n\n\n\n12 de dez. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n\n\n\n\n\n22 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R de dados brasileiros\n\n\n\n\n\n\n\n\n22 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nApresentando os resultados com R\n\n\n\n\n\n\n\n\n28 de out. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n\n\n\n\n\n21 de set. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n\n\n\n\n\n9 de mai. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote purrr\n\n\n\n\n\n\n\n\n29 de abr. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUtilizando GitHub Actions para baixar dados públicos\n\n\nUm exemplo com dados de barragens de mineração\n\n\n\n\n\n12 de abr. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Quarto: a nova geração do RMarkdown\n\n\n\n\n\n\n\n\n23 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n\n\n\n\n\n20 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados: Criando apresentações com Quarto\n\n\n\n\n\n\n\n\n10 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\n\n\n\n\n\n25 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\n\n\n\n\n\n20 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\n\n\n\n\n\n12 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n\n\n\n\n\n26 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R para Cientistas Ambientais\n\n\n\n\n\n\n\n\n8 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando os resultados de projetos em Ciência de Dados\n\n\nConhecendo o R Markdown\n\n\n\n\n\n22 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade - Especial Hacktoberfest\n\n\n\n\n\n\n\n\n13 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nFazendo amizade com a Python reticulada\n\n\nIntrodução ao uso de Python e R no RStudio com o pacote reticulate\n\n\n\n\n\n13 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nComo aprender R tem sido importante na minha trajetória como Gestora Ambiental\n\n\n\n\n\n\n\n\n30 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions\n\n\n\n\n\n\n\n\n18 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n\n\n\n\n\n11 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nFaça apresentações ninja em R\n\n\nConhecendo o pacote xaringan\n\n\n\n\n\n9 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nJornalismo com R\n\n\n\n\n\n\n\n\n29 de ago. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nCriando tutoriais interativos com R\n\n\nConhecendo o pacote learnr\n\n\n\n\n\n13 de ago. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\n\n\n30 de jul. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nCapítulos de Workflow do livro R for Data Science\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\n\n\n14 de jul. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nColeta de dados automatizada e integração contínua utilizando GitHub Actions\n\n\nExemplos com o Pacote Mananciais\n\n\n\n\n\n10 de jun. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nEnsino de programação - Como fazer parte da comunidade global The Carpentries?\n\n\n\n\n\n\n\n\n4 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr joins - Juntando bases de dados\n\n\n\n\n\n\n\n\n3 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados em R\n\n\nAprenda a criar apresentações reprodutíveis\n\n\n\n\n\n19 de out. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nAprenda a usar Git e GitHub no RStudio!\n\n\nR-Ladies SP na Hacktoberfest\n\n\n\n\n\n17 de out. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nR Markdown\n\n\nUsando o R para comunicar seus resultados\n\n\n\n\n\n29 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade\n\n\n\n\n\n\n\n\n10 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub no RStudio\n\n\n\n\n\n\n\n\n27 de ago. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução a Linguagem R\n\n\n\n\n\n\n\n\n27 de ago. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\n\n\n\n\n\n30 de nov. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nApresentações no R ⚔ com xaringan\n\n\n\n\n\n\n\n\n17 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiros passos utilizando o Git e GitHub no RStudio\n\n\n\n\n\n\n\n\n12 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote xaringan - Criando apresentações com R\n\n\n\n\n\n\n\n\n27 de ago. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards, gráficos, mapas - Possibilidades de visualização de dados com R\n\n\n\n\n\n\n\n\n2 de ago. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n\n\n\n\n\n20 de mai. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nOficina de Introdução ao R\n\n\n\n\n\n\n\n\n29 de nov. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n\n\n\n\n\n21 de nov. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\nR e Desafios no Projeto Temático - Oficina de Introdução ao R\n\n\n\n\n\n\n\n\n17 de out. de 2018\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Ordenar por\n      Pré-selecionado\n      \n        Título\n      \n      \n        Data - Mais velho\n      \n      \n        Data - O mais novo\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nObtendo dados do SIDRA/IBGE com R utilizando o pacote SIDRAR\n\n\n\n\n\n\n\n\n4 de ago. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à elaboração de gráficos com ggplot2 e R\n\n\n\n\n\n\n\n\n24 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R para análise de dados\n\n\n\n\n\n\n\n\n22 de jul. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPlantão de dúvidas sobre GitHub\n\n\n\n\n\n\n\n\n24 de jun. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao Shiny: Construindo Dashboards Interativos com R\n\n\n\n\n\n\n\n\n17 de jun. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nArrumação de dados de um Map-based survey com R: Desafios e lições aprendidas\n\n\n\n\n\n\n\n\n26 de mai. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nToda ajuda conta: diferentes formas de contribuir com Open Source\n\n\n\n\n\n\n\n\n10 de mai. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nAutomatize tarefas com GitHub Actions: Primeiros passos\n\n\n\n\n\n\n\n\n16 de abr. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nTransformar: Vetores lógicos\n\n\ncomparações lógicas, case_when(), if_else(), etc.\n\n\n\n\n\n8 de abr. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nComo acessar dados geoespaciais abertos do Brasil com o geobr\n\n\n\n\n\n\n\n\n29 de mar. de 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDemocratizando a Ciência de Dados em Português: Uma tradução de ‘R for Data Science’ (2ª edição) liderada pela comunidade\n\n\n\n\n\n\n\n\n22 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTradução + Hackathon = Traslaton rOpenSci\n\n\n\n\n\n\n\n\n18 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nA comunidade R fala português\n\n\n\n\n\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLive no canal da Curso-R sobre a GitHub Universe\n\n\n\n\n\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao R\n\n\n\n\n\n\n\n\n22 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n\n\n\n\n\n30 de set. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n\n\n\n\n\n30 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 3\n\n\nFunções: group_by(), summarise(), slice_*()\n\n\n\n\n\n29 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 2\n\n\nFunções: mutate(), select(), rename(), relocate()\n\n\n\n\n\n11 de jul. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTransformação de dados (dplyr) - Parte 1\n\n\nFunções: filter(), arrange(), distinct(), count()\n\n\n\n\n\n24 de jun. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R e Ciência Aberta\n\n\n\n\n\n\n\n\n19 de abr. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nO que são dados abertos? O que é o Open Data Day?\n\n\n\n\n\n\n\n\n2 de mar. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o GitHub Projects\n\n\n\n\n\n\n\n\n20 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalhando com dados espaciais no R\n\n\n\n\n\n\n\n\n12 de dez. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o pacote geobr\n\n\n\n\n\n\n\n\n22 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPacotes em R de dados brasileiros\n\n\n\n\n\n\n\n\n22 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nApresentando os resultados com R\n\n\n\n\n\n\n\n\n28 de out. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n\n\n\n\n\n21 de set. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nApresentação de resultados no R\n\n\n\n\n\n\n\n\n9 de mai. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote purrr\n\n\n\n\n\n\n\n\n29 de abr. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nUtilizando GitHub Actions para baixar dados públicos\n\n\nUm exemplo com dados de barragens de mineração\n\n\n\n\n\n12 de abr. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Quarto: a nova geração do RMarkdown\n\n\n\n\n\n\n\n\n23 de nov. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nIndo além na organização de dados usando o R com tidyverse\n\n\n\n\n\n\n\n\n20 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados: Criando apresentações com Quarto\n\n\n\n\n\n\n\n\n10 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto - Conhecendo a evolução do R Markdown\n\n\n\n\n\n\n\n\n25 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nDocumentos dinâmicos em RMarkdown\n\n\n\n\n\n\n\n\n20 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nTexto e código - Escrevendo documentos Científicos com R\n\n\n\n\n\n\n\n\n12 de mai. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n\n\n\n\n\n26 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nLinguagem R para Cientistas Ambientais\n\n\n\n\n\n\n\n\n8 de nov. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando os resultados de projetos em Ciência de Dados\n\n\nConhecendo o R Markdown\n\n\n\n\n\n22 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade - Especial Hacktoberfest\n\n\n\n\n\n\n\n\n13 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nFazendo amizade com a Python reticulada\n\n\nIntrodução ao uso de Python e R no RStudio com o pacote reticulate\n\n\n\n\n\n13 de out. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nComo aprender R tem sido importante na minha trajetória como Gestora Ambiental\n\n\n\n\n\n\n\n\n30 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao GitHub Actions\n\n\n\n\n\n\n\n\n18 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução à utilização do Git e GitHub no RStudio\n\n\n\n\n\n\n\n\n11 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nFaça apresentações ninja em R\n\n\nConhecendo o pacote xaringan\n\n\n\n\n\n9 de set. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nJornalismo com R\n\n\n\n\n\n\n\n\n29 de ago. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nCriando tutoriais interativos com R\n\n\nConhecendo o pacote learnr\n\n\n\n\n\n13 de ago. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nConhecendo o Hugo Apéro\n\n\nFazendo blogs com blogdown e R\n\n\n\n\n\n30 de jul. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nCapítulos de Workflow do livro R for Data Science\n\n\nGrupo de estudos - R-Ladies São Paulo\n\n\n\n\n\n14 de jul. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nColeta de dados automatizada e integração contínua utilizando GitHub Actions\n\n\nExemplos com o Pacote Mananciais\n\n\n\n\n\n10 de jun. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\nEnsino de programação - Como fazer parte da comunidade global The Carpentries?\n\n\n\n\n\n\n\n\n4 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr joins - Juntando bases de dados\n\n\n\n\n\n\n\n\n3 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados em R\n\n\nAprenda a criar apresentações reprodutíveis\n\n\n\n\n\n19 de out. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nAprenda a usar Git e GitHub no RStudio!\n\n\nR-Ladies SP na Hacktoberfest\n\n\n\n\n\n17 de out. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nR Markdown\n\n\nUsando o R para comunicar seus resultados\n\n\n\n\n\n29 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nColaborando com a Comunidade\n\n\n\n\n\n\n\n\n10 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub no RStudio\n\n\n\n\n\n\n\n\n27 de ago. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução a Linguagem R\n\n\n\n\n\n\n\n\n27 de ago. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries\n\n\n\n\n\n\n\n\n30 de nov. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nApresentações no R ⚔ com xaringan\n\n\n\n\n\n\n\n\n17 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiros passos utilizando o Git e GitHub no RStudio\n\n\n\n\n\n\n\n\n12 de set. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução ao pacote xaringan - Criando apresentações com R\n\n\n\n\n\n\n\n\n27 de ago. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nDashboards, gráficos, mapas - Possibilidades de visualização de dados com R\n\n\n\n\n\n\n\n\n2 de ago. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n\n\n\n\n\n20 de mai. de 2019\n\n\n\n\n\n\n\n\n\n\n\n\nOficina de Introdução ao R\n\n\n\n\n\n\n\n\n29 de nov. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\nComunicando seus resultados - criando apresentações com R\n\n\n\n\n\n\n\n\n21 de nov. de 2018\n\n\n\n\n\n\n\n\n\n\n\n\nR e Desafios no Projeto Temático - Oficina de Introdução ao R\n\n\n\n\n\n\n\n\n17 de out. de 2018\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "talks/pt/2020-dplyr-joins-curso-r/index.html",
