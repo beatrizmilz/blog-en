@@ -1,0 +1,35 @@
+---
+toc: true
+author: Beatriz Milz
+categories: ["Tira-dúbidas", "Português", "Git", "GitHub"]
+date: '2025-06-24'
+event: "Open Knowledge Brasil"
+event_url: "https://www.instagram.com/p/DLDnhwmPZyN/"
+links:
+- icon: video
+  icon_pack: fa
+  name: Chamada
+  url: "https://go.ok.org.br/plantaogithub"
+- icon: calendar
+  icon_pack: fa
+  name: Google Calendar
+  url: "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NmswaDFkNW51djgzdjU2bGM0aHBrczY3dm0gbWlsei5iZWFAbQ&tmsrc=milz.bea%40gmail.com"
+- icon: instagram
+  icon_pack: fab
+  name: Divulgação
+  url: "https://www.instagram.com/p/DLDnhwmPZyN/"  
+# - icon: images
+#   icon_pack: far
+#   name: Slides
+#   url: https://beatrizmilz.github.io/2025-06-shiny-rladies-niteroi/
+location:  "Online"
+title: "Plantão de dúvidas sobre GitHub"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
