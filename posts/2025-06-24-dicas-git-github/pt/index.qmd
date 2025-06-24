@@ -1,0 +1,78 @@
+---
+title: "Dicas para começar a usar Git e GitHub para não-programadoras(es)"
+author: "Beatriz Milz"
+date: "2025-06-24"
+categories: ["Dicas", "Git", "GitHub"]
+image: "images/featured.png"
+toc: true
+draft: false
+code-link: true
+---
+
+```{r multilang-buttons}
+#| results: asis
+#| echo: false
+#| message: false
+#| warning: false
+source(here::here("R/multilang.R"))
+multilang()
+```
+
+
+
+## Introdução
+
+Olá! Meu nome é [Beatriz Milz](https://beamilz.com/about-pt), e neste texto quero compartilhar algumas dicas para quem quer começar a usar [Git](https://git-scm.com/downloads) e [GitHub](https://github.com/). O foco deste texto é em pessoas que não necessariamente são programadoras(es), mas que querem aprender a usar essas ferramentas para gerenciar seus projetos, seja na área acadêmica ou profissional.
+
+## Dica 1. Entender o motivo de usar Git e GitHub
+
+Começar a usar Git e GitHub não é fácil, ainda mais quando não temos experiência com programação. A curva de aprendizado pode ser longa... Por isso, eu acredito que é muito importante ter claro desde o início é o motivo pelo qual queremos usar essas ferramentas. 
+
+Para mim, eu comecei o GitHub porque eu encontrava muitos materiais interessantes por lá. Muitas pessoas usam o GitHub para guardar bases de dados, scripts de análise, sites, e por aí vai.
+
+Depois de um tempo, eu comecei a usar o Git e o GitHub para guardar meus próprios materiais, como os scripts de análise que eu fazia para as minhas pesquisas. E foi assim que eu fui aprendendo a usar o GitHub, aos poucos. 
+
+Com o tempo, e aprendendo mais sobre Git e GitHub, eu passei a usar essas ferramentas também para colaborar com outras pessoas!
+
+Por isso, acho importante **ter clareza dos seus próprios motivos para usar Git e GitHub**. Você quer buscar materiais e códigos de outras pessoas? Compartilhar um projeto com colegas? Colaborar com outras pessoas? Saber isso desde o início ajuda a persistir no aprendizado!
+
+## Dica 2. Comece por interfaces mais amigáveis
+
+Muitos dos materiais sobre Git focam em mostrar como usar o terminal para executar os comandos do Git. No entanto, eu acho que isso pode ser um pouco intimidante para quem não tem experiência com programação. 
+
+Por isso, eu recomendo começar a usar o Git e o GitHub com interfaces mais amigáveis. Por exemplo, a interface web (ou seja, acessando o GitHub pelo navegador) é uma ótima forma de começar a usar o GitHub. Você pode criar repositórios, fazer upload de arquivos, e até mesmo editar arquivos diretamente na interface web. Muita coisa pode ser feita por lá, principalmente quando estamos começando.
+
+Outra opção é usar o [GitHub Desktop](https://desktop.github.com/), que é uma interface gráfica para o GitHub. Ele permite que você faça commit, push, pull, e outras operações do Git de forma mais intuitiva.
+
+Eu uso bastante a interface gráfica do RStudio (pois programo em R) e VS Code, que também possuem uma interface gráfica para usar o Git. Essas interfaces permitem que você faça commit, push, pull, e outras operações do Git de forma mais intuitiva, sem precisar usar o terminal.
+
+Tem alguns casos em que é necessário usar o terminal (por exemplo, quando preciso resolver conflitos T_T), mas eu acho que isso pode ser deixado para depois, quando você já tiver mais experiência com o Git e o GitHub e realmente precisar fazer alguma tarefa que não consegue fazer na interface gráfica.
+
+No começo, o mais importante é se sentir confortável com o processo — e as interfaces gráficas ajudam muito nisso.
+
+## Dica 3. Busque materiais de estudos interessantes para você
+
+Existem muitos materiais disponíveis para aprender Git e GitHub, mas eu recomendo usar materiais que sejam adaptados para a sua área!
+
+A seguir, deixei uma lista de alguns materiais:
+
+
+- [Introdução ao controle de versão com Git e GitHub](https://ipeadata-lab.github.io/curso_r_intermediario_202501/git-github.html) - material feito por mim. Esse material é muito útil para quem usa R e RStudio, mas também apresenta muitas coisas que podem ser feitas na interface web do GitHub!
+
+- [Introducción a GitHub para Investigador(a|e)s](https://git4researchers-latinr2024.netlify.app/) - material em espanhol feito por mim e [Yanina Bellini Saibene](https://www.linkedin.com/in/yabellini/). Esse material é voltado para pesquisadores e pesquisadoras, e tudo que é mostrado é na interface web do GitHub.
+
+- [Escola de dados - Introdução ao Git e GitHub: colaborando com projetos de código aberto](https://escoladedados.org/tutoriais/introducao-ao-git-e-github-colaborando-com-projetos-de-codigo-aberto/) - tutorial por [Anicely Santos](https://www.linkedin.com/in/anicelysantos/?originalSubdomain=br), usando a interface de linha de comando.
+
+- [Introdução ao Git e GitHub](https://youtube.com/playlist?list=PLvlkVRRKOYFQyKmdrassLNxkzSMM6tcSL&si=IRh0GXOmQO9rhQ0m) - playlist de vídeos, onde o [Téo Calvo](https://www.linkedin.com/in/teocalvo/) ensina a usar o Git e o GitHub usando a interface de linha de comando.
+
+## Conclusão
+
+Se você gostou deste post, você pode me acompanhar nas seguintes plataformas:
+
+-   [Neste blog, principalmente na aba "talks and teaching"](https://beamilz.com/content)
+
+-   [Youtube](https://www.youtube.com/@beamilz/featured) 
+
+-   [GitHub](https://github.com/beatrizmilz)
+
+-   [Instagram](https://www.instagram.com/bea.milz)
