@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Bea Milz – Beatriz Milz</title>
+<meta name="author" content="Beatriz Milz">
+<title>Dicas para começar a usar Git e GitHub para não-programadoras(es) – Beatriz Milz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,30 +20,26 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-afd67fbe48cce8d5592433faf1065499.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
-<link href="../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-afd67fbe48cce8d5592433faf1065499.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -71,87 +65,20 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
   }
-}</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts-es .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts-es'] = new List('listing-posts-es', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
+</script><style>html{ scroll-behavior: smooth; }</style>
 </head>
-
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
   </div>
@@ -161,235 +88,167 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item dropdown ">
+<li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">About</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">    
-        <li>
-    <a class="dropdown-item" href="../about.html">
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about">
+<li>
+    <a class="dropdown-item" href="../../../about.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../about-pt.html">
+    <a class="dropdown-item" href="../../../about-pt.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../about-es.html">
+    <a class="dropdown-item" href="../../../about-es.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-posts" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Posts</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">    
-        <li>
-    <a class="dropdown-item" href="../posts/index.html">
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-posts">
+<li>
+    <a class="dropdown-item" href="../../../posts/index.html">
  <span class="dropdown-text">All posts</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../posts/en.html">
+    <a class="dropdown-item" href="../../../posts/en.html">
  <span class="dropdown-text">English</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../posts/pt.html">
+    <a class="dropdown-item" href="../../../posts/pt.html">
  <span class="dropdown-text">Português</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../posts/es.html">
+    <a class="dropdown-item" href="../../../posts/es.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
-    <a class="nav-link" href="../content.html"> 
+    <a class="nav-link" href="../../../content.html"> 
 <span class="menu-text">Talks and teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../videos/index.html"> 
+    <a class="nav-link" href="../../../videos/index.html"> 
 <span class="menu-text">Videos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> 
+    <a class="nav-link" href="../../../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-other" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Other</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-other">    
-        <li>
-    <a class="dropdown-item" href="../research/index.html">
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-other">
+<li>
+    <a class="dropdown-item" href="../../../research/index.html">
  <span class="dropdown-text">Research (PT-BR)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../quarto.html">
+    <a class="dropdown-item" href="../../../quarto.html">
  <span class="dropdown-text">Quarto Gallery</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/blog-en"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Dicas para começar a usar Git e GitHub para não-programadoras(es)</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Dicas</div>
+                <div class="quarto-category">Git</div>
+                <div class="quarto-category">GitHub</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autor</div>
+      <div class="quarto-title-meta-contents">
+               <p>Beatriz Milz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">24 de junho de 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Nesta página</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#posts-en-español" id="toc-posts-en-español" class="nav-link active" data-scroll-target="#posts-en-español">Posts en Español</a></li>
-  </ul>
-</nav>
+<li><a href="#introdu%C3%A7%C3%A3o" id="toc-introdução" class="nav-link active" data-scroll-target="#introdu%C3%A7%C3%A3o">Introdução</a></li>
+  <li><a href="#dica-1.-entender-o-motivo-de-usar-git-e-github" id="toc-dica-1.-entender-o-motivo-de-usar-git-e-github" class="nav-link" data-scroll-target="#dica-1.-entender-o-motivo-de-usar-git-e-github">Dica 1. Entender o motivo de usar Git e GitHub</a></li>
+  <li><a href="#dica-2.-comece-por-interfaces-mais-amig%C3%A1veis" id="toc-dica-2.-comece-por-interfaces-mais-amigáveis" class="nav-link" data-scroll-target="#dica-2.-comece-por-interfaces-mais-amig%C3%A1veis">Dica 2. Comece por interfaces mais amigáveis</a></li>
+  <li><a href="#dica-3.-busque-materiais-de-estudos-interessantes-para-voc%C3%AA" id="toc-dica-3.-busque-materiais-de-estudos-interessantes-para-você" class="nav-link" data-scroll-target="#dica-3.-busque-materiais-de-estudos-interessantes-para-voc%C3%AA">Dica 3. Busque materiais de estudos interessantes para você</a></li>
+  <li><a href="#conclus%C3%A3o" id="toc-conclusão" class="nav-link" data-scroll-target="#conclus%C3%A3o">Conclusão</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Bea Milz</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="posts-en-español" class="level2">
-<h2 class="anchored" data-anchor-id="posts-en-español">Posts en Español</h2>
-<div id="listing-posts-es" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-posts-es-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-posts-es'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Ordenar por</option>
-      <option value="index" data-direction="asc">Pré-selecionado</option>
-      <option value="listing-title" data-direction="asc">
-        Título
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Data - Mais velho
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Data - O mais novo
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Autor
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filtro">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R2l0SHViJTJDQ2FycmVyYSUyQ0NvbnNlam9zJTJDRXNwYSVDMyVCMW9s" data-listing-date-sort="1727049600000" data-listing-file-modified-sort="1750777040128" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1031">
-<div class="thumbnail"><a href="../posts/2024-09-23-repost-stars/es/index.html" class="no-external">
-
-<img loading="lazy" src="../posts/2024-09-23-repost-stars/es/images/stars.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/2024-09-23-repost-stars/es/index.html" class="no-external">Repost: Estrellas de GitHub brasileñas comparten consejos sobre cómo comenzar una carrera en programación</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/2024-09-23-repost-stars/es/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">GitHub</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2FycmVyYQ=='); return false;">Carrera</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29uc2Vqb3M='); return false;">Consejos</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RXNwYSVDMyVCMW9s'); return false;">Español</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="../posts/2024-09-23-repost-stars/es/index.html" class="no-external">
-<div class="listing-date">
-23 de set. de 2024
-</div>
-<div class="listing-author">
-Redacción IMasters
-</div>
-<div class="listing-reading-time">6 minutos</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="R2l0JTJDR2l0SHViJTJDR2l0SHViJTIwQWN0aW9ucyUyQ0F1dG9tYXRpb25z" data-listing-date-sort="1656547200000" data-listing-file-modified-sort="1750777040181" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1058">
-<div class="thumbnail"><a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html" class="no-external">
-
-<img loading="lazy" src="../posts/series-gha/2022-series-gha-1-what-is/es/featured.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html" class="no-external">Introducción a GitHub Actions para usuarias de R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html" class="no-external">Serie GitHub Actions - 1 - En esta publicación, presentaré brevemente GitHub Actions y le mostraré cómo puede comenzar a usar GitHub Actions con R.</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0'); return false;">Git</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">GitHub</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHViJTIwQWN0aW9ucw=='); return false;">GitHub Actions</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QXV0b21hdGlvbnM='); return false;">Automations</div>
-
-</div>
-</div>
-<div class="metadata">
-<a href="../posts/series-gha/2022-series-gha-1-what-is/es/index.html" class="no-external">
-<div class="listing-date">
-30 de jun. de 2022
-</div>
-<div class="listing-author">
-Beatriz Milz
-</div>
-<div class="listing-reading-time">6 minutos</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">Nenhum item correspondente</div>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p><a href="../../../posts/2025-06-24-dicas-git-github/pt/index.html"> <button type="button" class="btn btn-primary">Português</button></a></p>
+<section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>Olá! Meu nome é <a href="https://beamilz.com/about-pt">Beatriz Milz</a>, e neste texto quero compartilhar algumas dicas para quem quer começar a usar <a href="https://git-scm.com/downloads">Git</a> e <a href="https://github.com/">GitHub</a>. O foco deste texto é em pessoas que não necessariamente são programadoras(es), mas que querem aprender a usar essas ferramentas para gerenciar seus projetos, seja na área acadêmica ou profissional.</p>
+</section><section id="dica-1.-entender-o-motivo-de-usar-git-e-github" class="level2"><h2 class="anchored" data-anchor-id="dica-1.-entender-o-motivo-de-usar-git-e-github">Dica 1. Entender o motivo de usar Git e GitHub</h2>
+<p>Começar a usar Git e GitHub não é fácil, ainda mais quando não temos experiência com programação. A curva de aprendizado pode ser longa… Por isso, eu acredito que é muito importante ter claro desde o início é o motivo pelo qual queremos usar essas ferramentas.</p>
+<p>Para mim, eu comecei o GitHub porque eu encontrava muitos materiais interessantes por lá. Muitas pessoas usam o GitHub para guardar bases de dados, scripts de análise, sites, e por aí vai.</p>
+<p>Depois de um tempo, eu comecei a usar o Git e o GitHub para guardar meus próprios materiais, como os scripts de análise que eu fazia para as minhas pesquisas. E foi assim que eu fui aprendendo a usar o GitHub, aos poucos.</p>
+<p>Com o tempo, e aprendendo mais sobre Git e GitHub, eu passei a usar essas ferramentas também para colaborar com outras pessoas!</p>
+<p>Por isso, acho importante <strong>ter clareza dos seus próprios motivos para usar Git e GitHub</strong>. Você quer buscar materiais e códigos de outras pessoas? Compartilhar um projeto com colegas? Colaborar com outras pessoas? Saber isso desde o início ajuda a persistir no aprendizado!</p>
+</section><section id="dica-2.-comece-por-interfaces-mais-amigáveis" class="level2"><h2 class="anchored" data-anchor-id="dica-2.-comece-por-interfaces-mais-amigáveis">Dica 2. Comece por interfaces mais amigáveis</h2>
+<p>Muitos dos materiais sobre Git focam em mostrar como usar o terminal para executar os comandos do Git. No entanto, eu acho que isso pode ser um pouco intimidante para quem não tem experiência com programação.</p>
+<p>Por isso, eu recomendo começar a usar o Git e o GitHub com interfaces mais amigáveis. Por exemplo, a interface web (ou seja, acessando o GitHub pelo navegador) é uma ótima forma de começar a usar o GitHub. Você pode criar repositórios, fazer upload de arquivos, e até mesmo editar arquivos diretamente na interface web. Muita coisa pode ser feita por lá, principalmente quando estamos começando.</p>
+<p>Outra opção é usar o <a href="https://desktop.github.com/">GitHub Desktop</a>, que é uma interface gráfica para o GitHub. Ele permite que você faça commit, push, pull, e outras operações do Git de forma mais intuitiva.</p>
+<p>Eu uso bastante a interface gráfica do RStudio (pois programo em R) e VS Code, que também possuem uma interface gráfica para usar o Git. Essas interfaces permitem que você faça commit, push, pull, e outras operações do Git de forma mais intuitiva, sem precisar usar o terminal.</p>
+<p>Tem alguns casos em que é necessário usar o terminal (por exemplo, quando preciso resolver conflitos T_T), mas eu acho que isso pode ser deixado para depois, quando você já tiver mais experiência com o Git e o GitHub e realmente precisar fazer alguma tarefa que não consegue fazer na interface gráfica.</p>
+<p>No começo, o mais importante é se sentir confortável com o processo — e as interfaces gráficas ajudam muito nisso.</p>
+</section><section id="dica-3.-busque-materiais-de-estudos-interessantes-para-você" class="level2"><h2 class="anchored" data-anchor-id="dica-3.-busque-materiais-de-estudos-interessantes-para-você">Dica 3. Busque materiais de estudos interessantes para você</h2>
+<p>Existem muitos materiais disponíveis para aprender Git e GitHub, mas eu recomendo usar materiais que sejam adaptados para a sua área!</p>
+<p>A seguir, deixei uma lista de alguns materiais:</p>
+<ul>
+<li><p><a href="https://ipeadata-lab.github.io/curso_r_intermediario_202501/git-github.html">Introdução ao controle de versão com Git e GitHub</a> - material feito por mim. Esse material é muito útil para quem usa R e RStudio, mas também apresenta muitas coisas que podem ser feitas na interface web do GitHub!</p></li>
+<li><p><a href="https://git4researchers-latinr2024.netlify.app/">Introducción a GitHub para Investigador(a|e)s</a> - material em espanhol feito por mim e <a href="https://www.linkedin.com/in/yabellini/">Yanina Bellini Saibene</a>. Esse material é voltado para pesquisadores e pesquisadoras, e tudo que é mostrado é na interface web do GitHub.</p></li>
+<li><p><a href="https://escoladedados.org/tutoriais/introducao-ao-git-e-github-colaborando-com-projetos-de-codigo-aberto/">Escola de dados - Introdução ao Git e GitHub: colaborando com projetos de código aberto</a> - tutorial por <a href="https://www.linkedin.com/in/anicelysantos/?originalSubdomain=br">Anicely Santos</a>, usando a interface de linha de comando.</p></li>
+<li><p><a href="https://youtube.com/playlist?list=PLvlkVRRKOYFQyKmdrassLNxkzSMM6tcSL&amp;si=IRh0GXOmQO9rhQ0m">Introdução ao Git e GitHub</a> - playlist de vídeos, onde o <a href="https://www.linkedin.com/in/teocalvo/">Téo Calvo</a> ensina a usar o Git e o GitHub usando a interface de linha de comando.</p></li>
+</ul></section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>Se você gostou deste post, você pode me acompanhar nas seguintes plataformas:</p>
+<ul>
+<li><p><a href="https://beamilz.com/content">Neste blog, principalmente na aba “talks and teaching”</a></p></li>
+<li><p><a href="https://www.youtube.com/@beamilz/featured">Youtube</a></p></li>
+<li><p><a href="https://github.com/beatrizmilz">GitHub</a></p></li>
+<li><p><a href="https://www.instagram.com/bea.milz">Instagram</a></p></li>
+</ul>
 
 
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -794,10 +653,7 @@ Beatriz Milz
       }
     }
   });
-  </script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="dark">
-<script>
+  </script><input type="hidden" id="giscus-base-theme" value="light"><input type="hidden" id="giscus-alt-theme" value="dark"><script>
   function loadGiscus() {
     // Function to get the theme based on body class
     const getTheme = () => {
@@ -825,8 +681,7 @@ Beatriz Milz
   loadGiscus();
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>Website made with <a href="https://quarto.org/">Quarto</a>, by Beatriz Milz. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</p>
 </div>   
@@ -835,7 +690,7 @@ Beatriz Milz
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="mailto:milz.bea@gmail.com">
       <i class="bi bi-envelope" role="img">
 </i> 
@@ -886,12 +741,10 @@ Beatriz Milz
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
 
 
-
-
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
