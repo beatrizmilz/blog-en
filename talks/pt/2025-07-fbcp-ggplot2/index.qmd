@@ -5,6 +5,7 @@ categories: ["Mini-curso", "tidyverse", "ggplot2", "Português", "Visualização
 date: '2025-07-24'
 event: "IX Fórum Brasileiro de Pós-Graduação em Ciência Política, Universidade de São Paulo (USP)"
 event_url: https://www.instagram.com/fbcp_oficial/
+links:
 - icon: github
   icon_pack: fab
   name: Repositório
