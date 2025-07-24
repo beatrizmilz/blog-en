@@ -3,7 +3,7 @@ toc: true
 author: Beatriz Milz
 categories: ["R",  "English", "teaching", "community"]
 date: '2025-09-18'
-event: "posit::conf(2025)"
+event: "posit::conf(2025) - Atlanta, USA"
 event_url:  https://posit.co/conference/
 links:
 # - icon: images
