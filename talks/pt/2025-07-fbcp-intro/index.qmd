@@ -14,15 +14,6 @@ links:
   icon_pack: far
   name: Material
   url: https://beatrizmilz.github.io/2025-07-fbcp/
-- icon: cloud
-  icon_pack: far
-  name: Posit Cloud
-  url: https://posit.cloud/content/10624450
-# - icon: file
-#   icon_pack: far
-#   name: Scripts
-#   url: https://github.com/beatrizmilz/2024-09-amostra-geobr/blob/main/script.R
-  
 location: "Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo (FFLCH-USP) - São Paulo"
 title: "Introdução ao R para análise de dados"
 image: featured.png
@@ -36,14 +27,13 @@ read_yaml_talks_pt()
 ```
 
 ## Resumo
-Nesta oficina, será apresentado o ambiente de programação R e o IDE RStudio. A oficina é voltada para iniciantes e não é necessário conhecimento prévio de programação. Durante a oficina, serão abordadas tarefas básicas como iniciar um projeto, importar tabelas, realizar filtros, criar tabelas de resumo (com estatísticas descritivas), e exportar resultados. Esta oficina faz parte de uma trilha de treinamentos voltada para iniciantes, fornecendo uma base para quem deseja aprender a analisar dados com R.
 
+Nesta oficina, será apresentado o ambiente de programação R e o IDE RStudio. A oficina é voltada para iniciantes e não é necessário conhecimento prévio de programação. Durante a oficina, serão abordadas tarefas básicas como iniciar um projeto, importar tabelas, realizar filtros, criar tabelas de resumo (com estatísticas descritivas), e exportar resultados. Esta oficina faz parte de uma trilha de treinamentos voltada para iniciantes, fornecendo uma base para quem deseja aprender a analisar dados com R.
 
 ## Bibliografia
 
 Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund. R para Ciência de Dados (2ª edição). Disponível em: https://pt.r4ds.hadley.nz/
 
-
 Athos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Trecenti, Nicole Luduvice, Tereza Lacerda, William Amorim. Ciência de Dados em R. Disponível em: https://livro.curso-r.com/
 
-Beatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira.  Introdução à análise de dados no R - Utilizando dados públicos e registros administrativos brasileiros. Disponível em: https://ipeadata-lab.github.io/curso_r_intro_202409/
+Beatriz Milz, Pedro Cavalcanti Gonçalves Ferreira, Rafael H. M. Pereira. Introdução à análise de dados no R - Utilizando dados públicos e registros administrativos brasileiros. Disponível em: https://ipeadata-lab.github.io/curso_r_intro_202409/
