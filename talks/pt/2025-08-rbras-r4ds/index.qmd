@@ -45,3 +45,15 @@ read_yaml_talks_pt()
 - Clube do livro R-Ladies São Paulo:
   - [Playlist de vídeos](https://youtube.com/playlist?list=PLufjVrrUAoSdAk_I8l_MJRCwS8P_R-isY&si=lROiQeZDJDw-5B6Q)
   - [Material compartilhado](https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing)
+  
+  
+```{r}
+#| eval: false
+#| echo: false
+library(qrcode)
+
+code <- qr_code("https://beamilz.com/talks/pt/2025-08-rbras-r4ds/index.html")
+plot(code)
+generate_svg(code, filename = "qrcode.svg")
+```
+

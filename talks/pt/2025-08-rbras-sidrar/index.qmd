@@ -5,24 +5,15 @@ categories: ["Mini-curso", "Dados abertos", "Português"]
 date: '2025-08-06'
 event: "69ª Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (RBras)"
 event_url: https://69rbras21seagro.com.br/
-# links:
-# - icon: github
-#   icon_pack: fab
-#   name: Repositório
-#   url: https://github.com/beatrizmilz/2024-09-amostra-geobr
-# - icon: images
-#   icon_pack: far
-#   name: Slides
-#   url: https://beatrizmilz.github.io/2024-09-amostra-geobr/
-# - icon: cloud
-#   icon_pack: far
-#   name: Posit Cloud
-#   url: https://posit.cloud/content/8878692 
-# - icon: file
-#   icon_pack: far
-#   name: Scripts
-#   url: https://github.com/beatrizmilz/2024-09-amostra-geobr/blob/main/script.R
-  
+links:
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/beatrizmilz/2025-08-rbras-sidrar
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://beatrizmilz.github.io/2025-08-rbras-sidrar/
 location:  UFES - Vitória-ES
 title: "Obtendo dados do SIDRA/IBGE com R utilizando o pacote SIDRAR"
 image: featured.png
