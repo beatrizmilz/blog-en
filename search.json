@@ -214,7 +214,7 @@
     "href": "talks/pt/2025-08-rbras-r4ds/index.html",
     "title": "Tradução do livro “R for Data Science” (2ª Edição) feita pela comunidade brasileira",
     "section": "",
-    "text": "Evento: 69ª Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (RBras)Link: https://69rbras21seagro.com.br/Lugar: UFES - Vitória-ES"
+    "text": "Evento:"
   },
   {
     "objectID": "talks/pt/2025-08-rbras-r4ds/index.html#links-úteis",
@@ -1530,7 +1530,7 @@
     "href": "teaching/pt/2025-08-cebrap-lab-intro-R/index.html",
     "title": "Introdução ao R",
     "section": "",
-    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições \n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
+    "text": "Evento: cebrap.lab onlineLink: https://cebrap.org.br/cebrap-lab/Lugar: Online\nMateriais\n\n\n Inscrições  Material  GitHub \n\nA linguagem de programação R é utilizada para organização, análise e apresentação de dados. O curso apresentará a linguagem R e o ambiente de desenvolvimento (IDE) RStudio. Serão apresentados conceitos usando R base, e então falaremos em como fazer algumas tarefas usando o pacote tidyverse, como: importar uma tabela para o R, exportar uma tabela para o computador, selecionar colunas, filtrar linhas, ordenar uma base de dados, transformar variáveis, obter sumarização por grupos, obter estatísticas descritivas, entre outros. O curso tem como público alvo pessoas que tenham interesse em utilizar R para análise de dados. Todas as ferramentas utilizadas são gratuitas."
   },
   {
     "objectID": "teaching/pt/cursor-pacotes/index.html",
