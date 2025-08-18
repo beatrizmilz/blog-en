@@ -5,15 +5,15 @@ categories: ["Pôster", "Livro", "Português", "Comunidade", "Tradução"]
 date: '2025-08-06'
 event: "69ª Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (RBras)"
 event_url: https://69rbras21seagro.com.br/
-# links:
+links:
 # - icon: github
 #   icon_pack: fab
 #   name: Repositório
 #   url: https://github.com/beatrizmilz/2024-09-amostra-geobr
-# - icon: images
-#   icon_pack: far
-#   name: Slides
-#   url: https://beatrizmilz.github.io/2024-09-amostra-geobr/
+- icon: images
+  icon_pack: far
+  name: Poster
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/pt/2025-08-rbras-r4ds/poster.pdf
 # - icon: cloud
 #   icon_pack: far
 #   name: Posit Cloud
@@ -22,7 +22,6 @@ event_url: https://69rbras21seagro.com.br/
 #   icon_pack: far
 #   name: Scripts
 #   url: https://github.com/beatrizmilz/2024-09-amostra-geobr/blob/main/script.R
-  
 location:  UFES - Vitória-ES
 title: "Tradução do livro “R for Data Science”
 (2ª Edição) feita pela comunidade brasileira"
@@ -38,15 +37,15 @@ read_yaml_talks_pt()
 
 ## Links úteis
 
-- [Livro R para Ciência de Dados](https://pt.r4ds.hadley.nz/)
+-   [Livro R para Ciência de Dados](https://pt.r4ds.hadley.nz/)
 
-- [Pacote `{dados}`](https://cienciadedatos.github.io/dados/)
+-   [Pacote `{dados}`](https://cienciadedatos.github.io/dados/)
 
-- Clube do livro R-Ladies São Paulo:
-  - [Playlist de vídeos](https://youtube.com/playlist?list=PLufjVrrUAoSdAk_I8l_MJRCwS8P_R-isY&si=lROiQeZDJDw-5B6Q)
-  - [Material compartilhado](https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing)
-  
-  
+-   Clube do livro R-Ladies São Paulo:
+
+    -   [Playlist de vídeos](https://youtube.com/playlist?list=PLufjVrrUAoSdAk_I8l_MJRCwS8P_R-isY&si=lROiQeZDJDw-5B6Q)
+    -   [Material compartilhado](https://docs.google.com/document/d/1xCn5gxK47tj9lRpDovwGNlza9i1FX2VBixo1V7VtUUs/edit?usp=sharing)
+
 ```{r}
 #| eval: false
 #| echo: false
@@ -56,4 +55,3 @@ code <- qr_code("https://beamilz.com/talks/pt/2025-08-rbras-r4ds/index.html")
 plot(code)
 generate_svg(code, filename = "qrcode.svg")
 ```
-
