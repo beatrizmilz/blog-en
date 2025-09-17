@@ -6,10 +6,10 @@ date: '2025-09-18'
 event: "posit::conf(2025) - Atlanta, USA"
 event_url:  https://posit.co/conference/
 links:
-# - icon: images
-#   icon_pack: far
-#   name: Slides
-#   url: https://beatrizmilz.github.io/2024-11-ufabc-intro-r/
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://www.canva.com/design/DAGxLKTfEGQ/KdjPZnDiRJel5nMDfzYolw/view?utm_content=DAGxLKTfEGQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1c33ba24d0
 # - icon: github
 #   icon_pack: fab
 #   name: Repository
