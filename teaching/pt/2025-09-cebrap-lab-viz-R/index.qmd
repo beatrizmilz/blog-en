@@ -11,14 +11,14 @@ links:
   icon_pack: fas
   name: Inscrições
   url: https://cursos.cebrap.org.br/categoria-cursos/cursos/
-# - icon: book
-#   icon_pack: fas
-#   name: Material
-#   url: https://github.com/beatrizmilz/2025-09-cebrap-lab-viz/archive/refs/heads/main.zip
-# - icon: github
-#   icon_pack: fab
-#   name: GitHub
-#   url: https://github.com/beatrizmilz/2025-09-cebrap-lab-viz
+- icon: book
+  icon_pack: fas
+  name: Material
+  url: https://github.com/beatrizmilz/2025-09-cebrap-lab-viz/archive/refs/heads/main.zip
+- icon: github
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/beatrizmilz/2025-09-cebrap-lab-viz
 location: Online
 title: Visualização de dados no R
 image: featured.jpeg
