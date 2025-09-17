@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Como usar senhas sem escreve-las nos scripts – Beatriz Milz</title>
@@ -64,14 +64,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fbf630d530740ebcfd3fb349a7cd1094.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d45c53e4c33b70e014ea5471c354c112.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -113,6 +114,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
@@ -262,19 +265,19 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>Simplificando, as variáveis de ambientes são objetos que são carregados ao iniciar a sessão do R. Então eles ficarão disponíveis para uso, apesar de não aparecer no painel <em>Environment</em> do RStudio.</p>
 <p>Uma forma de saber quais são as nossas variáveis de ambiente é usando a função <code><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv()</a></code> sem argumentos. Atenção, várias variáveis de configuração irão aparecer no output e não recomendo alterá-las.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Expanda para ver o output da função <code><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv()</a></code>
+<span class="screen-reader-only">Cuidado</span>Expanda para ver o output da função <code><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv()</a></code>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <pre><code>__CF_USER_TEXT_ENCODING
                  0x1F5:0x0:0x47
@@ -381,11 +384,11 @@ XPC_SERVICE_NAME
 </div>
 <p>A função <code><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv()</a></code> permite que você salve a senha/token nas variáveis de ambiente. Cuidado, rode essa etapa no console e não salve no script (pois justamente queremos não armazenar as senhas no script, certo?).</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span><span class="op">(</span>MINHA_SENHA <span class="op">=</span> <span class="fl">1234</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span><span class="op">(</span>MINHA_SENHA <span class="op">=</span> <span class="fl">1234</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Para buscar o valor salvo na variável, pode usar a função <code><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv()</a></code>. Essa função podemos usar no nosso script sem problemas!</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span><span class="op">(</span><span class="st">"MINHA_SENHA"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span><span class="op">(</span><span class="st">"MINHA_SENHA"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "1234"</code></pre>
 </div>
@@ -393,7 +396,7 @@ XPC_SERVICE_NAME
 </section><section id="indo-além-com-a-ajuda-do-usethis" class="level2"><h2 class="anchored" data-anchor-id="indo-além-com-a-ajuda-do-usethis">Indo além com a ajuda do usethis</h2>
 <p>As variáveis de ambiente podem ser vinculadas ao <code>.Rproj</code> ativo, ou ao usuário do computador. Elas ficam salvas no arquivo <code>.Renviron</code>. Para abrir o arquivo e ver as variáveis de ambiente salvas, você pode usar a função <code>usethis::edit_r_environ()</code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Abre as variáveis de ambiente para o usuário do computador</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Abre as variáveis de ambiente para o usuário do computador</span></span>
 <span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">edit_r_environ</span><span class="op">(</span>scope <span class="op">=</span> <span class="st">"user"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; • Modify '/Users/beatrizmilz/.Renviron'</span></span>
 <span><span class="co">#&gt; • Restart R for changes to take effect</span></span>
@@ -402,22 +405,22 @@ XPC_SERVICE_NAME
 <span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">edit_r_environ</span><span class="op">(</span>scope <span class="op">=</span> <span class="st">"project"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ✔ Setting active project to '/Users/beatrizmilz/Documents/GitHub/blog-en'</span></span>
 <span><span class="co">#&gt; • Modify '.Renviron'</span></span>
-<span><span class="co">#&gt; • Restart R for changes to take effect</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; • Restart R for changes to take effect</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>O padrão para armazenar variáveis neste arquivo é:</p>
 <pre><code>NOME_VAR='SENHAAQUI12345'</code></pre>
 <p><strong>Atenção!</strong> Depois de alterar o arquivo <code>.Renviron</code>, é necessário reiniciar o R para que as mudanças sejam consideradas. Isso porque esse arquivo é carregado ao iniciar o R.</p>
 <p><strong>Atenção 2</strong>: Caso você use um arquivo <code>.Renviron</code> vinculado ao seu projeto <code>.Rproj</code>, cuidado ao subir esse arquivo para o GitHub, é perigoso pois pessoas poderão ver suas senhas. Se o seu repositório for público, é essencial que você adicione ele no <code>.gitignore</code>, assim ele será ignorado pelo Git. A função <code>usethis::use_git_ignore()</code> pode nos ajudar nisso:</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_git_ignore</span><span class="op">(</span><span class="st">".Renviron"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ✔ Adding '.Renviron' to '.gitignore'</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_git_ignore</span><span class="op">(</span><span class="st">".Renviron"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; ✔ Adding '.Renviron' to '.gitignore'</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="solicitar-a-senha" class="level2"><h2 class="anchored" data-anchor-id="solicitar-a-senha">Solicitar a senha</h2>
 <p>E quando queremos que a pessoa usuária possa sempre escrever a senha? Existe uma função para isso: <code><a href="https://rstudio.github.io/rstudioapi/reference/askForPassword.html">rstudioapi::askForPassword()</a></code>. Podemos inclusive escrever a frase que será mostrada ao perguntar a senha. A senha digitada será retornada como um texto, e podemos salvar em um objeto para utilizar posteriormente no que for necessário.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">senha_informada</span> <span class="op">&lt;-</span> <span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/rstudioapi/reference/askForPassword.html">askForPassword</a></span><span class="op">(</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">senha_informada</span> <span class="op">&lt;-</span> <span class="fu">rstudioapi</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/rstudioapi/reference/askForPassword.html">askForPassword</a></span><span class="op">(</span></span>
 <span>  <span class="st">"Escreva sua senha por favor!"</span></span>
-<span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="askforpassword.png" class="img-fluid figure-img" style="width:90.0%"></p>
@@ -508,13 +511,14 @@ XPC_SERVICE_NAME
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

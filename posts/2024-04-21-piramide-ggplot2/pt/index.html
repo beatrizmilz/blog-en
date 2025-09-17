@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Tutorial: Criando uma pirâmide etária com dados do Censo 2022, usando o R e o pacote ggplot2 – Beatriz Milz</title>
@@ -64,14 +64,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fbf630d530740ebcfd3fb349a7cd1094.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d45c53e4c33b70e014ea5471c354c112.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -113,6 +114,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
@@ -274,8 +277,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>Antes de iniciar, importante agradecer as pessoas da turma, principalmente quem estava na aula e enviou sugestões no chat durante esse exercício!</p>
 <p>Para iniciar, vamos carregar o pacote <code>ggplot2</code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Obs 1: o meu código é cheio do operador <code>::</code>. Caso você não conheça, ele serve para indicar em qual pacote uma função está, por exemplo: <code>pacote::funcao()</code>.</p>
 <p>Obs 2: Neste post, você pode clicar no nome das funções nos códigos, e a página da documentação da função será aberta.</p>
@@ -313,7 +316,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <p>Para fazer esse post, vou fazer o download dos dados para dois municípios do estado de São Paulo: Diadema (o município onde eu nasci) e Osasco (o município onde eu moro atualmente).</p>
 <p>Os arquivos estão em um <code>.zip</code>, que é uma pasta compactada. Precisamos extrair os dados do <code>.zip</code>. Como foram apenas 2 arquivos, realizei isso manualmente, mas caso você precise fazer isso para muitos arquivos, recomendo checar a função <code><a href="https://rdrr.io/r/utils/unzip.html">utils::unzip()</a></code>. Salvei os arquivos na pasta <code>dados</code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="st">"dados"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="st">"dados"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>dados/Censo 2022 - Características dos domicílios - Diadema (SP).csv
 dados/Censo 2022 - Características dos domicílios - Osasco (SP).csv
@@ -334,8 +337,8 @@ dados/Censo 2022 - Território - Osasco (SP).csv</code></pre>
 <p>Para ler os arquivos (no nosso caso, 2 arquivos, mas funcionaria com mais), precisamos de um vetor com os caminhos (um texto que indica ao computador onde os arquivos estão guardados) e também uma função para ler esses arquivos.</p>
 <p>Vamos primeiro criar um vetor com os caminhos:</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arquivos_piramide</span> <span class="op">&lt;-</span> <span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="st">"dados"</span>, regexp <span class="op">=</span> <span class="st">"Pirâmide"</span><span class="op">)</span></span>
-<span><span class="va">arquivos_piramide</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arquivos_piramide</span> <span class="op">&lt;-</span> <span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span><span class="op">(</span><span class="st">"dados"</span>, regexp <span class="op">=</span> <span class="st">"Pirâmide"</span><span class="op">)</span></span>
+<span><span class="va">arquivos_piramide</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>dados/Censo 2022 - Pirâmide etária - Diadema (SP).csv
 dados/Censo 2022 - Pirâmide etária - Osasco (SP).csv</code></pre>
@@ -344,13 +347,13 @@ dados/Censo 2022 - Pirâmide etária - Osasco (SP).csv</code></pre>
 <p>Para ler os arquivos, podemos usar a função <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv2()</a></code>, que permite ler arquivos CSV cujo separador seja o ponto-e-vírgula.</p>
 <p>Sabendo como importar um arquivos, podemos usar a função <code><a href="https://purrr.tidyverse.org/reference/map.html">purrr::map()</a></code> para aplicar a função <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv2()</a></code> em todos os arquivos do vetor que criamos anteriormente (que chamamos de <code>arquivos_piramide</code>). Vamos empilhar os dados em uma única tabela utilizando a função <code><a href="https://purrr.tidyverse.org/reference/list_c.html">purrr::list_rbind()</a></code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_brutos</span> <span class="op">&lt;-</span> <span class="va">arquivos_piramide</span> <span class="op">|&gt;</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_brutos</span> <span class="op">&lt;-</span> <span class="va">arquivos_piramide</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="fu">readr</span><span class="fu">::</span><span class="va"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/list_c.html">list_rbind</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/list_c.html">list_rbind</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Espiando os dados importados, para descobrir quais variáveis temos:</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_brutos</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_brutos</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 42
 Columns: 6
@@ -365,10 +368,10 @@ $ `Código do Município`          &lt;dbl&gt; 3513801, 3513801, 3513801, 351380
 </section><section id="arrumando-os-dados" class="level2"><h2 class="anchored" data-anchor-id="arrumando-os-dados">Arrumando os dados</h2>
 <p>A primeira coisa que eu costumo fazer quando importo uma nova base de dados é padronizar os nomes. Para isso, eu gosto muito da função <code><a href="https://sfirke.github.io/janitor/reference/clean_names.html">janitor::clean_names()</a></code>. Isso facilita muito para escrever o nome das variáveis ao longo do código e evita erros de encoding:</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_nomes_limpos</span> <span class="op">&lt;-</span> <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="va">dados_brutos</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_nomes_limpos</span> <span class="op">&lt;-</span> <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="va">dados_brutos</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_nomes_limpos</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_nomes_limpos</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 42
 Columns: 6
@@ -383,7 +386,7 @@ $ codigo_do_municipio         &lt;dbl&gt; 3513801, 3513801, 3513801, 3513801, 35
 <p>Boa!!</p>
 <p>Será que deu certo e temos dados dos dois municípios? Podemos conferir:</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">dados_nomes_limpos</span><span class="op">$</span><span class="va">municipio</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">dados_nomes_limpos</span><span class="op">$</span><span class="va">municipio</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Diadema" "Osasco" </code></pre>
 </div>
@@ -490,16 +493,16 @@ $ codigo_do_municipio         &lt;dbl&gt; 3513801, 3513801, 3513801, 3513801, 35
 </div>
 <p>Usando a função <code><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">tidyr::pivot_longer()</a></code>, indicamos quais são as colunas que vamos utilizar para a “pivotagem”. Depois, eu renomeio as variáveis para ficar fácil de entender o que cada coluna representa.</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo</span> <span class="op">&lt;-</span> <span class="va">dados_nomes_limpos</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo</span> <span class="op">&lt;-</span> <span class="va">dados_nomes_limpos</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
 <span>    <span class="st">"populacao_feminina_pessoas"</span>,</span>
 <span>    <span class="st">"populacao_masculina_pessoas"</span></span>
 <span>  <span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>populacao <span class="op">=</span> <span class="va">value</span>, sexo <span class="op">=</span> <span class="va">name</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>populacao <span class="op">=</span> <span class="va">value</span>, sexo <span class="op">=</span> <span class="va">name</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Agora temos a coluna de sexo e população separadas, e a tabela também ficou com o dobro de linhas!</p>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_piramide_longo</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">dados_piramide_longo</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 84
 Columns: 6
@@ -515,7 +518,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <p>Vamos para a primeira tentativa de criar um gráfico. Já aviso: não vai dar certo, pois a base ainda não está pronta!</p>
 <p>Por enquanto, vamos usar apenas os dados de Osasco:</p>
 <div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo</span> <span class="op">|&gt;</span></span>
 <span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># Iniciando o ggplot</span></span>
@@ -523,7 +526,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade</span>, x <span class="op">=</span> <span class="va">populacao</span>, fill <span class="op">=</span> <span class="va">sexo</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="co"># Qual é a geometria?</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="index_files/figure-html/grafico-1-1.png" class="img-fluid figure-img" width="672"></p>
@@ -550,17 +553,17 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <li><p>Quando o valor da variável <code>sexo</code> for igual á <code>"populacao_feminina_pessoas"</code>, queremos manter o valor original para população.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_2</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_2</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
 <span>    pop <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
 <span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_masculina_pessoas"</span> <span class="op">~</span> <span class="va">populacao</span> <span class="op">*</span> <span class="op">-</span><span class="fl">1</span>,</span>
 <span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_feminina_pessoas"</span> <span class="op">~</span> <span class="va">populacao</span></span>
 <span>    <span class="op">)</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Criando o gráfico com essa versão da tabela:</p>
 <div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_2</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_2</span> <span class="op">|&gt;</span></span>
 <span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># Iniciando o ggplot</span></span>
@@ -568,7 +571,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade</span>, x <span class="op">=</span> <span class="va">pop</span>, fill <span class="op">=</span> <span class="va">sexo</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="co"># Qual é a geometria?</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="index_files/figure-html/grafico-2-1.png" class="img-fluid figure-img" width="672"></p>
@@ -581,7 +584,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 </h3>
 <p>Por padrão, categorias são representadas no ggplot2 em ordem alfabética. Para arrumar isso, precisamos transformar a variável <code>grupo_de_idade</code> em um fator, e declarar a ordem das categorias:</p>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_3</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo_2</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_3</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo_2</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
 <span>    grupo_de_idade_fct <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span></span>
 <span>    <span class="va">grupo_de_idade</span>,</span>
@@ -608,11 +611,11 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <span>      <span class="st">"95 a 99 anos"</span>,</span>
 <span>      <span class="st">"100 anos ou mais"</span></span>
 <span>    <span class="op">)</span></span>
-<span>  <span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Criando o gráfico com essa versão da tabela:</p>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_3</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_3</span> <span class="op">|&gt;</span></span>
 <span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># Iniciando o ggplot</span></span>
@@ -620,7 +623,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade_fct</span>, x <span class="op">=</span> <span class="va">pop</span>, fill <span class="op">=</span> <span class="va">sexo</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="co"># Qual é a geometria?</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="index_files/figure-html/grafico-3-1.png" class="img-fluid figure-img" width="672"></p>
@@ -633,18 +636,18 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 </h3>
 <p>Os valores da variável <code>sexo</code> estão com o texto completo do nome das colunas que elas foram extraídas. Podemos arrumar com a função <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">dplyr::case_when()</a></code>, com um procedimento similar ao que fizemos no ponto 1:</p>
 <div class="cell">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo_3</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo_3</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
 <span>    sexo_renomeado <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
 <span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_masculina_pessoas"</span> <span class="op">~</span> <span class="st">"Masculino"</span>,</span>
 <span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_feminina_pessoas"</span> <span class="op">~</span> <span class="st">"Feminino"</span></span>
 <span>    <span class="op">)</span>,</span>
 <span>    sexo_renomeado <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">sexo_renomeado</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Masculino"</span>, <span class="st">"Feminino"</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Criando o gráfico com essa versão da tabela:</p>
 <div class="cell">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">|&gt;</span></span>
 <span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># Iniciando o ggplot</span></span>
@@ -652,7 +655,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">grupo_de_idade_fct</span>, x <span class="op">=</span> <span class="va">pop</span>, fill <span class="op">=</span> <span class="va">sexo_renomeado</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="co"># Qual é a geometria?</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="index_files/figure-html/grafico-4-1.png" class="img-fluid figure-img" width="672"></p>
@@ -668,7 +671,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <li><p>Vamos deixar mais bonito? Colocar os textos, mudar o tema, etc…</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">|&gt;</span></span>
 <span>  <span class="co"># Filtrando apenas dados para o município de Osasco</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">municipio</span> <span class="op">==</span> <span class="st">"Osasco"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># Iniciando o ggplot</span></span>
@@ -693,7 +696,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <span>    fill <span class="op">=</span> <span class="st">"Sexo"</span>,</span>
 <span>    title <span class="op">=</span> <span class="st">"Pirâmide etária - Osasco - 2022"</span>,</span>
 <span>    caption <span class="op">=</span> <span class="st">"Fonte: Censo demográfico 2022, realizado pelo IBGE. Gráfico elaborado por Beatriz Milz."</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="index_files/figure-html/grafico-5-1.png" class="img-fluid figure-img" width="672"></p>
@@ -705,7 +708,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <p>Para ver os dados dos dois municípios, podemos usar a função <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap()</a></code> do ggplot2!</p>
 <p>Porém, como a população desses municípios é bem diferente, para facilitar a visualização da diferença na pirâmide, o melhor é “liberar” as escalas do eixo X (usando o argumento <code>scales = "free_x"</code>). Isso é um pouco perigoso, pois os valores do eixo X ficam diferentes, e as pessoas precisam prestar mais atenção quando for comparar. Porém, se a gente não fizer isso, a pirâmide de Diadema fica “esmagada”, por ter uma população menor.</p>
 <div class="cell">
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">|&gt;</span></span>
 <span>  <span class="co"># Iniciando o ggplot</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="co"># Quais são as variáveis que queremos mapear?</span></span>
@@ -732,7 +735,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
 <span>    legend.position <span class="op">=</span> <span class="st">"bottom"</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="index_files/figure-html/grafico-6-1.png" class="img-fluid figure-img" width="672"></p>
@@ -799,13 +802,14 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

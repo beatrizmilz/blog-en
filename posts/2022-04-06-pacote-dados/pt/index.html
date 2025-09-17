@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Pacote dados: bases em português para praticar e ensinar – Beatriz Milz</title>
@@ -64,14 +64,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fbf630d530740ebcfd3fb349a7cd1094.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d45c53e4c33b70e014ea5471c354c112.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -113,6 +114,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
@@ -292,7 +295,7 @@ Dica
 <li><p>Colaborar com a diminuição da lacuna linguística em materiais usados no ensino e prática de R.</p></li>
 </ul>
 <p>O pacote está <strong>disponível no CRAN</strong> e pode ser instalado utilizando o seguinte código:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"dados"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"dados"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Para que as bases fiquem disponíveis, utilize a função <code><a href="https://github.com/cienciadedatos/dados">library(dados)</a></code> ou use com <code>dados::nome_da_base</code>.</p>
 <p>Todas as bases possuem a documentação traduzida também. Você pode conferir na aba Help, usando <code>?dados::nome_da_base</code> ou conferindo <a href="https://cienciadedatos.github.io/dados/reference/index.html">na documentação online do pacote</a>.</p>
 <p>Existem bases bem legais disponíveis, como:</p>
@@ -311,7 +314,7 @@ Dica
 </div>
 <p>Espie a base por aqui:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="fu">dados</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/dados/man/dados_starwars.html">dados_starwars</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="fu">dados</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/dados/man/dados_starwars.html">dados_starwars</a></span><span class="op">)</span></span>
 <span><span class="co">## Rows: 87</span></span>
 <span><span class="co">## Columns: 14</span></span>
 <span><span class="co">## $ nome            &lt;chr&gt; "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Le…</span></span>
@@ -327,7 +330,7 @@ Dica
 <span><span class="co">## $ especie         &lt;chr&gt; "Humano", "Droide", "Droide", "Humano", "Humano", "Hum…</span></span>
 <span><span class="co">## $ filmes          &lt;list&gt; &lt;"The Empire Strikes Back", "Revenge of the Sith", "R…</span></span>
 <span><span class="co">## $ veiculos        &lt;list&gt; &lt;"Snowspeeder", "Imperial Speeder Bike"&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;,…</span></span>
-<span><span class="co">## $ naves_espaciais &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&gt;, "TIE Advanced…</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ naves_espaciais &lt;list&gt; &lt;"X-wing", "Imperial shuttle"&gt;, &lt;&gt;, &lt;&gt;, "TIE Advanced…</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="pinguins" class="level3"><h3 class="anchored" data-anchor-id="pinguins">Pinguins</h3>
 <p><img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/logo.png" align="right" width="100px"></p>
@@ -335,7 +338,7 @@ Dica
 <p>Algo muito legal são as <a href="https://allisonhorst.github.io/palmerpenguins/articles/examples.html">vignettes do pacote original</a>, que apresentam tutoriais sobre como fazer visualizações interessantes com os dados. Que tal experimentar recriá-las utilizando os dados em português?</p>
 <p>Espie a base por aqui:</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="fu">dados</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/dados/man/pinguins.html">pinguins</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="fu">dados</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/dados/man/pinguins.html">pinguins</a></span><span class="op">)</span></span>
 <span><span class="co">## Rows: 344</span></span>
 <span><span class="co">## Columns: 8</span></span>
 <span><span class="co">## $ especie               &lt;fct&gt; Pinguim-de-adélia, Pinguim-de-adélia, Pinguim-de…</span></span>
@@ -345,7 +348,7 @@ Dica
 <span><span class="co">## $ comprimento_nadadeira &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190,…</span></span>
 <span><span class="co">## $ massa_corporal        &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 34…</span></span>
 <span><span class="co">## $ sexo                  &lt;fct&gt; macho, fêmea, fêmea, NA, fêmea, macho, fêmea, ma…</span></span>
-<span><span class="co">## $ ano                   &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ ano                   &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, …</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="filmes-da-pixar" class="level3"><h3 class="anchored" data-anchor-id="filmes-da-pixar">Filmes da Pixar</h3>
 <p><img src="https://erictleung.com/pixarfilms/reference/figures/logo.png" align="right" width="100px"></p>
@@ -353,7 +356,7 @@ Dica
 <p>O post ‘Pixar: Uma História de dados’, foi escrito por Fernando Barbalho, e publicado no Blog da Escola de Dados, utilizando os dados deste pacote. <a href="https://beatrizmilz.com/blog/2021-07-01-pixar-uma-historia-de-dados/">No meu blog há uma versão do post com os códigos para gerar todas as visualizações</a>.</p>
 <p>Espie as bases por aqui:</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="fu">dados</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/dados/man/pixar_filmes.html">pixar_filmes</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="fu">dados</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/dados/man/pixar_filmes.html">pixar_filmes</a></span><span class="op">)</span></span>
 <span><span class="co">## Rows: 27</span></span>
 <span><span class="co">## Columns: 5</span></span>
 <span><span class="co">## $ ordem_lancamento         &lt;chr&gt; "1", "2", "3", "4", "5", "6", "7", "8", "9", …</span></span>
@@ -393,7 +396,7 @@ Dica
 <span><span class="co">## Columns: 3</span></span>
 <span><span class="co">## $ filme                &lt;chr&gt; "Toy Story - Um Mundo de Aventuras", "Toy Story -…</span></span>
 <span><span class="co">## $ tipo_premio_indicado &lt;chr&gt; "Melhor Filme de Animação", "Melhor Roteiro Origi…</span></span>
-<span><span class="co">## $ resultado            &lt;chr&gt; "Prêmio ainda não introduzido", "Nomeado", "Inele…</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ resultado            &lt;chr&gt; "Prêmio ainda não introduzido", "Nomeado", "Inele…</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section><section id="todas-as-bases-disponíveis" class="level2"><h2 class="anchored" data-anchor-id="todas-as-bases-disponíveis">Todas as bases disponíveis</h2>
 <p>Veja o nome e a descrição de todas as bases disponíveis:</p>
@@ -630,13 +633,14 @@ Dica
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

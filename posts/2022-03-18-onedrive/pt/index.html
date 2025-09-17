@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Acessando dados do seu One Drive com R – Beatriz Milz</title>
@@ -64,14 +64,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fbf630d530740ebcfd3fb349a7cd1094.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d45c53e4c33b70e014ea5471c354c112.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -113,6 +114,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
@@ -273,29 +276,29 @@ Dica
 <p>Recentemente, escrevi um <a href="https://blog.curso-r.com/posts/2022-03-08-googlesheets4/">post sobre como é possível acessar dados do Google Sheets com R</a>, além de importar respostas do Google Forms. Algumas pessoas comentaram que utilizam o One Drive, e perguntaram como funcionaria para importar tabelas que estão por lá. Como eu não uso One Drive, dei uma explorada para responder, e neste post falarei um pouco sobre como podemos importar dados que estão na conta do One Drive usando o pacote <code>Microsoft365R</code>.</p>
 <p>O pacote <a href="https://github.com/Azure/Microsoft365R">Microsoft365R</a> é uma interface para acessar o Microsoft 365, e segundo a documentação do pacote, possui funções para interagir com o Microsoft Teams, Outlook, SharePoint Online, e o <strong>OneDrive</strong> (que é o foco deste post!).</p>
 <p>Primeiramente, é necessário instalar o pacote:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"Microsoft365R"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"Microsoft365R"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Então, podemos carregá-lo:</p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-1_fa92d2b94425bfd452f0ac8d77af227d">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Carregar pacote Microsoft365R</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Azure/Microsoft365R">Microsoft365R</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Carregar pacote Microsoft365R</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Azure/Microsoft365R">Microsoft365R</a></span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Ao carregar o pacote pela primeira vez, a seguinte mensagem aparecerá, dizendo que é possível armazenar as credenciais em uma pasta chamada <code>AzureR</code> e perguntando se permitimos que o pacote crie esse diretório. Eu aceitei respondendo com <code>Yes</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>The AzureR packages can save your authentication credentials <span class="cf">in</span> the directory<span class="sc">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>The AzureR packages can save your authentication credentials <span class="cf">in</span> the directory<span class="sc">:</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="er">~/</span>Library<span class="sc">/</span>Application Support<span class="sc">/</span>AzureR</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>This saves you having to re<span class="sc">-</span>authenticate with Azure <span class="cf">in</span> future sessions.</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Create this directory? (Yes<span class="sc">/</span>no<span class="sc">/</span>cancel) </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Create this directory? (Yes<span class="sc">/</span>no<span class="sc">/</span>cancel) </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Depois de responder com <code>Yes</code>, nada aparentemente acontece, porém o pacote é carregado!</p>
 </section><section id="autenticação" class="level2"><h2 class="anchored" data-anchor-id="autenticação">Autenticação</h2>
 <p>Ao acessar pela primeira vez, o pacote abrirá uma aba do navegador para fazer a autenticação.</p>
 <p>Neste exemplo, usarei a função <code>Microsoft365R::get_personal_onedrive()</code> que explicarei posteriormente. No console do R, aparecerá a seguinte mensagem ao utilizar alguma função pela primeira vez:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Microsoft365R</span><span class="fu">::</span><span class="fu">get_personal_onedrive</span><span class="op">(</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">Microsoft365R</span><span class="fu">::</span><span class="fu">get_personal_onedrive</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co"># Using authorization_code flow</span></span>
 <span><span class="co"># Creating Microsoft Graph login for tenant 'consumers'</span></span>
 <span><span class="co"># Using authorization_code flow</span></span>
 <span><span class="co"># Waiting for authentication in browser...</span></span>
-<span><span class="co"># Press Esc/Ctrl + C to abort</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co"># Press Esc/Ctrl + C to abort</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>O navegador abrirá uma janela para que a autenticação seja feita:</p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-2_e788fda4b2efa3a2f405c656e6fc90cb">
 <div class="cell-output-display">
@@ -308,16 +311,16 @@ Dica
 <p>Após fazer a autenticação, a seguinte mensagem aparecerá no navegador:</p>
 <pre><code>Authenticated with Azure Active Directory. Please close this page and return to R.</code></pre>
 <p>Isso significa que podemos fechar a aba do navegador e retornar ao R. No console do R, aparecerá a seguinte mensagem:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Authentication complete.</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Authentication complete.</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </section><section id="acesso-de-conta-pessoal-ou-de-trabalho" class="level2"><h2 class="anchored" data-anchor-id="acesso-de-conta-pessoal-ou-de-trabalho">Acesso de conta pessoal ou de trabalho?</h2>
 <p>O primeiro passo após autenticar é acessar o One Drive, e a função para fazer isso depende do tipo de acesso da conta: pessoal ou de trabalho. Como o meu acesso é pessoal, vou usar a função <code>get_personal_onedrive()</code>. Mas caso o seu acesso seja de trabalho, utilize a função <code>get_business_onedrive()</code>. É necessário executar a função e salvar o resultado em um objeto.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">onedrive_da_bea</span> <span class="op">&lt;-</span>  <span class="fu">Microsoft365R</span><span class="fu">::</span><span class="fu">get_personal_onedrive</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">onedrive_da_bea</span> <span class="op">&lt;-</span>  <span class="fu">Microsoft365R</span><span class="fu">::</span><span class="fu">get_personal_onedrive</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Agora a forma de interagir com o pacote é um pouco diferente de como usamos na maior parte das vezes. Isso porque o pacote utiliza objetos que são da classe <code>R6</code>, e que permitem utilizar métodos. O foco deste post não é explicar o que são as classes R6, e escrevi este post pensando em ser útil para pessoas que também não conhecem as classes R6. Caso você tenha interesse em saber mais, deixei alguns links de referência no final do post.</p>
 <p>Para conferir a classe desse objeto, podemos usar a função <code><a href="https://rdrr.io/r/base/class.html">class()</a></code>:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">onedrive_da_bea</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "ms_drive"  "ms_object" "R6"  </span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">onedrive_da_bea</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "ms_drive"  "ms_object" "R6"  </span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Ao executar apenas o objeto, o console apresenta os métodos possíveis:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">drive_da_bea</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">drive_da_bea</span></span>
 <span></span>
 <span><span class="co">#&gt; &lt;Personal OneDrive of Beatriz Milz&gt;</span></span>
 <span><span class="co">#&gt;   directory id: df5a76afb6532845 </span></span>
@@ -329,31 +332,31 @@ Dica
 <span><span class="co">#&gt;     list_files, list_items, list_shared_files,</span></span>
 <span><span class="co">#&gt;     list_shared_items, open_item,</span></span>
 <span><span class="co">#&gt;     set_item_properties, sync_fields, update,</span></span>
-<span><span class="co">#&gt;     upload_file</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt;     upload_file</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Sabendo o nome dos métodos, podemos usá-los usando o seguinte padrão: <code>nome_do_objeto$nome_do_metodo()</code>! Existem vários métodos, e vamos explorar os métodos relacionados à importação. Mas caso você use bastante o One Drive no seu dia-a-dia, recomendo experimentar os outros métodos, como os que servem para manipular arquivos (como criar, atualizar, deletar)!</p>
 </section><section id="navegar-nos-arquivos-do-drive" class="level2"><h2 class="anchored" data-anchor-id="navegar-nos-arquivos-do-drive">Navegar nos arquivos do Drive</h2>
 <p>Para conseguir importar um arquivo, é necessário primeiramente encontrar o caminho até este arquivo. E isso funciona de forma similar aos caminhos que já conhecemos nos nossos projetos! Vamos usar o método <code>list_files()</code> para listar os arquivos presentes na pasta inicial do meu OneDrive. Como eu raramente uso ele, criei uma pasta de exemplo chamada <code>pasta_de_exemplo</code>, e dentro dela criei um arquivo Excel chamado <code>pinguins</code>. Veja que apareceu apenas a pasta, e não o conteúdo que ela armazena:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">onedrive_da_bea</span><span class="op">$</span><span class="fu">list_files</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">onedrive_da_bea</span><span class="op">$</span><span class="fu">list_files</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">#&gt; Rows: 1</span></span>
 <span><span class="co">#&gt; Columns: 4</span></span>
 <span><span class="co">#&gt; $ name  &lt;chr&gt; "pasta_de_exemplo"</span></span>
 <span><span class="co">#&gt; $ size  &lt;int&gt; 23041</span></span>
 <span><span class="co">#&gt; $ isdir &lt;lgl&gt; TRUE</span></span>
-<span><span class="co">#&gt; $ id    &lt;chr&gt; "DF5A76AFB6532845!4368"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; $ id    &lt;chr&gt; "DF5A76AFB6532845!4368"</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Para ver os arquivos que estão dentro da pasta (e encontrar o excel <code>pinguins</code>), podemos usar o mesmo método utilizado acima, e informar o nome da pasta que queremos listar os arquivos.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">onedrive_da_bea</span><span class="op">$</span><span class="fu">list_files</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"pasta_de_exemplo/"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">onedrive_da_bea</span><span class="op">$</span><span class="fu">list_files</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"pasta_de_exemplo/"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">#&gt; Rows: 1</span></span>
 <span><span class="co">#&gt; Columns: 4</span></span>
 <span><span class="co">#&gt; $ name  &lt;chr&gt; "pinguins.xlsx"</span></span>
 <span><span class="co">#&gt; $ size  &lt;int&gt; 23041</span></span>
 <span><span class="co">#&gt; $ isdir &lt;lgl&gt; FALSE</span></span>
-<span><span class="co">#&gt; $ id    &lt;chr&gt; "DF5A76AFB6532845!4369"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt; $ id    &lt;chr&gt; "DF5A76AFB6532845!4369"</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </section><section id="importar-o-arquivo" class="level2"><h2 class="anchored" data-anchor-id="importar-o-arquivo">Importar o arquivo</h2>
 <p>Eu ainda não encontrei um método que permita ler o conteúdo de um Excel diretamente do OneDrive para o R (como fazemos com o Google Drive). Olhando nas <a href="https://github.com/Azure/Microsoft365R">issues do GitHub</a>, parece que essa funcionalidade ainda não foi implementada até o momento, e algumas pessoas inclusive sugeriram melhorias neste sentido.</p>
 <p>A forma que encontrei para importar um Excel do Ondrive foi fazer o download do arquivo Excel que está no Ondrive, e depois importar o arquivo salvo localmente. Para fazer o download e abrir um arquivo Excel, podemos usar o método <code>download_file()</code> para baixar o arquivo, e então a função <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code> para importar o arquivo:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># baixar o arquivo</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># baixar o arquivo</span></span>
 <span><span class="va">onedrive_da_bea</span><span class="op">$</span><span class="fu">download_file</span><span class="op">(</span><span class="st">"pasta_de_exemplo/pinguins.xlsx"</span>, </span>
 <span>                              dest <span class="op">=</span> <span class="st">"pinguins_onedrive.xlsx"</span><span class="op">)</span></span>
 <span></span>
@@ -369,9 +372,9 @@ Dica
 <span><span class="co">#&gt;  $ comprimento_nadadeira &lt;dbl&gt; 181, 186, 195, NA, 193, 190, 181, 19…</span></span>
 <span><span class="co">#&gt;  $ massa_corporal        &lt;dbl&gt; 3750, 3800, 3250, NA, 3450, 3650, 36…</span></span>
 <span><span class="co">#&gt;  $ sexo                  &lt;chr&gt; "macho", "fêmea", "fêmea", NA, "fême…</span></span>
-<span><span class="co">#&gt;  $ ano                   &lt;dbl&gt; 2007, 2007, 2007, 2007, 2007, 2007, …</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#&gt;  $ ano                   &lt;dbl&gt; 2007, 2007, 2007, 2007, 2007, 2007, …</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Caso queira abrir o arquivo no navegador (para ver, compartilhar ou coisas similares), use o método <code>open_item()</code>, informando o caminho até o arquivo:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">onedrive_da_bea</span><span class="op">$</span><span class="fu">open_item</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"pasta_de_exemplo/pinguins.xlsx"</span><span class="op">)</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">onedrive_da_bea</span><span class="op">$</span><span class="fu">open_item</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"pasta_de_exemplo/pinguins.xlsx"</span><span class="op">)</span> </span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
 <p>Espero que este post seja útil para quem usa o One Drive também. Também espero que o pacote seja aprimorado para conseguir importar os dados sem que seja necessário baixá-los.</p>
 <p>Caso você encontre algum método melhor para importar os dados, <a href="https://discourse.curso-r.com/">conta pra gente</a>!</p>
@@ -442,13 +445,14 @@ Dica
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

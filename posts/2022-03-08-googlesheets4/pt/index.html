@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Acessando dados do Google Sheets com R – Beatriz Milz</title>
@@ -64,14 +64,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fbf630d530740ebcfd3fb349a7cd1094.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d45c53e4c33b70e014ea5471c354c112.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -113,6 +114,8 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
@@ -273,11 +276,11 @@ Dica
 <section id="introdução" class="level2"><h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
 <p>O <a href="https://docs.google.com/spreadsheets/u/0/">Google Sheets</a> é um editor de planilhas da Google, que funciona vinculado ao Google Drive (ou seja, os arquivos ficam na nuvem). O pacote <a href="https://googlesheets4.tidyverse.org/">googlesheets4</a> permite interagir com o Google Sheets através do R. Neste post, vamos mostrar alguns exemplos sobre como podemos importar dados usando o pacote <code>googlesheets4</code>.</p>
 <p>Primeiramente, é necessário instalar o pacote:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"googlesheets4"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"googlesheets4"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Então, podemos carregá-lo:</p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-1_416f200bdb52fece3b11f214d45acf2e">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Carregar pacote googlesheets4</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org">googlesheets4</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Carregar pacote googlesheets4</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org">googlesheets4</a></span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Neste exemplo, usaremos a tabela da <a href="https://cran.r-project.org/web/packages/gapminder/README.html">base de dados Gapminder</a>, que apresenta algumas informações por país e ano, como a população total, expectativa de vida ao nascer e o PIB per capita.</p>
 <p>Para importar uma tabela que está no Google Sheets, primeiramente precisamos identificá-la para que o R saiba qual arquivo queremos abrir. Uma forma de fazer isso é usando a <em>URL</em> (ou <em>Uniform Resource Locator</em>), que é também conhecido como <em>o link que usamos no navegador</em>.</p>
@@ -292,18 +295,18 @@ Dica
 <p>Um exemplo de url é o seguinte, e ele encaminha para <a href="https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077">essa tabela</a>.</p>
 <pre><code>https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077</code></pre>
 <p>Sabendo a URL da planilha, podemos salvar em um objeto no R para facilitar o uso!</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># salvar a url/link da planilha que queremos acessar</span></span>
-<span><span class="va">url_planilha</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># salvar a url/link da planilha que queremos acessar</span></span>
+<span><span class="va">url_planilha</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077"</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="autenticação" class="level3"><h3 class="anchored" data-anchor-id="autenticação">Autenticação</h3>
 <p>Para evitar que alguém que não tem acesso a uma Google Sheet consiga ler a mesma sem permissão, o pacote nos direciona para fazer uma autenticação com uma conta do Google. Esse direcionamento é feito quando usamos alguma função que necessita de autenticação pela primeira vez, e a cada sessão do R (ou seja, sempre que reiniciar), o R perguntará novamente com qual email do Google gostaríamos de autenticar.</p>
 <p>Exemplo: No meu caso, eu já autentiquei anteriormente, então ele apresenta os emails já autenticados.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">respostas_formulario</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">respostas_formulario</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span>
 <span><span class="co"># → The googlesheets4 package is requesting access to your Google account</span></span>
 <span><span class="co">#   Select a pre-authorised account or enter '0' to obtain a new token</span></span>
 <span><span class="co">#   Press Esc/Ctrl + C to cancel</span></span>
 <span><span class="co"># </span></span>
 <span><span class="co"># 1: bmilz@curso-r.com</span></span>
-<span><span class="co"># 2: milz.bea@gmail.com</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co"># 2: milz.bea@gmail.com</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Para fazer uma nova autenticação, basta escolher a opção <code>0</code>, e uma janela do navegador abrirá para fazer a autenticação:</p>
 <div class="cell" data-layout-align="center" data-hash="index_cache/html/unnamed-chunk-3_e73f6dbb46814a483d869b8d41d560d2">
 <div class="cell-output-display">
@@ -330,7 +333,7 @@ Dica
 </section><section id="função-sheet_properties" class="level3"><h3 class="anchored" data-anchor-id="função-sheet_properties">Função <code>sheet_properties()</code>
 </h3>
 <p>A função <code><a href="https://googlesheets4.tidyverse.org/reference/sheet_properties.html">sheet_properties()</a></code> permite ver quais abas (chamaremos muitas vezes de <em>sheets</em>, pois é a forma usada no pacote) estão disponíveis na tabela:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># ver as propriedades da planilha (conseguimos descobrir quais sheets </span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># ver as propriedades da planilha (conseguimos descobrir quais sheets </span></span>
 <span><span class="co"># estão disponíveis)</span></span>
 <span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/sheet_properties.html">sheet_properties</a></span><span class="op">(</span><span class="va">url_planilha</span><span class="op">)</span></span>
 <span><span class="co">## # A tibble: 5 × 8</span></span>
@@ -340,13 +343,13 @@ Dica
 <span><span class="co">## 2 Americas     1   45759261 GRID  TRUE          301            6 &lt;NULL&gt;</span></span>
 <span><span class="co">## 3 Asia         2 1984823455 GRID  TRUE          397            6 &lt;NULL&gt;</span></span>
 <span><span class="co">## 4 Europe       3 1503562052 GRID  TRUE          361            6 &lt;NULL&gt;</span></span>
-<span><span class="co">## 5 Oceania      4 1796776040 GRID  TRUE           25            6 &lt;NULL&gt;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## 5 Oceania      4 1796776040 GRID  TRUE           25            6 &lt;NULL&gt;</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Com isso, sabemos que a tabela que informamos tem 5 abas, sendo elas: Africa, Americas, Asia, Europe e Oceania.</p>
 </section><section id="função-read_sheet" class="level3"><h3 class="anchored" data-anchor-id="função-read_sheet">Função <code>read_sheet()</code>
 </h3>
 <p>A função mais útil (na minha opinião) do pacote é a que usamos para ler os dados: <code><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet()</a></code>!</p>
 <p>Se usarmos essa função sem nenhum argumento além do <em>url</em> da planilha, por padrão a primeira sheet será importada. Como vimos no resultado da função <code><a href="https://googlesheets4.tidyverse.org/reference/sheet_properties.html">sheet_properties()</a></code>, a primeira aba da base contém os dados dos países que estão no continente Africano. Então os dados que serão importados são referentes à este continente:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">planilha</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url_planilha</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">planilha</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url_planilha</span><span class="op">)</span></span>
 <span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">planilha</span><span class="op">)</span></span>
 <span><span class="co">## Rows: 624</span></span>
 <span><span class="co">## Columns: 6</span></span>
@@ -355,9 +358,9 @@ Dica
 <span><span class="co">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
 <span><span class="co">## $ lifeExp   &lt;dbl&gt; 43.077, 45.685, 48.303, 51.407, 54.518, 58.014, 61.368, 65.7…</span></span>
 <span><span class="co">## $ pop       &lt;dbl&gt; 9279525, 10270856, 11000948, 12760499, 14760787, 17152804, 2…</span></span>
-<span><span class="co">## $ gdpPercap &lt;dbl&gt; 2449.0082, 3013.9760, 2550.8169, 3246.9918, 4182.6638, 4910.…</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ gdpPercap &lt;dbl&gt; 2449.0082, 3013.9760, 2550.8169, 3246.9918, 4182.6638, 4910.…</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Podemos também usar o argumento <code>sheet =</code> para especificar qual aba queremos importar. Podemos fazer a busca pela posição (ou seja, informando um número), ou pelo nome da aba:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># abrir uma sheet específica: pela posição</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># abrir uma sheet específica: pela posição</span></span>
 <span><span class="va">planilha_sheet_3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url_planilha</span>, sheet <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
 <span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">planilha_sheet_3</span><span class="op">)</span></span>
 <span><span class="co">## Rows: 396</span></span>
@@ -379,9 +382,9 @@ Dica
 <span><span class="co">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
 <span><span class="co">## $ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.8…</span></span>
 <span><span class="co">## $ pop       &lt;dbl&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 12…</span></span>
-<span><span class="co">## $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, …</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, …</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Como todas as tabelas da base tem a mesma estrutura, podemos usar o pacote <a href="https://purrr.tidyverse.org/reference/map.html">purrr</a> para importar todas as abas de uma vez:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># a função sheet_names permite buscar apenas o nome das abas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># a função sheet_names permite buscar apenas o nome das abas</span></span>
 <span><span class="va">nome_abas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/sheet_properties.html">sheet_names</a></span><span class="op">(</span><span class="va">url_planilha</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># com o purrr, podemos abrir todas as abas de uma vez!</span></span>
@@ -396,7 +399,7 @@ Dica
 <span><span class="co">## $ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, …</span></span>
 <span><span class="co">## $ lifeExp   &lt;dbl&gt; 43.077, 45.685, 48.303, 51.407, 54.518, 58.014, 61.368, 65.7…</span></span>
 <span><span class="co">## $ pop       &lt;dbl&gt; 9279525, 10270856, 11000948, 12760499, 14760787, 17152804, 2…</span></span>
-<span><span class="co">## $ gdpPercap &lt;dbl&gt; 2449.0082, 3013.9760, 2550.8169, 3246.9918, 4182.6638, 4910.…</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## $ gdpPercap &lt;dbl&gt; 2449.0082, 3013.9760, 2550.8169, 3246.9918, 4182.6638, 4910.…</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </section><section id="outras-funções" class="level3"><h3 class="anchored" data-anchor-id="outras-funções">Outras funções</h3>
 <p>Esse pacote tem muitas outras funções que interagem com o Googles Sheets, mas que não fazem parte do escopo deste post, como criar uma nova aba e escrever dados em uma aba. Essas funções também são muito úteis!</p>
 </section><section id="e-o-google-forms" class="level3"><h3 class="anchored" data-anchor-id="e-o-google-forms">E o Google Forms?</h3>
@@ -438,7 +441,7 @@ Dica
 </div>
 </div>
 <p>Cada coluna terá informações de uma pergunta do formulário. Inicialmente, a base terá 0 linhas, pois quando criamos o formulário ele tem 0 respostas. Porém, após alguém responder o formulário, a Google Sheet é automaticamente atualizada e apresentará a resposta. Podemos importar os dados usando a função <code><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet()</a></code>, como mostrado anteriormente:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">url</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ch3aMraacwhNo1sU4Z9b54nWYG8gdl18UfLJMzquL8s/"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">url</span> <span class="op">&lt;-</span> <span class="st">"https://docs.google.com/spreadsheets/d/1Ch3aMraacwhNo1sU4Z9b54nWYG8gdl18UfLJMzquL8s/"</span></span>
 <span></span>
 <span><span class="va">respostas_formulario</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span>
 <span></span>
@@ -446,7 +449,7 @@ Dica
 <span><span class="co">## # A tibble: 1 × 2</span></span>
 <span><span class="co">##   `Carimbo de data/hora` `Pergunta sem título`</span></span>
 <span><span class="co">##   &lt;dttm&gt;                 &lt;chr&gt;                </span></span>
-<span><span class="co">## 1 2022-03-08 21:29:01    Opção 1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## 1 2022-03-08 21:29:01    Opção 1</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <p>É isso! Dúvidas, sugestões e críticas, mande aqui nos comentários. <strong>Postem também quais funções do pacote vocês gostariam de saber mais!!</strong></p>
 <p>Até a próxima!</p>
 </section></section><section id="referências" class="level2"><h2 class="anchored" data-anchor-id="referências">Referências</h2>
@@ -508,13 +511,14 @@ Dica
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
