@@ -1,11 +1,13 @@
 ---
 draft: false
 toc: true
-author: Beatriz Milz
-categories: ["Tutorial","Python", "Quarto", "Português", "Reprodutibilidade"]
-date: '2025-10-22'
-event: "Python Brasil"
-event_url: https://2025.pythonbrasil.org.br/
+author: 
+  - Beatriz Milz
+  - Olavo Amaral
+categories: ["Workshop", "Ciência Aberta", "Quarto", "Português", "Reprodutibilidade"]
+date: '2025-10-19'
+event: "Coda.BR 2025"
+event_url: https://escoladedados.org/coda/coda2025/
 # links:
 # - icon: github
 #   icon_pack: fab
@@ -25,7 +27,7 @@ event_url: https://2025.pythonbrasil.org.br/
 #   url: https://github.com/beatrizmilz/2024-09-amostra-geobr/blob/main/script.R
 
 location:  São Paulo, SP
-title: "Documentos reprodutíveis com Quarto"
+title: "Boas práticas em ciência aberta e reprodutível"
 image: featured.png
 ---
 
@@ -36,4 +38,3 @@ source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
 
-Neste tutorial, conheceremos o Quarto (quarto.org), uma ferramenta Open Source para escrita e publicação técnica e científica. Recomendado para pessoas que utilizam Python para análise de dados.
