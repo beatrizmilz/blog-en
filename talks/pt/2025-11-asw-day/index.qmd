@@ -1,0 +1,51 @@
+---
+draft: false
+toc: true
+author: Beatriz Milz
+categories: ["Palestra", "Português", "Open Source", "Comunidade", "Código Aberto"]
+date: '2025-11-08'
+event: "Aaron Swartz Day Presidente Prudente - ASW Day PP"
+event_url: https://asw.teomewhy.org/
+# links:
+# - icon: github
+#   icon_pack: fab
+#   name: Repositório
+#   url: https://github.com/beatrizmilz/2024-09-amostra-geobr
+# - icon: images
+#   icon_pack: far
+#   name: Slides
+#   url: https://beatrizmilz.github.io/2024-09-amostra-geobr/
+# - icon: cloud
+#   icon_pack: far
+#   name: Posit Cloud
+#   url: https://posit.cloud/content/8878692 
+# - icon: file
+#   icon_pack: far
+#   name: Scripts
+#   url: https://github.com/beatrizmilz/2024-09-amostra-geobr/blob/main/script.R
+
+location:  Presidente Prudente, SP
+title: "Diferentes formas de contribuir com Open Source"
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+**Resumo:** O objetivo da palestra é mostrar que colaborar com projetos
+de código aberto vai muito além de ter pull requests aceitos. A apresentação traz
+exemplos reais, em iniciativas como tradução, divulgação, ensino, e
+oferece ideias para que qualquer pessoa, com qualquer nível de
+experiência em programação, possa dar o primeiro passo e contribuir com a
+comunidade.
+
+**Mini bio:** Beatriz Milz é doutora em Ciência Ambiental e faz estágio
+pós-doutoral na UFABC. É GitHub Star, coordenadora da tradução
+colaborativa do livro R for Data Science para o português,
+co-organizadora do R-Ladies São Paulo e editora de revisão de software
+na rOpenSci, uma organização que realiza a avaliação por pares de
+pacotes open source com foco científico.
