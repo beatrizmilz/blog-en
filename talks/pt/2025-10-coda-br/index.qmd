@@ -8,23 +8,15 @@ categories: ["Workshop", "Ciência Aberta", "Quarto", "Português", "Reprodutibi
 date: '2025-10-19'
 event: "Coda.BR 2025"
 event_url: https://escoladedados.org/coda/coda2025/
-# links:
-# - icon: github
-#   icon_pack: fab
-#   name: Repositório
-#   url: https://github.com/beatrizmilz/2024-09-amostra-geobr
-# - icon: images
-#   icon_pack: far
-#   name: Slides
-#   url: https://beatrizmilz.github.io/2024-09-amostra-geobr/
-# - icon: cloud
-#   icon_pack: far
-#   name: Posit Cloud
-#   url: https://posit.cloud/content/8878692 
-# - icon: file
-#   icon_pack: far
-#   name: Scripts
-#   url: https://github.com/beatrizmilz/2024-09-amostra-geobr/blob/main/script.R
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://docs.google.com/presentation/d/1ygv_DRflWbkua8O8xILGzsfVtxAxWy5wvVFdvae1VsE/edit?usp=sharing
+- icon: file
+  icon_pack: far
+  name: Material suplementar
+  url: https://docs.google.com/document/d/1DlOfpZBR6fNnyuQd2NoJGfnXSndVjLYZaBBX5-XRRyY/edit?usp=sharing
 
 location:  São Paulo, SP
 title: "Boas práticas em ciência aberta e reprodutível"
@@ -37,4 +29,3 @@ image: featured.png
 source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
-
