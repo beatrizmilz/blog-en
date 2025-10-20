@@ -12,11 +12,11 @@ links:
 - icon: images
   icon_pack: far
   name: Slides
-  url: https://docs.google.com/presentation/d/1ygv_DRflWbkua8O8xILGzsfVtxAxWy5wvVFdvae1VsE/edit?usp=sharing
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/pt/2025-10-coda-br/slides.pdf
 - icon: file
   icon_pack: far
   name: Material suplementar
-  url: https://docs.google.com/document/d/1DlOfpZBR6fNnyuQd2NoJGfnXSndVjLYZaBBX5-XRRyY/edit?usp=sharing
+  url: https://github.com/beatrizmilz/blog-en/blob/main/talks/pt/2025-10-coda-br/material-suplementar.pdf
 
 location:  São Paulo, SP
 title: "Boas práticas em ciência aberta e reprodutível"

@@ -4,6 +4,7 @@
 # Blog-en
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 In this repository you can find the code used to generate my blog (in
@@ -16,5 +17,5 @@ more info on how to create a blog with Quarto in the
 The deploy is made with [Netlify](https://www.netlify.com/), and the
 comments use [giscus](https://giscus.app/).
 
-As by September 23, 2023, this blog has **28 blog posts** and content
-from **63 talks/presentations**.
+As by October 20, 2025, this blog has **37 blog posts** and content from
+**93 talks/presentations**.
