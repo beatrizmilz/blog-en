@@ -18,41 +18,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -246,24 +211,17 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   
 
 
-</header><script src="https://kit.fontawesome.com/1bb720cc6f.js" crossorigin="anonymous"></script><pre><code>Warning in readLines(input_file): incomplete final line found on 'index.qmd'</code></pre>
-<b>Evento: </b>posit::conf(2025) - Atlanta, USA<br><b>Link:</b> <a href="https://posit.co/conference/">https://posit.co/conference/</a><br><b>Lugar: </b>Atlanta, United States<br><h2 class="anchored">
+</header><script src="https://kit.fontawesome.com/1bb720cc6f.js" crossorigin="anonymous"></script><b>Evento: </b>posit::conf(2025) - Atlanta, USA<br><b>Link:</b> <a href="https://posit.co/conference/">https://posit.co/conference/</a><br><b>Lugar: </b>Atlanta, United States<br><h2 class="anchored">
 Materiais
 </h2>
 <br><center>
 <a href="https://pt.r4ds.hadley.nz/" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-brands fa-book"></i> Book</button></a> <a href="https://www.canva.com/design/DAGxLKTfEGQ/KdjPZnDiRJel5nMDfzYolw/view?utm_content=DAGxLKTfEGQ&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=uniquelinks&amp;utlId=h1c33ba24d0" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Slides (Canva)</button></a> <a href="https://github.com/beatrizmilz/blog-en/raw/refs/heads/main/talks/en/2025-posit-conf/slides.pdf" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Slides (PDF)</button></a> <a href="https://youtu.be/yBC8rNvh3Ns?si=Tn7muIfFjJADATBJ" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-bi fa-youtube"></i> Recording</button></a> <br><br><img src="featured.png" class="img-fluid quarto-figure-center" style="max-width:80%"><br>
 </center>
-<p><br></p>
-<p><strong>Abstract:</strong> How can open-source collaboration help make data science more accessible and expand Posit’s global impact? The book “R for Data Science” by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund is a key resource for learning R and the tidyverse. In a collaborative effort, volunteers from the R community translated the second edition into Brazilian Portuguese, making it freely available online. This talk explores the translation journey, the challenges of adapting technical content, and key lessons learned to support future translation teams.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">qrcode_for_slides</span> <span class="op">&lt;-</span> <span class="fu">qrcode</span><span class="fu">::</span><span class="fu">qr_code</span><span class="op">(</span><span class="st">"https://beamilz.com/talks/en/2025-posit-conf/"</span><span class="op">)</span></span>
-<span><span class="fu">qrcode</span><span class="fu">::</span><span class="fu">generate_svg</span><span class="op">(</span><span class="va">qrcode_for_slides</span>, filename <span class="op">=</span> <span class="st">"qr.svg"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">qrcode_for_slides</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<center>
+<br><center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yBC8rNvh3Ns?si=Tn7muIfFjJADATBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
 </center>
+<p><strong>Abstract:</strong> How can open-source collaboration help make data science more accessible and expand Posit’s global impact? The book “R for Data Science” by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund is a key resource for learning R and the tidyverse. In a collaborative effort, volunteers from the R community translated the second edition into Brazilian Portuguese, making it freely available online. This talk explores the translation journey, the challenges of adapting technical content, and key lessons learned to support future translation teams.</p>
 
 
 
