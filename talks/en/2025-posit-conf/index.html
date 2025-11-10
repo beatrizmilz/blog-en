@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-5af1db0388e11ebc5ac98bdd590369d6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-fbb8c73bb08eb44d1beda5c693a0a34a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -246,19 +246,24 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   
 
 
-</header><script src="https://kit.fontawesome.com/1bb720cc6f.js" crossorigin="anonymous"></script><b>Evento: </b>posit::conf(2025) - Atlanta, USA<br><b>Link:</b> <a href="https://posit.co/conference/">https://posit.co/conference/</a><br><b>Lugar: </b>Atlanta, United States<br><h2 class="anchored">
+</header><script src="https://kit.fontawesome.com/1bb720cc6f.js" crossorigin="anonymous"></script><pre><code>Warning in readLines(input_file): incomplete final line found on 'index.qmd'</code></pre>
+<b>Evento: </b>posit::conf(2025) - Atlanta, USA<br><b>Link:</b> <a href="https://posit.co/conference/">https://posit.co/conference/</a><br><b>Lugar: </b>Atlanta, United States<br><h2 class="anchored">
 Materiais
 </h2>
 <br><center>
-<a href="https://pt.r4ds.hadley.nz/" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-brands fa-book"></i> Book</button></a> <a href="https://www.canva.com/design/DAGxLKTfEGQ/KdjPZnDiRJel5nMDfzYolw/view?utm_content=DAGxLKTfEGQ&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=uniquelinks&amp;utlId=h1c33ba24d0" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Slides (Canva)</button></a> <a href="https://github.com/beatrizmilz/blog-en/raw/refs/heads/main/talks/en/2025-posit-conf/slides.pdf" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Slides (PDF)</button></a> <br><br><img src="featured.png" class="img-fluid quarto-figure-center" style="max-width:80%"><br>
+<a href="https://pt.r4ds.hadley.nz/" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-brands fa-book"></i> Book</button></a> <a href="https://www.canva.com/design/DAGxLKTfEGQ/KdjPZnDiRJel5nMDfzYolw/view?utm_content=DAGxLKTfEGQ&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=uniquelinks&amp;utlId=h1c33ba24d0" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Slides (Canva)</button></a> <a href="https://github.com/beatrizmilz/blog-en/raw/refs/heads/main/talks/en/2025-posit-conf/slides.pdf" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-solid fa-images"></i> Slides (PDF)</button></a> <a href="https://youtu.be/yBC8rNvh3Ns?si=Tn7muIfFjJADATBJ" target="_blank" rel="noopener"><button class="btn btn-primary" style="margin: 10px;"><i class="fa-bi fa-youtube"></i> Recording</button></a> <br><br><img src="featured.png" class="img-fluid quarto-figure-center" style="max-width:80%"><br>
 </center>
 <p><br></p>
 <p><strong>Abstract:</strong> How can open-source collaboration help make data science more accessible and expand Posit’s global impact? The book “R for Data Science” by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund is a key resource for learning R and the tidyverse. In a collaborative effort, volunteers from the R community translated the second edition into Brazilian Portuguese, making it freely available online. This talk explores the translation journey, the challenges of adapting technical content, and key lessons learned to support future translation teams.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">qrcode_for_slides</span> <span class="op">&lt;-</span> <span class="fu">qrcode</span><span class="fu">::</span><span class="fu">qr_code</span><span class="op">(</span><span class="st">"https://beamilz.com/talks/en/2025-posit-conf/"</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">qrcode_for_slides</span> <span class="op">&lt;-</span> <span class="fu">qrcode</span><span class="fu">::</span><span class="fu">qr_code</span><span class="op">(</span><span class="st">"https://beamilz.com/talks/en/2025-posit-conf/"</span><span class="op">)</span></span>
 <span><span class="fu">qrcode</span><span class="fu">::</span><span class="fu">generate_svg</span><span class="op">(</span><span class="va">qrcode_for_slides</span>, filename <span class="op">=</span> <span class="st">"qr.svg"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">qrcode_for_slides</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yBC8rNvh3Ns?si=Tn7muIfFjJADATBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</center>
 
 
 
