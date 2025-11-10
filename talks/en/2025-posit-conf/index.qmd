@@ -37,17 +37,18 @@ read_yaml_talks_pt()
 ```
 
 <br>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yBC8rNvh3Ns?si=Tn7muIfFjJADATBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</center>
 
 **Abstract:** How can open-source collaboration help make data science more accessible and expand Posit’s global impact? The book "R for Data Science" by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund is a key resource for learning R and the tidyverse. In a collaborative effort, volunteers from the R community translated the second edition into Brazilian Portuguese, making it freely available online. This talk explores the translation journey, the challenges of adapting technical content, and key lessons learned to support future translation teams.
 
 ```{r}
 #| eval: false
+#| echo: false
 qrcode_for_slides <- qrcode::qr_code("https://beamilz.com/talks/en/2025-posit-conf/")
 qrcode::generate_svg(qrcode_for_slides, filename = "qr.svg")
 plot(qrcode_for_slides)
 ```
 
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yBC8rNvh3Ns?si=Tn7muIfFjJADATBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
-</center>
