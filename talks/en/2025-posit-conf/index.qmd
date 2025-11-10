@@ -18,6 +18,10 @@ links:
   icon_pack: far
   name: Slides (PDF)
   url: https://github.com/beatrizmilz/blog-en/raw/refs/heads/main/talks/en/2025-posit-conf/slides.pdf
+- icon: youtube
+  icon_pack: bi
+  name: Recording
+  url: https://youtu.be/yBC8rNvh3Ns?si=Tn7muIfFjJADATBJ
 location: "Atlanta, United States"
 title: "Translating R for Data Science into Portuguese: A Community-Led Initiative"
 subtitle: "Session: It Takes a Village: Building and Sustaining Communities"
@@ -42,3 +46,8 @@ qrcode_for_slides <- qrcode::qr_code("https://beamilz.com/talks/en/2025-posit-co
 qrcode::generate_svg(qrcode_for_slides, filename = "qr.svg")
 plot(qrcode_for_slides)
 ```
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yBC8rNvh3Ns?si=Tn7muIfFjJADATBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</center>

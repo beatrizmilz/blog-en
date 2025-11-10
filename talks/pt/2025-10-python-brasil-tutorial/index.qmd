@@ -25,7 +25,7 @@ event_url: https://2025.pythonbrasil.org.br/
 #   url: https://github.com/beatrizmilz/2024-09-amostra-geobr/blob/main/script.R
 
 location:  São Paulo, SP
-title: "Documentos reprodutíveis com Quarto"
+title: "Cancelado - Documentos reprodutíveis com Quarto"
 image: featured.png
 ---
 
@@ -35,5 +35,7 @@ image: featured.png
 source(here::here("R/utils.R"))
 read_yaml_talks_pt()
 ```
+
+> Tutorial cancelado por questões de saúde.
 
 Neste tutorial, conheceremos o Quarto (quarto.org), uma ferramenta Open Source para escrita e publicação técnica e científica. Recomendado para pessoas que utilizam Python para análise de dados.
