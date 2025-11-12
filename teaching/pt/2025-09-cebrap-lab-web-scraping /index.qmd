@@ -22,7 +22,7 @@ links:
 location: Online
 title: Raspagem de dados com R
 image: featured.jpeg
-draft: false
+draft: true
 ---
 
 ```{r}

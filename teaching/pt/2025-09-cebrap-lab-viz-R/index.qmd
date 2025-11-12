@@ -22,7 +22,7 @@ links:
 location: Online
 title: Visualização de dados no R
 image: featured.jpeg
-draft: false
+draft: true
 ---
 
 ```{r}

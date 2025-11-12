@@ -18,6 +18,7 @@ links:
 location: Online
 title: Relatórios reprodutíveis com R
 image: featured.png
+draft: true
 ---
 
 ```{r}
