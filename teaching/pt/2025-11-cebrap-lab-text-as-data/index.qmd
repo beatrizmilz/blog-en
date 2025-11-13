@@ -22,7 +22,7 @@ links:
 location: Online
 title: "Análise quantitativa de texto"
 image: featured.jpeg
-draft: false
+draft: true
 ---
 
 ```{r}

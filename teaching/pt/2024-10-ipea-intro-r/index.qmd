@@ -21,6 +21,7 @@ links:
 location: Híbrido
 title: Introdução à análise de dados no R
 image: featured.png
+draft: true
 ---
 
 ```{r}
