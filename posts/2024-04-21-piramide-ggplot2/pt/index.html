@@ -2,11 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.9.37">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Tutorial: Criando uma pirâmide etária com dados do Censo 2022, usando o R e o pacote ggplot2 – Beatriz Milz</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -64,15 +67,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fbb8c73bb08eb44d1beda5c693a0a34a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-5aca28120d00f7785ae67cd0207f9714.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -544,7 +546,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <p>Alguns dos itens acima necessitam ser arrumados no tratamento dos dados, e vamos fazer um por vez, seguindo os pontos acima.</p>
 <section id="formato-da-pirâmide" class="level3"><h3 class="anchored" data-anchor-id="formato-da-pirâmide">1) Formato da pirâmide</h3>
 <ol type="1">
-<li>“As barras não estão formando uma pirâmide. Elas estão acumulando para o mesmo lado!” - Na pirâmide, o “centro” é o valor 0 no eixo x. Portanto, podemos multiplicar os valores de população de um dos sexos por -1, deixando-os negativo. Fiz com a função <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">dplyr::case_when()</a></code>, e a regra usada para cada linha foi:</li>
+<li>“As barras não estão formando uma pirâmide. Elas estão acumulando para o mesmo lado!” - Na pirâmide, o “centro” é o valor 0 no eixo x. Portanto, podemos multiplicar os valores de população de um dos sexos por -1, deixando-os negativo. Fiz com a função <code><a href="https://dplyr.tidyverse.org/reference/case-and-replace-when.html">dplyr::case_when()</a></code>, e a regra usada para cada linha foi:</li>
 </ol>
 <ul>
 <li><p>Quando o valor da variável <code>sexo</code> for igual á <code>"populacao_masculina_pessoas"</code>, queremos que o valor da população seja multiplicado por -1;</p></li>
@@ -553,7 +555,7 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_2</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
-<span>    pop <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>    pop <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/case-and-replace-when.html">case_when</a></span><span class="op">(</span></span>
 <span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_masculina_pessoas"</span> <span class="op">~</span> <span class="va">populacao</span> <span class="op">*</span> <span class="op">-</span><span class="fl">1</span>,</span>
 <span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_feminina_pessoas"</span> <span class="op">~</span> <span class="va">populacao</span></span>
 <span>    <span class="op">)</span></span>
@@ -632,11 +634,11 @@ $ populacao           &lt;dbl&gt; 30, 6, 138, 52, 477, 193, 1136, 536, 2080, 120
 <p>Agora sim, parece o formato mais próximo de uma pirâmide etária (sem aqueles buracos no meio!).</p>
 </section><section id="arrumar-a-variável-sexo" class="level3"><h3 class="anchored" data-anchor-id="arrumar-a-variável-sexo">3) Arrumar a variável <code>sexo</code>
 </h3>
-<p>Os valores da variável <code>sexo</code> estão com o texto completo do nome das colunas que elas foram extraídas. Podemos arrumar com a função <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">dplyr::case_when()</a></code>, com um procedimento similar ao que fizemos no ponto 1:</p>
+<p>Os valores da variável <code>sexo</code> estão com o texto completo do nome das colunas que elas foram extraídas. Podemos arrumar com a função <code><a href="https://dplyr.tidyverse.org/reference/case-and-replace-when.html">dplyr::case_when()</a></code>, com um procedimento similar ao que fizemos no ponto 1:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dados_piramide_longo_4</span> <span class="op">&lt;-</span> <span class="va">dados_piramide_longo_3</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
-<span>    sexo_renomeado <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>    sexo_renomeado <span class="op">=</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/case-and-replace-when.html">case_when</a></span><span class="op">(</span></span>
 <span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_masculina_pessoas"</span> <span class="op">~</span> <span class="st">"Masculino"</span>,</span>
 <span>      <span class="va">sexo</span> <span class="op">==</span> <span class="st">"populacao_feminina_pessoas"</span> <span class="op">~</span> <span class="st">"Feminino"</span></span>
 <span>    <span class="op">)</span>,</span>
