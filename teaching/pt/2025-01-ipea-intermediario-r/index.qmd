@@ -21,7 +21,7 @@ links:
 location: Híbrido
 title: R intermediário e pesquisa reprodutível
 image: featured.png
-draft: true
+draft: false
 ---
 
 ```{r}
