@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta charset="UTF-8">
+<meta name="generator" content="quarto-1.11.9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Beatriz Milz">
 <title>Criando mapas com os pacotes tidyverse e geobr – Beatriz Milz</title>
@@ -10,10 +9,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -86,14 +88,15 @@ div.csl-indent {
 <meta name="quarto:offset" content="../../../">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-5aca28120d00f7785ae67cd0207f9714.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-f321fd5462897ae70693dc4916df9318.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -130,17 +133,16 @@ gtag('js', new Date());
 gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </script><style>html{ scroll-behavior: smooth; }</style>
 </head>
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Saltar para o conteúdo principal</a>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Sítio"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Procurar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -185,6 +187,10 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
     <a class="dropdown-item" href="../../../posts/es.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../../posts/external.html">
+ <span class="dropdown-text">External writing</span></a>
+  </li>  
     </ul>
 </li>
   <li class="nav-item">
@@ -223,6 +229,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
@@ -260,7 +267,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Nesta página</h2>
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active"><h2 id="toc-title">Nesta página</h2>
    
   <ul>
 <li><a href="#dados-utilizados" id="toc-dados-utilizados" class="nav-link active" data-scroll-target="#dados-utilizados">Dados utilizados</a></li>
@@ -282,12 +289,12 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content"><p>Como eu estou meses sem postar nada no blog, resolvi postar um código adaptado, referente a um projeto final que realizei para a disciplina <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/">“FLS6397 - Introdução à Análise de Dados, Programação e Visualização para as Ciências Sociais”</a>. A disciplina ocorreu no primeiro semestre de 2020, na FFLCH/USP (porém devido à pandemia, a maior parte das aulas foi online). Na <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/">página da disciplina</a>, está disponível tutoriais com todo o conteúdo da disciplina, de graça e aberto para todes!</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content" tabindex="-1"><p>Como eu estou meses sem postar nada no blog, resolvi postar um código adaptado, referente a um projeto final que realizei para a disciplina <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/">“FLS6397 - Introdução à Análise de Dados, Programação e Visualização para as Ciências Sociais”</a>. A disciplina ocorreu no primeiro semestre de 2020, na FFLCH/USP (porém devido à pandemia, a maior parte das aulas foi online). Na <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/">página da disciplina</a>, está disponível tutoriais com todo o conteúdo da disciplina, de graça e aberto para todes!</p>
 <p>As instruções para a realização do projeto estão disponíveis na <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/projeto.html">página da disciplina</a>.</p>
 <section id="dados-utilizados" class="level2"><h2 class="anchored" data-anchor-id="dados-utilizados">Dados utilizados</h2>
 <ul>
 <li><p><strong>Dados de Saneamento:</strong> A Companhia Ambiental do Estado de São Paulo (CETESB)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> publica todos os anos o “<a href="https://cetesb.sp.gov.br/aguas-interiores/publicacoes-e-relatorios/">Relatório de Qualidade das Águas Interiores do Estado de São Paulo</a>”. Desde o relatório referente ao ano de 2016, é publicado o <strong>Apêndice C</strong>, que contém <strong>dados de saneamento por município</strong> do Estado de São Paulo. Os arquivos são disponibilizados em arquivo PDF, <a href="https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2018/03/Ap%C3%AAndice-C-Dados-do-saneamento-b%C3%A1sico...-munic%C3%ADpios-paulistas-2016_17-04.pdf">e especificamente para o ano de 2016 é um arquivo PDF que não possibilita copiar as informações</a> (como uma imagem, por exemplo). O relatório mais recente é referente ao ano de <a href="https://cetesb.sp.gov.br/aguas-interiores/wp-content/uploads/sites/12/2019/10/Ap%C3%AAndice-C_Dados-de-Saneamento-por-Munic%C3%ADpio.pdf">2018</a>.</p></li>
-<li><p><strong>Dados shapefile dos municípios:</strong> Foi utilizado o pacote <a href="https://ipeagit.github.io/geobr/">geobr</a> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira e Goncalves 2021</a>)</span>, que possibilita acessar dados espaciais oficiais do Brasil.</p></li>
+<li><p><strong>Dados shapefile dos municípios:</strong> Foi utilizado o pacote <a href="https://ipea.github.io/geobr/">geobr</a> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira e Goncalves 2021</a>)</span>, que possibilita acessar dados espaciais oficiais do Brasil.</p></li>
 </ul>
 <p>Neste post, irei focar em mostrar como abri os dados, e utilizando principalmente o <code>tidyverse</code> <span class="citation" data-cites="tidyverse2019">(<a href="#ref-tidyverse2019" role="doc-biblioref">Wickham et al. 2019</a>)</span> e o pacote <code>geobr</code> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira e Goncalves 2021</a>)</span>, criei mapas com esses dados.</p>
 </section><section id="pacotes-necessários" class="level2"><h2 class="anchored" data-anchor-id="pacotes-necessários">Pacotes necessários</h2>
@@ -295,7 +302,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ipeagit.github.io/geobr/">geobr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ipea.github.io/geobr/">geobr</a></span><span class="op">)</span></span>
 <span><span class="co"># install.packages("pdftables")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://www.github.com/expersso/pdftables">pdftables</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span></span>
@@ -779,7 +786,7 @@ $ corpo_receptor                &lt;chr&gt; "Rio Capivari, Rio Sapucaí-Guaçu e
 ──────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
-<p>O projeto foi realizado com R <span class="citation" data-cites="R-base">(<a href="#ref-R-base" role="doc-biblioref">R Core Team 2021</a>)</span>, e os pacotes: <a href="https://github.com/abjur/abjutils">abjutils</a> <span class="citation" data-cites="R-abjutils">(<a href="#ref-R-abjutils" role="doc-biblioref">Lente e Trecenti 2022</a>)</span>, <a href="https://dplyr.tidyverse.org">dplyr</a> <span class="citation" data-cites="R-dplyr">(<a href="#ref-R-dplyr" role="doc-biblioref">Wickham, François, et al. 2022</a>)</span>, <a href="https://ipeagit.github.io/geobr/">geobr</a> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira e Goncalves 2021</a>)</span>, <a href="https://ggplot2.tidyverse.org">ggplot2</a> <span class="citation" data-cites="R-ggplot2 ggplot22016">(<a href="#ref-R-ggplot2" role="doc-biblioref">Wickham, Chang, et al. 2022</a>; <a href="#ref-ggplot22016" role="doc-biblioref">Wickham 2016</a>)</span>, <a href="https://paleolimbot.github.io/ggspatial/">ggspatial</a> <span class="citation" data-cites="R-ggspatial">(<a href="#ref-R-ggspatial" role="doc-biblioref">Dunnington 2021</a>)</span>, <a href="https://yihui.org/knitr/">knitr</a> <span class="citation" data-cites="R-knitr knitr2015">(<a href="#ref-R-knitr" role="doc-biblioref">Xie 2022</a>, <a href="#ref-knitr2015" role="doc-biblioref">2015</a>)</span>, <a href="https://magrittr.tidyverse.org">magrittr</a> <span class="citation" data-cites="R-magrittr">(<a href="#ref-R-magrittr" role="doc-biblioref">Bache e Wickham 2022</a>)</span>, <a href="https://www.github.com/expersso/pdftables">pdftables</a> <span class="citation" data-cites="R-pdftables">(<a href="#ref-R-pdftables" role="doc-biblioref">Persson 2016</a>)</span>, <a href="https://readr.tidyverse.org">readr</a> <span class="citation" data-cites="R-readr">(<a href="#ref-R-readr" role="doc-biblioref">Wickham, Hester, et al. 2022</a>)</span>, <a href="https://github.com/rstudio/rmarkdown">rmarkdown</a> <span class="citation" data-cites="R-rmarkdown rmarkdown2018">(<a href="#ref-R-rmarkdown" role="doc-biblioref">Allaire et al. 2022</a>; <a href="#ref-rmarkdown2018" role="doc-biblioref">Xie et al. 2018</a>)</span>, <a href="https://r-spatial.github.io/sf/">sf</a> <span class="citation" data-cites="R-sf sf2018">(<a href="#ref-R-sf" role="doc-biblioref">Pebesma 2022</a>, <a href="#ref-sf2018" role="doc-biblioref">2018</a>)</span>, <a href="https://stringr.tidyverse.org">stringr</a> <span class="citation" data-cites="R-stringr">(<a href="#ref-R-stringr" role="doc-biblioref">Wickham 2019</a>)</span>, <a href="https://tibble.tidyverse.org/">tibble</a> <span class="citation" data-cites="R-tibble">(<a href="#ref-R-tibble" role="doc-biblioref">Müller e Wickham 2022</a>)</span>.</p>
+<p>O projeto foi realizado com R <span class="citation" data-cites="R-base">(<a href="#ref-R-base" role="doc-biblioref">R Core Team 2021</a>)</span>, e os pacotes: <a href="https://github.com/abjur/abjutils">abjutils</a> <span class="citation" data-cites="R-abjutils">(<a href="#ref-R-abjutils" role="doc-biblioref">Lente e Trecenti 2022</a>)</span>, <a href="https://dplyr.tidyverse.org">dplyr</a> <span class="citation" data-cites="R-dplyr">(<a href="#ref-R-dplyr" role="doc-biblioref">Wickham, François, et al. 2022</a>)</span>, <a href="https://ipea.github.io/geobr/">geobr</a> <span class="citation" data-cites="R-geobr">(<a href="#ref-R-geobr" role="doc-biblioref">Pereira e Goncalves 2021</a>)</span>, <a href="https://ggplot2.tidyverse.org">ggplot2</a> <span class="citation" data-cites="R-ggplot2 ggplot22016">(<a href="#ref-R-ggplot2" role="doc-biblioref">Wickham, Chang, et al. 2022</a>; <a href="#ref-ggplot22016" role="doc-biblioref">Wickham 2016</a>)</span>, <a href="https://paleolimbot.github.io/ggspatial/">ggspatial</a> <span class="citation" data-cites="R-ggspatial">(<a href="#ref-R-ggspatial" role="doc-biblioref">Dunnington 2021</a>)</span>, <a href="https://yihui.org/knitr/">knitr</a> <span class="citation" data-cites="R-knitr knitr2015">(<a href="#ref-R-knitr" role="doc-biblioref">Xie 2022</a>, <a href="#ref-knitr2015" role="doc-biblioref">2015</a>)</span>, <a href="https://magrittr.tidyverse.org">magrittr</a> <span class="citation" data-cites="R-magrittr">(<a href="#ref-R-magrittr" role="doc-biblioref">Bache e Wickham 2022</a>)</span>, <a href="https://www.github.com/expersso/pdftables">pdftables</a> <span class="citation" data-cites="R-pdftables">(<a href="#ref-R-pdftables" role="doc-biblioref">Persson 2016</a>)</span>, <a href="https://readr.tidyverse.org">readr</a> <span class="citation" data-cites="R-readr">(<a href="#ref-R-readr" role="doc-biblioref">Wickham, Hester, et al. 2022</a>)</span>, <a href="https://github.com/rstudio/rmarkdown">rmarkdown</a> <span class="citation" data-cites="R-rmarkdown rmarkdown2018">(<a href="#ref-R-rmarkdown" role="doc-biblioref">Allaire et al. 2022</a>; <a href="#ref-rmarkdown2018" role="doc-biblioref">Xie et al. 2018</a>)</span>, <a href="https://r-spatial.github.io/sf/">sf</a> <span class="citation" data-cites="R-sf sf2018">(<a href="#ref-R-sf" role="doc-biblioref">Pebesma 2022</a>, <a href="#ref-sf2018" role="doc-biblioref">2018</a>)</span>, <a href="https://stringr.tidyverse.org">stringr</a> <span class="citation" data-cites="R-stringr">(<a href="#ref-R-stringr" role="doc-biblioref">Wickham 2019</a>)</span>, <a href="https://tibble.tidyverse.org/">tibble</a> <span class="citation" data-cites="R-tibble">(<a href="#ref-R-tibble" role="doc-biblioref">Müller e Wickham 2022</a>)</span>.</p>
 </section><section id="muito-obrigada" class="level2"><h2 class="anchored" data-anchor-id="muito-obrigada">Muito obrigada!</h2>
 <ul>
 <li><p>Ao Professor <a href="https://jonnyphillips.github.io/Website/">Jonathan Phillips</a>, pelo oferecimento da disciplina <a href="https://jonnyphillips.github.io/Ciencia_de_Dados/">“FLS6397 - Introdução à Análise de Dados, Programação e Visualização para as Ciências Sociais”</a>, por sua disponibilidade para tirar as dúvidas de todes, disponibilização de todo material da aula na internet de forma aberta e gratuita, e pelo esforço para que a disciplina fosse proveitosa mesmo considerando o contexto de pandemia.</p></li>
@@ -928,11 +935,30 @@ Xie, Yihui, J. J. Allaire, e Garrett Grolemund. 2018. <em>R Markdown: The Defini
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/beamilz\.com\/");
+      const newWindowLabel = "(opens in a new tab)";
+      const newWindowNoteId = "quarto-ext-newwindow-label";
+      // Links reference one hidden label through aria-describedby, so the
+      // announcement never changes their accessible name.
+      var describeNewWindow = (link) => {
+        if (!window.document.getElementById(newWindowNoteId)) {
+          var newWindowNote = window.document.createElement("span");
+          newWindowNote.id = newWindowNoteId;
+          newWindowNote.hidden = true;
+          newWindowNote.textContent = newWindowLabel;
+          window.document.body.appendChild(newWindowNote);
+        }
+        var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(newWindowNoteId)) {
+          describedBy.push(newWindowNoteId);
+          link.setAttribute("aria-describedby", describedBy.join(" "));
+        }
+      }
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -946,10 +972,72 @@ Xie, Yihui, J. J. Allaire, e Garrett Grolemund. 2018. <em>R Markdown: The Defini
             if (link.getAttribute("rel") === null) {
               link.setAttribute("rel", "noopener");
             }
+            describeNewWindow(link);
+          if (!link.classList.contains('no-external-icon')) {
             // default icon
             link.classList.add("external");
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -963,6 +1051,7 @@ Xie, Yihui, J. J. Allaire, e Garrett Grolemund. 2018. <em>R Markdown: The Defini
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -1125,44 +1214,54 @@ Xie, Yihui, J. J. Allaire, e Garrett Grolemund. 2018. <em>R Markdown: The Defini
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -1260,6 +1359,8 @@ Xie, Yihui, J. J. Allaire, e Garrett Grolemund. 2018. <em>R Markdown: The Defini
       }
     }
   });
+  </script><script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Código deslocável","output":"Saída deslocável"};
   </script><input type="hidden" id="giscus-base-theme" value="light"><input type="hidden" id="giscus-alt-theme" value="dark"><script>
   function loadGiscus() {
     // Function to get the theme based on body class

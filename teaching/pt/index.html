@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -37,14 +40,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5aca28120d00f7785ae67cd0207f9714.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f321fd5462897ae70693dc4916df9318.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
@@ -87,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -97,12 +101,6 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2J79YYG9CZ"></script>
 
@@ -116,7 +114,7 @@ gtag('config', 'G-2J79YYG9CZ', { 'anonymize_ip': true});
 <style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -147,19 +145,18 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Saltar para o conteúdo principal</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Sítio">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Beatriz Milz</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Procurar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -204,6 +201,10 @@ window.Quarto = {
     <a class="dropdown-item" href="../../posts/es.html">
  <span class="dropdown-text">Español</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../posts/external.html">
+ <span class="dropdown-text">External writing</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -242,6 +243,7 @@ window.Quarto = {
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -267,9 +269,9 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(21)</span></div><div class="category" data-category="QW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==">Análise de dados <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QW4lQzMlQTFsaXNlJTIwZGUlMjBUZXh0bw==">Análise de Texto <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QVBJ">API <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmlnJTIwRGF0YQ==">Big Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3Vyc28=">Curso <span class="quarto-category-count">(21)</span></div><div class="category" data-category="RGVzZW52b2x2aW1lbnRv">Desenvolvimento <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZHBseXI=">dplyr <span class="quarto-category-count">(7)</span></div><div class="category" data-category="RnVuJUMzJUE3JUMzJUI1ZXM=">Funções <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VvYnI=">geobr <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Z2dwbG90Mg==">ggplot2 <span class="quarto-category-count">(6)</span></div><div class="category" data-category="R2l0SHVi">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bHVicmlkYXRl">lubridate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGFjb3Rlcw==">Pacotes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9ydHVndSVDMyVBQXM=">Português <span class="quarto-category-count">(21)</span></div><div class="category" data-category="cHVycnI=">purrr <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(6)</span></div><div class="category" data-category="UmFzcGFnZW0lMjBkZSUyMGRhZG9z">Raspagem de dados <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVwcm9kdXRpYmlsaWRhZGU=">Reprodutibilidade <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Uk1hcmtkb3du">RMarkdown <span class="quarto-category-count">(5)</span></div><div class="category" data-category="cnZlc3Q=">rvest <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RyaW5ncg==">stringr <span class="quarto-category-count">(4)</span></div><div class="category" data-category="dGlkeXI=">tidyr <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dGlkeXRleHQ=">tidytext <span class="quarto-category-count">(3)</span></div><div class="category" data-category="dGlkeXZlcnNl">tidyverse <span class="quarto-category-count">(15)</span></div><div class="category" data-category="VmlzdWFsaXphJUMzJUE3JUMzJUEzbyUyMGRlJTIwZGFkb3M=">Visualização de dados <span class="quarto-category-count">(4)</span></div><div class="category" data-category="V2ViJTIwU2NyYXBpbmc=">Web Scraping <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(23)</span></div><div class="category" data-category="QW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==">Análise de dados <span class="quarto-category-count">(8)</span></div><div class="category" data-category="QW4lQzMlQTFsaXNlJTIwZGUlMjBUZXh0bw==">Análise de Texto <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QVBJ">API <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QmlnJTIwRGF0YQ==">Big Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3Vyc28=">Curso <span class="quarto-category-count">(22)</span></div><div class="category" data-category="RGVzZW52b2x2aW1lbnRv">Desenvolvimento <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGlzY2lwbGluYQ==">Disciplina <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZHBseXI=">dplyr <span class="quarto-category-count">(7)</span></div><div class="category" data-category="RXN0YXQlQzMlQURzdGljYQ==">Estatística <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RnVuJUMzJUE3JUMzJUI1ZXM=">Funções <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VvYnI=">geobr <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Z2dwbG90Mg==">ggplot2 <span class="quarto-category-count">(6)</span></div><div class="category" data-category="R2l0SHVi">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bHVicmlkYXRl">lubridate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGFjb3Rlcw==">Pacotes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGxhbmVqYW1lbnRvJTIwVGVycml0b3JpYWw=">Planejamento Territorial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9ydHVndSVDMyVBQXM=">Português <span class="quarto-category-count">(23)</span></div><div class="category" data-category="cHVycnI=">purrr <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(6)</span></div><div class="category" data-category="UmFzcGFnZW0lMjBkZSUyMGRhZG9z">Raspagem de dados <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVwcm9kdXRpYmlsaWRhZGU=">Reprodutibilidade <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Uk1hcmtkb3du">RMarkdown <span class="quarto-category-count">(5)</span></div><div class="category" data-category="cnZlc3Q=">rvest <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3RyaW5ncg==">stringr <span class="quarto-category-count">(4)</span></div><div class="category" data-category="dGlkeXI=">tidyr <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dGlkeXRleHQ=">tidytext <span class="quarto-category-count">(3)</span></div><div class="category" data-category="dGlkeXZlcnNl">tidyverse <span class="quarto-category-count">(16)</span></div><div class="category" data-category="VUZBQkM=">UFABC <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VmlzdWFsaXphJUMzJUE3JUMzJUEzbyUyMGRlJTIwZGFkb3M=">Visualização de dados <span class="quarto-category-count">(4)</span></div><div class="category" data-category="V2ViJTIwU2NyYXBpbmc=">Web Scraping <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content" tabindex="-1">
 
 
 
@@ -304,462 +306,440 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwVGV4dG8lMkN0aWR5dGV4dCUyQ3RpZHl2ZXJzZSUyQ3N0cmluZ3I=" data-listing-date-sort="1762732800000" data-listing-file-modified-sort="1777841524651" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="174">
-<div class="thumbnail"><a href="../../teaching/pt/2025-11-cebrap-lab-text-as-data/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="0" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwVGV4dG8lMkN0aWR5dGV4dCUyQ3RpZHl2ZXJzZSUyQ3N0cmluZ3I=" data-listing-date-sort="1762732800000" data-listing-file-modified-sort="1794095338329" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="174">
+<div class="thumbnail"><a href="../../teaching/pt/2025-11-cebrap-lab-text-as-data/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2025-11-cebrap-lab-text-as-data/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2025-11-cebrap-lab-text-as-data/index.html" class="no-external">Análise quantitativa de texto</a>
+<a href="../../teaching/pt/2025-11-cebrap-lab-text-as-data/index.html" class="no-external-icon">Análise quantitativa de texto</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2025-11-cebrap-lab-text-as-data/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2025-11-cebrap-lab-text-as-data/index.html" class="no-external">
+<a href="../../teaching/pt/2025-11-cebrap-lab-text-as-data/index.html" class="no-external-icon">
 <div class="listing-date">
 10 de nov. de 2025
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2dncGxvdDIlMkN0aWR5dmVyc2UlMkNWaXN1YWxpemElQzMlQTclQzMlQTNvJTIwZGUlMjBkYWRvcyUyQ2dlb2Jy" data-listing-date-sort="1757289600000" data-listing-file-modified-sort="1777841524651" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="134">
-<div class="thumbnail"><a href="../../teaching/pt/2025-09-cebrap-lab-viz-R/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="1" data-categories="Q3Vyc28lMkNSYXNwYWdlbSUyMGRlJTIwZGFkb3MlMkNXZWIlMjBTY3JhcGluZyUyQ3RpZHl2ZXJzZSUyQ3J2ZXN0JTJDQVBJJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1759104000000" data-listing-file-modified-sort="1794095338329" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
+<div class="thumbnail"><a href="../../teaching/pt/2025-09-cebrap-lab-web-scraping /index.html" class="no-external-icon">
+
+<img loading="lazy" src="../../teaching/pt/2025-09-cebrap-lab-web-scraping /featured.jpeg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../teaching/pt/2025-09-cebrap-lab-web-scraping /index.html" class="no-external-icon">Raspagem de dados com R</a>
+</h3>
+</div>
+<div class="metadata">
+<a href="../../teaching/pt/2025-09-cebrap-lab-web-scraping /index.html" class="no-external-icon">
+<div class="listing-date">
+29 de set. de 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2dncGxvdDIlMkN0aWR5dmVyc2UlMkNWaXN1YWxpemElQzMlQTclQzMlQTNvJTIwZGUlMjBkYWRvcyUyQ2dlb2Jy" data-listing-date-sort="1757289600000" data-listing-file-modified-sort="1794095338328" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="134">
+<div class="thumbnail"><a href="../../teaching/pt/2025-09-cebrap-lab-viz-R/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2025-09-cebrap-lab-viz-R/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2025-09-cebrap-lab-viz-R/index.html" class="no-external">Visualização de dados no R</a>
+<a href="../../teaching/pt/2025-09-cebrap-lab-viz-R/index.html" class="no-external-icon">Visualização de dados no R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2025-09-cebrap-lab-viz-R/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2025-09-cebrap-lab-viz-R/index.html" class="no-external">
+<a href="../../teaching/pt/2025-09-cebrap-lab-viz-R/index.html" class="no-external-icon">
 <div class="listing-date">
 8 de set. de 2025
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1755475200000" data-listing-file-modified-sort="1777841524651" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
-<div class="thumbnail"><a href="../../teaching/pt/2025-08-cebrap-lab-intro-R/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="3" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1755475200000" data-listing-file-modified-sort="1794095338328" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
+<div class="thumbnail"><a href="../../teaching/pt/2025-08-cebrap-lab-intro-R/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2025-08-cebrap-lab-intro-R/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2025-08-cebrap-lab-intro-R/index.html" class="no-external">Introdução ao R</a>
+<a href="../../teaching/pt/2025-08-cebrap-lab-intro-R/index.html" class="no-external-icon">Introdução ao R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2025-08-cebrap-lab-intro-R/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2025-08-cebrap-lab-intro-R/index.html" class="no-external">
+<a href="../../teaching/pt/2025-08-cebrap-lab-intro-R/index.html" class="no-external-icon">
 <div class="listing-date">
 18 de ago. de 2025
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1F1YXJ0byUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwZGFkb3MlMkN0aWR5dmVyc2UlMkNkcGx5ciUyQ2dncGxvdDIlMkN0aWR5ciUyQ0dpdEh1YiUyQ2x1YnJpZGF0ZSUyQ3B1cnJyJTJDc3RyaW5nciUyQ0JpZyUyMERhdGElMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1777841524649" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="../../teaching/pt/2025-01-ipea-intermediario-r/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="4" data-categories="RGlzY2lwbGluYSUyQ1VGQUJDJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcyUyQ0VzdGF0JUMzJUFEc3RpY2ElMkNQbGFuZWphbWVudG8lMjBUZXJyaXRvcmlhbCUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1748822400000" data-listing-file-modified-sort="1794095338328" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="79">
+<div class="thumbnail"><a href="../../teaching/pt/2025-06-ufabc-analise-dados-pgt/index.html" class="no-external-icon">
+
+<img loading="lazy" src="../../teaching/pt/2025-06-ufabc-analise-dados-pgt/featured.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../teaching/pt/2025-06-ufabc-analise-dados-pgt/index.html" class="no-external-icon">Análise de dados para o Planejamento Territorial</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../teaching/pt/2025-06-ufabc-analise-dados-pgt/index.html" class="no-external-icon">Aulas práticas em R</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../../teaching/pt/2025-06-ufabc-analise-dados-pgt/index.html" class="no-external-icon">
+<div class="listing-date">
+2 de jun. de 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1F1YXJ0byUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwZGFkb3MlMkN0aWR5dmVyc2UlMkNkcGx5ciUyQ2dncGxvdDIlMkN0aWR5ciUyQ0dpdEh1YiUyQ2x1YnJpZGF0ZSUyQ3B1cnJyJTJDc3RyaW5nciUyQ0JpZyUyMERhdGElMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1794095338326" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="../../teaching/pt/2025-01-ipea-intermediario-r/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2025-01-ipea-intermediario-r/featured.png" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2025-01-ipea-intermediario-r/index.html" class="no-external">R intermediário e pesquisa reprodutível</a>
+<a href="../../teaching/pt/2025-01-ipea-intermediario-r/index.html" class="no-external-icon">R intermediário e pesquisa reprodutível</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2025-01-ipea-intermediario-r/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2025-01-ipea-intermediario-r/index.html" class="no-external">
+<a href="../../teaching/pt/2025-01-ipea-intermediario-r/index.html" class="no-external-icon">
 <div class="listing-date">
 20 de jan. de 2025
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1F1YXJ0byUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1736812800000" data-listing-file-modified-sort="1777841524650" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="../../teaching/pt/2025-01-verao-ime-usp-relatorios/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="6" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1F1YXJ0byUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1736812800000" data-listing-file-modified-sort="1794095338327" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="../../teaching/pt/2025-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2025-01-verao-ime-usp-relatorios/featured.png" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2025-01-verao-ime-usp-relatorios/index.html" class="no-external">Relatórios reprodutíveis com R</a>
+<a href="../../teaching/pt/2025-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">Relatórios reprodutíveis com R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2025-01-verao-ime-usp-relatorios/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2025-01-verao-ime-usp-relatorios/index.html" class="no-external">
+<a href="../../teaching/pt/2025-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">
 <div class="listing-date">
 14 de jan. de 2025
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwVGV4dG8lMkN0aWR5dGV4dCUyQ3RpZHl2ZXJzZSUyQ3N0cmluZ3I=" data-listing-date-sort="1731283200000" data-listing-file-modified-sort="1777841524648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
-<div class="thumbnail"><a href="../../teaching/pt/2024-11-cebrap-lab-text-as-data/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="7" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwVGV4dG8lMkN0aWR5dGV4dCUyQ3RpZHl2ZXJzZSUyQ3N0cmluZ3I=" data-listing-date-sort="1731283200000" data-listing-file-modified-sort="1794095338325" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
+<div class="thumbnail"><a href="../../teaching/pt/2024-11-cebrap-lab-text-as-data/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2024-11-cebrap-lab-text-as-data/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2024-11-cebrap-lab-text-as-data/index.html" class="no-external">Análise quantitativa de texto</a>
+<a href="../../teaching/pt/2024-11-cebrap-lab-text-as-data/index.html" class="no-external-icon">Análise quantitativa de texto</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2024-11-cebrap-lab-text-as-data/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2024-11-cebrap-lab-text-as-data/index.html" class="no-external">
+<a href="../../teaching/pt/2024-11-cebrap-lab-text-as-data/index.html" class="no-external-icon">
 <div class="listing-date">
 11 de nov. de 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Q3Vyc28lMkNSYXNwYWdlbSUyMGRlJTIwZGFkb3MlMkNXZWIlMjBTY3JhcGluZyUyQ3RpZHl2ZXJzZSUyQ3J2ZXN0JTJDQVBJJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1729468800000" data-listing-file-modified-sort="1777841524646" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="173">
-<div class="thumbnail"><a href="../../teaching/pt/2024-10-cebrap-lab-web-scraping /index.html" class="no-external">
+<div class="quarto-post image-right" data-index="8" data-categories="Q3Vyc28lMkNSYXNwYWdlbSUyMGRlJTIwZGFkb3MlMkNXZWIlMjBTY3JhcGluZyUyQ3RpZHl2ZXJzZSUyQ3J2ZXN0JTJDQVBJJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1729468800000" data-listing-file-modified-sort="1794095338323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="173">
+<div class="thumbnail"><a href="../../teaching/pt/2024-10-cebrap-lab-web-scraping /index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2024-10-cebrap-lab-web-scraping /featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2024-10-cebrap-lab-web-scraping /index.html" class="no-external">Raspagem de dados com R</a>
+<a href="../../teaching/pt/2024-10-cebrap-lab-web-scraping /index.html" class="no-external-icon">Raspagem de dados com R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2024-10-cebrap-lab-web-scraping /index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2024-10-cebrap-lab-web-scraping /index.html" class="no-external">
+<a href="../../teaching/pt/2024-10-cebrap-lab-web-scraping /index.html" class="no-external-icon">
 <div class="listing-date">
 21 de out. de 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1F1YXJ0byUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwZGFkb3MlMkN0aWR5dmVyc2UlMkNkcGx5ciUyQ2dncGxvdDIlMkN0aWR5ciUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1727740800000" data-listing-file-modified-sort="1777841524648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="../../teaching/pt/2024-10-ipea-intro-r/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="9" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1F1YXJ0byUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwZGFkb3MlMkN0aWR5dmVyc2UlMkNkcGx5ciUyQ2dncGxvdDIlMkN0aWR5ciUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1727740800000" data-listing-file-modified-sort="1794095338324" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="../../teaching/pt/2024-10-ipea-intro-r/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2024-10-ipea-intro-r/featured.png" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2024-10-ipea-intro-r/index.html" class="no-external">Introdução à análise de dados no R</a>
+<a href="../../teaching/pt/2024-10-ipea-intro-r/index.html" class="no-external-icon">Introdução à análise de dados no R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2024-10-ipea-intro-r/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2024-10-ipea-intro-r/index.html" class="no-external">
+<a href="../../teaching/pt/2024-10-ipea-intro-r/index.html" class="no-external-icon">
 <div class="listing-date">
 1 de out. de 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2dncGxvdDIlMkN0aWR5dmVyc2UlMkNWaXN1YWxpemElQzMlQTclQzMlQTNvJTIwZGUlMjBkYWRvcyUyQ2dlb2Jy" data-listing-date-sort="1727049600000" data-listing-file-modified-sort="1777841524646" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="134">
-<div class="thumbnail"><a href="../../teaching/pt/2024-09-cebrap-lab-viz-R/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="10" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2dncGxvdDIlMkN0aWR5dmVyc2UlMkNWaXN1YWxpemElQzMlQTclQzMlQTNvJTIwZGUlMjBkYWRvcyUyQ2dlb2Jy" data-listing-date-sort="1727049600000" data-listing-file-modified-sort="1794095338323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="134">
+<div class="thumbnail"><a href="../../teaching/pt/2024-09-cebrap-lab-viz-R/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2024-09-cebrap-lab-viz-R/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2024-09-cebrap-lab-viz-R/index.html" class="no-external">Visualização de dados no R</a>
+<a href="../../teaching/pt/2024-09-cebrap-lab-viz-R/index.html" class="no-external-icon">Visualização de dados no R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2024-09-cebrap-lab-viz-R/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2024-09-cebrap-lab-viz-R/index.html" class="no-external">
+<a href="../../teaching/pt/2024-09-cebrap-lab-viz-R/index.html" class="no-external-icon">
 <div class="listing-date">
 23 de set. de 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1722470400000" data-listing-file-modified-sort="1777841524646" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="108">
-<div class="thumbnail"><a href="../../teaching/pt/2024-08-cebrap-lab-intro-R/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="11" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1722470400000" data-listing-file-modified-sort="1794095338323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="108">
+<div class="thumbnail"><a href="../../teaching/pt/2024-08-cebrap-lab-intro-R/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2024-08-cebrap-lab-intro-R/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2024-08-cebrap-lab-intro-R/index.html" class="no-external">Introdução ao R</a>
+<a href="../../teaching/pt/2024-08-cebrap-lab-intro-R/index.html" class="no-external-icon">Introdução ao R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2024-08-cebrap-lab-intro-R/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2024-08-cebrap-lab-intro-R/index.html" class="no-external">
+<a href="../../teaching/pt/2024-08-cebrap-lab-intro-R/index.html" class="no-external-icon">
 <div class="listing-date">
 1 de ago. de 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2dncGxvdDIlMkN0aWR5dmVyc2UlMkNWaXN1YWxpemElQzMlQTclQzMlQTNvJTIwZGUlMjBkYWRvcyUyQ2dlb2Jy" data-listing-date-sort="1710374400000" data-listing-file-modified-sort="1777841524654" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
-<div class="thumbnail"><a href="../../teaching/pt/cursor-visualizacao/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="12" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2dncGxvdDIlMkN0aWR5dmVyc2UlMkNWaXN1YWxpemElQzMlQTclQzMlQTNvJTIwZGUlMjBkYWRvcyUyQ2dlb2Jy" data-listing-date-sort="1710374400000" data-listing-file-modified-sort="1794095338332" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
+<div class="thumbnail"><a href="../../teaching/pt/cursor-visualizacao/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/cursor-visualizacao/featured.png" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/cursor-visualizacao/index.html" class="no-external">Visualização de dados</a>
+<a href="../../teaching/pt/cursor-visualizacao/index.html" class="no-external-icon">Visualização de dados</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/cursor-visualizacao/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/cursor-visualizacao/index.html" class="no-external">
+<a href="../../teaching/pt/cursor-visualizacao/index.html" class="no-external-icon">
 <div class="listing-date">
 14 de mar. de 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1706140800000" data-listing-file-modified-sort="1777841524653" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<div class="thumbnail"><a href="../../teaching/pt/cursor-r4ds-1/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="13" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1706140800000" data-listing-file-modified-sort="1794095338330" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="thumbnail"><a href="../../teaching/pt/cursor-r4ds-1/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/cursor-r4ds-1/featured.png" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/cursor-r4ds-1/index.html" class="no-external">R para Ciência de Dados I</a>
+<a href="../../teaching/pt/cursor-r4ds-1/index.html" class="no-external-icon">R para Ciência de Dados I</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/cursor-r4ds-1/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/cursor-r4ds-1/index.html" class="no-external">
+<a href="../../teaching/pt/cursor-r4ds-1/index.html" class="no-external-icon">
 <div class="listing-date">
 25 de jan. de 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1F1YXJ0byUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1705968000000" data-listing-file-modified-sort="1777841524646" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="../../teaching/pt/2024-01-verao-ime-usp-relatorios/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="14" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1F1YXJ0byUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1705968000000" data-listing-file-modified-sort="1794095338322" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="../../teaching/pt/2024-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2024-01-verao-ime-usp-relatorios/featured.png" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2024-01-verao-ime-usp-relatorios/index.html" class="no-external">Relatórios reprodutíveis com R</a>
+<a href="../../teaching/pt/2024-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">Relatórios reprodutíveis com R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2024-01-verao-ime-usp-relatorios/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2024-01-verao-ime-usp-relatorios/index.html" class="no-external">
+<a href="../../teaching/pt/2024-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">
 <div class="listing-date">
 23 de jan. de 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwVGV4dG8lMkN0aWR5dGV4dCUyQ3RpZHl2ZXJzZSUyQ3N0cmluZ3I=" data-listing-date-sort="1701043200000" data-listing-file-modified-sort="1777841524645" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
-<div class="thumbnail"><a href="../../teaching/pt/2023-11-cebrap-lab-text-as-data/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="15" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ0FuJUMzJUExbGlzZSUyMGRlJTIwVGV4dG8lMkN0aWR5dGV4dCUyQ3RpZHl2ZXJzZSUyQ3N0cmluZ3I=" data-listing-date-sort="1701043200000" data-listing-file-modified-sort="1794095338321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="175">
+<div class="thumbnail"><a href="../../teaching/pt/2023-11-cebrap-lab-text-as-data/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2023-11-cebrap-lab-text-as-data/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2023-11-cebrap-lab-text-as-data/index.html" class="no-external">Análise quantitativa de texto</a>
+<a href="../../teaching/pt/2023-11-cebrap-lab-text-as-data/index.html" class="no-external-icon">Análise quantitativa de texto</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2023-11-cebrap-lab-text-as-data/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2023-11-cebrap-lab-text-as-data/index.html" class="no-external">
+<a href="../../teaching/pt/2023-11-cebrap-lab-text-as-data/index.html" class="no-external-icon">
 <div class="listing-date">
 27 de nov. de 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1F1YXJ0byUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1698796800000" data-listing-file-modified-sort="1777841524654" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
-<div class="thumbnail"><a href="../../teaching/pt/cursor-relatorios/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="16" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1F1YXJ0byUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1698796800000" data-listing-file-modified-sort="1794095338331" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
+<div class="thumbnail"><a href="../../teaching/pt/cursor-relatorios/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/cursor-relatorios/featured.png" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/cursor-relatorios/index.html" class="no-external">Relatórios e apresentações</a>
+<a href="../../teaching/pt/cursor-relatorios/index.html" class="no-external-icon">Relatórios e apresentações</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/cursor-relatorios/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/cursor-relatorios/index.html" class="no-external">
+<a href="../../teaching/pt/cursor-relatorios/index.html" class="no-external-icon">
 <div class="listing-date">
 1 de nov. de 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2dncGxvdDIlMkN0aWR5dmVyc2UlMkNWaXN1YWxpemElQzMlQTclQzMlQTNvJTIwZGUlMjBkYWRvcyUyQ2dlb2Jy" data-listing-date-sort="1693180800000" data-listing-file-modified-sort="1777841524644" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="134">
-<div class="thumbnail"><a href="../../teaching/pt/2023-06-cebrap-lab-viz-R/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="17" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2dncGxvdDIlMkN0aWR5dmVyc2UlMkNWaXN1YWxpemElQzMlQTclQzMlQTNvJTIwZGUlMjBkYWRvcyUyQ2dlb2Jy" data-listing-date-sort="1693180800000" data-listing-file-modified-sort="1794095338321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="134">
+<div class="thumbnail"><a href="../../teaching/pt/2023-06-cebrap-lab-viz-R/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2023-06-cebrap-lab-viz-R/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2023-06-cebrap-lab-viz-R/index.html" class="no-external">Visualização de dados no R</a>
+<a href="../../teaching/pt/2023-06-cebrap-lab-viz-R/index.html" class="no-external-icon">Visualização de dados no R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2023-06-cebrap-lab-viz-R/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2023-06-cebrap-lab-viz-R/index.html" class="no-external">
+<a href="../../teaching/pt/2023-06-cebrap-lab-viz-R/index.html" class="no-external-icon">
 <div class="listing-date">
 28 de ago. de 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1687737600000" data-listing-file-modified-sort="1777841524644" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="108">
-<div class="thumbnail"><a href="../../teaching/pt/2023-06-cebrap-lab-intro-R/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="18" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1687737600000" data-listing-file-modified-sort="1794095338321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="108">
+<div class="thumbnail"><a href="../../teaching/pt/2023-06-cebrap-lab-intro-R/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2023-06-cebrap-lab-intro-R/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2023-06-cebrap-lab-intro-R/index.html" class="no-external">Introdução ao R</a>
+<a href="../../teaching/pt/2023-06-cebrap-lab-intro-R/index.html" class="no-external-icon">Introdução ao R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2023-06-cebrap-lab-intro-R/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2023-06-cebrap-lab-intro-R/index.html" class="no-external">
+<a href="../../teaching/pt/2023-06-cebrap-lab-intro-R/index.html" class="no-external-icon">
 <div class="listing-date">
 26 de jun. de 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1F1YXJ0byUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1674432000000" data-listing-file-modified-sort="1777841524644" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="../../teaching/pt/2023-01-verao-ime-usp-relatorios/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="19" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1F1YXJ0byUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1674432000000" data-listing-file-modified-sort="1794095338320" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="../../teaching/pt/2023-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2023-01-verao-ime-usp-relatorios/featured.png" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2023-01-verao-ime-usp-relatorios/index.html" class="no-external">Relatórios reprodutíveis com R</a>
+<a href="../../teaching/pt/2023-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">Relatórios reprodutíveis com R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2023-01-verao-ime-usp-relatorios/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2023-01-verao-ime-usp-relatorios/index.html" class="no-external">
+<a href="../../teaching/pt/2023-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">
 <div class="listing-date">
 23 de jan. de 2023
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="Q3Vyc28lMkNQYWNvdGVzJTJDRGVzZW52b2x2aW1lbnRvJTJDRnVuJUMzJUE3JUMzJUI1ZXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1667260800000" data-listing-file-modified-sort="1777841524652" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
-<div class="thumbnail"><a href="../../teaching/pt/cursor-pacotes/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="20" data-categories="Q3Vyc28lMkNQYWNvdGVzJTJDRGVzZW52b2x2aW1lbnRvJTJDRnVuJUMzJUE3JUMzJUI1ZXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1667260800000" data-listing-file-modified-sort="1794095338329" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
+<div class="thumbnail"><a href="../../teaching/pt/cursor-pacotes/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/cursor-pacotes/featured.png" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/cursor-pacotes/index.html" class="no-external">Pacotes em R</a>
+<a href="../../teaching/pt/cursor-pacotes/index.html" class="no-external-icon">Pacotes em R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/cursor-pacotes/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/cursor-pacotes/index.html" class="no-external">
+<a href="../../teaching/pt/cursor-pacotes/index.html" class="no-external-icon">
 <div class="listing-date">
 1 de nov. de 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1652054400000" data-listing-file-modified-sort="1777841524643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="108">
-<div class="thumbnail"><a href="../../teaching/pt/2022-05-cebrap-lab-intro-R/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="21" data-categories="Q3Vyc28lMkNQb3J0dWd1JUMzJUFBcyUyQ2RwbHlyJTJDdGlkeXZlcnNlJTJDQW4lQzMlQTFsaXNlJTIwZGUlMjBkYWRvcw==" data-listing-date-sort="1652054400000" data-listing-file-modified-sort="1794095338320" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="108">
+<div class="thumbnail"><a href="../../teaching/pt/2022-05-cebrap-lab-intro-R/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2022-05-cebrap-lab-intro-R/featured.jpeg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2022-05-cebrap-lab-intro-R/index.html" class="no-external">Introdução ao R</a>
+<a href="../../teaching/pt/2022-05-cebrap-lab-intro-R/index.html" class="no-external-icon">Introdução ao R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2022-05-cebrap-lab-intro-R/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2022-05-cebrap-lab-intro-R/index.html" class="no-external">
+<a href="../../teaching/pt/2022-05-cebrap-lab-intro-R/index.html" class="no-external-icon">
 <div class="listing-date">
 9 de mai. de 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1643760000000" data-listing-file-modified-sort="1777841524643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="../../teaching/pt/2022-01-verao-ime-usp-relatorios/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="22" data-categories="Q3Vyc28lMkNSZXByb2R1dGliaWxpZGFkZSUyQ1JNYXJrZG93biUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1643760000000" data-listing-file-modified-sort="1794095338319" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="../../teaching/pt/2022-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../../teaching/pt/2022-01-verao-ime-usp-relatorios/featured.jpg" class="thumbnail-image">
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../../teaching/pt/2022-01-verao-ime-usp-relatorios/index.html" class="no-external">Relatórios reprodutíveis com R</a>
+<a href="../../teaching/pt/2022-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">Relatórios reprodutíveis com R</a>
 </h3>
-<div class="listing-subtitle">
-<a href="../../teaching/pt/2022-01-verao-ime-usp-relatorios/index.html" class="no-external"></a>
-</div>
 </div>
 <div class="metadata">
-<a href="../../teaching/pt/2022-01-verao-ime-usp-relatorios/index.html" class="no-external">
+<a href="../../teaching/pt/2022-01-verao-ime-usp-relatorios/index.html" class="no-external-icon">
 <div class="listing-date">
 2 de fev. de 2022
 </div>
@@ -843,11 +823,30 @@ window.Quarto = {
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/beamilz\.com\/");
+      const newWindowLabel = "(opens in a new tab)";
+      const newWindowNoteId = "quarto-ext-newwindow-label";
+      // Links reference one hidden label through aria-describedby, so the
+      // announcement never changes their accessible name.
+      var describeNewWindow = (link) => {
+        if (!window.document.getElementById(newWindowNoteId)) {
+          var newWindowNote = window.document.createElement("span");
+          newWindowNote.id = newWindowNoteId;
+          newWindowNote.hidden = true;
+          newWindowNote.textContent = newWindowLabel;
+          window.document.body.appendChild(newWindowNote);
+        }
+        var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(newWindowNoteId)) {
+          describedBy.push(newWindowNoteId);
+          link.setAttribute("aria-describedby", describedBy.join(" "));
+        }
+      }
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -861,10 +860,72 @@ window.Quarto = {
             if (link.getAttribute("rel") === null) {
               link.setAttribute("rel", "noopener");
             }
+            describeNewWindow(link);
+          if (!link.classList.contains('no-external-icon')) {
             // default icon
             link.classList.add("external");
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -878,6 +939,7 @@ window.Quarto = {
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -1040,44 +1102,54 @@ window.Quarto = {
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -1175,6 +1247,9 @@ window.Quarto = {
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Código deslocável","output":"Saída deslocável"};
   </script>
 <input type="hidden" id="giscus-base-theme" value="light">
 <input type="hidden" id="giscus-alt-theme" value="dark">
