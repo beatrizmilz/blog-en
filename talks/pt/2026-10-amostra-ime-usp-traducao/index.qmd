@@ -1,0 +1,54 @@
+---
+toc: true
+author:
+  - Beatriz Milz
+  - Geovana Lopes Batista
+categories: ["Palestra", "Tradução", "Comunidade", "R-Ladies", "rOpenSci", "Português"]
+date: '2026-10-01'
+event: aMostra de Estatística IME USP
+event_url: https://www.ime.usp.br/~amostra/
+links:
+- icon: images
+  icon_pack: far
+  name: Slides
+  url: https://r-ladies-sao-paulo.github.io/2026-amostra-ime-usp/
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/R-Ladies-Sao-Paulo/2026-amostra-ime-usp
+- icon: youtube
+  icon_pack: fab
+  name: Gravação
+  url: https://www.youtube.com/live/kWMkBuf8F7s?si=Z5R47YG8z_sLEPOj
+location: IME-USP / São Paulo (presencial, com transmissão online)
+title: "Projetos de tradução com a comunidade R"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+<br>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kWMkBuf8F7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</center>
+
+**Resumo:** Muitos recursos para aprender R estão disponíveis apenas em inglês, e traduzir amplia o acesso a conteúdos técnicos. Nesta palestra do R-Ladies São Paulo, apresentamos quatro projetos de tradução feitos pela comunidade R:
+
+-   o pacote [dados](https://cienciadedatos.github.io/dados/), que traduz as bases de dados usadas no livro R for Data Science;
+
+-   o livro [R para Ciência de Dados](https://pt.r4ds.hadley.nz/), tradução da 2ª edição do R for Data Science;
+
+-   o [Guia de Desenvolvimento da rOpenSci](https://devguide.ropensci.org/pt/index.pt.html) (*DevGuide*);
+
+-   a tradução das mensagens do R, feita no [Weblate](https://translate.rx.studio/).
+
+Também falamos sobre por que traduções feitas e revisadas pela comunidade continuam importantes, mesmo com ferramentas de IA, e sobre como participar do R-Ladies São Paulo e desses projetos.
+
+Veja também: [A comunidade R fala português](/talks/pt/2024-11-05-ropensci-traducao-pt/), community call da rOpenSci sobre o mesmo tema.
