@@ -24,6 +24,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
+          # dados fixado em 0.1.0: na 0.1.1 (CRAN) os datasets retornam NULL
           packages: |
             any::rmarkdown
             any::tidyverse
@@ -33,7 +34,7 @@ jobs:
             any::janitor
             any::fs
             any::yaml
-            any::dados
+            dados@0.1.0
 
 
       - name: Publish to GitHub Pages (and render)
