@@ -1,0 +1,41 @@
+---
+toc: true
+author:
+  - Flávia da Fonseca Feitosa
+  - Beatriz Milz
+categories: ["Disciplina", "UFABC", "Análise de dados", "Estatística", "Planejamento Territorial", "Português"]
+date: '2025-06-02'
+event: Universidade Federal do ABC (UFABC)
+event_url: https://beatrizmilz.github.io/ESHT011-21-analise-dados-planejamento-territorial/
+links:
+- icon: book
+  icon_pack: fas
+  name: Material das aulas práticas
+  url: https://beatrizmilz.github.io/ESHT011-21-analise-dados-planejamento-territorial/
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/beatrizmilz/ESHT011-21-analise-dados-planejamento-territorial
+location: UFABC
+title: "Análise de dados para o Planejamento Territorial"
+subtitle: "Aulas práticas em R"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+Aulas práticas em R das disciplinas **"Análise de dados para o Planejamento Territorial"** e **"Métodos Quantitativos para Pesquisa em PGT"**, oferecidas no segundo quadrimestre de 2025 (junho a agosto) na Universidade Federal do ABC (UFABC). Oferecimento durante o meu estágio pós-doutoral, junto com a Profa. Flávia da Fonseca Feitosa.
+
+Temas das aulas práticas:
+
+- Introdução ao R e RStudio, e conceitos básicos do R
+- Análise exploratória de dados
+- Intervalo de confiança
+- Correlação
+- Regressão linear e regressão espacial
