@@ -1,6 +1,6 @@
 ---
 title: "Beatriz Milz"
-subtitle: "Postdoc at UFABC"
+subtitle: "PhD in Environmental Sciences"
 page-layout: full
 title-block-banner: false
 toc: false
@@ -14,6 +14,8 @@ Hi! I'm Bea. This is my **personal website**. Here you can find a lot of content
 👩‍💻 [about](about.qmd) (en) \| [sobre](about-pt.qmd) (pt-br) \| [sobre](about-es.qmd) (es)
 
 📑 [blog posts](posts/en.qmd) (en) \| [textos](posts/pt.qmd) (pt-br)\| [textos](posts/es.qmd) (es)
+
+✍️ [external writing / textos em outros sites](posts/external.qmd)
 
 👩‍🏫 [talks, workshops, etc](content.qmd)
 
