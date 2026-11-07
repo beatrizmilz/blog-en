@@ -1,0 +1,26 @@
+---
+title: "Textos em outros sites / External writing"
+listing:
+  - id: external-posts
+    contents: external-posts.yml
+    type: table
+    fields: [date, title, description, author]
+    field-display-names:
+      description: "Site"
+      author: "Autoria / Authors"
+    sort: "date desc"
+    categories: true
+    sort-ui: true
+    filter-ui: true
+    page-size: 50
+page-layout: full
+title-block-banner: false
+toc: false
+---
+
+Textos que escrevi ou coescrevi e que foram publicados em outros sites. Os links levam para o texto original.
+
+*Posts I wrote or co-wrote that were published on other websites. The links go to the original post.*
+
+::: {#external-posts}
+:::

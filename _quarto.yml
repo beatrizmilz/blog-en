@@ -53,6 +53,8 @@ website:
             href: posts/pt.qmd
           - text: Español
             href: posts/es.qmd
+          - text: External writing
+            href: posts/external.qmd
       - text: Talks and teaching
         href: content.qmd
       - text: Videos

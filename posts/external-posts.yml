@@ -1,0 +1,66 @@
+# Textos que escrevi (ou coescrevi) e que foram publicados em outros sites.
+# Para adicionar um texto novo, copie um bloco abaixo e altere os campos.
+# path: link para o texto original
+
+- title: "Translating the rOpenSci Dev Guide into Portuguese: Collaboration, Community, Challenges, and Impact"
+  date: '2025-11-25'
+  path: https://ropensci.org/blog/2025/11/25/translation-devguide-pt/
+  description: "rOpenSci Blog"
+  author: Francesca Belem Lopes Palmeira, Beatriz Milz, Ariana Moura Cabral, Yanina Bellini Saibene, Daniel Vartanian, Pedro Faria
+  categories: [rOpenSci, Tradução, English]
+
+- title: "Traduzindo o Dev Guide da rOpenSci para o Português: Colaboração, Comunidade, Desafios e Impacto"
+  date: '2025-11-25'
+  path: https://ropensci.org/pt/blog/2025/11/25/tradu%C3%A7%C3%A3o-devguide-pt/
+  description: "Blog da rOpenSci"
+  author: Francesca Belem Lopes Palmeira, Beatriz Milz, Ariana Moura Cabral, Yanina Bellini Saibene, Daniel Vartanian, Pedro Faria
+  categories: [rOpenSci, Tradução, Português]
+
+- title: "O blog da R-Ladies São Paulo completa um ano! 🎉"
+  date: '2023-12-05'
+  path: https://rladies-sp.org/posts/2023-12-um-ano-blog/
+  description: "Blog da R-Ladies São Paulo"
+  author: Beatriz Milz, Haydée Svab, Ana Carolina Moreno, Ornella Scardua Ferreira
+  categories: [R-Ladies, Português]
+
+- title: "Pacotes em R de Dados Brasileiros"
+  date: '2023-12-02'
+  path: https://rladies-sp.org/posts/2023-12-evento-pacotes/
+  description: "Blog da R-Ladies São Paulo (também em inglês)"
+  author: Beatriz Milz, Luana Antunes, Haydee Svab, Katia Mine, Michele Caramigo, Angela Valle
+  categories: [R-Ladies, Pacotes, Português]
+
+- title: "Ações para ampliar a diversidade na comunidade R-Ladies São Paulo"
+  date: '2023-10-02'
+  path: https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/
+  description: "Blog da R-Ladies São Paulo (também em inglês)"
+  author: Beatriz Milz, Haydee Svab, Tatyane Paz Dominguez, Ianni Muliterno, Ana Paula Rocha
+  categories: [R-Ladies, Diversidade, Português]
+
+- title: "Dados abertos de Educação: um exemplo aplicado ao jornalismo"
+  date: '2023-05-24'
+  path: https://rladies-sp.org/posts/2023-05-open-data-day-educacao/
+  description: "Blog da R-Ladies São Paulo"
+  author: Ana Carolina Moreno, Beatriz Milz, Geovana Lopes, Katia Mine, Natasha Meneguelli, Cristiane Souza de Lacerda
+  categories: [R-Ladies, Dados abertos, Português]
+
+- title: "Evento: Análise de dados abertos com R"
+  date: '2023-03-27'
+  path: https://rladies-sp.org/posts/2023-03-evento-open-data-day/
+  description: "Blog da R-Ladies São Paulo (também em inglês)"
+  author: Tatyane Paz Dominguez, Haydée Svab, Beatriz Milz, Ana Carolina Moreno, Ana Paula Rocha
+  categories: [R-Ladies, Dados abertos, Português]
+
+- title: "Evento: Oficina de Introdução ao R"
+  date: '2023-01-31'
+  path: https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/
+  description: "Blog da R-Ladies São Paulo"
+  author: Beatriz Milz, Tatyane Paz Dominguez
+  categories: [R-Ladies, Português]
+
+- title: "Boas vindas ao blog da R-Ladies São Paulo!"
+  date: '2022-12-05'
+  path: https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/
+  description: "Blog da R-Ladies São Paulo"
+  author: Equipe R-Ladies SP, Beatriz Milz
+  categories: [R-Ladies, Português]
