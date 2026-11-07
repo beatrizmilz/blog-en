@@ -11,6 +11,14 @@ links:
   icon_pack: academicons
   name: DOI
   url: https://doi.org/10.11606/T.106.2024.tde-27052024-115400
+- icon: images
+  icon_pack: far
+  name: Slides da defesa
+  url: https://beatrizmilz.github.io/banca-doutorado/slides.pdf
+- icon: chalkboard-teacher
+  icon_pack: fas
+  name: Informações sobre a defesa
+  url: https://beatrizmilz.github.io/banca-doutorado/
 location: São Paulo
 title: "Transparência ativa na gestão de recursos hídricos na Macrometrópole Paulista"
 image: featured.jpeg
