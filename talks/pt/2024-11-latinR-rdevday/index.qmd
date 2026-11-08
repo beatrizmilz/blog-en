@@ -1,0 +1,40 @@
+---
+toc: true
+author:
+  - Pao Corrales
+  - Heather Turner
+  - Beatriz Milz
+  - Andrea Gomez Vargas
+  - Luis Verde Arregoitia
+categories: ["Hackathon", "Contribuição ao R", "Tradução", "LatinR", "Comunidade", "Português"]
+date: '2024-11-18'
+event: "R Dev Day @ LatinR 2024"
+event_url: https://2024.latinr.org/pt/cronograma/r-dev-day/rdevday-pt.html
+links:
+- icon: info-circle
+  icon_pack: fas
+  name: Página do evento
+  url: https://2024.latinr.org/pt/cronograma/r-dev-day/rdevday-pt.html
+- icon: github
+  icon_pack: fab
+  name: Tarefas (issues)
+  url: https://github.com/r-devel/r-dev-day/issues?q=is%3Aissue+label%3A%22LatinR+2024%22
+- icon: user-plus
+  icon_pack: fa
+  name: rOpenSci na LatinR 2024
+  url: https://ropensci.org/events/latinr-2024/
+location: Online
+title: "R Dev Day @ LatinR 2024"
+subtitle: "Contribuindo com o R base"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+O R Dev Day \@ LatinR 2024 foi um evento colaborativo e online, nos dias 18 e 19 de novembro de 2024, em que pequenos grupos trabalharam em contribuições para o R base ou para a infraestrutura que o apoia. Alguns exemplos de tarefas: traduzir mensagens do R para o espanhol e o português brasileiro, melhorar arquivos de ajuda, corrigir bugs e melhorar o R Dev Guide.
