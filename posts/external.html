@@ -89,9 +89,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-lang','listing-description','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-title","listing-date","listing-description","listing-author","listing-categories"],
+      searchColumns: ["listing-title","listing-date","listing-description","listing-author","listing-categories","listing-lang"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -252,7 +252,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(24)</span></div><div class="category" data-category="QVBJ">API <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QmFzZXMlMjBkZSUyMGRhZG9z">Bases de dados <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Qm9hcyUyMHByJUMzJUExdGljYXM=">Boas práticas <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q3Vyc28tUg==">Curso-R <span class="quarto-category-count">(15)</span></div><div class="category" data-category="RGFkb3MlMjBhYmVydG9z">Dados abertos <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGl2ZXJzaWRhZGU=">Diversidade <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW5nbGlzaA==">English <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW5zaW5v">Ensino <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXJyb3M=">Erros <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXZlbnRvcw==">Eventos <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z2dwbG90Mg==">ggplot2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2l0SHVi">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW1wb3J0YSVDMyVBNyVDMyVBM28=">Importação <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UGFjb3Rlcw==">Pacotes <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UG9ydHVndSVDMyVBQXM=">Português <span class="quarto-category-count">(23)</span></div><div class="category" data-category="UiUyME1hcmtkb3du">R Markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ui1MYWRpZXM=">R-Ladies <span class="quarto-category-count">(7)</span></div><div class="category" data-category="ck9wZW5TY2k=">rOpenSci <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VGFiZWxhcw==">Tabelas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhZHUlQzMlQTclQzMlQTNv">Tradução <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VmlzdWFsaXphJUMzJUE3JUMzJUEzbyUyMGRlJTIwZGFkb3M=">Visualização de dados <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V2ViJTIwU2NyYXBpbmc=">Web Scraping <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(27)</span></div><div class="category" data-category="QVBJ">API <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QmFzZXMlMjBkZSUyMGRhZG9z">Bases de dados <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Qm9hcyUyMHByJUMzJUExdGljYXM=">Boas práticas <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q3Vyc28tUg==">Curso-R <span class="quarto-category-count">(15)</span></div><div class="category" data-category="RGFkb3MlMjBhYmVydG9z">Dados abertos <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RGl2ZXJzaWRhZGU=">Diversidade <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RW5nbGlzaA==">English <span class="quarto-category-count">(4)</span></div><div class="category" data-category="RW5zaW5v">Ensino <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXJyb3M=">Erros <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXZlbnRvcw==">Eventos <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z2dwbG90Mg==">ggplot2 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2l0SHVi">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW1wb3J0YSVDMyVBNyVDMyVBM28=">Importação <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UGFjb3Rlcw==">Pacotes <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UG9ydHVndSVDMyVBQXM=">Português <span class="quarto-category-count">(23)</span></div><div class="category" data-category="UiUyME1hcmtkb3du">R Markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ui1MYWRpZXM=">R-Ladies <span class="quarto-category-count">(10)</span></div><div class="category" data-category="ck9wZW5TY2k=">rOpenSci <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VGFiZWxhcw==">Tabelas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhZHUlQzMlQTclQzMlQTNv">Tradução <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VmlzdWFsaXphJUMzJUE3JUMzJUEzbyUyMGRlJTIwZGFkb3M=">Visualização de dados <span class="quarto-category-count">(2)</span></div><div class="category" data-category="V2ViJTIwU2NyYXBpbmc=">Web Scraping <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content" tabindex="-1">
 
@@ -299,6 +299,9 @@ window.Quarto = {
       <option value="listing-author" data-direction="asc">
         Autoria / Authors
       </option>
+      <option value="listing-lang" data-direction="asc">
+        Idioma / Language
+      </option>
     </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -316,6 +319,10 @@ window.Quarto = {
 
 <th>
 <a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Título</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-lang" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Idioma / Language</a>
 </th>
 
 <th>
@@ -338,6 +345,9 @@ window.Quarto = {
 <a href="https://ropensci.org/blog/2025/11/25/translation-devguide-pt/" class="title listing-title">Translating the rOpenSci Dev Guide into Portuguese: Collaboration, Community, Challenges, and Impact</a>
 </td>
 <td>
+<span class="listing-lang">en</span>
+</td>
+<td>
 <span class="listing-description">rOpenSci Blog</span>
 </td>
 <td>
@@ -352,6 +362,9 @@ window.Quarto = {
 </td>
 <td>
 <a href="https://ropensci.org/pt/blog/2025/11/25/tradu%C3%A7%C3%A3o-devguide-pt/" class="title listing-title">Traduzindo o Dev Guide da rOpenSci para o Português: Colaboração, Comunidade, Desafios e Impacto</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da rOpenSci</span>
@@ -370,6 +383,9 @@ window.Quarto = {
 <a href="https://curso-r.github.io/blog/posts/2024-05-27-piramide-etaria/" class="title listing-title">Criando uma pirâmide etária com dados do Censo 2022, usando o R e o pacote ggplot2</a>
 </td>
 <td>
+<span class="listing-lang">pt</span>
+</td>
+<td>
 <span class="listing-description">Blog da Curso-R</span>
 </td>
 <td>
@@ -384,6 +400,9 @@ window.Quarto = {
 </td>
 <td>
 <a href="https://rladies-sp.org/posts/2023-12-um-ano-blog/" class="title listing-title">O blog da R-Ladies São Paulo completa um ano! 🎉</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da R-Ladies São Paulo</span>
@@ -402,7 +421,10 @@ window.Quarto = {
 <a href="https://rladies-sp.org/posts/2023-12-evento-pacotes/" class="title listing-title">Pacotes em R de Dados Brasileiros</a>
 </td>
 <td>
-<span class="listing-description">Blog da R-Ladies São Paulo (também em inglês)</span>
+<span class="listing-lang">pt</span>
+</td>
+<td>
+<span class="listing-description">Blog da R-Ladies São Paulo</span>
 </td>
 <td>
 <span class="listing-author">Beatriz Milz, Luana Antunes, Haydee Svab, Katia Mine, Michele Caramigo, Angela Valle</span>
@@ -410,7 +432,26 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="5" data-categories="Ui1MYWRpZXMlMkNEaXZlcnNpZGFkZSUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1696204800000" data-listing-title-sort="Ações para ampliar a diversidade na comunidade R-Ladies São Paulo">
+<tr data-index="5" data-categories="Ui1MYWRpZXMlMkNQYWNvdGVzJTJDRW5nbGlzaA==" data-listing-date-sort="1701475200000" data-listing-title-sort="R Packages for Brazilian Data">
+<td>
+<span class="listing-date">2 de dez. de 2023</span>
+</td>
+<td>
+<a href="https://rladies-sp.org/posts/2023-12-evento-pacotes/english.html" class="title listing-title">R Packages for Brazilian Data</a>
+</td>
+<td>
+<span class="listing-lang">en</span>
+</td>
+<td>
+<span class="listing-description">R-Ladies São Paulo Blog</span>
+</td>
+<td>
+<span class="listing-author">Beatriz Milz, Luana Antunes, Haydee Svab, Katia Mine, Michele Caramigo, Angela Valle</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-categories="Ui1MYWRpZXMlMkNEaXZlcnNpZGFkZSUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1696204800000" data-listing-title-sort="Ações para ampliar a diversidade na comunidade R-Ladies São Paulo">
 <td>
 <span class="listing-date">2 de out. de 2023</span>
 </td>
@@ -418,7 +459,10 @@ window.Quarto = {
 <a href="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/" class="title listing-title">Ações para ampliar a diversidade na comunidade R-Ladies São Paulo</a>
 </td>
 <td>
-<span class="listing-description">Blog da R-Ladies São Paulo (também em inglês)</span>
+<span class="listing-lang">pt</span>
+</td>
+<td>
+<span class="listing-description">Blog da R-Ladies São Paulo</span>
 </td>
 <td>
 <span class="listing-author">Beatriz Milz, Haydee Svab, Tatyane Paz Dominguez, Ianni Muliterno, Ana Paula Rocha</span>
@@ -426,12 +470,34 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="6" data-categories="Ui1MYWRpZXMlMkNEYWRvcyUyMGFiZXJ0b3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1684886400000" data-listing-title-sort="Dados abertos de Educação: um exemplo aplicado ao jornalismo">
+<tr data-index="7" data-categories="Ui1MYWRpZXMlMkNEaXZlcnNpZGFkZSUyQ0VuZ2xpc2g=" data-listing-date-sort="1696204800000" data-listing-title-sort="Actions to increase diversity in the R-Ladies São Paulo community">
+<td>
+<span class="listing-date">2 de out. de 2023</span>
+</td>
+<td>
+<a href="https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/english.html" class="title listing-title">Actions to increase diversity in the R-Ladies São Paulo community</a>
+</td>
+<td>
+<span class="listing-lang">en</span>
+</td>
+<td>
+<span class="listing-description">R-Ladies São Paulo Blog</span>
+</td>
+<td>
+<span class="listing-author">Beatriz Milz, Haydee Svab, Tatyane Paz Dominguez, Ianni Muliterno, Ana Paula Rocha</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-categories="Ui1MYWRpZXMlMkNEYWRvcyUyMGFiZXJ0b3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1684886400000" data-listing-title-sort="Dados abertos de Educação: um exemplo aplicado ao jornalismo">
 <td>
 <span class="listing-date">24 de mai. de 2023</span>
 </td>
 <td>
 <a href="https://rladies-sp.org/posts/2023-05-open-data-day-educacao/" class="title listing-title">Dados abertos de Educação: um exemplo aplicado ao jornalismo</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da R-Ladies São Paulo</span>
@@ -442,7 +508,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="7" data-categories="Ui1MYWRpZXMlMkNEYWRvcyUyMGFiZXJ0b3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1679875200000" data-listing-title-sort="Evento: Análise de dados abertos com R">
+<tr data-index="9" data-categories="Ui1MYWRpZXMlMkNEYWRvcyUyMGFiZXJ0b3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1679875200000" data-listing-title-sort="Evento: Análise de dados abertos com R">
 <td>
 <span class="listing-date">27 de mar. de 2023</span>
 </td>
@@ -450,7 +516,10 @@ window.Quarto = {
 <a href="https://rladies-sp.org/posts/2023-03-evento-open-data-day/" class="title listing-title">Evento: Análise de dados abertos com R</a>
 </td>
 <td>
-<span class="listing-description">Blog da R-Ladies São Paulo (também em inglês)</span>
+<span class="listing-lang">pt</span>
+</td>
+<td>
+<span class="listing-description">Blog da R-Ladies São Paulo</span>
 </td>
 <td>
 <span class="listing-author">Tatyane Paz Dominguez, Haydée Svab, Beatriz Milz, Ana Carolina Moreno, Ana Paula Rocha</span>
@@ -458,12 +527,34 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="8" data-categories="Ui1MYWRpZXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1675123200000" data-listing-title-sort="Evento: Oficina de Introdução ao R">
+<tr data-index="10" data-categories="Ui1MYWRpZXMlMkNEYWRvcyUyMGFiZXJ0b3MlMkNFbmdsaXNo" data-listing-date-sort="1679788800000" data-listing-title-sort="Event: Open Data Analysis with R">
+<td>
+<span class="listing-date">26 de mar. de 2023</span>
+</td>
+<td>
+<a href="https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html" class="title listing-title">Event: Open Data Analysis with R</a>
+</td>
+<td>
+<span class="listing-lang">en</span>
+</td>
+<td>
+<span class="listing-description">R-Ladies São Paulo Blog</span>
+</td>
+<td>
+<span class="listing-author">Tatyane Paz Dominguez, Haydée Svab, Beatriz Milz, Ana Carolina Moreno, Ana Paula Rocha</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-categories="Ui1MYWRpZXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1675123200000" data-listing-title-sort="Evento: Oficina de Introdução ao R">
 <td>
 <span class="listing-date">31 de jan. de 2023</span>
 </td>
 <td>
 <a href="https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/" class="title listing-title">Evento: Oficina de Introdução ao R</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da R-Ladies São Paulo</span>
@@ -474,12 +565,15 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="9" data-categories="Ui1MYWRpZXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1670198400000" data-listing-title-sort="Boas vindas ao blog da R-Ladies São Paulo!">
+<tr data-index="12" data-categories="Ui1MYWRpZXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1670198400000" data-listing-title-sort="Boas vindas ao blog da R-Ladies São Paulo!">
 <td>
 <span class="listing-date">5 de dez. de 2022</span>
 </td>
 <td>
 <a href="https://rladies-sp.org/posts/2022-12-boas-vindas-ao-blog/" class="title listing-title">Boas vindas ao blog da R-Ladies São Paulo!</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da R-Ladies São Paulo</span>
@@ -490,12 +584,15 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="10" data-categories="Q3Vyc28tUiUyQ0JvYXMlMjBwciVDMyVBMXRpY2FzJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1663027200000" data-listing-title-sort="Como usar senhas sem escrevê-las nos scripts">
+<tr data-index="13" data-categories="Q3Vyc28tUiUyQ0JvYXMlMjBwciVDMyVBMXRpY2FzJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1663027200000" data-listing-title-sort="Como usar senhas sem escrevê-las nos scripts">
 <td>
 <span class="listing-date">13 de set. de 2022</span>
 </td>
 <td>
 <a href="https://curso-r.github.io/blog/posts/2022-09-13-senha-no-script/" class="title listing-title">Como usar senhas sem escrevê-las nos scripts</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da Curso-R</span>
@@ -506,12 +603,15 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="11" data-categories="Q3Vyc28tUiUyQ0V2ZW50b3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1660262400000" data-listing-title-sort="Impressões pessoais da rstudio::conf(2022)">
+<tr data-index="14" data-categories="Q3Vyc28tUiUyQ0V2ZW50b3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1660262400000" data-listing-title-sort="Impressões pessoais da rstudio::conf(2022)">
 <td>
 <span class="listing-date">12 de ago. de 2022</span>
 </td>
 <td>
 <a href="https://curso-r.github.io/blog/posts/2022-08-12-rstudio-conf-impressoes/" class="title listing-title">Impressões pessoais da rstudio::conf(2022)</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da Curso-R</span>
@@ -522,12 +622,15 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="12" data-categories="Q3Vyc28tUiUyQ0Jhc2VzJTIwZGUlMjBkYWRvcyUyQ0Vuc2lubyUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1654905600000" data-listing-title-sort="Bases de dados: para praticar e ensinar">
+<tr data-index="15" data-categories="Q3Vyc28tUiUyQ0Jhc2VzJTIwZGUlMjBkYWRvcyUyQ0Vuc2lubyUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1654905600000" data-listing-title-sort="Bases de dados: para praticar e ensinar">
 <td>
 <span class="listing-date">11 de jun. de 2022</span>
 </td>
 <td>
 <a href="https://curso-r.github.io/blog/posts/2022-06-11-bases-de-dados/" class="title listing-title">Bases de dados: para praticar e ensinar</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da Curso-R</span>
@@ -538,7 +641,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="13" data-categories="Q3Vyc28tUiUyQ1BhY290ZXMlMkNCYXNlcyUyMGRlJTIwZGFkb3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1649203200000" data-listing-title-sort="Pacote dados: bases em português para praticar e ensinar">
+<tr data-index="16" data-categories="Q3Vyc28tUiUyQ1BhY290ZXMlMkNCYXNlcyUyMGRlJTIwZGFkb3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1649203200000" data-listing-title-sort="Pacote dados: bases em português para praticar e ensinar">
 <td>
 <span class="listing-date">6 de abr. de 2022</span>
 </td>
@@ -546,6 +649,9 @@ window.Quarto = {
 <a href="https://curso-r.github.io/blog/posts/2022-04-06-pacote-dados/" class="title listing-title">Pacote dados: bases em português para praticar e ensinar</a>
 </td>
 <td>
+<span class="listing-lang">pt</span>
+</td>
+<td>
 <span class="listing-description">Blog da Curso-R</span>
 </td>
 <td>
@@ -554,7 +660,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="14" data-categories="Q3Vyc28tUiUyQ0FQSSUyQ0ltcG9ydGElQzMlQTclQzMlQTNvJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1647561600000" data-listing-title-sort="Acessando dados do seu One Drive com R">
+<tr data-index="17" data-categories="Q3Vyc28tUiUyQ0FQSSUyQ0ltcG9ydGElQzMlQTclQzMlQTNvJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1647561600000" data-listing-title-sort="Acessando dados do seu One Drive com R">
 <td>
 <span class="listing-date">18 de mar. de 2022</span>
 </td>
@@ -562,6 +668,9 @@ window.Quarto = {
 <a href="https://curso-r.github.io/blog/posts/2022-03-18-onedrive/" class="title listing-title">Acessando dados do seu One Drive com R</a>
 </td>
 <td>
+<span class="listing-lang">pt</span>
+</td>
+<td>
 <span class="listing-description">Blog da Curso-R</span>
 </td>
 <td>
@@ -570,7 +679,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="15" data-categories="Q3Vyc28tUiUyQ0FQSSUyQ0ltcG9ydGElQzMlQTclQzMlQTNvJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1646697600000" data-listing-title-sort="Acessando dados do Google Sheets com R">
+<tr data-index="18" data-categories="Q3Vyc28tUiUyQ0FQSSUyQ0ltcG9ydGElQzMlQTclQzMlQTNvJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1646697600000" data-listing-title-sort="Acessando dados do Google Sheets com R">
 <td>
 <span class="listing-date">8 de mar. de 2022</span>
 </td>
@@ -578,6 +687,9 @@ window.Quarto = {
 <a href="https://curso-r.github.io/blog/posts/2022-03-08-googlesheets4/" class="title listing-title">Acessando dados do Google Sheets com R</a>
 </td>
 <td>
+<span class="listing-lang">pt</span>
+</td>
+<td>
 <span class="listing-description">Blog da Curso-R</span>
 </td>
 <td>
@@ -586,7 +698,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="16" data-categories="Q3Vyc28tUiUyQ0FQSSUyQ0dpdEh1YiUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1645228800000" data-listing-title-sort="Acessando APIs com R: GitHub - Parte 1">
+<tr data-index="19" data-categories="Q3Vyc28tUiUyQ0FQSSUyQ0dpdEh1YiUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1645228800000" data-listing-title-sort="Acessando APIs com R: GitHub - Parte 1">
 <td>
 <span class="listing-date">19 de fev. de 2022</span>
 </td>
@@ -594,6 +706,9 @@ window.Quarto = {
 <a href="https://curso-r.github.io/blog/posts/2022-02-19-api-github-1/" class="title listing-title">Acessando APIs com R: GitHub - Parte 1</a>
 </td>
 <td>
+<span class="listing-lang">pt</span>
+</td>
+<td>
 <span class="listing-description">Blog da Curso-R</span>
 </td>
 <td>
@@ -602,12 +717,15 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="17" data-categories="Q3Vyc28tUiUyQ0FQSSUyQ1dlYiUyMFNjcmFwaW5nJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1638144000000" data-listing-title-sort="Acessando APIs com R: Exemplos com a PokéAPI!">
+<tr data-index="20" data-categories="Q3Vyc28tUiUyQ0FQSSUyQ1dlYiUyMFNjcmFwaW5nJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1638144000000" data-listing-title-sort="Acessando APIs com R: Exemplos com a PokéAPI!">
 <td>
 <span class="listing-date">29 de nov. de 2021</span>
 </td>
 <td>
 <a href="https://curso-r.github.io/blog/posts/2021-11-29-api-pokemon/" class="title listing-title">Acessando APIs com R: Exemplos com a PokéAPI!</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da Curso-R</span>
@@ -618,12 +736,15 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="18" data-categories="Q3Vyc28tUiUyQ1dlYiUyMFNjcmFwaW5nJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1621814400000" data-listing-title-sort="Buscando informações na Wikipédia: Lista de episódios de Naruto Shippuden">
+<tr data-index="21" data-categories="Q3Vyc28tUiUyQ1dlYiUyMFNjcmFwaW5nJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1621814400000" data-listing-title-sort="Buscando informações na Wikipédia: Lista de episódios de Naruto Shippuden">
 <td>
 <span class="listing-date">24 de mai. de 2021</span>
 </td>
 <td>
 <a href="https://curso-r.github.io/blog/posts/2021-05-24-naruto/" class="title listing-title">Buscando informações na Wikipédia: Lista de episódios de Naruto Shippuden</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da Curso-R</span>
@@ -634,12 +755,15 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="19" data-categories="Q3Vyc28tUiUyQ0Vycm9zJTJDQm9hcyUyMHByJUMzJUExdGljYXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1616976000000" data-listing-title-sort="Desvendando erros: Entendendo mensagens de erro comuns em R">
+<tr data-index="22" data-categories="Q3Vyc28tUiUyQ0Vycm9zJTJDQm9hcyUyMHByJUMzJUExdGljYXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1616976000000" data-listing-title-sort="Desvendando erros: Entendendo mensagens de erro comuns em R">
 <td>
 <span class="listing-date">29 de mar. de 2021</span>
 </td>
 <td>
 <a href="https://curso-r.github.io/blog/posts/2021-03-29-desvendando-erros/" class="title listing-title">Desvendando erros: Entendendo mensagens de erro comuns em R</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da Curso-R</span>
@@ -650,7 +774,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="20" data-categories="Q3Vyc28tUiUyQ1IlMjBNYXJrZG93biUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1615766400000" data-listing-title-sort="Feedback dos trabalhos do R para Ciência de Dados (Parte III): Dicas para Relatórios">
+<tr data-index="23" data-categories="Q3Vyc28tUiUyQ1IlMjBNYXJrZG93biUyQ1BvcnR1Z3UlQzMlQUFz" data-listing-date-sort="1615766400000" data-listing-title-sort="Feedback dos trabalhos do R para Ciência de Dados (Parte III): Dicas para Relatórios">
 <td>
 <span class="listing-date">15 de mar. de 2021</span>
 </td>
@@ -658,6 +782,9 @@ window.Quarto = {
 <a href="https://curso-r.github.io/blog/posts/2021-03-15-dicas-relatorios-r4ds1_relatorios/" class="title listing-title">Feedback dos trabalhos do R para Ciência de Dados (Parte III): Dicas para Relatórios</a>
 </td>
 <td>
+<span class="listing-lang">pt</span>
+</td>
+<td>
 <span class="listing-description">Blog da Curso-R</span>
 </td>
 <td>
@@ -666,7 +793,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="21" data-categories="Q3Vyc28tUiUyQ1Zpc3VhbGl6YSVDMyVBNyVDMyVBM28lMjBkZSUyMGRhZG9zJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1608163200000" data-listing-title-sort="Feedback dos trabalhos do R para Ciência de Dados (Parte II): Dicas para Gráficos">
+<tr data-index="24" data-categories="Q3Vyc28tUiUyQ1Zpc3VhbGl6YSVDMyVBNyVDMyVBM28lMjBkZSUyMGRhZG9zJTJDUG9ydHVndSVDMyVBQXM=" data-listing-date-sort="1608163200000" data-listing-title-sort="Feedback dos trabalhos do R para Ciência de Dados (Parte II): Dicas para Gráficos">
 <td>
 <span class="listing-date">17 de dez. de 2020</span>
 </td>
@@ -674,6 +801,9 @@ window.Quarto = {
 <a href="https://curso-r.github.io/blog/posts/2020-17-02-dicas-relatorios-r4ds1_graficos/" class="title listing-title">Feedback dos trabalhos do R para Ciência de Dados (Parte II): Dicas para Gráficos</a>
 </td>
 <td>
+<span class="listing-lang">pt</span>
+</td>
+<td>
 <span class="listing-description">Blog da Curso-R</span>
 </td>
 <td>
@@ -682,7 +812,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="22" data-categories="Q3Vyc28tUiUyQ1RhYmVsYXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1606953600000" data-listing-title-sort="Trabalhos premiados do curso R para Ciência de Dados I + Dicas!">
+<tr data-index="25" data-categories="Q3Vyc28tUiUyQ1RhYmVsYXMlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1606953600000" data-listing-title-sort="Trabalhos premiados do curso R para Ciência de Dados I + Dicas!">
 <td>
 <span class="listing-date">3 de dez. de 2020</span>
 </td>
@@ -690,6 +820,9 @@ window.Quarto = {
 <a href="https://curso-r.github.io/blog/posts/2020-12-03-dicas-relatorios-r4ds1_tabelas/" class="title listing-title">Trabalhos premiados do curso R para Ciência de Dados I + Dicas!</a>
 </td>
 <td>
+<span class="listing-lang">pt</span>
+</td>
+<td>
 <span class="listing-description">Blog da Curso-R</span>
 </td>
 <td>
@@ -698,12 +831,15 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="23" data-categories="Q3Vyc28tUiUyQ0V2ZW50b3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1565913600000" data-listing-title-sort="Tidyverse developer day 2019">
+<tr data-index="26" data-categories="Q3Vyc28tUiUyQ0V2ZW50b3MlMkNQb3J0dWd1JUMzJUFBcw==" data-listing-date-sort="1565913600000" data-listing-title-sort="Tidyverse developer day 2019">
 <td>
 <span class="listing-date">16 de ago. de 2019</span>
 </td>
 <td>
 <a href="https://curso-r.github.io/blog/posts/2019-08-12-tidydevday/" class="title listing-title">Tidyverse developer day 2019</a>
+</td>
+<td>
+<span class="listing-lang">pt</span>
 </td>
 <td>
 <span class="listing-description">Blog da Curso-R</span>
