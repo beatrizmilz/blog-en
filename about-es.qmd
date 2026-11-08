@@ -35,7 +35,7 @@ about:
 </center>
 
 ::: {#hero-heading}
-- **Formación académica:** Beatriz Milz tiene un doctorado en Ciencia Ambiental. Es una investigadora interesada en temas como la gestión de recursos hídricos, la transparencia y los datos abiertos, la ciencia de datos ambientales, y el género y el medio ambiente. Actualmente está realizando una investigación postdoctoral en la Universidad Federal del ABC (UFABC).
+- **Formación académica:** Beatriz Milz tiene un doctorado en Ciencia Ambiental. Es una investigadora interesada en temas como la gestión de recursos hídricos, la transparencia y los datos abiertos, la ciencia de datos ambientales, y el género y el medio ambiente. Realizó una estancia postdoctoral en la Universidad Federal del ABC (UFABC), entre 2024 y 2025. Actualmente trabaja como consultora independiente en proyectos de ciencia de datos, investigación y enseñanza de R.<!-- También colabora en el proyecto [*Enabling the Next Generation of Contributors to R*](projects/rsmf-r-translations/index.qmd), mejorando la integración de las traducciones de R realizadas a través de Weblate. -->
 
 - **Revistas científicas:** Desde 2018, forma parte del equipo ejecutivo de la revista [Ambiente & Sociedade](https://www.scielo.br/j/asoc/). Desde 2024, es **editora de revisión por pares de software** en [rOpenSci](https://ropensci.org/), y también forma parte del equipo ejecutivo de la [Revista Diálogos Socioambientales](https://periodicos.ufabc.edu.br/index.php/dialogossocioambientais/index).
 

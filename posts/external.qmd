@@ -4,9 +4,10 @@ listing:
   - id: external-posts
     contents: external-posts.yml
     type: table
-    fields: [date, title, description, author]
+    fields: [date, title, lang, description, author]
     field-display-names:
       description: "Site"
+      lang: "Idioma / Language"
       author: "Autoria / Authors"
     sort: "date desc"
     categories: true

@@ -8,6 +8,7 @@
   description: "rOpenSci Blog"
   author: Francesca Belem Lopes Palmeira, Beatriz Milz, Ariana Moura Cabral, Yanina Bellini Saibene, Daniel Vartanian, Pedro Faria
   categories: [rOpenSci, Tradução, English]
+  lang: en
 
 - title: "Traduzindo o Dev Guide da rOpenSci para o Português: Colaboração, Comunidade, Desafios e Impacto"
   date: '2025-11-25'
@@ -15,6 +16,7 @@
   description: "Blog da rOpenSci"
   author: Francesca Belem Lopes Palmeira, Beatriz Milz, Ariana Moura Cabral, Yanina Bellini Saibene, Daniel Vartanian, Pedro Faria
   categories: [rOpenSci, Tradução, Português]
+  lang: pt
 
 - title: "O blog da R-Ladies São Paulo completa um ano! 🎉"
   date: '2023-12-05'
@@ -22,20 +24,39 @@
   description: "Blog da R-Ladies São Paulo"
   author: Beatriz Milz, Haydée Svab, Ana Carolina Moreno, Ornella Scardua Ferreira
   categories: [R-Ladies, Português]
+  lang: pt
 
 - title: "Pacotes em R de Dados Brasileiros"
   date: '2023-12-02'
   path: https://rladies-sp.org/posts/2023-12-evento-pacotes/
-  description: "Blog da R-Ladies São Paulo (também em inglês)"
+  description: "Blog da R-Ladies São Paulo"
   author: Beatriz Milz, Luana Antunes, Haydee Svab, Katia Mine, Michele Caramigo, Angela Valle
   categories: [R-Ladies, Pacotes, Português]
+  lang: pt
+
+- title: "R Packages for Brazilian Data"
+  date: '2023-12-02'
+  path: https://rladies-sp.org/posts/2023-12-evento-pacotes/english.html
+  description: "R-Ladies São Paulo Blog"
+  author: Beatriz Milz, Luana Antunes, Haydee Svab, Katia Mine, Michele Caramigo, Angela Valle
+  categories: [R-Ladies, Pacotes, English]
+  lang: en
 
 - title: "Ações para ampliar a diversidade na comunidade R-Ladies São Paulo"
   date: '2023-10-02'
   path: https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/
-  description: "Blog da R-Ladies São Paulo (também em inglês)"
+  description: "Blog da R-Ladies São Paulo"
   author: Beatriz Milz, Haydee Svab, Tatyane Paz Dominguez, Ianni Muliterno, Ana Paula Rocha
   categories: [R-Ladies, Diversidade, Português]
+  lang: pt
+
+- title: "Actions to increase diversity in the R-Ladies São Paulo community"
+  date: '2023-10-02'
+  path: https://rladies-sp.org/posts/2023-06-05-increasing-diversity-sao-paulo/english.html
+  description: "R-Ladies São Paulo Blog"
+  author: Beatriz Milz, Haydee Svab, Tatyane Paz Dominguez, Ianni Muliterno, Ana Paula Rocha
+  categories: [R-Ladies, Diversidade, English]
+  lang: en
 
 - title: "Dados abertos de Educação: um exemplo aplicado ao jornalismo"
   date: '2023-05-24'
@@ -43,13 +64,23 @@
   description: "Blog da R-Ladies São Paulo"
   author: Ana Carolina Moreno, Beatriz Milz, Geovana Lopes, Katia Mine, Natasha Meneguelli, Cristiane Souza de Lacerda
   categories: [R-Ladies, Dados abertos, Português]
+  lang: pt
 
 - title: "Evento: Análise de dados abertos com R"
   date: '2023-03-27'
   path: https://rladies-sp.org/posts/2023-03-evento-open-data-day/
-  description: "Blog da R-Ladies São Paulo (também em inglês)"
+  description: "Blog da R-Ladies São Paulo"
   author: Tatyane Paz Dominguez, Haydée Svab, Beatriz Milz, Ana Carolina Moreno, Ana Paula Rocha
   categories: [R-Ladies, Dados abertos, Português]
+  lang: pt
+
+- title: "Event: Open Data Analysis with R"
+  date: '2023-03-26'
+  path: https://rladies-sp.org/posts/2023-03-evento-open-data-day/english.html
+  description: "R-Ladies São Paulo Blog"
+  author: Tatyane Paz Dominguez, Haydée Svab, Beatriz Milz, Ana Carolina Moreno, Ana Paula Rocha
+  categories: [R-Ladies, Dados abertos, English]
+  lang: en
 
 - title: "Evento: Oficina de Introdução ao R"
   date: '2023-01-31'
@@ -57,6 +88,7 @@
   description: "Blog da R-Ladies São Paulo"
   author: Beatriz Milz, Tatyane Paz Dominguez
   categories: [R-Ladies, Português]
+  lang: pt
 
 - title: "Boas vindas ao blog da R-Ladies São Paulo!"
   date: '2022-12-05'
@@ -64,6 +96,7 @@
   description: "Blog da R-Ladies São Paulo"
   author: Equipe R-Ladies SP, Beatriz Milz
   categories: [R-Ladies, Português]
+  lang: pt
 
 # Blog da Curso-R (o domínio blog.curso-r.com saiu do ar; o blog continua em curso-r.github.io/blog)
 
@@ -73,6 +106,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz
   categories: [Curso-R, ggplot2, Visualização de dados, Português]
+  lang: pt
 
 - title: "Como usar senhas sem escrevê-las nos scripts"
   date: '2022-09-13'
@@ -80,6 +114,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz
   categories: [Curso-R, Boas práticas, Português]
+  lang: pt
 
 - title: "Impressões pessoais da rstudio::conf(2022)"
   date: '2022-08-12'
@@ -87,6 +122,7 @@
   description: "Blog da Curso-R"
   author: Julio Trecenti, Flavia E. Rius, Beatriz Milz
   categories: [Curso-R, Eventos, Português]
+  lang: pt
 
 - title: "Bases de dados: para praticar e ensinar"
   date: '2022-06-11'
@@ -94,6 +130,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz, Tereza Lacerda
   categories: [Curso-R, Bases de dados, Ensino, Português]
+  lang: pt
 
 - title: "Pacote dados: bases em português para praticar e ensinar"
   date: '2022-04-06'
@@ -101,6 +138,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz
   categories: [Curso-R, Pacotes, Bases de dados, Português]
+  lang: pt
 
 - title: "Acessando dados do seu One Drive com R"
   date: '2022-03-18'
@@ -108,6 +146,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz
   categories: [Curso-R, API, Importação, Português]
+  lang: pt
 
 - title: "Acessando dados do Google Sheets com R"
   date: '2022-03-08'
@@ -115,6 +154,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz
   categories: [Curso-R, API, Importação, Português]
+  lang: pt
 
 - title: "Acessando APIs com R: GitHub - Parte 1"
   date: '2022-02-19'
@@ -122,6 +162,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz
   categories: [Curso-R, API, GitHub, Português]
+  lang: pt
 
 - title: "Acessando APIs com R: Exemplos com a PokéAPI!"
   date: '2021-11-29'
@@ -129,6 +170,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz, Julio Trecenti
   categories: [Curso-R, API, Web Scraping, Português]
+  lang: pt
 
 - title: "Buscando informações na Wikipédia: Lista de episódios de Naruto Shippuden"
   date: '2021-05-24'
@@ -136,6 +178,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz
   categories: [Curso-R, Web Scraping, Português]
+  lang: pt
 
 - title: "Desvendando erros: Entendendo mensagens de erro comuns em R"
   date: '2021-03-29'
@@ -143,6 +186,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz, Fernando Corrêa
   categories: [Curso-R, Erros, Boas práticas, Português]
+  lang: pt
 
 - title: "Feedback dos trabalhos do R para Ciência de Dados (Parte III): Dicas para Relatórios"
   date: '2021-03-15'
@@ -150,6 +194,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz, William Amorim
   categories: [Curso-R, R Markdown, Português]
+  lang: pt
 
 - title: "Feedback dos trabalhos do R para Ciência de Dados (Parte II): Dicas para Gráficos"
   date: '2020-12-17'
@@ -157,6 +202,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz, William Amorim
   categories: [Curso-R, Visualização de dados, Português]
+  lang: pt
 
 - title: "Trabalhos premiados do curso R para Ciência de Dados I + Dicas!"
   date: '2020-12-03'
@@ -164,6 +210,7 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz, William Amorim
   categories: [Curso-R, Tabelas, Português]
+  lang: pt
 
 - title: "Tidyverse developer day 2019"
   date: '2019-08-16'
@@ -171,3 +218,4 @@
   description: "Blog da Curso-R"
   author: Beatriz Milz, Angélica Custódio
   categories: [Curso-R, Eventos, Português]
+  lang: pt

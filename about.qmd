@@ -36,7 +36,7 @@ about:
 
 ::: {#hero-heading}
 
-- **Academic background:** Beatriz Milz holds a PhD in Environmental Science. She is a researcher interested in topics such as water resources management, transparency and open data, environmental data science, and gender and the environment. She is currently conducting postdoctoral research at the Federal University of ABC (UFABC).
+- **Academic background:** Beatriz Milz holds a PhD in Environmental Science. She is a researcher interested in topics such as water resources management, transparency and open data, environmental data science, and gender and the environment. She completed a postdoctoral fellowship at the Federal University of ABC (UFABC) from 2024 to 2025. She currently works as an independent consultant on data science, research and R teaching projects.<!-- She also collaborates on the project [*Enabling the Next Generation of Contributors to R*](projects/rsmf-r-translations/index.qmd), improving the integration of R translations contributed via Weblate. -->
 
 - **Scientific journals:** Since 2018, she has been part of the executive team of the journal [Ambiente & Sociedade](https://www.scielo.br/j/asoc/). Since 2024, she has been a **Software peer review editor** at [rOpenSci](https://ropensci.org/), and she is also part of the executive team of the [Revista Diálogos Socioambientais](https://periodicos.ufabc.edu.br/index.php/dialogossocioambientais/index).
 
