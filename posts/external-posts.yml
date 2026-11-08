@@ -64,3 +64,110 @@
   description: "Blog da R-Ladies São Paulo"
   author: Equipe R-Ladies SP, Beatriz Milz
   categories: [R-Ladies, Português]
+
+# Blog da Curso-R (o domínio blog.curso-r.com saiu do ar; o blog continua em curso-r.github.io/blog)
+
+- title: "Criando uma pirâmide etária com dados do Censo 2022, usando o R e o pacote ggplot2"
+  date: '2024-05-27'
+  path: https://curso-r.github.io/blog/posts/2024-05-27-piramide-etaria/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz
+  categories: [Curso-R, ggplot2, Visualização de dados, Português]
+
+- title: "Como usar senhas sem escrevê-las nos scripts"
+  date: '2022-09-13'
+  path: https://curso-r.github.io/blog/posts/2022-09-13-senha-no-script/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz
+  categories: [Curso-R, Boas práticas, Português]
+
+- title: "Impressões pessoais da rstudio::conf(2022)"
+  date: '2022-08-12'
+  path: https://curso-r.github.io/blog/posts/2022-08-12-rstudio-conf-impressoes/
+  description: "Blog da Curso-R"
+  author: Julio Trecenti, Flavia E. Rius, Beatriz Milz
+  categories: [Curso-R, Eventos, Português]
+
+- title: "Bases de dados: para praticar e ensinar"
+  date: '2022-06-11'
+  path: https://curso-r.github.io/blog/posts/2022-06-11-bases-de-dados/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz, Tereza Lacerda
+  categories: [Curso-R, Bases de dados, Ensino, Português]
+
+- title: "Pacote dados: bases em português para praticar e ensinar"
+  date: '2022-04-06'
+  path: https://curso-r.github.io/blog/posts/2022-04-06-pacote-dados/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz
+  categories: [Curso-R, Pacotes, Bases de dados, Português]
+
+- title: "Acessando dados do seu One Drive com R"
+  date: '2022-03-18'
+  path: https://curso-r.github.io/blog/posts/2022-03-18-onedrive/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz
+  categories: [Curso-R, API, Importação, Português]
+
+- title: "Acessando dados do Google Sheets com R"
+  date: '2022-03-08'
+  path: https://curso-r.github.io/blog/posts/2022-03-08-googlesheets4/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz
+  categories: [Curso-R, API, Importação, Português]
+
+- title: "Acessando APIs com R: GitHub - Parte 1"
+  date: '2022-02-19'
+  path: https://curso-r.github.io/blog/posts/2022-02-19-api-github-1/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz
+  categories: [Curso-R, API, GitHub, Português]
+
+- title: "Acessando APIs com R: Exemplos com a PokéAPI!"
+  date: '2021-11-29'
+  path: https://curso-r.github.io/blog/posts/2021-11-29-api-pokemon/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz, Julio Trecenti
+  categories: [Curso-R, API, Web Scraping, Português]
+
+- title: "Buscando informações na Wikipédia: Lista de episódios de Naruto Shippuden"
+  date: '2021-05-24'
+  path: https://curso-r.github.io/blog/posts/2021-05-24-naruto/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz
+  categories: [Curso-R, Web Scraping, Português]
+
+- title: "Desvendando erros: Entendendo mensagens de erro comuns em R"
+  date: '2021-03-29'
+  path: https://curso-r.github.io/blog/posts/2021-03-29-desvendando-erros/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz, Fernando Corrêa
+  categories: [Curso-R, Erros, Boas práticas, Português]
+
+- title: "Feedback dos trabalhos do R para Ciência de Dados (Parte III): Dicas para Relatórios"
+  date: '2021-03-15'
+  path: https://curso-r.github.io/blog/posts/2021-03-15-dicas-relatorios-r4ds1_relatorios/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz, William Amorim
+  categories: [Curso-R, R Markdown, Português]
+
+- title: "Feedback dos trabalhos do R para Ciência de Dados (Parte II): Dicas para Gráficos"
+  date: '2020-12-17'
+  path: https://curso-r.github.io/blog/posts/2020-17-02-dicas-relatorios-r4ds1_graficos/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz, William Amorim
+  categories: [Curso-R, Visualização de dados, Português]
+
+- title: "Trabalhos premiados do curso R para Ciência de Dados I + Dicas!"
+  date: '2020-12-03'
+  path: https://curso-r.github.io/blog/posts/2020-12-03-dicas-relatorios-r4ds1_tabelas/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz, William Amorim
+  categories: [Curso-R, Tabelas, Português]
+
+- title: "Tidyverse developer day 2019"
+  date: '2019-08-16'
+  path: https://curso-r.github.io/blog/posts/2019-08-12-tidydevday/
+  description: "Blog da Curso-R"
+  author: Beatriz Milz, Angélica Custódio
+  categories: [Curso-R, Eventos, Português]
