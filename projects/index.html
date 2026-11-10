@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-projects .list');
+    const listingTargetEl = window.document.querySelector('#listing-projects-ongoing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -91,11 +91,33 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title','listing-subtitle','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
+    window['quarto-listings']['listing-projects-ongoing'] = new List('listing-projects-ongoing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projects-finished .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-subtitle','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projects-finished'] = new List('listing-projects-finished', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -252,8 +274,15 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="Q2x1YmUlMjBkbyUyMGxpdnJv"><span class="quarto-category-count category-cloud-2">Clube do livro</span></div><div class="category" data-category="Q29tdW5pZGFkZQ=="><span class="quarto-category-count category-cloud-2">Comunidade</span></div><div class="category" data-category="Q29udHJpYnVpJUMzJUE3JUMzJUEzbyUyMGFvJTIwUg=="><span class="quarto-category-count category-cloud-2">Contribuição ao R</span></div><div class="category" data-category="Q1JBTg=="><span class="quarto-category-count category-cloud-4">CRAN</span></div><div class="category" data-category="RGFkb3MlMjBBYmVydG9z"><span class="quarto-category-count category-cloud-2">Dados Abertos</span></div><div class="category" data-category="TGl2cm8="><span class="quarto-category-count category-cloud-5">Livro</span></div><div class="category" data-category="UGFjb3RlJTIwZW0lMjBS"><span class="quarto-category-count category-cloud-4">Pacote em R</span></div><div class="category" data-category="ck9wZW5TY2k="><span class="quarto-category-count category-cloud-2">rOpenSci</span></div><div class="category" data-category="VHJhZHUlQzMlQTclQzMlQTNv"><span class="quarto-category-count category-cloud-7">Tradução</span></div><div class="category" data-category="V2VibGF0ZQ=="><span class="quarto-category-count category-cloud-2">Weblate</span></div></div></div>
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#em-andamento-ongoing" id="toc-em-andamento-ongoing" class="nav-link active" data-scroll-target="#em-andamento-ongoing">Em andamento / Ongoing</a></li>
+  <li><a href="#concluídos-finished" id="toc-concluídos-finished" class="nav-link" data-scroll-target="#concluídos-finished">Concluídos / Finished</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
 
@@ -276,9 +305,11 @@ window.Quarto = {
 </header>
 
 
-<div id="listing-projects" class="quarto-listing quarto-listing-container-default">
+<section id="em-andamento-ongoing" class="level2">
+<h2 class="anchored" data-anchor-id="em-andamento-ongoing">Em andamento / Ongoing</h2>
+<div id="listing-projects-ongoing" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Q29udHJpYnVpJUMzJUE3JUMzJUEzbyUyMGFvJTIwUiUyQ1RyYWR1JUMzJUE3JUMzJUEzbyUyQ1dlYmxhdGU=" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1794335755114" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
+<div class="quarto-post image-right" data-index="0" data-categories="Q29udHJpYnVpJUMzJUE3JUMzJUEzbyUyMGFvJTIwUiUyQ1RyYWR1JUMzJUE3JUMzJUEzbyUyQ1dlYmxhdGU=" data-listing-date-sort="1767225600000" data-listing-file-modified-sort="1794339283990" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="83">
 <div class="thumbnail"><a href="../projects/rsmf-r-translations/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../projects/rsmf-r-translations/featured.png" class="thumbnail-image">
@@ -305,61 +336,7 @@ window.Quarto = {
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TGl2cm8lMkNDb211bmlkYWRlJTJDQ2x1YmUlMjBkbyUyMGxpdnJv" data-listing-date-sort="1704067200000" data-listing-file-modified-sort="1794335755113" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="../projects/rladies-sp-clube-do-livro-r4ds/index.html" class="no-external-icon">
-
-<img loading="lazy" src="../projects/rladies-sp-clube-do-livro-r4ds/featured.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../projects/rladies-sp-clube-do-livro-r4ds/index.html" class="no-external-icon">Clube do Livro R-Ladies São Paulo: R for Data Science 2ed</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../projects/rladies-sp-clube-do-livro-r4ds/index.html" class="no-external-icon">Co-organização do clube do livro gratuito.</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGl2cm8='); return false;">Livro</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29tdW5pZGFkZQ=='); return false;">Comunidade</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2x1YmUlMjBkbyUyMGxpdnJv'); return false;">Clube do livro</div>
-
-</div>
-</div>
-<div class="metadata">
-
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TGl2cm8lMkNUcmFkdSVDMyVBNyVDMyVBM28lMkNyT3BlblNjaQ==" data-listing-date-sort="1685577600000" data-listing-file-modified-sort="1794335755115" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
-<div class="thumbnail"><a href="../projects/translation-devguide-ropensci/index.html" class="no-external-icon">
-
-<img loading="lazy" src="../projects/translation-devguide-ropensci/featured.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../projects/translation-devguide-ropensci/index.html" class="no-external-icon">Tradução do Dev Guide da rOpenSci para o português</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../projects/translation-devguide-ropensci/index.html" class="no-external-icon">Tradução colaborativa do guia de desenvolvimento, manutenção e revisão por pares de pacotes R da rOpenSci (2023 - 2025).</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGl2cm8='); return false;">Livro</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VHJhZHUlQzMlQTclQzMlQTNv'); return false;">Tradução</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ck9wZW5TY2k='); return false;">rOpenSci</div>
-
-</div>
-</div>
-<div class="metadata">
-
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="UGFjb3RlJTIwZW0lMjBSJTJDRGFkb3MlMjBBYmVydG9zJTJDQ1JBTg==" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1794335755100" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="quarto-post image-right" data-index="1" data-categories="UGFjb3RlJTIwZW0lMjBSJTJDRGFkb3MlMjBBYmVydG9zJTJDQ1JBTg==" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1794339283977" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
 <div class="thumbnail"><a href="../projects/package-odbr/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../projects/package-odbr/featured.png" class="thumbnail-image">
@@ -386,32 +363,7 @@ window.Quarto = {
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="TGl2cm8lMkNUcmFkdSVDMyVBNyVDMyVBM28=" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1794335755119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail"><a href="../projects/translation-r4ds/index.html" class="no-external-icon">
-
-<img loading="lazy" src="../projects/translation-r4ds/featured.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../projects/translation-r4ds/index.html" class="no-external-icon">Coordenação da tradução do livro R for Data Science 2ed</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../projects/translation-r4ds/index.html" class="no-external-icon">Participação na coordenação, na tradução e revisão de capítulos do livro escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund.</a>
-</div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGl2cm8='); return false;">Livro</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VHJhZHUlQzMlQTclQzMlQTNv'); return false;">Tradução</div>
-
-</div>
-</div>
-<div class="metadata">
-
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="UGFjb3RlJTIwZW0lMjBSJTJDVHJhZHUlQzMlQTclQzMlQTNvJTJDQ1JBTg==" data-listing-date-sort="1592265600000" data-listing-file-modified-sort="1794335755100" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="quarto-post image-right" data-index="2" data-categories="UGFjb3RlJTIwZW0lMjBSJTJDVHJhZHUlQzMlQTclQzMlQTNvJTJDQ1JBTg==" data-listing-date-sort="1592265600000" data-listing-file-modified-sort="1794339283977" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
 <div class="thumbnail"><a href="../projects/package-dados/index.html" class="no-external-icon">
 
 <img loading="lazy" src="../projects/package-dados/featured.png" class="thumbnail-image">
@@ -441,9 +393,97 @@ window.Quarto = {
 </div>
 <div class="listing-no-matching d-none">Nenhum item correspondente</div>
 </div>
+</section>
+<section id="concluídos-finished" class="level2">
+<h2 class="anchored" data-anchor-id="concluídos-finished">Concluídos / Finished</h2>
+<div id="listing-projects-finished" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="TGl2cm8lMkNDb211bmlkYWRlJTJDQ2x1YmUlMjBkbyUyMGxpdnJv" data-listing-date-sort="1704067200000" data-listing-file-modified-sort="1794339283989" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="../projects/rladies-sp-clube-do-livro-r4ds/index.html" class="no-external-icon">
+
+<img loading="lazy" src="../projects/rladies-sp-clube-do-livro-r4ds/featured.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projects/rladies-sp-clube-do-livro-r4ds/index.html" class="no-external-icon">Clube do Livro R-Ladies São Paulo: R for Data Science 2ed</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projects/rladies-sp-clube-do-livro-r4ds/index.html" class="no-external-icon">Co-organização do clube do livro gratuito.</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGl2cm8='); return false;">Livro</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q29tdW5pZGFkZQ=='); return false;">Comunidade</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q2x1YmUlMjBkbyUyMGxpdnJv'); return false;">Clube do livro</div>
+
+</div>
+</div>
+<div class="metadata">
+
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="TGl2cm8lMkNUcmFkdSVDMyVBNyVDMyVBM28lMkNyT3BlblNjaQ==" data-listing-date-sort="1685577600000" data-listing-file-modified-sort="1794339283991" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
+<div class="thumbnail"><a href="../projects/translation-devguide-ropensci/index.html" class="no-external-icon">
+
+<img loading="lazy" src="../projects/translation-devguide-ropensci/featured.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projects/translation-devguide-ropensci/index.html" class="no-external-icon">Tradução do Dev Guide da rOpenSci para o português</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projects/translation-devguide-ropensci/index.html" class="no-external-icon">Tradução colaborativa do guia de desenvolvimento, manutenção e revisão por pares de pacotes R da rOpenSci (2023 - 2025).</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGl2cm8='); return false;">Livro</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VHJhZHUlQzMlQTclQzMlQTNv'); return false;">Tradução</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ck9wZW5TY2k='); return false;">rOpenSci</div>
+
+</div>
+</div>
+<div class="metadata">
+
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="TGl2cm8lMkNUcmFkdSVDMyVBNyVDMyVBM28=" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1794339283995" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="../projects/translation-r4ds/index.html" class="no-external-icon">
+
+<img loading="lazy" src="../projects/translation-r4ds/featured.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projects/translation-r4ds/index.html" class="no-external-icon">Coordenação da tradução do livro R for Data Science 2ed</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projects/translation-r4ds/index.html" class="no-external-icon">Participação na coordenação, na tradução e revisão de capítulos do livro escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund.</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TGl2cm8='); return false;">Livro</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VHJhZHUlQzMlQTclQzMlQTNv'); return false;">Tradução</div>
+
+</div>
+</div>
+<div class="metadata">
+
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">Nenhum item correspondente</div>
+</div>
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

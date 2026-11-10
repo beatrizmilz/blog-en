@@ -1565,7 +1565,21 @@
     "href": "projects/index.html",
     "title": "Projects / Projetos",
     "section": "",
-    "text": "RSMF: Enabling the Next Generation of Contributors to R\n\n\nColaboração no projeto internacional para a sustentabilidade do R, atuando na integração das traduções do R feitas via Weblate (2026 - atual).\n\n\n\nContribuição ao R\n\nTradução\n\nWeblate\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClube do Livro R-Ladies São Paulo: R for Data Science 2ed\n\n\nCo-organização do clube do livro gratuito.\n\n\n\nLivro\n\nComunidade\n\nClube do livro\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTradução do Dev Guide da rOpenSci para o português\n\n\nTradução colaborativa do guia de desenvolvimento, manutenção e revisão por pares de pacotes R da rOpenSci (2023 - 2025).\n\n\n\nLivro\n\nTradução\n\nrOpenSci\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote em R: {odbr}\n\n\nPacote com dados de pesquisa Origem Destino (OD) no Brasil\n\n\n\nPacote em R\n\nDados Abertos\n\nCRAN\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoordenação da tradução do livro R for Data Science 2ed\n\n\nParticipação na coordenação, na tradução e revisão de capítulos do livro escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund.\n\n\n\nLivro\n\nTradução\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote em R: {dados}\n\n\nPacote com bases de dados traduzidas para o português\n\n\n\nPacote em R\n\nTradução\n\nCRAN\n\n\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Colaboração no projeto internacional para a sustentabilidade do R, atuando na integração das traduções do R feitas via Weblate (2026 - atual).\n\n\n\nContribuição ao R\n\nTradução\n\nWeblate\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote com dados de pesquisa Origem Destino (OD) no Brasil\n\n\n\nPacote em R\n\nDados Abertos\n\nCRAN\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote com bases de dados traduzidas para o português\n\n\n\nPacote em R\n\nTradução\n\nCRAN\n\n\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "projects/index.html#em-andamento-ongoing",
+    "href": "projects/index.html#em-andamento-ongoing",
+    "title": "Projects / Projetos",
+    "section": "",
+    "text": "Colaboração no projeto internacional para a sustentabilidade do R, atuando na integração das traduções do R feitas via Weblate (2026 - atual).\n\n\n\nContribuição ao R\n\nTradução\n\nWeblate\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote com dados de pesquisa Origem Destino (OD) no Brasil\n\n\n\nPacote em R\n\nDados Abertos\n\nCRAN\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPacote com bases de dados traduzidas para o português\n\n\n\nPacote em R\n\nTradução\n\nCRAN\n\n\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "projects/index.html#concluídos-finished",
+    "href": "projects/index.html#concluídos-finished",
+    "title": "Projects / Projetos",
+    "section": "Concluídos / Finished",
+    "text": "Concluídos / Finished\n\n\n\n\n\n\n\n\n\n\nClube do Livro R-Ladies São Paulo: R for Data Science 2ed\n\n\nCo-organização do clube do livro gratuito.\n\n\n\nLivro\n\nComunidade\n\nClube do livro\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTradução do Dev Guide da rOpenSci para o português\n\n\nTradução colaborativa do guia de desenvolvimento, manutenção e revisão por pares de pacotes R da rOpenSci (2023 - 2025).\n\n\n\nLivro\n\nTradução\n\nrOpenSci\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoordenação da tradução do livro R for Data Science 2ed\n\n\nParticipação na coordenação, na tradução e revisão de capítulos do livro escrito por Hadley Wickham, Mine Çetinkaya-Rundel, e Garrett Grolemund.\n\n\n\nLivro\n\nTradução\n\n\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "projects/package-dados/index.html",
@@ -1586,7 +1600,7 @@
     "href": "projects/rsmf-r-translations/index.html",
     "title": "RSMF: Enabling the Next Generation of Contributors to R",
     "section": "",
-    "text": "Materiais\n\n\n Anúncio do projeto (R Blog)  Weblate do R \n\nDesde 2026, colaboro no projeto Enabling the Next Generation of Contributors to R, financiado pelo Research Software Maintenance Fund (Software Sustainability Institute, Reino Unido).\nO projeto é co-liderado pela University of Birmingham e por membros do R Core Team, com apoio do R Consortium, da R Foundation, da Posit e do Google. Ele busca apoiar a sustentabilidade do R e facilitar a participação de novas pessoas contribuidoras.\nPela R6 Estatística e Treinamentos (Curso-R), atuo na melhoria da integração das traduções do R feitas via Weblate."
+    "text": "Materiais\n\n\n Anúncio do projeto (R Blog)  Weblate do R \n\nDesde 2026, colaboro no projeto Enabling the Next Generation of Contributors to R, financiado pelo Research Software Maintenance Fund (Software Sustainability Institute, Reino Unido).\nO projeto é co-liderado pela University of Birmingham e por membros do R Core Team, com apoio do R Consortium, da R Foundation, da Posit e do Google. Ele busca apoiar a sustentabilidade do R e facilitar a participação de novas pessoas contribuidoras.\nNo projeto, atuo na melhoria da integração das traduções do R feitas via Weblate."
   },
   {
     "objectID": "projects/package-odbr/index.html",
@@ -2944,7 +2958,7 @@
     "href": "talks/pt/2024-02-r4ds-boas-vindas/index.html",
     "title": "Boas-vindas, Prefácio e Introdução",
     "section": "",
-    "text": "Evento: Clube do Livro: R for Data Science - R-Ladies São PauloLink: https://r-ladies-sao-paulo.github.io/2024-clube-do-livro-r4ds/Lugar: Online\nMateriais\n\n\n Slide  Materiais do encontro  Livro \n\nPrimeiro encontro do Clube do Livro da R-Ladies São Paulo, que estudou a tradução para o português da 2ª edição do livro R para Ciência de Dados.\nNeste encontro, eu e a Luana Antunes apresentamos o grupo de estudos e os capítulos Boas-vindas, Prefácio da segunda edição e Introdução."
+    "text": "Evento: Clube do Livro: R for Data Science - R-Ladies São PauloLink: https://r-ladies-sao-paulo.github.io/2024-clube-do-livro-r4ds/Lugar: Online\nMateriais\n\n\n Gravação  Slide  Materiais do encontro  Livro \n\nPrimeiro encontro do Clube do Livro da R-Ladies São Paulo, que estudou a tradução para o português da 2ª edição do livro R para Ciência de Dados.\nNeste encontro, eu e a Luana Antunes apresentamos o grupo de estudos e os capítulos Boas-vindas, Prefácio da segunda edição e Introdução."
   },
   {
     "objectID": "talks/pt/2021-ufv-R/index.html",

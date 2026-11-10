@@ -270,11 +270,11 @@
     "listing": "/projects/index.html",
     "items": [
       "/projects/rsmf-r-translations/index.html",
+      "/projects/package-odbr/index.html",
+      "/projects/package-dados/index.html",
       "/projects/rladies-sp-clube-do-livro-r4ds/index.html",
       "/projects/translation-devguide-ropensci/index.html",
-      "/projects/package-odbr/index.html",
-      "/projects/translation-r4ds/index.html",
-      "/projects/package-dados/index.html"
+      "/projects/translation-r4ds/index.html"
     ]
   },
   {
