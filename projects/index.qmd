@@ -1,16 +1,34 @@
 ---
 title: "Projects / Projetos"
 listing:
-  - id: projects
+  - id: projects-ongoing
     contents: "*/index.qmd"
+    include:
+      status: ongoing
     type: default
     fields: [image, title, subtitle, categories]
     sort: "date desc"
-    categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 10  
+    page-size: 10
+  - id: projects-finished
+    contents: "*/index.qmd"
+    include:
+      status: finished
+    type: default
+    fields: [image, title, subtitle, categories]
+    sort: "date desc"
+    sort-ui: false
+    filter-ui: false
+    page-size: 10
 ---
 
-::: {#projects}
+## Em andamento / Ongoing
+
+::: {#projects-ongoing}
+:::
+
+## Concluídos / Finished
+
+::: {#projects-finished}
 :::

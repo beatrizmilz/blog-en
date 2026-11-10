@@ -9,6 +9,7 @@ categories:
   - Pacote em R
   - Dados Abertos
   - CRAN
+status: ongoing
 date: '2022-01-01'
 links:
 - icon: box

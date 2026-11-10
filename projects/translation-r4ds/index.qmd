@@ -24,6 +24,7 @@ author:
 categories: 
   - Livro
   - Tradução
+status: finished
 date: '2022-01-01'
 links:
 - icon: book

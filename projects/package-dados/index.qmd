@@ -16,6 +16,7 @@ categories:
   - Pacote em R
   - Tradução
   - CRAN
+status: ongoing
 date: '2020-06-16'
 links:
 - icon: box

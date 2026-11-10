@@ -8,6 +8,10 @@ date: '2024-02-27'
 event: "Clube do Livro: R for Data Science - R-Ladies São Paulo"
 event_url: https://r-ladies-sao-paulo.github.io/2024-clube-do-livro-r4ds/
 links:
+- icon: youtube
+  icon_pack: fab
+  name: Gravação
+  url: https://www.youtube.com/watch?v=TaAog3K0toA
 - icon: images
   icon_pack: far
   name: Slide
