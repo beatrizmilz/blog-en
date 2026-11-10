@@ -1,0 +1,38 @@
+---
+toc: true
+author:
+  - Francesca Belem Lopes Palmeira
+  - Beatriz Milz
+  - Ariana Moura Cabral
+  - Yanina Bellini Saibene
+  - Daniel Vartanian
+  - Pedro Faria
+categories:
+  - Livro
+  - Tradução
+  - rOpenSci
+date: '2023-06-01'
+links:
+- icon: book
+  icon_pack: far
+  name: Dev Guide em português
+  url: https://devguide.ropensci.org/pt/index.pt.html
+- icon: newspaper
+  icon_pack: far
+  name: Texto sobre a tradução (blog da rOpenSci)
+  url: https://ropensci.org/pt/blog/2025/11/25/tradu%C3%A7%C3%A3o-devguide-pt/
+title: "Tradução do Dev Guide da rOpenSci para o português"
+subtitle: "Tradução colaborativa do guia de desenvolvimento, manutenção e revisão por pares de pacotes R da rOpenSci (2023 - 2025)."
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+Participei da tradução colaborativa para o português do [*rOpenSci Packages: Development, Maintenance, and Peer Review*](https://devguide.ropensci.org/pt/index.pt.html) (Dev Guide), o guia da rOpenSci para quem cria, mantém, revisa e edita pacotes R.
+
+A tradução foi feita por pessoas voluntárias do Brasil, de Angola e de Portugal, com coordenação de Yanina Bellini Saibene, e foi concluída em outubro de 2025. Contamos mais sobre o processo no texto [Traduzindo o Dev Guide da rOpenSci para o Português: Colaboração, Comunidade, Desafios e Impacto](https://ropensci.org/pt/blog/2025/11/25/tradu%C3%A7%C3%A3o-devguide-pt/).

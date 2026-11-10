@@ -1,0 +1,35 @@
+---
+toc: true
+author:
+  - Beatriz Milz
+categories:
+  - Contribuição ao R
+  - Tradução
+  - Weblate
+date: '2026-01-01'
+links:
+- icon: newspaper
+  icon_pack: far
+  name: Anúncio do projeto (R Blog)
+  url: https://blog.r-project.org/2025/12/17/rsmf-enabling-the-next-generation-of-contributors-to-r/
+- icon: language
+  icon_pack: fas
+  name: Weblate do R
+  url: https://translate.rx.studio/
+title: "RSMF: Enabling the Next Generation of Contributors to R"
+subtitle: "Colaboração no projeto internacional para a sustentabilidade do R, atuando na integração das traduções do R feitas via Weblate (2026 - atual)."
+image: featured.png
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+Desde 2026, colaboro no projeto [*Enabling the Next Generation of Contributors to R*](https://blog.r-project.org/2025/12/17/rsmf-enabling-the-next-generation-of-contributors-to-r/), financiado pelo *Research Software Maintenance Fund* (Software Sustainability Institute, Reino Unido).
+
+O projeto é co-liderado pela University of Birmingham e por membros do R Core Team, com apoio do R Consortium, da R Foundation, da Posit e do Google. Ele busca apoiar a sustentabilidade do R e facilitar a participação de novas pessoas contribuidoras.
+
+Pela [R6 Estatística e Treinamentos (Curso-R)](https://curso-r.com/), atuo na melhoria da integração das traduções do R feitas via [Weblate](https://translate.rx.studio/).

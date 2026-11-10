@@ -1,0 +1,43 @@
+---
+toc: true
+author:
+  - Beatriz Milz
+  - Tatyane Paz
+categories: ["Workshop", "R-Ladies", "Introdução ao R", "Comunidade", "Português"]
+date: '2023-06-24'
+event: Meetup R-Ladies São Paulo
+event_url: https://www.meetup.com/rladies-sao-paulo/
+links:
+- icon: images
+  icon_pack: far
+  name: Slides - Introdução ao R (Parte 1)
+  url: https://r-ladies-sao-paulo.github.io/2023-06-oficina-introducao-R/slide-intro-r-parte-i.html
+- icon: images
+  icon_pack: far
+  name: Slides - Introdução ao R (Parte 2)
+  url: https://r-ladies-sao-paulo.github.io/2023-06-oficina-introducao-R/slide-intro-r-parte-ii.html
+- icon: book
+  icon_pack: fas
+  name: Site da oficina
+  url: https://r-ladies-sao-paulo.github.io/2023-06-oficina-introducao-R/
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/R-Ladies-Sao-Paulo/2023-06-oficina-introducao-R
+location: São Paulo
+title: "Oficina de Introdução ao R e ao Tidyverse"
+subtitle: "Introdução ao R - Partes 1 e 2"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+Oficina presencial e gratuita de introdução ao R e ao tidyverse, organizada pela R-Ladies São Paulo. Eu e a Tatyane Paz apresentamos as **Partes 1 e 2 da Introdução ao R**.
+
+A oficina também teve uma introdução ao tidyverse, com Ana Carolina Moreno e Jean Prado. Os slides de todas as partes estão no [site da oficina](https://r-ladies-sao-paulo.github.io/2023-06-oficina-introducao-R/slides.html).

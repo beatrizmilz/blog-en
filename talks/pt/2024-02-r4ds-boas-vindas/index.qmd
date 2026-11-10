@@ -1,0 +1,39 @@
+---
+toc: true
+author:
+  - Beatriz Milz
+  - Luana Antunes
+categories: ["Clube do Livro", "Comunidade", "R-Ladies", "Português"]
+date: '2024-02-27'
+event: "Clube do Livro: R for Data Science - R-Ladies São Paulo"
+event_url: https://r-ladies-sao-paulo.github.io/2024-clube-do-livro-r4ds/
+links:
+- icon: images
+  icon_pack: far
+  name: Slide
+  url: https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds/blob/main/encontro_1/slides-encontro-1.pdf
+- icon: github
+  icon_pack: fab
+  name: Materiais do encontro
+  url: https://github.com/R-Ladies-Sao-Paulo/2024-clube-do-livro-r4ds/tree/main/encontro_1
+- icon: book
+  icon_pack: fas
+  name: Livro
+  url: https://cienciadedatos.github.io/pt-r4ds/
+location: Online
+title: "Boas-vindas, Prefácio e Introdução"
+subtitle: "Encontro 1 do Clube do Livro"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+Primeiro encontro do Clube do Livro da R-Ladies São Paulo, que estudou a tradução para o português da 2ª edição do livro [R para Ciência de Dados](https://cienciadedatos.github.io/pt-r4ds/).
+
+Neste encontro, eu e a Luana Antunes apresentamos o grupo de estudos e os capítulos [Boas-vindas](https://cienciadedatos.github.io/pt-r4ds/), [Prefácio da segunda edição](https://cienciadedatos.github.io/pt-r4ds/preface-2e.html) e [Introdução](https://cienciadedatos.github.io/pt-r4ds/intro.html).

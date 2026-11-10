@@ -1,0 +1,48 @@
+---
+toc: true
+author:
+  - Thiago Gonçalves-Souza
+  - Beatriz Milz
+  - Nathan J. Sanders
+  - Peter B. Reich
+  - Brian Maitner
+  - Leonardo S. Chaves
+  - Gabriel X. Boldorini
+  - Natália Ferreira
+  - Reginaldo A. F. Gusmão
+  - Phamela Bernardes Perônico
+  - Fabrício B. Teresa
+  - María Natalia Umaña
+categories: Paper
+date: '2024-04-29'
+event: "Ecology and Evolution, 14(5), e11334"
+event_url: https://doi.org/10.1002/ece3.11334
+links:
+- icon: doi
+  icon_pack: academicons
+  name: DOI
+  url: https://doi.org/10.1002/ece3.11334
+- icon: chart-bar
+  icon_pack: fas
+  name: ZooTraits (Shiny app)
+  url: https://ecofun.shinyapps.io/zootraits/
+- icon: github
+  icon_pack: fab
+  name: "Código/Code"
+  url: https://github.com/thiago-goncalves-souza/zootraits
+location: Online
+title: "ZooTraits: An R shiny app for exploring animal trait data for ecological and evolutionary research"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+ZooTraits is a Shiny app to explore, compare, download and upload animal trait data for research in ecology and evolution. It brings together, in one place, trait data from the Open Traits Network, the AnimalTraits database and other compiled datasets, through three features: *ExploreTrait*, *FeedTrait* and *GetTrait*.
+
+I was responsible for developing the Shiny app and organizing the data.

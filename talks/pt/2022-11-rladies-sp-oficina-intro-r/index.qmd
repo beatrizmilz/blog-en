@@ -1,0 +1,43 @@
+---
+toc: true
+author:
+  - Beatriz Milz
+  - Bruna Garbes
+categories: ["Workshop", "R-Ladies", "Introdução ao R", "Comunidade", "Português"]
+date: '2022-11-26'
+event: Meetup R-Ladies São Paulo
+event_url: https://www.meetup.com/rladies-sao-paulo/
+links:
+- icon: images
+  icon_pack: far
+  name: Slides - Introdução ao R (Parte 1)
+  url: https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slide-intro-r-parte-i.html
+- icon: book
+  icon_pack: fas
+  name: Site da oficina
+  url: https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/R-Ladies-Sao-Paulo/2022-11-oficina-introducao-R
+- icon: newspaper
+  icon_pack: far
+  name: Relato no blog da R-Ladies SP
+  url: https://rladies-sp.org/posts/2023-01-evento-oficina-intro-R/
+location: Insper / São Paulo
+title: "Oficina de Introdução ao R"
+subtitle: "Introdução ao R - Parte 1"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+Oficina presencial e gratuita de introdução ao R, organizada pela R-Ladies São Paulo no Insper. Eu e a Bruna Garbes apresentamos a **Introdução ao R** (eu apresentei a Parte 1, e a Bruna, a Parte 2). Também conduzi uma prática de criação de gráficos com o pacote esquisse.
+
+A oficina também teve uma introdução ao tidyverse, com Ana Carolina Moreno e Jean Prado, e uma apresentação sobre a R-Ladies São Paulo, com Tatyane Paz. Os slides de todas as partes estão no [site da oficina](https://r-ladies-sao-paulo.github.io/2022-11-oficina-introducao-R/slides.html).

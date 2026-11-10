@@ -1,0 +1,45 @@
+---
+toc: true
+author:
+  - Beatriz Milz
+  - Carolina Pradier
+  - Victor Ordu
+categories: ["Community Call", "rOpenSci", "Mentoring", "Community", "English"]
+date: '2023-07-25'
+event: "rOpenSci Community Call"
+event_url: https://ropensci.org/commcalls/july2023-championprogram/
+links:
+- icon: user-plus
+  icon_pack: fa
+  name: Community Call page
+  url: https://ropensci.org/commcalls/july2023-championprogram/
+- icon: video
+  icon_pack: fas
+  name: Recording
+  url: https://vimeo.com/848537831
+- icon: google-drive
+  icon_pack: fab
+  name: Collaborative notes
+  url: https://docs.google.com/document/d/1GecPz7czaYOAmFSx1fIH0kwWgDJ1JQ1DhAbJg7xgBbg
+location: Online
+title: "Mentoring & training program for Scientific Open Source Champions"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+<br>
+<center>
+<iframe src="https://player.vimeo.com/video/848537831" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+</iframe>
+</center>
+
+In this rOpenSci Community Call, I shared my experience as a **mentor** in the [rOpenSci Champions Program](https://ropensci.org/champions/), together with Carolina Pradier and Victor Ordu, who shared their experience as Champions.
+
+The Champions Program is designed to identify, recognize and reward emerging leaders in research software communities. In the call, we talked about the benefits of the program for participants and their communities, what we learned, and the activities and opportunities of the program.

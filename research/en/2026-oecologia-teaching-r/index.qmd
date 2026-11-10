@@ -1,0 +1,41 @@
+---
+toc: true
+author:
+  - Maurício Humberto Vancine
+  - Pavel Dodonov
+  - Bruno Vilela
+  - Luisa Diele-Viegas
+  - Victor Casagrande Souza
+  - Felipe Alvarez Silva Nunes
+  - Ana Julia Oliveira Silva
+  - Beatriz Milz
+  - Cristina A. Kita
+  - Marco A. R. Mello
+  - Renata L. Muylaert
+categories: Paper
+date: '2026-02-17'
+event: "Oecologia Australis (Ahead of print)"
+event_url: https://revistas.ufrj.br/index.php/oa/article/view/64848
+links:
+- icon: book
+  icon_pack: fas
+  name: Oecologia Australis
+  url: https://revistas.ufrj.br/index.php/oa/article/view/64848
+- icon: file-pdf
+  icon_pack: far
+  name: "Manuscrito aceito / Accepted manuscript (USP)"
+  url: https://repositorio.usp.br/item/003291134
+location: Online
+title: "The challenges and nuances of teaching the R programming language to ecologists"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+Review article about the challenges and nuances of teaching the R programming language to ecologists. Published online (ahead of print) in [Oecologia Australis](https://revistas.ufrj.br/index.php/oa/article/view/64848) in February 2026.

@@ -1,0 +1,43 @@
+---
+toc: true
+author: Beatriz Milz
+categories: ["Workshop", "R-Ladies", "Dados abertos", "Open Data Day", "Comunidade", "Português"]
+date: '2023-03-18'
+event: Open Data Day - Meetup R-Ladies São Paulo
+event_url: https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/
+links:
+- icon: images
+  icon_pack: far
+  name: "Slides - Como será a atividade?"
+  url: https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slide-atividade.html
+- icon: book
+  icon_pack: fas
+  name: Site do evento
+  url: https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/
+- icon: github
+  icon_pack: fab
+  name: Repositório
+  url: https://github.com/R-Ladies-Sao-Paulo/2023-03-open-data-day
+- icon: newspaper
+  icon_pack: far
+  name: Relato no blog da R-Ladies SP
+  url: https://rladies-sp.org/posts/2023-03-evento-open-data-day/
+location: Insper / São Paulo
+title: "Análise de dados abertos com R"
+subtitle: "Um evento Open Data Day"
+image: featured.png
+draft: false
+---
+
+```{r}
+#| echo: false
+#| results: asis
+source(here::here("R/utils.R"))
+read_yaml_talks_pt()
+```
+
+Evento presencial da R-Ladies São Paulo em comemoração ao Open Data Day, com apresentações sobre dados abertos e uma atividade prática de análise de dados abertos com R.
+
+Eu ajudei a organizar o evento e apresentei a atividade prática ("Como será a atividade?"), que incluiu uma demonstração de como criar gráficos com os pacotes esquisse e ggplot2.
+
+O evento também teve apresentações de Tatyane Paz, Haydee Svab, Ana Carolina Moreno, Fernanda Peres e Bianca Muniz. Os slides estão no [site do evento](https://r-ladies-sao-paulo.github.io/2023-03-open-data-day/slides.html).
